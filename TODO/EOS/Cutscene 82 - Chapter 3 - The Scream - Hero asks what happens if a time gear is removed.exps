@@ -1,0 +1,41 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    bgm2_PlayFadeIn(BGM_STORM, 0, 128);
+    back_SetGround(LEVEL_G01P07C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_PLAYER>(DIR_RIGHT);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER>(76);
+    SetAnimation<actor ACTOR_ATTENDANT1>(76);
+    screen_FadeChange(1, 15, 0, 192);
+    Wait(30);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But...what happens if a region
+                    loses its Time Gear?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But...what happens if a region
+                    loses its Time Gear?
+                """,
+            }
+        default:
+            {
+                english="""
+                     But...what happens if a region
+                    loses its Time Gear?
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 15);
+    end;
+}

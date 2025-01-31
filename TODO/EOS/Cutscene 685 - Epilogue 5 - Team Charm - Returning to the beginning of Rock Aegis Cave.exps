@@ -1,0 +1,85 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 61];
+    back_SetGround(LEVEL_D32P12A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    Wait(1);
+    SetPositionInitial<actor ACTOR_PLAYER_APPOINT>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC1>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC2>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC3>();
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    Move2PositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m0', 28.5, 42.5>);
+    Wait(15);
+    Move2PositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m1', 31.5, 44.5>);
+    Wait(10);
+    Move2PositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m2', 25.5, 44.5>);
+    Wait(10);
+    Move2PositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m3', 28.5, 46.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(10);
+    message_Mail({
+        english="""
+            [CN]There is something in
+            [CN]front of the stone marker.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m4', 28.5, 35.5>);
+    Move2PositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m5', 28.5, 33.5>);
+    Wait(5);
+    Move2PositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m6', 31.5, 35.5>);
+    Move2PositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m7', 25.5, 35.5>);
+    Move2PositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m8', 28.5, 37.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Destroy<object OBJECT_G01P01A2_94>();
+    Wait(15);
+    message_ResetActor();
+    message_Mail({
+        english="[CN]It appears to be a letter.",
+    });
+    message_Mail({
+        english="[CN][player] read the letter.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_Mail({
+        english="\"To Team [team:]:\"",
+    });
+    message_Mail({
+        english="""
+            "As we promised earlier, we have already
+            solved this mystery. We're going on ahead."
+        """,
+    });
+    message_Mail({
+        english="""
+            "This is a race to see who can get the treasure
+            first, you know!"
+                                           - Team [CS:X]Charm[CR] -
+        """,
+    });
+    message_Close();
+    Wait(15);
+    se_Play(8961);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m9', 31.5, 35.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m10', 25.5, 35.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m11', 28.5, 37.5>);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC3>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC1);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC2);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC3);
+    end;
+}

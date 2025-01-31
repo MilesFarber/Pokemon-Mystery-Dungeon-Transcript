@@ -1,0 +1,2608 @@
+
+def 0 {
+    debug_Print('PARTNER_MESSAGE_TYPE1');
+    switch ( $GROUND_ENTER ) {
+        case 27:
+        case 30:
+        case 35:
+        case 48:
+        case 56:
+        case 60:
+        case 68:
+            @label_0;
+            if ( scn($SCENARIO_MAIN) >= [26, 5] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 We're so close...[K] There's no way
+                                we can give up now, [hero]!
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 We're nearly there...[K] We just
+                                can't give up now, [hero]!
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 We're so close...[K] There isn't any
+                                way we can give up now, [hero]!
+                            """,
+                        }
+                }
+                message_Close();
+                @label_17;
+                JumpCommon(CORO_END_TALK);
+            } elseif ( scn($SCENARIO_MAIN) >= [26, 4] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 If [CS:P]Temporal Tower[CR] is
+                                destroyed...
+                            """,
+                        }
+                    case 2:
+                        {
+                            english=" If [CS:P]Temporal Tower[CR] collapses...",
+                        }
+                    default:
+                        {
+                            english=" If [CS:P]Temporal Tower[CR] falls apart...",
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 The planet's paralysis could take
+                                place in our world...
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 The planet's paralysis could take
+                                place in our world...
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 The planet's paralysis could take
+                                place in our world...
+                            """,
+                        }
+                }
+                message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 We've got to
+                                hurry, [hero]!
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 We have to
+                                hurry, [hero]!
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 There's no time to
+                                waste, [hero]!
+                            """,
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [25, 4] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" We're so close.",
+                        }
+                    case 2:
+                        {
+                            english=" We're almost there.",
+                        }
+                    default:
+                        {
+                            english=" We're so close.",
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" No giving up, [hero]!",
+                        }
+                    case 2:
+                        {
+                            english=" We can't give up, [hero]!",
+                        }
+                    default:
+                        {
+                            english=" We can't give up, [hero]!",
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [25, 3] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" We're really close.",
+                        }
+                    case 2:
+                        {
+                            english=" We've got to be close.",
+                        }
+                    default:
+                        {
+                            english=" I'm sure we're nearly there.",
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" Hang in there, [hero]!",
+                        }
+                    case 2:
+                        {
+                            english=" Let's slug it out, [hero]!",
+                        }
+                    default:
+                        {
+                            english=" We can do this, [hero]!",
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [25, 2] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 We've come a long way...[K]
+                                Aren't we near the [CS:P]Old Ruins[CR] yet?
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 We've come a long way...[K]
+                                Aren't we near the [CS:P]Old Ruins[CR] yet?
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 We've come a long way...[K]
+                                Aren't we near the [CS:P]Old Ruins[CR] yet?
+                            """,
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 Let's get through this place and
+                                find the Rainbow Stoneship!
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 Let's get through here and find
+                                the Rainbow Stoneship!
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 Let's get through this place and
+                                find the Rainbow Stoneship!
+                            """,
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [24, 2] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 I'm worried about [CS:N]Chatot[CR].
+                                Let's get moving!
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 [CS:N]Chatot[CR] worries me. We should
+                                get hustling!
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 I'm really worried about [CS:N]Chatot[CR].
+                                Let's get moving!
+                            """,
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [24, 1] ) {
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [19, 3] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 We have to keep this up,
+                                [hero]!
+                            """,
+                        }
+                    case 2:
+                        {
+                            english=" Let's keep at it, [hero]!",
+                        }
+                    default:
+                        {
+                            english=" Let's keep at it, [hero]!",
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [19, 2] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" We've come a long way.",
+                        }
+                    case 2:
+                        {
+                            english=" We've come quite far.",
+                        }
+                    default:
+                        {
+                            english=" We've come quite far.",
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 It can't be far now.[K] Let's tough
+                                it out, [hero]!
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 It can't be far now.[K] Let's tough
+                                it out, [hero]!
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 We can't have far to go.[K]
+                                Let's keep going, [hero]!
+                            """,
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [15, 2] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" Let's keep it up, [hero]!",
+                        }
+                    case 2:
+                        {
+                            english=" Let's keep it up, [hero]!",
+                        }
+                    default:
+                        {
+                            english=" Let's keep it up, [hero]!",
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [15, 1] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" We're in pretty deep now...",
+                        }
+                    case 2:
+                        {
+                            english=" We've come a long way in now...",
+                        }
+                    default:
+                        {
+                            english=" We came quite far now...",
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 There might be something if we
+                                go a little farther.
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 There might be something if we
+                                keep going.
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 Let's keep going. There could be
+                                something farther ahead.
+                            """,
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" Let's go for it, [hero]!",
+                        }
+                    case 2:
+                        {
+                            english=" Let's go for it, [hero]!",
+                        }
+                    default:
+                        {
+                            english=" Let's go for it, [hero]!",
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [13, 3] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" We're close. Let's get this done!",
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 We don't have far to go.
+                                There's no giving up now!
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 We're almost there. There's no
+                                giving up now!
+                            """,
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [13, 2] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 We have no idea what's waiting
+                                for us.
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 We have no idea what's waiting
+                                for us.
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 We have no idea what's waiting
+                                for us.
+                            """,
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" Let's go carefully, [hero].",
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 We need to go carefully,
+                                [hero].
+                            """,
+                        }
+                    default:
+                        {
+                            english=" Let's go carefully, [hero].",
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [11, 4] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 We're getting close.[K]
+                                Hang in there!
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 We're getting close.[K]
+                                Let's tough it out!
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 We're getting close.[K]
+                                Let's keep going!
+                            """,
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } elseif ( scn($SCENARIO_MAIN) >= [11, 3] ) {
+                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 Not much farther to go...[K]
+                                We have to hang in there!
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 Not much farther to go...[K]
+                                Let's be tough!
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 Not much farther to go...[K]
+                                We have to hold on!
+                            """,
+                        }
+                }
+                message_Close();
+                jump @label_17;
+            } else {
+                jump @label_17;
+            }
+            break;
+        default:
+            @label_1;
+            if ( $SCENARIO_MAIN_BIT_FLAG[1] ) {
+                if ( scn($SCENARIO_MAIN) >= [24, 0] || scn($SCENARIO_MAIN) >= [23, 0] || scn($SCENARIO_MAIN) >= [22, 2] || scn($SCENARIO_MAIN) >= [22, 1] || scn($SCENARIO_MAIN) >= [17, 4] || scn($SCENARIO_MAIN) >= [17, 2] || scn($SCENARIO_MAIN) >= [15, 1] || scn($SCENARIO_MAIN) >= [14, 5] || scn($SCENARIO_MAIN) >= [14, 4] || scn($SCENARIO_MAIN) >= [13, 2] || scn($SCENARIO_MAIN) >= [13, 0] || scn($SCENARIO_MAIN) >= [12, 2] || scn($SCENARIO_MAIN) >= [12, 0] || scn($SCENARIO_MAIN) >= [9, 0] || scn($SCENARIO_MAIN) >= [8, 7] || scn($SCENARIO_MAIN) >= [8, 3] || scn($SCENARIO_MAIN) >= [8, 2] || scn($SCENARIO_MAIN) >= [8, 0] || scn($SCENARIO_MAIN) >= [7, 2] || scn($SCENARIO_MAIN) >= [7, 0] || scn($SCENARIO_MAIN) >= [6, 5] || scn($SCENARIO_MAIN) >= [6, 0] || scn($SCENARIO_MAIN) >= [5, 5] || scn($SCENARIO_MAIN) >= [5, 0] || scn($SCENARIO_MAIN) >= [4, 7] || scn($SCENARIO_MAIN) >= [4, 5] || scn($SCENARIO_MAIN) >= [4, 0] ) {
+                    @label_45;
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_DIZZY, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Ugh...[K]
+                                    Morning, [hero]...
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Ugh...[K]
+                                    Good morning, [hero]...
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Ooogh...[K]
+                                    Good morning, [hero]...
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [3, 3] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_DIZZY, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Morning...
+                                    [hero]...
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Good morning...
+                                    [hero]...
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Good morning...
+                                    [hero]...
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Ugh...[K]
+                                    My ears are still ringing...
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Oof...[K]
+                                    My ears are still ringing...
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Ooogh...[K]
+                                    My ears are still ringing...
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } else {
+                    jump @label_17;
+                }
+            } else {
+                @label_19;
+                if ( scn($SCENARIO_MAIN) >= [26, 0] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's get ready quickly so we
+                                    can go to the [CS:P]Hidden Land[CR]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     As soon as we're ready, we're
+                                    off to the [CS:P]Hidden Land[CR]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     When we're ready, we can
+                                    go to the [CS:P]Hidden Land[CR]!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [25, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's get ready quickly so we
+                                    can go to the [CS:P]Hidden Land[CR]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     As soon as we're ready, we're
+                                    off to the [CS:P]Hidden Land[CR]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     When we're ready, we can
+                                    go to the [CS:P]Hidden Land[CR]!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     [CS:N]Lapras[CR] is down at the beach.
+                                    He's waiting to take us to the [CS:P]Hidden Land[CR].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     [CS:N]Lapras[CR] is down at the beach.
+                                    He's waiting to take us to the [CS:P]Hidden Land[CR].
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     [CS:N]Lapras[CR] is down at the beach.
+                                    He's waiting to take us to the [CS:P]Hidden Land[CR].
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [24, 1] ) {
+                    jump @label_45;
+                } elseif ( scn($SCENARIO_MAIN) >= [23, 3] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's swing by the beach before
+                                    we go back to the guild.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's swing by the beach before
+                                    we go back to the guild.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go by the beach before
+                                    going back to the guild.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We may even run into
+                                    [CS:N]Grovyle[CR] there.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We may even run into
+                                    [CS:N]Grovyle[CR] there.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We may even get lucky and run
+                                    into [CS:N]Grovyle[CR] there.
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [23, 2] ) {
+                    switch ( $GROUND_ENTER ) {
+                        case 311:
+                        case 312:
+                        case 313:
+                            if ( $SCENARIO_TALK_BIT_FLAG[121] ) {
+                                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                    case 1:
+                                        {
+                                            english="""
+                                                 Let's swing by Sharpedo Bluff
+                                                before going back to the guild.
+                                            """,
+                                        }
+                                    case 2:
+                                        {
+                                            english="""
+                                                 Let's swing by Sharpedo Bluff
+                                                before going back to the guild.
+                                            """,
+                                        }
+                                    default:
+                                        {
+                                            english="""
+                                                 Let's go by Sharpedo Bluff
+                                                before going back to the guild.
+                                            """,
+                                        }
+                                }
+                                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                    case 1:
+                                        {
+                                            english="""
+                                                 Who knows? [CS:N]Grovyle[CR] might have
+                                                come back!
+                                            """,
+                                        }
+                                    case 2:
+                                        {
+                                            english="""
+                                                 Who knows? [CS:N]Grovyle[CR] may have
+                                                come back!
+                                            """,
+                                        }
+                                    default:
+                                        {
+                                            english="""
+                                                 Who knows? [CS:N]Grovyle[CR] may have
+                                                come back!
+                                            """,
+                                        }
+                                }
+                                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                    case 1:
+                                        {
+                                            english="""
+                                                 Let's swing by Sharpedo Bluff,
+                                                [hero]!
+                                            """,
+                                        }
+                                    case 2:
+                                        {
+                                            english="""
+                                                 Let's swing by Sharpedo Bluff,
+                                                [hero]!
+                                            """,
+                                        }
+                                    default:
+                                        {
+                                            english="""
+                                                 Let's go by Sharpedo Bluff,
+                                                [hero]!
+                                            """,
+                                        }
+                                }
+                                message_Close();
+                                jump @label_17;
+                            } else {
+                                message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                    case 1:
+                                        {
+                                            english="""
+                                                 Let's get ready for tomorrow's
+                                                outing here, [hero].
+                                            """,
+                                        }
+                                    case 2:
+                                        {
+                                            english="""
+                                                 Let's get ready for tomorrow's
+                                                outing here, [hero].
+                                            """,
+                                        }
+                                    default:
+                                        {
+                                            english="""
+                                                 Let's get ready for tomorrow's
+                                                outing here, [hero].
+                                            """,
+                                        }
+                                }
+                                message_Close();
+                                jump @label_17;
+                            }
+                            break;
+                        default:
+                            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                case 1:
+                                    {
+                                        english="""
+                                             We're not going to [CS:P]Brine Cave[CR]
+                                            until tomorrow.
+                                        """,
+                                    }
+                                case 2:
+                                    {
+                                        english="""
+                                             We're going to [CS:P]Brine Cave[CR]
+                                            tomorrow.
+                                        """,
+                                    }
+                                default:
+                                    {
+                                        english="""
+                                             We're going to [CS:P]Brine Cave[CR]
+                                            tomorrow.
+                                        """,
+                                    }
+                            }
+                            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                case 1:
+                                    {
+                                        english=" Let's get ready for that outing.",
+                                    }
+                                case 2:
+                                    {
+                                        english=" Let's get ready for that outing.",
+                                    }
+                                default:
+                                    {
+                                        english=" Let's get ready for that outing.",
+                                    }
+                            }
+                            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                case 1:
+                                    {
+                                        english=" Let's go to Treasure Town.",
+                                    }
+                                case 2:
+                                    {
+                                        english=" Off to Treasure Town!",
+                                    }
+                                default:
+                                    {
+                                        english=" Off to Treasure Town!",
+                                    }
+                            }
+                            message_Close();
+                            jump @label_17;
+                    }
+                } elseif ( scn($SCENARIO_MAIN) >= [23, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's go get ready, [hero].",
+                            }
+                        case 2:
+                            {
+                                english=" Let's go get ready, [hero].",
+                            }
+                        default:
+                            {
+                                english=" Let's go get ready, [hero].",
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's go to Treasure Town.",
+                            }
+                        case 2:
+                            {
+                                english=" Off to Treasure Town.",
+                            }
+                        default:
+                            {
+                                english=" Off to Treasure Town.",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [22, 3] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's go meet the wise old
+                                    [CS:N]Torkoal[CR] at the Hot Spring, [hero]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's go meet the wise old
+                                    [CS:N]Torkoal[CR] at the Hot Spring, [hero]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go meet the wise old
+                                    [CS:N]Torkoal[CR] at the Hot Spring, [hero]!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We can go to the Hot Spring
+                                    from [CS:P]Waterfall Cave[CR]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We can go to the Hot Spring
+                                    from [CS:P]Waterfall Cave[CR]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     I think we can go to the Hot
+                                    Spring from [CS:P]Waterfall Cave[CR]!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's go![K] To the Hot Spring!",
+                            }
+                        case 2:
+                            {
+                                english=" Let's go![K] To the Hot Spring!",
+                            }
+                        default:
+                            {
+                                english=" Let's go![K] To the Hot Spring!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [22, 2] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     OK, [hero]! We can go to
+                                    the Hot Spring from [CS:P]Waterfall Cave[CR]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     OK, [hero]! We can go to
+                                    the Hot Spring from [CS:P]Waterfall Cave[CR]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     OK, [hero]! I think we
+                                    can go to the Hot Spring from [CS:P]Waterfall Cave[CR]!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's go![K] To the Hot Spring!",
+                            }
+                        case 2:
+                            {
+                                english=" Let's go![K] To the Hot Spring!",
+                            }
+                        default:
+                            {
+                                english=" Let's go![K] To the Hot Spring!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [21, 1] || scn($SCENARIO_MAIN) >= [20, 1] ) {
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [18, 2] ) {
+                    supervision_ExecuteCommon(CORO_EVENT_M17_03_05);
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [18, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" I think we're locked in...[K] Ugh...",
+                            }
+                        case 2:
+                            {
+                                english=" I think we're locked in...[K] Ugh...",
+                            }
+                        default:
+                            {
+                                english=" I think we're locked in...[K] Ugh...",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [17, 3] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     What's happening at [CS:P]Crystal Lake[CR]
+                                    is really interesting, but we can't go bother
+                                    anyone there.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     What's happening at [CS:P]Crystal Lake[CR]
+                                    is really intriguing, but we can't go there.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     What's happening at [CS:P]Crystal Lake[CR]
+                                    is fascinating, but we can't just go there.
+                                """,
+                            }
+                    }
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We have to trust the great
+                                    [CS:N]Dusknoir[CR] to get the job done.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We just have to trust that the
+                                    great [CS:N]Dusknoir[CR] will get the job done.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We have to trust that the great
+                                    [CS:N]Dusknoir[CR] will complete his plan.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We should do the jobs on the
+                                    Job Bulletin Board and the Outlaw Notice
+                                    Board as usual.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We should do the jobs on the
+                                    Job Bulletin Board and the Outlaw Notice
+                                    Board as usual.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We should do the jobs on the
+                                    Job Bulletin Board and the Outlaw Notice
+                                    Board as usual.
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [17, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     I'm curious about what's
+                                    happening at [CS:P]Crystal Lake[CR].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     I'm curious about what's
+                                    happening at [CS:P]Crystal Lake[CR].
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     I'm curious about what's
+                                    happening at [CS:P]Crystal Lake[CR].
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     But we could ruin plans if we
+                                    went there without permission.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     But we could ruin plans if we
+                                    went there without permission.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     But we might ruin plans if we
+                                    went there without permission.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We'll have to carry on like we
+                                    normally do.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We'll have to carry on like we
+                                    usually do.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We'll have to carry on like we
+                                    usually do.
+                                """,
+                            }
+                    }
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's count on the great
+                                    [CS:N]Dusknoir[CR]. We have to wait for him.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     This is the great [CS:N]Dusknoir[CR]'s
+                                    show. We have to be patient and count on him.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     The great [CS:N]Dusknoir[CR] is taking
+                                    care of things. We have to be patient.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     The Job Bulletin Board and
+                                    Outlaw Notice Board have jobs for us today.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     The Job Bulletin Board and
+                                    Outlaw Notice Board have jobs for us today.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     The Job Bulletin Board and
+                                    Outlaw Notice Board have jobs for us today.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's put in another good day,
+                                    [hero]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's put in another good day,
+                                    [hero]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's put in another good day,
+                                    [hero]!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [16, 2] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We're getting close to the
+                                    end, [hero]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We're nearly
+                                    there, [hero]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We're nearly
+                                    there, [hero]!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's slug it out and get to
+                                    [CS:P]Crystal Crossing[CR]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's tough it out and get to
+                                    [CS:P]Crystal Crossing[CR]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's keep at it and get to
+                                    [CS:P]Crystal Crossing[CR]!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [16, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     There has to be a secret at
+                                    [CS:P]Crystal Cave[CR].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     [CS:P]Crystal Cave[CR] has to be hiding a
+                                    secret from us.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     There has to be a secret at
+                                    [CS:P]Crystal Cave[CR].
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's go, [hero]![K]
+                                    We're off to [CS:P]Crystal Cave[CR]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's go, [hero]![K]
+                                    We're off to [CS:P]Crystal Cave[CR]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go, [hero]![K]
+                                    We're off to [CS:P]Crystal Cave[CR]!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [15, 4] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" We should go too, [hero]!",
+                            }
+                        case 2:
+                            {
+                                english=" We should go too, [hero]!",
+                            }
+                        default:
+                            {
+                                english=" We should go too, [hero]!",
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Off to [CS:P]Crystal Cave[CR]!",
+                            }
+                        case 2:
+                            {
+                                english=" Off to [CS:P]Crystal Cave[CR]!",
+                            }
+                        default:
+                            {
+                                english=" Off to [CS:P]Crystal Cave[CR]!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [15, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     OK, [hero].[K] We should go
+                                    check out [CS:P]Quicksand Cave[CR].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     OK, [hero].[K] We should
+                                    investigate [CS:P]Quicksand Cave[CR].
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     OK, [hero].[K] We should
+                                    explore [CS:P]Quicksand Cave[CR].
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [14, 5] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Sure thing! Let's go out
+                                    there again!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english=" Sure! Let's go out there again!",
+                            }
+                        default:
+                            {
+                                english=" All right! Let's go there again!",
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Back to [CS:P]Quicksand Desert[CR]!",
+                            }
+                        case 2:
+                            {
+                                english=" Back to [CS:P]Quicksand Desert[CR]!",
+                            }
+                        default:
+                            {
+                                english=" Back to [CS:P]Quicksand Desert[CR]!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [14, 4] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's go to the [CS:P]Northern Desert[CR]
+                                    and search for a Time Gear.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We have to go to the [CS:P]Northern
+                                    Desert[CR] and search for a Time Gear.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go to the [CS:P]Northern Desert[CR]
+                                    and search for a Time Gear.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's work at it, [hero]!",
+                            }
+                        case 2:
+                            {
+                                english=" Let's work at it, [hero]!",
+                            }
+                        default:
+                            {
+                                english=" Let's work at it, [hero]!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [14, 2] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's go, [hero]![K]
+                                    Off to the [CS:P]Northern Desert[CR]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's go, [hero]![K]
+                                    Off to the [CS:P]Northern Desert[CR]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go, [hero]![K]
+                                    Off to the [CS:P]Northern Desert[CR]!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [14, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We have to get ready too,
+                                    [hero]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Hurry, [hero]! We have
+                                    to get ready too!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go, [hero]! We have
+                                    to get ready too!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     When we're ready, we have to
+                                    go back to the guild.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     When we're ready, we have to
+                                    go back to the guild.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     When we're ready, let's go back
+                                    to the guild.
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [13, 2] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We've got to get back the [CS:Z]Water
+                                    Float[CR] this time!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We have to recover the [CS:Z]Water
+                                    Float[CR] this time!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We have to get back the [CS:Z]Water
+                                    Float[CR] this time!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's go to [CS:P]Amp Plains[CR]!",
+                            }
+                        case 2:
+                            {
+                                english=" Let's go to [CS:P]Amp Plains[CR]!",
+                            }
+                        default:
+                            {
+                                english=" Let's go to [CS:P]Amp Plains[CR]!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [13, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's go to [CS:P]Amp Plains[CR] and get
+                                    back the [CS:Z]Water Float[CR].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We have to go to [CS:P]Amp Plains[CR]
+                                    and recover the [CS:Z]Water Float[CR].
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go to [CS:P]Amp Plains[CR] and get
+                                    back the [CS:Z]Water Float[CR].
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Hurry, [hero]! Let's go!",
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Hurry, [hero]! We have
+                                    to go!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Hurry, [hero]! We have
+                                    to go!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [12, 4] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     [CS:N]Chatot[CR] was disappointed...[K]
+                                    We can't do anything about it, though.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     [CS:N]Chatot[CR] was disappointed...[K]
+                                    It's not our fault, though.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     [CS:N]Chatot[CR] was disappointed...[K]
+                                    It's just too bad, though.
+                                """,
+                            }
+                    }
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We should perform jobs from
+                                    the Job Bulletin Board and Outlaw Notice Board
+                                    for now.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We should deal with jobs from
+                                    the Job Bulletin Board and Outlaw Notice Board
+                                    for now.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We should deal with jobs from
+                                    the Job Bulletin Board and Outlaw Notice Board
+                                    for now.
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [12, 3] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We have to check if [CS:K]Kecleon[CR]
+                                    Market will be selling Perfect Apples.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We have to check if [CS:K]Kecleon[CR]
+                                    Market will be selling Perfect Apples.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We have to check if [CS:K]Kecleon[CR]
+                                    Market will be selling Perfect Apples.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's go to [CS:K]Kecleon[CR] Market,
+                                    [hero].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's go to [CS:K]Kecleon[CR] Market,
+                                    [hero].
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go to [CS:K]Kecleon[CR] Market,
+                                    [hero].
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [12, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We're back to working on the
+                                    guild's regular training, [hero].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We're back to working on the
+                                    guild's regular training, [hero].
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We're back to working on the
+                                    guild's regular training, [hero].
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's do more jobs from the
+                                    Job Bulletin Board and Outlaw Notice Board.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's do more jobs from the
+                                    Job Bulletin Board and Outlaw Notice Board.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's do more jobs from the
+                                    Job Bulletin Board and Outlaw Notice Board.
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [9, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We did it, [hero]![K]
+                                    We're going on the expedition!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We did it, [hero]![K]
+                                    We're going on the expedition!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We did it, [hero]![K]
+                                    We're going on the expedition!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     We'd better get equipped for an
+                                    extended expedition!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We'd better get equipped for an
+                                    extended expedition!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     We'd better get equipped for an
+                                    extended expedition!
+                                """,
+                            }
+                    }
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     When we're all ready for
+                                    the expedition...
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     When we're all equipped for
+                                    the expedition...
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     When we're all ready for
+                                    the expedition...
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" We have to go see [CS:N]Chatot[CR].",
+                            }
+                        case 2:
+                            {
+                                english=" We have to report to [CS:N]Chatot[CR].",
+                            }
+                        default:
+                            {
+                                english=" We have to report to [CS:N]Chatot[CR].",
+                            }
+                    }
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's work hard, [hero]!",
+                            }
+                        case 2:
+                            {
+                                english=" Let's work hard, [hero]!",
+                            }
+                        default:
+                            {
+                                english=" Let's work hard, [hero]!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [8, 7] || scn($SCENARIO_MAIN) >= [8, 6] || scn($SCENARIO_MAIN) >= [8, 5] || scn($SCENARIO_MAIN) >= [8, 3] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Today we should do jobs on the
+                                    Job Bulletin Board and Outlaw Notice Board.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Today we should do jobs on the
+                                    Job Bulletin Board and Outlaw Notice Board.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Today we should do jobs on the
+                                    Job Bulletin Board and Outlaw Notice Board.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's keep working hard so we'll
+                                    get picked for the expedition!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's keep working hard. We can
+                                    still be picked for the expedition!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's keep working so we'll get
+                                    picked for the expedition!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [8, 2] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's get some Perfect Apples
+                                    for sure today, [hero]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     We have to get some Perfect
+                                    Apples for sure today, [hero]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's get some Perfect Apples
+                                    for sure today, [hero]!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     The Perfect Apples are supposed
+                                    to be in the deepest part of [CS:P]Apple Woods[CR].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     The Perfect Apples are supposed
+                                    to be in the deepest part of [CS:P]Apple Woods[CR].
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     The Perfect Apples are supposed
+                                    to be in the deepest part of [CS:P]Apple Woods[CR].
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's go to [CS:P]Apple Woods[CR],
+                                    [hero]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's go to [CS:P]Apple Woods[CR],
+                                    [hero]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go to [CS:P]Apple Woods[CR],
+                                    [hero]!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [8, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Our mission is to bring back
+                                    some Perfect Apples.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Our objective is to bring back
+                                    some Perfect Apples.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Our job is to bring back some
+                                    Perfect Apples.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     The Perfect Apples are supposed
+                                    to be deep in [CS:P]Apple Woods[CR].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     The Perfect Apples are supposed
+                                    to be deep in [CS:P]Apple Woods[CR].
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     The Perfect Apples are supposed
+                                    to be deep in [CS:P]Apple Woods[CR].
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's go to [CS:P]Apple Woods[CR],
+                                    [hero]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's go to [CS:P]Apple Woods[CR],
+                                    [hero]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go to [CS:P]Apple Woods[CR],
+                                    [hero]!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [7, 6] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Those guys from Team [CS:X]Skull[CR] are
+                                    sure sketchy.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Those guys from Team [CS:X]Skull[CR] are
+                                    bad news.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Those guys from Team [CS:X]Skull[CR] are
+                                    pretty creepy.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     I don't know what they're
+                                    up to...
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     I don't know what they're
+                                    up to...
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     I don't know what they're
+                                    scheming...
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" But we'd better be careful.",
+                            }
+                        case 2:
+                            {
+                                english=" But we'd better be careful.",
+                            }
+                        default:
+                            {
+                                english=" But we'd better be careful.",
+                            }
+                    }
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     They want us to do jobs that are
+                                    posted on the Job Bulletin Board and the
+                                    Outlaw Notice Board.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     They want us to do jobs that are
+                                    posted on the Job Bulletin Board and the
+                                    Outlaw Notice Board.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     They want us to do jobs that are
+                                    posted on the Job Bulletin Board and the
+                                    Outlaw Notice Board.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's look good, [hero]!",
+                            }
+                        case 2:
+                            {
+                                english=" Let's look good, [hero]!",
+                            }
+                        default:
+                            {
+                                english=" Let's look good, [hero]!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [7, 3] || scn($SCENARIO_MAIN) >= [7, 2] ) {
+                    @label_89;
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Today they want us to do jobs
+                                    that are posted on the Job Bulletin Board and
+                                    Outlaw Notice Board.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Today they want us to do jobs
+                                    that are posted on the Job Bulletin Board and
+                                    Outlaw Notice Board.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Today they want us to do jobs
+                                    that are posted on the Job Bulletin Board and
+                                    Outlaw Notice Board.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's look good, [hero]!",
+                            }
+                        case 2:
+                            {
+                                english=" Let's look good, [hero]!",
+                            }
+                        default:
+                            {
+                                english=" Let's look good, [hero]!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [7, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's work hard so they pick us
+                                    for the expedition, [hero]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's work hard so they pick us
+                                    for the expedition, [hero]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's work hard so they pick us
+                                    for the expedition, [hero]!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [6, 5] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's try to check behind the
+                                    waterfall thoroughly today!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's try to explore behind the
+                                    waterfall thoroughly today!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's try to check behind the
+                                    waterfall thoroughly today!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's go, [hero]![K]
+                                    To [CS:P]Waterfall Cave[CR]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's go, [hero]![K]
+                                    To [CS:P]Waterfall Cave[CR]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go, [hero]![K]
+                                    To [CS:P]Waterfall Cave[CR]!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [6, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Wow, I am getting really excited
+                                    about this!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Wow, I am getting really excited
+                                    about this!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Ooh, wow! I am getting totally
+                                    excited about this!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's go, [hero]![K] To the
+                                    waterfall!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's go, [hero]![K] To the
+                                    waterfall!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's go, [hero]![K] To the
+                                    waterfall!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [5, 5] || scn($SCENARIO_MAIN) >= [4, 7] ) {
+                    jump @label_89;
+                } elseif ( scn($SCENARIO_MAIN) >= [4, 5] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Come on! We've gotta save
+                                    [CS:N]Azurill[CR]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english=" Hurry! We've gotta save [CS:N]Azurill[CR]!",
+                            }
+                        default:
+                            {
+                                english=" Hurry! We've gotta save [CS:N]Azurill[CR]!",
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's hurry to [CS:P]Mt. Bristle[CR]!",
+                            }
+                        case 2:
+                            {
+                                english=" Let's hurry to [CS:P]Mt. Bristle[CR]!",
+                            }
+                        default:
+                            {
+                                english=" Let's hurry to [CS:P]Mt. Bristle[CR]!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [4, 3] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Gotta do guild work.",
+                            }
+                        case 2:
+                            {
+                                english=" We have to do our guild chores.",
+                            }
+                        default:
+                            {
+                                english=" We need to do our guild chores.",
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Once we're ready for our
+                                    adventure, let's go talk to [CS:N]Bidoof[CR].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Once we're ready to head out on
+                                    our adventure, let's go talk to [CS:N]Bidoof[CR].
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Once we're ready to go out on
+                                    our adventure, let's go talk to [CS:N]Bidoof[CR].
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     [CS:N]Bidoof[CR] said he'd be waiting for
+                                    us on the guild's upper underground floor.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     [CS:N]Bidoof[CR]'s supposed to be waiting
+                                    for us on the guild's upper underground floor.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     [CS:N]Bidoof[CR] should be waiting for us
+                                    on the guild's upper underground floor.
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [4, 2] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     [hero].[K]
+                                    Where to?
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     [hero].[K]
+                                    Where to now?
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     [hero].[K]
+                                    Where shall we go next?
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [4, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Let's hurry over to [CS:K]Kecleon[CR]
+                                    Market, [hero].
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Let's hurry over to [CS:K]Kecleon[CR]
+                                    Market, [hero].
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Let's hurry over to [CS:K]Kecleon[CR]
+                                    Market, [hero].
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [4, 0] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" So, what do we do today?",
+                            }
+                        case 2:
+                            {
+                                english=" So, what should we do today?",
+                            }
+                        default:
+                            {
+                                english=" What shall we do today?",
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } elseif ( scn($SCENARIO_MAIN) >= [3, 1] ) {
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     What...[K]
+                                    What should we do?
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     What...[K]
+                                    What should we do?
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     What...[K]
+                                    What should we do?
+                                """,
+                            }
+                    }
+                    message_Close();
+                    jump @label_17;
+                } else {
+                    jump @label_17;
+                }
+            }
+            break;
+    }
+}

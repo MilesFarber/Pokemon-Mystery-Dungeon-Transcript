@@ -1,0 +1,506 @@
+
+def 0 {
+    sound_Stop();
+    screen_WhiteOutAll(1, 0);
+    Wait(1);
+    screen_FadeIn(1, 0);
+    back_SetGround(LEVEL_D28P44A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(52);
+    screen_FadeInAll(1, 30);
+    bgm2_PlayFadeIn(BGM_ANOTHER_STATIC_NOISE, 0, 200);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             GWOH![K] GWWWOOOOHH![K]
+            GWWWWWOOOOOOOHHHH!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    camera_SetEffect(2, 1, 1.0);
+    Wait(15);
+    bgm2_FadeOut(5);
+    se_Play(5126);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5126);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    bgm_PlayFadeIn(BGM_STATIC_NOISE, 0, 256);
+    bgm2_PlayFadeIn(BGM_ANOTHER_STATIC_NOISE, 0, 200);
+    SetEffect<actor ACTOR_NPC_YONOWAARU>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(33);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU>();
+    Wait(150);
+    bgm2_FadeOut(5);
+    bgm_FadeOut(5);
+    se_Play(7684);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(36);
+    camera_SetEffect(0, 0, 0);
+    Wait(30);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI2>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI3>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI4>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI5>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI6>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Wait(60);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We...[K]did it...",
+            }
+        case 2:
+            {
+                english=" We...[K]did it...",
+            }
+        default:
+            {
+                english=" We...[K]did it...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" [CS:N]Dusknoir[CR] is...[K]down...",
+    });
+    message_Talk({
+        english=" We've finally beaten [CS:N]Dusknoir[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI2>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI3>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI4>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI5>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI6>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI6);
+    Wait(30);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_YAMIRAMI>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    message_SetFace(ACTOR_NPC_YAMIRAMI, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Wheh... It can't be...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(9);
+    message_SetFace(ACTOR_NPC_YAMIRAMI2, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Wheeh...[K] Lord [CS:N]Dusknoir[CR]...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(2);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI5>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_YAMIRAMI5>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI5);
+    message_SetFace(ACTOR_NPC_YAMIRAMI5, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english=" Lord [CS:N]Dusknoir[CR]...[K]was defeated!",
+    });
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI5>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI5);
+    se_Play(8963);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI4>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI5>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_YAMIRAMI5>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI5);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI>(1, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI3>(1, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI2>(1, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI4>(1, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI5>(1, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI6>(1, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI6);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI>(1, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI3>(1, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI2>(1, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI4>(1, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI6);
+    Wait(45);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI4>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetOutputAttribute<object OBJECT_T01P01A5_178>(2);
+    message_SetActor(ACTOR_NPC_YAMIRAMI4);
+    message_Talk({
+        english=" Wheeeeh!",
+    });
+    se_Play(7430);
+    MovePositionMark<actor ACTOR_NPC_YAMIRAMI>(2.5, Position<'m0', 31.5, 18.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_YAMIRAMI2>(2.5, Position<'m1', 31.5, 18.5>);
+    MovePositionMark<actor ACTOR_NPC_YAMIRAMI3>(2.5, Position<'m2', 31.5, 18.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_YAMIRAMI4>(2.5, Position<'m3', 31.5, 18.5>);
+    MovePositionMark<actor ACTOR_NPC_YAMIRAMI5>(2.5, Position<'m4', 31.5, 18.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_YAMIRAMI6>(2.5, Position<'m5', 31.5, 18.5>);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI>(1, 10, DIR_UP);
+    Destroy<actor ACTOR_NPC_YAMIRAMI>();
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI2>(1, 10, DIR_UP);
+    Destroy<actor ACTOR_NPC_YAMIRAMI2>();
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI3>(1, 10, DIR_UP);
+    Destroy<actor ACTOR_NPC_YAMIRAMI3>();
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI4>(1, 10, DIR_UP);
+    Destroy<actor ACTOR_NPC_YAMIRAMI4>();
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI5>(1, 10, DIR_UP);
+    Destroy<actor ACTOR_NPC_YAMIRAMI5>();
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI6>(1, 10, DIR_UP);
+    Destroy<actor ACTOR_NPC_YAMIRAMI6>();
+    message_CloseEnforce();
+    Wait(120);
+    MovePositionMark<performer 0>(0.5, Position<'m6', 31.5, 27.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(0.5, Position<'m7', 31.5, 29>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.5, Position<'m8', 27.5, 27.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.5, Position<'m9', 35.5, 27.5>);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    bgm_PlayFadeIn(BGM_HIDDEN_HIGHLAND, 0, 256);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_UPLEFT);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_YONOWAARU);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Humph.[K] Your [CS:N]Sableye[CR] ran off.",
+    });
+    message_Talk({
+        english="""
+             You just have no luck attracting
+            reliable allies.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Urgggh...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_JUPUTORU>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" [partner].",
+    });
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_JUPUTORU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What is it?",
+            }
+        case 2:
+            {
+                english=" What is it?",
+            }
+        default:
+            {
+                english=" What is it?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Go to the top of the temple.",
+    });
+    message_Talk({
+        english="""
+             Put the Relic Fragment in that
+            hollow spot.
+        """,
+    });
+    message_Talk({
+        english="""
+             I want you to check if the
+            Rainbow Stoneship actually works.
+        """,
+    });
+    message_Talk({
+        english="""
+             Meanwhile, [hero] and I
+            will keep an eye on [CS:N]Dusknoir[CR] here.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_ATTENDANT1>(71);
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" All right. I'll go do that.",
+            }
+        case 2:
+            {
+                english=" OK. I'll go do that.",
+            }
+        default:
+            {
+                english=" OK. I'll go do that.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m10', 4.5, 29.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 2, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Destroy<actor ACTOR_ATTENDANT1>();
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             If the Rainbow Stoneship works,
+            we can go to [CS:P]Temporal Tower[CR].
+        """,
+    });
+    message_Talk({
+        english=" I hope it activates...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU>(1, 1, 0);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU>(1, -1, 0);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU>(1, 1, 0);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU>(1, -1, 0);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Urgggh...",
+    });
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_YONOWAARU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Don't move!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Urgghh...[K] [CS:N]Grovyle[CR]...
+            [hero]...
+        """,
+    });
+    message_Talk({
+        english=" Is this really...",
+    });
+    message_Talk({
+        english=" Is this what you really want?",
+    });
+    message_Talk({
+        english="""
+             If history is changed...[K]
+            We Pokémon of the future will disappear...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_Stop();
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Wh-what?)",
+            }
+        default:
+            {
+                english="(Wh-what?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (If history is changed...[K]Pokémon of the
+                    future will disappear?)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (If history is changed...[K]Pokémon of the
+                    future will disappear?)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" It won't be just me.",
+    });
+    message_Talk({
+        english="""
+             Both of you...[K] [CS:N]Grovyle[CR] and
+            [hero] alike...
+        """,
+    });
+    message_Talk({
+        english="""
+             Since you come from a future
+            that will cease to exist, you will both
+            disappear too...[K] Is that what you really want?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(If we change history, we'll disappear too?!)",
+            }
+        default:
+            {
+                english="(If we change history, we'll disappear too?!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Is [CS:N]Dusknoir[CR]...)",
+            }
+        default:
+            {
+                english="(Is [CS:N]Dusknoir[CR]...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Is [CS:N]Dusknoir[CR] telling...[K]the truth?)",
+            }
+        default:
+            {
+                english="(Is [CS:N]Dusknoir[CR] telling...[K]the truth?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(1, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([CS:N]Grovyle[CR]!)",
+            }
+        default:
+            {
+                english="([CS:N]Grovyle[CR]!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(8, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(30);
+    bgm_PlayFadeIn(BGM_TIME_GEAR, 0, 256);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" ...[K]It's true, [hero].",
+    });
+    message_Talk({
+        english="""
+             If we change history...[K]we will
+            disappear.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([CS:N]G-Grovyle[CR]!)",
+            }
+        default:
+            {
+                english="([CS:N]G-Grovyle[CR]!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(8, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" But...[K]that doesn't matter...",
+    });
+    message_Talk({
+        english="""
+             If it means restoring time...[K]
+            And bringing peace to the world!
+        """,
+    });
+    message_Talk({
+        english="""
+             It's what I came to the past
+            to do...
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Celebi[CR] too...[K] She helped us,
+            knowing that she will disappear if we succeed.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Even [CS:N]Celebi[CR]?)",
+            }
+        default:
+            {
+                english="(Even [CS:N]Celebi[CR]?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Oh![K] I recall, when we were in the future...)",
+            }
+        default:
+            {
+                english="(Oh![K] I recall, when we were in the future...)",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

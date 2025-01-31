@@ -1,0 +1,129 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D09P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_RAIN1, 90, 256);
+    screen_FadeIn(1, 30);
+    se_Play(6916);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1, Position<'m0', 31.5, 29.5>);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1, Position<'m1', 36, 31.5>);
+    MovePositionMark<actor ACTOR_NPC_PERAPPU>(1, Position<'m2', 27, 30.5>);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1, Position<'m3', 36, 35.5>);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m4', 30, 33>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1, Position<'m5', 26.5, 33.5>);
+    MovePositionMark<actor ACTOR_NPC_GUREGGURU>(1, Position<'m6', 33, 32.5>);
+    MovePositionMark<actor ACTOR_NPC_DAGUTORIO>(1, Position<'m7', 33, 35.5>);
+    MovePositionMark<actor ACTOR_NPC_DIGUDA>(1, Position<'m8', 29, 35.5>);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    se_FadeOut(6916, 90);
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    se_Play(8965);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_HEIGANI>();
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Hey, hey! There's the way in!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" We can go up through here!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_DOGOOMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english=" Let's HURRY!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6916);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1, Position<'m9', 31.5, 25.5>);
+    Wait(2);
+    MovePositionMark<actor ACTOR_NPC_PERAPPU>(1, Position<'m10', 31.5, 25.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1, Position<'m11', 31.5, 25.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_GUREGGURU>(1, Position<'m12', 31.5, 25.5>);
+    Destroy<actor ACTOR_NPC_HEIGANI>();
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m13', 31.5, 25.5>);
+    Destroy<actor ACTOR_NPC_PERAPPU>();
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1, Position<'m14', 31.5, 25.5>);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1, Position<'m15', 31.5, 25.5>);
+    MovePositionMark<actor ACTOR_NPC_DIGUDA>(1, Position<'m16', 31.5, 25.5>);
+    Destroy<actor ACTOR_NPC_KIMAWARI>();
+    MovePositionMark<actor ACTOR_NPC_DAGUTORIO>(1, Position<'m17', 31.5, 25.5>);
+    Destroy<actor ACTOR_NPC_GUREGGURU>();
+    bgm_FadeOut(180);
+    se_FadeOut(6916, 90);
+    screen_FadeOut(1, 30);
+    Wait(90);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" H...h...hey...",
+    });
+    message_Talk({
+        english="""
+             H...hey...[CS:N]Chatot[CR]![K] Can I ask you
+            something while we're running?
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Chatot[CR], do you know about a
+            Pokémon called [CS:N]Groudon[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_ANGRY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Well, of course! Just what do
+            you take me for? I'm only the head of
+            intelligence for our guild![K] Squawk!
+        """,
+    });
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             [CS:N]Groudon[CR] is a legendary
+            Pokémon spoken of in myths passed down
+            through generations.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" A legendary Pokémon?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Correct.",
+    });
+    message_Talk({
+        english="""
+             The myths say that he raised
+            land from the sea. And that he built up the
+            continents!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hoo-boy! That sounds like a
+            colossal Pokémon!
+        """,
+    });
+    message_Close();
+    end;
+}

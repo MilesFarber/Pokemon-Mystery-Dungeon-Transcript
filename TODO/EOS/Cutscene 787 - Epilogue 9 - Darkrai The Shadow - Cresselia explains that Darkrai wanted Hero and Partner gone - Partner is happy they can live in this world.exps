@@ -1,0 +1,744 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WELCOME_TO_THE_WORLD_OF_POKEMON, 0, 256);
+    back_SetGround(LEVEL_T01P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (Then the next time we met, it was in [CS:N]Palkia[CR]'s
+                    nightmare.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (Then the next time we met, it was in [CS:N]Palkia[CR]'s
+                    nightmare.)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (That first [CS:N]Cresselia[CR]...[K] We encountered her
+                    only in dreams!)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (That first [CS:N]Cresselia[CR]...[K] We encountered her
+                    only in dreams!)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(180);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             [CS:N]Darkrai[CR] has the power to create
+            realistic illusions.
+        """,
+    });
+    message_Talk({
+        english="""
+             What [CS:N]Darkrai[CR] was doing...[K]
+            was using his illusions to make you think you
+            were seeing me.
+        """,
+    });
+    message_Talk({
+        english="""
+             It was all an elaborate ruse to
+            get at you, [hero] and [partner]...
+        """,
+    });
+    message_Talk({
+        english="""
+             So that your whole existence
+            could be eliminated.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_HEIGANI>();
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Whaaat?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5122);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(22);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             To eliminate [hero] and
+            [partner]...[K]from this world?
+        """,
+    });
+    message_Talk({
+        english=" E-eliminate?![K] Those two?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_SURIIPU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_SURIIPU>();
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Well, it's shocking that he
+            wanted to get rid of you...
+        """,
+    });
+    message_Talk({
+        english="""
+             But why would [CS:N]Darkrai[CR] plot
+            something so complicated?
+        """,
+    });
+    message_Talk({
+        english="""
+             Why go to all the trouble of
+            using a [CS:N]Cresselia[CR] impostor?
+        """,
+    });
+    message_Talk({
+        english="""
+             Wouldn't it be faster to confront
+            them directly in battle?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(8, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KURESERIA);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             I would guess...[K]that it was all
+            out of fear of [hero] and [partner].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Darkrai[CR] was afraid...[K]of me and
+                    [hero]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Darkrai[CR] was afraid...[K]of me and
+                    [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Darkrai[CR] was afraid...[K]of me and
+                    [hero]?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(8, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_KURESERIA);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             Yes.[K] Because [hero] and
+            [partner] saved the world once before.
+        """,
+    });
+    message_Talk({
+        english="""
+             That was when they prevented
+            the collapse of [CS:P]Temporal Tower[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             But who was really the one that
+            put the ruin of [CS:P]Temporal Tower[CR] in motion?
+        """,
+    });
+    message_Talk({
+        english="""
+             Who was it that really sought to
+            put the planet into paralysis?
+        """,
+    });
+    message_Talk({
+        english=" It was none other than [CS:N]Darkrai[CR].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_HEIGANI>();
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" What?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]D-Darkrai[CR] was behind the
+                    trouble at [CS:P]Temporal Tower[CR]?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]D-Darkrai[CR] was behind the crisis
+                    at [CS:P]Temporal Tower[CR]?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]D-Darkrai[CR] was behind the crisis
+                    at [CS:P]Temporal Tower[CR]?!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             [CS:N]Darkrai[CR] intends to enshroud the
+            world in darkness.
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Darkrai[CR] failed to do that with
+            the destruction of [CS:P]Temporal Tower[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             After that failure, he turned his
+            attention to the distortion of space itself.
+        """,
+    });
+    message_Talk({
+        english="""
+             If the distortion of space were
+            to grow, [CS:N]Darkrai[CR]'s power to create nightmares
+            would also grow.
+        """,
+    });
+    message_Talk({
+        english="""
+             What he sought to do was
+            envelop all Pokémon in a nightmare.
+        """,
+    });
+    message_Talk({
+        english="""
+             It was all [CS:N]Darkrai[CR]'s doing...[K]
+            He was making the distortion of space expand.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Darkrai[CR] was doing that?",
+            }
+        case 2:
+            {
+                english=" [CS:N]Darkrai[CR] was doing that?",
+            }
+        default:
+            {
+                english=" [CS:N]Darkrai[CR] was doing that?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Isn't the space distortion
+                    expanding because of our existence?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Isn't the space distortion
+                    expanding because of our existence?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Isn't the space distortion
+                    expanding because of our existence?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             It is true that your existence is
+            causing space distortion...
+        """,
+    });
+    message_Talk({
+        english="""
+             But the distortion you cause is
+            extremely small.
+        """,
+    });
+    message_Talk({
+        english="""
+             Furthermore, your distortion of
+            space won't expand on its own.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, -1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Th-then...",
+            }
+        case 2:
+            {
+                english=" Th-then...",
+            }
+        default:
+            {
+                english=" Th-then...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             Yes.[K] The expanding distortion of
+            space has nothing to do with you.
+        """,
+    });
+    message_Talk({
+        english="""
+             It was blamed on you, however,
+            so that you would be eliminated.
+        """,
+    });
+    message_Talk({
+        english="""
+             It was all part of [CS:N]Darkrai[CR]'s
+            elaborate deception.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    bgm_PlayFadeIn(BGM_IN_THE_HANDS_OF_FATE, 0, 256);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, [hero]!",
+            }
+        case 2:
+            {
+                english=" Oh, [hero]!",
+            }
+        default:
+            {
+                english=" Oh, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_NPC_PUKURIN>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_NPC_DOGOOMU>(4, 10, ACTOR_ATTENDANT1);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_ATTENDANT1);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_RURIRI>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_NPC_MARIRU>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_NPC_SURIIPU>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I... I...[K] I'm so glad...",
+            }
+        case 2:
+            {
+                english=" I... I...[K] I'm so glad...",
+            }
+        default:
+            {
+                english=" I... I...[K] I'm so glad...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We're not...[K]beings that must
+                    not exist...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We're not...[K]beings that must
+                    not exist...
+                """,
+            }
+        default:
+            {
+                english="""
+                     We're not...[K]beings that must
+                    not exist...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's OK for us to live in this
+                    world...[K] We're not unwanted...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's OK for us to live in this
+                    world...[K] We're not unwanted...
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's OK for us to live in this
+                    world...[K] We're not unwanted...
+                """,
+            }
+    }
+    message_KeyWait();
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urf...",
+            }
+        case 2:
+            {
+                english=" Urf...",
+            }
+        default:
+            {
+                english=" Urf...",
+            }
+    }
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_TEARY_EYED, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([partner]...)",
+            }
+        default:
+            {
+                english="([partner]...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN>(0.2969, 4, 4);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(2, -2);
+    message_Talk({
+        english="""
+             I don't know what you two went
+            through...[K] But...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_KURESERIA>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_UPRIGHT);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_PUKURIN);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_RURIRI>(4, 10, DIR_UPLEFT);
+    Turn2DirectionLives<actor ACTOR_NPC_MARIRU>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_SURIIPU>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PUKURIN);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    Wait(15);
+    message_Talk({
+        english="""
+             It's just not possible...[K]for either
+            of you, [partner] and [hero], to be
+            unwanted in this world.
+        """,
+    });
+    message_Talk({
+        english="""
+             If either of you went
+            away, [partner] or [hero]...[K] It would
+            make me sad.
+        """,
+    });
+    message_Talk({
+        english="""
+             I think everyone at the guild
+            would be sad too.
+        """,
+    });
+    message_Talk({
+        english="""
+             It makes us happy that you're
+            with us, [partner] and [hero]! ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             That's reason enough...[K]to keep
+            existing!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(3, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]W-Wigglytuff[CR]...",
+            }
+        case 2:
+            {
+                english=" [CS:N]W-Wigglytuff[CR]...",
+            }
+        default:
+            {
+                english=" [CS:N]W-Wigglytuff[CR]...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(2, -2);
+    message_Talk({
+        english="""
+             More than that...[K]it's not just
+            [partner] or [hero]...
+        """,
+    });
+    message_Talk({
+        english=" Everyone here...",
+    });
+    message_Talk({
+        english=" All the Pokémon in the world...",
+    });
+    message_Talk({
+        english="""
+             Not one of their lives is without
+            meaning!
+        """,
+    });
+    message_Talk({
+        english="""
+             So never think that you're not
+            wanted ever again.
+        """,
+    });
+    message_Talk({
+        english=" Stay full of cheer![K] All right? ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(3, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urf...[K] Thanks, [CS:N]Wigglytuff[CR]...",
+            }
+        case 2:
+            {
+                english=" Urf...[K] Thank you, [CS:N]Wigglytuff[CR]...",
+            }
+        default:
+            {
+                english=" Urf...[K] Thank you, [CS:N]Wigglytuff[CR]...",
+            }
+    }
+    message_Close();
+    bgm_FadeOut(160);
+    Wait(160);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             Hey, hey! But talk about dirty
+            and dishonest! That [CS:N]Darkrai[CR]'s a piece of work!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_KURESERIA);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             He never comes out in the open.
+            He does his nefarious work from the shadows.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_PUKURIN>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_UPRIGHT);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_KURESERIA);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_RURIRI>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_MARIRU>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_SURIIPU>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_NPC_KURESERIA);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    Wait(10);
+    message_Talk({
+        english="""
+             If you confront him, he will
+            always flee...
+        """,
+    });
+    message_Talk({
+        english="""
+             That is how [CS:N]Darkrai[CR] has always
+            done things.
+        """,
+    });
+    message_Talk({
+        english="""
+             But [CS:N]Darkrai[CR] is doing something
+            so unlike him right now...
+        """,
+    });
+    message_Talk({
+        english="""
+             He has invited [partner] and
+            [hero] to confront him...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(...It's true.)",
+            }
+        default:
+            {
+                english="(...It's true.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([CS:N]Darkrai[CR] left these parting words...)",
+            }
+        default:
+            {
+                english="([CS:N]Darkrai[CR] left these parting words...)",
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

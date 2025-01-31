@@ -1,0 +1,263 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    back_SetGround(LEVEL_G01P04A);
+    supervision_LoadStation(LEVEL_G01P04A, 'UM05');
+    supervision_Station(7);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_PERAPPU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 15);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             That's all. Do you understand
+            what this mission entails?
+        """,
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Understood",
+        }):
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            $SCENARIO_MAIN = scn[6, 2];
+            message_SetFace(ACTOR_NPC_PERAPPU, FACE_HAPPY, FACE_POS_TOP_C_FACEL);
+            message_Talk({
+                english=" Good! ♪",
+            });
+            message_Talk({
+                english="""
+                     All right, I'll leave you all to
+                    thoroughly investigate the waterfall! ♪
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            bgm_FadeOut(120);
+            clear $EVENT_LOCAL;
+            Unlock(5);
+            Wait(60);
+            Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+            Wait(5);
+            Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+            WaitExecuteLives(ACTOR_NPC_PERAPPU);
+            se_Play(8978);
+            SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_EXCLAMATION_MARK, 3);
+            WaitEffect<actor ACTOR_NPC_PERAPPU>();
+            WaitExecuteLives(ACTOR_NPC_PERAPPU);
+            message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+            message_Talk({
+                english="""
+                     Huh? What's wrong?
+                    You're shivering.
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" ...",
+                    }
+                case 2:
+                    {
+                        english=" ...",
+                    }
+                default:
+                    {
+                        english=" ...",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8972);
+            SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+            SetAnimation<actor ACTOR_NPC_PERAPPU>(18);
+            WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+            SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+            message_SetFace(ACTOR_NPC_PERAPPU, FACE_SURPRISED, FACE_POS_TOP_C_FACEL);
+            message_Talk({
+                english=" A-are you all right?",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Yup. I'm OK. It's just the
+                            anticipation that's making me nervous.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Yes. I'm OK. It's just the
+                            anticipation that's making me nervous.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Yep. I'm OK. It's just the
+                            anticipation that's making me nervous.
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             This will be our first real job
+                            as an exploration team.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             This will be the first time we
+                            get to do a real job as an exploration team.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             This will be our first real job
+                            as an exploration team.
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" I'm feeling a little worked up...",
+                    }
+                case 2:
+                    {
+                        english=" I'm feeling a little worked up...",
+                    }
+                default:
+                    {
+                        english=" I'm getting a bit emotional...",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            $EVENT_LOCAL = 1;
+            WaitLockLives(6, ACTOR_ATTENDANT1);
+            Wait(30);
+            Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWN);
+            Wait(15);
+            ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Yeah! I might just burst from
+                            the excitement!
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Oh, I feel like I'm going to burst
+                            from excitement!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Ooh... I'm bubbling over
+                            with excitement!
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Let's do this right, [hero]!",
+                    }
+                case 2:
+                    {
+                        english=" Let's do our best, [hero]!",
+                    }
+                default:
+                    {
+                        english=" Let's do our best, [hero]!",
+                    }
+            }
+            message_Close();
+            SetAnimation<actor ACTOR_PLAYER>(71);
+            WaitAnimation<actor ACTOR_PLAYER>();
+            SetAnimation<actor ACTOR_PLAYER>(2);
+            Wait(30);
+            Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+            Wait(20);
+            SetAnimation<actor ACTOR_PLAYER>(66);
+            SetAnimation<actor ACTOR_ATTENDANT1>(66);
+            WaitAnimation<actor ACTOR_PLAYER>();
+            WaitAnimation<actor ACTOR_ATTENDANT1>();
+            Wait(60);
+            SetAnimation<actor ACTOR_PLAYER>(2);
+            SetAnimation<actor ACTOR_ATTENDANT1>(2);
+            Wait(30);
+            dungeon_mode(6) = DMODE_OPEN;
+            end;
+        case menu({
+            english="Please explain again",
+        }):
+        default:
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8961);
+            SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SWEAT_DROP, 3);
+            WaitEffect<actor ACTOR_NPC_PERAPPU>();
+            WaitExecuteLives(ACTOR_NPC_PERAPPU);
+            message_SetFace(ACTOR_NPC_PERAPPU, FACE_PAIN, FACE_POS_TOP_C_FACEL);
+            message_Talk({
+                english=" Fine, I'll explain it again.",
+            });
+            message_Talk({
+                english=" Let me see your Wonder Map.",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_Mail({
+                english="""
+                    [CN][hero] opened
+                    [CN]the Wonder Map.
+                """,
+            });
+            message_Close();
+            se_Play(6667);
+            screen_FadeOut(1, 15);
+            end;
+    }
+}
+
+def 1 for actor ACTOR_ATTENDANT1 {
+    SetAnimation(2);
+    Lock(5);
+    ResetHitAttribute(31);
+    SetAnimation(3);
+    @label_3;
+    forever {
+        SlidePositionOffset(1, 1, 0);
+        Wait(2);
+        SlidePositionOffset(1, -1, 0);
+        Wait(2);
+        switch ( $EVENT_LOCAL ) {
+            case 1:
+                break_loop;
+                break;
+            default:
+                continue;  // may be redundant
+        }
+    }
+    SetAnimation(2);
+    Lock(6);
+    hold;
+}

@@ -1,0 +1,554 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_SPINDAS_CAFE, 0, 256);
+    back_SetGround(LEVEL_P01P04A);
+    supervision_Acting(0);
+    supervision_Acting(2);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Yes, that's absolutely right. You
+            sure do know your stuff.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_BARIYAADO>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2DirectionLives<actor ACTOR_NPC_NYUURA>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2DirectionLives<actor ACTOR_NPC_REDIBA>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Wait(3);
+    Turn2DirectionLives<actor ACTOR_NPC_NYOROTONO>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2DirectionLives<actor ACTOR_NPC_SUTORAIKU>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Wait(4);
+    Turn2DirectionLives<actor ACTOR_NPC_TOGEPII>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2DirectionLives<actor ACTOR_NPC_JIGUZAGUMA>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2DirectionLives<actor ACTOR_NPC_HERAKUROSU>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2DirectionLives<actor ACTOR_NPC_ZANGUUSU>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_SANDOPAN>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2DirectionLives<actor ACTOR_NPC_OKUTAN>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2DirectionLives<actor ACTOR_NPC_PACHIRISU>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Wait(2);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2DirectionLives<actor ACTOR_NPC_YAMIKARASU>(4, 10, ACTOR_NPC_PATCHIIRU);
+    Turn2Direction<actor ACTOR_NPC_KAGEBOUZU>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_KAGEBOUZU);
+    message_Talk({
+        english="""
+             Just as [CS:N]Mr. Mime[CR] said,
+            [CS:P]Sky Peak[CR] has not been fully explored...
+        """,
+    });
+    message_Talk({
+        english="""
+             So it still holds
+            many mysteries.
+        """,
+    });
+    message_Talk({
+        english="""
+             High enough to reach beyond the
+            sky![K] A mysterious mountain that still holds
+            many secrets...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_PATCHIIRU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PATCHIIRU);
+    SetEffect<actor ACTOR_NPC_PATCHIIRU>(EFFECT_JOYOUS, 3);
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(26);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_SHOUTING, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             That sounds like enough to catch
+            the interest of any explorer!
+        """,
+    });
+    message_KeyWait();
+    ExecuteCommon<actor ACTOR_NPC_PATCHIIRU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_SIGH, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Let's go and see!
+            See for ourselves!
+        """,
+    });
+    WaitExecuteLives(ACTOR_NPC_PATCHIIRU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PATCHIIRU>(EFFECT_NONE, 3);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             If that's what you're thinking,
+            then we are ready to fulfill that wish
+            through Project P...
+        """,
+    });
+    message_Talk({
+        english="""
+             We've been working on
+            reclaiming the path to [CS:P]Sky Peak[CR]...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PATCHIIRU>(EFFECT_JOYOUS, 3);
+    ExecuteCommon<actor ACTOR_NPC_PATCHIIRU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PATCHIIRU);
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(26);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_SHOUTING, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             And finally, a couple of days
+            ago...[K]we succeeded!
+            
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PATCHIIRU>(EFFECT_NONE, 3);
+    se_Play(6669);
+    SetEffect<actor ACTOR_NPC_NYOROTONO>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_YAMIKARASU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_HERAKUROSU>(EFFECT_JOYOUS, 3);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: HOORAY!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_FadeOut(6669, 60);
+    SetEffect<actor ACTOR_NPC_NYOROTONO>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_YAMIKARASU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_HERAKUROSU>(EFFECT_NONE, 3);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(2);
+    SetEffect<actor ACTOR_NPC_PATCHIIRU>(EFFECT_JOYOUS, 3);
+    ExecuteCommon<actor ACTOR_NPC_PATCHIIRU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_SHOUTING, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Furthermore! Fur-ther-more!",
+    });
+    message_KeyWait();
+    SetEffect<actor ACTOR_NPC_PATCHIIRU>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Not only did we succeed in
+            reclaiming the path...
+        """,
+    });
+    message_KeyWait();
+    ExecuteCommon<actor ACTOR_NPC_PATCHIIRU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PATCHIIRU);
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(26);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_SHOUTING, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             We also made a discovery! At
+            the base of the mountain, we found a small,
+            hidden village!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6669);
+    SetEffect<actor ACTOR_NPC_REDIBA>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_TOGEPII>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_SUTORAIKU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_SANDOPAN>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_YAMIKARASU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_HERAKUROSU>(EFFECT_JOYOUS, 3);
+    SetAnimation<actor ACTOR_NPC_SUTORAIKU>(4);
+    SetAnimation<actor ACTOR_NPC_TOGEPII>(4);
+    SetAnimation<actor ACTOR_NPC_OKUTAN>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIKARASU>(4);
+    SetAnimation<actor ACTOR_NPC_PACHIRISU>(4);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: HOORAY!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_FadeOut(6669, 60);
+    SetEffect<actor ACTOR_NPC_REDIBA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_TOGEPII>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_SUTORAIKU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_SANDOPAN>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_YAMIKARASU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_HERAKUROSU>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_SUTORAIKU>(2);
+    SetAnimation<actor ACTOR_NPC_TOGEPII>(2);
+    SetAnimation<actor ACTOR_NPC_OKUTAN>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIKARASU>(2);
+    SetAnimation<actor ACTOR_NPC_PACHIRISU>(2);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_BARIYAADO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             A hidden village!
+            That makes me think of ninjas or something!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(2);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Yep! Of course, it's not a
+            village of ninjas...
+        """,
+    });
+    message_Talk({
+        english="""
+             Instead, some very rare
+            Pokémon known as [CS:K]Shaymin[CR] live there.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_NYOROTONO>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_NYOROTONO>();
+    WaitExecuteLives(ACTOR_NPC_NYOROTONO);
+    message_SetFace(ACTOR_NPC_NYOROTONO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" [CS:K]Shaymin[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Yes. I'm afraid I don't
+            know much about them either...
+        """,
+    });
+    message_KeyWait();
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(5);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_SIGH, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" But they are incredibly cute! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(2);
+    message_SetFace(ACTOR_NPC_HERAKUROSU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" C-cute...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_SANDOPAN>(1, 0, -12);
+    WaitExecuteLives(ACTOR_NPC_SANDOPAN);
+    message_SetFace(ACTOR_NPC_SANDOPAN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I-I'm interested...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_PATCHIIRU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_SHOUTING, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Furthermore!",
+    });
+    message_Talk({
+        english="""
+             According to the survey
+            team's report...
+        """,
+    });
+    message_Talk({
+        english="""
+             On the outskirts of the [CS:P]Shaymin[CR]
+            [CS:P]Village[CR], they've found a mountain path to the
+            [CS:P]Sky Peak[CR] Summit!
+        """,
+    });
+    message_KeyWait();
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(5);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_SIGH, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" This is a huge discovery!",
+    });
+    message_Talk({
+        english="""
+             This mountain has not been
+            properly surveyed in some time...
+        """,
+    });
+    message_Talk({
+        english="""
+             Piles of treasure![K]
+            Opportunities for new discoveries![K]
+            So I think!
+        """,
+    });
+    message_KeyWait();
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(2);
+    message_Talk({
+        english="""
+             Furthermore, legend says that
+            there is an incredible treasure hidden
+            there that rivals all other treasure!
+        """,
+    });
+    ExecuteCommon<actor ACTOR_NPC_PATCHIIRU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PATCHIIRU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5138);
+    SetEffect<actor ACTOR_NPC_REDIBA>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_TOGEPII>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_SUTORAIKU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_SANDOPAN>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_YAMIKARASU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_HERAKUROSU>(EFFECT_JOYOUS, 3);
+    SetAnimation<actor ACTOR_NPC_NYOROTONO>(4);
+    SetAnimation<actor ACTOR_NPC_BARIYAADO>(4);
+    SetAnimation<actor ACTOR_NPC_HERAKUROSU>(4);
+    SetAnimation<actor ACTOR_NPC_SUTORAIKU>(4);
+    SetAnimation<actor ACTOR_NPC_TOGEPII>(4);
+    SetAnimation<actor ACTOR_NPC_OKUTAN>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIKARASU>(4);
+    SetAnimation<actor ACTOR_NPC_PACHIRISU>(4);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: HOORAY!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_OKUTAN>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_NPC_OKUTAN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Treasure!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_OKUTAN>(EFFECT_NONE, 3);
+    ExecuteCommon<actor ACTOR_NPC_BARIYAADO>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BARIYAADO);
+    SetAnimation<actor ACTOR_NPC_BARIYAADO>(4);
+    message_SetFace(ACTOR_NPC_BARIYAADO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Discoveries!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HERAKUROSU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" Woooonderful!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_PATCHIIRU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PATCHIIRU);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_JOYOUS, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Yes!
+            And it is all waiting for you!
+        """,
+    });
+    message_Talk({
+        english="""
+             I'll show you the location of the
+            [CS:P]Shaymin Village[CR]!
+        """,
+    });
+    se_FadeOut(5138, 60);
+    message_Close();
+    screen_FadeOut(1, 30);
+    worldmap_SetMode(4);
+    back2_SetMode(3);
+    WaitSubScreen();
+    worldmap_SetCamera(176);
+    worldmap_SetArrow(176);
+    worldmap_BlinkMark(176);
+    dungeon_mode(175) = DMODE_OPEN;
+    me_Play(6);
+    message_Mail({
+        english="""
+            [CN]You can now go to
+            [CN]the [CS:P]Shaymin Village[CR]!
+        """,
+    });
+    WaitMe(6);
+    message_Close();
+    screen2_FadeOut(0, 15);
+    back2_SetMode(0);
+    SetEffect<actor ACTOR_NPC_REDIBA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_TOGEPII>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_SUTORAIKU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_SANDOPAN>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_YAMIKARASU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_HERAKUROSU>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_NYOROTONO>(2);
+    SetAnimation<actor ACTOR_NPC_BARIYAADO>(2);
+    SetAnimation<actor ACTOR_NPC_HERAKUROSU>(2);
+    SetAnimation<actor ACTOR_NPC_SUTORAIKU>(2);
+    SetAnimation<actor ACTOR_NPC_TOGEPII>(2);
+    SetAnimation<actor ACTOR_NPC_OKUTAN>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIKARASU>(2);
+    SetAnimation<actor ACTOR_NPC_PACHIRISU>(2);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_JOYOUS, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             For more details, please direct
+            your requests to the Project P survey team
+            already on location.
+        """,
+    });
+    message_Talk({
+        english="""
+             So, everyone, let's get moving,
+            with hopes and dreams on our minds and
+            smiles on our faces!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5138);
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(27);
+    ExecuteCommon<actor ACTOR_NPC_SOONANO>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_SOONANSU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_REDIBA>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_TOGEPII>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_SUTORAIKU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_SANDOPAN>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_YAMIKARASU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_HERAKUROSU>(EFFECT_JOYOUS, 3);
+    ExecuteCommon<actor ACTOR_NPC_BARIYAADO>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    Wait(3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_HERAKUROSU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    SetAnimation<actor ACTOR_NPC_NYOROTONO>(4);
+    SetAnimation<actor ACTOR_NPC_SUTORAIKU>(4);
+    SetAnimation<actor ACTOR_NPC_TOGEPII>(4);
+    SetAnimation<actor ACTOR_NPC_OKUTAN>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIKARASU>(4);
+    SetAnimation<actor ACTOR_NPC_PACHIRISU>(4);
+    SetAnimation<actor ACTOR_NPC_JIGUZAGUMA>(4);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: HOORAY!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    SetEffect<actor ACTOR_NPC_SUTORAIKU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_SANDOPAN>(EFFECT_NONE, 3);
+    Turn2Direction<actor ACTOR_NPC_ZANGUUSU>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_SUTORAIKU>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_SANDOPAN>(4, 10, DIR_RIGHT);
+    SetAnimation<actor ACTOR_NPC_PATCHIIRU>(2);
+    Turn2Direction<actor ACTOR_NPC_BARIYAADO>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_NYOROTONO>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_TOGEPII>(4, 10, DIR_LEFT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_JIGUZAGUMA>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_HERAKUROSU>(4, 10, DIR_LEFT);
+    SetAnimation<actor ACTOR_NPC_HERAKUROSU>(4);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_OKUTAN>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_PACHIRISU>(4, 10, DIR_DOWNLEFT);
+    Wait(7);
+    Turn2Direction<actor ACTOR_NPC_YAMIKARASU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_KAGEBOUZU>(4, 10, DIR_DOWNLEFT);
+    se_FadeOut(5138, 90);
+    MovePositionMark<actor ACTOR_NPC_ZANGUUSU>(1.1992, Position<'m0', 43.5, 42.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_SUTORAIKU>(1.1992, Position<'m1', 43.5, 42.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_SANDOPAN>(1.1992, Position<'m2', 43.5, 42.5>);
+    Turn2Direction<actor ACTOR_NPC_NYUURA>(4, 10, DIR_DOWNRIGHT);
+    Wait(40);
+    MovePositionOffset<actor ACTOR_NPC_NYUURA>(2, -88, 0);
+    WaitExecuteLives(ACTOR_NPC_SANDOPAN);
+    Destroy<actor ACTOR_NPC_ZANGUUSU>();
+    Destroy<actor ACTOR_NPC_SUTORAIKU>();
+    Destroy<actor ACTOR_NPC_SANDOPAN>();
+    MovePositionOffset<performer 0>(0.5, 0, 16);
+    WaitExecutePerformer(0);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" This is awesome, [hero]!",
+            }
+        case 2:
+            {
+                english=" This is so cool, [hero]!",
+            }
+        default:
+            {
+                english=" This is so cool, [hero]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Did you hear that?
+                    Piles of treasure! New discoveries!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Did you hear that?
+                    Piles of treasure! New discoveries!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Did you hear that?
+                    Piles of treasure! New discoveries!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I'd really like to meet these
+                    [CS:K]Shaymin[CR], so we should go!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I'm really interested in meeting
+                    these [CS:K]Shaymin[CR], so we should go!
+                """,
+            }
+        default:
+            {
+                english="""
+                     I'd love to meet these [CS:K]Shaymin[CR]!
+                    Let's go!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(30);
+    screen_FadeOut(1, 60);
+    camera_SetDefault();
+    SetPositionMark<actor ACTOR_PLAYER>(Position<'m3', 45, 33.5>);
+    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m4', 41.5, 33.5>);
+    SetDirection<actor ACTOR_PLAYER>(DIR_DOWN);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_DOWN);
+    Wait(30);
+    supervision_RemoveActing(2);
+    supervision_RemoveActing(1);
+    supervision_LoadStation(LEVEL_P01P04A, 'US31');
+    supervision_Station(1);
+    supervision_StationCommon(10);
+    supervision_StationCommon(11);
+    supervision_StationCommon(12);
+    supervision_StationCommon(13);
+    screen_FadeIn(1, 30);
+    end;
+}

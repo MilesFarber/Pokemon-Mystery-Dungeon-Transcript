@@ -1,0 +1,105 @@
+
+def 0 {
+    sound_Stop();
+    back_SetBanner2(LEVEL_S04P01A, 0, 156, 124, 14, {
+        english="""
+            Into the
+            Future
+        """,
+    });
+    screen_FadeIn(1, 45);
+    Wait(160);
+    screen_FadeOut(1, 45);
+    Wait(15);
+    $SCENARIO_MAIN = scn[18, 1];
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="..................",
+            }
+        default:
+            {
+                english="..................",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="....................................",
+            }
+        default:
+            {
+                english="....................................",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="...Ugh...",
+            }
+        default:
+            {
+                english="...Ugh...",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="Where is this...?",
+            }
+        default:
+            {
+                english="Where is this...?",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="I was...[K]dragged?",
+            }
+        default:
+            {
+                english="I was...[K]dragged?",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="I can't... Losing consciousness...again...",
+            }
+        default:
+            {
+                english="I can't... Losing consciousness...again...",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="........................",
+            }
+        default:
+            {
+                english="........................",
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    Wait(30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V17P01A);
+    back_SetGround(LEVEL_V17P03A);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 17, 15.5>);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_ON_THE_CEILING, 90, 128);
+    screen2_FadeIn(0, 60);
+    screen_FadeIn(1, 60);
+    Wait(180);
+    Wait(90);
+    screen_FadeOut(1, 60);
+    end;
+}

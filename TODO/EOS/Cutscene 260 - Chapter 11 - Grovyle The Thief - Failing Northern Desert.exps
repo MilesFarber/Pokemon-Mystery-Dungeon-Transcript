@@ -1,0 +1,150 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh...we blew that attempt.",
+            }
+        case 2:
+            {
+                english=" Ugh...that ended badly.",
+            }
+        default:
+            {
+                english=" Ugh...that wasn't so good.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's tougher than I thought...[K]
+                    Let's go home for today.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This is much harder than I
+                    expected...[K] Let's call it a day.
+                """,
+            }
+        default:
+            {
+                english="""
+                     This won't be easy...[K] Let's call it
+                    a day.
+                """,
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    Wait(60);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_G01P03A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    Wait(30);
+    se_Play(8968);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     What, did everyone get wiped
+                    out and end up back here?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Oh no! Did everyone get knocked
+                    out and end up back here?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh my gosh! Did everybody fail
+                    and end up back here?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_DOGOOMU>();
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Uh...sort of...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Hey, hey! No one said it would
+            be easy!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Let's not feel sorry for
+            ourselves. We'll try again tomorrow!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Yup yup! We'll keep pushing on
+            with our search for a Time Gear!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_JOYOUS, 3);
+    SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(23);
+    SetDirection<actor ACTOR_NPC_CHIRIIN>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(23);
+    SetDirection<actor ACTOR_NPC_HEIGANI>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(23);
+    SetDirection<actor ACTOR_NPC_BIPPA>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(24);
+    SetDirection<actor ACTOR_NPC_DOGOOMU>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(23);
+    SetDirection<actor ACTOR_NPC_KIMAWARI>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(23);
+    SetDirection<actor ACTOR_PLAYER>(DIR_UP);
+    SetAnimation<actor ACTOR_PLAYER>(66);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_UP);
+    SetAnimation<actor ACTOR_ATTENDANT1>(66);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: HOORAY!",
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    WaitBgm(BGM_WIGGLYTUFFS_GUILD);
+    Wait(60);
+    end;
+}

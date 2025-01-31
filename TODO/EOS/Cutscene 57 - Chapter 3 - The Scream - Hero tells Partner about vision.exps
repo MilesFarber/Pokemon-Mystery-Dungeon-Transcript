@@ -1,0 +1,552 @@
+
+def 0 {
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_T01P01A);
+    supervision_StationCommon(0);
+    supervision_StationCommon(99);
+    supervision_Acting(0);
+    supervision_LoadStation(LEVEL_T01P01A, 'UM03');
+    supervision_Station(10);
+    camera_SetMyself<performer 0>();
+    screen_FadeInAll(1, 5);
+    Wait(15);
+    se_Play(8973);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitSe(8973);
+    bgm_PlayFadeIn(BGM_GROWING_ANXIETY, 0, 256);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(What was that?!)",
+            }
+        default:
+            {
+                english="(What was that?!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I sure hope those kids find their
+                    item soon.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It would be nice if those little
+                    guys found their item soon.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It would be nice if those cute
+                    little guys found their item soon.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? What's up, [hero]?",
+            }
+        case 2:
+            {
+                english="""
+                     Huh? What's the matter,
+                    [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Huh? Is anything the matter,
+                    [hero]?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 1, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What's with that grim look?",
+            }
+        case 2:
+            {
+                english=" You're looking awfully grim...",
+            }
+        default:
+            {
+                english=" Why are you looking so grim?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_EXPLANATION_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     ...Hmm?[K] You want to tell
+                    me something?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     ...Hmm?[K] You want to tell
+                    me something?
+                """,
+            }
+        default:
+            {
+                english="""
+                     ...Hmm?[K] You want to tell
+                    me something?
+                """,
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOutAll(1, 60);
+    SetPositionMark<performer 0>(Position<'m0', 65, 27.5>);
+    SetPositionMark<actor ACTOR_PLAYER>(Position<'m1', 67, 27.5>);
+    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m2', 63, 27.5>);
+    SetDirection<actor ACTOR_PLAYER>(DIR_LEFT);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_RIGHT);
+    Wait(60);
+    screen_FadeInAll(1, 60);
+    Wait(30);
+    se_Play(8968);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What? You had a dizzy spell?",
+            }
+        case 2:
+            {
+                english=" What? You had a dizzy spell?",
+            }
+        default:
+            {
+                english=" What? You had a dizzy spell?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Then you saw [CS:N]Azurill[CR] being
+                    threatened by [CS:N]Drowzee[CR]?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Then you saw [CS:N]Azurill[CR] being
+                    threatened by [CS:N]Drowzee[CR]?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Then you saw [CS:N]Azurill[CR] being
+                    threatened by [CS:N]Drowzee[CR]?!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So you want to go rescue
+                    [CS:N]Azurill[CR] right away?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So you want to go rescue
+                    [CS:N]Azurill[CR] right away?
+                """,
+            }
+        default:
+            {
+                english="""
+                     So you want to go rescue
+                    [CS:N]Azurill[CR] right away?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's an...emergency?!",
+            }
+        case 2:
+            {
+                english=" It's an...emergency?!",
+            }
+        default:
+            {
+                english=" It's an...emergency?!",
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Well, what you describe does
+                    sound like an emergency, but...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Well, what you describe does
+                    sound like an emergency, but...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Well, what you describe does
+                    sound like an emergency, but...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Well, it's not like I don't trust
+                    you, [hero], but...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Well, it's not like I don't trust
+                    you, [hero], but...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Well, it's not like I don't trust
+                    you, [hero], but...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I just can't believe it!",
+            }
+        case 2:
+            {
+                english=" I just can't believe it!",
+            }
+        default:
+            {
+                english=" I just can't believe it!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I mean, [CS:N]Drowzee[CR] looked like an
+                    honestly nice Pokémon, didn't he?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     After all, [CS:N]Drowzee[CR] seemed to
+                    be a sincerely nice Pokémon, didn't he?
+                """,
+            }
+        default:
+            {
+                english="""
+                     After all, [CS:N]Drowzee[CR] seemed to
+                    be a sincerely nice Pokémon, didn't he?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I watched the three of them go
+                    off earlier...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I watched the three of them go
+                    off earlier...
+                """,
+            }
+        default:
+            {
+                english="""
+                     I saw the three of them go off
+                    together earlier...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     They looked like they were
+                    having a good time, didn't they?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     They looked like they were
+                    having a good time, didn't they?
+                """,
+            }
+        default:
+            {
+                english="""
+                     They looked like they were
+                    having a good time, didn't they?
+                """,
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You're probably just tired,
+                    [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You're probably just tired,
+                    [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     You're probably just tired,
+                    [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Maybe that's why you just had
+                    that bad daydream.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Maybe that's why you just had
+                    that bad daydream.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Maybe that's why you just had
+                    that bad daydream.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Was that it...?[K] Just a bad daydream?)",
+            }
+        default:
+            {
+                english="(Was that it...?[K] Just a bad daydream?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (But come to think of it...[K] That [CS:N]Drowzee[CR] didn't
+                    seem like a bad Pokémon.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (But come to think of it...[K] That [CS:N]Drowzee[CR] didn't
+                    seem like a bad Pokémon.)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Anyway, we're only apprentices.
+                    We can't just go running off on our own.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Anyway, we're only apprentices.
+                    We can't just go do whatever we want.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Anyway, we're only apprentices.
+                    We can't just go off on our own.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Sure, it's worrying, but...",
+            }
+        case 2:
+            {
+                english=" Sure, it's worrying, but...",
+            }
+        default:
+            {
+                english=" Sure, it's a little odd, but...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We have to focus on our guild
+                    work for now.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We have to concentrate on our
+                    guild work for now.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We have to focus on our guild
+                    work for now.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's get ready to explore, then
+                    meet up with [CS:N]Bidoof[CR].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's get ourselves ready to
+                    explore. Then we should find [CS:N]Bidoof[CR].
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's get all set for exploring,
+                    then go meet up with [CS:N]Bidoof[CR].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Bidoof[CR] said he'd be waiting for
+                    us on the guild's upper underground floor.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Bidoof[CR]'s supposed to be waiting
+                    for us on the guild's upper underground floor.
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Bidoof[CR] should be waiting for us
+                    on the guild's upper underground floor.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's get to it, [hero]!",
+            }
+        case 2:
+            {
+                english=" Let's go, [hero]!",
+            }
+        default:
+            {
+                english=" Let's go, [hero]!",
+            }
+    }
+    message_Close();
+    MovePositionLives<performer 0>(1, ACTOR_PLAYER);
+    WaitExecutePerformer(0);
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    end;
+}

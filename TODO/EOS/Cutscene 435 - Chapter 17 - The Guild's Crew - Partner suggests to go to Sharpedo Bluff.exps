@@ -1,0 +1,100 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    se_Play(8965);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, right, [hero]!",
+            }
+        case 2:
+            {
+                english=" Oh, right, [hero]!",
+            }
+        default:
+            {
+                english=" Oh, right, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's check out Sharpedo Bluff
+                    before we go back to the guild.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We should go over to Sharpedo
+                    Bluff before we go back to the guild.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We should go over to Sharpedo
+                    Bluff before we go back to the guild.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Maybe [CS:N]Grovyle[CR] has come back.",
+            }
+        case 2:
+            {
+                english="""
+                     Just in case [CS:N]Grovyle[CR] has
+                    come back.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Just in case [CS:N]Grovyle[CR] has
+                    come back.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's go check out Sharpedo
+                    Bluff, [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's go check out Sharpedo
+                    Bluff, [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's go check out Sharpedo
+                    Bluff, [hero]!
+                """,
+            }
+    }
+    message_Close();
+    $SCENARIO_TALK_BIT_FLAG[121] = 1;
+    end;
+}

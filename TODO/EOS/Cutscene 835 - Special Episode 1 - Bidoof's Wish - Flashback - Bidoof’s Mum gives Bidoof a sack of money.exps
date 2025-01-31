@@ -1,0 +1,87 @@
+
+def 0 {
+    back_SetGround(LEVEL_P15P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_SYMPATHY, 0, 256);
+    Wait(30);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Th-this[K] money...!?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_BIIDARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Take this with you.[K]
+            It's a farewell gift.
+        """,
+    });
+    message_Talk({
+        english="""
+             I always knew this day would
+            come...[K]so I've been saving up, little by little.
+        """,
+    });
+    message_Talk({
+        english="""
+             Please use it in case of
+            an emergency.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 1, 0);
+    Wait(1);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_TEARY_EYED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Sniff...[K] M-Mama...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_BIIDARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             There, there.[K]
+            You always were a bit of a crybaby.
+        """,
+    });
+    message_Talk({
+        english=" Your Mama's rooting for you!",
+    });
+    message_Talk({
+        english="""
+             Even though you're going far
+            away, you always do your best, you hear?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_TEARY_EYED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Sniff... Mama...[K]
+            Thank you...[K]Mama...
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

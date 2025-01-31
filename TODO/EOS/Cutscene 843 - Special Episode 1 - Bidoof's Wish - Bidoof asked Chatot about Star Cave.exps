@@ -1,0 +1,545 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    back_SetGround(LEVEL_G01P04A);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    supervision_Acting(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: AND...THREE![K] SMILES GO FOR MILES!",
+    });
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+    message_Close();
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             OK, Pokémon! ♪[K] Time to get
+            to work! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+    Wait(1);
+    SetDirection<actor ACTOR_NPC_GUREGGURU>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(23);
+    SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(23);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(23);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(23);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(24);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(23);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(23);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(25);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: HOORAY!",
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(2);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+    SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(25);
+    WaitAnimation<actor ACTOR_NPC_DAGUTORIO>();
+    Destroy<actor ACTOR_NPC_DAGUTORIO>();
+    SetDirection<actor ACTOR_NPC_DIGUDA>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(24);
+    WaitAnimation<actor ACTOR_NPC_DIGUDA>();
+    Destroy<actor ACTOR_NPC_DIGUDA>();
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m0', 52.5, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_GUREGGURU>(1.1992, Position<'m1', 28, 31.5>);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m2', 40.5, 23.5>, Position<'m3', 40.5, 16.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m4', 40.5, 23.5>, Position<'m5', 40.5, 16.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1.1992, Position<'m6', 30, 34>);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1.1992, Position<'m7', 48.5, 31.5>, Position<'m8', 40.5, 23.5>, Position<'m9', 40.5, 16.5>);
+    Destroy<actor ACTOR_NPC_PUKURIN>();
+    Wait(150);
+    supervision_RemoveActing(1);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Huh?[K] Something wrong, [CS:Y]Bidoof[CR]?",
+    });
+    message_Talk({
+        english="""
+             Quit staring off into space, and
+            get to your assignments.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m10', 57, 30.5>);
+    Move2PositionMark<actor ACTOR_PLAYER_BIPPA>(1, Position<'m11', 57, 30.5>);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    WaitExecutePerformer(0);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             ...[K][CS:N]Chatot[CR], you know a lot of
+            stuff, don't you?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Yes, that's right. ♪ [K]I do know
+            a lot of info. I'm an encyclopedia. ♪
+            Hee hee! ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             Is there something you wanted
+            to ask me? [K]You don't have to hesitate.
+            Go ahead and ask. ♪
+        """,
+    });
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             But...[K] Please keep it brief.[K]
+            I don't really have the time to dawdle.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Sniff...[K]
+            I'm not really confident...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(10);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:N]Chatot[CR]...[K]do you know anything
+            about a place called [CS:P]Star Cave[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             [CS:P]Star Cave[CR]?[K]
+            Hmm...[K] Yes, I think I've heard of it.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8973);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Huh?![K] Really?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Yes. ♪[K] Of course I have. ♪",
+    });
+    message_Talk({
+        english="""
+             Didn't I just tell you I'm like
+            an encyclopedia? ♪ Hee hee hee! ♪
+        """,
+    });
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Well... [CS:P]Star Cave[CR] is a legendary
+            place, but nobody knows where it is...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" N-nobody knows? Golly...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             That's right.[K] It's a legend that's
+            been passed down for generations.
+        """,
+    });
+    message_Talk({
+        english=" The truth is buried in history.",
+    });
+    message_Talk({
+        english="""
+             But according to the legend...[K]
+            Deep within [CS:P]Star Cave[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             The rare Pokémon[K] [CS:N]Jirachi[CR]
+            lies sleeping...
+        """,
+    });
+    message_Talk({
+        english="""
+             It's said that if you can wake
+            [CS:N]Jirachi[CR]...[K]he'll grant you a wish.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8965);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Huh?! [K]He'll grant you a wish?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(20);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SIGH, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             A wish...[K] A wish-granting
+            rare Pokémon...
+        """,
+    });
+    message_Talk({
+        english=" His name is [CS:N]Jirachi[CR]?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             He...[K] Hey, hey![K]
+            It's only a legend!
+        """,
+    });
+    message_Talk({
+        english="""
+             I already said that nobody
+            knows where the cave is, didn't I?![K] ...HEY!
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    Wait(90);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             ...[K]Hey, [CS:Y]Bidoof[CR]. [K][CS:Y]Bidoof[CR], what are
+            you thinking of? [CS:Y]Bidoof[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_BEYOND_THE_DREAM, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Sniff... (If I meet [CS:N]Jirachi[CR]...[K]he
+            can grant a wish...)
+        """,
+    });
+    message_Talk({
+        english="""
+             Um um um... (That could be
+            my dream...)
+        """,
+    });
+    message_Talk({
+        english="""
+             Best... (My dream--to be the
+            best explorer ever...[CS:N]Jirachi[CR] can make it come
+            true, yup yup!)
+        """,
+    });
+    message_Talk({
+        english="""
+             And... (And I've got that map
+            with [CS:P]Star Cave[CR] marked on it...)
+        """,
+    });
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SIGH, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Got... Mmm... (I've got that
+            map in my possession now, yup yup!)
+        """,
+    });
+    message_Talk({
+        english="""
+             Star... (Right now, I'm...[K] I'm...[K]
+            I'm the only one who knows where [CS:P]Star Cave[CR]
+            is! Just li'l ol' me!)
+        """,
+    });
+    message_Talk({
+        english=" Th... (Th-this...)",
+    });
+    message_Talk({
+        english=" Th... (This is...)",
+    });
+    message_Talk({
+        english="""
+             So c... (So cool! So awesome!
+            Yup yup!)
+        """,
+    });
+    message_Talk({
+        english="""
+             So h... (I'm so happy, I could
+            bust!)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(120);
+    se_Play(8961);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Hey. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8969);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" ...Huh?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(1, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Are you all right, [CS:Y]Bidoof[CR]?[K]
+            You kind of spaced out for a while.
+        """,
+    });
+    message_Talk({
+        english="""
+             And you were smiling
+            to yourself.
+        """,
+    });
+    message_Talk({
+        english=" Something happen?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Nope![K] Nope, nope, nope, nope!",
+    });
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    message_Talk({
+        english=" N-nothin' at all! No sirree!",
+    });
+    message_Talk({
+        english="""
+             I wasn't...[K] I wasn't thinking of
+            anything! Not about [CS:P]Star Cave[CR]! Golly, no!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" ...Is that so?",
+    });
+    message_Talk({
+        english="""
+             You say you weren't thinking of
+            anything...[K] But that's a bit suspicious...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(2, 0, 4);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Eeek! (I gave myself away!)",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             With that mischievous smirk,
+            you had to be thinking of something,
+            don't you agree?
+        """,
+    });
+    message_Talk({
+        english="""
+             Like you were secretly excited
+            about something...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, 4);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             B-but... (Th-that was to
+            the point!)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Like you were so excited about
+            something that you thought you would
+            just burst...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, 4);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             N-no, nuh-huh! (How in
+            the world did he know about that?)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetPositionMark<actor ACTOR_NPC_DOGOOMU>(Position<'m12', 27, 38.5>);
+    SetDirection<actor ACTOR_NPC_DOGOOMU>(DIR_UPRIGHT);
+    SetPositionMark<actor ACTOR_NPC_GUREGGURU>(Position<'m13', 28.5, 27.5>);
+    SetDirection<actor ACTOR_NPC_GUREGGURU>(DIR_DOWN);
+    bgm_FadeOut(60);
+    message_SetActor(ACTOR_NPC_DOGOOMU);
+    message_Talk({
+        english=" HEEEEY! [CS:Y]BIDOOF[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(7);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english=" Yes! What is it?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_DOGOOMU);
+    message_Talk({
+        english=" You've GOT a VISITOR!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english=" Huh? A visitor?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1.5, Position<'m14', 31.5, 37.5>);
+    MovePositionMark<actor ACTOR_PLAYER_BIPPA>(1.5, Position<'m15', 31.5, 35>);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" G-golly, a visitor?[K] For me?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Yeah, THAT'S right.[K] They're
+            WAITING by the GUILD entrance.
+        """,
+    });
+    message_Talk({
+        english=" Hurry UP and get OUT there!",
+    });
+    message_Close();
+    screen_FadeOut(1, 60);
+    end;
+}

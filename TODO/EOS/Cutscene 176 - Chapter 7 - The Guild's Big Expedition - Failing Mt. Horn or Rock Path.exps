@@ -1,0 +1,124 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Ugh... We couldn't get through
+            there...
+        """,
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D07P11A);
+    supervision_StationCommon(0);
+    supervision_LoadStation(LEVEL_D07P11A, 'UM08');
+    supervision_Station(5);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_MT_HORN, 0, 256);
+    Wait(30);
+    WaitLockLives(5, ACTOR_PLAYER);
+    Unlock(9);
+    Wait(15);
+    Unlock(5);
+    Wait(15);
+    Unlock(7);
+    Lock(3);
+    Wait(15);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UPRIGHT);
+    Wait(15);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hmm... We were maybe a little
+                    careless.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Hmm... I think we may have
+                    been a little careless.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Hmm... We got maybe a little
+                    careless.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_BIPPA);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             But...[K] I'm not giving up.[K]
+            Let's get it done!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yup![K] Let's get it done!",
+            }
+        case 2:
+            {
+                english=" Yes![K] Let's get it done!",
+            }
+        default:
+            {
+                english=" Yup![K] Let's get it done!",
+            }
+    }
+    message_Close();
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetDirection(DIR_RIGHT);
+    SetAnimation(76);
+    Lock(5);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Lock(6);
+    hold;
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetDirection(DIR_LEFT);
+    SetAnimation(76);
+    Lock(7);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Unlock(3);
+    Lock(8);
+    hold;
+}
+
+def 3 for actor ACTOR_NPC_BIPPA {
+    SetPositionInitial();
+    SetAnimation(2);
+    Lock(9);
+    Lock(10);
+    hold;
+}

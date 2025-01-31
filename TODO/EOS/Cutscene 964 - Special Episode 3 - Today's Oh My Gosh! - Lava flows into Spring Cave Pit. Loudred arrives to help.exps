@@ -1,0 +1,229 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_EARTHQUAKE3, 0, 256);
+    bgm2_PlayFadeIn(BGM_EARTHQUAKE1, 0, 256);
+    back_SetGround(LEVEL_D57P44A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_FadeOut(45);
+    bgm2_FadeOut(45);
+    Wait(30);
+    SetOutputAttribute<object OBJECT_D57P44A1_438>(8);
+    WaitLockLives(5, ACTOR_PLAYER_KIMAWARI);
+    screen_FadeIn(1, 15);
+    WaitBgm(BGM_EARTHQUAKE3);
+    se_Play(9993);
+    Unlock(5);
+    WaitLockLives(6, ACTOR_PLAYER_KIMAWARI);
+    bgm_PlayFadeIn(BGM_OH_NO, 0, 256);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Oh my gosh![K] Hot hot hot hot
+            hot hot hot hot hot hot hot hot!!!
+        """,
+    });
+    clear $EVENT_LOCAL;
+    Unlock(6);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Heh heh heh![K] This is the
+            [CS:P]Spring Cave Pit[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             Lava flows directly
+            beneath here.
+        """,
+    });
+    message_Talk({
+        english="""
+             You've been incredibly
+            persistent.
+        """,
+    });
+    message_Talk({
+        english=" Knowing that, we ran here!",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_NPC_GOOSUTO2>(0.5, Position<'m0', 25.5, 26.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_GOOSUTO3>(0.5, Position<'m1', 33.5, 26.5>);
+    WaitExecuteLives(ACTOR_NPC_GOOSUTO3);
+    $EVENT_LOCAL = 1;
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             It's the best place to knock out
+            Grass-type Pokémon like you!
+        """,
+    });
+    message_Talk({
+        english=" Brace yourself!",
+    });
+    message_Close();
+    WaitLockLives(7, ACTOR_PLAYER_KIMAWARI);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO>(19);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO2>(19);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO3>(19);
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oh my gosh!",
+    });
+    Wait(15);
+    bgm_FadeOut(30);
+    screen_WhiteOut(1, 5);
+    supervision_Acting(1);
+    se_Play(7180);
+    WaitSe(7180);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(692, 0);
+    message_CloseEnforce();
+    screen_FadeIn(1, 15);
+    Wait(15);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(12);
+    WaitAnimation<actor ACTOR_NPC_DOGOOMU>();
+    se_Play(5121);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    MovePositionOffset<performer 0>(2.5, 0, -8);
+    SetEffect<actor ACTOR_NPC_GOOSUTO>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO>(14);
+    SlidePositionOffset<actor ACTOR_NPC_GOOSUTO>(2.5, 0, -16);
+    SetEffect<actor ACTOR_NPC_GOOSUTO2>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO2>(14);
+    SlidePositionOffset<actor ACTOR_NPC_GOOSUTO2>(2.5, 0, -16);
+    SetEffect<actor ACTOR_NPC_GOOSUTO3>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO3>(14);
+    SlidePositionOffset<actor ACTOR_NPC_GOOSUTO3>(2.5, 0, -16);
+    WaitExecuteLives(ACTOR_NPC_GOOSUTO3);
+    bgm_PlayFadeIn(BGM_ONE_FOR_ALL_ALL_FOR_ONE, 0, 256);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO>(2);
+    Wait(5);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO2>(2);
+    Wait(2);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO3>(2);
+    Wait(5);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Huh?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(692, 0);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" [CS:N]L[CR]-[CS:N]Loudred[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, -2);
+    message_Talk({
+        english=" Are you ALL RIGHT, [CS:Y]Sunflora[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Huh? Whaaat?[K] What are you
+            doing here?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(1, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_PAIN, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, -2);
+    message_Talk({
+        english=" FORGET that!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(1, 2, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_PAIN, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, -2);
+    message_Talk({
+        english=" Here they COME![K] Look OUT!",
+    });
+    message_Close();
+    bgm_FadeOut(30);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_SURPRISED, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, -2);
+    message_Talk({
+        english=" That is...hot hot hot hot hot!",
+    });
+    ExecuteCommon<actor ACTOR_NPC_DOGOOMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(5);
+    message_Close();
+    MovePositionOffset<actor ACTOR_NPC_DOGOOMU>(3, -48, 0, 96, 0, -96, 0, 96, 0);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(164, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER_KIMAWARI {
+    SetAnimation(2);
+    Lock(5);
+    SetEffect(692, 0);
+    CallCommon(CORO_JUMP_SURPRISE_FUNC);
+    SetAnimation(5);
+    Lock(6);
+    CallCommon(CORO_JUMP_ANGRY_FUNC);
+    @label_1;
+    forever {
+        MovePositionMark(2.5, Position<'m2', 26, 32.5>);
+        switch ( $EVENT_LOCAL ) {
+            case 1:
+                break_loop;
+                break;
+            default:
+                MovePositionMark(2.5, Position<'m3', 33, 32.5>);
+                switch ( $EVENT_LOCAL ) {
+                    case 1:
+                        break_loop;
+                        break;
+                    default:
+                        continue;  // may be redundant
+                }
+                break;
+        }
+    }
+    @label_0;
+    MovePositionMark(2.5, Position<'m4', 29.5, 32.5>);
+    Turn2DirectionLives(4, 10, ACTOR_NPC_GOOSUTO);
+    Lock(7);
+    hold;
+}

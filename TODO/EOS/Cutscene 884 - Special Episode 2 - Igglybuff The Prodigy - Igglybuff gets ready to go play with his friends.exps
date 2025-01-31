@@ -1,0 +1,188 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    back_SetGround(LEVEL_P17P02A);
+    supervision_LoadStation(LEVEL_P17P02A, 'UN02');
+    supervision_Station(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_PUKURIN_PAPA>();
+    SetPositionInitial<actor ACTOR_NPC_PUKURIN_MAMA>();
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(2);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_MAMA>(2);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(42);
+    screen_FadeIn(0, 30);
+    Wait(15);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_MAMA>(5);
+    Wait(35);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_MAMA>(2);
+    Wait(30);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_LAUGHING, 3);
+    Wait(80);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_NONE, 3);
+    Wait(20);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(5);
+    Wait(35);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(2);
+    Wait(30);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_LAUGHING, 3);
+    Wait(45);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(23);
+    WaitAnimation<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    MovePositionOffset<actor ACTOR_PLAYER_PUPURIN>(1, 24, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_LEFT);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_MAMA>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Good morning, [CS:Y]Igglybuff[CR].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             Yep, good morning! ♪[K] [CS:N]Papa[CR]. ♪
+            [CS:N]Mama[CR]. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" Hey, [CS:Y]Igglybuff[CR].",
+    });
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(32, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_Talk({
+        english="""
+             You've got plans to play with
+            your friends today, right?
+        """,
+    });
+    message_Talk({
+        english="""
+             I bought a bunch of Gummis.[K]
+            Take some to share.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Yep. ♪ Thanks, [CS:N]Mama[CR]. ♪",
+    });
+    message_Close();
+    Move2PositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m0', 30, 26>);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(32, 10, DIR_DOWNLEFT);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(32, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Turn2DirectionLives<actor ACTOR_PLAYER_PUPURIN>(4, 10, ACTOR_NPC_PUKURIN_MAMA);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    se_Play(9488);
+    WaitSe(9488);
+    message_Mail({
+        english="""
+            [CN][CS:Y]Igglybuff[CR] received
+            [CN]many Gummis from [CS:N]Mama[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_PUPURIN>(1, -8, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    Wait(15);
+    message_ResetActor();
+    message_Talk({
+        english=" [CS:Y]Igglybuff[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWN);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    message_ResetActor();
+    message_Talk({
+        english=" [CS:Y]Igglybuff[CR]. ♪[K] Let's play. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWNLEFT);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, ACTOR_PLAYER_PUPURIN);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    Turn2DirectionLives<actor ACTOR_PLAYER_PUPURIN>(4, 10, ACTOR_NPC_PUKURIN_MAMA);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" Look...[K] Your friends are here.",
+    });
+    message_Talk({
+        english="""
+             Be careful...[K] Come home
+            before it's dark.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yep. ♪[K] I'm off! ♪",
+    });
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(30);
+    message_Mail({
+        english="""
+            [CN]The Special Episode
+            [CN]"Igglybuff the Prodigy"
+            [CN]stars [CS:Y]Igglybuff[CR] as the main character.
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]You will progress through the story with
+            [CN][CS:Y]Igglybuff[CR] as the playable character.
+        """,
+    });
+    message_Mail({
+        english="[CN]Also...",
+    });
+    message_Mail({
+        english="""
+            [CN]You can save your adventure
+            [CN]from [CS:Y]Igglybuff[CR]'s bed.
+        """,
+    });
+    message_Mail({
+        english="[CN][CS:Y]Igglybuff[CR]'s bed is the top one on the left.",
+    });
+    message_Mail({
+        english="[CN]To save your progress, visit [CS:Y]Igglybuff[CR]'s bed.",
+    });
+    message_Close();
+    end;
+}

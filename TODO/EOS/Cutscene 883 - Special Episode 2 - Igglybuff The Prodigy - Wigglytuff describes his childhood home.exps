@@ -1,0 +1,27 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    back_SetGround(LEVEL_P17P01A);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    MovePositionMark<performer 0>(0.3477, Position<'m1', 19, 15>);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetWaitMode(190, 80);
+    message_Mail({
+        english="[CN]I was raised in that little house...",
+    });
+    message_KeyWait();
+    message_Mail({
+        english="[CN]I lived happily there with my parents.",
+    });
+    message_Close();
+    WaitExecutePerformer(0);
+    screen2_FadeOut(0, 30);
+    screen_FadeOut(1, 30);
+    back2_SetMode(0);
+    message_SetWaitMode(-1, -1);
+    end;
+}

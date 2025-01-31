@@ -1,0 +1,74 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(40, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D28P44A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_THE_POWER_OF_DARKNESS, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Humph.[K] Up to now, I've had to
+            chase after you.
+        """,
+    });
+    message_Talk({
+        english="""
+             But now, all that's required is
+            for you to come to me.
+        """,
+    });
+    message_Talk({
+        english=" How deliciously convenient.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Urgh...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" This time...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(30);
+    message_Talk({
+        english="""
+             You're not going to slip through
+            our grasp now!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(30);
+    message_Talk({
+        english=" This is it!",
+    });
+    message_Close();
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(40, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

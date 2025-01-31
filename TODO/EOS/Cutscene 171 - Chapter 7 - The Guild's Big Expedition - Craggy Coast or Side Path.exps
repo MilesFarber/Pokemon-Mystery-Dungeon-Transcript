@@ -1,0 +1,193 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_CRAGGY_COAST, 0, 256);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Are you ready, [hero]?",
+            }
+        case 2:
+            {
+                english=" Are you ready, [hero]?",
+            }
+        default:
+            {
+                english=" Are you ready, [hero]?",
+            }
+    }
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="All set!",
+        }):
+        default:
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Which way should we go?",
+                    }
+                case 2:
+                    {
+                        english=" Which way should we go?",
+                    }
+                default:
+                    {
+                        english=" Which way should we go?",
+                    }
+            }
+            switch ( message_SwitchMenu(0, 1) ) {
+                case menu({
+                    english="[CS:P]Craggy Coast[CR]",
+                }):
+                default:
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" All right. [CS:P]Craggy Coast[CR] it is.",
+                            }
+                        case 2:
+                            {
+                                english=" OK. [CS:P]Craggy Coast[CR] it is.",
+                            }
+                        default:
+                            {
+                                english=" OK. [CS:P]Craggy Coast[CR] it is.",
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_BIPPA);
+                    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 43, 27.5>);
+                    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m1', 47, 28>);
+                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_BIPPA);
+                    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_PLAYER);
+                    WaitExecuteLives(ACTOR_NPC_BIPPA);
+                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_BIPPA);
+                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_BIPPA);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                        case 2:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                        default:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                    }
+                    message_Close();
+                    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m2', 45.5, 21.5>);
+                    Wait(5);
+                    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m3', 45.5, 21.5>);
+                    Wait(5);
+                    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m4', 45.5, 21.5>);
+                    main_EnterDungeon(8, 30);
+                    switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                    main_EnterDungeon(-1, 30);
+                    hold;
+                case menu({
+                    english="[CS:P]Side Path[CR]",
+                }):
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" All right. [CS:P]Side Path[CR] it is.",
+                            }
+                        case 2:
+                            {
+                                english=" OK. [CS:P]Side Path[CR] it is.",
+                            }
+                        default:
+                            {
+                                english=" OK. [CS:P]Side Path[CR] it is.",
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_BIPPA);
+                    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m5', 43, 27.5>);
+                    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m6', 47, 28>);
+                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_BIPPA);
+                    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_PLAYER);
+                    WaitExecuteLives(ACTOR_NPC_BIPPA);
+                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_BIPPA);
+                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_BIPPA);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                        case 2:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                        default:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                    }
+                    message_Close();
+                    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m7', 45.5, 21.5>);
+                    Wait(5);
+                    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m8', 45.5, 21.5>);
+                    Wait(5);
+                    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m9', 45.5, 21.5>);
+                    bgm_FadeOut(60);
+                    screen_FadeOut(1, 30);
+                    main_EnterDungeon(9, 30);
+                    switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                    main_EnterDungeon(-1, 30);
+                    hold;
+            }
+            break;
+        case menu({
+            english="Not yet...",
+        }):
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             All right. We'll go when
+                            you're ready.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             All right. We'll go when
+                            you're ready.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             All right. We'll go when
+                            you're ready.
+                        """,
+                    }
+            }
+            message_Close();
+            Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_LEFT);
+            WaitExecuteLives(ACTOR_NPC_BIPPA);
+            end;
+    }
+}

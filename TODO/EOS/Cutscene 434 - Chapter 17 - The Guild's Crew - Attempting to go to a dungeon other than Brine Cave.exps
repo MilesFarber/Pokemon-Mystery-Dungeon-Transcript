@@ -1,0 +1,52 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We can't go off on our own
+                    now. We have to get ready for tomorrow's
+                    mission.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We have to get ready for
+                    tomorrow's mission. We shouldn't be going off
+                    on an adventure.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We have to get ready for
+                    tomorrow's mission. We shouldn't be going off
+                    on an adventure.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's go to Treasure Town.",
+            }
+        case 2:
+            {
+                english=" Let's go to Treasure Town.",
+            }
+        default:
+            {
+                english=" Let's go to Treasure Town.",
+            }
+    }
+    message_Close();
+    end;
+}

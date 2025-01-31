@@ -1,0 +1,125 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    back_SetGround(LEVEL_G01P04C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" So...[K]what happened?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" [CS:N]Lapras[CR] revealed it to me.",
+    });
+    message_Talk({
+        english="""
+             He said that the Relic Fragment
+            chooses who will go to the [CS:P]Hidden Land[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    ExecuteCommon<actor ACTOR_NPC_DOGOOMU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_GUREGGURU>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(4);
+    message_SetFace(ACTOR_NPC_DAGUTORIO, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english="""
+             The Relic Fragment itself does
+            that?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_Talk({
+        english=" It chooses. On its own?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yep. Apparently so! ♪",
+    });
+    message_Talk({
+        english="""
+             And the Relic Fragment chose
+            [partner].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english="""
+             Hey! Why did the Relic Fragment
+            choose [partner]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" I don't really know.",
+    });
+    message_Talk({
+        english="""
+             I think [CS:N]Dialga[CR] wants to prevent
+            those with bad intentions in their hearts from
+            entering [CS:P]Temporal Tower[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             That's why the important thing
+            is the purity of heart.
+        """,
+    });
+    message_Talk({
+        english="""
+             So [partner]'s heart must
+            have resonated with the Relic Fragment.
+        """,
+    });
+    message_Talk({
+        english="""
+             Anyway, we can do no more
+            to help.
+        """,
+    });
+    message_Talk({
+        english="""
+             From now on...[K]this burden
+            belongs to [partner] and [hero]...
+        """,
+    });
+    message_Talk({
+        english="""
+             It's Team [team:]'s weight
+            to bear now.
+        """,
+    });
+    message_Talk({
+        english="""
+             It's entirely up to them to get to
+            the [CS:P]Hidden Land[CR].[K] It falls to them to stop the
+            destruction of time...
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 90);
+    Wait(60);
+    $SCENARIO_MAIN_BIT_FLAG[8] = 1;
+    $COMPULSORY_SAVE_POINT = 19;
+    CallCommon(CORO_HANYOU_SAVE_FUNC);
+    end;
+}

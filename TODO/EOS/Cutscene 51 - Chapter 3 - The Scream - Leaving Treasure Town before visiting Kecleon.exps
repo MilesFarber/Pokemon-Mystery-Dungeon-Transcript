@@ -1,0 +1,68 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The [CS:K]Kecleon[CR] Market isn't over
+                    this way.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The [CS:K]Kecleon[CR] Market isn't over
+                    this way.
+                """,
+            }
+        default:
+            {
+                english="""
+                     The [CS:K]Kecleon[CR] Market isn't over
+                    this way.
+                """,
+            }
+    }
+    message_Close();
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" The [CS:K]Kecleon[CR] Market is this way.",
+            }
+        case 2:
+            {
+                english=" The [CS:K]Kecleon[CR] Market is this way.",
+            }
+        default:
+            {
+                english=" The [CS:K]Kecleon[CR] Market is this way.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's go, [hero]!",
+            }
+        case 2:
+            {
+                english=" Let's go, [hero]!",
+            }
+        default:
+            {
+                english=" Let's go, [hero]!",
+            }
+    }
+    message_Close();
+    end;
+}

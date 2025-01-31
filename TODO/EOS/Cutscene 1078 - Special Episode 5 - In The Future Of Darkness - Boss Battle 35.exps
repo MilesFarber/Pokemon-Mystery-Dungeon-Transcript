@@ -1,0 +1,82 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(144, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D51P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_ONIGOORI, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" GOGIGIGI!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ONIGOORI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" GOGIGIGIGI!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             If we don't take care of
+            these guys, we won't be able to proceed!
+        """,
+    });
+    message_Talk({
+        english="""
+             This time, we'll knock
+            them around!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english=" Got it!",
+    });
+    message_Close();
+    bgm_FadeOut(60);
+    se_Play(10757);
+    camera_SetEffect(2, 1, 1.0);
+    SetAnimation<actor ACTOR_NPC_MANMUU>(22);
+    WaitAnimation<actor ACTOR_NPC_MANMUU>();
+    message_SetFace(ACTOR_NPC_MANMUU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" BUAAAAOOOOOON!",
+    });
+    Wait(90);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    WaitExecuteLives(ACTOR_NPC_MANMUU);
+    SetAnimation<actor ACTOR_NPC_MANMUU>(2);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" Here they come!",
+    });
+    message_Close();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(144, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

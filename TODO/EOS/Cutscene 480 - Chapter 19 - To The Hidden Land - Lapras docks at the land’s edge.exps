@@ -1,0 +1,36 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_THROUGH_THE_SEA_OF_TIME, 0, 256);
+    back_SetGround(LEVEL_V24P06A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Move2PositionMark<object OBJECT_V24P06A1_311>(0.2969, Position<'m0', 18, 11.5>);
+    screen_FadeIn(1, 30);
+    Wait(330);
+    se_Play(5125);
+    bgm_FadeOut(180);
+    screen_WhiteOut(1, 30);
+    Wait(120);
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    worldmap_SetMode(3);
+    worldmap_SetLevel(5);
+    back2_SetMode(3);
+    WaitSubScreen();
+    worldmap_ChangeLevel(6);
+    worldmap_SetCamera(39);
+    WaitSubScreen();
+    message_Mail({
+        english="""
+            [CN]The clouds parted over
+            [CN]the [CS:P]Hidden Land[CR]!
+        """,
+    });
+    Wait(60);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    screen_FadeOut(0, 0);
+    screen2_FadeOut(1, 30);
+    back2_SetMode(0);
+    end;
+}

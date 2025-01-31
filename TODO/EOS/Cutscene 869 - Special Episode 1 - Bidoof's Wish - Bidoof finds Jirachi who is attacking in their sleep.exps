@@ -1,0 +1,250 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[40, 8];
+    back_SetDungeonBanner(127, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D42P42A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    MovePositionMark<actor ACTOR_PLAYER_BIPPA>(1, Position<'m0', 31.5, 31.5>);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I've come pretty far...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Golly, this here looks like
+            another dead end, yup yup...
+        """,
+    });
+    message_Talk({
+        english="""
+             Is this here really...[K]really the
+            deepest point in the cave?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" .........",
+    });
+    message_Talk({
+        english=" ...Phewwwww...",
+    });
+    bgm_FadeOut(60);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    message_KeyWait();
+    message_Talk({
+        english=" So sleepy...[K] Yaaaaawn...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    se_Play(8963);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 1, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Where is that voice...?",
+    });
+    message_Talk({
+        english="""
+             W-wait[K] a minute...[K]
+            Is that voice...?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" ...Whooo iis iit?",
+    });
+    message_Talk({
+        english=" Whoooo's therrre?[K] Yaaaaawn...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" You mean me?",
+    });
+    message_Talk({
+        english=" I-I'm [CS:Y]Bidoof[CR].",
+    });
+    message_Talk({
+        english=" Who are you?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" Meeee? Yaaaaawn...",
+    });
+    message_Talk({
+        english=" Fwaaaaaahhhhhhh...[K] I'm...[K] I'm...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_Acting(1);
+    se_Play(9224);
+    SetAnimation<actor ACTOR_NPC_JIRAACHI>(25);
+    WaitAnimation<actor ACTOR_NPC_JIRAACHI>();
+    Wait(50);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(2, 0, 8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    WaitExecuteLives(ACTOR_NPC_JIRAACHI);
+    SetAnimation<actor ACTOR_NPC_JIRAACHI>(43);
+    WaitSe(9224);
+    bgm_PlayFadeIn(BGM_BEYOND_THE_DREAM, 0, 256);
+    Wait(30);
+    message_SetFaceOnly(ACTOR_NPC_JIRAACHI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" I'm [CS:N]Jirachi[CR]. Yaaaaawn...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8974);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, -8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_STUNNED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:N]J[CR]-[CS:N]Jirachi[CR]![K] You're THE
+            [CS:N]Jirachi[CR], aren't you?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JIRAACHI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Mmm-hmm... That's right...",
+    });
+    message_Talk({
+        english="""
+             Speaking of... Whoooo are
+            yoooooou? Yaaaaawn...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SPECIAL2, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I'm [CS:Y]Bidoof[CR].
+            (...Didn't I already say that...?)
+        """,
+    });
+    message_Talk({
+        english=" U-um...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JIRAACHI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Whaaaaaat? Zzzz... Snorf...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I heard that you...[K] That you can
+            grant wishes, [CS:N]Jirachi[CR]...
+        """,
+    });
+    message_Talk({
+        english=" Is it really true?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JIRAACHI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Yep, it'ssss truuuuuuue.[K]
+            Yaaaaawn...
+        """,
+    });
+    message_Talk({
+        english="""
+             But right now, I'm pretty
+            sleeeepy, so I can't really help you. Sorrrry...
+            Zzz... Zzzz... Snorf...
+        """,
+    });
+    message_Talk({
+        english=" And...",
+    });
+    message_Talk({
+        english="""
+             I usually toss and turn in my
+            sleep... Zzzz... Snorf...
+        """,
+    });
+    message_Talk({
+        english=" So, if you're nearby...",
+    });
+    message_Talk({
+        english="""
+             I will probably attack you...[K]
+            Sorry if I do... Zzzz... Snorf...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(2, 0, 8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Wh-whaaaaat?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    message_SetFace(ACTOR_NPC_JIRAACHI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             ...Yaaaaawn...[K]
+            I'm so sleepy...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(127, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

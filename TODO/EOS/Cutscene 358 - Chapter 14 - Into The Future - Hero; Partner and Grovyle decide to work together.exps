@@ -1,0 +1,764 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D21P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(29);
+    SetOutputAttribute<actor ACTOR_NPC_JUPUTORU>(2);
+    SetAnimation<object OBJECT_D21P41A1_61>(1);
+    SetAnimation<actor ACTOR_NPC_MIKARUGE>(44);
+    bgm_PlayFadeIn(BGM_STATIC_NOISE, 30, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_MIKARUGE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" UGGGH...OOOOH...ARRGH!",
+    });
+    message_Talk({
+        english=" OOOOH...ARRGH! ...[K]GWAAAAAAH!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    bgm2_PlayFadeIn(BGM_EARTHQUAKE1, 10, 256);
+    camera_SetEffect(2, 1, 1.0);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa! Wh-what's happening?",
+            }
+        case 2:
+            {
+                english=" Waah! Wh-what's happening?",
+            }
+        default:
+            {
+                english=" Waah! Wh-what's happening?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MIKARUGE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             UGWAAAAAAAAAAH![K]
+            GAAAAAAAAH!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_FadeOut(30);
+    se_Play(7429);
+    SetAnimation<actor ACTOR_NPC_MIKARUGE>(25);
+    WaitAnimation<actor ACTOR_NPC_MIKARUGE>();
+    WaitExecuteLives(ACTOR_NPC_MIKARUGE);
+    SetAnimation<actor ACTOR_NPC_MIKARUGE>(26);
+    camera_SetEffect(0, 0, 0);
+    Wait(60);
+    MoveHeight<actor ACTOR_NPC_MIKARUGE>(2, 8);
+    WaitExecuteLives(ACTOR_NPC_MIKARUGE);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_MIKARUGE>(2, 0);
+    WaitExecuteLives(ACTOR_NPC_MIKARUGE);
+    message_SetActor(ACTOR_NPC_MIKARUGE);
+    message_Talk({
+        english=" Eeep!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(7428);
+    SetAnimation<object OBJECT_D21P41A1_61>(18);
+    WaitAnimation<object OBJECT_D21P41A1_61>();
+    WaitExecuteObject(OBJECT_D21P41A1_61);
+    SetAnimation<object OBJECT_D21P41A1_61>(19);
+    Slide2PositionMark<object OBJECT_D21P41A1_61>(0.7969, Position<'m0', 40.5, 28.5>);
+    WaitExecuteObject(OBJECT_D21P41A1_61);
+    Destroy<object OBJECT_D21P41A1_61>();
+    WaitSe(7428);
+    Wait(60);
+    se_Play(8963);
+    ExecuteCommon<actor ACTOR_NPC_MIKARUGE>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MIKARUGE);
+    Wait(15);
+    MoveHeight<actor ACTOR_NPC_MIKARUGE>(2, 8);
+    WaitExecuteLives(ACTOR_NPC_MIKARUGE);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_MIKARUGE>(2, 0);
+    WaitExecuteLives(ACTOR_NPC_MIKARUGE);
+    message_SetActor(ACTOR_NPC_MIKARUGE);
+    message_Talk({
+        english=" Eeep!",
+    });
+    message_Talk({
+        english=" R-r-run away!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(7447);
+    SetAnimation<actor ACTOR_NPC_MIKARUGE>(47);
+    SetAnimation<actor ACTOR_NPC_MIKARUGE>(1024);
+    MovePositionMark<actor ACTOR_NPC_MIKARUGE>(2.5, Position<'m1', 17, 28.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_UPLEFT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_MIKARUGE);
+    Destroy<actor ACTOR_NPC_MIKARUGE>();
+    Wait(30);
+    WaitSe(7447);
+    Wait(30);
+    se_Play(8961);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Wh-what was that...?[K]
+                    What was all that about?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Wh-what was that...?[K]
+                    What was all that about?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Wh-what was that...?[K]
+                    What was all that about?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SlidePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, 1, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, -1, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, 1, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, -1, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_PAIN, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" They got spooked and ran.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(1, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Grovyle[CR]!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Grovyle[CR]!",
+            }
+        default:
+            {
+                english=" [CS:N]Grovyle[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m2', 46.5, 24>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 46.5, 24.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m4', 42, 21.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Are you all right?",
+            }
+        case 2:
+            {
+                english=" Are you all right?",
+            }
+        default:
+            {
+                english=" Are you all right?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_PAIN, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Yeah... I'll be fine...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Can you get up?",
+            }
+        case 2:
+            {
+                english=" Can you get up?",
+            }
+        default:
+            {
+                english=" Can you get up?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_PAIN, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Somehow...[K] Urk!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(31);
+    WaitAnimation<actor ACTOR_NPC_JUPUTORU>();
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(2);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" That Pokémon...[K] It was cunning.",
+    });
+    message_Talk({
+        english="""
+             It went up my nose and took
+            control of my body...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" So that was a bad Pokémon.",
+            }
+        case 2:
+            {
+                english=" So that was a bad Pokémon.",
+            }
+        default:
+            {
+                english=" So that was a bad Pokémon.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" No. That's not true.",
+    });
+    message_Talk({
+        english="""
+             That [CS:N]Spiritomb[CR] was probably
+            upset over us trespassing in its space.
+        """,
+    });
+    message_Talk({
+        english="""
+             It was frightening...because it
+            became so angry that it lost control of itself.
+        """,
+    });
+    message_Talk({
+        english="""
+             But you saw what happened when
+            the situation turned sour. It fled.
+        """,
+    });
+    message_Talk({
+        english=" It's normally a timid Pokémon.",
+    });
+    message_Talk({
+        english="""
+             There are many such Pokémon
+            here in your future.
+        """,
+    });
+    message_Talk({
+        english="""
+             They are Pokémon who should be
+            good...
+        """,
+    });
+    message_Talk({
+        english="""
+             But they have become bitter and
+            twisted because of this world's perpetual
+            darkness.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I see...",
+            }
+        case 2:
+            {
+                english=" I see...",
+            }
+        default:
+            {
+                english=" I see...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_DOWNLEFT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Good Pokémon going bad because
+                    of this world...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Good Pokémon going bad because
+                    of this world...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Good Pokémon going bad because
+                    of this world...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That makes me sad.",
+            }
+        case 2:
+            {
+                english=" That makes me sad.",
+            }
+        default:
+            {
+                english=" That makes me sad.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_JUPUTORU>();
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Turn2DirectionLives<actor ACTOR_NPC_JUPUTORU>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Hey![K] You two!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_JUPUTORU);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_JUPUTORU);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_NPC_JUPUTORU>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_Talk({
+        english=" Now will you finally trust me?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ummm...[K]somewhat?",
+            }
+        case 2:
+            {
+                english=" Ummm...[K]somewhat?",
+            }
+        default:
+            {
+                english=" Ummm...[K]somewhat?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     To be honest, I don't really trust
+                    you, but...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I'll admit it. I don't really trust
+                    you, but...
+                """,
+            }
+        default:
+            {
+                english="""
+                     To be honest, I don't really trust
+                    you, but...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Humph![K] I've told you before.",
+    });
+    message_Talk({
+        english="""
+             There's no point in continuing
+            together if there's no trust between us.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_RC_FACEOUTW);
+    message_Talk({
+        english=" I'm leaving.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(0.5, 32, 32);
+    Wait(15);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_DOWNRIGHT);
+    Wait(15);
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, wait!",
+            }
+        case 2:
+            {
+                english=" Oh, wait!",
+            }
+        default:
+            {
+                english=" Oh, wait!",
+            }
+    }
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I didn't say I don't believe you!",
+            }
+        case 2:
+            {
+                english=" I didn't say I don't believe you!",
+            }
+        default:
+            {
+                english=" I didn't say I don't believe you!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" To be perfectly honest...",
+            }
+        case 2:
+            {
+                english=" To be perfectly honest...",
+            }
+        default:
+            {
+                english=" To be perfectly honest...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We don't know what's what
+                    anymore.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We don't know what's what
+                    anymore.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We don't know what's what
+                    anymore.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's why we want to know as
+                    much as we can learn.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's why we want to know as
+                    much as we can learn.
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's why we want to know as
+                    much as we can learn.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" And...",
+            }
+        case 2:
+            {
+                english=" And...",
+            }
+        default:
+            {
+                english=" And...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Yeah, I still don't completely
+                    trust you, [CS:N]Grovyle[CR], but...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's true I still don't completely
+                    trust you, [CS:N]Grovyle[CR], but...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Yes, I still don't completely
+                    trust you, [CS:N]Grovyle[CR], but...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But what you said does make
+                    some sense...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But what you said does make
+                    some sense...
+                """,
+            }
+        default:
+            {
+                english="""
+                     But what you said does make
+                    some sense...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It just seems to be logical.",
+            }
+        case 2:
+            {
+                english=" It just seems to be logical.",
+            }
+        default:
+            {
+                english=" It just seems to be logical.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So, please?[K] [CS:N]Grovyle[CR], please tell
+                    us what you know.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So, please?[K] [CS:N]Grovyle[CR], please tell
+                    us what you know.
+                """,
+            }
+        default:
+            {
+                english="""
+                     So, please?[K] [CS:N]Grovyle[CR], please tell
+                    us what you know.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Tell us about this future...",
+            }
+        case 2:
+            {
+                english=" Tell us about this future...",
+            }
+        default:
+            {
+                english=" Tell us about this future...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     and why you came to our world,
+                    [CS:N]Grovyle[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     and why you came to our world,
+                    [CS:N]Grovyle[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     and why you came to our world,
+                    [CS:N]Grovyle[CR]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             So, what if everything I say is
+            a pack of lies?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's all right.[K] I won't accept
+                    everything you say as the truth right away.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's all right.[K] I won't accept
+                    everything you say at face value right away.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's all right.[K] I won't accept
+                    everything you say as the truth right away.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I'll listen, then decide.",
+            }
+        case 2:
+            {
+                english=" I'll listen, then decide.",
+            }
+        default:
+            {
+                english=" I'll listen, then decide.",
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    WaitBgm(BGM_TIME_GEAR_REMIX);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Well...[K]fine.[K] Follow me.",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.7969, Position<'m5', 57, 30.5>);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_PLAYER>(0.7969, 48, 48);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.7969, 64, 64);
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(0.7969, 80, 0);
+    MovePositionOffset<actor ACTOR_PLAYER>(0.7969, 80, 0);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.7969, 80, 0);
+    Wait(15);
+    screen_FadeOut(1, 60);
+    Wait(60);
+    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+    $SCENARIO_MAIN_BIT_FLAG[8] = 1;
+    $COMPULSORY_SAVE_POINT = 15;
+    CallCommon(CORO_HANYOU_SAVE_FUNC);
+    end;
+}

@@ -1,0 +1,133 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_THROUGH_THE_SEA_OF_TIME, 0, 256);
+    back_SetGround(LEVEL_V24P03A);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    back_SetBackScrollSpeed(-10.0, 0.0);
+    SetOutputAttribute<object OBJECT_V24P03A3_299>(2048);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    back_SetBackScrollSpeed(-20.0, 0.0);
+    Wait(100);
+    message_SetFace(ACTOR_NPC_RAPURASU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" OK![K] Here we go!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8463);
+    Wait(10);
+    back_SetBackScrollSpeed(-30.0, 0.0);
+    Wait(20);
+    back_SetBackScrollSpeed(-40.0, 0.0);
+    Wait(60);
+    se_Play(5140);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5140);
+    se_Play(7445);
+    back_SetBackScrollSpeed(-68, 0.0);
+    Wait(120);
+    supervision_Acting(2);
+    camera_SetPositionMark<performer 0>(Position<'m0', 62, 14.5>);
+    supervision_RemoveActing(1);
+    Wait(60);
+    back_SetBackScrollSpeed(-72, 0.0);
+    supervision_Acting(3);
+    camera_SetPositionMark<performer 0>(Position<'m1', 101, 14.5>);
+    supervision_RemoveActing(2);
+    Wait(90);
+    back_SetBackScrollSpeed(-76, 0.0);
+    supervision_Acting(4);
+    camera_SetPositionMark<performer 0>(Position<'m2', 23, 44.5>);
+    supervision_RemoveActing(3);
+    Wait(10);
+    back_SetBackScrollSpeed(-80, 0.0);
+    supervision_Acting(5);
+    camera_SetPositionMark<performer 0>(Position<'m3', 62, 44.5>);
+    supervision_RemoveActing(4);
+    Wait(30);
+    back_SetBackScrollSpeed(-84, 0.0);
+    Wait(60);
+    camera_SetPositionMark<performer 0>(Position<'m4', 101, 44.5>);
+    Wait(10);
+    back_SetBackScrollSpeed(-88, 0.0);
+    camera_SetPositionMark<performer 0>(Position<'m5', 23, 74.5>);
+    Wait(10);
+    back_SetBackScrollSpeed(-92, 0.0);
+    camera_SetPositionMark<performer 0>(Position<'m6', 62, 74.5>);
+    Wait(10);
+    back_SetBackScrollSpeed(-96, 0.0);
+    camera_SetPositionMark<performer 0>(Position<'m7', 101, 74.5>);
+    Wait(10);
+    back_SetBackScrollSpeed(-100, 0.0);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa! [CS:N]Lapras[CR]!",
+            }
+        case 2:
+            {
+                english=" Waah! [CS:N]Lapras[CR]!",
+            }
+        default:
+            {
+                english=" Waah! [CS:N]Lapras[CR]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Lapras[CR] is flying!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Lapras[CR] is flying!",
+            }
+        default:
+            {
+                english=" [CS:N]Lapras[CR] is flying!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" No! That's not it!",
+    });
+    message_Talk({
+        english=" This...[K] This isn't flying!",
+    });
+    message_Talk({
+        english=" We're crossing the sea of time!",
+    });
+    message_Close();
+    Wait(30);
+    se_Play(7949);
+    back_SetBackScrollSpeed(-200, 0.0);
+    Wait(120);
+    screen_WhiteOut(1, 15);
+    end;
+}
+
+def 1 for object OBJECT_V24P03A1_295 {
+    SetOutputAttribute(8);
+    hold;
+}
+
+def 2 for object OBJECT_V24P03A1_296 {
+    SetOutputAttribute(8);
+    hold;
+}
+
+def 3 for object OBJECT_V24P03A2_297 {
+    SetOutputAttribute(8);
+    hold;
+}

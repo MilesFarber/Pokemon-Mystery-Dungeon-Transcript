@@ -1,0 +1,183 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D14P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I put my faith in you that time
+                    too, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I put my faith in you that time
+                    too, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     I put my faith in you that time
+                    too, [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I was able to go on then because
+                    you helped me be brave, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I was able to go on then because
+                    you helped me be courageous, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     I was able to go on then because
+                    you helped me be brave, [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     My feelings haven't changed
+                    since then.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     My feelings haven't changed
+                    since then.
+                """,
+            }
+        default:
+            {
+                english="""
+                     My feelings haven't changed
+                    since then.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So let's go for it! Let's jump into
+                    that quicksand pit, [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So let's go for it! Let's jump into
+                    that quicksand pit, [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     So let's go for it! Let's jump into
+                    that quicksand pit, [hero]!
+                """,
+            }
+    }
+    message_Close();
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ready?!",
+            }
+        case 2:
+            {
+                english=" Are you ready?!",
+            }
+        default:
+            {
+                english=" Are you ready?!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" One...[K]two...[K]three![K] Go!",
+            }
+        case 2:
+            {
+                english=" One...[K]two...[K]three![K] Go!",
+            }
+        default:
+            {
+                english=" One...[K]two...[K]three![K] Go!",
+            }
+    }
+    message_Close();
+    MovePositionMark<actor ACTOR_PLAYER>(1.5, Position<'m0', 31, 22.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.5, Position<'m1', 27, 22.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(10);
+    MovePositionMark<actor ACTOR_PLAYER>(3, Position<'m2', 31, 18.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(3, Position<'m3', 27, 18.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    se_Play(7169);
+    SetAnimation<actor ACTOR_PLAYER>(74);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(74);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SHOUTING, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waaaah!",
+            }
+        case 2:
+            {
+                english=" Waaaah!",
+            }
+        default:
+            {
+                english=" Waaaah!",
+            }
+    }
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    Wait(45);
+    screen_FadeOut(1, 60);
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    Wait(30);
+    end;
+}

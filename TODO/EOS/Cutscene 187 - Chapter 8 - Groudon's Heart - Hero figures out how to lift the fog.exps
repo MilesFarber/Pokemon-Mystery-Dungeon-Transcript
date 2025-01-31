@@ -1,0 +1,229 @@
+
+def 0 {
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_P03P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeInAll(1, 15);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(What did I just pick up on?)",
+            }
+        default:
+            {
+                english="(What did I just pick up on?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_I_SAW_SOMETHING_AGAIN, 0, 256);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (That was different from what I've
+                    gotten before.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (That was different from what I've
+                    gotten before.)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(This time, I only heard a voice...)",
+            }
+        default:
+            {
+                english="(This time, I only heard a voice...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(And I don't know whose voice that was.)",
+            }
+        default:
+            {
+                english="(And I don't know whose voice that was.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That voice...)",
+            }
+        default:
+            {
+                english="(That voice...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Whose voice was that?)",
+            }
+        default:
+            {
+                english="(Whose voice was that?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (I didn't even get a sense of what the voice
+                    really sounds like...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (I didn't even get a sense of what the voice
+                    really sounds like...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(But it still bugs me for some reason...)",
+            }
+        default:
+            {
+                english="(But it still bugs me for some reason...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Are you all right, [hero]?",
+            }
+        case 2:
+            {
+                english=" Are you all right, [hero]?",
+            }
+        default:
+            {
+                english=" Are you all right, [hero]?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Did you see something?",
+            }
+        case 2:
+            {
+                english=" Did you see something?",
+            }
+        default:
+            {
+                english=" Did you see something?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(60);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(What did that voice say?[K] Remember...)",
+            }
+        default:
+            {
+                english="(What did that voice say?[K] Remember...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That voice said...)",
+            }
+        default:
+            {
+                english="(That voice said...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (It said, "Place the Drought Stone in Groudon's
+                    heart," then said...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (It said, "Place the Drought Stone in Groudon's
+                    heart," then said...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(\"That lifts the fog!\")",
+            }
+        default:
+            {
+                english="(\"That lifts the fog!\")",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Wait a second![K] Drought Stone?!)",
+            }
+        default:
+            {
+                english="(Wait a second![K] Drought Stone?!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Is that maybe...)",
+            }
+        default:
+            {
+                english="(Is that maybe...)",
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}
+
+def 1 for object OBJECT_P03P01A1_127 {
+    SetOutputAttribute(1024);
+    hold;
+}

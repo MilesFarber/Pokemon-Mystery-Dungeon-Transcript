@@ -1,0 +1,286 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_CRAGGY_COAST, 0, 256);
+    back_SetGround(LEVEL_D06P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 15);
+    Wait(30);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 46, 27.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 46, 24.5>);
+    Move2PositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m2', 46, 27.5>);
+    Wait(20);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 43, 29.5>);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(4);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    ([partner] is acting like a leader. I didn't
+                    notice it before...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    ([partner] is acting like a leader. I didn't
+                    notice it before...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (It must be the excitement from exploring
+                    that's bringing it out...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (It must be the excitement from exploring
+                    that's bringing it out...)
+                """,
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (But [partner], who was so timid before,
+                    is trying so much harder...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (But [partner], who was so timid before,
+                    is trying so much harder...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (Yes, [partner] is getting stronger and
+                    more confident bit by bit...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (Yes, [partner] is getting stronger and
+                    more confident bit by bit...)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh... Huh?",
+            }
+        case 2:
+            {
+                english=" Oh... Huh?",
+            }
+        default:
+            {
+                english=" Oh... Huh?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Huh? Problem?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_BIPPA);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If you look closely here, there
+                    are two entrances.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If you look closely here, there
+                    are two entrances.
+                """,
+            }
+        default:
+            {
+                english="""
+                     If you look closely here, there
+                    are two entrances.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8973);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_BIPPA>();
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_SAD, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Huh? Now, that is mighty vexing.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What'll we do, [hero]?",
+            }
+        case 2:
+            {
+                english=" What'll we do, [hero]?",
+            }
+        default:
+            {
+                english=" What'll we do, [hero]?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Which way should we go?",
+            }
+        case 2:
+            {
+                english=" Which way should we go?",
+            }
+        default:
+            {
+                english=" Which way should we go?",
+            }
+    }
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="[CS:P]Craggy Coast[CR]",
+        }):
+        default:
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" OK. [CS:P]Craggy Coast[CR] it is.",
+                    }
+                case 2:
+                    {
+                        english=" OK. [CS:P]Craggy Coast[CR] it is.",
+                    }
+                default:
+                    {
+                        english=" OK. [CS:P]Craggy Coast[CR] it is.",
+                    }
+            }
+            @label_2;
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" All right. Now...",
+                    }
+                case 2:
+                    {
+                        english=" All right. Now...",
+                    }
+                default:
+                    {
+                        english=" All right. Now...",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+            message_Talk({
+                english="""
+                     Let's all three work as one and
+                    get this done!
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+            Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UP);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+            WaitExecuteLives(ACTOR_PLAYER);
+            WaitExecuteLives(ACTOR_NPC_BIPPA);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            SetAnimation<actor ACTOR_ATTENDANT1>(71);
+            SetAnimation<actor ACTOR_PLAYER>(71);
+            WaitAnimation<actor ACTOR_ATTENDANT1>();
+            WaitAnimation<actor ACTOR_PLAYER>();
+            SetAnimation<actor ACTOR_ATTENDANT1>(2);
+            SetAnimation<actor ACTOR_PLAYER>(2);
+            Wait(30);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+            $SCENARIO_MAIN = scn[9, 2];
+            if ( $SCENARIO_MAIN_BIT_FLAG[5] ) {
+                debug_Print('ENTER_CHIISANAYOKOANA');
+                bgm_FadeOut(60);
+                main_EnterDungeon(9, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterDungeon(-1, 30);
+                hold;
+                end;
+            } else {
+                debug_Print('ENTER_ENGANNOIWABA');
+                main_EnterDungeon(8, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterDungeon(-1, 30);
+                hold;
+            }
+            break;
+        case menu({
+            english="[CS:P]Side Path[CR]",
+        }):
+            $SCENARIO_MAIN_BIT_FLAG[5] = 1;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" OK. [CS:P]Side Path[CR] it is.",
+                    }
+                case 2:
+                    {
+                        english=" OK. [CS:P]Side Path[CR] it is.",
+                    }
+                default:
+                    {
+                        english=" OK. [CS:P]Side Path[CR] it is.",
+                    }
+            }
+            jump @label_2;
+    }
+}

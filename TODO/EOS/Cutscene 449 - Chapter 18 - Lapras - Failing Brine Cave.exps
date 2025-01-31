@@ -1,0 +1,121 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh! We didn't make it.",
+            }
+        case 2:
+            {
+                english=" Ugh! We didn't make it.",
+            }
+        default:
+            {
+                english=" Ugh! That ended badly.",
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D25P11A);
+    supervision_StationCommon(0);
+    supervision_LoadStation(LEVEL_D25P11A, 'UM23');
+    supervision_Station(2);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+    WaitExecuteLives(ACTOR_NPC_DAGUTORIO);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_BRINE_CAVE, 0, 256);
+    Wait(30);
+    WaitLockLives(5, ACTOR_PLAYER);
+    Unlock(5);
+    Wait(15);
+    Unlock(7);
+    Lock(3);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wh-where are we?",
+            }
+        case 2:
+            {
+                english=" Wh-where are we?",
+            }
+        default:
+            {
+                english=" Wh-where are we?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" This is [CS:P]Brine Cave[CR]'s entrance.",
+    });
+    message_Talk({
+        english=" We got sent back.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5122);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(18);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             But this is no time to feel sorry
+            for ourselves!
+        """,
+    });
+    message_Talk({
+        english="""
+             We'll get to the very depths of
+            this cave next time for certain!
+        """,
+    });
+    message_Close();
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetPositionInitial();
+    SetDirection(DIR_RIGHT);
+    SetAnimation(76);
+    Lock(5);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_DOWN_FUNC);
+    Lock(6);
+    hold;
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetPositionInitial();
+    SetDirection(DIR_LEFT);
+    SetAnimation(76);
+    Lock(7);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Unlock(3);
+    Lock(8);
+    hold;
+}

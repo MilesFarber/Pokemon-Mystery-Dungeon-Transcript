@@ -1,0 +1,445 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TEMPORAL_PINNACLE, 0, 256);
+    back_SetGround(LEVEL_D51P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_YONOWAARU_N8>();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    SetOutputAttribute<actor ACTOR_NPC_YONOWAARU_N8>(128);
+    SetOutputAttribute<actor ACTOR_PLAYER_FUTURE>(128);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(10502);
+    supervision_Acting(4);
+    SetOutputAttribute<object OBJECT_P24P01A1_405>(1);
+    SetAnimation<object OBJECT_P24P01A1_405>(17);
+    WaitAnimation<object OBJECT_P24P01A1_405>();
+    Wait(30);
+    ResetOutputAttribute<actor ACTOR_NPC_YONOWAARU_N8>(128);
+    supervision_Acting(5);
+    SetOutputAttribute<object OBJECT_P24P01A1_406>(1);
+    SetAnimation<object OBJECT_P24P01A1_406>(18);
+    WaitAnimation<object OBJECT_P24P01A1_406>();
+    Wait(30);
+    ResetOutputAttribute<actor ACTOR_PLAYER_FUTURE>(128);
+    WaitExecuteObject(OBJECT_P24P01A1_405);
+    supervision_RemoveActing(4);
+    WaitExecuteObject(OBJECT_P24P01A1_406);
+    supervision_RemoveActing(5);
+    Wait(20);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" This is...?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, ACTOR_PLAYER_FUTURE);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(4, 10, ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" [CS:P]Frozen Island[CR].",
+    });
+    message_Talk({
+        english="""
+             Before time stopped, it was
+            called [CS:P]Blizzard Island[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             Now that the world has plunged
+            into darkness...[K]it's much more severe...
+        """,
+    });
+    message_Talk({
+        english=" It's become closed off.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(15);
+    MovePositionOffset<actor ACTOR_PLAYER_FUTURE>(0.5, 0, 8);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(20);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" So...[K]where do we go, then?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_Acting(3);
+    Wait(1);
+    MovePositionMark<actor ACTOR_NPC_YUKIWARASHI>(1.5, Position<'m0', 45, 20>);
+    MovePositionMark<actor ACTOR_NPC_YUKIWARASHI2>(1.5, Position<'m1', 47, 18.5>);
+    MovePositionMark<actor ACTOR_NPC_YUKIWARASHI3>(1.5, Position<'m2', 48.5, 21.5>);
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI3);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI3>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI2);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI2>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_RIGHT);
+    message_SetFaceOnly(ACTOR_NPC_YUKIWARASHI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Gii!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_RC_FACEOUTW);
+    message_FacePositionOffset(-3, 1);
+    message_Talk({
+        english=" What was that?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             It's the [CS:N]Snorunt[CR].[K]
+            I believe they live around here.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    Wait(7);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI2>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI3>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_YUKIWARASHI3>();
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI3);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Gigii...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_YUKIWARASHI2>(1.5, 16, 0);
+    MovePositionOffset<actor ACTOR_NPC_YUKIWARASHI>(1.5, 16, 0);
+    MovePositionOffset<actor ACTOR_PLAYER_FUTURE>(1.1992, 8, 0);
+    MovePositionOffset<actor ACTOR_NPC_YUKIWARASHI3>(1.5, 16, 0);
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI2>(EFFECT_EXCLAMATION_MARK, 3);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_RC_FACEOUTW);
+    message_FacePositionOffset(-1, 1);
+    message_Talk({
+        english=" H-hey![K] Wait up a moment!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YUKIWARASHI>(4, 10, DIR_LEFT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_YUKIWARASHI2>(4, 10, DIR_LEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_YUKIWARASHI3>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI3);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Gigii?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m3', 40.5, 19.5>);
+    MovePositionOffset<actor ACTOR_PLAYER_FUTURE>(0.7969, 16, 0);
+    WaitExecutePerformer(0);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(1, 1);
+    message_Talk({
+        english=" I have something I want to ask.",
+    });
+    message_Talk({
+        english="""
+             I think you would have noticed
+            if anyone other than us came through
+            here recently...
+        """,
+    });
+    message_Talk({
+        english=" Did you see anyone?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8963);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI>(EFFECT_QUESTION_MARK, 3);
+    Wait(7);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI2>(EFFECT_QUESTION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI3>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_YUKIWARASHI3>();
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI3);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-2, -5);
+    message_Talk({
+        english=" Gigii?[K] Gigigii?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Gigigii?",
+    });
+    Turn2Direction<actor ACTOR_NPC_YUKIWARASHI>(4, 10, DIR_RIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_YUKIWARASHI2>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_YUKIWARASHI3>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI3);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_NORMAL, FACE_POS_BOTTOM_RC_FACEOUTW);
+    message_FacePositionOffset(-2, -5);
+    message_Talk({
+        english=" Gii.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Gigii.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(1, 1);
+    message_Talk({
+        english="""
+             If you've noticed anyone,
+            anything at all, please tell me!
+        """,
+    });
+    message_Talk({
+        english=" It's really important!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_YUKIWARASHI>();
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_NORMAL, FACE_POS_BOTTOM_RC_FACEOUTW);
+    message_FacePositionOffset(-2, -5);
+    message_Talk({
+        english=" Gii!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI2>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(7);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI3>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_YUKIWARASHI3>();
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI3);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Gii! Gii!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI2>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(3);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI3>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(3);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI3>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI2>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    MovePositionOffset<actor ACTOR_PLAYER_FUTURE>(0.5, 24, 0);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(3, 1);
+    message_Talk({
+        english=" Did you understand any of that?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YUKIWARASHI>(4, 10, DIR_LEFT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_YUKIWARASHI2>(4, 10, DIR_LEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_YUKIWARASHI3>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI3);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Giiii...",
+    });
+    message_Talk({
+        english=" Giiii giiii...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI>(EFFECT_ANGRY, 3);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_ANGRY, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-2, -5);
+    message_Talk({
+        english=" Giiiiii!!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI>(EFFECT_NONE, 3);
+    bgm_FadeOut(30);
+    se_Play(10503);
+    supervision_Acting(6);
+    SetOutputAttribute<object OBJECT_D51P11A1_404>(1);
+    SetAnimation<object OBJECT_D51P11A1_404>(17);
+    WaitAnimation<object OBJECT_D51P11A1_404>();
+    WaitExecuteObject(OBJECT_D51P11A1_404);
+    SetAnimation<actor ACTOR_NPC_YUKIWARASHI>(18);
+    WaitAnimation<actor ACTOR_NPC_YUKIWARASHI>();
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI);
+    SetAnimation<actor ACTOR_NPC_YUKIWARASHI>(2);
+    SetAnimation<object OBJECT_D51P11A1_404>(18);
+    MovePositionOffset<object OBJECT_D51P11A1_404>(3, -32, 0);
+    Wait(10);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(11);
+    SlidePositionOffset<actor ACTOR_PLAYER_FUTURE>(2.5, -32, 0);
+    MovePositionOffset<performer 0>(2.5, -8, 0);
+    se_Play(5121);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(29);
+    SetDirection<actor ACTOR_PLAYER_FUTURE>(DIR_LEFT);
+    SetAnimation<object OBJECT_D51P11A1_404>(19);
+    WaitAnimation<object OBJECT_D51P11A1_404>();
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_PAIN, FACE_POS_TOP_C_FACEL);
+    message_FacePositionOffset(0, 1);
+    message_Talk({
+        english=" GWAH!",
+    });
+    WaitExecuteObject(OBJECT_D51P11A1_404);
+    Destroy<object OBJECT_D51P11A1_404>();
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI>(EFFECT_LAUGHING, 3);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI2>(EFFECT_LAUGHING, 3);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI2>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI3>(EFFECT_LAUGHING, 3);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI3>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(3);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI3>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_YUKIWARASHI2>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_YUKIWARASHI, FACE_HAPPY, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" GWAH-HA-HA-HA-HA-HA!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI>(EFFECT_NONE, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI2>(EFFECT_NONE, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_YUKIWARASHI3>(EFFECT_NONE, 3);
+    Wait(15);
+    MovePositionOffset<actor ACTOR_NPC_YUKIWARASHI2>(2, 88, 0);
+    Wait(10);
+    MovePositionOffset<actor ACTOR_NPC_YUKIWARASHI>(2, 88, 0);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_NPC_YUKIWARASHI3>(2, 88, 0);
+    WaitExecuteLives(ACTOR_NPC_YUKIWARASHI);
+    supervision_RemoveActing(3);
+    Wait(60);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(31);
+    WaitAnimation<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 2, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(30);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_ANGRY, 3);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(0, 1);
+    message_Talk({
+        english=" Bah...[K] Argh! They're no help!",
+    });
+    message_Talk({
+        english=" They're just teasing me!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_NONE, 3);
+    bgm_PlayFadeIn(BGM_DARK_ICE_MOUNTAIN, 0, 256);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N8>(0.7969, Position<'m4', 34.5, 18.5>);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             The attitudes of the Pokémon
+            living in this world of darkness are a
+            bit warped...
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:Y]Grovyle[CR].[K] I suspect you know
+            better than anyone else.
+        """,
+    });
+    message_Talk({
+        english="""
+             I know I don't really know
+            where it would be best to go...
+        """,
+    });
+    message_Talk({
+        english="""
+             However, I believe if we follow
+            the path that lies ahead of here, it would
+            be best.
+        """,
+    });
+    message_Talk({
+        english="""
+             I suspect the [CS:N]Sableye[CR] will
+            have laid other traps, so we should
+            proceed with caution.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(0, 1);
+    message_Talk({
+        english=" Yes, I see.[K] ...[K]However...",
+    });
+    message_KeyWait();
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_ANGRY, 3);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(0, 1);
+    message_Talk({
+        english="""
+             The ones we met...[K] If we see
+            them again...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             ... (However, the [CS:N]Snorunt[CR] could
+            tease him like that...)
+        """,
+    });
+    message_Talk({
+        english="""
+             (This guy...[K] Sometimes he can
+            be so innocent...)
+        """,
+    });
+    message_Talk({
+        english=" (No.)",
+    });
+    message_Talk({
+        english="""
+             (That's why his heart is not
+            influenced by the power of the darkness...)
+        """,
+    });
+    message_Close();
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_NONE, 3);
+    $SCENARIO_SIDE = scn[48, 0];
+    end;
+}

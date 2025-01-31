@@ -1,0 +1,994 @@
+
+def 0 {
+    sound_Stop();
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_P03P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    MovePositionOffset<performer 0>(0.5, 300, 0);
+    bgm_PlayFadeIn(BGM_RAIN2, 90, 256);
+    screen_FadeInAll(1, 30);
+    Wait(180);
+    Wait(180);
+    Wait(90);
+    screen_FadeOutAll(1, 60);
+    SetPositionMark<performer 0>(Position<'m0', 47, 89.5>);
+    screen_FadeInAll(1, 30);
+    Wait(60);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 44.5, 89.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m2', 49.5, 89.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Awesome! The water's coming
+                    down in waterfalls all over the place!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's incredible! The water's
+                    coming down in waterfalls all over the place!
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's incredible! The water's
+                    coming down in waterfalls all over the place!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But... Where are we?",
+            }
+        case 2:
+            {
+                english=" But... Where are we?",
+            }
+        default:
+            {
+                english=" But... Where are we?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Is this the deepest part of
+                    the forest?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Is this the deepest part of
+                    the forest?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Is this the deepest part of
+                    the forest?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hmm... The fog is so thick, I
+                    can't tell which way we can go.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Hmm... The fog is so thick, I
+                    can't tell which way we can go.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Hmm... The fog is so thick, I
+                    can't tell which way we can go.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    supervision_Acting(1);
+    Wait(1);
+    message_ResetActor();
+    message_Talk({
+        english=" Hey, hey, hey!",
+    });
+    WaitSe(8971);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Wait(15);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Look, it's [CS:N]Corphish[CR]!",
+            }
+        case 2:
+            {
+                english=" Look, it's [CS:N]Corphish[CR]!",
+            }
+        default:
+            {
+                english=" Look, it's [CS:N]Corphish[CR]!",
+            }
+    }
+    message_Close();
+    MovePositionMark<performer 0>(1.5, Position<'m3', 47, 75.5>);
+    Wait(45);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    WaitExecutePerformer(0);
+    MovePositionMark<actor ACTOR_PLAYER>(1.1992, Position<'m4', 49.5, 75.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.1992, Position<'m5', 44.5, 75.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Hey, hey! You two find
+            any clues?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" No, nothing yet...",
+            }
+        case 2:
+            {
+                english=" No, nothing yet...",
+            }
+        default:
+            {
+                english=" No, nothing yet...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What about you, [CS:N]Corphish[CR]?",
+            }
+        case 2:
+            {
+                english=" How about you, [CS:N]Corphish[CR]?",
+            }
+        default:
+            {
+                english="""
+                     How about you, [CS:N]Corphish[CR]?
+                    Any luck?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_SAD, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I've got nothing here, either.
+            Don't let it get you down.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             But... There is something here
+            that's kind of interesting.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Interesting?",
+            }
+        case 2:
+            {
+                english=" Interesting?",
+            }
+        default:
+            {
+                english=" Interesting?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" There. Have a look for yourself.",
+    });
+    message_Close();
+    MovePositionMark<performer 0>(1.5, Position<'m6', 47, 60.5>);
+    WaitExecutePerformer(0);
+    Wait(45);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m7', 47, 60.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_PLAYER>(1.1992, Position<'m8', 49.5, 62.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.1992, Position<'m9', 44.5, 62.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(10);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wh-what?! What is this?!",
+            }
+        case 2:
+            {
+                english=" Wh-what?! What is this?!",
+            }
+        default:
+            {
+                english=" Wh-what?! What is this?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" I don't know.",
+    });
+    message_Talk({
+        english="""
+             It seems to be a statue of
+            a Pokémon.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But what kind of Pokémon
+                    is that?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But what kind of Pokémon
+                    is that?
+                """,
+            }
+        default:
+            {
+                english="""
+                     But what kind of Pokémon
+                    is that?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I've never seen a Pokémon like
+            that before.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.7969, 0, -32);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_UPLEFT);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_UPRIGHT);
+    Wait(60);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.7969, 56, 0);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_UP);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_UPLEFT);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_UP);
+    Wait(60);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.7969, Position<'m10', 53, 54.5>);
+    Wait(15);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    Wait(15);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? Is this an inscription here?",
+            }
+        case 2:
+            {
+                english="""
+                     Oh? Is something inscribed
+                    here?
+                """,
+            }
+        default:
+            {
+                english=" Huh? Is this an inscription here?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(0.5, Position<'m11', 47, 57>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m12', 54, 56.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1, Position<'m13', 52, 58.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    screen2_FadeOut(1, 15);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V09P01A);
+    camera2_SetPositionMark(Position<'m14', 20, 15.5>);
+    screen2_FadeIn(1, 15);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's in footprint runes. Let me
+                    read it...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's in footprint runes. Let me
+                    read it...
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's in footprint runes. Let me
+                    read it...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Umm...",
+            }
+        case 2:
+            {
+                english=" Umm...",
+            }
+        default:
+            {
+                english=" Umm...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     "Reignite the life that burned
+                    within Groudon..."
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     "Reignite the life that burned
+                    within Groudon..."
+                """,
+            }
+        default:
+            {
+                english="""
+                     "Reignite the life that burned
+                    within Groudon..."
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     "Then the sky shall blaze with
+                    the sun's heat..."
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     "Then the sky shall blaze with
+                    the sun's heat..."
+                """,
+            }
+        default:
+            {
+                english="""
+                     "Then the sky shall blaze with
+                    the sun's heat..."
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     "The path to treasure shall be
+                    revealed."
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     "The path to treasure shall be
+                    revealed."
+                """,
+            }
+        default:
+            {
+                english="""
+                     "The path to treasure shall be
+                    revealed."
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     "The path to treasure"? That's
+                    incredible!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     "The path to treasure"? That's
+                    incredible!
+                """,
+            }
+        default:
+            {
+                english="""
+                     "The path to treasure"? That's
+                    incredible!
+                """,
+            }
+    }
+    message_Close();
+    screen2_FadeOut(1, 15);
+    back2_SetMode(0);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, [hero]!",
+            }
+        case 2:
+            {
+                english=" Oh, [hero]!",
+            }
+        default:
+            {
+                english=" Oh, [hero]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Treasure?! Could this mean the
+                    treasure of [CS:P]Fogbound Lake[CR]?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Treasure?! Could this mean the
+                    treasure of [CS:P]Fogbound Lake[CR]?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Treasure?! Could this mean the
+                    treasure of [CS:P]Fogbound Lake[CR]?!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     "The path to treasure shall be
+                    revealed."[K] So this means...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     "The path to treasure shall be
+                    revealed."[K] So this means...
+                """,
+            }
+        default:
+            {
+                english="""
+                     "The path to treasure shall be
+                    revealed."[K] So this means...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The secret to finding [CS:P]Fogbound
+                    Lake[CR] could be hidden right here!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The secret to finding [CS:P]Fogbound
+                    Lake[CR] could be hidden right here!
+                """,
+            }
+        default:
+            {
+                english="""
+                     The secret to finding [CS:P]Fogbound
+                    Lake[CR] could be hidden right here!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_HEIGANI>();
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(0, 4);
+    message_Talk({
+        english=" Hey, hey, hey! Y-you think so?",
+    });
+    message_Talk({
+        english="""
+             Hey, hey! Now that's a mystery
+            we've got to solve!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This part of the footprint
+                    runes...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This part of the footprint
+                    runes...
+                """,
+            }
+        default:
+            {
+                english="""
+                     This part of the footprint
+                    runes...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This part about "life that burned
+                    within Groudon." What's this about?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This part about "life that burned
+                    within Groudon." What's this about?
+                """,
+            }
+        default:
+            {
+                english="""
+                     This part about "life that burned
+                    within Groudon." What's this about?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So this "Groudon," is it
+                    this statue?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So this "Groudon," is it
+                    this statue?
+                """,
+            }
+        default:
+            {
+                english="""
+                     So this "Groudon," is it
+                    this statue?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(0, 4);
+    message_Talk({
+        english="""
+             Hey, hey! So we're supposed
+            to what, ignite the life that was in
+            this statue?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_HEIGANI);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNLEFT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Yeah, but ignite the life? How do
+                    we do that?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Yeah, but ignite the life? How do
+                    we do that?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Yeah, but ignite the life? How do
+                    we do that?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hmm...",
+            }
+        case 2:
+            {
+                english=" Hmm...",
+            }
+        default:
+            {
+                english=" Hmm...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?[K] Wait a second!",
+            }
+        case 2:
+            {
+                english=" Huh?[K] Wait a second!",
+            }
+        default:
+            {
+                english=" Huh?[K] Wait!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8965);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I know![K] Touch this statue,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I know![K] Touch this statue,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     I know![K] Touch this statue,
+                    [hero]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Maybe you'll see something,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Maybe you'll see something,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Maybe you'll see something,
+                    [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(...)",
+            }
+        default:
+            {
+                english="(...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I was thinking that too.)",
+            }
+        default:
+            {
+                english="(I was thinking that too.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (If it means finding the path to [CS:P]Fogbound
+                    Lake[CR]...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (If it means finding the path to [CS:P]Fogbound
+                    Lake[CR]...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(If it means finding the key to my own past...)",
+            }
+        default:
+            {
+                english="(If it means finding the key to my own past...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(If the answers are held by this statue...)",
+            }
+        default:
+            {
+                english="(If the answers are held by this statue...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" You're going to do it!",
+            }
+        case 2:
+            {
+                english=" You're going to do it!",
+            }
+        default:
+            {
+                english=" You'll do it for us!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m15', 55, 52.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNLEFT);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m16', 52, 55>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    message_Mail({
+        english="""
+            [CN][hero] touched the
+            [CN]statue of Groudon.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(45);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Getting anything, [hero]?",
+            }
+        case 2:
+            {
+                english=" Feeling anything, [hero]?",
+            }
+        default:
+            {
+                english=" Sensing anything, [hero]?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(30);
+    se_Play(5133);
+    screen_FlushOut(1, 4, 4, 128, 96, 64);
+    screen_FlushIn(1, 8, 4, 128, 96, 64);
+    screen_FlushOut(1, 8, 4, 128, 96, 64);
+    screen_FlushIn(1, 12, 4, 128, 96, 64);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's coming...)",
+            }
+        default:
+            {
+                english="(It's coming...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5133);
+    screen_FlushOut(1, 4, 4, 128, 96, 64);
+    screen_FlushIn(1, 8, 4, 128, 96, 64);
+    screen_FlushOut(1, 8, 4, 128, 96, 64);
+    screen_FlushIn(1, 12, 4, 128, 96, 64);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    Wait(30);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That dizzy feeling...)",
+            }
+        default:
+            {
+                english="(That dizzy feeling...)",
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 5);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}
+
+def 1 for object OBJECT_P03P01A1_127 {
+    SetOutputAttribute(1024);
+    hold;
+}

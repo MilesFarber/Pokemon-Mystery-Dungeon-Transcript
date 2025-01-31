@@ -1,0 +1,343 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    $SCENARIO_MAIN = scn[6, 3];
+    back_SetGround(LEVEL_G01P03A);
+    supervision_LoadStation(LEVEL_G01P03A, 'UM05');
+    supervision_Station(7);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_CHIRIIN>();
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetActor(ACTOR_NPC_CHIRIIN);
+    message_Talk({
+        english="""
+             Oh! [hero]! And
+            [partner] too!
+        """,
+    });
+    message_Close();
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Huh?[K] What's [CS:N]Chimecho[CR]
+                    up to there?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Huh?[K] What's [CS:N]Chimecho[CR]
+                    doing there?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh?[K] What is [CS:N]Chimecho[CR]
+                    doing there?
+                """,
+            }
+    }
+    message_Close();
+    MovePositionMark<performer 0>(1, Position<'m0', 64.5, 31.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 66, 33.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 63, 33.5>);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(32, 10, DIR_DOWN);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_CHIRIIN);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_CHIRIIN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, what's going on over here?",
+            }
+        case 2:
+            {
+                english=" Hello! What's going on here?",
+            }
+        default:
+            {
+                english=" Hello! What's going on here?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             I just started an Assembly here.
+            Today, in fact.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Assembly?",
+            }
+        case 2:
+            {
+                english=" Assembly?",
+            }
+        default:
+            {
+                english=" Assembly?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Yes![K] For assembling your team!
+            Have you ever considered adding members,
+            [partner]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Other members?[K] Well, sure!
+                    It'd be cool to add other members!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Other members?[K] Well, sure!
+                    It'd be cool to add other members!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Other members?[K] Well, sure!
+                    It'd be cool to add other members!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If there were more than just
+                    the two of us...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If there were more than just
+                    the two of us...
+                """,
+            }
+        default:
+            {
+                english="""
+                     If there were more than just
+                    the two of us...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It sure would help when we
+                    explore dungeons!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It sure would help when we
+                    explore dungeons!
+                """,
+            }
+        default:
+            {
+                english="""
+                     It sure would help when we
+                    explore dungeons!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Well then![K] You need to start
+            recruiting new members!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8974);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yeah? How do we start?",
+            }
+        case 2:
+            {
+                english=" Oh? How do we start?",
+            }
+        default:
+            {
+                english=" How do we start?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             I'll just ring the Friendship Bell
+            for you, Team [team:]!
+        """,
+    });
+    message_Talk({
+        english=" Here goes![K] Hey-yah!",
+    });
+    message_Close();
+    bgm_FadeOut(10);
+    se_Play(5123);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(19);
+    WaitAnimation<actor ACTOR_NPC_CHIRIIN>();
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+    WaitSe(5123);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5127);
+    message_Mail({
+        english="""
+            [CN][CS:N]Chimecho[CR] rang
+            [CN]the Friendship Bell!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Now Team [team:] has the
+            power to recruit new members!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" R-really?",
+            }
+        case 2:
+            {
+                english=" R-really?",
+            }
+        default:
+            {
+                english=" R-really?",
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Yes! From now on, while battling
+            Pokémon in dungeons...
+        """,
+    });
+    message_Talk({
+        english="""
+             You may earn respect from
+            some of them...[K]and those Pokémon will then
+            ask to join Team [team:].
+        """,
+    });
+    message_Talk({
+        english="""
+             Once you have recruited a
+            Pokémon, you can bring it along with you
+            on dungeon explorations.
+        """,
+    });
+    message_Talk({
+        english="""
+             To bring a Pokémon along, visit
+            my Assembly, then choose which members
+            should join your team for the exploration.
+        """,
+    });
+    message_Talk({
+        english="""
+             Always see me when you want
+            to assemble a team that includes recruits! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Great! Thanks, [CS:N]Chimecho[CR]!",
+            }
+        case 2:
+            {
+                english=" Oh, wow! Thanks, [CS:N]Chimecho[CR]!",
+            }
+        default:
+            {
+                english=" Wow! Thank you, [CS:N]Chimecho[CR]!",
+            }
+    }
+    message_Close();
+    $PERFORMANCE_PROGRESS_LIST[5] = 1;
+    $PERFORMANCE_PROGRESS_LIST[29] = 1;
+    end;
+}

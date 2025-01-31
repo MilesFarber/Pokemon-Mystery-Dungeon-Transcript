@@ -1,0 +1,95 @@
+
+def 0 {
+    sound_Stop();
+    message_Explanation({
+        english="""
+            [CN]I'm [CS:Y]Sunflora[CR]![K]
+            [CN]I'm an apprentice to the Guildmaster!
+        """,
+    });
+    message_Explanation({
+        english="[CN]I really enjoy life here at the guild!",
+    });
+    message_Explanation({
+        english="""
+            [CN]I really like treasure![K]
+            [CN]And training is really fun!
+        """,
+    });
+    message_Explanation({
+        english="""
+            [CN]Since I've joined the guild, my exploration
+            [CN]ability has really grown.
+        """,
+    });
+    message_Close();
+    back_SetGround(LEVEL_G01P05A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_KIMAWARI>(1, Position<'m0', 25.5, 30.5>);
+    message_Mail({
+        english="""
+            [CN]A few days ago, I received a call
+            [CN]from the Guildmaster...
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]I was so nervous.
+            [CN]I wondered what it could be about.
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]When I went to the
+            [CN]Guildmaster's chamber to find out...
+        """,
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(5);
+    Wait(60);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(2);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_JOYOUS, 3);
+    message_Mail({
+        english="""
+            [CN]Oh my gosh![K]
+            [CN]I was praised!
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]I'd been working really hard and
+            [CN]doing well on explorations!
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]Oh my gosh! I was happy![K]
+            [CN]I was so happy I thought I'd burst!
+        """,
+    });
+    message_Mail({
+        english="[CN]But...",
+    });
+    message_Mail({
+        english="""
+            [CN]I didn't really have a lot of
+            [CN]self-confidence yet.
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]So I wanted to study more
+            [CN]with the Guildmaster.
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

@@ -1,0 +1,54 @@
+
+def 0 {
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I don't think [CS:N]Manaphy[CR] could have
+                    gone all that far, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I doubt that [CS:N]Manaphy[CR] could have
+                    gone very far, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     I don't think [CS:N]Manaphy[CR] could have
+                    gotten very far, [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's look around here first!",
+            }
+        case 2:
+            {
+                english="""
+                     We should look around
+                    here first!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We should look around
+                    here first!
+                """,
+            }
+    }
+    message_Close();
+    end;
+}

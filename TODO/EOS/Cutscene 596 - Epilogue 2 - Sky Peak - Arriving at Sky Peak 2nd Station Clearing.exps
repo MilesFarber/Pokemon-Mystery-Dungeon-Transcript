@@ -1,0 +1,154 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 14];
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Oh! I can see the
+            2nd Station Clearing! [K]We can do it!
+        """,
+    });
+    message_Close();
+    back_SetGround(LEVEL_D73P22A);
+    supervision_LoadStation(LEVEL_D73P22A, 'US31');
+    supervision_Station(6);
+    supervision_Station(40);
+    supervision_Station(41);
+    supervision_Station(42);
+    supervision_StationCommon(0);
+    supervision_StationCommon(9);
+    supervision_StationCommon(10);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_SHEIMI>();
+    SetPositionInitial<actor ACTOR_NPC_KINOGASSA>();
+    SetPositionInitial<actor ACTOR_NPC_KUCHIITO>();
+    SetPositionInitial<actor ACTOR_NPC_GOORIKII>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC1>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC2>();
+    SetAnimation<actor ACTOR_NPC_SHEIMI>(2);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(2);
+    SetAnimation<actor ACTOR_NPC_KUCHIITO>(2);
+    SetAnimation<actor ACTOR_NPC_GOORIKII>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC1>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC2>(2);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    MovePositionMark<actor ACTOR_NPC_SHEIMI>(1, Position<'m0', 28.5, 43.5>);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m1', 28.5, 47.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m2', 31.5, 46.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m3', 25.5, 46.5>);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_SKY_PEAK_CAVE, 0, 256);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SHEIMI>();
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Wow... Incredible!",
+    });
+    message_Talk({
+        english=" This is...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m4', 28.5, 35.5>);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(4);
+    WaitExecutePerformer(0);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(2);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_JOYOUS, 3);
+    Wait(60);
+    MovePositionMark<actor ACTOR_NPC_SHEIMI>(1, Position<'m5', 28.5, 33.5>);
+    Wait(7);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m6', 28.5, 37.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m7', 31.5, 38.5>);
+    Wait(3);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m8', 25.5, 38.5>);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(4);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(2);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_KINOGASSA>();
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    Turn2Direction<actor ACTOR_NPC_GOORIKII>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_GOORIKII);
+    Turn2Direction<actor ACTOR_NPC_KUCHIITO>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    MovePositionMark<actor ACTOR_NPC_KINOGASSA>(1, Position<'m9', 28.5, 30.5>);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Hey!
+            We're the Survey Team from Project P,
+            Team [CS:X]Frontier[CR]!
+        """,
+    });
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             This is a huge, tall mountain, you
+            know? So rescue missions can't be done...
+        """,
+    });
+    message_Talk({
+        english="""
+             So we've built a base at the
+            2nd Station Clearing.
+        """,
+    });
+    message_Talk({
+        english="""
+             We've set up a Kangaskhan Rock
+            and [CS:K]Drifblim[CR]'s Gondola,
+            so be sure to use them!
+        """,
+    });
+    message_Talk({
+        english="""
+             Project P's Recycle Shop is
+            covering it all too.
+        """,
+    });
+    message_Talk({
+        english=" Everything's free!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_KINOGASSA>(1, Position<'m10', 36.5, 30.5>);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    Turn2DirectionLives<actor ACTOR_NPC_SHEIMI>(4, 10, ACTOR_PLAYER_APPOINT);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_INSPIRED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             That's wonderful!
+            That's the spirit of cooperation.
+        """,
+    });
+    message_Talk({
+        english="""
+             Ah. The mountain is so
+            beautiful...
+        """,
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m11', 35.5, 40.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m12', 21.5, 40.5>);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC1);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC2);
+    end;
+}

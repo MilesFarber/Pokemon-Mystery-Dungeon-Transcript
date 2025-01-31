@@ -1,0 +1,37 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_DEEP_DARK_CRATER, 0, 256);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_NPC_KURESERIA>(2);
+    message_Mail({
+        english="[CN]Would you like to go on?",
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+        default:
+            @label_0;
+            message_Close();
+            Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+            Turn2Direction<actor ACTOR_NPC_KURESERIA>(4, 10, DIR_UP);
+            if ( scn($SCENARIO_MAIN) >= [29, 90] ) {
+                @label_2;
+                main_EnterDungeon(68, 30);
+                main_EnterDungeon(-1, 30);
+                hold;
+                end;
+            } else {
+                $SCENARIO_MAIN = scn[29, 90];
+                jump @label_2;
+            }
+            break;
+        case menu({
+            english="No",
+        }):
+            message_Close();
+            end;
+    }
+}

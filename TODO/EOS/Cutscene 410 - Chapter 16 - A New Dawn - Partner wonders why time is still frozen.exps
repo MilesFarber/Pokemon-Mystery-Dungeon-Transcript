@@ -1,0 +1,55 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    back_SetGround(LEVEL_D24P31B);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Time...[K]is at a standstill here!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But didn't they...?",
+            }
+        case 2:
+            {
+                english=" But didn't they...?",
+            }
+        default:
+            {
+                english=" But didn't they...?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Just before we were dragged
+                    off to the future with you, [CS:N]Grovyle[CR]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Just before we were dragged
+                    off to the future with you, [CS:N]Grovyle[CR]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Just before we were dragged
+                    off to the future with you, [CS:N]Grovyle[CR]...
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

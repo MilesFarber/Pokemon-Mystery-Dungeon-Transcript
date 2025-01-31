@@ -1,0 +1,493 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    dungeon_mode(212) = DMODE_CLOSED;
+    SetAnimation<actor ACTOR_NPC_KOOTASU>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2DirectionLives<actor ACTOR_NPC_KOOTASU>(4, 10, ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_KOOTASU);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_KOOTASU);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Hm? Ah, my young friends![K]
+            Come to wash away your exhaustion?
+        """,
+    });
+    message_Talk({
+        english=" ...Oh?[K] Not so?",
+    });
+    message_Talk({
+        english=" I see...[K] You seek my wisdom.",
+    });
+    message_Talk({
+        english="""
+             Well, there's no better place
+            than this to share your story!
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(160);
+    screen_FadeOut(1, 60);
+    Wait(45);
+    back_SetGround(LEVEL_P02P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetPositionInitial<actor ACTOR_NPC_KOOTASU>();
+    SetPositionInitial<actor ACTOR_NPC_MANKII>();
+    SetPositionInitial<actor ACTOR_NPC_OKORIZARU>();
+    ResetOutputAttribute<actor ACTOR_NPC_MANKII>(256);
+    ResetOutputAttribute<actor ACTOR_NPC_OKORIZARU>(256);
+    SetEffect<actor ACTOR_NPC_MANKII>(EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM2, 4);
+    SetEffect<actor ACTOR_NPC_OKORIZARU>(EFFECT_STUCK_IN_YELLOW_WATER_DEEP2, 4);
+    SetAnimation<actor ACTOR_NPC_KOOTASU>(2);
+    SetAnimation<actor ACTOR_NPC_MANKII>(2);
+    SetAnimation<actor ACTOR_NPC_OKORIZARU>(2);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             ...Ah, I see...[K] The [CS:P]Hidden Land[CR],
+            you say?
+        """,
+    });
+    message_Talk({
+        english=" I have heard of it.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, really?!",
+            }
+        case 2:
+            {
+                english=" Oh, really?!",
+            }
+        default:
+            {
+                english=" Oh, really?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             The [CS:P]Hidden Land[CR] is truly a place
+            of legend...
+        """,
+    });
+    message_Talk({
+        english="""
+             It is tattered lore at best,
+            handed down by oral tradition...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" No matter! Please tell us!",
+            }
+        case 2:
+            {
+                english=" No matter! Please tell us!",
+            }
+        default:
+            {
+                english=" No matter! Please tell us!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Of course.[K] I can tell you only
+            what I have heard.
+        """,
+    });
+    message_KeyWait();
+    bgm_PlayFadeIn(BGM_I_SAW_SOMETHING_AGAIN, 0, 256);
+    message_Talk({
+        english="""
+             The [CS:P]Hidden Land[CR] lies beyond the
+            sea...[K]in a hidden place, so the story goes.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" A hidden place?",
+            }
+        case 2:
+            {
+                english=" A hidden place?",
+            }
+        default:
+            {
+                english=" A hidden place?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Yes.",
+    });
+    message_Talk({
+        english="""
+             The [CS:P]Hidden Land[CR] allows only
+            the chosen to find it.
+        """,
+    });
+    message_Talk({
+        english="""
+             To go there, one must possess
+            certain qualities.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Oh... A place that only someone
+                    with proper qualifications can go to...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Oh... A place that only someone
+                    with proper qualifications can go to...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh... A place that only someone
+                    with proper qualifications can go to...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     All right, [CS:N]Torkoal[CR].[K] What are
+                    those qualifications?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     OK, [CS:N]Torkoal[CR].[K] What are those
+                    qualifications?
+                """,
+            }
+        default:
+            {
+                english="""
+                     OK, [CS:N]Torkoal[CR].[K] What are those
+                    qualifications?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(200);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" They are...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_KOOTASU>(8, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_SIGH, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Er...[K] Er...[K] Now what were they?",
+    });
+    message_Close();
+    se_Play(8963);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_KOOTASU>(8, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" I'm sorry.[K] It's slipped my mind.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? You forgot?",
+            }
+        case 2:
+            {
+                english=" Oh no! You've forgotten?!",
+            }
+        default:
+            {
+                english=" Oh no! You can't remember?!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Please, [CS:N]Torkoal[CR]! Please
+                    remember!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Please, [CS:N]Torkoal[CR]! Please
+                    remember!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Please, [CS:N]Torkoal[CR]! Please
+                    remember!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's really important.",
+            }
+        case 2:
+            {
+                english=" This is really important.",
+            }
+        default:
+            {
+                english=" This is really important.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_SIGH, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             That's easy for you to say,
+            but...[K] Er...um...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8965);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    bgm_PlayFadeIn(BGM_I_SAW_SOMETHING_AGAIN, 0, 256);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Oh! That's it![K] You need proof!",
+    });
+    message_Talk({
+        english="""
+             You needed proof of some sort...
+            Yes, that was it. Proof.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Proof?[K] What kind of proof?",
+            }
+        case 2:
+            {
+                english=" Proof?[K] What kind of proof?",
+            }
+        default:
+            {
+                english=" Proof?[K] What kind of proof?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(200);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" That would be...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_KOOTASU>(8, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_SIGH, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Er?[K] Um?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8963);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_KOOTASU>(8, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Forgive me.[K] I've forgotten again.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8969);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What? You can't remember?!",
+            }
+        case 2:
+            {
+                english=" What? You can't remember?!",
+            }
+        default:
+            {
+                english=" What? You can't remember?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" I... I'm sorry to disappoint you.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8961);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROP, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Ugh, all right.[K] Can you recall
+                    anything else at all?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Ugh, all right.[K] Can you recall
+                    anything else at all?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Ugh, all right.[K] Can you recall
+                    anything else at all?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" ...No. That's all.",
+    });
+    message_Talk({
+        english="""
+             Forgive me, youngsters. If I
+            recall what proof you need, I'll be sure to
+            let you know.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yes, please. Thank you, [CS:N]Torkoal[CR].",
+            }
+        case 2:
+            {
+                english=" Yes, please. Thank you, [CS:N]Torkoal[CR].",
+            }
+        default:
+            {
+                english=" Yes, please. Thank you, [CS:N]Torkoal[CR].",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's go back to the guild,
+                    [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We should go back to the guild,
+                    [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's go back to the guild,
+                    [hero].
+                """,
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    WaitBgm(BGM_GUILDMASTER_WIGGLYTUFF);
+    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+    end;
+}

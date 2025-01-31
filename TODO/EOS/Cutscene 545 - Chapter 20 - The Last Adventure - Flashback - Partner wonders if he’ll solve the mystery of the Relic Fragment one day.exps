@@ -1,0 +1,130 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_MEMORIES_RETURNED, 0, 256);
+    back_SetGround(LEVEL_G01P07C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It made me feel glad I became
+                    an exploration team member.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It made me realize I made the
+                    right decision in joining an exploration team.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I realized I did the right thing in
+                    becoming an exploration team member.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetOutputAttribute<actor ACTOR_ATTENDANT1>(4);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.5, 8, 8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    supervision_Acting(1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(0.5, -8, -8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(20);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     One day I'm sure I'll solve the
+                    secret of my Relic Fragment.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     One day I'm sure I'll solve the
+                    secret of my Relic Fragment.
+                """,
+            }
+        default:
+            {
+                english="""
+                     One day I'm sure I'll solve the
+                    secret of my Relic Fragment.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That's my dream.",
+            }
+        case 2:
+            {
+                english=" That's the dream I have.",
+            }
+        default:
+            {
+                english=" That's my dream.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If it ever came true, I'd surely
+                    faint from happiness!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If it ever came true, I'd surely
+                    faint from sheer happiness!
+                """,
+            }
+        default:
+            {
+                english="""
+                     If it ever came true, I'd surely
+                    faint from sheer happiness!
+                """,
+            }
+    }
+    message_KeyWait();
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_JOYOUS, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ha ha ha ha!",
+            }
+        case 2:
+            {
+                english=" Ha ha ha ha!",
+            }
+        default:
+            {
+                english=" Ha ha ha ha!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_LAUGHING, 3);
+    Wait(90);
+    screen_WhiteOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    Wait(30);
+    end;
+}

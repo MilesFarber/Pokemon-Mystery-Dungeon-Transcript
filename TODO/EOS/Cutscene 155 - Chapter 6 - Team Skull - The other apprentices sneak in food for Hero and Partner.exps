@@ -1,0 +1,587 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P07A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1.1992, Position<'m0', 27, 22.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m1', 21, 22.5>);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER>(1.1992, Position<'m2', 22, 22.5>);
+    Wait(35);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.1992, Position<'m3', 18, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m4', 24, 25.5>);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1.1992, Position<'m5', 28, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_UPLEFT);
+    MovePositionMark<actor ACTOR_PLAYER>(1.1992, Position<'m6', 24, 20.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.1992, Position<'m7', 20, 20.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNLEFT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNLEFT);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1.1992, Position<'m8', 16, 22.5>);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Wait(30);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_BIPPA>();
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_TOP_L_FACEOUTW);
+    message_Talk({
+        english="""
+             Whew! No one saw anything,
+            except maybe [CS:N]Croagunk[CR]...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1.1992, Position<'m9', 20, 25.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_UP);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     What's up? Why'd you call us
+                    in here?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     What's going on? Why did you
+                    call us in here?
+                """,
+            }
+        default:
+            {
+                english="""
+                     What's up? Why did you call us
+                    in here?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Well...here you go.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1, Position<'m10', 20, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    se_Play(6410);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_P03P02A1_128>(9);
+    Wait(15);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1, Position<'m11', 24, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    se_Play(6410);
+    supervision_Acting(2);
+    SetAnimation<object OBJECT_P03P02A1_129>(9);
+    Wait(15);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1, Position<'m12', 28, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey! [CS:I]Apples[CR]!",
+            }
+        case 2:
+            {
+                english=" Oh! [CS:I]Apples[CR]!",
+            }
+        default:
+            {
+                english=" Oh! [CS:I]Apples[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" You must be very hungry.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             We all set aside a little bit of
+            our dinners last night for you.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Now, eat up!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(45);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_JOYOUS, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Th-thanks, everyone!",
+            }
+        case 2:
+            {
+                english=" Th-thanks, everyone!",
+            }
+        default:
+            {
+                english=" Th-thanks, everyone!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_EATING, 0, 256);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, 0, 4);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, 0, 4);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EATING, 3);
+    SetAnimation<actor ACTOR_PLAYER>(64);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EATING, 3);
+    SetAnimation<actor ACTOR_ATTENDANT1>(64);
+    message_ImitationSound({
+        english="""
+            Crunch munch! Chomp chomp! Gobble gulp![K]
+            Crunch munch! Chomp chomp! Gobble gulp!
+        """,
+    });
+    message_ImitationSound({
+        english="""
+            Crunch munch! Chomp chomp! Gobble gulp![K]
+            Crunch munch! Chomp chomp! Gobble gulp!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(30);
+    supervision_RemoveActing(1);
+    supervision_RemoveActing(2);
+    Wait(10);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa! Thanks! I'm revitalized!",
+            }
+        case 2:
+            {
+                english=" Whoa! Thanks! I'm revitalized!",
+            }
+        default:
+            {
+                english=" Whoa! Thanks! I'm revitalized!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Great!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(4);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             We can all use help when
+            we're down.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Every one of us needs to be able
+            to work hard in order to be picked for the
+            expedition. Yup yup!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Sniffle... Thanks, everyone...",
+            }
+        case 2:
+            {
+                english=" Sniffle... Thanks, everyone...",
+            }
+        default:
+            {
+                english=" Sniffle... Thanks, everyone...",
+            }
+    }
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_KeyWait();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But about the expedition...
+                    [CS:N]Chatot[CR] just came and told us...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But about the expedition...
+                    [CS:N]Chatot[CR] just came and told us...
+                """,
+            }
+        default:
+            {
+                english="""
+                     But about the expedition...
+                    [CS:N]Chatot[CR] just came and told us...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We're probably not going to
+                    be picked...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We're probably not going to
+                    be chosen...
+                """,
+            }
+        default:
+            {
+                english="""
+                     We're probably not going to
+                    be chosen...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             How could you say that?! There's
+            no telling what might happen! No sirree!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_KIMAWARI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             The members haven't been
+            picked yet!
+        """,
+    });
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_RIGHT);
+    Wait(45);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Everyone... Thanks for trying to
+                    cheer us up, but...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Everyone... Thanks for trying to
+                    cheer us up, but...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Everyone... Thanks for trying to
+                    cheer us up, but...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Doesn't everybody want to go on
+                    the expedition?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Doesn't everybody want to go on
+                    the expedition?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Doesn't everybody want to go on
+                    the expedition?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What if we get picked to go?",
+            }
+        case 2:
+            {
+                english=" What if we were chosen to go?",
+            }
+        default:
+            {
+                english=" What if we were chosen to go?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If that happens, someone here
+                    might not get to go.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If that happens, someone here
+                    might not get to go.
+                """,
+            }
+        default:
+            {
+                english="""
+                     If that happens, someone here
+                    might not get to go.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Would you all be OK with that?",
+            }
+        case 2:
+            {
+                english=" Would you all be OK with that?",
+            }
+        default:
+            {
+                english=" Would you all be OK with that?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" No, I wouldn't like that...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             But, of course, if someone
+            is chosen...
+        """,
+    });
+    message_Talk({
+        english=" Then someone else can't go.",
+    });
+    message_Talk({
+        english=" That's just the way it is!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             If you don't get picked for the
+            expedition, you should cheer for those who did.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Yup yup! And everyone wants to
+            go on the expedition with you, [partner]
+            and [hero].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Sniffle... Everyone, honestly,
+                    thank you.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Sniffle... Everyone, honestly,
+                    thank you.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Sniffle... Everyone, honestly,
+                    thank you.
+                """,
+            }
+    }
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(90);
+    Wait(90);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     OK! Then we'll keep trying our
+                    best to get picked for the expedition.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     OK! Then we'll keep trying our
+                    best to get picked for the expedition.
+                """,
+            }
+        default:
+            {
+                english="""
+                     OK! Then we'll keep trying our
+                    best to get picked for the expedition.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We'll keep on trying to the end!",
+            }
+        case 2:
+            {
+                english=" We'll keep on trying to the end!",
+            }
+        default:
+            {
+                english=" We'll keep on trying to the end!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yup yup! That's the spirit!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yes! Let's all do our best!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_KIMAWARI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             We've got to try hard so
+            we all can go!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    SetAnimation<actor ACTOR_ATTENDANT1>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yep!",
+            }
+        case 2:
+            {
+                english=" Yes!",
+            }
+        default:
+            {
+                english=" Yes!",
+            }
+    }
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER>(66);
+    SetAnimation<actor ACTOR_ATTENDANT1>(66);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    Wait(80);
+    screen_FadeOut(1, 60);
+    $SCENARIO_MAIN = scn[8, 4];
+    $REQUEST_CLEAR_COUNT = 0;
+    main_SetGround(LEVEL_G01P08A);
+    main_EnterGround(LEVEL_G01P04A, 30);
+    hold;
+    end;
+}

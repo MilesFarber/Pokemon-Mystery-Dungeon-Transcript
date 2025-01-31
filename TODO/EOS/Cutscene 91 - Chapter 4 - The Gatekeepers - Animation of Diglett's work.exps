@@ -1,0 +1,119 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    back_SetGround(LEVEL_V04P01A);
+    supervision_Acting(0);
+    Wait(1);
+    ResetOutputAttribute<actor ACTOR_NPC_DOGOOMU>(256);
+    camera_SetMyself<performer 0>();
+    ResetHitAttribute<actor ACTOR_NPC_DIGUDA>(31);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    screen_FadeIn(1, 15);
+    Wait(30);
+    MovePositionMark<performer 0>(1, Position<'m0', 19.5, 40.5>);
+    WaitExecutePerformer(0);
+    message_SetActor(ACTOR_NPC_DOGOOMU);
+    message_Talk({
+        english="""
+             [CS:N]Diglett[CR] burrows through it and
+            pops out underneath the sentry post.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(5);
+    MovePositionMark<actor ACTOR_NPC_DIGUDA>(2, Position<'m1', 17.5, 39.5>);
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_DOWN);
+    MovePositionMark<actor ACTOR_NPC_DIGUDA>(2, Position<'m2', 17.5, 46.5>);
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    MovePositionMark<actor ACTOR_NPC_DIGUDA>(2, Position<'m3', 7.5, 46.5>);
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    MovePositionMark<actor ACTOR_NPC_DIGUDA>(2, Position<'m4', 7.5, 28.5>);
+    Move2PositionMark<performer 0>(2, Position<'m5', 19.5, 28.5>);
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    WaitExecutePerformer(0);
+    MovePositionMark<actor ACTOR_NPC_DIGUDA>(2, Position<'m6', 19.5, 28.5>);
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(23);
+    WaitAnimation<actor ACTOR_NPC_DIGUDA>();
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    Turn2Direction<actor ACTOR_NPC_DIGUDA>(1, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    supervision_Acting(1);
+    Wait(1);
+    ResetOutputAttribute<actor ACTOR_NPC_BIPPA>(256);
+    Wait(30);
+    message_Talk({
+        english="""
+             From the sentry post, [CS:N]Diglett[CR]
+            inspects the footprints of visitors, identifies
+            them, then informs me.
+        """,
+    });
+    MovePositionOffset<performer 0>(1.5, 0, -96);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m7', 19, 14>);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    WaitExecutePerformer(0);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    MovePositionMark<performer 0>(2.5, Position<'m8', 19.5, 28.5>);
+    Wait(30);
+    WaitExecutePerformer(0);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_DIGUDA>();
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    Turn2Direction<actor ACTOR_NPC_DIGUDA>(1, 10, DIR_LEFT);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_JOYOUS, 3);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(4);
+    Wait(20);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(1, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    MovePositionMark<performer 0>(2.5, Position<'m9', 19.5, 40.5>);
+    WaitExecutePerformer(0);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(1, 10, DIR_LEFT);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_DOGOOMU>();
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(1, 10, DIR_RIGHT);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(18);
+    WaitAnimation<actor ACTOR_NPC_DOGOOMU>();
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    message_Talk({
+        english="""
+             Then I decide if the Pokémon
+            is suspicious or not and open the gate if
+            he passes muster.
+        """,
+    });
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    Turn2Direction<actor ACTOR_NPC_DIGUDA>(1, 10, DIR_DOWN);
+    MovePositionMark<performer 0>(2.5, Position<'m10', 19.5, 28.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(2.5, Position<'m11', 31.5, 39.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(2.5, Position<'m12', 31.5, 19>);
+    Destroy<actor ACTOR_NPC_DOGOOMU>();
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    WaitExecutePerformer(0);
+    Wait(30);
+    SetPositionMark<actor ACTOR_NPC_BIPPA>(Position<'m13', 31.5, 19>);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(5);
+    SlidePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m14', 31.5, 27.5>);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(8, 10, DIR_RIGHT);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(2.5, Position<'m15', 38, 27.5>);
+    Destroy<actor ACTOR_NPC_BIPPA>();
+    message_Talk({
+        english="""
+             So we serve as the guild's
+            gatekeepers. That's the gist of it.
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

@@ -1,0 +1,82 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hmm...[K] Looks like we didn't do
+            so well.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             So it goes.[K] That's how
+            it is sometimes. [M:H8]
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Anyway, let's head back for a
+            little while.
+        """,
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D56P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_CHAAREMU>();
+    SetPositionInitial<actor ACTOR_NPC_SAANAITO>();
+    SetDirection<actor ACTOR_PLAYER_CHARMS>(DIR_DOWNLEFT);
+    SetDirection<actor ACTOR_NPC_CHAAREMU>(DIR_DOWN);
+    SetDirection<actor ACTOR_NPC_SAANAITO>(DIR_RIGHT);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(22);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(22);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(22);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_DEEP_LIMESTONE_CAVERN, 0, 256);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(23);
+    Wait(10);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(23);
+    Wait(7);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(23);
+    WaitAnimation<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_RIGHT);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(2);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(10);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    Wait(20);
+    se_Play(8975);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I've got the feeling that the
+            treasure is just ahead!
+        """,
+    });
+    message_Talk({
+        english=" Don't be discouraged! Let's go!",
+    });
+    message_Close();
+    end;
+}

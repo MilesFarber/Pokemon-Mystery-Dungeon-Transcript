@@ -1,0 +1,56 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[23, 3];
+    back_SetGround(LEVEL_H01P99A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen_FadeIn(1, 30);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 40, 21.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 44, 24>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I wonder if [CS:N]Grovyle[CR]'s back...",
+            }
+        case 2:
+            {
+                english=" Is [CS:N]Grovyle[CR] back, I wonder?",
+            }
+        default:
+            {
+                english=" I wonder if [CS:N]Grovyle[CR]'s back...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's go.",
+            }
+        case 2:
+            {
+                english=" Let's go.",
+            }
+        default:
+            {
+                english=" Let's go.",
+            }
+    }
+    message_Close();
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m2', 38, 19.5>);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m3', 38, 19.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m4', 34.5, 19.5>);
+    Destroy<actor ACTOR_PLAYER>();
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m5', 34.5, 19.5>);
+    Destroy<actor ACTOR_ATTENDANT1>();
+    Wait(20);
+    screen_FadeOut(1, 30);
+    end;
+}

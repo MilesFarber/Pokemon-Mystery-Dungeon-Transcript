@@ -1,0 +1,327 @@
+
+def 0 {
+    sound_Stop();
+    message_Narration(30, {
+        english="[CN]The next morning...",
+    });
+    message_Close();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_H02P99A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER>(76);
+    SetAnimation<actor ACTOR_ATTENDANT1>(76);
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER>(63);
+    Wait(5);
+    SetAnimation<actor ACTOR_ATTENDANT1>(63);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Good morning, [hero]!",
+            }
+        case 2:
+            {
+                english=" Good morning, [hero]!",
+            }
+        default:
+            {
+                english=" Good morning, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Wait(60);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" .....................",
+            }
+        case 2:
+            {
+                english=" .....................",
+            }
+        default:
+            {
+                english=" .....................",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Manaphy[CR]...[K] The little guy's gone...",
+            }
+        case 2:
+            {
+                english=" [CS:N]Manaphy[CR]...[K] The little guy's gone...",
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Manaphy[CR]...[K] The little
+                    cutie's gone...
+                """,
+            }
+    }
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english=" It's sad...",
+        }):
+        default:
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Yup...[K] But...",
+                    }
+                case 2:
+                    {
+                        english=" Yes...[K] But...",
+                    }
+                default:
+                    {
+                        english=" Yes...[K] But...",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            @label_2;
+            Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+            WaitExecuteLives(ACTOR_PLAYER);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             It was the right thing to do for
+                            [CS:N]Manaphy[CR].
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             We did the only right thing for
+                            [CS:N]Manaphy[CR].
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             It was the right thing to do for
+                            [CS:N]Manaphy[CR].
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             I'm sure [CS:N]Walrein[CR] will raise
+                            him properly.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             I think [CS:N]Walrein[CR] will raise
+                            him properly.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             I'm sure [CS:N]Walrein[CR] will raise
+                            him properly.
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" And maybe...",
+                    }
+                case 2:
+                    {
+                        english=" And maybe...",
+                    }
+                default:
+                    {
+                        english=" And maybe...",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Maybe, one day somewhere, we'll
+                            be able to meet [CS:N]Manaphy[CR]...
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Maybe, one day somewhere, we'll
+                            be able to see [CS:N]Manaphy[CR] again...
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Maybe, one day somewhere, we'll
+                            be able to see [CS:N]Manaphy[CR] again...
+                        """,
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_UPRIGHT);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            Wait(120);
+            Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            Wait(15);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Oh, [hero].",
+                    }
+                case 2:
+                    {
+                        english=" Oh, [hero].",
+                    }
+                default:
+                    {
+                        english=" Oh, [hero].",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             We shouldn't go around feeling
+                            sorry and sad forever. I doubt [CS:N]Manaphy[CR] would
+                            want that.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             We shouldn't go around feeling
+                            sorry and sad forever. I doubt [CS:N]Manaphy[CR] would
+                            want that.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             We shouldn't go around feeling
+                            sorry and sad forever. I doubt [CS:N]Manaphy[CR] would
+                            want that.
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             But it's not like I can shake this
+                            off so easily...
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             But I can't get back to feeling
+                            like it's normal right away...
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             But I don't think I can get over
+                            this right away...
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Still, we should try to be
+                            positive and keep moving forward...[K] All right?
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Still, I think we should be
+                            positive and keep moving forward...[K] OK?
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Still, we should try to be
+                            positive and keep moving forward...[K] OK?
+                        """,
+                    }
+            }
+            message_Close();
+            SetAnimation<actor ACTOR_PLAYER>(71);
+            WaitAnimation<actor ACTOR_PLAYER>();
+            WaitExecuteLives(ACTOR_PLAYER);
+            SetAnimation<actor ACTOR_PLAYER>(71);
+            WaitAnimation<actor ACTOR_PLAYER>();
+            WaitExecuteLives(ACTOR_PLAYER);
+            SetAnimation<actor ACTOR_PLAYER>(2);
+            Wait(30);
+            screen2_FadeOut(1, 30);
+            back2_SetMode(0);
+            $PERFORMANCE_PROGRESS_LIST[24] = 1;
+            end;
+        case menu({
+            english=" This is for the best...",
+        }):
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Yup...[K] You're right...",
+                    }
+                case 2:
+                    {
+                        english=" Yes...[K] You're right...",
+                    }
+                default:
+                    {
+                        english=" Yes...[K] You're right...",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            jump @label_2;
+    }
+}

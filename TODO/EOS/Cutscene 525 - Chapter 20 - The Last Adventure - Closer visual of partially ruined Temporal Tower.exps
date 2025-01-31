@@ -1,0 +1,88 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_RESTORED, 0, 200);
+    back_SetGround(LEVEL_V26P03A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(60);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's [CS:P]Temporal Tower[CR].[K] It looks
+                    pretty beaten up...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's [CS:P]Temporal Tower[CR].[K] It seems
+                    to be badly damaged...
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's [CS:P]Temporal Tower[CR].[K]
+                    It's wrecked all over...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But...[K]it's still standing!",
+            }
+        case 2:
+            {
+                english=" But...[K]it's still standing!",
+            }
+        default:
+            {
+                english=" But...[K]it's still standing!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:P]Temporal Tower[CR] didn't
+                    fall apart...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:P]Temporal Tower[CR] didn't
+                    collapse...
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:P]Temporal Tower[CR] didn't
+                    break apart...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It survived!",
+            }
+        case 2:
+            {
+                english=" It survived!",
+            }
+        default:
+            {
+                english=" It survived!",
+            }
+    }
+    message_Close();
+    screen_WhiteOut(1, 60);
+    Wait(30);
+    end;
+}

@@ -1,0 +1,90 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_PROUD_ACCOMPLISHMENT, 0, 256);
+    back_SetGround(LEVEL_P25P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(29);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" While I live, I want to shine.",
+    });
+    message_Talk({
+        english=" I want to prove that I exist.",
+    });
+    message_Talk({
+        english="""
+             If I could do something really
+            important...[K] That would definitely carry
+            on into the future.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" No...[K] Not just into the future.",
+    });
+    message_Talk({
+        english="""
+             In [c_name:NPC_HERO_FIRST]'s and
+            [c_name:NPC_PARTNER_FIRST]'s future too...
+        """,
+    });
+    message_Talk({
+        english="""
+             My spirit has become part of
+            them, I believe.
+        """,
+    });
+    message_Talk({
+        english=" In them, my spirit is alive.",
+    });
+    message_Talk({
+        english="""
+             And that spirit could be passed
+            along to others.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(4, 10, ACTOR_NPC_YONOWAARU_N9);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             And so, if I were to
+            disappear...[K]I think all that I have accomplished
+            will go on.
+        """,
+    });
+    message_Talk({
+        english=" That is...",
+    });
+    message_Talk({
+        english="""
+             That would mean...[K]that it's
+            living, right?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(60);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             ... (Even if I disappear...[K]
+            I still live on...)
+        """,
+    });
+    message_Talk({
+        english=" (My spirit is...[K]alive!)",
+    });
+    message_Close();
+    screen_WhiteOut(1, 60);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    Wait(30);
+    end;
+}

@@ -1,0 +1,442 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[41, 4];
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_P16P01A);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8973);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SUBOMII>();
+    WaitExecuteLives(ACTOR_NPC_SUBOMII);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_SURPRISED, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" Huh?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_UPAA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" You want to play explorers?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Yeah, let's play explorers.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWNLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UP);
+    message_SetFace(ACTOR_NPC_SUKORUPI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             We want to become an
+            exploration team in the future...
+        """,
+    });
+    message_Talk({
+        english="""
+             So we should go out and explore
+            unknown areas![K] What do you think?
+            It's great, right?
+        """,
+    });
+    SetEffect<actor ACTOR_NPC_SUKORUPI>(EFFECT_LAUGHING, 3);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_SUKORUPI>(EFFECT_NONE, 3);
+    Wait(15);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UPLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_SUBOMII);
+    message_SetFace(ACTOR_NPC_SUBOMII, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             So...[K] This unknown place...[K]
+            Where are we going?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWNRIGHT);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWN);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_RIGHT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_LEFT);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Hmm. That's a good question.[K]
+            You'd make a good apprentice explorer, [CS:N]Budew[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             We decided on a place...[K]
+            [CS:P]Murky Forest[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    ExecuteCommon<actor ACTOR_NPC_SUBOMII>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UP);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_SHOCKED_MIRRORED, 3);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_UPRIGHT);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_UPAA>();
+    WaitExecuteLives(ACTOR_NPC_UPAA);
+    bgm_PlayFadeIn(BGM_MURKY_FOREST, 0, 256);
+    message_SetFace(ACTOR_NPC_UPAA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Whaat?[K]
+            [CS:P]M[CR]...[K][CS:P]Murky Forest[CR]? Is that what you said?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MUCHUURU);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWN);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWNLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_LEFT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_ANGRY, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english="""
+             Smooches! No way!
+            I don't want to!
+        """,
+    });
+    message_Talk({
+        english="""
+             Going to that forest is not
+            allowed at all! My mommy even said so!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_NPC_SUBOMII, FACE_WORRIED, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             There's even a rumor that
+            a big, scary monster lives in the forest!
+        """,
+    });
+    message_Talk({
+        english=" Why do you want to go there?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWNRIGHT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_UPRIGHT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Doesn't it seem like the type of
+            place that exploration teams would go?
+        """,
+    });
+    message_KeyWait();
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_JUPETTA);
+    message_Talk({
+        english="""
+             Don't tell me...[K] Does
+            that mean that you're scared to go?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_ANGRY, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" N-no...[K] I'm not scared!",
+    });
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MUCHUURU);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_LEFT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWNLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_LEFT);
+    message_Talk({
+        english="""
+             It's just that you shouldn't go
+            places you've been told not to go!
+        """,
+    });
+    message_Talk({
+        english=" I-I don't like it! I'm not going!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_MUCHUURU>(1.1992, Position<'m1', 26.5, 36>);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(8, 1, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 2, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 2, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(80);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_SUBOMII);
+    Destroy<actor ACTOR_NPC_MUCHUURU>();
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWNLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_LEFT);
+    message_SetFace(ACTOR_NPC_UPAA, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             M-me neither. I'm staying
+            out of it...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SUBOMII, FACE_WORRIED, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" Same here!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_UPAA>(1.1992, Position<'m2', 23, 35.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_SUBOMII>(1.1992, Position<'m3', 30.5, 36>);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWN);
+    Wait(100);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             What's this?[K] They're all a bunch
+            of cowards.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    Destroy<actor ACTOR_NPC_UPAA>();
+    Destroy<actor ACTOR_NPC_SUBOMII>();
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             They're scared and making up
+            all these lame excuses. It's pathetic.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_NPC_SUKORUPI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I doubt they'll ever be a real
+            exploration team when they grow up.
+            Not at all likely.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(150);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m4', 28.5, 20.5>);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Hey, what's an exploration team?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWN);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             What?![K] You don't know what an
+            exploration team is?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Nope. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             But you're still here, so that
+            means...[K] That means you've got the courage?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yep. I do. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_NONE, 3);
+    Wait(15);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    se_Play(8961);
+    SetEffect<actor ACTOR_NPC_JUPETTA>(EFFECT_SWEAT_DROP_SLOW, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_SUKORUPI>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_NPC_SUKORUPI>();
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    Wait(15);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWN);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             ...[K]All right.[K]
+            You'll do. Come along.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yay, thanks! Friends. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_NONE, 3);
+    Wait(10);
+    bgm_PlayFadeIn(BGM_A_FUN_EXPLORATION, 0, 256);
+    ExecuteCommon<actor ACTOR_NPC_JUPETTA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPETTA);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" All right![K] Everyone, line up!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m5', 26.5, 21>);
+    Wait(4);
+    MovePositionMark<actor ACTOR_NPC_SUKORUPI>(1, Position<'m6', 30.5, 21>);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_JUPETTA>(1, Position<'m7', 28.5, 17.5>);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_JUPETTA);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             All right.[K] From now on, we're an
+            exploration team headed for [CS:P]Murky Forest[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             Gather up your courage and
+            let's go!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SUKORUPI>(EFFECT_JOYOUS, 3);
+    ExecuteCommon<actor ACTOR_NPC_SUKORUPI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    message_SetFace(ACTOR_NPC_SUKORUPI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yeah!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_SUKORUPI>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_JOYOUS, 3);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yeah. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_NONE, 3);
+    Wait(20);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Yay![K] Yay!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_JUPETTA>(22);
+    WaitAnimation<actor ACTOR_NPC_JUPETTA>();
+    WaitExecuteLives(ACTOR_NPC_JUPETTA);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Oooooh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    SetAnimation<actor ACTOR_NPC_SUKORUPI>(22);
+    WaitAnimation<actor ACTOR_NPC_SUKORUPI>();
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    message_SetFace(ACTOR_NPC_SUKORUPI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" OOoooohhhh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(24);
+    WaitAnimation<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" OOOhhhhh! ♪",
+    });
+    message_Close();
+    bgm_FadeOut(60);
+    screen2_FadeOut(0, 60);
+    screen_FadeOut(1, 60);
+    back2_SetMode(0);
+    dungeon_mode(128) = DMODE_OPEN;
+    main_EnterDungeon(128, 30);
+    switch ( main_EnterAdventure(250, 30) ) { }
+    hold;
+    end;
+}

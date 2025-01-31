@@ -1,0 +1,99 @@
+
+def 0 {
+    sound_Stop();
+    se_Play(8198);
+    screen_WhiteOut(1, 30);
+    back_SetGround(LEVEL_P08P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(45);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(12);
+    Wait(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(12);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(12);
+    Wait(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(12);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI5>(12);
+    Wait(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI6>(12);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI5>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI6>(2);
+    se_Play(8973);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI2>(EFFECT_SHOCKED, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI3>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI4>(EFFECT_SHOCKED_MIRRORED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI5>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI6>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_YAMIRAMI6>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI6);
+    message_SetFace(ACTOR_NPC_YAMIRAMI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Wheh-heh-heh?[K] N-not here?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8963);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(7);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI2>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(2);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI3>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(3);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI4>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI5>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Wait(4);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI6>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI6);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI3>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_YAMIRAMI3>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI3);
+    message_SetFace(ACTOR_NPC_YAMIRAMI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" D-did...[K]they run away?!",
+    });
+    message_Talk({
+        english=" L-look![K] Look for them!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI5>(17);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI6>(17);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Sableye[CR]: Wheh-heh-heh!",
+    });
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI6>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI6);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI5>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI6>(17);
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI6>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI6);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI5>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI6>(4);
+    message_Close();
+    screen_FadeOut(1, 60);
+    Wait(30);
+    end;
+}

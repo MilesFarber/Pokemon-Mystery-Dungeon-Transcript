@@ -1,0 +1,652 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR, 0, 256);
+    back_SetGround(LEVEL_P04P01C);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_YUKUSHII>(8, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_YUKUSHII);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Others before you have tried
+            to trespass here.
+        """,
+    });
+    message_Talk({
+        english="""
+             But I used my [CS:N]Groudon[CR] illusion
+            to chase most of them off.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Groudon[CR]? [K]How'd you do that?",
+            }
+        case 2:
+            {
+                english=" [CS:N]Groudon[CR]? [K]How'd you do that?",
+            }
+        default:
+            {
+                english=" [CS:N]Groudon[CR]? [K]How'd you do that?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             That is something I create using
+            my psychic abilities.
+        """,
+    });
+    message_Talk({
+        english=" Like so...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6921);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(30);
+    se_Play(6922);
+    supervision_Acting(1);
+    Lock(3);
+    Wait(10);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(1, 10, DIR_LEFT);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    MovePositionMark<performer 0>(2, Position<'m0', 19.5, 49.5>);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    Slide2PositionMark<actor ACTOR_ATTENDANT1>(2.5, Position<'m1', 22.5, 51.5>);
+    SetAnimation<actor ACTOR_PLAYER>(5);
+    Slide2PositionMark<actor ACTOR_PLAYER>(2, Position<'m2', 26, 47.5>);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waah!",
+            }
+        case 2:
+            {
+                english=" Waah!",
+            }
+        default:
+            {
+                english=" Waah!",
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" There is no need to be startled.",
+    });
+    message_Talk({
+        english=" As I've said, it's just an illusion.",
+    });
+    message_Talk({
+        english="""
+             What you fought was no more
+            than that.
+        """,
+    });
+    message_Talk({
+        english="""
+             There have been others before
+            who defeated my [CS:N]Groudon[CR] illusion.
+        """,
+    });
+    message_Talk({
+        english="""
+             They managed to make their way
+            to this spot.
+        """,
+    });
+    message_Talk({
+        english="""
+             But they were trespassers![K]
+            So I took away their memories...
+        """,
+    });
+    message_Talk({
+        english=" And, thus, protected the lake.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_YUKUSHII);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(0.7969, Position<'m3', 19.5, 49.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_YUKUSHII);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(10);
+    bgm_FadeOut(180);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Took away their memories...?",
+            }
+        case 2:
+            {
+                english=" Took away their memories...?",
+            }
+        default:
+            {
+                english=" Took away their memories...?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    se_Play(8965);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     ...Oh, right![K] We need to ask you
+                    something, [CS:N]Uxie[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     ...Oh, that's right![K] We hope to
+                    ask you something, [CS:N]Uxie[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     ...Oh, I almost forgot![K] We hope
+                    to ask you something, [CS:N]Uxie[CR]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Meet my partner, [hero]!",
+            }
+        case 2:
+            {
+                english=" Meet my partner, [hero]!",
+            }
+        default:
+            {
+                english="""
+                     Let me introduce my partner,
+                    [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     At present, a Pokémon! At one
+                    time, a human!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     At present, a Pokémon! At one
+                    time, a human!
+                """,
+            }
+        default:
+            {
+                english="""
+                     At present, a Pokémon! At one
+                    time, a human!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_YUKUSHII>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_YUKUSHII>();
+    WaitExecuteLives(ACTOR_NPC_YUKUSHII);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Oh, really?[K] A human?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Yep! But [hero] has lost
+                    all memory of being a human.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Yes! But [hero] has lost
+                    all memory of being a human.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh, yes! But [hero] has
+                    lost all memory of being a human.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So, we just gotta wonder...[K]have
+                    you met [hero] here before, [CS:N]Uxie[CR]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So, we're wondering...[K]have you
+                    maybe met [hero] here before, [CS:N]Uxie[CR]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     So, if we may ask...[K]have you
+                    met [hero] here before, [CS:N]Uxie[CR]?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And did you wipe [hero]'s
+                    memory clean?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And did you take away
+                    [hero]'s memory?
+                """,
+            }
+        default:
+            {
+                english="""
+                     And did you maybe take away
+                    [hero]'s memory?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Did that happen?[K] Ever see a
+                    human here before?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Has that ever happened?[K]
+                    Did a human ever come here?
+                """,
+            }
+        default:
+            {
+                english="""
+                     C-could that have happened?[K]
+                    Has a human ever come here?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Remember anything like that
+                    happening, [CS:N]Uxie[CR]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Do you remember anything like
+                    that ever happening, [CS:N]Uxie[CR]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Do you recall that ever
+                    happening, [CS:N]Uxie[CR]?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             The answer is...[K]no.[K] No human
+            has ever come here.
+        """,
+    });
+    message_Talk({
+        english="""
+             I should explain further...[K]
+            I erase only memories of [CS:P]Fogbound Lake[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             I cannot fully erase all
+            memories from living beings.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_YUKUSHII>(8, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_NPC_YUKUSHII);
+    message_Talk({
+        english="""
+             I had nothing to do with your
+            friend's memory loss.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_YUKUSHII>(8, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_YUKUSHII);
+    message_Talk({
+        english="""
+             Nor anything to do with your
+            friend's transformation into a Pokémon.
+        """,
+    });
+    message_Talk({
+        english=" The cause lies elsewhere.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, well...OK.",
+            }
+        case 2:
+            {
+                english=" Oh, well...that's OK.",
+            }
+        default:
+            {
+                english=" Oh, well...thanks anyway.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNLEFT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So it doesn't look like you've
+                    been here before, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So it doesn't seem like you've
+                    been here after all, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     So I guess that you haven't been
+                    here after all, [hero]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Uxie[CR], we wanted to meet you to
+                    learn more about my partner...[K]
+                    Uh, what's that?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Uxie[CR], we hoped to meet you to
+                    learn more about my partner...[K]
+                    Uh, what's that?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Uxie[CR], we wanted to meet you to
+                    learn more about my partner...[K]
+                    Uh, what's that?!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_Acting(2);
+    message_ResetActor();
+    message_Talk({
+        english="""
+             A Time Gear! A Time Gear![K]
+            Well, too bad!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_YUKUSHII>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    Wait(5);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    MovePositionMark<performer 0>(1, Position<'m4', 19.5, 60.5>);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN>(1, 0, -40);
+    WaitExecutePerformer(0);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" We can't take a Time Gear.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]W-Wigglytuff[CR]!",
+            }
+        case 2:
+            {
+                english=" [CS:N]W-Wigglytuff[CR]!",
+            }
+        default:
+            {
+                english=" [CS:N]W-Wigglytuff[CR]!",
+            }
+    }
+    message_Close();
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    MovePositionMark<performer 0>(1, Position<'m5', 19.5, 49.5>);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN>(1.5, 0, -40);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1.5, Position<'m6', 23, 49.5>);
+    Wait(20);
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_RIGHT);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1.5, Position<'m7', 23, 44.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_UPRIGHT);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_YUKUSHII>(16, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_SIGH, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Wow! Fantastic!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" And who might this be?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Our Guildmaster!",
+            }
+        case 2:
+            {
+                english=" That's our Guildmaster!",
+            }
+        default:
+            {
+                english=" Oh, meet our Guildmaster!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_NONE, 3);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_HAPPY, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Glad to meet you, friend! ♪
+            Friend! ♪ Friend! ♪ Friend! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m8', 17.5, 47.5>);
+    Turn2Direction<actor ACTOR_NPC_YUKUSHII>(16, 10, DIR_DOWNLEFT);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(32, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_SIGH, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Glad to greet you, friend! ♪
+            Friend! ♪ Amazing! ♪ Friend! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN>(1, 20, 0);
+    Turn2Direction<actor ACTOR_NPC_YUKUSHII>(16, 10, DIR_RIGHT);
+    Wait(20);
+    Turn2Direction<actor ACTOR_PLAYER>(16, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(16, 10, DIR_UPRIGHT);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m9', 23, 44.5>);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_HAPPY, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Gaze upon this amazing view!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(120);
+    Turn2Direction<actor ACTOR_NPC_YUKUSHII>(8, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_YUKUSHII);
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Talk({
+        english="""
+             I'm delighted we came!
+            La-dee-la! ♪ Dee-la-dee! ♪
+        """,
+    });
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(4);
+    message_Close();
+    Wait(15);
+    screen_FadeOut(1, 30);
+    WaitBgm(BGM_GUILDMASTER_WIGGLYTUFF);
+    end;
+}
+
+def 1 for actor ACTOR_NPC_GURAADON {
+    SetAnimation(24);
+    WaitAnimation();
+    Unlock(3);
+    @label_0;
+    forever {
+        SetAnimation(2);
+        SetOutputAttribute(32);
+        WaitRandom(150, 240);
+        SetAnimation(24);
+        WaitAnimation();
+        continue;  // may be redundant
+    }
+}

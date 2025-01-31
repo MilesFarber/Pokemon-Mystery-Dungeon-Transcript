@@ -1,0 +1,445 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_OCEAN1, 0, 256);
+    back_SetGround(LEVEL_H01P99D);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(90);
+    supervision_Acting(1);
+    Wait(10);
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(0.7969, 24, 0);
+    Wait(60);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_UP);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_DOWN);
+    Wait(45);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_LEFT);
+    Wait(30);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_JUPUTORU>();
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(0.7969, 0, 16);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.7969, Position<'m0', 29, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.7969, Position<'m1', 28, 20.5>);
+    Turn2DirectionLives<actor ACTOR_NPC_JUPUTORU>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" What's the matter? Can't sleep?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_JUPUTORU);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yeah. Just thinking.",
+            }
+        case 2:
+            {
+                english=" Yes. Just thinking.",
+            }
+        default:
+            {
+                english=" Yep. Just thinking.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Thinking about [CS:N]Dusknoir[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" No, not that.",
+            }
+        case 2:
+            {
+                english=" No, that's not it.",
+            }
+        default:
+            {
+                english=" No, that's not it.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Sure, finding out we were being
+                    duped really hurt.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Sure, finding out we were being
+                    deceived came as a real shock.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Sure, finding out we were being
+                    fooled really hurt.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But hearing what you had to say
+                    earlier, [CS:N]Grovyle[CR]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But hearing your story earlier,
+                    [CS:N]Grovyle[CR]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     But hearing your story earlier,
+                    [CS:N]Grovyle[CR]...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It made me realize that what
+                    [CS:N]Dusknoir[CR] said in the future was really true.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It really drove it home. What
+                    [CS:N]Dusknoir[CR] said in the future was really true.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It made me realize that what
+                    [CS:N]Dusknoir[CR] said in the future was really true.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And it made me understand that
+                    [hero] really did come from the future.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And it made me realize that
+                    [hero] really did come from the future.
+                """,
+            }
+        default:
+            {
+                english="""
+                     And it made me understand that
+                    [hero] really did come from the future.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I was thinking about things
+                    like that...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I was mulling over things
+                    like that...
+                """,
+            }
+        default:
+            {
+                english="""
+                     I was going over things like that
+                    in my head...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(60);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(60);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey![K] Look, [CS:N]Grovyle[CR]!",
+            }
+        case 2:
+            {
+                english=" Hey![K] Look, [CS:N]Grovyle[CR]!",
+            }
+        default:
+            {
+                english=" Oh![K] Look, [CS:N]Grovyle[CR]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Sunlight![K] It's sunrise!",
+            }
+        case 2:
+            {
+                english=" Sunlight![K] It's sunrise!",
+            }
+        default:
+            {
+                english=" Sunlight![K] It's sunrise!",
+            }
+    }
+    message_Close();
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V21P02A);
+    camera2_SetPositionMark(Position<'m2', 20, 18.5>);
+    supervision_Acting(1);
+    SetOutputAttribute<object OBJECT_V21P02A1_272>(2);
+    screen2_FadeIn(1, 30);
+    Wait(30);
+    Move2PositionMark<object OBJECT_V21P02A1_272>(0.0469, Position<'m3', 20, 23>);
+    back_SetBackEffect(3);
+    back2_SetBackEffect(3);
+    bgm_ChangeVolume(60, 190);
+    bgm2_PlayFadeIn(BGM_ON_THE_BEACH_AT_DUSK, 0, 256);
+    Wait(420);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's pretty, isn't it!",
+            }
+        case 2:
+            {
+                english=" It's pretty, isn't it!",
+            }
+        default:
+            {
+                english=" It's pretty, isn't it!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english=" Yes.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Maybe it's because we were in
+                    the future for so long...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Maybe it's because we were in
+                    the future for so long...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Maybe it's because we were in
+                    the future for so long...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But I didn't think that a sunrise
+                    could ever feel so renewing!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But I didn't think that a sunrise
+                    could ever feel so renewing!
+                """,
+            }
+        default:
+            {
+                english="""
+                     But I didn't think that a sunrise
+                    could ever feel so renewing!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" The sun rises...[K] Then it sets...",
+            }
+        case 2:
+            {
+                english=" The sun rises...[K] Then it sets...",
+            }
+        default:
+            {
+                english=" The sun rises...[K] Then it sets...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We take that for granted, and
+                    that's only natural.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We take that for granted, and
+                    that's only natural.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We take that for granted, and
+                    that's only natural.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But things we take for granted...",
+            }
+        case 2:
+            {
+                english=" But things we take for granted...",
+            }
+        default:
+            {
+                english=" But things we take for granted...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     They're really the most essential
+                    things. And they're precious.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     They're really the most essential
+                    things. And they're precious.
+                """,
+            }
+        default:
+            {
+                english="""
+                     They're really the most essential
+                    things. And they're precious.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english="""
+             All I'd ever known is the
+            future's world of darkness.
+        """,
+    });
+    message_Talk({
+        english="""
+             Upon coming to this world...[K]
+            And seeing the sun for the first time...
+        """,
+    });
+    message_Talk({
+        english=" It was staggering.",
+    });
+    message_Talk({
+        english="""
+             Seeing it...[K] It strengthened my
+            resolve to turn history away from a future
+            of darkness.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_JUPUTORU>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             There is one thing that I wanted
+            to ask of you, [partner].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_JUPUTORU);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Talk({
+        english="""
+             It's about that time in
+            the future...
+        """,
+    });
+    message_Talk({
+        english="""
+             ...when we were confronted by
+            [CS:N]Dialga[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             Frankly, we were in a no-win
+            situation. There was no hope.
+        """,
+    });
+    message_Close();
+    bgm_ChangeVolume(140, 0);
+    screen2_FadeOut(0, 30);
+    screen_FadeOut(1, 30);
+    back2_SetMode(0);
+    end;
+}

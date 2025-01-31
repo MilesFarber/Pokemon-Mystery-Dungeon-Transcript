@@ -1,0 +1,76 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(84, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D71P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m0', 49.5, 43.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m1', 52.5, 45.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m2', 46.5, 45.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m3', 49.5, 47.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC1);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC2);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC3);
+    bgm_FadeOut(60);
+    se_Play(8194);
+    SetEffect<performer 3>(EFFECT_LIGHT_ENGULFING2, 3);
+    WaitEffect<performer 3>();
+    WaitExecutePerformer(3);
+    supervision_Acting(1);
+    SetEffect<performer 3>(EFFECT_NONE, 3);
+    Wait(30);
+    WaitSe(8194);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(45);
+    MovePositionOffset<actor ACTOR_PLAYER_APPOINT>(1, 0, -40);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    se_Play(6410);
+    supervision_RemoveActing(1);
+    Wait(30);
+    message_Mail({
+        english="""
+            [CN]The treasure box contained...[K]
+            [CN]a [CS:I]Sky Melodica[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    item_Set(0, 65, 0);
+    switch ( message_Menu(MENU_GIVE_ITEM) ) {
+        case 2:
+            @label_1;
+            screen_FadeOut(1, 60);
+            Wait(30);
+            end;
+        default:
+            Wait(10);
+            me_Play(9);
+            message_Mail({
+                english="""
+                    [CN][player] obtained
+                    [CN]a [CS:I]Sky Melodica[CR], one of
+                    [CN]the seven treasures!
+                """,
+            });
+            WaitMe(9);
+            message_Close();
+            jump @label_1;
+    }
+}

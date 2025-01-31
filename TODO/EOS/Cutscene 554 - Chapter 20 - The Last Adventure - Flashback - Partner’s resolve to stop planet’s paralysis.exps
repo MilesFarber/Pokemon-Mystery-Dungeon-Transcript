@@ -1,0 +1,76 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_MEMORIES_RETURNED, 0, 256);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_S04P01A);
+    back_SetGround(LEVEL_D28P44A);
+    screen_WhiteOutAll(1, 0);
+    Wait(1);
+    screen_FadeIn(1, 0);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m0', 34.5, 27.5>);
+    SetDirection<actor ACTOR_PLAYER>(DIR_RIGHT);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    SetPositionMark<performer 0>(Position<'m1', 33.5, 26.5>);
+    SetEffect<performer 3>(653, 3);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen2_FadeIn(0, 30);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [hero]!",
+            }
+        case 2:
+            {
+                english=" Hey, [hero]!",
+            }
+        default:
+            {
+                english=" Hey, [hero]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We have to do this for [CS:N]Grovyle[CR]'s
+                    sake! Let's go to [CS:P]Temporal Tower[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We have to do this for [CS:N]Grovyle[CR]'s
+                    sake! Let's go to [CS:P]Temporal Tower[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We have to do this for [CS:N]Grovyle[CR]'s
+                    sake! Let's go to [CS:P]Temporal Tower[CR]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(45);
+    screen2_FadeOut(0, 60);
+    screen_WhiteOutAll(1, 60);
+    screen_WhiteOut(1, 0);
+    screen_FadeInAll(1, 0);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

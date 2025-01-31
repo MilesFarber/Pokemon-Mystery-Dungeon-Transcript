@@ -1,0 +1,37 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    supervision_LoadStation(LEVEL_G01P04A, 'UM06');
+    supervision_StationCommon(0);
+    supervision_StationCommon(99);
+    supervision_Station(3);
+    supervision_Acting(0);
+    Wait(1);
+    SetPositionInitial<actor ACTOR_NPC_PERAPPU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english=" Ah, it's you.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Talk({
+        english="""
+             Today again, I want you to check
+            the Job Bulletin Board and the Outlaw Notice
+            Board and do the posted jobs.
+        """,
+    });
+    message_Talk({
+        english=" That will do for now. ♪",
+    });
+    message_Close();
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    end;
+}

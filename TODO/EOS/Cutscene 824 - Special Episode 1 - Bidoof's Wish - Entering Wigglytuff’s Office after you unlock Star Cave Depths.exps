@@ -1,0 +1,109 @@
+
+def 0 {
+    screen_FadeOut(0, 30);
+    CallCommon(CORO_SUBSCREEN_INIT);
+    SetPositionMark<actor ACTOR_PLAYER_BIPPA>(Position<'m0', 25.5, 29.5>);
+    SetPositionMark<actor ACTOR_NPC_PUKURIN>(Position<'m1', 25.5, 24.5>);
+    SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_UP);
+    SetDirection<actor ACTOR_NPC_PUKURIN>(DIR_DOWN);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    SetPositionLives<performer 0>(5);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" .........",
+    });
+    message_Talk({
+        english="""
+             Um...[K]
+            I had something I wanted to ask...
+        """,
+    });
+    message_Talk({
+        english="""
+             I entrusted it to [CS:Y]Bidoof[CR]...[K]
+            That [CS:P]Star Cave[CR] exploration...
+        """,
+    });
+    message_Talk({
+        english="""
+             That is...[K]I probably should have
+            gone instead...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(30);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN>();
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Oh...!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_DOWN);
+    WaitExecutePerformer(5);
+    camera_SetMyself<performer 0>();
+    MovePositionMark<performer 0>(1.5, Position<'m2', 25.5, 41.5>);
+    MovePositionOffset<actor ACTOR_NPC_PERAPPU>(1, 0, -32);
+    WaitExecutePerformer(0);
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    se_Play(8971);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_ANGRY, 3);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Guildmaster!![K]
+            You shouldn't go off on your own!!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_NONE, 3);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    se_Play(5122);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(18);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             It's no good at all!![K]
+            Humph!!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PERAPPU>(1, 0, 96);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    supervision_RemoveActing(1);
+    Wait(15);
+    MovePositionLives<performer 0>(1.5, ACTOR_PLAYER_BIPPA);
+    Wait(10);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_UP);
+    WaitExecutePerformer(0);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             N-never mind...[K]
+            It's nothing.
+        """,
+    });
+    message_Talk({
+        english=" Good luck exploring! ♪",
+    });
+    message_Close();
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    end;
+}

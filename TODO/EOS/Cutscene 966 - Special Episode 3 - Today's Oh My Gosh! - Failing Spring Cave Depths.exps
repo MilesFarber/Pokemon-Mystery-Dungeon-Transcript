@@ -1,0 +1,71 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Oh my gosh![K] What is it?
+            Why is this happening?
+        """,
+    });
+    message_Talk({
+        english="""
+             Anyway, I'll just have to try
+            again![K] Oh my gosh!
+        """,
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    Wait(60);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D57P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(27);
+    SetDirection<actor ACTOR_PLAYER_KIMAWARI>(DIR_RIGHT);
+    WaitAnimation<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_SPRING_CAVE_DEPTHS, 0, 256);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(30);
+    SetDirection<actor ACTOR_PLAYER_KIMAWARI>(DIR_RIGHT);
+    WaitAnimation<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(2);
+    Turn2Direction<actor ACTOR_PLAYER_KIMAWARI>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Ooogh...[K] I couldn't do it...",
+    });
+    message_Close();
+    Turn2Direction<actor ACTOR_PLAYER_KIMAWARI>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:N]Loudred[CR] is still fighting those
+            [CS:N]Haunter[CR]!
+        """,
+    });
+    message_Talk({
+        english=" I have to hurry!",
+    });
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_Close();
+    end;
+}

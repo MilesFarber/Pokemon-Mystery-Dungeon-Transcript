@@ -1,0 +1,48 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(55, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D32P31A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    Wait(30);
+    MovePositionMark<performer 0>(1, Position<'m0', 22.5, 20.5>);
+    WaitExecutePerformer(0);
+    Wait(30);
+    se_Play(7187);
+    camera_SetEffect(2, 2, 2.0);
+    Wait(10);
+    supervision_RemoveActing(0);
+    supervision_Acting(1);
+    camera_SetEffect(2, 2, 2.0);
+    Wait(15);
+    camera_SetEffect(0, 0, 0);
+    Wait(30);
+    MovePositionMark<performer 0>(1, Position<'m1', 76.5, 33.5>);
+    WaitExecutePerformer(0);
+    Wait(15);
+    message_Mail({
+        english="""
+            [CN]This area's master isn't here.
+            [CN]Let's move on.
+        """,
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m2', 76.5, 15.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m3', 76.5, 15.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m4', 76.5, 15.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m5', 76.5, 15.5>);
+    Wait(30);
+    bgm_FadeOut(60);
+    screen_FadeOut(1, 30);
+    WaitBgm(BGM_IN_THE_DEPTHS_OF_THE_PIT);
+    end;
+}

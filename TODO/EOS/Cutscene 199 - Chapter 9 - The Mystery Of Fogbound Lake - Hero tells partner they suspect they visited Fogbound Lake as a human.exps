@@ -1,0 +1,654 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[11, 4];
+    back_SetGround(LEVEL_D10P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(6933);
+    message_ImitationSound({
+        english="GRROOOOOOH...!",
+    });
+    WaitSe(6933);
+    message_CloseEnforce();
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Did you hear that,
+                    [hero]?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Did you hear that,
+                    [hero]?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Did you hear that,
+                    [hero]?!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So, I didn't imagine that sound
+                    after all!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So, I didn't imagine that sound
+                    after all!
+                """,
+            }
+        default:
+            {
+                english="""
+                     So, that sound wasn't just in
+                    my head!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It sounded like a roar!",
+            }
+        case 2:
+            {
+                english=" It was like some sort of roar!",
+            }
+        default:
+            {
+                english=" It was like some sort of roar!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But I wonder what it could be!",
+            }
+        case 2:
+            {
+                english=" But I wonder what it could be!",
+            }
+        default:
+            {
+                english=" But I wonder what it could be!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" There's no telling what's ahead!",
+            }
+        case 2:
+            {
+                english=" Who knows what's ahead?",
+            }
+        default:
+            {
+                english=" Who can say what's ahead?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But we have to tough it out!
+                    We have to keep moving!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But let's be brave! And let's
+                    keep going on!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oooh, we have to be brave!
+                    We need to keep going on!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Not far to go now.[K] Let's do this!",
+            }
+        case 2:
+            {
+                english=" We're nearly there.[K] Let's go!",
+            }
+        default:
+            {
+                english="""
+                     Almost there, I think![K] So let's
+                    do this!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 26.5, 0.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Yes.[K] We are nearly there.)",
+            }
+        default:
+            {
+                english="(Yes.[K] We are nearly there.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(And when we reach the top...)",
+            }
+        default:
+            {
+                english="(And when we reach the top...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(We may meet [CS:N]Uxie[CR] at last.)",
+            }
+        default:
+            {
+                english="(We may meet [CS:N]Uxie[CR] at last.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It may answer my big question! Who am I?)",
+            }
+        default:
+            {
+                english="(It may answer my big question! Who am I?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (That is, who was I...before I lost my
+                    memory?)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (That is, who was I...before I lost my
+                    memory?)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (That reminds me...[K] I still haven't said a word
+                    about this to [partner].)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (That reminds me...[K] I still haven't said a word
+                    about this to [partner].)
+                """,
+            }
+    }
+    message_Close();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 26.5, 11.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Huh?[K] What's on your mind,
+                    [hero]?
+                """,
+            }
+        case 2:
+            {
+                english=" Yes?[K] What is it, [hero]?",
+            }
+        default:
+            {
+                english=" Yes?[K] What is it, [hero]?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_EXPLANATION_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" You want to tell me something?",
+            }
+        case 2:
+            {
+                english=" You have something to tell me?",
+            }
+        default:
+            {
+                english="""
+                     Hmm? You have something
+                    important to tell me?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yeah? Go ahead!",
+            }
+        case 2:
+            {
+                english=" What is it?",
+            }
+        default:
+            {
+                english=" OK, go ahead!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.7969, Position<'m2', 26.5, 15.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_EXPLANATION_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_Mail({
+        english="""
+            [CN][hero] confessed what happened
+            [CN]since arriving at base camp...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    bgm_PlayFadeIn(BGM_I_SAW_SOMETHING_AGAIN, 0, 256);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Uh...[K]you what?!",
+            }
+        case 2:
+            {
+                english=" You...[K]you what?",
+            }
+        default:
+            {
+                english=" I beg...[K]I beg your pardon?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ever since we hit base camp...",
+            }
+        case 2:
+            {
+                english="""
+                     Ever since we reached
+                    base camp...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Ever since we arrived at
+                    base camp...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You've had the strange feeling
+                    that you know this place?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You've had a feeling that you
+                    somehow know this place?
+                """,
+            }
+        default:
+            {
+                english="""
+                     You've felt as if you know this
+                    place somehow?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And you also heard about the
+                    Pokémon that lives at [CS:P]Fogbound Lake[CR]?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And you also learned about the
+                    Pokémon that lives at [CS:P]Fogbound Lake[CR]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     And you also heard about the
+                    Pokémon that lives at [CS:P]Fogbound Lake[CR]?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Uxie[CR], huh? So the legends say
+                    that it wipes the memory of those who visit?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And that's [CS:N]Uxie[CR], right? So the
+                    legend says it erases visitors' memories?
+                """,
+            }
+        default:
+            {
+                english="""
+                     And that's [CS:N]Uxie[CR], right? And the
+                    legends say it takes visitors' memories?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So, you think you've been here
+                    before, [hero]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So, you suspect you've been here
+                    before, [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     So, you suspect you've been here
+                    before, [hero]?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You think you had a run-in with
+                    [CS:N]Uxie[CR], who then took your memory!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You think you encountered [CS:N]Uxie[CR],
+                    who then took your memory?
+                """,
+            }
+        default:
+            {
+                english="""
+                     You think you encountered [CS:N]Uxie[CR],
+                    who then took your memory?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I see![K] So that's what has been
+                    bothering you, [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I see...[K] So that's what has been
+                    on your mind, [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     I see![K] So that's what has been
+                    bothering you, [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(90);
+    Wait(20);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hmmm...[K] [hero]!",
+            }
+        case 2:
+            {
+                english=" Hmmm...[K] [hero]!",
+            }
+        default:
+            {
+                english=" Hmmm...[K] [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitBgm(BGM_I_SAW_SOMETHING_AGAIN);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That settles it! Now we really
+                    have to get to the top!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Well, now we have just one
+                    more reason to get to the top!
+                """,
+            }
+        default:
+            {
+                english="""
+                     That settles it! Now we really
+                    have to get to the top!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We have to meet [CS:N]Uxie[CR] and get at
+                    the truth!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We have to meet [CS:N]Uxie[CR] and find
+                    out what really happened!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We have to meet [CS:N]Uxie[CR].[K] We have
+                    to find out the truth!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I wonder what you were like
+                    before you lost your memory, [hero]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I wonder what you were like
+                    before you lost your memory, [hero]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     I wonder what you were like
+                    before you lost your memory, [hero]...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Maybe [CS:N]Uxie[CR] can answer
+                    some questions.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Perhaps [CS:N]Uxie[CR] can provide
+                    the answers.
+                """,
+            }
+        default:
+            {
+                english="""
+                     If we meet [CS:N]Uxie[CR], maybe you'll
+                    get your answers at last!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's go! Let's get to the top,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's go! Let's make our way to
+                    the top, [hero]!
+                """,
+            }
+        default:
+            {
+                english=" OK! Let's go up, [hero]!",
+            }
+    }
+    message_Close();
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, 0, -120);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, 0, -120);
+    Wait(30);
+    screen_FadeOut(1, 30);
+    main_EnterDungeon(15, 0);
+    main_EnterDungeon(-1, 0);
+    hold;
+    end;
+}

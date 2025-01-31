@@ -1,0 +1,1337 @@
+
+def 0 {
+    bgm_FadeOut(120);
+    $SCENARIO_MAIN = scn[29, 55];
+    back_SetGround(LEVEL_G01P04A);
+    supervision_LoadStation(LEVEL_G01P04A, 'US04');
+    supervision_Station(8);
+    supervision_StationCommon(0);
+    supervision_StationCommon(99);
+    supervision_Acting(0);
+    supervision_Acting(3);
+    SetPositionInitial<actor ACTOR_NPC_PERAPPU>();
+    SetPositionInitial<actor ACTOR_NPC_DOGOOMU>();
+    SetPositionInitial<actor ACTOR_NPC_DIGUDA>();
+    SetPositionInitial<actor ACTOR_NPC_BIPPA>();
+    SetPositionInitial<actor ACTOR_NPC_HEIGANI>();
+    SetPositionInitial<actor ACTOR_NPC_KIMAWARI>();
+    SetPositionInitial<actor ACTOR_NPC_GUREGGURU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(2);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    camera_SetMyself<performer 0>();
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_JOYOUS, 3);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(4);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(4);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(4);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(4);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(4);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(4);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(4);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(4);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(4);
+    screen_FadeIn(1, 30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Huh? What's going on?[K] Why's
+                    everyone gathered around?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Huh? What's going on?[K]
+                    I wonder what everyone's doing here.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh? What's going on?[K] What's
+                    everyone doing here?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    MovePositionMark<performer 0>(1, Position<'m0', 52.5, 31>);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, 0, 24);
+    Wait(15);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, 0, 32);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 43.5, 31.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m2', 43.5, 28.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    WaitExecutePerformer(0);
+    se_Play(8975);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Oh my gosh! It's unbelievable!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english=" They're the real deal, by golly!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_DOGOOMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Wow! Can I get your autographs,
+            PLEASE?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m3', 48.5, 31>);
+    WaitExecutePerformer(0);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hey, [CS:N]Chatot[CR].[K] Who are
+                    those Pokémon?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Hey, [CS:N]Chatot[CR].[K] Who are
+                    those Pokémon?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Say, [CS:N]Chatot[CR].[K] Who are
+                    those Pokémon?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    se_Play(8969);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_SURPRISED, FACE_POS_TOP_C_FACEL);
+    message_FacePositionOffset(-1, 1);
+    message_Talk({
+        english="""
+             Huh?![K] There you go sticking your
+            foot in your mouth again!
+        """,
+    });
+    message_Talk({
+        english="""
+             That lovely trio is Team [CS:X]Charm[CR],
+            the ultrafamous treasure hunters!
+        """,
+    });
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(-1, 1);
+    message_Talk({
+        english="""
+             They've earned the Master Rank,
+            which is reserved solely for teams of 
+            extraordinary merit.
+        """,
+    });
+    message_Talk({
+        english="""
+             As expert treasure hunters,
+            they've discovered countless treasures.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_FacePositionOffset(-1, 1);
+    message_Talk({
+        english="""
+             Moreover, they don't just find
+            treasures. Oh, no!
+        """,
+    });
+    message_Talk({
+        english="""
+             Strong! Smart! Beautiful![K]
+            The sheer style of their treasure hunts is what
+            makes them celebrities! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    MovePositionMark<performer 0>(1, Position<'m4', 52.5, 31>);
+    WaitExecutePerformer(0);
+    message_SetActor(ACTOR_NPC_PERAPPU);
+    message_Talk({
+        english="""
+             In the middle is [CS:N]Lopunny[CR]. She's
+            the gorgeous one with the long ears.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m5', 55.5, 31>);
+    WaitExecutePerformer(0);
+    message_Talk({
+        english="""
+             Next to her is the serenely
+            elegant [CS:N]Gardevoir[CR]! ♪[K] Ah, she is so beautiful...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m6', 49.5, 31>);
+    WaitExecutePerformer(0);
+    message_Talk({
+        english="""
+             Finally, there's [CS:N]Medicham[CR].[K]
+            She moves and flows as if she's dancing all
+            the time. Irresistibly cool!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             But I must wonder... Why would
+            the beauties of Team [CS:X]Charm[CR] visit here?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(30);
+    supervision_Acting(1);
+    Wait(1);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN>(0.5, 0, 8);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(2, -1);
+    message_Talk({
+        english=" Hiya!",
+    });
+    message_Close();
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(2);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_DOGOOMU>();
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_MIMIROPPU>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_DIGUDA>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_GUREGGURU>(4, 10, ACTOR_NPC_PUKURIN);
+    WaitExecuteLives(ACTOR_NPC_DAGUTORIO);
+    MovePositionMark<performer 0>(1, Position<'m7', 52.5, 31>);
+    WaitExecutePerformer(0);
+    ExecuteCommon<actor ACTOR_NPC_MIMIROPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_HAPPY, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             Oh! [CS:N]Wigglytuff[CR], darling! It's
+            been a long time, sweetie!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(0.7969, Position<'m8', 52.5, 27>);
+    MovePositionOffset<actor ACTOR_NPC_DIGUDA>(0.7969, 16, -12);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_NPC_BIPPA>(0.7969, -12, -12);
+    Turn2Direction<actor ACTOR_NPC_DIGUDA>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(4);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(4);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(4);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_LAUGHING, 3);
+    message_Talk({
+        english="""
+             Oh, [CS:N]Wigglytuff[CR]! You haven't
+            changed one bit!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_HAPPY, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             Seeing you as a Guildmaster...
+            Imagine that! That's amazing!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_HAPPY, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             It has been a long time,
+            [CS:N]Wigglytuff[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Yup. Long time no see! ♪[K]
+            Have you all been well?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<performer 0>(1, 24, 0);
+    WaitExecutePerformer(0);
+    se_Play(8961);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_NPC_DOGOOMU>();
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" ...[K]Long time...?[K] You mean...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8963);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KIMAWARI>();
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Guildmaster...[K] Are you already
+            acquainted with Team [CS:X]Charm[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<performer 0>(1, -24, 0);
+    WaitExecutePerformer(0);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_HAPPY, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             Oh! [CS:N]Wigglytuff[CR] was a real
+            go-getter back in the day. Like, grrrowl![K]
+            So how are you nowadays?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_HAPPY, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             Back then, [CS:N]Wigglytuff[CR] was
+            something else. No one could beat him. So cool!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Ha ha ha! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             Uh, Guildmaster...[K] Uh, how do
+            you know the beauties of Team [CS:X]Charm[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_NONE, 3);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Well, they're my friends.[K]
+            Friends from long ago! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             That's right. We were partners
+            in exploration with [CS:N]Wigglytuff[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(10);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_DOGOOMU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_GUREGGURU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SHOCKED, 3);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english=" Whaaaat?!",
+    });
+    message_Talk({
+        english="""
+             The Guildmaster...[K]
+            And Team [CS:X]Charm[CR]...?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" So what brings you all here?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             So astute of you. We came about
+            an important matter.
+        """,
+    });
+    message_KeyWait();
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    message_Talk({
+        english="""
+             Do you recall, when we were
+            exploring a long time ago, that we found a
+            mysterious key?
+        """,
+    });
+    message_Talk({
+        english="""
+             At the time, we didn't know what
+            the key was for. Well, we've finally found
+            out where it should be used.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             You see, we discovered a place
+            called [CS:P]Aegis Cave[CR]. That key is a perfect fit
+            for the keyhole to its entrance.
+        """,
+    });
+    message_Talk({
+        english="""
+             There's more. It's said that the
+            cave holds a vast trove of treasure.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_DOGOOMU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_GUREGGURU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" A vast trove of...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Treasure?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             Say, [CS:N]Wigglytuff[CR], darling...[K]
+            That key we found then...[K] You've still got it,
+            haven't you?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(10);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Key?[K] Um... What kind of key?",
+    });
+    message_Talk({
+        english=" I don't remember. Ha ha ha!",
+    });
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_LAUGHING, 3);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    Wait(5);
+    se_Play(8971);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_ANGRY, 3);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             Hey![K] We went through a lot to
+            get that key! Are you saying you've lost it?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_NONE, 3);
+    se_Play(8961);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             ...[K]That's typical for [CS:N]Wigglytuff[CR].
+            Some things haven't changed at all, it seems.
+        """,
+    });
+    message_Talk({
+        english=" [CS:N]Lopunny[CR], it's time for our gift...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(8, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" I hear you, [CS:N]Gardevoir[CR].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             Here you go, [CS:N]Wigglytuff[CR].[K]
+            We've brought you a little gift.
+        """,
+    });
+    message_Talk({
+        english="""
+             It's your favorite!
+            A Perfect Apple.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_MIMIROPPU>(0.5, 0, -8);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    se_Play(6410);
+    supervision_Acting(2);
+    SetOutputAttribute<object OBJECT_P03P02A1_128>(1);
+    SetAnimation<object OBJECT_P03P02A1_128>(9);
+    Wait(15);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(5);
+    SlidePositionOffset<actor ACTOR_NPC_MIMIROPPU>(0.5, 0, 8);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(2);
+    Wait(15);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Wow! A Perfect Apple![K] This is
+            for me?
+        """,
+    });
+    message_KeyWait();
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_LAUGHING, 3);
+    message_Talk({
+        english=" Yay! Thank you!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_NONE, 3);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN>(0.5, 0, 4);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    se_Play(6410);
+    Destroy<object OBJECT_P03P02A1_128>();
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(5);
+    SlidePositionOffset<actor ACTOR_NPC_PUKURIN>(0.5, 0, -4);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(2);
+    Wait(45);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_APPLE_ON_HEAD, 3);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(5);
+    Wait(60);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" So...[K]about that key...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8965);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Oh! I remember now![K] That key!
+            The one shaped like an [CS:K]Unown[CR].
+        """,
+    });
+    message_Talk({
+        english=" I'll go look!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_NONE, 3);
+    bgm_FadeOut(90);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m9', 52.5, 21.5>);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(8, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(8, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_DIGUDA>(8, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(8, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(8, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Destroy<actor ACTOR_NPC_PUKURIN>();
+    Wait(60);
+    message_SetActor(ACTOR_NPC_PUKURIN);
+    message_Talk({
+        english=" YOOM...TAH!",
+    });
+    message_Close();
+    se_Play(7947);
+    camera_SetEffect(1, 1, 1.0);
+    Wait(10);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_DOGOOMU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_GUREGGURU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    Wait(50);
+    camera_SetEffect(0, 0, 0);
+    Wait(60);
+    supervision_Station(10);
+    supervision_Acting(1);
+    SetPositionInitial<actor ACTOR_NPC_PUKURIN>();
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(2);
+    Wait(1);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m10', 52.5, 27>);
+    Wait(15);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(8, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(8, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_DIGUDA>(8, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(8, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(8, 10, DIR_LEFT);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN>(1, 0, 12);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Here you go! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(5);
+    SlidePositionMark<actor ACTOR_NPC_PUKURIN>(0.7969, Position<'m11', 52.5, 27>);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(2);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    ExecuteCommon<actor ACTOR_NPC_MIMIROPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             Yes, darling! This is the key.[K]
+            This will open the way into [CS:P]Aegis Cave[CR].
+        """,
+    });
+    message_Talk({
+        english=" Thank you, [CS:N]Wigglytuff[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_APPLE_ON_HEAD, 3);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(5);
+    message_Talk({
+        english="""
+             Say, why don't you join us?
+            It will be like old times.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_SIGH, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Yay! A Perfect Apple! ♪
+            Thank you!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8961);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_SWEAT_DROP, 3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SWEAT_DROP, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" ...[K]You really haven't changed...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" We'll be going now, sweetie.",
+    });
+    message_Talk({
+        english=" See you, [CS:N]Wigglytuff[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(180);
+    MovePositionMark<performer 0>(1, Position<'m12', 44.5, 31>);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(0.7969, Position<'m13', 40.5, 30.5>);
+    MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(0.7969, Position<'m14', 40.5, 30.5>);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(0.7969, Position<'m15', 43.5, 30.5>);
+    Wait(20);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m16', 37.5, 30.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m17', 40.5, 33.5>);
+    Wait(20);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1, Position<'m18', 49.5, 29.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1, Position<'m19', 52.5, 31.5>);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1, Position<'m20', 53.5, 29.5>);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1, Position<'m21', 55.5, 32.5>);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(8, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(8, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_DAGUTORIO>(8, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_GUREGGURU>(8, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(8, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(8, 10, DIR_LEFT);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m22', 40.5, 27.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Uh...[K] Excuse me!",
+            }
+        case 2:
+            {
+                english=" Uh...[K] Excuse me!",
+            }
+        default:
+            {
+                english=" Uh...[K] Excuse me!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWN);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_MIMIROPPU>();
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+    message_Talk({
+        english=" Yes?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Um...[K] Would it be all right if we
+                    joined you? For exploring, I mean.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Um...[K] May we go exploring
+                    with you?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Um...[K] Would it be all right if we
+                    went exploring with you?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_GUREGGURU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    ExecuteCommon<actor ACTOR_NPC_DOGOOMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" ME TOO!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(4);
+    message_SetFace(ACTOR_NPC_DIGUDA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -3);
+    message_Talk({
+        english=" And me!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    se_Play(8975);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+    ExecuteCommon<actor ACTOR_NPC_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english=" Oh my gosh! I want to go too!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(1, 5);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" And you, [hero]?",
+            }
+        case 2:
+            {
+                english=" And you, [hero]?",
+            }
+        default:
+            {
+                english=" And you, [hero]?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You want to go explore this new
+                    place too, right, [hero]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You'd like to go explore this new
+                    dungeon too, right, [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     You'd like to go explore this new
+                    dungeon too, right, [hero]?
+                """,
+            }
+    }
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_BOTTOM_C_FACEL);
+            message_FacePositionOffset(1, 5);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Yeah, that's right!
+                            That's the spirit!
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Yeah, that's right! That's the
+                            right answer!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Yep, good answer!
+                            That's the spirit!
+                        """,
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Please let us join you!",
+                    }
+                case 2:
+                    {
+                        english=" Please let us join you!",
+                    }
+                default:
+                    {
+                        english=" Please let us join you!",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Please let us go exploring
+                            with you!
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Please let us go exploring
+                            with you!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Please let us go exploring
+                            with you!
+                        """,
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_EmptyActor();
+            SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+            message_Talk({
+                english="[CS:N]Everyone[CR]: PLEASE?",
+            });
+            Wait(15);
+            SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 3);
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+            Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(8, 10, DIR_RIGHT);
+            WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+            Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_RIGHT);
+            Wait(60);
+            Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(8, 10, DIR_DOWN);
+            WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+            Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWNLEFT);
+            Wait(45);
+            SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_LAUGHING, 3);
+            message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_HAPPY, FACE_POS_BOTTOM_C_FACEL);
+            message_Talk({
+                english="""
+                     Tee-hee! Everyone is so earnest.
+                    You are all so adorable!
+                """,
+            });
+            message_KeyWait();
+            SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_NONE, 3);
+            message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+            message_Talk({
+                english=" Of course you may!",
+            });
+            SetAnimation<actor ACTOR_NPC_MIMIROPPU>(24);
+            WaitAnimation<actor ACTOR_NPC_MIMIROPPU>();
+            WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+            se_Play(5127);
+            screen_WhiteOut(1, 2);
+            Wait(2);
+            screen_FadeIn(1, 2);
+            Wait(10);
+            se_Play(5127);
+            screen_WhiteOut(1, 2);
+            Wait(2);
+            screen_FadeIn(1, 2);
+            WaitSe(5127);
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+            SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_JOYOUS, 3);
+            SetAnimation<actor ACTOR_NPC_KIMAWARI>(4);
+            SetAnimation<actor ACTOR_NPC_BIPPA>(4);
+            SetAnimation<actor ACTOR_NPC_DOGOOMU>(4);
+            SetAnimation<actor ACTOR_NPC_CHIRIIN>(4);
+            SetAnimation<actor ACTOR_NPC_DAGUTORIO>(4);
+            SetAnimation<actor ACTOR_NPC_DIGUDA>(4);
+            SetAnimation<actor ACTOR_NPC_PERAPPU>(4);
+            SetAnimation<actor ACTOR_NPC_GUREGGURU>(4);
+            SetAnimation<actor ACTOR_NPC_HEIGANI>(4);
+            ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_JOYOUS, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Wa-hah! Yes! Thank you!",
+                    }
+                case 2:
+                    {
+                        english=" Yay! Yes! Thank you!",
+                    }
+                default:
+                    {
+                        english=" Yay! Yes! Thank you!",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_NONE, 3);
+            SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+            SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+            SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+            SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+            SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+            SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+            SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+            SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+            SetAnimation<actor ACTOR_NPC_HEIGANI>(2);
+            SetAnimation<actor ACTOR_NPC_MIMIROPPU>(2);
+            message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+            message_Talk({
+                english="""
+                     OK, sweeties. We'll go ahead and
+                    open the entrance. You can go in after we do.
+                """,
+            });
+            message_Talk({
+                english="""
+                     The cave is located southeast
+                    of here.
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            MovePositionMark<actor ACTOR_NPC_CHAAREMU>(0.7969, Position<'m23', 40.5, 15.5>);
+            MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(0.7969, Position<'m24', 40.5, 15.5>);
+            MovePositionMark<actor ACTOR_NPC_SAANAITO>(0.7969, Position<'m25', 40.5, 30.5>);
+            Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_UP);
+            Turn2Direction<actor ACTOR_NPC_PERAPPU>(8, 10, DIR_UPLEFT);
+            Turn2Direction<actor ACTOR_NPC_BIPPA>(8, 10, DIR_UPLEFT);
+            Turn2Direction<actor ACTOR_NPC_HEIGANI>(8, 10, DIR_UPLEFT);
+            Turn2Direction<actor ACTOR_NPC_DOGOOMU>(8, 10, DIR_UPLEFT);
+            Turn2Direction<actor ACTOR_NPC_KIMAWARI>(8, 10, DIR_UPLEFT);
+            Turn2Direction<actor ACTOR_NPC_DIGUDA>(8, 10, DIR_LEFT);
+            Turn2Direction<actor ACTOR_NPC_CHIRIIN>(8, 10, DIR_UPLEFT);
+            MovePositionMark<actor ACTOR_NPC_SAANAITO>(0.7969, Position<'m26', 40.5, 15.5>);
+            WaitExecuteLives(ACTOR_NPC_SAANAITO);
+            Wait(30);
+            SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_JOYOUS, 3);
+            SetAnimation<actor ACTOR_NPC_KIMAWARI>(4);
+            SetAnimation<actor ACTOR_NPC_BIPPA>(4);
+            SetAnimation<actor ACTOR_NPC_DOGOOMU>(4);
+            SetAnimation<actor ACTOR_NPC_CHIRIIN>(4);
+            SetAnimation<actor ACTOR_NPC_DAGUTORIO>(4);
+            SetAnimation<actor ACTOR_NPC_DIGUDA>(4);
+            SetAnimation<actor ACTOR_NPC_PERAPPU>(4);
+            SetAnimation<actor ACTOR_NPC_GUREGGURU>(4);
+            SetAnimation<actor ACTOR_NPC_HEIGANI>(4);
+            Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+            WaitExecuteLives(ACTOR_PLAYER);
+            ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_BOTTOM_C_FACEL);
+            message_FacePositionOffset(1, 5);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" All right, [hero]!",
+                    }
+                case 2:
+                    {
+                        english=" This is great, [hero]!",
+                    }
+                default:
+                    {
+                        english="""
+                             This will be great,
+                            [hero]!
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Let's get ready now! We should
+                            leave right away!
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Let's get ready in a hurry so we
+                            can join in the exploration!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Let's get ready right away!
+                            We should be exploring with them!
+                        """,
+                    }
+            }
+            message_Close();
+            screen_FadeOut(1, 30);
+            worldmap_SetMode(4);
+            worldmap_SetLevel(8);
+            back2_SetMode(3);
+            WaitSubScreen();
+            worldmap_SetCamera(55);
+            worldmap_SetArrow(55);
+            worldmap_BlinkMark(55);
+            Wait(30);
+            me_Play(6);
+            message_Mail({
+                english="""
+                    [CN]You can now go to
+                    [CN][CS:P]Aegis Cave[CR]!
+                """,
+            });
+            WaitMe(6);
+            message_Close();
+            screen2_FadeOut(1, 15);
+            back2_SetMode(0);
+            dungeon_mode(54) = DMODE_OPEN;
+            supervision_RemoveActing(3);
+            SetPositionMark<actor ACTOR_NPC_GUREGGURU>(Position<'m27', 28.5, 27.5>);
+            SetPositionMark<actor ACTOR_PLAYER>(Position<'m28', 42.5, 25.5>);
+            SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m29', 38.5, 25.5>);
+            SetPositionMark<actor ACTOR_NPC_DOGOOMU>(Position<'m30', 28.5, 35.5>);
+            SetPositionMark<actor ACTOR_NPC_DIGUDA>(Position<'m31', 25.5, 35.5>);
+            SetPositionMark<actor ACTOR_NPC_PUKURIN>(Position<'m32', 56.5, 24.5>);
+            SetPositionMark<actor ACTOR_NPC_KIMAWARI>(Position<'m33', 44.5, 35.5>);
+            SetPositionMark<actor ACTOR_NPC_HEIGANI>(Position<'m34', 41.5, 37.5>);
+            SetPositionMark<actor ACTOR_NPC_BIPPA>(Position<'m35', 41.5, 34.5>);
+            SetPositionMark<actor ACTOR_NPC_PERAPPU>(Position<'m36', 56.5, 27.5>);
+            SetDirection<actor ACTOR_NPC_GUREGGURU>(DIR_DOWN);
+            SetDirection<actor ACTOR_PLAYER>(DIR_DOWN);
+            SetDirection<actor ACTOR_ATTENDANT1>(DIR_DOWN);
+            SetDirection<actor ACTOR_NPC_DOGOOMU>(DIR_LEFT);
+            SetDirection<actor ACTOR_NPC_DIGUDA>(DIR_RIGHT);
+            SetDirection<actor ACTOR_NPC_PUKURIN>(DIR_DOWN);
+            SetDirection<actor ACTOR_NPC_KIMAWARI>(DIR_DOWNLEFT);
+            SetDirection<actor ACTOR_NPC_HEIGANI>(DIR_UPRIGHT);
+            SetDirection<actor ACTOR_NPC_BIPPA>(DIR_DOWN);
+            SetDirection<actor ACTOR_NPC_PERAPPU>(DIR_UP);
+            SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_NONE, 3);
+            SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_NONE, 3);
+            camera_SetDefault();
+            screen_FadeIn(1, 30);
+            end;
+        case menu({
+            english="No",
+        }):
+        default:
+            @label_1;
+            forever {
+                CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                se_Play(8968);
+                SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+                WaitEffect<actor ACTOR_ATTENDANT1>();
+                WaitExecuteLives(ACTOR_ATTENDANT1);
+                message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_C_FACEL);
+                message_FacePositionOffset(1, 5);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 Huh? Why?[K] It's a chance at
+                                finding awesome treasure!
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 What? Why?[K] It's a new dungeon
+                                where we might find some amazing treasure!
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 What? Why?[K] We may be able
+                                to discover incredible treasure!
+                            """,
+                        }
+                }
+                message_KeyWait();
+                ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 Don't be that way! Let's go
+                                exploring with them!
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 Don't be so negative! Let's go
+                                exploring with them!
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 Oh, don't be that way! Let's go
+                                exploring with them!
+                            """,
+                        }
+                }
+                switch ( message_SwitchMenu(0, 1) ) {
+                    case menu({
+                        english="Yes",
+                    }):
+                    default:
+                        break_loop;
+                        break;
+                    case menu({
+                        english="No",
+                    }):
+                        continue;  // may be redundant
+                        break;
+                }
+            }
+            jump @label_0;
+    }
+}

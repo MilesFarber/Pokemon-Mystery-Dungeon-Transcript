@@ -1,0 +1,38 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_FAR_AMP_PLAINS, 0, 256);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_ResetActor();
+    message_Mail({
+        english="[CN]Would you like to go on?",
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+        default:
+            @label_0;
+            message_Close();
+            if ( scn($SCENARIO_MAIN) == [13, 2] ) {
+                supervision_ExecuteCommon(CORO_EVENT_M12_06);
+                hold;
+            } else {
+                MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 28.5, 4.5>);
+                Wait(15);
+                MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 28.5, 4.5>);
+                Wait(20);
+                main_EnterDungeon(18, 30);
+                main_EnterDungeon(-1, 30);
+                hold;
+            }
+            break;
+        case menu({
+            english="No",
+        }):
+            message_Close();
+            @label_3;
+            end;
+    }
+}

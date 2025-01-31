@@ -1,0 +1,67 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P07C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We should get some sleep too.",
+            }
+        case 2:
+            {
+                english=" We should get some sleep too.",
+            }
+        default:
+            {
+                english=" We should get some sleep too.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's make tomorrow another
+                    good day, [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's make tomorrow another
+                    good day, [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's make tomorrow another
+                    good day, [hero]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" All right, good night.",
+            }
+        case 2:
+            {
+                english=" OK, good night.",
+            }
+        default:
+            {
+                english=" OK, good night.",
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    WaitBgm(BGM_GOODNIGHT);
+    end;
+}

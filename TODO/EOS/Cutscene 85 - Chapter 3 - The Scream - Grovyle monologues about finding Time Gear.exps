@@ -1,0 +1,56 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    bgm2_PlayFadeIn(BGM_STORM, 0, 256);
+    back_SetGround(LEVEL_V03P12A);
+    supervision_Acting(0);
+    camera_SetPositionMark(Position<'m0', 60, 16.5>);
+    message_ResetActor();
+    message_Talk({
+        english="""
+             Do my eyes deceive me?[K] Could it be...?[K]
+            Yes, it is!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    screen_FadeIn(1, 10);
+    Wait(45);
+    se_Play(6401);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    camera_SetPositionMark(Position<'m1', 21, 16.5>);
+    Wait(15);
+    camera_SetPositionMark(Position<'m2', 60, 16.5>);
+    Wait(30);
+    message_Talk({
+        english=" I've finally found it![K] A Time Gear!",
+    });
+    message_Talk({
+        english=" But...[K]this is only the first of many...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6401);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    camera_SetPositionMark(Position<'m3', 21, 16.5>);
+    Wait(10);
+    camera_SetPositionMark(Position<'m4', 60, 16.5>);
+    Wait(15);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    se_Play(6401);
+    camera_SetPositionMark(Position<'m5', 21, 16.5>);
+    Wait(10);
+    camera_SetPositionMark(Position<'m6', 60, 16.5>);
+    Wait(90);
+    bgm_FadeOut(120);
+    bgm2_FadeOut(120);
+    screen_FadeOut(1, 120);
+    Wait(60);
+    $SCENARIO_BALANCE_FLAG = 1;
+    $SPECIAL_EPISODE_OPEN[0] = 1;
+    end;
+}

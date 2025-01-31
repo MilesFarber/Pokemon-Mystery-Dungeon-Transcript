@@ -1,0 +1,43 @@
+
+def 0 {
+    $SCENARIO_MAIN = scn[4, 1];
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    camera_SetMyPosition<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PERAPPU);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Oh, you two! Still wandering
+            around lost, it seems...
+        """,
+    });
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_NONE, 3);
+    message_Talk({
+        english=" Well, come with me.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionMark<actor ACTOR_NPC_PERAPPU>(1.5, Position<'m0', 40, 27.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(24, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(24, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Move2PositionMark<actor ACTOR_NPC_PERAPPU>(1.5, Position<'m1', 40.5, 21.5>);
+    Move2PositionOffset<actor ACTOR_NPC_PERAPPU>(1.5, 0, -100);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Wait(60);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m2', 40, 27.5>);
+    Wait(10);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m3', 40, 27.5>);
+    Wait(20);
+    bgm_FadeOut(60);
+    screen_FadeOut(1, 30);
+    WaitBgm(BGM_WIGGLYTUFFS_GUILD);
+    end;
+}

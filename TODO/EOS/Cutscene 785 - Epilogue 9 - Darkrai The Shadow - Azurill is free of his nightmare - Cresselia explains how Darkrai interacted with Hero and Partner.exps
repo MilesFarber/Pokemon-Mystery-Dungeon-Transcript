@@ -1,0 +1,379 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_T01P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 30);
+    Wait(20);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_RURIRI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    MovePositionMark<actor ACTOR_NPC_RURIRI>(1, Position<'m0', 44.5, 24.5>);
+    MovePositionMark<actor ACTOR_NPC_MARIRU>(1, Position<'m1', 42.5, 24.5>);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_TEARY_EYED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" [CS:N]Marill[CR]!",
+    });
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    ExecuteCommon<actor ACTOR_NPC_RURIRI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             [CS:N]Azurill[CR]! That's great![K] You woke
+            up from your nightmare!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(23);
+    WaitAnimation<actor ACTOR_NPC_RURIRI>();
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(2);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_TEARY_EYED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Yup!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetOutputAttribute<actor ACTOR_NPC_MARIRU>(4);
+    Turn2Direction<actor ACTOR_NPC_MARIRU>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_MARIRU);
+    ExecuteCommon<actor ACTOR_NPC_MARIRU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MARIRU);
+    Turn2Direction<actor ACTOR_NPC_RURIRI>(4, 10, DIR_UPRIGHT);
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             You did it, Miss [CS:N]Cresselia[CR]![K]
+            Thank you so much!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_RURIRI>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" And Mister [CS:N]Drowzee[CR] too!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_MARIRU>(4, 10, DIR_DOWNRIGHT);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_PLAYER_PARTNER);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER_PARTNER);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_DOWNLEFT);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_SURIIPU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SURIIPU>();
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Huh?! Me?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_RURIRI>(1, Position<'m2', 46.5, 27.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_MARIRU>(1, Position<'m3', 46.5, 25.5>);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, -24, 0);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, 0, -24);
+    Turn2Direction<actor ACTOR_NPC_RURIRI>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_MARIRU>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    ExecuteCommon<actor ACTOR_NPC_RURIRI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             Thank you very much,
+            Mister [CS:N]Drowzee[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Mister [CS:N]Drowzee[CR]![K] I have to thank
+            you too!
+        """,
+    });
+    message_Talk({
+        english="""
+             You stayed to take care of
+            [CS:N]Azurill[CR] this whole time...
+        """,
+    });
+    message_Talk({
+        english=" Thank you so very much!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_SURIIPU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_SURIIPU>();
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Well...[K]shucks, it's the least I
+            could do.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hey, [CS:N]Cresselia[CR].[K] What happened
+                    to [CS:N]Palkia[CR]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Listen, [CS:N]Cresselia[CR].[K] What happened
+                    to [CS:N]Palkia[CR]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Say, [CS:N]Cresselia[CR].[K] What happened
+                    to [CS:N]Palkia[CR]?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(4, 10, DIR_DOWNLEFT);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_PUKURIN>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_UPRIGHT);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_KURESERIA);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_RURIRI>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_MARIRU>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_SURIIPU>(4, 10, ACTOR_NPC_KURESERIA);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_NPC_KURESERIA);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             [CS:N]Palkia[CR] is immersed within
+            [CS:P]Spacial Rift[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             Where he's attempting to take
+            care of the distortion of space.
+        """,
+    });
+    message_Talk({
+        english="""
+             As the being that governs space
+            itself, he is staking his pride on success.
+        """,
+    });
+    message_Talk({
+        english="""
+             Given that duty, I would not
+            expect to see him manifest here again.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5122);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(22);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_JOYOUS, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Well done! How remarkable!",
+    });
+    message_Talk({
+        english="""
+             It's truly quite marvelous![K]
+            Marvelous indeed, [CS:N]Cresselia[CR]! ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             We'd heard of your power to
+            dispel darkness, but only in rumor.
+        """,
+    });
+    message_Talk({
+        english="""
+             But it was all true! ♪[K] I must
+            say, this is completely marvelous!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I understand...[K] You used your
+                    power when we were in [CS:N]Palkia[CR]'s nightmare.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I understand...[K] You used your
+                    power when we were in [CS:N]Palkia[CR]'s nightmare.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I understand...[K] You used your
+                    power when we were in [CS:N]Palkia[CR]'s nightmare.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's how you pulled [CS:N]Palkia[CR]
+                    and us out of the nightmare.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's how you pulled [CS:N]Palkia[CR]
+                    and us out of the nightmare.
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's how you pulled [CS:N]Palkia[CR]
+                    and us out of the nightmare.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_WELCOME_TO_THE_WORLD_OF_POKEMON, 0, 256);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             Indeed.[K] I do have the power to
+            dispel darkness...
+        """,
+    });
+    message_Talk({
+        english="""
+             It lets me dispel nightmares and
+            awaken those in deepest sleep.
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Darkrai[CR] stands as an opposite
+            to my being. He has the power to enshroud
+            those who sleep in nightmare.
+        """,
+    });
+    message_Talk({
+        english=" [partner].[K] And, [hero].",
+    });
+    message_Talk({
+        english="""
+             Do you recall where you met my
+            impostor?
+        """,
+    });
+    message_Talk({
+        english="""
+             The impostor, that is to say, the
+            first [CS:N]Cresselia[CR] you met...
+        """,
+    });
+    message_Talk({
+        english="""
+             Those encounters were always
+            within dreams, weren't they?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ...That's...[K] That's true!",
+            }
+        case 2:
+            {
+                english=" ...That's...[K] That's true!",
+            }
+        default:
+            {
+                english=" ...That's...[K] That's true!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's true...)",
+            }
+        default:
+            {
+                english="(It's true...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(The first time was in a dream.)",
+            }
+        default:
+            {
+                english="(The first time was in a dream.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Then later on, come to think of it...)",
+            }
+        default:
+            {
+                english="(Then later on, come to think of it...)",
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

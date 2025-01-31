@@ -1,0 +1,71 @@
+
+def 0 {
+    sound_Stop();
+    se_Play(8198);
+    screen_WhiteOut(1, 30);
+    back_SetGround(LEVEL_D41P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(45);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_BOSUGODORA>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_AABOKKU>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_DOSAIDON>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_MAGUKARUGO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_MUUMAAJI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_BUUBAAN>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_DAAKURAI>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_DAAKURAI>();
+    WaitExecuteLives(ACTOR_NPC_DAAKURAI);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" That blasted [CS:N]Cresselia[CR]!",
+    });
+    message_Talk({
+        english="""
+             She fled with [hero] and
+            that sidekick!
+        """,
+    });
+    message_Talk({
+        english="""
+             ...So be it.[K] They will eventually
+            have to return here.
+        """,
+    });
+    message_Talk({
+        english="""
+             Because they will try to
+            defeat me.
+        """,
+    });
+    message_Close();
+    se_Play(6925);
+    screen_FadeOut(1, 30);
+    Wait(15);
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 0);
+    message_SetActor(ACTOR_NPC_DAAKURAI);
+    message_Talk({
+        english="""
+             However...[K] That will end in their
+            elimination, not mine.
+        """,
+    });
+    message_Talk({
+        english=" All I need to do is wait.",
+    });
+    message_Talk({
+        english="""
+             I look forward to their
+            next arrival.
+        """,
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

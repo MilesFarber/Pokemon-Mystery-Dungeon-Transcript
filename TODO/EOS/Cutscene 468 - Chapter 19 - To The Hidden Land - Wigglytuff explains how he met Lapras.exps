@@ -1,0 +1,61 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    back_SetGround(LEVEL_G01P04C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             [CS:N]Kabutops[CR] and his brutes attacked
+            us without warning.
+        """,
+    });
+    message_KeyWait();
+    bgm_FadeOut(160);
+    message_Talk({
+        english="""
+             [CS:N]Chatot[CR] reacted first and shielded
+            me from them, and he got knocked out.
+        """,
+    });
+    message_Talk({
+        english="""
+             I sent [CS:N]Kabutops[CR]'s gang packing
+            after that, but...
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Chatot[CR] was knocked out. I didn't
+            know what to do.
+        """,
+    });
+    message_Talk({
+        english="""
+             I was in a panic because I
+            couldn't help [CS:N]Chatot[CR].
+        """,
+    });
+    message_Talk({
+        english=" That was when [CS:N]Lapras[CR] appeared.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" [CS:N]Lapras[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yep. [CS:N]Lapras[CR].",
+    });
+    message_Talk({
+        english=" [CS:N]Lapras[CR] saved [CS:N]Chatot[CR].",
+    });
+    message_Close();
+    screen_FadeOut(1, 60);
+    end;
+}

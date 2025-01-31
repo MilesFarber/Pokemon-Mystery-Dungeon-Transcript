@@ -1,0 +1,242 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(69, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    $SCENARIO_MAIN = scn[29, 91];
+    back_SetGround(LEVEL_D41P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_RAIN1, 90, 256);
+    screen_FadeIn(1, 30);
+    Wait(90);
+    MovePositionMark<performer 0>(1, Position<'m0', 34.5, 24.5>);
+    MovePositionMark<actor ACTOR_NPC_KURESERIA>(1, Position<'m1', 34.5, 23.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 32.5, 26.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 36.5, 26.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's a dead end.",
+            }
+        case 2:
+            {
+                english=" It's a dead end.",
+            }
+        default:
+            {
+                english=" It's a dead end.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I guess this is the deepest we
+                    can go...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This appears to be the deepest
+                    we can go...
+                """,
+            }
+        default:
+            {
+                english="""
+                     This looks like the deepest we
+                    can go...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But where's [CS:N]Darkrai[CR]...?",
+            }
+        case 2:
+            {
+                english=" But where's [CS:N]Darkrai[CR]...?",
+            }
+        default:
+            {
+                english=" Where's [CS:N]Darkrai[CR], though...?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6925);
+    bgm_FadeOut(60);
+    screen_FadeChange(1, 30, 256, 192);
+    Wait(45);
+    se_Play(8967);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KURESERIA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetActor(ACTOR_NPC_DAAKURAI);
+    message_Talk({
+        english=" You've kept me waiting.",
+    });
+    message_Close();
+    screen_FadeChange(1, 5, 192, 256);
+    supervision_Acting(1);
+    Wait(15);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_KURESERIA>(EFFECT_SHOCKED, 3);
+    MovePositionOffset<performer 0>(2.5, 0, 8);
+    SlidePositionOffset<actor ACTOR_NPC_KURESERIA>(2.5, 0, 8);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(2.5, 0, 8);
+    SlidePositionOffset<actor ACTOR_PLAYER>(2.5, 0, 8);
+    WaitExecuteLives(ACTOR_PLAYER);
+    bgm_PlayFadeIn(BGM_IN_THE_FUTURE, 0, 256);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Darkrai[CR]!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Darkrai[CR]!",
+            }
+        default:
+            {
+                english=" [CS:N]Darkrai[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Good of you to come,
+            [partner] and [hero].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8973);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Why do you keep after us?![K]
+                    Y-you don't even know us!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Why do you keep after us?![K]
+                    Y-you don't even know us!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Why do you keep after us?![K]
+                    Y-you don't even know us!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" I know you all too well.",
+    });
+    message_Talk({
+        english=" You especially, [hero].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Wh-what?!)",
+            }
+        default:
+            {
+                english="(Wh-what?!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             When you came to this world
+            with [CS:N]Grovyle[CR], [hero]...
+        """,
+    });
+    message_Talk({
+        english="""
+             You were caught up in an
+            accident.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(...Accident...?)",
+            }
+        default:
+            {
+                english="(...Accident...?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Oh, that's right![K] [CS:N]Grovyle[CR] once explained it...)",
+            }
+        default:
+            {
+                english="(Oh, that's right![K] [CS:N]Grovyle[CR] once explained it...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(We had an accident traveling back in time...)",
+            }
+        default:
+            {
+                english="(We had an accident traveling back in time...)",
+            }
+    }
+    message_Close();
+    bgm_FadeOut(60);
+    screen_FadeOut(1, 30);
+    Wait(30);
+    end;
+}

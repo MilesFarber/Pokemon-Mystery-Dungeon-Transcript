@@ -1,0 +1,285 @@
+
+def 0 {
+    sound_Stop();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_H02P99A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen2_FadeIn(0, 15);
+    screen_FadeIn(1, 15);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (I was told I was somehow connected to the
+                    distortion of space.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (I was told I was somehow connected to the
+                    distortion of space.)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I heard that at [CS:P]Luminous Spring[CR].)",
+            }
+        default:
+            {
+                english="(I heard that at [CS:P]Luminous Spring[CR].)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    message_SetFace(ACTOR_PLAYER, FACE_SAD, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (In that case...[K] What I heard about my
+                    existence ruining the world...
+                """,
+            }
+        default:
+            {
+                english="""
+                    (In that case...[K] What I heard about my
+                    existence ruining the world...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Maybe...[K] Maybe it's true.)",
+            }
+        default:
+            {
+                english="(Maybe...[K] Maybe it's true.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (Merely by existing here, I might cause the
+                    world's destruction.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (Merely by existing here, I might cause the
+                    world's destruction.)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Is that what I am here...?)",
+            }
+        default:
+            {
+                english="(Is that what I am here...?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.7969, 36, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(10);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Why are you daydreaming?[K]
+                    It's not like you, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Why are you daydreaming?[K]
+                    It's not like you, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     Why are you daydreaming?[K]
+                    It's not like you, [hero].
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Come on, let's see some energy,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Come on, let's see some energy,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Come on, let's see some energy,
+                    [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([partner]'s even peppier than usual.)",
+            }
+        default:
+            {
+                english="([partner]'s even peppier than usual.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(But...[K][partner] could be right.)",
+            }
+        default:
+            {
+                english="(But...[K][partner] could be right.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (It's not for sure that I'm going to destroy
+                    the world!)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (It's not for sure that I'm going to destroy
+                    the world!)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(There's no point feeling sorry for myself.)",
+            }
+        default:
+            {
+                english="(There's no point feeling sorry for myself.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I gotta cheer up!)",
+            }
+        default:
+            {
+                english="(I gotta cheer up!)",
+            }
+    }
+    message_Close();
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(30);
+    bgm_FadeOut(120);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Yup![K] That's the [hero]
+                    I know!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Yes![K] That's the [hero]
+                    I know!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Yep![K] That's the [hero]
+                    I know!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's make this another big day,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's make this another big day,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's make this another big day,
+                    [hero]!
+                """,
+            }
+    }
+    message_Close();
+    screen2_FadeOut(1, 30);
+    back2_SetMode(0);
+    MovePositionLives<performer 0>(1, ACTOR_PLAYER);
+    WaitExecutePerformer(0);
+    bgm_PlayFadeIn(BGM_DO_YOUR_BEST_AS_ALWAYS, 0, 256);
+    end;
+}

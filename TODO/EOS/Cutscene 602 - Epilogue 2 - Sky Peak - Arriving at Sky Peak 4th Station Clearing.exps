@@ -1,0 +1,216 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 18];
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             We're almost to the 4th Station
+            Clearing! Come on!
+        """,
+    });
+    message_Close();
+    back_SetGround(LEVEL_D73P24A);
+    supervision_LoadStation(LEVEL_D73P24A, 'US31');
+    supervision_Station(9);
+    supervision_Station(40);
+    supervision_StationCommon(0);
+    supervision_StationCommon(9);
+    supervision_StationCommon(10);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_SHEIMI>();
+    SetPositionInitial<actor ACTOR_NPC_TAMATAMA>();
+    SetPositionInitial<actor ACTOR_NPC_JIGUZAGUMA>();
+    SetPositionInitial<actor ACTOR_NPC_OKUTAN>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC1>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC2>();
+    SetAnimation<actor ACTOR_NPC_SHEIMI>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC1>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC2>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_SKY_PEAK_PRAIRIE, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_SHEIMI>(1, Position<'m0', 28.5, 33.5>);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m1', 28.5, 37.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m2', 31.5, 38.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m3', 25.5, 38.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    SetAnimation<actor ACTOR_NPC_JIGUZAGUMA>(2);
+    Turn2Direction<actor ACTOR_NPC_JIGUZAGUMA>(4, 10, DIR_DOWNRIGHT);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_KINOGASSA>();
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    Turn2Direction<actor ACTOR_NPC_GOORIKII>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_GOORIKII);
+    MovePositionOffset<actor ACTOR_NPC_KINOGASSA>(1, 8, 8);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Hey! Great job!",
+    });
+    Turn2Direction<actor ACTOR_NPC_SHEIMI>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_UPLEFT);
+    message_Talk({
+        english="""
+             We've also established a base at
+            the 4th Station Clearing. Feel free to use it.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_SHEIMI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" Yes, thank you!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_SHEIMI>(4, 10, ACTOR_PLAYER_APPOINT);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    Wait(5);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_UP);
+    Wait(5);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_UP);
+    Wait(5);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             So, you're probably tired? Let's
+            take a short break.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    message_SetActor(ACTOR_NPC_OKUTAN);
+    message_Talk({
+        english=" HELP!!!",
+    });
+    message_Close();
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(2);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(2);
+    SetEffect<actor ACTOR_NPC_GOORIKII>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(10);
+    Turn2DirectionLives<actor ACTOR_NPC_SHEIMI>(4, 10, ACTOR_NPC_OKUTAN);
+    Turn2DirectionLives<actor ACTOR_NPC_KINOGASSA>(4, 10, ACTOR_NPC_OKUTAN);
+    Wait(2);
+    Turn2DirectionLives<actor ACTOR_NPC_KUCHIITO>(4, 10, ACTOR_NPC_OKUTAN);
+    Turn2DirectionLives<actor ACTOR_NPC_GOORIKII>(4, 10, ACTOR_NPC_OKUTAN);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_JIGUZAGUMA>(4, 10, DIR_UPRIGHT);
+    SetAnimation<actor ACTOR_NPC_TAMATAMA>(2);
+    Turn2Direction<actor ACTOR_NPC_TAMATAMA>(4, 10, DIR_UPLEFT);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_OKUTAN>(1.5, Position<'m4', 28.5, 26.5>);
+    WaitExecuteLives(ACTOR_NPC_OKUTAN);
+    Turn2DirectionLives<actor ACTOR_NPC_SHEIMI>(4, 10, ACTOR_NPC_OKUTAN);
+    Turn2DirectionLives<actor ACTOR_NPC_KINOGASSA>(4, 10, ACTOR_NPC_OKUTAN);
+    Turn2DirectionLives<actor ACTOR_NPC_KUCHIITO>(4, 10, ACTOR_NPC_OKUTAN);
+    Turn2DirectionLives<actor ACTOR_NPC_GOORIKII>(4, 10, ACTOR_NPC_OKUTAN);
+    WaitExecuteLives(ACTOR_NPC_GOORIKII);
+    message_SetFace(ACTOR_NPC_OKUTAN, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Uhhn...huhhn...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_KUCHIITO>(1, -8, 0);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KUCHIITO>();
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" What's wrong?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_OKUTAN>(4, 10, ACTOR_NPC_KUCHIITO);
+    WaitExecuteLives(ACTOR_NPC_OKUTAN);
+    SetEffect<actor ACTOR_NPC_OKUTAN>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_NPC_OKUTAN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             The explorer [CS:N]Sneasel[CR]'s getting
+            picked on by this strange group near the
+            5th Station Clearing!
+        """,
+    });
+    message_Talk({
+        english="""
+             I'm not much help by myself, so
+            please, someone come with me to help!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_OKUTAN>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_OKUTAN>(2);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWNRIGHT);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_KUCHIITO>(4, 10, DIR_DOWNLEFT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_OKUTAN>(4, 10, DIR_DOWNRIGHT);
+    message_SetFace(ACTOR_NPC_GOORIKII, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(-2, -2);
+    message_Talk({
+        english=" Move out!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_KINOGASSA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Roger! Let's go!",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_NPC_GOORIKII>(1.5, Position<'m5', 32.5, 25.5>, Position<'m6', 28.5, 21.5>, Position<'m7', 28.5, 11.5>);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_KUCHIITO>(8, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(8, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_OKUTAN>(8, 10, DIR_UP);
+    Wait(40);
+    MovePositionMark<actor ACTOR_NPC_KINOGASSA>(1.5, Position<'m8', 28.5, 21.5>, Position<'m9', 28.5, 11.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_NPC_KUCHIITO>(1.5, Position<'m10', 28.5, 21.5>, Position<'m11', 28.5, 11.5>);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    Destroy<actor ACTOR_NPC_GOORIKII>();
+    Destroy<actor ACTOR_NPC_KINOGASSA>();
+    Destroy<actor ACTOR_NPC_KUCHIITO>();
+    Wait(45);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" The 5th Station Clearing...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8965);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SHEIMI>();
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Oh!
+            Don't tell me...!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SHEIMI>(1, 2, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             [player]!
+            We should hurry too!
+        """,
+    });
+    message_Close();
+    end;
+}

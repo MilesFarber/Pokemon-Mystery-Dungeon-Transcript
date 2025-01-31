@@ -1,0 +1,626 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_IN_THE_FUTURE, 0, 256);
+    $SCENARIO_SIDE = scn[47, 1];
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english=" .........",
+    });
+    message_Talk({
+        english=" ....................",
+    });
+    message_Talk({
+        english=" ...[K]Oogh...",
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D46P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(36);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(29);
+    screen_FadeIn(1, 30);
+    Wait(60);
+    SlidePositionOffset<actor ACTOR_PLAYER_FUTURE>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_FUTURE>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_FUTURE>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_FUTURE>(1, 1, 0);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_PAIN, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Ooogh...[K] OOOOooogh...",
+    });
+    message_Talk({
+        english=" Oof...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(31);
+    WaitAnimation<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Wait(15);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(20);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(10);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(1, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_SURPRISED, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" ...[K][CS:N]Dusknoir[CR]...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_RC_FACER);
+    message_Talk({
+        english=" Is this...[K]the future?",
+    });
+    message_Talk({
+        english=" I'm...[K] I'm back again...",
+    });
+    message_Talk({
+        english=" This...[K]world of darkness...",
+    });
+    message_Talk({
+        english=" ...[K]But...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             [CS:N]Dusknoir[CR] and I haven't
+            disappeared...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             The future's still this
+            dark place...[K] Does that mean...
+        """,
+    });
+    message_Talk({
+        english="""
+             History...[K]history hasn't been
+            changed yet...?
+        """,
+    });
+    message_Talk({
+        english=" Don't tell me...",
+    });
+    message_Talk({
+        english="""
+             Preventing the planet's
+            paralysis...[K] Did [c_name:NPC_HERO_FIRST] and
+            [c_name:NPC_PARTNER_FIRST] fail...?
+        """,
+    });
+    message_Talk({
+        english=" ...[K]No.[K] That can't be.",
+    });
+    message_Talk({
+        english="""
+             It's only that they
+            haven't done it yet.
+        """,
+    });
+    message_Talk({
+        english="""
+             The effects of history's being
+            changed will probably start appearing soon.
+            I simply haven't noticed them yet...
+        """,
+    });
+    message_Talk({
+        english="""
+             Anyhow...[K] Right now I've got no
+            choice but to believe that.
+        """,
+    });
+    message_Talk({
+        english="""
+             [c_name:NPC_HERO_FIRST]...[K]
+            [c_name:NPC_PARTNER_FIRST]...
+        """,
+    });
+    message_Talk({
+        english=" Please...[K] Succeed for me.",
+    });
+    message_Talk({
+        english="""
+             I believe in you two...[K]
+            I'm doing everything I can.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5121);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(26);
+    WaitAnimation<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_PAIN, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Guh...[K] My injuries from
+            fighting [CS:N]Dusknoir[CR] still hurt...
+        """,
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(27);
+    WaitAnimation<actor ACTOR_PLAYER_FUTURE>();
+    MovePositionMark<actor ACTOR_NPC_YAMIRAMI>(1.5, Position<'m0', 22, 28>);
+    Wait(45);
+    bgm_FadeOut(60);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_SURPRISED, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" [CS:N]S-[K]Sableye[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8974);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    message_SetFace(ACTOR_NPC_YAMIRAMI, FACE_SIGH, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             Wheh-heh-heh!?[K]
+            [CS:Y]G-Grovyle[CR]?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_YAMIRAMI>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    MovePositionOffset<actor ACTOR_NPC_YAMIRAMI>(3, -160, 0);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    Destroy<actor ACTOR_NPC_YAMIRAMI>();
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" ...[K]They've found me already...",
+    });
+    message_Talk({
+        english="""
+             I've got to get out of here as
+            fast as I can.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_FOR_A_NEW_LIFE, 0, 256);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(37);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N8>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(1, 1, 0);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Ugh...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_SURPRISED, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" ...! ([CS:N]Dusknoir[CR]!)",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Ugh...[K] [CS:Y]Grovyle[CR]!",
+    });
+    message_Talk({
+        english=" [CS:Y]Grovyle[CR]![K] YOOOOUUUU!!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<performer 0>(1.5, 0, -24);
+    Move2PositionMark<actor ACTOR_NPC_YONOWAARU_N8>(1.5, Position<'m1', 27.5, 30.5>);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(38);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N8>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Ugh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             It looks like our fight left you
+            with some injuries too.
+        """,
+    });
+    message_Talk({
+        english=" Don't push yourself.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Y-you! [CS:Y]Grovyle[CR]![K]
+            Ugh...[K] Augghh...
+        """,
+    });
+    message_Talk({
+        english=" This...[K] This is...[K]the future...?",
+    });
+    message_Talk({
+        english="""
+             I knew I'd come right
+            back here...[K] To this world...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MoveHeight<actor ACTOR_NPC_YONOWAARU_N8>(1, 2);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_YONOWAARU_N8>(1, 0);
+    Wait(2);
+    MoveHeight<actor ACTOR_NPC_YONOWAARU_N8>(1, 2);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_YONOWAARU_N8>(1, 0);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" .........",
+    });
+    message_Talk({
+        english=" ...[K]Heh...[K] Heh heh heh heh heh...",
+    });
+    MoveHeight<actor ACTOR_NPC_YONOWAARU_N8>(1, 2);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_YONOWAARU_N8>(1, 0);
+    Wait(2);
+    MoveHeight<actor ACTOR_NPC_YONOWAARU_N8>(1, 2);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_YONOWAARU_N8>(1, 0);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(22);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N8>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             After all...[K] After all, didn't I
+            lose...[K]to you...
+        """,
+    });
+    message_Talk({
+        english=" [CS:Y]Grovyle[CR] and [c_name:NPC_HERO_FIRST]... I...",
+    });
+    message_Talk({
+        english="""
+             I couldn't get in your way.
+            Heh heh heh...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" .........",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" ...[K]But...[K] Why...",
+    });
+    message_Talk({
+        english="""
+             I don't want to disappear...[K]
+            That's all, I just don't want to disappear...
+        """,
+    });
+    message_Talk({
+        english=" Yet...[K] Why did you...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             You saw the world of the past,
+            didn't you?
+        """,
+    });
+    message_Talk({
+        english="""
+             The beauty of a sunrise.[K] The
+            peacefulness of a gentle breeze.
+        """,
+    });
+    message_Talk({
+        english="""
+             There's no future in this dark
+            world--it's enough to break your heart.
+        """,
+    });
+    message_Talk({
+        english="""
+             I don't want to disappear,
+            either...
+        """,
+    });
+    message_Talk({
+        english="""
+             But if history could be changed...[K]
+            I'm willing to pay that price.
+        """,
+    });
+    message_Talk({
+        english="""
+             Even if we disappeared...[K]
+            It would be for the sake of everyone who
+            lives in the future...
+        """,
+    });
+    message_Talk({
+        english="""
+             Everyone--everything--from
+            now on would be given a gift...[K]of a new life.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" For...[K]a new life...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             According to the planetary
+            investigation team, everyone, except those few
+            whose hearts are dark and shriveled...
+        """,
+    });
+    message_Talk({
+        english=" Everyone was in agreement.",
+    });
+    message_Talk({
+        english="""
+             They all agreed to change this
+            world of darkness.
+        """,
+    });
+    message_Talk({
+        english=" Everyone's ready.",
+    });
+    message_Talk({
+        english="""
+             So do the right thing
+            and give up.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(0.7969, Position<'m2', 28.5, 20.5>);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(32, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Where will you go?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 2, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             The [CS:N]Sableye[CR] found me earlier.[K]
+            While you were still unconscious.
+        """,
+    });
+    message_Talk({
+        english="""
+             Your failure...[K] They'll probably
+            tell Primal [CS:N]Dialga[CR] about it.
+        """,
+    });
+    message_Talk({
+        english="""
+             If that happens, Primal [CS:N]Dialga[CR]
+            will likely go with Plan B.
+        """,
+    });
+    message_Talk({
+        english="""
+             But in order to send a new
+            agent back to the past world...
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Dialga[CR] needs some time
+            to store power.
+        """,
+    });
+    message_Talk({
+        english=" So...[K] I'm going to fight him now.",
+    });
+    message_Talk({
+        english="""
+             I'm going to [CS:P]Temporal Tower[CR].[K]
+            To take on Primal [CS:N]Dialga[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_YONOWAARU_N8>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_NPC_YONOWAARU_N8>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Do you think you can defeat
+            Master [CS:N]Dialga[CR]?
+        """,
+    });
+    message_Talk({
+        english="""
+             You're already wounded from
+            our battle.
+        """,
+    });
+    message_Talk({
+        english="""
+             You'd have to be in perfect
+            shape to even consider such
+            an enormous challenge...
+        """,
+    });
+    message_Talk({
+        english="""
+             You'd never win in the state
+            you're in now.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" I already know I won't win.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" What?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Until [c_name:NPC_HERO_FIRST] and
+            [c_name:NPC_PARTNER_FIRST] change history...
+        """,
+    });
+    message_Talk({
+        english="""
+             Until the effects of changing
+            history start to appear in this dark world...
+        """,
+    });
+    message_Talk({
+        english="""
+             Until then, I want to buy them
+            some time, that's all.[K] So stay out of my way.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(210);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(32, 10, DIR_UP);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(0.7969, Position<'m3', 28.5, 16.5>);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Destroy<actor ACTOR_PLAYER_FUTURE>();
+    Wait(120);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I...[K] I won't let you do that!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(1, 8, -16);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    SetEffect<actor ACTOR_NPC_YONOWAARU_N8>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(38);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N8>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Ugh!",
+    });
+    message_Talk({
+        english="""
+             Blast![K] Still too weakened...
+            Can't move...
+        """,
+    });
+    message_Talk({
+        english="""
+             But--[K][CS:Y]Grovyle[CR] can't just do as he
+            pleases!
+        """,
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(22);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N8>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N8>(0.2969, Position<'m4', 28.5, 16.5>);
+    Wait(90);
+    screen_FadeOut(1, 90);
+    Wait(90);
+    message_Mail({
+        english="""
+            [CN]The Special Episode
+            [CN]"In the Future of Darkness"
+            [CN]stars [CS:Y]Grovyle[CR] as the main character.
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]You will progress through the story with
+            [CN][CS:Y]Grovyle[CR] as the playable character.
+        """,
+    });
+    message_Close();
+    main_EnterDungeon(133, 30);
+    switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

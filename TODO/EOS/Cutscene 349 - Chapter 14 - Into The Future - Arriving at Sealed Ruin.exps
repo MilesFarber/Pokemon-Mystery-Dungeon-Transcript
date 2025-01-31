@@ -1,0 +1,107 @@
+
+def 0 {
+    back_SetGround(LEVEL_D20P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_SEALED_RUIN, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 32, 26.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 27, 26.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    MovePositionMark<performer 0>(1, Position<'m2', 45, 26.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 47, 26.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m4', 43, 26.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Since [CS:N]Grovyle[CR] left, it's been one
+                    straight shot without any branching paths.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Since [CS:N]Grovyle[CR] left, it's been one
+                    straight shot without any branching paths.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Since [CS:N]Grovyle[CR] left, it's been one
+                    straight shot without any branching paths.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So [CS:N]Grovyle[CR] should be
+                    ahead of us.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So [CS:N]Grovyle[CR] should be ahead of
+                    us on this same path.
+                """,
+            }
+        default:
+            {
+                english="""
+                     So [CS:N]Grovyle[CR] should be
+                    ahead of us.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's go, [hero]!",
+            }
+        case 2:
+            {
+                english=" Let's go, [hero]!",
+            }
+        default:
+            {
+                english=" Let's go, [hero]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's catch up to [CS:N]Grovyle[CR]!",
+            }
+        case 2:
+            {
+                english=" Let's catch up to [CS:N]Grovyle[CR]!",
+            }
+        default:
+            {
+                english=" Let's catch up to [CS:N]Grovyle[CR]!",
+            }
+    }
+    message_Close();
+    end;
+}

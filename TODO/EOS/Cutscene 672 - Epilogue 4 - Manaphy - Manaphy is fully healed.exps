@@ -1,0 +1,162 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_AT_THE_END_OF_THE_DAY, 0, 256);
+    message_Narration(30, {
+        english="[CN]Several days later...",
+    });
+    message_Close();
+    back_SetGround(LEVEL_H01P99A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    MovePositionOffset<actor ACTOR_NPC_MANAFI>(1, 48, 0);
+    screen_FadeIn(1, 30);
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_LAUGHING, 3);
+    Turn2Direction<actor ACTOR_NPC_MANAFI>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_MANAFI>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_MANAFI>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_MANAFI>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_MANAFI>(4, 10, DIR_LEFT);
+    MovePositionOffset<actor ACTOR_NPC_MANAFI>(1, -48, 0);
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_NONE, 3);
+    ExecuteCommon<actor ACTOR_NPC_MANAFI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Ha! The little guy's as good
+                    as ever!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Ha! The little guy's as good
+                    as ever!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Ha! The little cutie's as good
+                    as ever!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    ExecuteCommon<actor ACTOR_NPC_MANAFI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    message_SetFace(ACTOR_NPC_MANAFI, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Good! Ever!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Am I glad to see this!",
+            }
+        case 2:
+            {
+                english=" Am I glad to see this!",
+            }
+        default:
+            {
+                english=" Am I glad to see this!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Wait(30);
+    bgm_FadeOut(180);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" ...[hero]...[partner].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    Wait(45);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yup.[K] We know...",
+            }
+        case 2:
+            {
+                english=" Yes.[K] We know...",
+            }
+        default:
+            {
+                english=" Yes.[K] We know...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Manaphy[CR] needs to develop the
+                    ability to survive in the sea...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Manaphy[CR] needs to develop the
+                    ability to survive in the sea...
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Manaphy[CR] needs to develop the
+                    ability to survive in the sea...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Wait(30);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Well, [hero]...",
+            }
+        case 2:
+            {
+                english=" Well, [hero]...",
+            }
+        default:
+            {
+                english=" Well, [hero]...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's take [CS:N]Manaphy[CR] to the sea.",
+            }
+        case 2:
+            {
+                english=" Let's take [CS:N]Manaphy[CR] to the sea.",
+            }
+        default:
+            {
+                english=" Let's take [CS:N]Manaphy[CR] to the sea.",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 60);
+    end;
+}

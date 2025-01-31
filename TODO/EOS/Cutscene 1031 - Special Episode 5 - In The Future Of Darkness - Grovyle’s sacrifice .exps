@@ -1,0 +1,1130 @@
+
+def 0 {
+    sound_Stop();
+    if ( not debug ) {
+        @label_0;
+        message_Narration(30, {
+            english="""
+                [CN][CS:Y]Grovyle[CR], who came from the future to
+                [CN]prevent the planet's paralysis...
+            """,
+        });
+        message_Narration(30, {
+            english="[CN]Collected the Time Gears...",
+        });
+        message_Narration(30, {
+            english="""
+                [CN]And together with [c_name:NPC_HERO_FIRST]
+                [CN]and [c_name:NPC_PARTNER_FIRST]...
+            """,
+        });
+        message_Narration(30, {
+            english="""
+                [CN]Made his way to [CS:N]Dialga[CR]'s
+                [CN][CS:P]Temporal Tower[CR].
+            """,
+        });
+        message_Narration(30, {
+            english="[CN]However...",
+        });
+        message_Close();
+        screen_FadeOutAll(1, 0);
+        screen_FadeIn(1, 0);
+        back_SetGround(LEVEL_D28P34A);
+        supervision_Acting(0);
+        camera_SetMyself<performer 0>();
+        Wait(1);
+        SetPositionMark<performer 0>(Position<'m0', 49.5, 31>);
+        SetPositionMark<actor ACTOR_NPC_HERO_FIRST>(Position<'m1', 49.5, 33>);
+        SetPositionMark<actor ACTOR_NPC_JUPUTORU>(Position<'m2', 44.5, 28.5>);
+        SetDirection<actor ACTOR_NPC_JUPUTORU>(DIR_DOWNRIGHT);
+        SetAnimation<actor ACTOR_NPC_HERO_FIRST>(68);
+        WaitAnimation<actor ACTOR_NPC_HERO_FIRST>();
+        WaitExecuteLives(ACTOR_NPC_HERO_FIRST);
+        SetEffect<performer 3>(653, 3);
+        screen_FadeInAll(1, 30);
+        Wait(30);
+        message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+        message_Talk({
+            english="""
+                 I won't...[K] You'll never change
+                history!
+            """,
+        });
+        message_Close();
+        SetAnimation<actor ACTOR_NPC_YONOWAARU>(19);
+        Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_UPRIGHT);
+        WaitAnimation<actor ACTOR_NPC_YONOWAARU>();
+        WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+        MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(2.5, 32, 0);
+        Wait(5);
+        se_Play(7690);
+        screen_WhiteOutAll(1, 5);
+        SetEffect<performer 3>(EFFECT_NONE, 3);
+        screen_WhiteOut(1, 0);
+        screen_FadeInAll(1, 0);
+        message_SetFace(ACTOR_NPC_HERO_FIRST, FACE_SHOUTING, FACE_POS_BOTTOM_L_FACEINW);
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(Waah!)",
+                }
+            default:
+                {
+                    english="(Waah!)",
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetPositionMark<actor ACTOR_NPC_JUPUTORU>(Position<'m3', 49.5, 28.5>);
+        SetDirection<actor ACTOR_NPC_JUPUTORU>(DIR_UP);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(29);
+        SetAnimation<actor ACTOR_NPC_YONOWAARU>(2);
+        screen_WhiteOutAll(1, 0);
+        Wait(1);
+        screen_FadeIn(1, 0);
+        SetEffect<performer 3>(653, 3);
+        screen_FadeInAll(1, 30);
+        Wait(60);
+        SetAnimation<actor ACTOR_NPC_HERO_FIRST>(2);
+        Wait(15);
+        Turn2Direction<actor ACTOR_NPC_HERO_FIRST>(4, 10, DIR_UP);
+        WaitExecuteLives(ACTOR_NPC_HERO_FIRST);
+        SlidePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, 1, 0);
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        Wait(2);
+        SlidePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, -1, 0);
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        Wait(2);
+        SlidePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, 1, 0);
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        Wait(2);
+        SlidePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, -1, 0);
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        message_SetFace(ACTOR_PLAYER_FUTURE, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+        message_Talk({
+            english=" Urrgggghhh!",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        se_Play(8968);
+        SetEffect<actor ACTOR_NPC_HERO_FIRST>(EFFECT_SHOCKED, 3);
+        WaitEffect<actor ACTOR_NPC_HERO_FIRST>();
+        message_SetFace(ACTOR_NPC_HERO_FIRST, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="([CS:Y]Grovyle[CR]!)",
+                }
+            default:
+                {
+                    english="([CS:Y]Grovyle[CR]!)",
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+        message_Talk({
+            english="""
+                 So you shielded [c_name:NPC_HERO_FIRST],
+                [CS:Y]Grovyle[CR]?!
+            """,
+        });
+        message_Talk({
+            english=" That's taken a heavy toll on you!",
+        });
+        message_Talk({
+            english="""
+                 Very well![K] You're going
+                down first!
+            """,
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        se_Play(10497);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(31);
+        WaitAnimation<actor ACTOR_NPC_JUPUTORU>();
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(2);
+        Turn2Direction<actor ACTOR_NPC_JUPUTORU>(8, 10, DIR_UP);
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        Wait(45);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(9);
+        message_SetFace(ACTOR_PLAYER_FUTURE, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+        message_Talk({
+            english=" Uwroh...[K] Wrooooooooh!",
+        });
+        message_Close();
+        se_Play(7686);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(2);
+        MovePositionMark<actor ACTOR_NPC_JUPUTORU>(2.5, Position<'m4', 49.5, 25.5>);
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_SHOCKED, 3);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(52);
+        SetAnimation<actor ACTOR_NPC_YONOWAARU>(55);
+        Wait(15);
+        MovePositionMark<performer 0>(0.2969, Position<'m5', 49.5, 26.5>);
+        SlidePositionMark<actor ACTOR_NPC_YONOWAARU>(0.2969, Position<'m6', 49.5, 22.5>);
+        MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.2969, Position<'m7', 49.5, 22.5>);
+        Wait(45);
+        MovePositionMark<actor ACTOR_NPC_HERO_FIRST>(1, Position<'m8', 49.5, 28.5>);
+        WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(32);
+        bgm_PlayFadeIn(BGM_THROUGH_THE_SEA_OF_TIME, 0, 256);
+        SetEffect<actor ACTOR_NPC_YONOWAARU>(EFFECT_SHOCKED, 3);
+        WaitEffect<actor ACTOR_NPC_YONOWAARU>();
+        WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+        message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+        message_Talk({
+            english=" Wh-what are you doing?!",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_SetFace(ACTOR_PLAYER_FUTURE, FACE_PAIN, FACE_POS_TOP_L_CENTER);
+        message_Talk({
+            english=" Urrggh...[K] [CS:N]Dusknoir[CR]!",
+        });
+        message_Talk({
+            english=" I'm...[K] I'm taking you with me...",
+        });
+        message_Talk({
+            english=" We're going back to the future!",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        se_Play(8968);
+        SetEffect<actor ACTOR_NPC_YONOWAARU>(EFFECT_SHOCKED, 3);
+        message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+        message_Talk({
+            english=" Wha...",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetEffect<actor ACTOR_NPC_HERO_FIRST>(EFFECT_SHOCKED, 3);
+        message_SetFace(ACTOR_NPC_HERO_FIRST, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(What?!)",
+                }
+            default:
+                {
+                    english="(What?!)",
+                }
+        }
+        message_Close();
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(33);
+        WaitAnimation<actor ACTOR_NPC_JUPUTORU>();
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+        message_Talk({
+            english="""
+                 [c_name:NPC_HERO_FIRST]![K] It's up to
+                you now!
+            """,
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        se_Play(7687);
+        supervision_Acting(3);
+        SetAnimation<object OBJECT_D28P34A2_75>(21);
+        Slide2PositionMark<object OBJECT_D28P34A2_75>(1.5, Position<'m9', 46.5, 23.5>);
+        Wait(3);
+        supervision_Acting(4);
+        SetAnimation<object OBJECT_D28P34A2_76>(20);
+        Slide2PositionMark<object OBJECT_D28P34A2_76>(1.5, Position<'m10', 49.5, 24.5>);
+        Wait(4);
+        supervision_Acting(5);
+        SetAnimation<object OBJECT_D28P34A2_77>(21);
+        Slide2PositionMark<object OBJECT_D28P34A2_77>(1.5, Position<'m11', 52.5, 23.5>);
+        Wait(30);
+        se_Play(8964);
+        SetEffect<actor ACTOR_NPC_YONOWAARU>(EFFECT_EXCLAMATION_MARK, 3);
+        WaitEffect<actor ACTOR_NPC_YONOWAARU>();
+        WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+        message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+        message_Talk({
+            english=" Gah! Those are...!",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetEffect<actor ACTOR_NPC_HERO_FIRST>(EFFECT_EXCLAMATION_MARK, 3);
+        WaitEffect<actor ACTOR_NPC_HERO_FIRST>();
+        WaitExecuteLives(ACTOR_NPC_HERO_FIRST);
+        message_SetFace(ACTOR_NPC_HERO_FIRST, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(Time Gears!)",
+                }
+            default:
+                {
+                    english="(Time Gears!)",
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_SetActor(ACTOR_NPC_PARTNER_FIRST);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         All right, team![K] The Rainbow
+                        Stoneship's set to go!
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         OK, team![K] The Rainbow
+                        Stoneship's set to go!
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         OK, team![K] The Rainbow
+                        Stoneship's set to go!
+                    """,
+                }
+        }
+        message_Close();
+        Turn2Direction<actor ACTOR_NPC_HERO_FIRST>(4, 10, DIR_LEFT);
+        MovePositionMark<actor ACTOR_NPC_PARTNER_FIRST>(1.5, Position<'m12', 39.5, 28.5>);
+        WaitExecuteLives(ACTOR_NPC_PARTNER_FIRST);
+        Turn2Direction<actor ACTOR_NPC_PARTNER_FIRST>(4, 10, DIR_UPRIGHT);
+        WaitExecuteLives(ACTOR_NPC_PARTNER_FIRST);
+        Wait(10);
+        ExecuteCommon<actor ACTOR_NPC_PARTNER_FIRST>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+        WaitExecuteLives(ACTOR_NPC_PARTNER_FIRST);
+        message_SetFace(ACTOR_NPC_PARTNER_FIRST, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Wha...[K]what's going on?!",
+                }
+            case 2:
+                {
+                    english=" Wha...[K]what's happening?!",
+                }
+            default:
+                {
+                    english=" Wha...[K]what's happening?!",
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_LC_FACEOUTW);
+        message_Talk({
+            english=" [c_name:NPC_PARTNER_FIRST]![K] This is it for me!",
+        });
+        message_Talk({
+            english="""
+                 I'm taking [CS:N]Dusknoir[CR]...[K]back to
+                the future!
+            """,
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetEffect<actor ACTOR_NPC_PARTNER_FIRST>(EFFECT_SHOCKED_MIRRORED, 3);
+        message_SetFace(ACTOR_NPC_PARTNER_FIRST, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Huh?![K] Wh-what?!",
+                }
+            case 2:
+                {
+                    english=" Huh?![K] Wh-what?!",
+                }
+            default:
+                {
+                    english=" Huh?![K] Wh-what?!",
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        Turn2DirectionLives<actor ACTOR_NPC_HERO_FIRST>(4, 10, ACTOR_NPC_JUPUTORU);
+        message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_LC_FACEOUTW);
+        message_Talk({
+            english="""
+                 I can never come back
+                here again.
+            """,
+        });
+        message_Talk({
+            english="""
+                 Watch [c_name:NPC_HERO_FIRST]'s back...[K]
+                Promise me!
+            """,
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetEffect<actor ACTOR_NPC_PARTNER_FIRST>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+        message_SetFace(ACTOR_NPC_PARTNER_FIRST, FACE_TEARY_EYED, FACE_POS_TOP_L_FACEINW);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" B-but...!",
+                }
+            case 2:
+                {
+                    english=" B-but...!",
+                }
+            default:
+                {
+                    english=" B-but...!",
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         Take your place, [CS:Y]Grovyle[CR]...?[K]
+                        I can't!
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         Take your place, [CS:Y]Grovyle[CR]...?[K]
+                        I can't!
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         Take your place, [CS:Y]Grovyle[CR]...?[K]
+                        I can't!
+                    """,
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_LC_FACEOUTW);
+        message_Talk({
+            english="""
+                 You must and you will.[K] Because
+                you can, [c_name:NPC_PARTNER_FIRST].
+            """,
+        });
+        message_Talk({
+            english="""
+                 You two are...[K]the greatest of
+                combinations.
+            """,
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetEffect<actor ACTOR_NPC_YONOWAARU>(EFFECT_SHOCKED, 3);
+        message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+        message_Talk({
+            english=" Gwoh! Unhand me![K] Release me!",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(32);
+        message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+        message_Talk({
+            english=" We're almost there![K] Quiet!",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        Wait(10);
+        message_Talk({
+            english=" ...[c_name:NPC_HERO_FIRST]!",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetEffect<actor ACTOR_NPC_HERO_FIRST>(EFFECT_EXCLAMATION_MARK, 3);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(33);
+        WaitAnimation<actor ACTOR_NPC_JUPUTORU>();
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        message_Talk({
+            english=" Take care, [c_name:NPC_HERO_FIRST].",
+        });
+        message_Talk({
+            english=" I was lucky to have known you.",
+        });
+        message_Talk({
+            english="""
+                 Though the parting hurts...[K]
+                The rest is in your hands!
+            """,
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetEffect<actor ACTOR_NPC_HERO_FIRST>(EFFECT_EXCLAMATION_MARK, 3);
+        message_SetFace(ACTOR_NPC_HERO_FIRST, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="([CS:Y]Grovyle[CR]!)",
+                }
+            default:
+                {
+                    english="([CS:Y]Grovyle[CR]!)",
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(32);
+        WaitAnimation<actor ACTOR_NPC_JUPUTORU>();
+        Wait(15);
+        message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+        message_Talk({
+            english=" Sorry for the holdup, [CS:N]Dusknoir[CR]!",
+        });
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        se_Play(7686);
+        SlidePositionOffset<actor ACTOR_NPC_YONOWAARU>(1, 0, -4);
+        SlidePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, 0, -4);
+        SetEffect<actor ACTOR_NPC_YONOWAARU>(EFFECT_SHOCKED, 3);
+        MovePositionOffset<actor ACTOR_NPC_HERO_FIRST>(0.5, 0, -8);
+        MovePositionOffset<actor ACTOR_NPC_PARTNER_FIRST>(0.5, 16, -16);
+        Wait(120);
+        SetAnimation<actor ACTOR_NPC_JUPUTORU>(52);
+        SlidePositionOffset<actor ACTOR_NPC_YONOWAARU>(1.5, 0, -12);
+        MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(1.5, 0, -12);
+        WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+        se_Play(7183);
+        Destroy<actor ACTOR_NPC_YONOWAARU>();
+        WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+        Destroy<actor ACTOR_NPC_JUPUTORU>();
+        bgm_FadeOut(150);
+        message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+        message_Talk({
+            english=" Gwaaaaaaah!",
+        });
+        Wait(80);
+        message_CloseEnforce();
+        Wait(60);
+        se_Play(7688);
+        SetAnimation<object OBJECT_T01P01A5_178>(18);
+        WaitAnimation<object OBJECT_T01P01A5_178>();
+        WaitExecuteObject(OBJECT_T01P01A5_178);
+        Destroy<object OBJECT_T01P01A5_178>();
+        Wait(90);
+        screen_FadeOutAll(1, 30);
+        CallCommon(CORO_FADE_OUT_ALL_AFTER);
+        Wait(30);
+        bgm_PlayFadeIn(BGM_IN_THE_HANDS_OF_FATE, 0, 256);
+        message_Narration(30, {
+            english="[CN]After entrusting his mission to his friends...",
+        });
+        message_Narration(30, {
+            english="""
+                [CN][CS:Y]Grovyle[CR] returned to
+                [CN]the future.
+            """,
+        });
+        message_Close();
+        SetEffect<performer 3>(653, 3);
+        CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+        screen_FadeInAll(1, 30);
+        Wait(30);
+        message_SetFace(ACTOR_NPC_PARTNER_FIRST, FACE_TEARY_EYED, FACE_POS_TOP_L_FACEINW);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Ugh... [CS:Y]Grovyle[CR]...[K] Why...?",
+                }
+            case 2:
+                {
+                    english=" Ugh... [CS:Y]Grovyle[CR]...[K] Why...?",
+                }
+            default:
+                {
+                    english=" Ugh... [CS:Y]Grovyle[CR]...[K] Why...?",
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_SetFace(ACTOR_NPC_HERO_FIRST, FACE_SAD, FACE_POS_BOTTOM_R_FACEINW);
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="([CS:Y]Grovyle[CR]...)",
+                }
+            default:
+                {
+                    english="([CS:Y]Grovyle[CR]...)",
+                }
+        }
+        message_Close();
+        screen_FadeOutAll(1, 30);
+        CallCommon(CORO_FADE_OUT_ALL_AFTER);
+        Wait(30);
+        message_Narration(30, {
+            english="[CN]Yet [c_name:NPC_HERO_FIRST] and [c_name:NPC_PARTNER_FIRST] were...",
+        });
+        message_Narration(30, {
+            english="[CN]Desperately trying to contain their sorrow...",
+        });
+        message_Close();
+        SetPositionMark<performer 0>(Position<'m13', 49.5, 26.5>);
+        SetPositionMark<actor ACTOR_NPC_HERO_FIRST>(Position<'m14', 49.5, 27.5>);
+        SetPositionMark<actor ACTOR_NPC_PARTNER_FIRST>(Position<'m15', 52.5, 22.5>);
+        SetDirection<actor ACTOR_NPC_HERO_FIRST>(DIR_UPRIGHT);
+        SetDirection<actor ACTOR_NPC_PARTNER_FIRST>(DIR_DOWNLEFT);
+        Destroy<object OBJECT_D28P34A2_75>();
+        Destroy<object OBJECT_D28P34A2_76>();
+        Destroy<object OBJECT_D28P34A2_77>();
+        SetEffect<performer 3>(653, 3);
+        CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+        screen_FadeInAll(1, 30);
+        Wait(30);
+        MovePositionMark<actor ACTOR_NPC_PARTNER_FIRST>(0.7969, Position<'m16', 52.5, 27.5>);
+        Turn2Direction<actor ACTOR_NPC_HERO_FIRST>(32, 10, DIR_RIGHT);
+        WaitExecuteLives(ACTOR_NPC_PARTNER_FIRST);
+        Turn2DirectionLives<actor ACTOR_NPC_PARTNER_FIRST>(4, 10, ACTOR_NPC_HERO_FIRST);
+        WaitExecuteLives(ACTOR_NPC_PARTNER_FIRST);
+        MovePositionMark<performer 0>(0.5, Position<'m17', 51.5, 26.5>);
+        WaitExecutePerformer(0);
+        Wait(30);
+        message_SetFace(ACTOR_NPC_PARTNER_FIRST, FACE_DETERMINED, FACE_POS_BOTTOM_R_FACEINW);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Hey, [c_name:NPC_HERO_FIRST]!",
+                }
+            case 2:
+                {
+                    english=" Hey, [c_name:NPC_HERO_FIRST]!",
+                }
+            default:
+                {
+                    english=" Hey, [c_name:NPC_HERO_FIRST]!",
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         We have to do this for [CS:Y]Grovyle[CR]'s
+                        sake![K] Let's go to [CS:P]Temporal Tower[CR]!
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         We have to do this for [CS:Y]Grovyle[CR]'s
+                        sake![K] Let's go to [CS:P]Temporal Tower[CR]!
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         We have to do this for [CS:Y]Grovyle[CR]'s
+                        sake![K] Let's go to [CS:P]Temporal Tower[CR]!
+                    """,
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetAnimation<actor ACTOR_NPC_HERO_FIRST>(71);
+        WaitAnimation<actor ACTOR_NPC_HERO_FIRST>();
+        WaitExecuteLives(ACTOR_NPC_HERO_FIRST);
+        SetAnimation<actor ACTOR_NPC_HERO_FIRST>(71);
+        WaitAnimation<actor ACTOR_NPC_HERO_FIRST>();
+        WaitExecuteLives(ACTOR_NPC_HERO_FIRST);
+        SetAnimation<actor ACTOR_NPC_HERO_FIRST>(2);
+        Wait(45);
+        screen_FadeOutAll(1, 90);
+        CallCommon(CORO_FADE_OUT_ALL_AFTER);
+        Wait(60);
+        message_Narration(30, {
+            english="[CN]Filled with that sentiment...",
+        });
+        message_Narration(30, {
+            english="[CN]They set off on a final adventure...",
+        });
+        message_Narration(30, {
+            english="[CN]But then...",
+        });
+        message_Narration(30, {
+            english="""
+                [CN]After having returned to the future
+                [CN]with [CS:N]Dusknoir[CR]...
+            """,
+        });
+        message_Narration(30, {
+            english="[CN][CS:Y]Grovyle[CR]...",
+        });
+        message_Close();
+        bgm_FadeOut(180);
+        Wait(180);
+        end;
+    } else {
+        message_Notice({
+            english="[M:D2][CS:C]Start from where?[CR]",
+        });
+        switch ( message_SwitchMenu(0, 1) ) {
+            case menu({
+                english="[M:D2]Beginning",
+            }):
+            default:
+                message_Close();
+                jump @label_0;
+            case menu({
+                english="[M:D2]BarrenValley1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 0];
+                $SIDE08_BOSS2ND[0] = 0;
+                main_EnterGround(LEVEL_D46P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]BarrenValley2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 1];
+                $SIDE08_BOSS2ND[0] = 0;
+                main_EnterGround(LEVEL_D46P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]BarrenValleyBoss2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 3];
+                $SIDE08_BOSS2ND[0] = 1;
+                main_EnterGround(LEVEL_D46P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]BarrenValleyWaypoint",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 2];
+                $SIDE08_BOSS2ND[0] = 0;
+                main_EnterGround(LEVEL_D46P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]DarkWasteland1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 4];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D47P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]DarkWasteland2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 5];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D47P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TemporalTower1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 5];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D48P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TemporalTower2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 6];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D48P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TemporalTower2-1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 7];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterDungeon(137, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D48P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TemporalTower2-2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 8];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterDungeon(137, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D48P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]DuskForest1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 8];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D22P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]DuskForest2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 9];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D22P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]DuskForestBoss2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 10];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D22P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SpacialCliffs1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 10];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D50P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SpacialCliffs2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[47, 11];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D50P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]DarkIceMountain1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 0];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D51P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]DarkIceMountain2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 1];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D51P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]DarkIceMountain2-1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 2];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterDungeon(142, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D51P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]DarkIceMountain2-2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 3];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterDungeon(142, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D51P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]DarkIceMountain2-Boss2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 4];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterDungeon(142, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D51P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]IcicleForest1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 4];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D52P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]IcicleForest2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 5];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D52P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]VastIceMountain1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 5];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                main_EnterGround(LEVEL_D53P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]VastIceMountain2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 6];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                main_EnterGround(LEVEL_D53P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]VastIceMountainBoss2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 9];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                main_EnterGround(LEVEL_D53P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]VastIceMountain2-1stTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 7];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                main_EnterDungeon(146, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D53P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]VastIceMountain2-2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 8];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                main_EnterDungeon(146, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D53P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]VastIceMountain2-Boss2ndTry",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[48, 9];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                main_EnterDungeon(146, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D53P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-01",
+            }):
+                $SCENARIO_SIDE = scn[47, 4];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D47P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-02",
+            }):
+                $SCENARIO_SIDE = scn[47, 5];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D48P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-03",
+            }):
+                $SCENARIO_SIDE = scn[47, 6];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D48P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-04",
+            }):
+                $SCENARIO_SIDE = scn[47, 7];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterDungeon(137, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D48P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-05",
+            }):
+                $SCENARIO_SIDE = scn[47, 8];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterDungeon(137, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D48P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-06",
+            }):
+                $SCENARIO_SIDE = scn[47, 8];
+                message_Close();
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D22P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-07",
+            }):
+                $SCENARIO_SIDE = scn[47, 10];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D22P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-08",
+            }):
+                $SCENARIO_SIDE = scn[47, 10];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D50P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-09",
+            }):
+                $SCENARIO_SIDE = scn[48, 0];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D51P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-10",
+            }):
+                $SCENARIO_SIDE = scn[48, 1];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D51P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-11",
+            }):
+                $SCENARIO_SIDE = scn[48, 2];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterDungeon(142, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D51P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-12",
+            }):
+                $SCENARIO_SIDE = scn[48, 3];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterDungeon(142, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D51P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-13",
+            }):
+                $SCENARIO_SIDE = scn[48, 4];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterDungeon(142, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D51P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-14",
+            }):
+                $SCENARIO_SIDE = scn[48, 4];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterDungeon(142, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D51P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-15",
+            }):
+                $SCENARIO_SIDE = scn[48, 4];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D52P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-16",
+            }):
+                $SCENARIO_SIDE = scn[48, 5];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D52P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-17",
+            }):
+                $SCENARIO_SIDE = scn[48, 5];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D53P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-18",
+            }):
+                $SCENARIO_SIDE = scn[48, 6];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D53P11A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-19",
+            }):
+                $SCENARIO_SIDE = scn[48, 7];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                message_Close();
+                main_EnterDungeon(146, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D53P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-20",
+            }):
+                $SCENARIO_SIDE = scn[48, 9];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                message_Close();
+                main_EnterDungeon(146, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D53P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N08-21",
+            }):
+                $SCENARIO_SIDE = scn[48, 9];
+                switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                switch ( ProcessSpecial(4, 0, 0) ) { }
+                message_Close();
+                main_EnterGround(LEVEL_D53P11A, 30);
+                hold;
+        }
+    }
+}

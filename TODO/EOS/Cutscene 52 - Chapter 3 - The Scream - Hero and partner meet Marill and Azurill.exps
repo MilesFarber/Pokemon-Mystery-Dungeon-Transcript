@@ -1,0 +1,327 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    $SCENARIO_MAIN = scn[4, 2];
+    SetAnimation<actor ACTOR_NPC_KAKUREON1>(2);
+    SetAnimation<actor ACTOR_NPC_KAKUREON2>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    supervision_Acting(1);
+    Wait(1);
+    Move2PositionMark<actor ACTOR_NPC_MARIRU>(1, Position<'m0', 43.5, 24.5>);
+    Move2PositionMark<actor ACTOR_NPC_RURIRI>(1, Position<'m1', 44.5, 26.5>);
+    bgm_FadeOut(120);
+    message_SetActor(ACTOR_NPC_MARIRU);
+    message_Talk({
+        english=" Misters [CS:N]Kecleon[CR]!",
+    });
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON1>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(8, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    Wait(90);
+    message_CloseEnforce();
+    SetPositionLives<performer 0>(0);
+    camera_SetMyself<performer 0>();
+    Move2PositionMark<performer 0>(1, Position<'m2', 42, 24.5>);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 39, 24.5>);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m4', 39, 26.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(8, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_MARIRU);
+    Turn2Direction<actor ACTOR_NPC_MARIRU>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    Turn2Direction<actor ACTOR_NPC_RURIRI>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Ah! Little [CS:N]Marill[CR] and [CS:N]Azurill[CR]![K]
+            Welcome, my young friends! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_NONE, 3);
+    ExecuteCommon<actor ACTOR_NPC_RURIRI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Hello. May I buy an [CS:I]Apple[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Oh, most certainly!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_Mail({
+        english="""
+            [CN][CS:N]Marill[CR] and [CS:N]Azurill[CR] bought
+            [CN]an [CS:I]Apple[CR] at [CS:K]Kecleon[CR] Market.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_MARIRU>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_JOYOUS, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(-3, -1);
+    message_Talk({
+        english=" Thank you, Misters [CS:N]Kecleon[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_MARIRU>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             No, thank you, my young friends!
+            You are to be admired! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON1>(16, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(16, 10, DIR_RIGHT);
+    Move2PositionMark<actor ACTOR_NPC_MARIRU>(1, Position<'m5', 66, 24.5>);
+    Wait(20);
+    Move2PositionMark<actor ACTOR_NPC_RURIRI>(1, Position<'m6', 66, 26.5>);
+    WaitExecuteLives(ACTOR_NPC_MARIRU);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KAKUREON1);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_KAKUREON2);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Wait(5);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             You see, those delightful
+            children are brothers.
+        """,
+    });
+    message_Talk({
+        english="""
+             Lately, their poor mother has
+            fallen sick. So those youngsters come and
+            do the shopping for her.
+        """,
+    });
+    message_Talk({
+        english="""
+             It's quite remarkable. Though
+            very young, they've stepped up and
+            taken charge. ♪
+        """,
+    });
+    message_Close();
+    Move2PositionMark<actor ACTOR_NPC_MARIRU>(3, Position<'m7', 43.5, 24.5>);
+    Wait(20);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(1024);
+    Move2PositionMark<actor ACTOR_NPC_RURIRI>(3, Position<'m8', 44.5, 26.5>);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_EXCLAMATION_MARK, 3);
+    message_SetActor(ACTOR_NPC_MARIRU);
+    message_Talk({
+        english=" Misters [CS:N]Kecleon[CR]!",
+    });
+    Turn2Direction<actor ACTOR_NPC_KAKUREON1>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_MARIRU);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_MARIRU>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    Turn2Direction<actor ACTOR_NPC_RURIRI>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KAKUREON1>();
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Oh? What's the hurry? What
+            makes you return in such a rush?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_RURIRI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" There was an extra [CS:I]Apple[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(-3, -1);
+    message_Talk({
+        english=" We didn't pay for this many.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Oh, yes... That, young friends,
+            is a gift from me and my brother.
+        """,
+    });
+    message_Talk({
+        english="""
+             Please, share it among
+            yourselves and do enjoy.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_MARIRU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_MARIRU>();
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(-3, -1);
+    message_Talk({
+        english=" Really?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_RURIRI>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_JOYOUS, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Yay! Thank you, Mr. [CS:N]Kecleon[CR]
+            and Mr. [CS:N]Kecleon[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_RURIRI>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Oh, not to worry, my friends.
+            Do take care on your way home. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(4, 10, DIR_DOWNRIGHT);
+    MovePositionMark<actor ACTOR_NPC_MARIRU>(1, Position<'m9', 61, 24.5>);
+    Turn2Direction<actor ACTOR_NPC_RURIRI>(4, 10, DIR_RIGHT);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(768);
+    MovePositionMark<actor ACTOR_NPC_RURIRI>(1, Position<'m10', 52, 26.5>);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    bgm_FadeOut(10);
+    se_Play(6412);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(22);
+    WaitAnimation<actor ACTOR_NPC_RURIRI>();
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_TEARY_EYED, FACE_POS_BOTTOM_RC_FACEOUTW);
+    message_FacePositionOffset(2, -3);
+    message_Talk({
+        english=" Yowch!",
+    });
+    se_Play(6413);
+    supervision_Acting(2);
+    SlidePositionMark<object OBJECT_P03P02A1_128>(1, Position<'m11', 42, 24.5>);
+    SetAnimation<object OBJECT_P03P02A1_128>(18);
+    WaitAnimation<object OBJECT_P03P02A1_128>();
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON1>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(4, 10, DIR_DOWN);
+    WaitExecuteObject(OBJECT_P03P02A1_128);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, 20, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    se_Play(8710);
+    Destroy<object OBJECT_P03P02A1_128>();
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(2);
+    Move2PositionOffset<actor ACTOR_NPC_RURIRI>(1.5, -8, -16);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    MovePositionMark<actor ACTOR_NPC_RURIRI>(1.5, Position<'m12', 45, 24.5>);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    Wait(20);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(23);
+    WaitAnimation<actor ACTOR_NPC_RURIRI>();
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(2);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             W-we're sorry to bother you.
+            Thank you so much.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m13', 43, 24.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_Mail({
+        english="""
+            [CN][hero] gave the [CS:I]Apple[CR]
+            [CN]back to [CS:N]Azurill[CR].
+        """,
+    });
+    message_Mail({
+        english="""
+            
+            [CN]But then suddenly...
+        """,
+    });
+    message_Close();
+    se_Play(5133);
+    screen_FlushOut(1, 4, 4, 128, 96, 64);
+    screen_FlushIn(1, 8, 4, 128, 96, 64);
+    screen_FlushOut(1, 8, 4, 128, 96, 64);
+    screen_FlushIn(1, 12, 4, 128, 96, 64);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_PAIN, FACE_POS_BOTTOM_L_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Huh? What was that?)",
+            }
+        default:
+            {
+                english="(Huh? What was that?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5133);
+    screen_FlushOut(1, 4, 4, 128, 96, 64);
+    screen_FlushIn(1, 8, 4, 128, 96, 64);
+    screen_FlushOut(1, 8, 4, 128, 96, 64);
+    screen_FlushIn(1, 12, 4, 128, 96, 64);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    Wait(30);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(D-dizzy? Or am I...?)",
+            }
+        default:
+            {
+                english="(D-dizzy? Or am I...?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5133);
+    screen_FlushOut(1, 4, 4, 128, 96, 64);
+    screen_FlushIn(1, 8, 4, 128, 96, 64);
+    screen_FlushOut(1, 8, 4, 128, 96, 64);
+    screen_FlushIn(1, 12, 4, 128, 96, 64);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    screen_FadeOutAll(1, 5);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

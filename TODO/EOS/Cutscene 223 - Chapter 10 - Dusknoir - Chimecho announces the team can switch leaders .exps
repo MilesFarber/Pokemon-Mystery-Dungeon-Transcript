@@ -1,0 +1,194 @@
+
+def 0 {
+    back_SetGround(LEVEL_G01P03A);
+    supervision_LoadStation(LEVEL_G01P03A, 'US01');
+    supervision_Station(10);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" So what is this special service?",
+            }
+        case 2:
+            {
+                english=" So what is this special service?",
+            }
+        default:
+            {
+                english="""
+                     And what might this special
+                    service be?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Well...it's special!",
+    });
+    message_Talk({
+        english="""
+             You can now change your leader
+            before your team goes to a dungeon!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The team leader?[K] We can change
+                    the leader before going into a dungeon?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The team leader?[K] We can change
+                    the leader before going into a dungeon?
+                """,
+            }
+        default:
+            {
+                english="""
+                     The team leader?[K] We can change
+                    the leader before going into a dungeon?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Yes!",
+    });
+    message_Talk({
+        english="""
+             Up to now, [hero] was
+            always the team leader on explorations, right?
+        """,
+    });
+    message_Talk({
+        english="""
+             Now, because the guild has
+            given your team affiliate status...
+        """,
+    });
+    message_Talk({
+        english="""
+             You can make any member of
+            Team [team:] the leader before going into
+            a dungeon![K] In other words...
+        """,
+    });
+    message_Talk({
+        english="""
+             You can assemble a dungeon
+            team from only Team [team:] recruits!
+        """,
+    });
+    message_Talk({
+        english="""
+             An exploration team made that
+            way will still be officially recognized!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, cool![K] So that means...",
+            }
+        case 2:
+            {
+                english=" Oh, I get it![K] So that means...",
+            }
+        default:
+            {
+                english=" Oh, I get it![K] So that means...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If we plan to explore a dungeon
+                    where our current team will suffer type-based
+                    disadvantages...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If we plan to explore a dungeon
+                    where our current team will suffer type-based
+                    disadvantages...
+                """,
+            }
+        default:
+            {
+                english="""
+                     If we plan to explore a dungeon
+                    where our current team will suffer type-based
+                    disadvantages...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We can build a totally different
+                    team, even changing the team leader, so that
+                    we can gain type advantages instead!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We can build a totally different
+                    team, even changing the team leader, so that
+                    we can gain type advantages instead!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We can build a totally different
+                    team, even changing the team leader, so that
+                    we can gain type advantages instead!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Absolutely!",
+    });
+    message_Talk({
+        english="""
+             Of course, there are dungeons
+            that only [hero] and [partner]
+            may enter.
+        """,
+    });
+    message_Talk({
+        english="""
+             I hope you make use of my new
+            service...[K] Anyway, good luck with your
+            exploration-team work!
+        """,
+    });
+    message_Close();
+    end;
+}

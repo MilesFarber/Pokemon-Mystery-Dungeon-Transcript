@@ -1,0 +1,105 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 28];
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             We're almost to the 9th Station
+            Clearing! Come on!
+        """,
+    });
+    message_Close();
+    back_SetGround(LEVEL_D73P29A);
+    supervision_LoadStation(LEVEL_D73P29A, 'US31');
+    supervision_Station(20);
+    supervision_StationCommon(9);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_SHEIMI>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC1>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC2>();
+    SetAnimation<actor ACTOR_NPC_SHEIMI>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC1>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC2>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_SKY_PEAK_FINAL_PASS, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_SHEIMI>(1, Position<'m0', 28.5, 32.5>);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m1', 28.5, 37.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m2', 31.5, 36.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m3', 25.5, 36.5>);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    Wait(10);
+    Turn2DirectionLives<actor ACTOR_NPC_SHEIMI>(4, 10, ACTOR_PLAYER_APPOINT);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Phew...
+            Here we are, the 9th Station Clearing.
+        """,
+    });
+    message_Talk({
+        english="""
+             I think Team [CS:X]Frontier[CR] already
+            went on ahead.
+        """,
+    });
+    message_Close();
+    Wait(30);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_SHEIMI>();
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    ExecuteCommon<actor ACTOR_NPC_SHEIMI>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_WORRIED, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" .........",
+    });
+    message_Talk({
+        english="""
+             Something seems different from
+            the last time I was here...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_NPC_SHEIMI>(4, 10, ACTOR_PLAYER_APPOINT);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_SHEIMI>();
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Oh! Sorry...",
+    });
+    message_Talk({
+        english="""
+             It's nothing. Probably just my
+            imagination.
+        """,
+    });
+    message_Talk({
+        english="""
+             Well, at any rate, it's only a
+            little farther to the summit! Keep at it!
+        """,
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m4', 34.5, 36.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m5', 22.5, 36.5>);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC1);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC2);
+    end;
+}

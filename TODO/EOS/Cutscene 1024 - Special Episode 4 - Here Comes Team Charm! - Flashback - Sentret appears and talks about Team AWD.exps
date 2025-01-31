@@ -1,0 +1,71 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_ILLUSION_STONE_CHAMBER, 0, 256);
+    back_SetGround(LEVEL_D55P11A);
+    supervision_StationCommon(0);
+    supervision_StationCommon(1);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_METAMON_OTACHI>();
+    SetPositionInitial<actor ACTOR_NPC_SAANAITO>();
+    SetPositionInitial<actor ACTOR_NPC_CHAAREMU>();
+    SetAnimation<actor ACTOR_NPC_METAMON_OTACHI>(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetPositionMark<performer 0>(Position<'m0', 34.5, 36.5>);
+    SetPositionMark<actor ACTOR_NPC_METAMON_OTACHI>(Position<'m1', 34.5, 37.5>);
+    SetPositionMark<actor ACTOR_NPC_CHAAREMU>(Position<'m2', 30, 31.5>);
+    SetPositionMark<actor ACTOR_NPC_SAANAITO>(Position<'m3', 39, 31.5>);
+    SetPositionMark<actor ACTOR_PLAYER_CHARMS>(Position<'m4', 34.5, 31.5>);
+    SetDirection<actor ACTOR_NPC_CHAAREMU>(DIR_DOWN);
+    SetDirection<actor ACTOR_NPC_SAANAITO>(DIR_DOWN);
+    SetDirection<actor ACTOR_PLAYER_CHARMS>(DIR_DOWN);
+    SetDirection<actor ACTOR_NPC_METAMON_OTACHI>(DIR_UP);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_METAMON_OTACHI, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             After watching you...[K]
+            I feel like I can trust you, so...
+        """,
+    });
+    message_Talk({
+        english=" I have a request.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_CHARMS>();
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" A request?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_METAMON_OTACHI, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yes.[K] Team [CS:X]AWD[CR]...",
+    });
+    message_Talk({
+        english=" Team [CS:X]AWD[CR] needs to be punished.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    message_Mail({
+        english="""
+            [CN]The one who asked us to punish
+            [CN]Team [CS:X]AWD[CR]...
+        """,
+    });
+    message_Mail({
+        english="[CN]That [CS:N]Sentret[CR] too...",
+    });
+    message_Mail({
+        english="[CN]They were really...[K]you?",
+    });
+    message_Close();
+    screen_WhiteOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

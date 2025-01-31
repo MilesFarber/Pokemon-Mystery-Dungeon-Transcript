@@ -1,0 +1,624 @@
+
+def 0 {
+    sound_Stop();
+    Wait(60);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ...Huff-huff.[K] Huff-huff...",
+            }
+        case 2:
+            {
+                english=" ...Huff-huff.[K] Huff-huff...",
+            }
+        default:
+            {
+                english=" ...Huff-huff.[K] Huff-huff...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [CS:N]Grovyle[CR]. I'm beat.",
+            }
+        case 2:
+            {
+                english=" Listen, [CS:N]Grovyle[CR]. I'm exhausted.",
+            }
+        default:
+            {
+                english=" Say, [CS:N]Grovyle[CR]. I'm dead tired.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" There's no time to rest!",
+    });
+    message_Talk({
+        english="""
+             If they catch us, we're done![K]
+            Tough it out and run!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's easy for you to say...
+                    Huff-huff...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's easy for you to say...
+                    Huff-huff...
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's easy for you to say...
+                    Huff-huff...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I can't.[K] I have to rest.",
+            }
+        case 2:
+            {
+                english=" I can't.[K] I have to rest.",
+            }
+        default:
+            {
+                english=" I can't.[K] I have to rest.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" All right.",
+    });
+    message_Close();
+    back_SetGround(LEVEL_D18P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_FUTURE, 0, 256);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(1.1992, Position<'m0', 39, 24.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1.1992, Position<'m1', 35, 26.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.1992, Position<'m2', 33, 24.5>);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(1.5, Position<'m3', 42, 22>);
+    MovePositionMark<actor ACTOR_PLAYER>(1.1992, Position<'m4', 39, 19.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.1992, Position<'m5', 35, 22.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huff-huff...[K] Huff-huff...",
+            }
+        case 2:
+            {
+                english=" Huff-huff...[K] Huff-huff...",
+            }
+        default:
+            {
+                english=" Huff-huff...[K] Huff-huff...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_JUPUTORU>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" This forms a natural alcove.",
+    });
+    message_Talk({
+        english=" This should shield us from view.",
+    });
+    message_Talk({
+        english="""
+             After a quick rest, we'll have to
+            get moving again.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" W-wait a minute.",
+            }
+        case 2:
+            {
+                english=" W-wait a minute.",
+            }
+        default:
+            {
+                english=" W-wait a minute.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     When we escaped from the
+                    stockade, we cooperated with you because we
+                    had to...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     When we escaped from the
+                    stockade, we cooperated with you because we
+                    had no other choice...
+                """,
+            }
+        default:
+            {
+                english="""
+                     When we escaped from the
+                    stockade, we cooperated with you because we
+                    had to...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But we never promised we'd go
+                    with you afterward!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But we didn't promise we'd go
+                    with you afterward!
+                """,
+            }
+        default:
+            {
+                english="""
+                     But we never promised we'd go
+                    with you afterward!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     A bad Pokémon like you...[K]
+                    I'm not about to trust you with anything.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     A bad Pokémon like you...[K]
+                    You're not worth trusting.
+                """,
+            }
+        default:
+            {
+                english="""
+                     A bad Pokémon like you...[K]
+                    I can't trust you.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([partner]...)",
+            }
+        default:
+            {
+                english="([partner]...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Humph!",
+    });
+    message_Talk({
+        english="""
+             So I'm the bad guy...[K] And that
+            [CS:N]Dusknoir[CR] is the good guy?
+        """,
+    });
+    message_Talk({
+        english="""
+             Then how about explaining
+            [CS:N]Dusknoir[CR]'s actions earlier?
+        """,
+    });
+    message_Talk({
+        english="""
+             It wasn't just me...[K] They wanted
+            you gone too!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urk...",
+            }
+        case 2:
+            {
+                english=" Urk...",
+            }
+        default:
+            {
+                english=" Urk...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But...[K] That doesn't mean I should
+                    be trusting you, [CS:N]Grovyle[CR]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But...[K] That doesn't mean I should
+                    put my faith in you, [CS:N]Grovyle[CR]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     But...[K] That doesn't mean I can
+                    trust you, [CS:N]Grovyle[CR]...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Earning your trust isn't an easy
+            task, it seems.
+        """,
+    });
+    message_Talk({
+        english="""
+             I thought that having allies
+            would help, but...
+        """,
+    });
+    message_Talk({
+        english="""
+             There's no point continuing
+            together without trust.
+        """,
+    });
+    message_Talk({
+        english=" We'll go our separate ways.",
+    });
+    message_Talk({
+        english="""
+             I'm staying on the move.[K]
+            You two should get moving as soon as possible.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNRIGHT);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english=" Good luck.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.5, Position<'m6', 46, 22>);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wait a second!",
+            }
+        case 2:
+            {
+                english=" Wait a second!",
+            }
+        default:
+            {
+                english=" Wait a second!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(20);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" You say to leave soon, but...",
+            }
+        case 2:
+            {
+                english=" You tell us to leave soon, but...",
+            }
+        default:
+            {
+                english=" You say to leave soon, but...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's dark out now. It's tough to
+                    see where we're going.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's dark out now. It's hard to
+                    see where we're going.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's dark out now. It's hard
+                    seeing where we're going.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Instead of staying on the move
+                    right now, why not wait for morning?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Instead of setting off again
+                    right away, shouldn't we wait for morning?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Instead of staying on the move
+                    right now, shouldn't we wait for morning?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Can't we wait to leave until it
+                    gets light out?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Wouldn't it be better to leave
+                    when it gets light out?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Wouldn't it be better to leave
+                    when it gets light out?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_RC_FACER);
+    message_Talk({
+        english=" That isn't possible.",
+    });
+    message_Talk({
+        english="""
+             I hate to say it, but...[K]morning
+            never comes.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?!",
+            }
+        case 2:
+            {
+                english=" What?!",
+            }
+        default:
+            {
+                english=" Pardon?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 2, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             This world... Your future...
+            It's a world of perpetual darkness.
+        """,
+    });
+    message_Talk({
+        english="""
+             The sun never rises.[K] So morning
+            never comes.
+        """,
+    });
+    message_Talk({
+        english=" The darkness persists forever.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wh-why?",
+            }
+        case 2:
+            {
+                english=" Wh-why?",
+            }
+        default:
+            {
+                english=" Wh-why?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Because...[K]the planet has been
+            paralyzed.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" The planet is...[K]paralyzed?",
+            }
+        case 2:
+            {
+                english=" The planet is...[K]paralyzed?",
+            }
+        default:
+            {
+                english=" The planet is...[K]paralyzed?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" The planet's paralysis...",
+            }
+        case 2:
+            {
+                english=" The planet's paralysis...",
+            }
+        default:
+            {
+                english=" The planet's paralysis...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     ...The planet's paralysis![K]
+                    That's right! I remember now!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     ...The planet's paralysis![K]
+                    That's right! I remember now!
+                """,
+            }
+        default:
+            {
+                english="""
+                     ...The planet's paralysis![K]
+                    That's right! I remember now!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR] described the
+                    planet's paralysis before...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR] described the
+                    planet's paralysis before...
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR] described the
+                    planet's paralysis before...
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

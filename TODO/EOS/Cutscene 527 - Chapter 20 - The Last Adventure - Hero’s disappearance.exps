@@ -1,0 +1,996 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_P13P01A);
+    supervision_Acting(1);
+    supervision_Acting(2);
+    supervision_Acting(3);
+    supervision_Acting(0);
+    supervision_RemoveActing(1);
+    supervision_RemoveActing(2);
+    supervision_RemoveActing(3);
+    camera_SetMyself<performer 0>();
+    back_SetBackScrollSpeed(5.0, 0.0);
+    SetAnimation<actor ACTOR_PLAYER>(512);
+    SetAnimation<actor ACTOR_ATTENDANT1>(512);
+    SetAnimation<actor ACTOR_PLAYER>(5);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    bgm_PlayFadeIn(BGM_HEAVY_FEELING, 60, 200);
+    screen_FadeIn(1, 30);
+    Wait(180);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    back_SetBackScrollSpeed(0.0, 0.0);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 1, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What's up, [hero]?",
+            }
+        case 2:
+            {
+                english="""
+                     What's the matter,
+                    [hero]?
+                """,
+            }
+        default:
+            {
+                english=" What's wrong, [hero]?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's pick up the pace.",
+            }
+        case 2:
+            {
+                english=" Let's hurry.",
+            }
+        default:
+            {
+                english=" Let's hurry.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 2, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    back_SetBackScrollSpeed(4.0, 0.0);
+    SetAnimation<actor ACTOR_PLAYER>(5);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(............)",
+            }
+        default:
+            {
+                english="(............)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(........................)",
+            }
+        default:
+            {
+                english="(........................)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(My body...[K]feels heavy...)",
+            }
+        default:
+            {
+                english="(My body...[K]feels heavy...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (What's wrong...?[K] Why am I struggling to
+                    move...?)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (What's wrong...?[K] Why am I struggling to
+                    move...?)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's like...[K]my legs are weighed down...)",
+            }
+        default:
+            {
+                english="(It's like...[K]my legs are weighed down...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Maybe...[K]now that we changed the future...)",
+            }
+        default:
+            {
+                english="(Maybe...[K]now that we changed the future...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(My own disappearance...[K]is drawing near...)",
+            }
+        default:
+            {
+                english="(My own disappearance...[K]is drawing near...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5131);
+    camera_SetEffect(2, 1, 1.0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    back_SetBackScrollSpeed(0.0, 0.0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Quake!",
+            }
+        case 2:
+            {
+                english=" Tremors!",
+            }
+        default:
+            {
+                english=" Tremors!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(60);
+    se_FadeOut(5131, 70);
+    camera_SetEffect(0, 0, 0);
+    Wait(70);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's stopped shaking...",
+            }
+        case 2:
+            {
+                english=" It's settled down...",
+            }
+        default:
+            {
+                english=" It's settled down...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Maybe things are still settling
+                    back to normal...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I guess things are still settling
+                    back to normal...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Maybe things are still settling
+                    back to normal...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 1, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's go, [hero].",
+            }
+        case 2:
+            {
+                english=" Let's go, [hero].",
+            }
+        default:
+            {
+                english=" Let's go, [hero].",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 2, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    SetAnimation<actor ACTOR_ATTENDANT1>(768);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    Slide2PositionOffset<actor ACTOR_ATTENDANT1>(0.7969, 144, 32);
+    MovePositionOffset<actor ACTOR_PLAYER>(0.5, 24, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitBgm(BGM_HEAVY_FEELING);
+    supervision_Acting(1);
+    SetOutputAttribute<actor ACTOR_PLAYER>(2);
+    SetAnimation<object OBJECT_D01P11B2_12>(1);
+    Wait(15);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(5);
+    bgm2_PlayFadeIn(BGM_DONT_EVER_FORGET, 0, 256);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(...!)",
+            }
+        default:
+            {
+                english="(...!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(This...[K] This light...)",
+            }
+        default:
+            {
+                english="(This...[K] This light...)",
+            }
+    }
+    message_SetFace(ACTOR_PLAYER, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(...[K]All right...)",
+            }
+        default:
+            {
+                english="(...[K]OK...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Finally...)",
+            }
+        default:
+            {
+                english="(Finally...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(The time has finally arrived...)",
+            }
+        default:
+            {
+                english="(The time has finally arrived...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(My time with [partner]...[K]ends now.)",
+            }
+        default:
+            {
+                english="(My time with [partner]...[K]ends now.)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey![K] [hero].",
+            }
+        case 2:
+            {
+                english=" Hey![K] [hero].",
+            }
+        default:
+            {
+                english=" Hey![K] [hero].",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_LEFT);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    Slide2PositionOffset<actor ACTOR_ATTENDANT1>(1, -88, -24);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(15);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?[K] [hero]...",
+            }
+        case 2:
+            {
+                english=" Huh?[K] [hero]...",
+            }
+        default:
+            {
+                english=" Huh?[K] [hero]...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     What is it?[K] What's happening to
+                    you...?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     What is it?[K] What's wrong with
+                    you...?
+                """,
+            }
+        default:
+            {
+                english="""
+                     What is it?[K] What's happening to
+                    you...?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    ...Sorry, [partner].[K] I kept this to myself
+                    for a long time... 
+                """,
+            }
+        default:
+            {
+                english="""
+                    ...Sorry, [partner].[K] I kept this to myself
+                    for a long time... 
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="It looks like...[K]I have to say good-bye...",
+            }
+        default:
+            {
+                english="It looks like...[K]I have to say good-bye...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?![K] Good-bye?!",
+            }
+        case 2:
+            {
+                english=" What?![K] Good-bye?!",
+            }
+        default:
+            {
+                english=" What?![K] Good-bye?!",
+            }
+    }
+    message_KeyWait();
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    Slide2PositionOffset<actor ACTOR_ATTENDANT1>(0.7969, -16, -8);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What are you saying?!",
+            }
+        case 2:
+            {
+                english=" What do you mean?!",
+            }
+        default:
+            {
+                english=" What are you saying?!",
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="[CS:N]Dusknoir[CR] told me.",
+            }
+        default:
+            {
+                english="[CS:N]Dusknoir[CR] told me.",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    If we changed the future, the Pokémon from
+                    the future would disappear...
+                """,
+            }
+        default:
+            {
+                english="""
+                    If we changed the future, the Pokémon from
+                    the future would disappear...
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="That's why...[K]I'm destined to disappear too.",
+            }
+        default:
+            {
+                english="That's why...[K]I'm destined to disappear too.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?[K] What?[K] Wh-why?",
+            }
+        case 2:
+            {
+                english=" Huh?[K] What?[K] Wh-why?",
+            }
+        default:
+            {
+                english=" Huh?[K] What?[K] Wh-why?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wh-why...?[K] I don't understand!",
+            }
+        case 2:
+            {
+                english=" Wh-why...?[K] I don't understand!",
+            }
+        default:
+            {
+                english=" Wh-why...?[K] I don't understand!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<object OBJECT_D01P11B2_12>(2);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="Thank you for everything.",
+            }
+        default:
+            {
+                english="Thank you for everything.",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="I'm going to disappear from here now...",
+            }
+        default:
+            {
+                english="I'm going to disappear from here now...",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="But, [partner]...[K] I'll never forget you.",
+            }
+        default:
+            {
+                english="But, [partner]...[K] I'll never forget you.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_ATTENDANT1>(768);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.5, -24, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" W-wait a second...",
+            }
+        case 2:
+            {
+                english=" W-wait a second...",
+            }
+        default:
+            {
+                english=" W-wait a second...",
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I managed to make it all this
+                    way because you were with me, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I only made it this far because
+                    you were with me, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     I managed to make it this far
+                    only because you were with me, [hero].
+                """,
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_TOP_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Don't you understand...?[K]
+                    You made me strong, [hero]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Don't you understand...?[K]
+                    You made me strong, [hero]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Don't you understand...?[K]
+                    You made me strong, [hero]...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" If you go, [hero]...[K] I...",
+            }
+        case 2:
+            {
+                english=" If you go, [hero]...[K] I...",
+            }
+        default:
+            {
+                english=" If you go, [hero]...[K] I...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I don't know...[K]what I would...",
+            }
+        case 2:
+            {
+                english=" I don't know...[K]what I would...",
+            }
+        default:
+            {
+                english=" I don't know...[K]what I would...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    No, [partner].[K] You have to be strong on
+                    your own. You have to live!
+                """,
+            }
+        default:
+            {
+                english="""
+                    No, [partner].[K] You have to be strong on
+                    your own. You have to live!
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="You have to go home...",
+            }
+        default:
+            {
+                english="You have to go home...",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="Tell everyone about what happened here.",
+            }
+        default:
+            {
+                english="Tell everyone about what happened here.",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="So that...[K]nothing like this happens ever again.",
+            }
+        default:
+            {
+                english="So that...[K]nothing like this happens ever again.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urk...[K] [hero]...",
+            }
+        case 2:
+            {
+                english=" Urk...[K] [hero]...",
+            }
+        default:
+            {
+                english=" Urk...[K] [hero]...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8454);
+    SetAnimation<object OBJECT_D01P11B2_12>(3);
+    Wait(95);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(...![K] The light...)",
+            }
+        default:
+            {
+                english="(...![K] The light...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(The light is getting brighter...)",
+            }
+        default:
+            {
+                english="(The light is getting brighter...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Don't, [hero]!",
+            }
+        case 2:
+            {
+                english=" Don't, [hero]!",
+            }
+        default:
+            {
+                english=" Don't, [hero]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Don't...[K] Don't go...",
+            }
+        case 2:
+            {
+                english=" Don't...[K] Don't go...",
+            }
+        default:
+            {
+                english=" Don't...[K] Don't go...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="Thank you for everything, [partner].",
+            }
+        default:
+            {
+                english="Thank you for everything, [partner].",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="I'm glad we got to train together at the guild...",
+            }
+        default:
+            {
+                english="I'm glad we got to train together at the guild...",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="I'm glad we got to go on adventures together...",
+            }
+        default:
+            {
+                english="I'm glad we got to go on adventures together...",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="I'm glad...[K]I got to know you, [partner].",
+            }
+        default:
+            {
+                english="I'm glad...[K]I got to know you, [partner].",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wait...[hero]...",
+            }
+        case 2:
+            {
+                english=" Wait...[hero]...",
+            }
+        default:
+            {
+                english=" Please, wait...[hero]...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="I'm sorry.",
+            }
+        default:
+            {
+                english="I'm sorry.",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="I'm so lucky that you were my friend...",
+            }
+        default:
+            {
+                english="I'm so lucky that you were my friend...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I feel the same, [hero]!
+                    To me, [hero], you're...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I feel the same, [hero]!
+                    To me, [hero], you're...
+                """,
+            }
+        default:
+            {
+                english="""
+                     I feel the same, [hero]!
+                    To me, [hero], you're...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" More important than anything...",
+            }
+        case 2:
+            {
+                english=" More important than anything...",
+            }
+        default:
+            {
+                english=" More important than anything...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="Yes...[K]I feel the same way.",
+            }
+        default:
+            {
+                english="Yes...[K]I feel the same way.",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="[partner]...",
+            }
+        default:
+            {
+                english="[partner]...",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    Even after I disappear from here...[K] I will
+                    never forget you...
+                """,
+            }
+        default:
+            {
+                english="""
+                    Even after I disappear from here...[K] I will
+                    never forget you...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8459);
+    supervision_Acting(2);
+    SetAnimation<object OBJECT_D01P11B2_13>(2);
+    Wait(3);
+    supervision_Acting(3);
+    SetAnimation<object OBJECT_D01P11B2_14>(3);
+    Wait(2);
+    supervision_Acting(4);
+    SetAnimation<object OBJECT_D01P11B2_15>(2);
+    Wait(3);
+    SetAnimation<object OBJECT_D01P11B2_12>(4);
+    SetOutputAttribute<actor ACTOR_PLAYER>(64);
+    back_SetEffect(12, 90);
+    Wait(90);
+    Destroy<actor ACTOR_PLAYER>();
+    Wait(30);
+    SetAnimation<object OBJECT_D01P11B2_12>(3);
+    supervision_RemoveActing(2);
+    supervision_RemoveActing(3);
+    Wait(25);
+    SetAnimation<object OBJECT_D01P11B2_12>(2);
+    supervision_RemoveActing(4);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, -24, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ...[hero]...[W:45][hero]!",
+            }
+        case 2:
+            {
+                english=" ...[hero]...[W:45][hero]!",
+            }
+        default:
+            {
+                english=" ...[hero]...[W:45][hero]!",
+            }
+    }
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_UP);
+    SetAnimation<object OBJECT_D01P11B2_12>(1);
+    Wait(15);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_DOWNLEFT);
+    Destroy<object OBJECT_D01P11B2_12>();
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_UPLEFT);
+    Wait(15);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_LEFT);
+    Wait(45);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    SetAnimation<actor ACTOR_ATTENDANT1>(81);
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_CRYING, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ...[hero]!!",
+            }
+        case 2:
+            {
+                english=" ...[hero]!!",
+            }
+        default:
+            {
+                english=" ...[hero]!!",
+            }
+    }
+    message_Close();
+    Wait(30);
+    bgm2_FadeOut(210);
+    screen_FadeOut(0, 120);
+    Wait(180);
+    bgm_PlayFadeIn(BGM_HAVE_TO_GET_HOME, 0, 192);
+    Wait(90);
+    end;
+}

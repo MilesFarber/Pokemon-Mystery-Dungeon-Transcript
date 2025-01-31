@@ -1,0 +1,129 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_P01P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             We should make sure we
+            prepare before going out exploring...
+        """,
+    });
+    message_Talk({
+        english="""
+             But I don't really want to do
+            anything that would draw attention to me...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8963);
+    ExecuteCommon<actor ACTOR_NPC_YUKIKABURI>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:N]Bagon[CR] and [CS:N]Gligar[CR] are still looking
+            for that map...
+        """,
+    });
+    message_Talk({
+        english="""
+             They might be hanging around
+            here. It's kind of scaring me...[K] (Yikes...)
+        """,
+    });
+    SetAnimation<actor ACTOR_NPC_YUKIKABURI>(3);
+    SlidePositionOffset<actor ACTOR_NPC_YUKIKABURI>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YUKIKABURI>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YUKIKABURI>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YUKIKABURI>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YUKIKABURI>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YUKIKABURI>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YUKIKABURI>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YUKIKABURI>(1, 1, 0);
+    Wait(1);
+    SetAnimation<actor ACTOR_NPC_YUKIKABURI>(2);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" I've got it!",
+    });
+    message_Talk({
+        english="""
+             You just leave the exploration
+            preparations to me. I can do it...
+        """,
+    });
+    message_Talk({
+        english="""
+             And you should hide somewhere,
+            [CS:N]Snover[CR]. Stay out of sight.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I'm sorry.[K] I'll find a hiding place
+            right around here.
+        """,
+    });
+    message_Talk({
+        english="""
+             When you're ready to head to the
+            dungeon, [CS:Y]Bidoof[CR]...[K] I'll slip away and join you.
+        """,
+    });
+    message_Talk({
+        english="""
+             So once you've finished
+            preparing, please head for the dungeon.
+        """,
+    });
+    message_Talk({
+        english=" See you later.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_YUKIKABURI>(2, Position<'m0', 27.5, 25>);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    ExecuteCommon<actor ACTOR_NPC_YUKIKABURI>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    MovePositionMark<actor ACTOR_NPC_YUKIKABURI>(2, Position<'m1', 27.5, 41>);
+    Wait(20);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    Wait(50);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(10);
+    se_Play(8975);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(10);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_DETERMINED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Got it![K] All right, I need to head
+            into Treasure Town and get ready to explore.
+        """,
+    });
+    message_Talk({
+        english=" I'll do my best!",
+    });
+    message_Close();
+    dungeon_mode(123) = DMODE_OPEN;
+    end;
+}

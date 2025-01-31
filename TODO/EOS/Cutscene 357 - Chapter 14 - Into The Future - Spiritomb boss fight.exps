@@ -1,0 +1,51 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(31, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D21P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(29);
+    SetOutputAttribute<actor ACTOR_NPC_JUPUTORU>(2);
+    SetAnimation<object OBJECT_D21P41A1_61>(1);
+    bgm_PlayFadeIn(BGM_PLANETS_PARALYSIS, 0, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_MIKARUGE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" HEE-hee...HEE-hee...! Back again?",
+    });
+    message_Talk({
+        english="""
+             None shall be forgiven for
+            TRESPASSING here!
+        """,
+    });
+    message_Talk({
+        english="""
+             HEE-hee...HEE-hee... PREPARE to
+            take your punishment!
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(30);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(31, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

@@ -1,0 +1,187 @@
+
+def 0 {
+    sound_Stop();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V02P06A);
+    camera2_SetPositionMark(Position<'m0', 19.5, 15.5>);
+    screen2_FadeIn(1, 60);
+    Wait(150);
+    screen2_FadeOut(1, 60);
+    back2_SetMode(0);
+    back_SetGround(LEVEL_G01P10C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(44);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(45);
+    screen_FadeChange(1, 60, 0, 192);
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Phew...[K] Today was a really long
+            day, yup yup...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Those two are already asleep.",
+    });
+    message_Talk({
+        english="""
+             I'll have to get up early
+            tomorrow...[K] Guess I should probably get to bed
+            too, yup yup.
+        """,
+    });
+    message_Talk({
+        english=" Good night, you all.",
+    });
+    message_Close();
+    SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(25);
+    WaitAnimation<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(46);
+    Wait(120);
+    bgm_FadeOut(160);
+    screen_FadeOut(1, 120);
+    Wait(60);
+    message_Narration(30, {
+        english="[CN]A few minutes later...",
+    });
+    message_Close();
+    Wait(45);
+    se_Play(9217);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_SPECIAL2, FACE_POS_STANDARD);
+    message_Talk({
+        english=" GOOOOOaaaaaaaaaahhhhhhhhh...",
+    });
+    message_Talk({
+        english=" GooooOOOOOOAAAAAAAHHHHH...",
+    });
+    message_Talk({
+        english="""
+             GUUUUGAAAAAaaaaaaaaaaaAAAA![K]
+            GUUUGAAAH!?[K] GooooOOOOOOAAAAAAAHHHHH...
+        """,
+    });
+    message_Talk({
+        english="""
+             GUGOOOOOAAAAAAaaaaahhhhh![K]
+            GUGOAAAAAA!![K]
+            GUGAGOGOGOGOOOOOOOOoooooOOAAAAAAHHH!!
+        """,
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_UPRIGHT);
+    screen_FadeChange(1, 60, 0, 192);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_SPECIAL2, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             KUGOOOOooooaaaaaaahhhh![K]
+            GUGOOOOOAAAAAAAaaaaaaahhhhhhh!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Sniff...[K] He's snoring too loud...
+            I can't sleep...
+        """,
+    });
+    message_Talk({
+        english="""
+             I'd like to wake [CS:N]Loudred[CR] up...[K]
+            But...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SPECIAL2, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             If I did that, he'd be pretty
+            angry, and that's a scary thought...[K]
+            Sniff...
+        """,
+    });
+    se_FadeOut(9217, 10);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" ...[K]Speaking of scary!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(15);
+    bgm_PlayFadeIn(BGM_I_SAW_SOMETHING_AGAIN, 0, 256);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Those two I met earlier today...[K]
+            Those Pokémon sure were scary, yup yup...
+            
+        """,
+    });
+    message_Talk({
+        english="""
+             ...[K]Just before those two
+            showed...[K]there was that Pokémon that seemed
+            to be running away and then disappeared...
+        """,
+    });
+    message_Talk({
+        english="""
+             That Pokémon...[K] He was
+            probably being chased by those two
+            scary Pokémon...
+        """,
+    });
+    message_Talk({
+        english="""
+             If that was the case, I hope he
+            got away all right...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             That's right![K] When that Pokémon
+            ran off...
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

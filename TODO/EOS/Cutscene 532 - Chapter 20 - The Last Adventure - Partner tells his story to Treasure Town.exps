@@ -1,0 +1,70 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_A_WISH_FOR_PEACE, 0, 180);
+    back_SetGround(LEVEL_T01P01A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_EmptyActor();
+    message_Mail({
+        english="""
+            [CN][partner] told the story whenever
+            [CN]and wherever possible...
+        """,
+    });
+    message_Mail({
+        english="[CN]to as many Pokémon as possible.",
+    });
+    message_Mail({
+        english="[CN]It was a story that had to be told.",
+    });
+    message_Mail({
+        english="[CN]It was a story of hope for world peace.",
+    });
+    message_Mail({
+        english="[CN]It was a story of hope for future peace.",
+    });
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    Wait(60);
+    message_Narration(30, {
+        english="[CN]So months passed...",
+    });
+    message_Narration(30, {
+        english="""
+            [CN]Treasure Town returned to its
+            [CN]cheerful routines...
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]the scars from the planet's
+            [CN]injuries slowly healed...
+        """,
+    });
+    message_Narration(30, {
+        english="[CN]and life gradually returned to normal...",
+    });
+    message_Close();
+    end;
+}
+
+def 1 for actor ACTOR_ATTENDANT1 {
+    SetAnimation(2);
+    @label_0;
+    forever {
+        Wait(30);
+        CallCommon(CORO_EXPLANATION_FUNC);
+        Wait(30);
+        Turn2Direction(4, 10, DIR_DOWNLEFT);
+        WaitRandom(45, 80);
+        Turn2Direction(4, 10, DIR_DOWNRIGHT);
+        WaitRandom(45, 80);
+        Turn2Direction(4, 10, DIR_DOWN);
+        continue;  // may be redundant
+    }
+}

@@ -1,0 +1,117 @@
+
+def 0 {
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_D08P11A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? What is this?",
+            }
+        case 2:
+            {
+                english=" Huh? What is this?",
+            }
+        default:
+            {
+                english=" Huh? What is this?",
+            }
+    }
+    message_Close();
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    MovePositionMark<performer 0>(1, Position<'m0', 37.5, 16.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 37.5, 16.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It looks like some kind of stone,
+                    I guess.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It looks like some kind of stone,
+                    I guess.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It looks like some kind of stone,
+                    I guess.
+                """,
+            }
+    }
+    message_KeyWait();
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's red and pretty. It's kind of
+                    like a gem, actually.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's red and pretty. It's kind of
+                    like a gem, actually.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's red and pretty. It's kind of
+                    like a gem, actually.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, -16, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Destroy<object OBJECT_D08P11A1_23>();
+    message_Mail({
+        english="""
+            [CN][partner] picked
+            [CN]up the red stone.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey! This stone feels warm!",
+            }
+        case 2:
+            {
+                english=" Wow! This stone feels warm!",
+            }
+        default:
+            {
+                english=" Wow! It feels warm!",
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

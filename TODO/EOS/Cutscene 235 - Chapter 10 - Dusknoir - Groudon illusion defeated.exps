@@ -1,0 +1,32 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D10P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_GURAADON>(47);
+    ResetOutputAttribute<actor ACTOR_NPC_GURAADON>(256);
+    screen_FadeIn(1, 15);
+    Wait(30);
+    message_SetActor(ACTOR_NPC_YUKUSHII);
+    message_Talk({
+        english=" Soon after they left...",
+    });
+    message_Talk({
+        english=" Another Pokémon would come...",
+    });
+    message_Talk({
+        english=" But this one...",
+    });
+    message_Talk({
+        english=" It stole the Time Gear!",
+    });
+    message_Close();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    screen_FadeOut(1, 15);
+    end;
+}

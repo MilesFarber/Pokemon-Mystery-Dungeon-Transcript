@@ -1,0 +1,54 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_P04P01C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(22);
+    WaitAnimation<actor ACTOR_NPC_JUPUTORU>();
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    screen_FadeIn(1, 15);
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" ..................",
+    });
+    message_Talk({
+        english=" I should have done it...",
+    });
+    message_Talk({
+        english="""
+             I should have taken their
+            memories when I had the chance...
+        """,
+    });
+    message_Close();
+    Wait(30);
+    message_ResetActor();
+    message_Talk({
+        english=" .....................",
+    });
+    message_Talk({
+        english="""
+             I don't know exactly what you're talking
+            about...[K] But you're wrong.
+        """,
+    });
+    message_Talk({
+        english="""
+             No one led me here. No one told me about
+            this place.
+        """,
+    });
+    message_Talk({
+        english="""
+             I've known about the presence of a
+            Time Gear here...[K]for a long time.
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 15);
+    end;
+}

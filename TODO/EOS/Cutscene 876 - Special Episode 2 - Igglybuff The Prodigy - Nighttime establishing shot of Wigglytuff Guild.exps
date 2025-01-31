@@ -1,0 +1,240 @@
+
+def 0 {
+    sound_Stop();
+    if ( not debug ) {
+        @label_0;
+        $SCENARIO_SIDE = scn[41, 1];
+        back2_SetMode(4);
+        back2_SetGround(LEVEL_V02P06A);
+        back_SetGround(LEVEL_G01P01C);
+        supervision_Acting(0);
+        supervision_StationCommon(0);
+        camera2_SetPositionMark(Position<'m0', 19.5, 16.5>);
+        camera_SetMyself<performer 0>();
+        bgm_PlayFadeIn(BGM_FIRE_CRACKLING_LOUDER, 90, 256);
+        screen2_FadeIn(0, 60);
+        screen_FadeIn(1, 60);
+        Wait(150);
+        bgm_FadeOut(120);
+        screen2_FadeOut(0, 60);
+        screen_FadeOut(1, 60);
+        back2_SetMode(0);
+        end;
+    } else {
+        message_Notice({
+            english="[M:D2][CS:C]Start from where?[CR]",
+        });
+        switch ( message_SwitchMenu(0, 1) ) {
+            case menu({
+                english="[M:D2]Beginning",
+            }):
+            default:
+                message_Close();
+                jump @label_0;
+            case menu({
+                english="[M:D2]SectionA",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[41, 1];
+                $SIDE02_TALK[1] = 0;
+                $SIDE02_TALK[2] = 0;
+                $SIDE02_TALK[0] = 0;
+                dungeon_mode(128) = DMODE_CLOSED;
+                dungeon_mode(176) = DMODE_CLOSED;
+                main_EnterGround(LEVEL_P17P02A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionB",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[41, 2];
+                $SIDE02_TALK[1] = 0;
+                $SIDE02_TALK[2] = 0;
+                $SIDE02_TALK[0] = 0;
+                dungeon_mode(128) = DMODE_CLOSED;
+                dungeon_mode(176) = DMODE_CLOSED;
+                main_EnterGround(LEVEL_P16P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionC",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[41, 3];
+                dungeon_mode(128) = DMODE_CLOSED;
+                dungeon_mode(176) = DMODE_CLOSED;
+                main_EnterGround(LEVEL_P17P02A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionD",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[41, 5];
+                dungeon_mode(128) = DMODE_CLOSED;
+                dungeon_mode(176) = DMODE_CLOSED;
+                main_EnterGround(LEVEL_P17P02A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionG",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[42, 0];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                main_EnterGround(LEVEL_P17P02A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionH",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[42, 2];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_P19P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionI",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[42, 3];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_P19P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionJ",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[42, 4];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_P17P02A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionK",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[42, 5];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_P19P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionL",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[42, 6];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_P19P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionM",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[42, 5];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_D45P21A, 30);
+                hold;
+            case menu({
+                english="[M:D0]Fortune Ravine Boss 2nd Try",
+            }):
+                message_Close();
+                $SCENARIO_SIDE = scn[42, 9];
+                supervision_ExecuteActing(LEVEL_D45P42A, 'N03A1601', 0);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N02-01",
+            }):
+                $SCENARIO_SIDE = scn[41, 1];
+                message_Close();
+                main_EnterGround(LEVEL_P17P02A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N02-02",
+            }):
+                $SCENARIO_SIDE = scn[41, 2];
+                $SIDE02_TALK[1] = 0;
+                $SIDE02_TALK[2] = 0;
+                $SIDE02_TALK[0] = 0;
+                message_Close();
+                main_EnterGround(LEVEL_P16P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N02-03",
+            }):
+                $SCENARIO_SIDE = scn[41, 3];
+                main_EnterGround(LEVEL_P17P02A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N02-04",
+            }):
+                $SCENARIO_SIDE = scn[42, 0];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                message_Close();
+                main_EnterGround(LEVEL_P17P02A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N03-01",
+            }):
+                $SCENARIO_SIDE = scn[42, 2];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                message_Close();
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_P19P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N03-02",
+            }):
+                $SCENARIO_SIDE = scn[42, 4];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                message_Close();
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_P17P02A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N03-03",
+            }):
+                $SCENARIO_SIDE = scn[42, 5];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                message_Close();
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterGround(LEVEL_P19P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N03-04",
+            }):
+                $SCENARIO_SIDE = scn[42, 7];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                message_Close();
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterDungeon(130, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D45P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N03-05",
+            }):
+                $SCENARIO_SIDE = scn[42, 8];
+                dungeon_mode(128) = DMODE_OPEN_AND_REQUEST;
+                dungeon_mode(176) = DMODE_OPEN;
+                message_Close();
+                switch ( ProcessSpecial(3, 0, 0) ) { }
+                main_EnterDungeon(130, 30);
+                switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                main_EnterGround(LEVEL_D45P21A, 30);
+                hold;
+        }
+    }
+}

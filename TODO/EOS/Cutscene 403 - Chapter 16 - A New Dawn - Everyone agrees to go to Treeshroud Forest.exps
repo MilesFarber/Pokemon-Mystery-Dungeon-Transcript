@@ -1,0 +1,54 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    back_SetGround(LEVEL_H02P99A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That's settled.",
+            }
+        case 2:
+            {
+                english=" That's it, then.",
+            }
+        default:
+            {
+                english=" That's settled.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's where we'll go![K]
+                    To [CS:P]Treeshroud Forest[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's where we're going![K]
+                    Onward to [CS:P]Treeshroud Forest[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's where we'll go![K]
+                    We're off to [CS:P]Treeshroud Forest[CR]!
+                """,
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    Wait(30);
+    WaitBgm(BGM_OCEAN1);
+    dungeon_mode(34) = DMODE_OPEN;
+    end;
+}

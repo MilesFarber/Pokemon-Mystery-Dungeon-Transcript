@@ -1,0 +1,249 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    back_SetGround(LEVEL_G01P04A);
+    supervision_StationCommon(0);
+    supervision_StationCommon(99);
+    supervision_LoadStation(LEVEL_G01P04A, 'UM14');
+    supervision_Station(2);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    supervision_Acting(2);
+    SetPositionInitial<actor ACTOR_NPC_PERAPPU>();
+    SetPositionInitial<actor ACTOR_NPC_YONOWAARU>();
+    SetPositionInitial<actor ACTOR_NPC_GUREGGURU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(2);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" I'm sorry.",
+    });
+    message_Talk({
+        english="""
+             We are considering the possible
+            places where Time Gears may be hidden.
+        """,
+    });
+    message_Talk({
+        english="""
+             But we haven't been able to
+            narrow our choices to any sites that appear
+            truly promising.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_PERAPPU>(0.7969, Position<'m0', 57, 27.5>);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Sorry, but that's where we are
+            at now.
+        """,
+    });
+    message_Talk({
+        english="""
+             We ask you to search for the
+            Time Gears on your own initiative.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" I sincerely apologize.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             All right, everyone! Do your
+            best, as always! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_JOYOUS, 3);
+    Wait(1);
+    SetDirection<actor ACTOR_NPC_GUREGGURU>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(23);
+    SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(23);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(23);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(23);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(24);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(23);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(23);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(25);
+    SetDirection<actor ACTOR_PLAYER>(DIR_UP);
+    SetAnimation<actor ACTOR_PLAYER>(66);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_UP);
+    SetAnimation<actor ACTOR_ATTENDANT1>(66);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: HOORAY!",
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(2);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    MovePositionLives<performer 0>(1, ACTOR_PLAYER);
+    SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(25);
+    WaitAnimation<actor ACTOR_NPC_DAGUTORIO>();
+    Destroy<actor ACTOR_NPC_DAGUTORIO>();
+    SetDirection<actor ACTOR_NPC_DIGUDA>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(24);
+    WaitAnimation<actor ACTOR_NPC_DIGUDA>();
+    Destroy<actor ACTOR_NPC_DIGUDA>();
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_LEFT);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m1', 52.5, 22.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU>(1, Position<'m2', 54, 30>);
+    MovePositionMark<actor ACTOR_NPC_GUREGGURU>(1.1992, Position<'m3', 28, 31.5>);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m4', 40.5, 23.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m5', 40.5, 23.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1.1992, Position<'m6', 30, 34>);
+    Move2PositionMark<actor ACTOR_NPC_BIPPA>(1.1992, Position<'m7', 40.5, 23.5>);
+    Move2PositionOffset<actor ACTOR_NPC_KIMAWARI>(1.1992, -32, 0);
+    Destroy<actor ACTOR_NPC_PUKURIN>();
+    Move2PositionMark<actor ACTOR_NPC_KIMAWARI>(1.1992, Position<'m8', 40.5, 23.5>);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU>(4, 10, DIR_UPRIGHT);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m9', 40.5, 16.5>);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m10', 40.5, 16.5>);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1.1992, Position<'m11', 40.5, 16.5>);
+    supervision_RemoveActing(1);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_JOYOUS, 3);
+    if ( scn($SCENARIO_MAIN) >= [15, 1] ) {
+        @label_0;
+        message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         We should go back to
+                        [CS:P]Quicksand Cave[CR], [hero].
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         We should go back to
+                        [CS:P]Quicksand Cave[CR], [hero].
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         Let's go back to [CS:P]Quicksand Cave[CR],
+                        [hero].
+                    """,
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         Let's search [CS:P]Quicksand Cave[CR]
+                        carefully.
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         Let's search [CS:P]Quicksand Cave[CR]
+                        thoroughly.
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         We should search [CS:P]Quicksand
+                        Cave[CR] carefully.
+                    """,
+                }
+        }
+        message_Close();
+        SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_NONE, 3);
+        @label_1;
+        end;
+    } else {
+        message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         We should head back to
+                        [CS:P]Quicksand Desert[CR], [hero].
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         We should go back to
+                        [CS:P]Quicksand Desert[CR], [hero].
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         We should return to
+                        [CS:P]Quicksand Desert[CR], [hero].
+                    """,
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         Let's search [CS:P]Quicksand Desert[CR]
+                        carefully.
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         Let's search [CS:P]Quicksand Desert[CR]
+                        thoroughly.
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         We should search [CS:P]Quicksand
+                        Desert[CR] carefully.
+                    """,
+                }
+        }
+        message_Close();
+        SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_NONE, 3);
+        jump @label_1;
+    }
+}

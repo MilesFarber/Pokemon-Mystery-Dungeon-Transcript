@@ -1,0 +1,172 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P04A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Hmm. Let me see if I've got this
+            all straight.
+        """,
+    });
+    message_Talk({
+        english="""
+             Behind the waterfall, there is
+            a cave...
+        """,
+    });
+    message_Talk({
+        english="""
+             In the deepest part of the cave,
+            there is a gigantic gem...
+        """,
+    });
+    message_Talk({
+        english="""
+             When you pushed on the gem, it
+            triggered a trap of some kind...
+        """,
+    });
+    message_Talk({
+        english="""
+             And, surprisingly, you were
+            flushed off to the distant Hot Spring?[K] Is that
+            the gist of your report?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Yep.[K] What's really disappointing
+                    is that we couldn't bring the gem back.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Yes.[K] It's really disappointing
+                    that we couldn't bring the gem back...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Yes.[K] It's awfully disappointing
+                    that we couldn't bring the gem back...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5122);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(42);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_JOYOUS, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" No, no, no! Emphatically, no!",
+    });
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(22);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_LAUGHING, 3);
+    message_Talk({
+        english=" This is a major discovery!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" R-really?!",
+            }
+        case 2:
+            {
+                english=" R-really?!",
+            }
+        default:
+            {
+                english=" R-really?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(44);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_JOYOUS, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Undoubtedly! ♪",
+    });
+    message_Talk({
+        english="""
+             After all, the presence of the
+            cave behind the waterfall...
+        """,
+    });
+    message_Talk({
+        english="""
+             No one knew about that
+            before now! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, I see! We made a discovery!",
+            }
+        case 2:
+            {
+                english=" Oh, I see! We made a discovery!",
+            }
+        default:
+            {
+                english=" Oh, I see! We made a discovery!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_LAUGHING, 3);
+    Wait(10);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    bgm_FadeOut(120);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(60);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(When I had those dizzy spells...)",
+            }
+        default:
+            {
+                english="(When I had those dizzy spells...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(The shadow of that Pokémon I saw...)",
+            }
+        default:
+            {
+                english="(The shadow of that Pokémon I saw...)",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

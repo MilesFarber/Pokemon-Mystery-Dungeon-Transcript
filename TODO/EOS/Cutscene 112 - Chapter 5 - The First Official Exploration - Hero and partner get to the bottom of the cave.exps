@@ -1,0 +1,537 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[6, 6];
+    back_SetGround(LEVEL_D04P31A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    screen_FadeIn(1, 30);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 29, 35.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 34, 35.5>);
+    MovePositionMark<actor ACTOR_UNIT_NPC1>(1, Position<'m2', 31.5, 39.5>);
+    MovePositionMark<actor ACTOR_UNIT_NPC2>(1, Position<'m3', 36, 39.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Wow! Check that out,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Wow! Look at that,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Wow! Will you look at that,
+                    [hero]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Look at all the gems sparkling!",
+            }
+        case 2:
+            {
+                english=" Look at all the gems sparkling!",
+            }
+        default:
+            {
+                english=" Look at all the gems sparkling!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hey, check that out! It's a
+                    gigantic gem!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Whoa, look over there! It's a
+                    gigantic gem!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Wow, look over there! It's a
+                    gigantic gem!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m4', 31.5, 24.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.1992, Position<'m5', 29, 25.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_PLAYER>(1.1992, Position<'m6', 34, 25.5>);
+    MovePositionMark<actor ACTOR_UNIT_NPC1>(1, Position<'m7', 25.5, 31.5>);
+    MovePositionMark<actor ACTOR_UNIT_NPC2>(1, Position<'m8', 37.5, 31.5>);
+    Turn2Direction<actor ACTOR_UNIT_NPC1>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_UNIT_NPC2>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Awesome! I've never seen a gem
+                    this humongous!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Wow! I've never seen a gem
+                    this huge!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh, wow! I've never seen 
+                    a gem this immense!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" This is an incredible treasure!",
+            }
+        case 2:
+            {
+                english=" This is an incredible treasure!",
+            }
+        default:
+            {
+                english=" This is an incredible treasure!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Everyone's going to be really
+                    impressed when we take this back with us!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Everyone will be amazed if we
+                    take this back.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Everyone will be amazed if we
+                    take this back.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_UP);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m9', 31.5, 20.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    SetAnimation<actor ACTOR_ATTENDANT1>(67);
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    message_Mail({
+        english="""
+            [CN][partner] tried to grab
+            [CN]the giant gem.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_ATTENDANT1>(67);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_ANGRY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urrrrgh! Urrrrgh![K] Ugh...",
+            }
+        case 2:
+            {
+                english=" Urrrrgh! Urrrrgh![K] Ugh...",
+            }
+        default:
+            {
+                english=" Urrrrgh! Urrrrgh![K] Ugh...",
+            }
+    }
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 0, 8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Nope, it's not budging...",
+            }
+        case 2:
+            {
+                english=" Nope, it's not budging...",
+            }
+        default:
+            {
+                english=" Nope, it's not budging...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's really stuck tight.",
+            }
+        case 2:
+            {
+                english=" It's really stuck tight.",
+            }
+        default:
+            {
+                english=" It's really stuck tight.",
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Can you give it a try,
+                    [hero]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Can you give it a try,
+                    [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Can you give it a try,
+                    [hero]?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, -40, 0);
+    Wait(10);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m10', 31.5, 20.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    message_Mail({
+        english="""
+            [CN][hero] took over and tried
+            [CN]to pull out the gigantic gem.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(67);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_PLAYER>(67);
+    message_SetFace(ACTOR_PLAYER, FACE_ANGRY, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Whoa!)",
+            }
+        default:
+            {
+                english="(Whoa!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(This is really stuck!)",
+            }
+        default:
+            {
+                english="(This is really stuck!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It won't budge!)",
+            }
+        default:
+            {
+                english="(It won't budge!)",
+            }
+    }
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Urrrrgh...ugh...[K] Nope, no good...)",
+            }
+        default:
+            {
+                english="(Urrrrgh...ugh...[K] Nope, no good...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER>(1, 0, 8);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So you couldn't move it either,
+                    [hero]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So you couldn't move it either,
+                    [hero]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     So you couldn't move it either,
+                    [hero]...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But we can't just give up.",
+            }
+        case 2:
+            {
+                english=" But we can't just give up.",
+            }
+        default:
+            {
+                english=" But we can't just give up.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If we try hard enough, we'll
+                    probably get some kind of result!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If we try hard enough, we'll
+                    probably get some kind of result!
+                """,
+            }
+        default:
+            {
+                english="""
+                     If we try hard enough, we'll
+                    probably get some kind of result!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I'm going to give it another go,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I'm going to give it another go,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     I'm going to give it another go,
+                    [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, 40, 24);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m11', 31.5, 20.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    message_Mail({
+        english="""
+            [CN][partner] tried to pull out
+            [CN]the gigantic gem again.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_ATTENDANT1>(67);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_ANGRY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urrrrrrgh![K] Urrrrrrgh!",
+            }
+        case 2:
+            {
+                english=" Urrrrrrgh![K] Urrrrrrgh!",
+            }
+        default:
+            {
+                english=" Urrrrrrgh![K] Urrrrrrgh!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Hmm...)",
+            }
+        default:
+            {
+                english="(Hmm...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's not budging one bit...)",
+            }
+        default:
+            {
+                english="(It's not budging one bit...)",
+            }
+    }
+    message_Close();
+    bgm_Stop();
+    se_Play(5133);
+    screen_FlushOut(1, 4, 4, 128, 96, 64);
+    screen_FlushIn(1, 8, 4, 128, 96, 64);
+    screen_FlushOut(1, 8, 4, 128, 96, 64);
+    screen_FlushIn(1, 12, 4, 128, 96, 64);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Huh?[K] Oh no...)",
+            }
+        default:
+            {
+                english="(Huh?[K] Oh no...)",
+            }
+    }
+    message_Close();
+    se_Play(5133);
+    screen_FlushOut(1, 4, 4, 128, 96, 64);
+    screen_FlushIn(1, 8, 4, 128, 96, 64);
+    screen_FlushOut(1, 8, 4, 128, 96, 64);
+    screen_FlushIn(1, 12, 4, 128, 96, 64);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    Wait(30);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's happening again...)",
+            }
+        default:
+            {
+                english="(It's happening again...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's...)",
+            }
+        default:
+            {
+                english="(It's...)",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 5);
+    end;
+}

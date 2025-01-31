@@ -1,0 +1,422 @@
+
+def 0 {
+    sound_Stop();
+    if ( $SCENARIO_MAIN_BIT_FLAG[8] ) {
+        @label_0;
+        $SCENARIO_MAIN_BIT_FLAG[8] = 0;
+        Wait(30);
+        me_Play(7);
+        message_Explanation({
+            english="""
+                [CN]Exploration Team
+                [CN]Quick Tip[W:30]
+            """,
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_Explanation({
+            english="""
+                [CN]You can save a record of your progress
+                [CN]by climbing onto your bed from now on.
+            """,
+        });
+        message_Explanation({
+            english="""
+                [CN]So whenever you want to save your
+                [CN]progress, just climb onto your bed.
+            """,
+        });
+        message_Close();
+        Wait(60);
+        end;
+    } else {
+        back2_SetMode(4);
+        back2_SetGround(LEVEL_V02P06A);
+        camera2_SetPositionMark(Position<'m0', 19.5, 15.5>);
+        screen2_FadeIn(1, 60);
+        Wait(150);
+        screen2_FadeOut(1, 60);
+        back2_SetMode(0);
+        back_SetGround(LEVEL_G01P07C);
+        supervision_Acting(0);
+        camera_SetMyself<performer 0>();
+        SetAnimation<actor ACTOR_PLAYER>(76);
+        SetAnimation<actor ACTOR_ATTENDANT1>(76);
+        screen_FadeChange(1, 60, 0, 192);
+        bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+        Wait(30);
+        message_SetActor(ACTOR_ATTENDANT1);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" ...",
+                }
+            case 2:
+                {
+                    english=" ...",
+                }
+            default:
+                {
+                    english=" ...",
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" ......",
+                }
+            case 2:
+                {
+                    english=" ......",
+                }
+            default:
+                {
+                    english=" ......",
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         Hey, are you still awake,
+                        [hero]?
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         Oh, are you still awake,
+                        [hero]?
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         Say, are you still awake,
+                        [hero]?
+                    """,
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         My heart's been pounding over
+                        every little thing today...
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         My heart's been racing all
+                        day today over every little thing...
+                    """,
+                }
+            default:
+                {
+                    english=" My heart's been racing all day...",
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         But I'm glad I finally worked up
+                        the courage to come here.
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         But I'm glad I finally made
+                        myself come here.
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         But I'm glad I finally forced
+                        myself to come here.
+                    """,
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         I thought [CS:N]Wigglytuff[CR] would be
+                        a lot scarier, but he seems pretty nice.
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         I thought [CS:N]Wigglytuff[CR] would be
+                        scary, but he seems pretty friendly.
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         I thought [CS:N]Wigglytuff[CR] would be
+                        kind of scary, but he was pretty nice.
+                    """,
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         Even though tomorrow has all
+                        sorts of new stuff in store for us, I'm not
+                        scared at all!
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         We're going to experience all
+                        sorts of things starting tomorrow, but I'm not
+                        very scared.
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         We'll experience all sorts of
+                        new stuff starting tomorrow, but I'm not
+                        very frightened.
+                    """,
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         Actually, I'm excited about the
+                        new adventures we'll face!
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         In fact, it's the other way
+                        around. I'm super excited about the adventures
+                        we'll face!
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         Actually, I can't wait to find
+                        out what new adventures are in store for us!
+                    """,
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Yawn... I'm getting sleepy...",
+                }
+            case 2:
+                {
+                    english=" I'm feeling a little sleepy...",
+                }
+            default:
+                {
+                    english=" I'm getting a little sleepy...",
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Let's do our best tomorrow.",
+                }
+            case 2:
+                {
+                    english=" Let's give it our all tomorrow.",
+                }
+            default:
+                {
+                    english=" Let's give it our all tomorrow.",
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         All right then. Good night,
+                        [hero]...
+                    """,
+                }
+            case 2:
+                {
+                    english=" OK, [hero]. Good night.",
+                }
+            default:
+                {
+                    english=" OK, [hero]. Sleep tight.",
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetAnimation<actor ACTOR_ATTENDANT1>(62);
+        Wait(90);
+        bgm_FadeOut(120);
+        message_EmptyActor();
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(Um...)",
+                }
+            default:
+                {
+                    english="(Um...)",
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(Now I'm suddenly apprenticing at the guild...)",
+                }
+            default:
+                {
+                    english="(Now I'm suddenly apprenticing at the guild...)",
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="""
+                        (I gotta admit, it's pretty exciting to be in an
+                        exploration team.)
+                    """,
+                }
+            default:
+                {
+                    english="""
+                        (I gotta admit, it's pretty exciting to be in an
+                        exploration team.)
+                    """,
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="""
+                        (And it's fun to be friends with
+                        [partner]...)
+                    """,
+                }
+            default:
+                {
+                    english="""
+                        (And it's fun to be friends with
+                        [partner]...)
+                    """,
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(But first things first...)",
+                }
+            default:
+                {
+                    english="(But first things first...)",
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(Who am I?)",
+                }
+            default:
+                {
+                    english="(Who am I?)",
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(How did I turn into a Pokémon?)",
+                }
+            default:
+                {
+                    english="(How did I turn into a Pokémon?)",
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(How did I end up unconscious on that beach?)",
+                }
+            default:
+                {
+                    english="(How did I end up unconscious on that beach?)",
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(I'm feeling sleepy too...)",
+                }
+            default:
+                {
+                    english="(I'm feeling sleepy too...)",
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="""
+                        (Well, thinking about it won't help right now.
+                        I'd better focus on the guild's work for now...)
+                    """,
+                }
+            default:
+                {
+                    english="""
+                        (Well, thinking about it won't help right now.
+                        I'd better focus on the guild's work for now...)
+                    """,
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="""
+                        (If I do that, well, everything should become
+                        clear eventually...)
+                    """,
+                }
+            default:
+                {
+                    english="""
+                        (If I do that, well, everything should become
+                        clear eventually...)
+                    """,
+                }
+        }
+        message_SwitchMonologue ($HERO_TALK_KIND) {
+            case 4:
+                {
+                    english="(I'll surely get to the bottom of this in time.)",
+                }
+            default:
+                {
+                    english="(I'll surely get to the bottom of this in time.)",
+                }
+        }
+        message_Close();
+        Wait(30);
+        SetAnimation<actor ACTOR_PLAYER>(62);
+        Wait(120);
+        screen_FadeOut(1, 120);
+        Wait(60);
+        $SCENARIO_MAIN_BIT_FLAG[8] = 1;
+        $COMPULSORY_SAVE_POINT = 1;
+        CallCommon(CORO_HANYOU_SAVE_FUNC);
+        jump @label_0;
+    }
+}

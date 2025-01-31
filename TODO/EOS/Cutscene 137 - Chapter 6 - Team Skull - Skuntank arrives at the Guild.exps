@@ -1,0 +1,1472 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P03A);
+    supervision_Acting(0);
+    supervision_LoadStation(LEVEL_G01P03A, 'UM06');
+    supervision_Station(3);
+    supervision_Acting(10);
+    SetPositionInitial<actor ACTOR_NPC_BIPPA>();
+    SetPositionInitial<actor ACTOR_NPC_HEIGANI>();
+    SetPositionInitial<actor ACTOR_NPC_CHIRIIN>();
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(2);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(4);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(4);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(4);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8968);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I... I remember!",
+            }
+        case 2:
+            {
+                english=" I... I remember!",
+            }
+        default:
+            {
+                english=" I... I remember!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     They're those two crooks who
+                    ripped off my Relic Fragment!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     They're those two crooks who
+                    stole my Relic Fragment!
+                """,
+            }
+        default:
+            {
+                english="""
+                     They're those two crooks who
+                    took off with my Relic Fragment!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What are they doing here?!",
+            }
+        case 2:
+            {
+                english=" What are they doing here?!",
+            }
+        default:
+            {
+                english=" What are they doing here?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_GROWING_ANXIETY, 0, 256);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english="""
+             Whoa-ho-ho! I'll have you know
+            that we're an exploration team too.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Heh-heh-heh. What's so funny
+            about an exploration team checking out the
+            Job Bulletin Board?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8974);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     What?![K] You're an exploration
+                    team?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     What?![K] You're an exploration
+                    team?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     What?![K] You're an exploration
+                    team?!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english="""
+             That's right. Though the way we
+            operate isn't always...[K]by the book.
+        """,
+    });
+    message_Talk({
+        english="""
+             But what a surprise! Why would
+            you be here?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We wanted to become
+                    exploration team members.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We wanted to become
+                    exploration team members.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We wanted to become
+                    exploration team members.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" So we're training at this guild.",
+            }
+        case 2:
+            {
+                english="""
+                     That's why we're training at
+                    this guild.
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's why we're training at
+                    this guild.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_DOGAASU>(EFFECT_SHOCKED_MIRRORED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_ZUBATTO>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_NPC_ZUBATTO>();
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english=" Whaaaat?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english="""
+             You want to become a real-deal
+            exploration team member?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_ZUBATTO>(4, 10, ACTOR_NPC_DOGAASU);
+    Turn2DirectionLives<actor ACTOR_NPC_DOGAASU>(4, 10, ACTOR_NPC_ZUBATTO);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    Wait(45);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    Move2PositionMark<actor ACTOR_NPC_ZUBATTO>(2, Position<'m0', 42, 26.5>);
+    Move2PositionMark<actor ACTOR_NPC_DOGAASU>(2, Position<'m1', 42, 29>);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_UP);
+    se_Play(8973);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(-1, 3);
+    message_Talk({
+        english=" You! Come with us for a second.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wh-what is it?",
+            }
+        case 2:
+            {
+                english=" Wh-what is it?",
+            }
+        default:
+            {
+                english=" Wh-what is it?",
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m2', 35, 29.5>);
+    Move2PositionMark<actor ACTOR_NPC_ZUBATTO>(1, Position<'m3', 32, 26.5>);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m4', 30, 27.5>);
+    Move2PositionMark<actor ACTOR_NPC_DOGAASU>(1, Position<'m5', 30, 28.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m6', 41.5, 28.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(6417);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_ATTENDANT1>(11);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1.5, Position<'m7', 28, 27.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_NPC_DOGAASU>(5);
+    Slide2PositionOffset<actor ACTOR_NPC_DOGAASU>(1, 8, 16);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    SetAnimation<actor ACTOR_NPC_DOGAASU>(2);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(2, 4);
+    message_Talk({
+        english="""
+             Now don't take what I'm about
+            to say the wrong way.[K] You should just forget
+            about being on an exploration team!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What?! Why?!",
+            }
+        case 2:
+            {
+                english=" What?! Why?!",
+            }
+        default:
+            {
+                english=" What?! Why?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Well, you're timid.
+            You scare easy.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_ZUBATTO);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Talk({
+        english="""
+             A scaredy-cat like you can't cut
+            it on an exploration team.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" B-but!",
+            }
+        case 2:
+            {
+                english=" B-but!",
+            }
+        default:
+            {
+                english=" B-but!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.5, Position<'m8', 36.5, 27.5>);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It-it's true that I'm timid...",
+            }
+        case 2:
+            {
+                english=" It-it's true that I'm timid...",
+            }
+        default:
+            {
+                english=" It-it's true that I'm timid...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But that's why I'm in training!
+                    So I can overcome my own shortcomings!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But that's why I'm in training!
+                    So I can overcome my own shortcomings!
+                """,
+            }
+        default:
+            {
+                english="""
+                     But that's why I'm in training!
+                    So I can overcome my own shortcomings!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Even now, I'm working hard to
+                    be picked for the guild's expedition!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Even now, I'm working hard to
+                    be picked for the guild's expedition!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Even now, I'm working hard to
+                    be picked for the guild's expedition!
+                """,
+            }
+    }
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_DOGAASU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_ZUBATTO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_ZUBATTO>();
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oh? An expedition, you say?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english="""
+             Heh-heh. Well, effort only gets
+            you so far.
+        """,
+    });
+    message_Talk({
+        english="""
+             You won't get picked for the
+            expedition party if you don't have talent, right?
+        """,
+    });
+    message_Talk({
+        english="""
+             It all comes down to talent...
+            pure talent!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_ANGRY, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_ANGRY, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" B-big talk!",
+            }
+        case 2:
+            {
+                english=" B-big talk!",
+            }
+        default:
+            {
+                english=" B-big talk!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You sure talk a lot about talent,
+                    but what kind of skills do you have?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You sure talk a lot about talent,
+                    but what kind of skills do you have?
+                """,
+            }
+        default:
+            {
+                english="""
+                     You sure talk a lot about talent,
+                    but what kind of skills do you have?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You're so weak, you even lost
+                    to us!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You were so weak, we even
+                    beat you!
+                """,
+            }
+        default:
+            {
+                english="""
+                     You're so weak, you even lost
+                    to us!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Whoa-ho-ho! Well, we didn't
+            have the Chief with us.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ch-Chief?",
+            }
+        case 2:
+            {
+                english=" Ch-Chief?",
+            }
+        default:
+            {
+                english=" Ch-Chief?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english=" Heh-heh. That's right.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Team [CS:X]Skull[CR], our exploration
+            team, has three members.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english=" Our Chief is incredibly talented.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             To put it bluntly, he's brutally
+            tough.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english="""
+             Heh-heh. If the Chief were
+            around, we'd snap you like a twig.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_DOGAASU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_ZUBATTO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_ZUBATTO>();
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Whoa-ho-ho! Speaking of the
+            Chief, I can smell him coming now!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Smell?",
+            }
+        case 2:
+            {
+                english=" Smell?",
+            }
+        default:
+            {
+                english=" Smell?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english=" Here's the Chief!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_TEAM_SKULL, 0, 256);
+    supervision_Acting(1);
+    Wait(1);
+    SetAnimation<actor ACTOR_NPC_SUKATANKU>(5);
+    SlidePositionMark<actor ACTOR_NPC_SUKATANKU>(0.5, Position<'m9', 41.5, 23.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    SetAnimation<actor ACTOR_NPC_SUKATANKU>(2);
+    Turn2Direction<actor ACTOR_NPC_SUKATANKU>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    Wait(15);
+    MovePositionMark<actor ACTOR_NPC_SUKATANKU>(0.5, Position<'m10', 41.5, 26>);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Move! Out of the way!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6661);
+    SetAnimation<actor ACTOR_NPC_SUKATANKU>(18);
+    WaitAnimation<actor ACTOR_NPC_SUKATANKU>();
+    Wait(10);
+    SetEffect<performer 3>(639, 3);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    SetAnimation<actor ACTOR_NPC_SUKATANKU>(2);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    MovePositionMark<performer 0>(2.5, Position<'m11', 35, 31.5>);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_PLAYER>(5);
+    SlidePositionMark<actor ACTOR_PLAYER>(2.5, Position<'m12', 41.5, 32.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetDirection<actor ACTOR_PLAYER>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER>(68);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, [hero]!",
+            }
+        case 2:
+            {
+                english=" Oh, [hero]!",
+            }
+        default:
+            {
+                english=" Oh, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_TOP_C_FACER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh! What's this awful stench?",
+            }
+        case 2:
+            {
+                english=" Ugh! What's this awful stench?",
+            }
+        default:
+            {
+                english=" Ew! What's this awful stench?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<performer 3>(0.5, 136, 0);
+    MovePositionMark<performer 0>(1.5, Position<'m13', 55, 31.5>);
+    WaitExecutePerformer(0);
+    ExecuteCommon<actor ACTOR_NPC_KIMAWARI>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    ExecuteCommon<actor ACTOR_NPC_KIMAWARI>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_KIMAWARI);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Eek! It reeks like rotten cheese!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_BIPPA>();
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_SAD, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" That is foul, yes sirree!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(4, 0);
+    message_Talk({
+        english=" Hey, hey! My eyes are burning!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_SUKATANKU);
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_SUKATANKU);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_SUKATANKU);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_NPC_SUKATANKU);
+    Wait(45);
+    MovePositionMark<performer 0>(1.5, Position<'m14', 38, 31.5>);
+    WaitExecutePerformer(0);
+    SetEffect<performer 3>(EFFECT_NONE, 3);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_NPC_SUKATANKU>(0.5, 0, 12);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    MovePositionOffset<actor ACTOR_NPC_SUKATANKU>(0.5, -8, 0);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             Move it! Or do you want to end
+            up like that wimp over there?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh no...",
+            }
+        case 2:
+            {
+                english=" Oh no...",
+            }
+        default:
+            {
+                english=" Oh no...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_UP);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(0.7969, 0, 40);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 2, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    MovePositionOffset<actor ACTOR_NPC_SUKATANKU>(0.5, -24, 0);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    SetEffect<actor ACTOR_NPC_DOGAASU>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_NPC_ZUBATTO>(EFFECT_LAUGHING, 3);
+    ExecuteCommon<actor ACTOR_NPC_DOGAASU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Chief!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             You showed them, Chief! You're
+            the best!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_DOGAASU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_ZUBATTO>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english="""
+             Yeah, yeah, whatever.[K]
+            So, you two, did you sniff out any jobs that'll
+            bring in the cash?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             The Job Bulletin Board only
+            posted cheap tasks, but...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             There's something else, Chief.
+            It's got the potential to go big...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_ZUBATTO>(1, 10, 0);
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    Wait(15);
+    message_Talk({
+        english=" Psst...psst...whisper...psst...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_SUKATANKU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SUKATANKU>();
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english="""
+             What? An expedition from
+            this guild?
+        """,
+    });
+    message_Talk({
+        english=" That does sound tasty.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Doesn't it?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english="""
+             Let's get out of here. We need
+            to do some plotting.
+        """,
+    });
+    message_Talk({
+        english=" Come on. We're going.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Koffing[CR] & [CS:N]Zubat[CR]: Yeah!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_SUKATANKU>(0.7969, Position<'m15', 41.5, 27.5>);
+    MovePositionMark<actor ACTOR_NPC_SUKATANKU>(0.7969, Position<'m16', 41.5, 14.5>);
+    Move2PositionMark<actor ACTOR_NPC_DOGAASU>(0.7969, Position<'m17', 41.5, 27.5>);
+    Wait(60);
+    MovePositionOffset<actor ACTOR_NPC_ZUBATTO>(0.7969, 40, 16);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 10, DIR_DOWNRIGHT);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             What are you all staring at?
+            This isn't a public performance!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_NPC_KIMAWARI);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_HEIGANI);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    Wait(45);
+    MovePositionMark<actor ACTOR_NPC_DOGAASU>(0.7969, Position<'m18', 41.5, 14.5>);
+    Turn2DirectionLives<actor ACTOR_NPC_ZUBATTO>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Heh-heh, see you around, wimps.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionMark<actor ACTOR_NPC_ZUBATTO>(1.1992, Position<'m19', 41.5, 27.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    bgm_FadeOut(120);
+    MovePositionMark<actor ACTOR_NPC_ZUBATTO>(1.1992, Position<'m20', 41.5, 14.5>);
+    Destroy<actor ACTOR_NPC_SUKATANKU>();
+    Destroy<actor ACTOR_NPC_DOGAASU>();
+    Destroy<actor ACTOR_NPC_ZUBATTO>();
+    Wait(60);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(4);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(4);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(4);
+    WaitBgm(BGM_TEAM_SKULL);
+    MovePositionMark<performer 0>(1, Position<'m21', 40, 31.5>);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, 18, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(8975);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Are you all right, [hero]?!",
+            }
+        case 2:
+            {
+                english=" Are you OK, [hero]?!",
+            }
+        default:
+            {
+                english=" Are you OK, [hero]?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(63);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, -16, 0);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Great! It doesn't look like
+                    you're hurt.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Great! It doesn't look like
+                    you're injured.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Great! It doesn't look like
+                    you're injured.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That sure was rough, though.",
+            }
+        case 2:
+            {
+                english=" That sure was rough, though.",
+            }
+        default:
+            {
+                english=" That goon was rough, though.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I couldn't work up the courage to
+                    challenge him to his face!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I couldn't work up the courage to
+                    challenge him to his face!
+                """,
+            }
+        default:
+            {
+                english="""
+                     I couldn't work up the courage to
+                    challenge him to his face!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Even though he knocked you out,
+                    [hero]... I'm so disappointed in myself...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Even though he hurt you,
+                    [hero]... I'm ashamed of myself...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Even though he knocked you out,
+                    [hero]... I let you down...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     They're right... I am a wimp...
+                    A big chicken.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     They're right... I am a wimp...
+                    A big chicken.
+                """,
+            }
+        default:
+            {
+                english="""
+                     They're right... I am a wimp...
+                    A big chicken.
+                """,
+            }
+    }
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="You're not a wimp...",
+        }):
+        default:
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8972);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+            WaitEffect<actor ACTOR_ATTENDANT1>();
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Thanks for trying to cheer me
+                            up, [hero]...
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Thanks for trying to cheer me
+                            up, [hero]...
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Thanks for trying to cheer me
+                            up, [hero]...
+                        """,
+                    }
+            }
+            message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" But...",
+                    }
+                case 2:
+                    {
+                        english=" But...",
+                    }
+                default:
+                    {
+                        english=" But...",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" But I really am a wimp...",
+                    }
+                case 2:
+                    {
+                        english=" But I really am a wimp...",
+                    }
+                default:
+                    {
+                        english=" But I really am a wimp...",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Wait(20);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" But it's nothing new for me...",
+                    }
+                case 2:
+                    {
+                        english=" But it's nothing new for me...",
+                    }
+                default:
+                    {
+                        english=" But it's nothing new for me...",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             I've decided that I can still do
+                            my best even if I'm not very brave.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             I've decided that I can still do
+                            my best even if I'm not very brave.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             I've decided that I can still do
+                            my best even if I'm not very brave.
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             I won't let something like this
+                            break me.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             I'm not going to give up over
+                            something like this.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             I'm not giving up over something
+                            like this.
+                        """,
+                    }
+            }
+            message_KeyWait();
+            bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             I'm going to be cheerful and
+                            keep trying.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             I'm going to be cheerful and
+                            keep trying.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             I'm going to be cheerful and
+                            keep trying.
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Thanks, [hero]!",
+                    }
+                case 2:
+                    {
+                        english=" Thank you, [hero]!",
+                    }
+                default:
+                    {
+                        english=" Thank you, [hero]!",
+                    }
+            }
+            @label_2;
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             For now, we'd better keep
+                            working like we've been doing.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             For now, we'd better keep
+                            working like we've been doing.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             For now, we'd better keep
+                            working like we've been doing.
+                        """,
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+            WaitExecuteLives(ACTOR_PLAYER);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Today we're supposed to handle
+                            the jobs on the Job Bulletin Board and the
+                            Outlaw Notice Board.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Today we're supposed to handle
+                            the jobs on the Job Bulletin Board and the
+                            Outlaw Notice Board.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Today we're supposed to handle
+                            the jobs on the Job Bulletin Board and the
+                            Outlaw Notice Board.
+                        """,
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Let's keep at it, [hero]!",
+                    }
+                case 2:
+                    {
+                        english=" Let's keep at it, [hero]!",
+                    }
+                default:
+                    {
+                        english=" Let's keep at it, [hero]!",
+                    }
+            }
+            message_Close();
+            end;
+        case menu({
+            english="Bok bok bok!",
+        }):
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8972);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+            WaitEffect<actor ACTOR_ATTENDANT1>();
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" I-I guess you're right...",
+                    }
+                case 2:
+                    {
+                        english=" I-I guess you're right...",
+                    }
+                default:
+                    {
+                        english=" I-I guess you're right...",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" I'm a really big chicken.",
+                    }
+                case 2:
+                    {
+                        english=" I'm a really big chicken.",
+                    }
+                default:
+                    {
+                        english=" I'm a really big chicken.",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Wait(20);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" But it's nothing new for me...",
+                    }
+                case 2:
+                    {
+                        english=" But it's nothing new for me...",
+                    }
+                default:
+                    {
+                        english=" But it's nothing new for me...",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             I've decided that I can still do
+                            my best even if I'm not very brave.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             I've decided that I can still do
+                            my best even if I'm not very brave.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             I've decided that I can still do
+                            my best even if I'm not very brave.
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             I won't let something like this
+                            break me.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             I'm not going to give up over
+                            something like this.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             I'm not giving up over something
+                            like this.
+                        """,
+                    }
+            }
+            message_KeyWait();
+            bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             I'm going to be cheerful and
+                            keep trying.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             I'm going to be cheerful and
+                            keep trying.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             I'm going to be cheerful and
+                            keep trying.
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Thanks for straightening me
+                            out, [hero]!
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Thank you for straightening me
+                            out, [hero]!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Thank you for straightening me
+                            out, [hero]!
+                        """,
+                    }
+            }
+            jump @label_2;
+    }
+}

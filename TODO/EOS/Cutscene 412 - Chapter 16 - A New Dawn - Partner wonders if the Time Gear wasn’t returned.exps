@@ -1,0 +1,119 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    back_SetGround(LEVEL_D24P31B);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Didn't [CS:N]Uxie[CR] and his friends make
+                    a promise...?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Didn't [CS:N]Uxie[CR] and his friends make
+                    a promise...?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Didn't [CS:N]Uxie[CR] and his friends make
+                    a promise...?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That they'd put back the Time
+                    Gears in their rightful places?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That they would return the
+                    Time Gears to their rightful places?
+                """,
+            }
+        default:
+            {
+                english="""
+                     That they would return the
+                    Time Gears to their rightful places?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" But time remains stopped here...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That means...",
+            }
+        case 2:
+            {
+                english=" That could mean...",
+            }
+        default:
+            {
+                english=" That means...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The Time Gears might not be
+                    put back in their rightful places yet.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The Time Gears may not have
+                    been returned to their rightful places yet.
+                """,
+            }
+        default:
+            {
+                english="""
+                     The Time Gears may not have
+                    been put back in their rightful places yet.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             We'll see about that. The
+            forest's Time Gear was over here.
+        """,
+    });
+    message_Close();
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(1.5, 0, -160);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1.5, 0, -160);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_PLAYER>(1.5, 0, -160);
+    Wait(30);
+    screen_FadeOut(1, 30);
+    end;
+}

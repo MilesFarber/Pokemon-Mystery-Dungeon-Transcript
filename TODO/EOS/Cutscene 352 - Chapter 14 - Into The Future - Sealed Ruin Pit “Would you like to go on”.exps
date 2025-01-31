@@ -1,0 +1,32 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_SEALED_RUIN_PIT, 0, 256);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    message_Mail({
+        english="[CN]Would you like to go on?",
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+        default:
+            @label_0;
+            message_Close();
+            if ( scn($SCENARIO_MAIN) >= [19, 3] ) {
+                @label_2;
+                main_EnterDungeon(30, 30);
+                main_EnterDungeon(-1, 30);
+                hold;
+            } else {
+                supervision_ExecuteCommon(CORO_EVENT_M18_09);
+                jump @label_2;
+            }
+            break;
+        case menu({
+            english="No",
+        }):
+            message_Close();
+            end;
+    }
+}

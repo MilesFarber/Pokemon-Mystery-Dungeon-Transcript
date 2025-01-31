@@ -1,0 +1,515 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P07C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_PLAYER>(DIR_RIGHT);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER>(76);
+    SetAnimation<actor ACTOR_ATTENDANT1>(76);
+    bgm2_PlayFadeIn(BGM_STORM_INSIDE, 120, 140);
+    screen_FadeChange(1, 30, 0, 192);
+    Wait(30);
+    Wait(60);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [hero].",
+            }
+        case 2:
+            {
+                english=" Listen, [hero].",
+            }
+        default:
+            {
+                english=" Say, [hero].",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Are you still awake,
+                    [hero]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Are you still awake,
+                    [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Are you still awake,
+                    [hero]?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I've been thinking about this
+                    since it happened.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I've been thinking it over since
+                    it happened.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I've been thinking about it since
+                    it happened.
+                """,
+            }
+    }
+    back_SetBackEffect(3);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That weird dream you had,
+                    [hero]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That strange dream you had,
+                    [hero]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     That strange dream you had,
+                    [hero]...
+                """,
+            }
+    }
+    back_SetBackEffect(1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Maybe it has to do with you
+                    personally, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Maybe it has to do with you
+                    personally, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     Maybe it has to do with you
+                    personally, [hero].
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Huh?)",
+            }
+        default:
+            {
+                english="(Huh?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    back_SetBackEffect(3);
+    Wait(60);
+    back_SetBackEffect(1);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's just the feeling that I get.",
+            }
+        case 2:
+            {
+                english=" That's just the feeling I get.",
+            }
+        default:
+            {
+                english=" I can't quite say why.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I sure don't know any other
+                    [c_kind:PLAYER] who dreams about the future.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I sure don't know any other
+                    [c_kind:PLAYER] who dreams about the future.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I sure don't know any other
+                    [c_kind:PLAYER] who dreams about the future.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And I've never heard of a human
+                    suddenly turning into a Pokémon either.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And I've never heard of a human
+                    suddenly turning into a Pokémon either.
+                """,
+            }
+        default:
+            {
+                english="""
+                     And I've never heard of a human
+                    suddenly turning into a Pokémon either.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's why I think those two
+                    events are connected.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's why I think those two
+                    events are connected.
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's why I think those two
+                    events are connected.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I just can't shake that feeling.",
+            }
+        case 2:
+            {
+                english=" I can't help feeling that way.",
+            }
+        default:
+            {
+                english=" That's the feeling I keep getting.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(The key to unlocking my memory...)",
+            }
+        default:
+            {
+                english="(The key to unlocking my memory...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Was it in that dream?)",
+            }
+        default:
+            {
+                english="(Was it in that dream?)",
+            }
+    }
+    back_SetBackEffect(3);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(But even if that were true...)",
+            }
+        default:
+            {
+                english="(But even if that were true...)",
+            }
+    }
+    back_SetBackEffect(1);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(How does it relate to anything else?)",
+            }
+        default:
+            {
+                english="(How does it relate to anything else?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I don't know what you were like
+                    as a human, [hero]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I have no way of knowing what
+                    you were like as a human, [hero]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     I don't know what you were like
+                    as a human, [hero]...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But I'm sure you were a
+                    good person.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But I think you must have been
+                    a good person.
+                """,
+            }
+        default:
+            {
+                english="""
+                     But I think you must have been
+                    a good person.
+                """,
+            }
+    }
+    back_SetBackEffect(3);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I mean, it was because of your
+                    dream, [hero], that we were able to
+                    catch that bad Pokémon.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     After all, [hero], it was
+                    your dream that helped us catch that
+                    bad Pokémon.
+                """,
+            }
+        default:
+            {
+                english="""
+                     After all, [hero], it was
+                    your dream that helped us catch that
+                    bad Pokémon.
+                """,
+            }
+    }
+    back_SetBackEffect(1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Bad Pokémon, huh...)",
+            }
+        default:
+            {
+                english="(Bad Pokémon, huh...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Oh! That reminds me of what [CS:N]Chatot[CR] said.)",
+            }
+        default:
+            {
+                english="(Oh! That reminds me of what [CS:N]Chatot[CR] said.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (That the growing number of bad Pokémon has
+                    been caused by time going out of whack.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (That the growing number of bad Pokémon has
+                    been caused by time going out of whack.)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" You know...",
+            }
+        case 2:
+            {
+                english=" You know...",
+            }
+        default:
+            {
+                english=" You know...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Time is getting messed up,
+                    bit by bit, all over the world.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Time is getting messed up,
+                    bit by bit, all over the world.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Time is getting messed up,
+                    bit by bit, all over the world.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" No one seems to know why.",
+            }
+        case 2:
+            {
+                english=" No one seems to know why.",
+            }
+        default:
+            {
+                english=" No one seems to know why.",
+            }
+    }
+    back_SetBackEffect(3);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But everyone believes that the
+                    Time Gears are somehow involved.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But everyone believes that the
+                    Time Gears are somehow involved.
+                """,
+            }
+        default:
+            {
+                english="""
+                     But everyone believes that the
+                    Time Gears are somehow involved.
+                """,
+            }
+    }
+    back_SetBackEffect(1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Huh?[K] Time Gears?)",
+            }
+        default:
+            {
+                english="(Huh?[K] Time Gears?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     They say Time Gears are hidden
+                    in secret places around the world.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     They say Time Gears are hidden
+                    in secret places around the world.
+                """,
+            }
+        default:
+            {
+                english="""
+                     They say Time Gears are hidden
+                    in secret places around the world.
+                """,
+            }
+    }
+    message_Close();
+    bgm2_FadeOut(60);
+    screen_FadeOut(1, 30);
+    end;
+}

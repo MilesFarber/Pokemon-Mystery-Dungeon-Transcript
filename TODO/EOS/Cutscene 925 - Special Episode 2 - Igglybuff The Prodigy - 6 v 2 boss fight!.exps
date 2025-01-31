@@ -1,0 +1,187 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(132, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             When we came here before, it
+            seemed like this was the deepest point of the
+            cave, but...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             It's so dark, I can't see
+            a thing. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Be careful!",
+    });
+    message_Talk({
+        english="""
+             This time, let's be careful not to
+            fall into the pit agai--
+        """,
+    });
+    se_Play(9732);
+    WaitSe(9732);
+    message_CloseEnforce();
+    Wait(30);
+    se_Play(7170);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" UWAAAAAaaaaaaahhhhhh!",
+    });
+    WaitSe(7170);
+    Wait(30);
+    message_CloseEnforce();
+    se_Play(7939);
+    WaitSe(7939);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Ow ow ow ow ow...[K] Oh, my
+            aching back...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(9474);
+    message_ImitationSound({
+        english="[CS:N]???[CR]: GARURURURURURURURURURURU...",
+    });
+    WaitSe(9474);
+    message_CloseEnforce();
+    Wait(10);
+    se_Play(9738);
+    message_ImitationSound({
+        english="""
+            [CN]
+            [CN]ZAZA... ZAZA...
+        """,
+    });
+    WaitSe(9738);
+    message_CloseEnforce();
+    Wait(20);
+    se_Play(6930);
+    message_ImitationSound({
+        english="[CS:N]???[CR]: GWWWOOOOOOAAAaaaaaAAAAAHHHH!!!",
+    });
+    Wait(45);
+    screen_WhiteOutAll(1, 30);
+    message_CloseEnforce();
+    Wait(30);
+    back_SetGround(LEVEL_D45P42A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(0, 15);
+    screen_FadeInAll(1, 15);
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 256);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_NPC_AAMARUDO>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(1, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(5);
+    SlidePositionOffset<actor ACTOR_NPC_AAMARUDO>(1, -4, 0);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(2);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_PLAYER_PUPURIN>(4, 10, ACTOR_NPC_AAMARUDO);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Hey, Master.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_NONE, 3);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_AAMARUDO>();
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_ANGRY, FACE_POS_TOP_RC_FACEOUTW);
+    message_Talk({
+        english=" Wh-what is it? Can it wait?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" We fell in the pit again...",
+    });
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             It seems you really like pits,
+            Master.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_AAMARUDO>(1, 10, ACTOR_PLAYER_PUPURIN);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    se_Play(8971);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_ANGRY, 3);
+    ExecuteCommon<actor ACTOR_NPC_AAMARUDO>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_ANGRY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I...[K] No, they really bring
+            me down!
+        """,
+    });
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_NONE, 3);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(1, 2, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_ANGRY, FACE_POS_TOP_RC_FACEOUTW);
+    message_Talk({
+        english="""
+             Anyway, eyes front![K]
+            Here they come!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_TOP_LC_FACEOUTW);
+    message_Talk({
+        english=" We'll get through this time! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_ANGRY, FACE_POS_TOP_RC_FACEOUTW);
+    message_Talk({
+        english=" That's what I expected!",
+    });
+    message_Close();
+    bgm_Stop();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(132, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

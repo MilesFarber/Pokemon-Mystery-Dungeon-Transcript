@@ -1,0 +1,628 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 10];
+    back_SetGround(LEVEL_D73P11A);
+    supervision_LoadStation(LEVEL_D73P11A, 'US31');
+    supervision_Station(2);
+    supervision_Station(20);
+    supervision_Station(47);
+    supervision_StationCommon(0);
+    supervision_StationCommon(7);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_SHEIMI>();
+    SetPositionInitial<actor ACTOR_NPC_KUCHIITO>();
+    SetAnimation<actor ACTOR_NPC_KUCHIITO>(2);
+    MovePositionOffset<performer 0>(0.5, 180, 0);
+    bgm_PlayFadeIn(BGM_SHAYMIN_VILLAGE, 0, 256);
+    screen_FadeIn(1, 30);
+    Wait(270);
+    screen_FadeOut(1, 30);
+    SetPositionMark<performer 0>(Position<'m0', 40.5, 41.5>);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 43, 42.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 38.5, 42.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So this is the
+                    [CS:P]Shaymin Village[CR], huh?
+                """,
+            }
+        case 2:
+            {
+                english=" So this is the [CS:P]Shaymin Village[CR]?",
+            }
+        default:
+            {
+                english=" So this is the [CS:P]Shaymin Village[CR]?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Pretty peaceful.",
+            }
+        case 2:
+            {
+                english=" It's pretty peaceful...",
+            }
+        default:
+            {
+                english=" It's so peaceful...",
+            }
+    }
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_SHEIMI>(2);
+    Turn2Direction<actor ACTOR_NPC_SHEIMI>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    Wait(15);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SHEIMI>();
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    MovePositionMark<actor ACTOR_NPC_SHEIMI>(1, Position<'m3', 40.5, 38.5>);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    message_SetFaceOnly(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Welcome to the [CS:P]Shaymin Village[CR].",
+    });
+    message_Talk({
+        english="""
+             It's nice to meet you.
+            My name is [CS:N]Shaymin[CR].[K]
+            I live here in this village.
+        """,
+    });
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Then again, all the residents
+            of this village are [CS:N]Shaymin[CR]...[K]
+            That makes it hard to tell us apart, doesn't it?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ha ha ha!",
+            }
+        case 2:
+            {
+                english=" Ha ha ha!",
+            }
+        default:
+            {
+                english=" Ha ha ha!",
+            }
+    }
+    message_KeyWait();
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Nice to meet you!
+                    We're Team [team:]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Nice to meet you!
+                    We're Team [team:]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Nice to meet you!
+                    We're Team [team:]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Did you come to climb
+            [CS:P]Sky Peak[CR] too, Team [team:]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yep. That's it.",
+            }
+        case 2:
+            {
+                english=" Yeah, that's right.",
+            }
+        default:
+            {
+                english=" Yes, that's correct.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So I bet you know this
+                    mountain pretty well?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I take it you know this
+                    mountain well?
+                """,
+            }
+        default:
+            {
+                english="""
+                     I would assume that you know
+                    this mountain very well?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             That's right. We've lived here
+            for a very long time...
+        """,
+    });
+    message_Talk({
+        english="""
+             We're here to guide travelers up
+            the mountain.
+        """,
+    });
+    message_Talk({
+        english="""
+             But we haven't actually done that
+            in quite some time.
+        """,
+    });
+    message_Talk({
+        english="""
+             That is, the earthquake that
+            happened here some time ago destroyed
+            the mountain path that led here...
+        """,
+    });
+    message_Talk({
+        english="""
+             So explorers from outside
+            couldn't get here very easily, and they
+            stopped coming.
+        """,
+    });
+    message_Talk({
+        english="""
+             We were pretty surprised
+            when the survey team walked into our
+            little village.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Really? I see.",
+            }
+        case 2:
+            {
+                english=" Really? I see.",
+            }
+        default:
+            {
+                english=" Really? I see.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That explains why this place has
+                    only been talked about in legends, and nobody's
+                    come to visit.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That explains why this place has
+                    only been talked about in legends, and nobody's
+                    come to visit.
+                """,
+            }
+        default:
+            {
+                english="""
+                     That explains why this place has
+                    only been talked about in legends, and nobody's
+                    come to visit.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, yeah! Speaking of legends...",
+            }
+        case 2:
+            {
+                english=" Oh, yeah! Speaking of legends...",
+            }
+        default:
+            {
+                english=" Oh, yeah! Speaking of legends...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Is it true that there's an
+                    incredible treasure hidden here, one that
+                    rivals all other treasures?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Is it true that there's an
+                    incredible treasure hidden here, one that
+                    rivals all other treasures?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Is it true that there's an
+                    incredible treasure hidden here, one that
+                    rivals all other treasures?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Hee hee hee...
+            What do you think?
+        """,
+    });
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Our job is not limited to simply
+            acting as your guides.
+        """,
+    });
+    message_Talk({
+        english="""
+             But in the end, those climbing
+            the mountain must discover some things
+            for themselves.
+        """,
+    });
+    message_Talk({
+        english="""
+             We are merely assigned to
+            assist in those discoveries.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Really? I'm not sure I get it, but
+                    I think there's more to it than just that.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Really? I'm not sure I fully
+                    understand, but I think there's a little more to
+                    it than that.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Really? I'm not sure I fully
+                    understand, but I think there's a little more to
+                    it than that.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" That's right.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_NONE, 3);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             By the way...[K]
+            Now that we've discussed all this...
+        """,
+    });
+    message_Talk({
+        english="""
+             If you're interested, I could be
+            your guide. What do you think?
+        """,
+    });
+    message_Talk({
+        english="""
+             For some reason, while talking
+            to you, Team [team:], I've begun to really
+            want to climb the mountain with you.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Really? That's nice of you
+                    to offer.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Really? That's a nice offer.
+                    I was thinking the same thing.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Really? Why, thank you!
+                    I was thinking that too.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hey, [hero]?
+                    What do you think? Should we let [CS:N]Shaymin[CR]
+                    join us?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Hey, [hero]?
+                    What do you think? Should we let [CS:N]Shaymin[CR]
+                    join us?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Hey, [hero]?
+                    What do you think? Should we let [CS:N]Shaymin[CR]
+                    join us?
+                """,
+            }
+    }
+    @label_2;
+    forever {
+        switch ( message_SwitchMenu(0, 1) ) {
+            case menu({
+                english="Yes",
+            }):
+                break_loop;
+                break;
+            case menu({
+                english="No",
+            }):
+            default:
+                message_Close();
+                se_Play(8968);
+                SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+                WaitEffect<actor ACTOR_ATTENDANT1>();
+                WaitExecuteLives(ACTOR_ATTENDANT1);
+                message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" Whaat?! Really?!",
+                        }
+                    case 2:
+                        {
+                            english=" Whaat?! Really?!",
+                        }
+                    default:
+                        {
+                            english=" Whaat?! Really?!",
+                        }
+                }
+                message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 Don't you think it would
+                                definitely be better if we had a guide?
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 Don't you think it would
+                                be better if we had a guide?
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 Don't you think it would
+                                be better if we had a guide?
+                            """,
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 We should ask [CS:N]Shaymin[CR]
+                                to guide us, OK?
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 I really think we should ask
+                                [CS:N]Shaymin[CR] to guide us. OK?
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 I really think we should ask
+                                [CS:N]Shaymin[CR] to guide us. OK?
+                            """,
+                        }
+                }
+                continue;  // may be redundant
+        }
+    }
+    @label_0;
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Hee hee hee. Yay!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_NONE, 3);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             OK, I'll be waiting at the
+            mountain-path entrance for you.
+        """,
+    });
+    message_Talk({
+        english="""
+             The mountain path is straight
+            ahead from here.
+        """,
+    });
+    message_Talk({
+        english="""
+             Please come once you've finished
+            your preparations.
+        """,
+    });
+    message_Talk({
+        english=" See you later!",
+    });
+    message_Close();
+    MovePositionOffset<actor ACTOR_NPC_SHEIMI>(1, 0, -88);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    screen_FadeOut(1, 60);
+    SetPositionMark<actor ACTOR_NPC_SHEIMI>(Position<'m4', 45, 16.5>);
+    SetDirection<actor ACTOR_NPC_SHEIMI>(DIR_DOWN);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_OKUTAN>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_BARIYAADO>(2);
+    SetDirection<actor ACTOR_NPC_KINOGASSA>(DIR_DOWN);
+    camera_SetDefault();
+    Wait(30);
+    screen_FadeIn(1, 30);
+    end;
+}
+
+def 1 for actor ACTOR_NPC_KINOGASSA {
+    SetPositionInitial();
+    SetAnimation(2);
+    @label_3;
+    forever {
+        Turn2Direction(4, 10, DIR_DOWN);
+        SetEffect(EFFECT_JOYOUS, 3);
+        WaitRandom(90, 180);
+        SetEffect(EFFECT_NONE, 3);
+        Turn2Direction(4, 10, DIR_DOWNRIGHT);
+        SetAnimation(4);
+        WaitRandom(120, 180);
+        continue;  // may be redundant
+    }
+}
+
+def 2 for actor ACTOR_NPC_BARIYAADO {
+    SetPositionInitial();
+    SetAnimation(2);
+    Wait(15);
+    @label_4;
+    forever {
+        SetAnimation(4);
+        WaitRandom(90, 180);
+        SetAnimation(2);
+        WaitRandom(60, 180);
+        continue;  // may be redundant
+    }
+}
+
+def 3 for actor ACTOR_NPC_OKUTAN {
+    SetPositionInitial();
+    SetAnimation(2);
+    Wait(30);
+    @label_5;
+    forever {
+        SetEffect(EFFECT_JOYOUS, 3);
+        WaitRandom(90, 180);
+        SetEffect(EFFECT_NONE, 3);
+        WaitRandom(60, 180);
+        continue;  // may be redundant
+    }
+}

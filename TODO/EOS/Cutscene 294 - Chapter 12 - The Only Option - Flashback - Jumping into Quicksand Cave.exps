@@ -1,0 +1,55 @@
+
+def 0 {
+    back_SetGround(LEVEL_D14P11A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    supervision_StationCommon(0);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ready?!",
+            }
+        case 2:
+            {
+                english=" Are you ready?!",
+            }
+        default:
+            {
+                english=" Are you ready?!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" One...[K]two...[K]three![K] Go!",
+            }
+        case 2:
+            {
+                english=" One...[K]two...[K]three![K] Go!",
+            }
+        default:
+            {
+                english=" One...[K]two...[K]three![K] Go!",
+            }
+    }
+    message_Close();
+    MovePositionMark<actor ACTOR_PLAYER>(1.5, Position<'m0', 31, 22.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.5, Position<'m1', 27, 22.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(10);
+    MovePositionMark<actor ACTOR_PLAYER>(3, Position<'m2', 31, 18.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(3, Position<'m3', 27, 18.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(74);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(74);
+    screen_FadeOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

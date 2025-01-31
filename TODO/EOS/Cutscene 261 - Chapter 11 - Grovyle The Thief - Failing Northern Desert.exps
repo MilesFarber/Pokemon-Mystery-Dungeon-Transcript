@@ -1,0 +1,56 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     All right, let's get moving to the
+                    [CS:P]Northern Desert[CR].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     OK! We should head on out to
+                    the [CS:P]Northern Desert[CR].
+                """,
+            }
+        default:
+            {
+                english="""
+                     OK! We should get moving to
+                    the [CS:P]Northern Desert[CR].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's go to the [CS:P]Northern Desert[CR]
+                    and find that Time Gear!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's go to the [CS:P]Northern Desert[CR]
+                    and find a Time Gear.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's go to the [CS:P]Northern Desert[CR]
+                    and find that Time Gear.
+                """,
+            }
+    }
+    message_Close();
+    end;
+}

@@ -1,0 +1,117 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_PLANETS_PARALYSIS, 0, 256);
+    back_SetGround(LEVEL_P05P04A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's as if...[K]all movement...",
+            }
+        case 2:
+            {
+                english=" It's as if...[K]all movement...",
+            }
+        default:
+            {
+                english=" It's as if...[K]all movement...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's as if everything's stopped.",
+            }
+        case 2:
+            {
+                english=" It's as if everything's stopped.",
+            }
+        default:
+            {
+                english=" It's as if everything's stopped.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Exactly.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_JUPUTORU);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What?!",
+            }
+        case 2:
+            {
+                english=" What?!",
+            }
+        default:
+            {
+                english=" Pardon?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english=" Wheh-heh-heh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8974);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(1, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(1, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wah! I hear those [CS:N]Sableye[CR]!",
+            }
+        case 2:
+            {
+                english=" Wah! I hear those [CS:N]Sableye[CR]!",
+            }
+        default:
+            {
+                english=" Wah! I hear those [CS:N]Sableye[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" We have to keep running!",
+    });
+    message_Close();
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(1.5, 160, 0);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_PLAYER>(1.5, 160, 0);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1.5, 160, 0);
+    Wait(30);
+    bgm_FadeOut(180);
+    screen_FadeOut(1, 60);
+    WaitBgm(BGM_PLANETS_PARALYSIS);
+    end;
+}

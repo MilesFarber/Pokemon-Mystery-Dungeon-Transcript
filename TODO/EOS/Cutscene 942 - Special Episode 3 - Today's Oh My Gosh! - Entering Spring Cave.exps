@@ -1,0 +1,72 @@
+
+def 0 {
+    $SCENARIO_SIDE = scn[43, 2];
+    screen_FadeOut(1, 30);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(30);
+    SetPositionInitial<actor ACTOR_PLAYER_KIMAWARI>();
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(2);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" OK.",
+    });
+    message_Talk({
+        english="""
+             Before I head out...[K] I should
+            confirm my assignment.
+        """,
+    });
+    message_Close();
+    se_Play(9985);
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(25);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V34P01A);
+    camera2_SetPositionMark(Position<'m0', 16.5, 16.5>);
+    screen2_FadeIn(1, 15);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" .........",
+    });
+    message_Talk({
+        english="""
+             I need to apprehend the outlaw
+            [CS:N]Haunter[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             Officer [CS:N]Magnezone[CR] said that if I
+            head out right away, I should be able to catch
+            him in no time...
+        """,
+    });
+    message_Talk({
+        english="""
+             If I head out quickly, I'll be done
+            in a flash!
+        """,
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(26);
+    WaitAnimation<actor ACTOR_PLAYER_KIMAWARI>();
+    screen2_FadeOut(1, 15);
+    back2_SetMode(0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(2);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Yup![K] All right, here I go!",
+    });
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_Close();
+    MovePositionOffset<actor ACTOR_PLAYER_KIMAWARI>(1, 64, 0);
+    bgm_FadeOut(60);
+    switch ( main_EnterAdventure(250, 30) ) { }
+    hold;
+    end;
+}

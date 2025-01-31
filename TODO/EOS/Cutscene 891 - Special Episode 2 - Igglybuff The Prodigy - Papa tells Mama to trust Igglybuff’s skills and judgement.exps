@@ -1,0 +1,111 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_P17P02C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(42);
+    bgm2_PlayFadeIn(BGM_FIRE_CRACKLING3, 60, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I'm not sure what happened,
+            and I still don't exactly know what it was...
+        """,
+    });
+    message_Talk({
+        english="""
+             But I'm sure that it was
+            [CS:Y]Igglybuff[CR] that saved me.
+        """,
+    });
+    message_Talk({
+        english=" Of that, I am certain.",
+    });
+    message_Talk({
+        english="""
+             That kid has some kind of
+            mysterious power.
+        """,
+    });
+    message_Talk({
+        english="""
+             He doesn't just have some
+            strong power.
+        """,
+    });
+    message_Talk({
+        english="""
+             When people are in trouble...[K]
+            That's when it appears...
+        """,
+    });
+    message_Talk({
+        english="""
+             I get the feeling this power is
+            full of his kindness for others.
+        """,
+    });
+    message_Talk({
+        english="""
+             I understand your concerns,
+            [CS:N]Mama[CR]...[K] But I think we should trust our
+            child a little more, OK?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_NORMAL, FACE_POS_BOTTOM_LC_FACEOUTW);
+    message_FacePositionOffset(3, -5);
+    message_Talk({
+        english=" ...[K]Yes.[K] You're right...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_FadeOut(60);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    Wait(45);
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(3, -5);
+    message_Talk({
+        english=" I'm sorry, [CS:N]Papa[CR].",
+    });
+    message_Talk({
+        english="""
+             He'll be OK.[K] After all, he is
+            our son. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yeah.",
+    });
+    message_Talk({
+        english="""
+             It's a good thing to be concerned
+            about, [CS:N]Mama[CR], so don't worry.
+        """,
+    });
+    message_Talk({
+        english="""
+             That is, the fact that you are
+            concerned, [CS:N]Mama[CR]...[K] It just shows how much
+            you truly care about [CS:Y]Igglybuff[CR]...[K]right?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_HAPPY, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(3, -5);
+    message_Talk({
+        english=" Yeah.[K] Thank you, [CS:N]Papa[CR]. ♪",
+    });
+    message_Close();
+    bgm_FadeOut(160);
+    screen_FadeOut(1, 90);
+    Wait(60);
+    end;
+}

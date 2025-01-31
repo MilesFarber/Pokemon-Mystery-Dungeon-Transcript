@@ -1,0 +1,27 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_V03P07A);
+    supervision_Acting(0);
+    Wait(1);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(42);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_V03P06A2_200>(3);
+    SetAnimation<object OBJECT_V03P06A1_196>(3);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    Wait(50);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(1, Position<'m0', 19.5, 20.5>);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(256);
+    Wait(60);
+    screen_FadeOut(1, 15);
+    Wait(30);
+    message_ResetActor();
+    message_Talk({
+        english=" This is the second one!",
+    });
+    message_Close();
+    screen_FadeOut(1, 15);
+    end;
+}

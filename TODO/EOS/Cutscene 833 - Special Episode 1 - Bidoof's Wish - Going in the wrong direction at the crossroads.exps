@@ -1,0 +1,35 @@
+
+def 0 {
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_RC_FACER);
+    message_Talk({
+        english=" N-nope...[K]not this way.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" [CS:K]Kecleon[CR] Market is that way.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Lately a lot of troubling things
+            have happened. Maybe I've been a bit strange,
+            yup yup...
+        """,
+    });
+    message_Talk({
+        english="""
+             I should hurry to
+            [CS:K]Kecleon[CR] Market.
+        """,
+    });
+    message_Close();
+    end;
+}

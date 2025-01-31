@@ -1,0 +1,29 @@
+
+def 0 {
+    screen_FadeOut(1, 30);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(30);
+    SetPositionInitial<actor ACTOR_PLAYER_KIMAWARI>();
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(2);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I've got to move quickly and help
+            [CS:N]Loudred[CR]!
+        """,
+    });
+    message_Talk({
+        english=" I've got to do my best!",
+    });
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_Close();
+    MovePositionOffset<actor ACTOR_PLAYER_KIMAWARI>(1, 64, 0);
+    bgm_FadeOut(60);
+    switch ( main_EnterAdventure(250, 30) ) { }
+    hold;
+    end;
+}

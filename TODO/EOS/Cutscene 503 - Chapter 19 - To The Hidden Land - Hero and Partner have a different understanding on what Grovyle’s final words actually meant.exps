@@ -1,0 +1,272 @@
+
+def 0 {
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_D28P44A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetEffect<performer 3>(653, 3);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" His last words...[K] Parting hurts...",
+            }
+        case 2:
+            {
+                english=" His last words...[K] Parting hurts...",
+            }
+        default:
+            {
+                english=" His last words...[K] Parting hurts...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I understand that feeling.
+                    I understand how it hurts.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I understand that feeling.
+                    I understand how it hurts.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I understand that feeling.
+                    I understand how it hurts.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Grovyle[CR] was partners with
+                    you for a long time, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Grovyle[CR] was partners with
+                    you for a long time, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Grovyle[CR] was partners with
+                    you for a long time, [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I think it must have hurt
+                    [CS:N]Grovyle[CR] terribly to leave you.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I think it must have hurt
+                    [CS:N]Grovyle[CR] terribly to leave you.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I think it must have hurt
+                    [CS:N]Grovyle[CR] terribly to leave you.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_SAD, FACE_POS_BOTTOM_L_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(..................)",
+            }
+        default:
+            {
+                english="(..................)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That may be what he meant...)",
+            }
+        default:
+            {
+                english="(That may be what he meant...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(But no. That isn't it.)",
+            }
+        default:
+            {
+                english="(But no. That isn't it.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([CS:N]Grovyle[CR]'s last words...)",
+            }
+        default:
+            {
+                english="([CS:N]Grovyle[CR]'s last words...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(They weren't about me and [CS:N]Grovyle[CR].)",
+            }
+        default:
+            {
+                english="(They weren't about me and [CS:N]Grovyle[CR].)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(He meant me and [partner].)",
+            }
+        default:
+            {
+                english="(He meant me and [partner].)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    ([CS:N]Grovyle[CR] said what he did...[K]because he knew
+                    that I would have to leave [partner]
+                    eventually.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    ([CS:N]Grovyle[CR] said what he did...[K]because he knew
+                    that I would have to leave [partner]
+                    eventually.)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(When history is changed...[K]I will disappear.)",
+            }
+        default:
+            {
+                english="(When history is changed...[K]I will disappear.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (My time together with [partner] is
+                    ending...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (My time together with [partner] is
+                    ending...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(This is our last adventure.)",
+            }
+        default:
+            {
+                english="(This is our last adventure.)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.7969, Position<'m0', 34.5, 27.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(32, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    MovePositionMark<performer 0>(0.5, Position<'m1', 33.5, 26.5>);
+    WaitExecutePerformer(0);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [hero]!",
+            }
+        case 2:
+            {
+                english=" Hey, [hero]!",
+            }
+        default:
+            {
+                english=" Hey, [hero]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We have to do this for [CS:N]Grovyle[CR]'s
+                    sake! Let's go to [CS:P]Temporal Tower[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We have to do this for [CS:N]Grovyle[CR]'s
+                    sake! Let's go to [CS:P]Temporal Tower[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We have to do this for [CS:N]Grovyle[CR]'s
+                    sake! Let's go to [CS:P]Temporal Tower[CR]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(45);
+    bgm_FadeOut(180);
+    screen_FadeOutAll(1, 90);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    Wait(60);
+    end;
+}

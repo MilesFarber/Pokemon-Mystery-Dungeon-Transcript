@@ -1,0 +1,216 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(40, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa![K] Th-this place is...",
+            }
+        case 2:
+            {
+                english=" Wow![K] Th-this place is...",
+            }
+        default:
+            {
+                english=" Wow![K] Th-this place is...",
+            }
+    }
+    message_Close();
+    back_SetGround(LEVEL_D28P31A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_HIDDEN_HIGHLAND, 0, 256);
+    WaitLockLives(5, ACTOR_PLAYER);
+    Unlock(9);
+    Wait(10);
+    Unlock(5);
+    Wait(15);
+    Unlock(13);
+    Lock(3);
+    MovePositionMark<performer 0>(0.7969, Position<'m0', 41, 24>);
+    Unlock(14);
+    Wait(15);
+    Unlock(6);
+    Wait(20);
+    Unlock(10);
+    Lock(3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's awesome! Look at it,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's incredible! Look at it,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's fantastic! Look at it,
+                    [hero]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Look at these fantastic
+                    inscriptions and paintings on the rock walls!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Look at all these fantastic
+                    paintings and inscriptions on the walls!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Look at all these fantastic
+                    paintings and inscriptions on the walls!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1.5, Position<'m1', 64.5, 24>);
+    Unlock(15);
+    Wait(5);
+    Unlock(7);
+    Wait(5);
+    Unlock(11);
+    Lock(3);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Like [CS:N]Lapras[CR] said, this place is
+            the [CS:P]Old Ruins[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             The Rainbow Stoneship should
+            be here.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yeah, that's right!",
+            }
+        case 2:
+            {
+                english=" Yup, that's right!",
+            }
+        default:
+            {
+                english=" Yup, that's right!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's get in there!",
+            }
+        case 2:
+            {
+                english=" Let's go in there!",
+            }
+        default:
+            {
+                english=" Let's get in there!",
+            }
+    }
+    message_Close();
+    MovePositionOffset<actor ACTOR_PLAYER>(1.5, 120, 0);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1.5, 120, 0);
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(1.5, 120, 0);
+    Wait(30);
+    screen_FadeOut(1, 30);
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetAnimation(2);
+    Lock(5);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Wait(30);
+    Unlock(3);
+    Lock(6);
+    MovePositionMark(1.1992, Position<'m2', 25, 26>);
+    Turn2Direction(4, 10, DIR_UP);
+    Wait(15);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    MovePositionMark(1.1992, Position<'m3', 36, 26>);
+    Turn2Direction(4, 10, DIR_UP);
+    Lock(7);
+    MovePositionMark(1.5, Position<'m4', 60.5, 26>);
+    Turn2Direction(4, 10, DIR_UP);
+    Unlock(3);
+    Lock(8);
+    hold;
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetAnimation(2);
+    Lock(9);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Wait(30);
+    Lock(10);
+    MovePositionMark(1.1992, Position<'m5', 27, 24>);
+    Turn2Direction(4, 10, DIR_UP);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Wait(15);
+    MovePositionMark(1.1992, Position<'m6', 40.5, 24>);
+    Turn2Direction(4, 10, DIR_UP);
+    Wait(15);
+    CallCommon(CORO_JUMP_ANGRY_FUNC);
+    Unlock(3);
+    Lock(11);
+    MovePositionMark(1.5, Position<'m7', 64.5, 24>);
+    Turn2Direction(4, 10, DIR_UP);
+    Lock(12);
+    hold;
+}
+
+def 3 for actor ACTOR_NPC_JUPUTORU {
+    SetAnimation(2);
+    Lock(13);
+    CallCommon(CORO_LOOK_AROUND_RIGHT_FUNC);
+    Lock(14);
+    MovePositionMark(1.1992, Position<'m8', 32, 26>);
+    Turn2Direction(4, 10, DIR_UP);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Wait(15);
+    MovePositionMark(1.1992, Position<'m9', 45, 26>);
+    Turn2Direction(4, 10, DIR_UP);
+    Lock(15);
+    MovePositionMark(1.5, Position<'m10', 68.5, 26>);
+    Turn2Direction(4, 10, DIR_UP);
+    Lock(16);
+    hold;
+}

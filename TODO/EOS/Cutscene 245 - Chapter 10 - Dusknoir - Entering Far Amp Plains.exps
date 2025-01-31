@@ -1,0 +1,64 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_FAR_AMP_PLAINS, 0, 256);
+    $SCENARIO_MAIN = scn[13, 3];
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [hero], I think we're going
+                    to reach the deepest part soon.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We must be getting closer to the
+                    deepest part, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     We must be getting closer to the
+                    deepest part, [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I don't know what to expect, so
+                    we'd better go really carefully.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I don't know what awaits us.
+                    We'd better go really cautiously.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I don't know what to expect, so
+                    we'd better go really carefully.
+                """,
+            }
+    }
+    message_Close();
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 28.5, 3.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 28.5, 3.5>);
+    Wait(20);
+    bgm_FadeOut(180);
+    screen_FadeOut(1, 60);
+    end;
+}

@@ -1,0 +1,157 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[42, 7];
+    back_SetGround(LEVEL_D45P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_AAMARUDO>();
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_FORTUNE_RAVINE_DEPTHS, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m0', 26, 36.5>);
+    MovePositionMark<actor ACTOR_NPC_AAMARUDO>(1, Position<'m1', 30.5, 36.5>);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(15);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Master, where is this?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" This is a dungeon waypoint...",
+    });
+    message_Talk({
+        english="""
+             It connects to the depths of
+            [CS:P]Fortune Ravine[CR]...[K] It's a waypoint area.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I see. ♪",
+    });
+    message_Talk({
+        english="""
+             So we'll be in the depths
+            soon, then. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" That's right...[K] I'm sure of it...",
+    });
+    message_Talk({
+        english="""
+             While we're on the subject of
+            waypoints in dungeons...
+        """,
+    });
+    message_Talk({
+        english="""
+             Finding a waypoint usually
+            means that something awaits you at the end.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Something awaits...[K] Like what?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             For example...[K] The boss of
+            this dungeon.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Boss?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yes, that's right.",
+    });
+    message_Talk({
+        english="""
+             If there's a boss in the dungeon,
+            tread carefully.
+        """,
+    });
+    message_Talk({
+        english="""
+             They might misunderstand what
+            you're doing here and wonder whether you're
+            trying to take over their territory...
+        """,
+    });
+    message_Talk({
+        english="""
+             They probably won't listen to
+            what you're saying...
+        """,
+    });
+    message_Talk({
+        english="""
+             You're likely to be
+            attacked often.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hmmm...[K] Seems like dungeon
+            bosses don't have much patience.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I don't know whether or not they
+            have patience...
+        """,
+    });
+    message_Talk({
+        english="""
+             Anyway, we need to brace
+            ourselves for what we'll find from here on.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Yes, Master. ♪[K]
+            Happy, happy! ♪
+        """,
+    });
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_Close();
+    end;
+}

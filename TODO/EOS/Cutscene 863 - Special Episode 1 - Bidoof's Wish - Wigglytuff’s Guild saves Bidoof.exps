@@ -1,0 +1,351 @@
+
+def 0 {
+    sound_Stop();
+    $SIDE01_BOSS2ND[0] = 1;
+    $SCENARIO_SIDE = scn[40, 6];
+    back_SetGround(LEVEL_D42P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    SetAnimation<actor ACTOR_NPC_YUKIKABURI>(23);
+    WaitAnimation<actor ACTOR_NPC_YUKIKABURI>();
+    Wait(10);
+    se_Play(5121);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(7);
+    SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(27);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED, 3);
+    MovePositionMark<performer 0>(2.5, Position<'m0', 31.5, 34.5>);
+    SlidePositionMark<actor ACTOR_PLAYER_BIPPA>(2.5, Position<'m1', 31.5, 34.5>);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    SetAnimation<actor ACTOR_NPC_YUKIKABURI>(2);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 1, 0);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Sniff...[K] It's too tough...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 256);
+    MovePositionMark<actor ACTOR_NPC_YUKIKABURI>(1, Position<'m2', 31.5, 30.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_TATSUBEI>(1, Position<'m3', 28.5, 28.5>);
+    Wait(7);
+    MovePositionMark<actor ACTOR_NPC_GURAIGAA>(1, Position<'m4', 34.5, 28.5>);
+    WaitExecuteLives(ACTOR_NPC_GURAIGAA);
+    message_SetFace(ACTOR_NPC_TATSUBEI, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english="""
+             Humph...[K] Even though you're
+            weak, you're going to resist and make us ask?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_GURAIGAA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(2, 0);
+    message_Talk({
+        english="""
+             Hurry up and give us
+            your money!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 1, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english=" N...[K]no...",
+    });
+    message_Talk({
+        english="""
+             That money...[K]is very important
+            to me...
+        """,
+    });
+    message_Talk({
+        english=" Who do you think you are...?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Argh![K] This one's really stubborn!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YUKIKABURI>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    Wait(20);
+    Turn2Direction<actor ACTOR_NPC_YUKIKABURI>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english="""
+             Hey! You![K]
+            We'll take it by force if we have to!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_TATSUBEI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_GURAIGAA>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Bagon[CR] & [CS:N]Gligar[CR]: YEAH!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_YUKIKABURI>(1, Position<'m5', 31.5, 31.5>);
+    Wait(2);
+    MovePositionMark<actor ACTOR_NPC_TATSUBEI>(1, Position<'m6', 28.5, 29.5>);
+    Wait(3);
+    MovePositionMark<actor ACTOR_NPC_GURAIGAA>(1, Position<'m7', 34.5, 29.5>);
+    bgm_FadeOut(30);
+    message_ResetActor();
+    message_Talk({
+        english=" WAAAAIT!!",
+    });
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_YUKIKABURI>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_TATSUBEI>(EFFECT_SHOCKED, 3);
+    Wait(2);
+    SetEffect<actor ACTOR_NPC_GURAIGAA>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_GURAIGAA>();
+    WaitExecuteLives(ACTOR_NPC_GURAIGAA);
+    message_Close();
+    se_Play(9218);
+    screen_FadeChange(1, 30, 256, 192);
+    ExecuteCommon<actor ACTOR_NPC_YUKIKABURI>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_NPC_TATSUBEI>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(4);
+    ExecuteCommon<actor ACTOR_NPC_GURAIGAA>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_GURAIGAA);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Huh?! What?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(9219);
+    message_ResetActor();
+    message_Talk({
+        english="""
+             One![K]
+            Don't shirk work!
+        """,
+    });
+    WaitSe(9219);
+    message_KeyWait();
+    se_Play(9220);
+    message_Talk({
+        english="""
+             Two![K]
+            Run away and pay!
+        """,
+    });
+    WaitSe(9220);
+    message_KeyWait();
+    se_Play(9221);
+    message_Talk({
+        english="""
+             Three![K]
+            Smiles go for miles!
+        """,
+    });
+    WaitSe(9221);
+    message_Close();
+    se_Play(6403);
+    screen_WhiteOut(1, 30);
+    supervision_Acting(1);
+    Wait(100);
+    screen_FadeIn(1, 30);
+    Wait(20);
+    se_Play(9222);
+    SetEffect<actor ACTOR_NPC_YUKIKABURI>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_TATSUBEI>(EFFECT_SHOCKED, 3);
+    Turn2Direction<actor ACTOR_NPC_TATSUBEI>(1, 10, DIR_UP);
+    SetEffect<actor ACTOR_NPC_GURAIGAA>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_NPC_TATSUBEI>(5);
+    SlidePositionOffset<actor ACTOR_NPC_TATSUBEI>(1.5, 0, 16);
+    Wait(3);
+    SetAnimation<actor ACTOR_NPC_GURAIGAA>(5);
+    SlidePositionOffset<actor ACTOR_NPC_GURAIGAA>(1.5, 0, 16);
+    WaitExecuteLives(ACTOR_NPC_TATSUBEI);
+    SetAnimation<actor ACTOR_NPC_TATSUBEI>(2);
+    WaitExecuteLives(ACTOR_NPC_GURAIGAA);
+    SetAnimation<actor ACTOR_NPC_GURAIGAA>(2);
+    Wait(30);
+    WaitSe(9222);
+    bgm_PlayFadeIn(BGM_ONE_FOR_ALL_ALL_FOR_ONE, 0, 256);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(4, 0);
+    message_Talk({
+        english=" [CS:N]Wigglytuff[CR]'s Guild is here!",
+    });
+    message_Close();
+    ExecuteCommon<actor ACTOR_NPC_YUKIKABURI>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_NPC_TATSUBEI>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    Wait(4);
+    ExecuteCommon<actor ACTOR_NPC_GURAIGAA>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_TATSUBEI);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_TATSUBEI>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_NPC_TATSUBEI>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_TATSUBEI, FACE_SURPRISED, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, -3);
+    message_Talk({
+        english=" Uh-oh!",
+    });
+    WaitExecuteLives(ACTOR_NPC_TATSUBEI);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(28);
+    WaitAnimation<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    Wait(10);
+    se_Play(8963);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" E-everyone...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_ANGRY, 3);
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_ANGRY, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(4, 0);
+    message_Talk({
+        english="""
+             You! Don't you dare pick on
+            our apprentice!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_NONE, 3);
+    se_Play(8971);
+    camera_SetEffect(2, 2, 3.0);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(19);
+    WaitAnimation<actor ACTOR_NPC_DOGOOMU>();
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    camera_SetEffect(0, 0, 0);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_ANGRY, 3);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_ANGRY, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-3, 0);
+    message_Talk({
+        english=" You BETTER be READY!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+    Turn2DirectionLives<actor ACTOR_NPC_TATSUBEI>(4, 10, ACTOR_NPC_YUKIKABURI);
+    WaitExecuteLives(ACTOR_NPC_TATSUBEI);
+    Turn2DirectionLives<actor ACTOR_NPC_GURAIGAA>(4, 10, ACTOR_NPC_YUKIKABURI);
+    message_SetFace(ACTOR_NPC_GURAIGAA, FACE_SURPRISED, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(2, -3);
+    message_Talk({
+        english=" Huh! What do we do?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_TATSUBEI, FACE_SURPRISED, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, -3);
+    message_Talk({
+        english="""
+             Going up against the famous
+            [CS:N]Wigglytuff[CR]'s Guild...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" W-wait! Don't run away!",
+    });
+    message_Talk({
+        english="""
+             Don't believe the worldwide
+            reputation and rumors!
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Jirachi[CR]'s not in this cave!
+            Never has been!
+        """,
+    });
+    message_Talk({
+        english="""
+             Y-you're just scared of
+            [CS:N]Wigglytuff[CR]'s reputation of being really strong!
+        """,
+    });
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Let's go, you guys![K]
+            We'll take them on too!
+        """,
+    });
+    message_Close();
+    ExecuteCommon<actor ACTOR_NPC_TATSUBEI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(7);
+    ExecuteCommon<actor ACTOR_NPC_GURAIGAA>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Bagon[CR] & [CS:N]Gligar[CR]: YEAH!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_TATSUBEI>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_GURAIGAA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_GURAIGAA);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english=" Let's go, everyone!",
+    });
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_SPECIAL2, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english=" YOOM...TAH!",
+    });
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(17);
+    WaitAnimation<actor ACTOR_NPC_PUKURIN>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(2);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    message_CloseEnforce();
+    WaitSe(5143);
+    se_Play(5136);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(125, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

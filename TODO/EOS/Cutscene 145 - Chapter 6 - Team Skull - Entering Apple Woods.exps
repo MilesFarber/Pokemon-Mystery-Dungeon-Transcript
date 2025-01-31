@@ -1,0 +1,182 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D05P11A);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 32, 25.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 37, 25.5>);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_APPLE_WOODS, 0, 256);
+    Wait(30);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitExecutePerformer(0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This is the way into
+                    [CS:P]Apple Woods[CR].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This must be the way into
+                    [CS:P]Apple Woods[CR].
+                """,
+            }
+        default:
+            {
+                english="""
+                     This must be the entrance to
+                    [CS:P]Apple Woods[CR].
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Chatot[CR] said we need to go to the
+                    deepest part of these woods.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     According to [CS:N]Chatot[CR], we need to
+                    go to the deepest part of the woods.
+                """,
+            }
+        default:
+            {
+                english="""
+                     According to [CS:N]Chatot[CR]'s story, we
+                    need to get to the deepest part of the woods.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's where we'll find the
+                    Perfect Apples, he said.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's where the Perfect Apples
+                    are supposed to be.
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's where the Perfect Apples
+                    should be.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's give it our best,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's keep doing our best,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's keep doing our best,
+                    [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    SetAnimation<actor ACTOR_ATTENDANT1>(71);
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(30);
+    MovePositionMark<performer 0>(1, Position<'m2', 34.5, 15.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 34.5, 15.5>);
+    Wait(20);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m4', 34.5, 15.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m5', 34.5, 0.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m6', 34.5, 0.5>);
+    Destroy<actor ACTOR_PLAYER>();
+    Destroy<actor ACTOR_ATTENDANT1>();
+    WaitExecutePerformer(0);
+    Wait(30);
+    supervision_Acting(1);
+    Wait(1);
+    MovePositionMark<performer 0>(1, Position<'m7', 34.5, 24>);
+    MovePositionMark<actor ACTOR_NPC_SUKATANKU>(1.1992, Position<'m8', 34.5, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGAASU>(1.1992, Position<'m9', 34, 28.5>);
+    MovePositionMark<actor ACTOR_NPC_ZUBATTO>(1.1992, Position<'m10', 34, 29.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGAASU>(1.1992, Position<'m11', 30, 24.5>);
+    MovePositionMark<actor ACTOR_NPC_ZUBATTO>(1.1992, Position<'m12', 39, 24.5>);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_SUKATANKU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    WaitExecutePerformer(0);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Whoa-ho-ho! Looks like they're
+            off and running.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Heh-heh. We'll go after them.
+            Come on.
+        """,
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_NPC_SUKATANKU>(1, Position<'m13', 34.5, 15.5>);
+    Wait(20);
+    MovePositionMark<actor ACTOR_NPC_DOGAASU>(1, Position<'m14', 34.5, 15.5>);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_ZUBATTO>(1, Position<'m15', 34.5, 15.5>);
+    MovePositionMark<actor ACTOR_NPC_SUKATANKU>(1, Position<'m16', 34.5, 0.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGAASU>(1, Position<'m17', 34.5, 0.5>);
+    MovePositionMark<actor ACTOR_NPC_ZUBATTO>(1, Position<'m18', 34.5, 0.5>);
+    screen_FadeOut(1, 30);
+    $SCENARIO_MAIN = scn[8, 2];
+    main_EnterDungeon(7, 0);
+    switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+    main_EnterDungeon(-1, 0);
+    hold;
+    end;
+}

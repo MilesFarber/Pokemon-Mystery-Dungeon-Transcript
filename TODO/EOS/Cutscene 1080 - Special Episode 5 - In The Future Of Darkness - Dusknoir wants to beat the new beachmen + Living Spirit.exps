@@ -1,0 +1,466 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_P25P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    MovePositionMark<performer 0>(1, Position<'m0', 22, 32.5>);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(28);
+    screen_FadeIn(1, 30);
+    MovePositionMark<performer 0>(1, Position<'m1', 22, 40.5>);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_LEFT);
+    Wait(45);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    Wait(30);
+    WaitExecutePerformer(0);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1, Position<'m2', 26.5, 40.5>);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(4, 10, ACTOR_NPC_YONOWAARU_N9);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I think this should be fine.[K]
+            Even if the [CS:N]Sableye[CR] come, they won't find us.
+        """,
+    });
+    message_Talk({
+        english=" Let's rest awhile.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             We'll head out again after a
+            short time.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(29);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N9>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" .........",
+    });
+    message_Talk({
+        english=" ... ([CS:Y]Grovyle[CR]...[K] He's...)",
+    });
+    message_Talk({
+        english="""
+             (I've noticed his amazing
+            judgment and leadership ability.)
+        """,
+    });
+    message_Talk({
+        english="""
+             (When he was working with
+            [c_name:NPC_HERO_FIRST] and [c_name:NPC_PARTNER_FIRST]...)
+        """,
+    });
+    message_Talk({
+        english="""
+             (He made it through a lot of
+            tough situations...)
+        """,
+    });
+    message_Talk({
+        english="""
+             (However...[K] His strength
+            and endurance...)
+        """,
+    });
+    message_Talk({
+        english="""
+             (He has a strong will and doesn't
+            believe in failure...)
+        """,
+    });
+    message_Talk({
+        english="""
+             (I wonder where all that
+            came from...)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(4, 10, ACTOR_NPC_YONOWAARU_N9);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" By the way...[K]that time...",
+    });
+    message_Talk({
+        english="""
+             When that chunk of ice started
+            falling straight onto my head...
+        """,
+    });
+    message_Talk({
+        english="""
+             Don't tell me you...[K] You were
+            trying to protect me...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" It's a misunderstanding, [CS:Y]Grovyle[CR].",
+    });
+    message_Talk({
+        english="""
+             Let's get this straight...[K]
+            I really despise you.
+        """,
+    });
+    message_Talk({
+        english="""
+             I really didn't want to help
+            you in any way.
+        """,
+    });
+    message_Talk({
+        english=" Still, I protected you...",
+    });
+    message_Talk({
+        english="""
+             Because I believe I need your
+            strength right now...
+        """,
+    });
+    message_Talk({
+        english=" To take out that new henchman.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Are you saying I should help
+            you?[K] To take down the new henchman,
+            that is?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             The new henchman is the
+            final agent.
+        """,
+    });
+    message_Talk({
+        english="""
+             Even if I hadn't asked you,
+            you were going to challenge him anyway,
+            weren't you?
+        """,
+    });
+    message_Talk({
+        english="""
+             In order to take on the new
+            henchman...[K]you and I should team up.
+        """,
+    });
+    message_Talk({
+        english="""
+             Depending on the situation...[K]we
+            may need to defeat Master [CS:N]Dialga[CR] as well...
+        """,
+    });
+    message_Talk({
+        english="""
+             That situation would be ideal for
+            you, I believe...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(160);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(8, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(160);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(8, 10, ACTOR_NPC_YONOWAARU_N9);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             ...[K]How are your wounds from
+            that chunk of ice?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" They're nothing to worry about.",
+    });
+    message_Talk({
+        english="""
+             And compared to earlier, I
+            appear to have regained much of my strength.
+        """,
+    });
+    message_Talk({
+        english="""
+             The damage I received from
+            fighting you before is much more intense,
+            even now.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Humph.[K] If you can come up with
+            a load of complaints like that, you must
+            be fine.
+        """,
+    });
+    message_Talk({
+        english=" We'll head out in a little while.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             But first...[K] Something I wanted
+            to ask...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(4, 10, ACTOR_NPC_YONOWAARU_N9);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" What is it?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_LIVING_SPIRIT, 0, 256);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" [CS:Y]Grovyle[CR]...[K] You...",
+    });
+    message_Talk({
+        english="""
+             You...[K] Why do you fight so hard
+            like this?
+        """,
+    });
+    message_Talk({
+        english="""
+             Before you...[K]you said it was
+            for the future...
+        """,
+    });
+    message_Talk({
+        english="""
+             You said...[K]you fight...[K]
+            for a new life...
+        """,
+    });
+    message_Talk({
+        english=" But if you do, you'll disappear.",
+    });
+    message_Talk({
+        english=" Your existence...[K]will end.",
+    });
+    message_Talk({
+        english="""
+             For me...that sort of thing...[K]
+            I cannot bear the idea.
+        """,
+    });
+    message_Talk({
+        english=" To make myself disappear...",
+    });
+    message_Talk({
+        english=" I will not allow it.",
+    });
+    message_Talk({
+        english="""
+             With all that said...[K]
+            Why do you fight so hard for such a goal?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" ...[K][CS:N]Dusknoir[CR].",
+    });
+    message_Talk({
+        english="""
+             I understand that you don't want
+            to disappear...
+        """,
+    });
+    message_Talk({
+        english=" But me...[K] This is what I think.",
+    });
+    message_Talk({
+        english=" Even if we were to disappear...",
+    });
+    message_Talk({
+        english="""
+             Even if I were to disappear...[K]
+            I wouldn't truly disappear.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" What?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Everything ends eventually.",
+    });
+    message_Talk({
+        english="""
+             Even if history is not changed...[K]
+            Even if the world of darkness continues in
+            its current state...
+        """,
+    });
+    message_Talk({
+        english="""
+             Eventually the day will come
+            when I won't be here anymore.
+        """,
+    });
+    message_Talk({
+        english="""
+             Since that's the case, the timing
+            of it doesn't matter.
+        """,
+    });
+    message_Talk({
+        english="""
+             The important thing is not how
+            long you live...
+        """,
+    });
+    message_Talk({
+        english="""
+             It's what you
+            accomplish with your life.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" ...[K] (With your life...)",
+    });
+    message_Talk({
+        english="""
+             (With your life...[K] What you...[K]
+            accomplish...)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" While I live, I want to shine.",
+    });
+    message_Talk({
+        english=" I want to prove that I exist.",
+    });
+    message_Talk({
+        english="""
+             If I could do something really
+            important...[K] That would definitely carry
+            on into the future.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" No...[K] Not just into the future.",
+    });
+    message_Talk({
+        english="""
+             In [c_name:NPC_HERO_FIRST]'s and
+            [c_name:NPC_PARTNER_FIRST]'s future too...
+        """,
+    });
+    message_Talk({
+        english="""
+             My spirit has become part of
+            them, I believe.
+        """,
+    });
+    message_Talk({
+        english=" In them, my spirit is alive.",
+    });
+    message_Talk({
+        english="""
+             And that spirit could be passed
+            along to others.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(4, 10, ACTOR_NPC_YONOWAARU_N9);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             And so, if I were to
+            disappear...[K]I think all that I have accomplished
+            will go on.
+        """,
+    });
+    message_Talk({
+        english=" That is...",
+    });
+    message_Talk({
+        english="""
+             That would mean...[K]that it's
+            living, right?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(60);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             ... (Even if I disappear...[K]
+            I still live on...)
+        """,
+    });
+    message_Talk({
+        english=" (My spirit is...[K]alive!)",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(160);
+    Wait(60);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(90);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(4, 10, ACTOR_NPC_YONOWAARU_N9);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(15);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             We've rested enough.[K]
+            Shall we go?
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 90);
+    Wait(60);
+    end;
+}

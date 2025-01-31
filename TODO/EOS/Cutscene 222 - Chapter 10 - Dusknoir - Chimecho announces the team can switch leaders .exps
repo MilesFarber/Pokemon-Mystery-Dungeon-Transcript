@@ -1,0 +1,122 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    back_SetGround(LEVEL_P01P03A);
+    supervision_StationCommon(7);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, 40, 0);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, 48, 0);
+    screen_FadeIn(1, 30);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Oh, [hero]![K] [partner]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey! [CS:N]Chimecho[CR]!",
+            }
+        case 2:
+            {
+                english=" Hey! [CS:N]Chimecho[CR]!",
+            }
+        default:
+            {
+                english=" Hi! [CS:N]Chimecho[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m0', 26.5, 24.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 24.5, 22.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 24.5, 25.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What's up?",
+            }
+        case 2:
+            {
+                english=" What's going on?",
+            }
+        default:
+            {
+                english=" What's happening?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Oh, [hero]! [partner]!",
+    });
+    message_Talk({
+        english="""
+             Congratulations on graduating
+            from the guild!
+        """,
+    });
+    ExecuteCommon<actor ACTOR_NPC_CHIRIIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_KeyWait();
+    message_Talk({
+        english="""
+             Team [team:] now gets to
+            operate in association with the guild, right?
+        """,
+    });
+    message_Talk({
+        english="""
+             So your Assembly privileges also
+            change![K] Let the bell ring!
+        """,
+    });
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+    message_Talk({
+        english="""
+             A new special service is
+            available to you!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 3);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Special service?",
+            }
+        case 2:
+            {
+                english=" Special service?",
+            }
+        default:
+            {
+                english=" A special service?",
+            }
+    }
+    message_Close();
+    bgm_FadeOut(60);
+    screen_FadeOut(1, 60);
+    Wait(30);
+    end;
+}

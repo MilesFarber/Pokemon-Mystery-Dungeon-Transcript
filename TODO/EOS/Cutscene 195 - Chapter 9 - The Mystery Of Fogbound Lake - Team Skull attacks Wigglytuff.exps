@@ -1,0 +1,205 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_STEAM_CAVE, 0, 256);
+    $SCENARIO_MAIN = scn[11, 2];
+    bgm_FadeOut(120);
+    message_Narration(30, {
+        english="[CN]Meanwhile...",
+    });
+    message_Narration(30, {
+        english="[CN]back at the Groudon statue...",
+    });
+    message_Close();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_P03P02A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    WaitBgm(BGM_STEAM_CAVE);
+    bgm_PlayFadeIn(BGM_RAIN2, 90, 160);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Psst... Hey, Chief![K] What's going
+            on? Something wrong?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             Chief... Hey, Chief... You've been
+            staring him down for how long now...?
+        """,
+    });
+    message_Talk({
+        english="""
+             C'mon...let's you and I give him
+            a double dose of the ol' noxious gas...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_SUKATANKU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_SUKATANKU>();
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Shhh! Shut your yap!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_DOWN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Dear friends! What's wrong?[K]
+            You've been making such scary faces at me!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8969);
+    SetEffect<actor ACTOR_NPC_SUKATANKU>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_SUKATANKU>();
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Bah...[K]this guy's tough...[K]
+            really tough...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(30);
+    se_Play(8965);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    WaitBgm(BGM_RAIN2);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I get it![K] You're trying to make
+            me laugh with silly faces!
+        """,
+    });
+    message_Talk({
+        english=" I bet I can make you laugh too!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(18);
+    WaitAnimation<actor ACTOR_NPC_PUKURIN>();
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_STUNNED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Blabba! ♪ Blabba! ♪ Blapp! ♪",
+    });
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(19);
+    WaitAnimation<actor ACTOR_NPC_PUKURIN>();
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_STUNNED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Blobba! ♪ Blobba! ♪ Blopp! ♪",
+    });
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_DOGAASU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_DOGAASU>();
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english=" C'mon, Chief...!",
+    });
+    message_Talk({
+        english="""
+             I can't take this...this whole
+            weird scene is freaking me out...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             OK, then...this isn't working, and
+            we're out of options...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_SUKATANKU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_DOWN);
+    bgm_FadeOut(30);
+    message_Talk({
+        english=" Hey, [CS:N]Wigglytuff[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_STUNNED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Whatiswhatiswhatis...what is it?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Hey, no hard feelings, but...[K]
+            You're going down!
+        """,
+    });
+    message_Talk({
+        english="""
+             Take this![K] A noxious-gas special!
+            Straight from me and [CS:N]Koffing[CR]!
+        """,
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_DOGAASU>(12);
+    SetAnimation<actor ACTOR_NPC_SUKATANKU>(18);
+    WaitAnimation<actor ACTOR_NPC_DOGAASU>();
+    WaitAnimation<actor ACTOR_NPC_SUKATANKU>();
+    Wait(10);
+    se_Play(6913);
+    supervision_Acting(1);
+    SetOutputAttribute<object OBJECT_G01P03A2_104>(4);
+    SetAnimation<object OBJECT_G01P03A2_104>(17);
+    WaitAnimation<object OBJECT_G01P03A2_104>();
+    WaitExecuteObject(OBJECT_G01P03A2_104);
+    SetAnimation<object OBJECT_G01P03A2_104>(2);
+    se_FadeOut(6913, 120);
+    screen2_WhiteOut(0, 30);
+    screen_WhiteOut(1, 30);
+    Wait(90);
+    back2_SetMode(0);
+    back_SetGround(LEVEL_S04P01A);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    screen2_FadeOut(1, 0);
+    WaitSe(6913);
+    main_EnterDungeon(14, 0);
+    switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+    main_EnterDungeon(-1, 0);
+    hold;
+    end;
+}
+
+def 1 for object OBJECT_P03P01A1_127 {
+    SetOutputAttribute(1024);
+    hold;
+}

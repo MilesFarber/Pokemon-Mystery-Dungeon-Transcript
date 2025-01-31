@@ -1,0 +1,93 @@
+
+def 0 {
+    sound_Stop();
+    message_Narration(30, {
+        english="[CN]The next morning...",
+    });
+    message_Close();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_H02P99A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER>(76);
+    SetAnimation<actor ACTOR_ATTENDANT1>(76);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_DO_YOUR_BEST_AS_ALWAYS, 0, 256);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER>(63);
+    Wait(5);
+    SetAnimation<actor ACTOR_ATTENDANT1>(63);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Oh, yeah! The weather's great
+                    today again!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Oh, yeah! The weather's great
+                    today again!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Ooh, yes! The weather's great
+                    today again!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 2, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's do good again today,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's do good again today,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's do good again today,
+                    [hero]!
+                """,
+            }
+    }
+    message_Close();
+    screen2_FadeOut(1, 30);
+    back2_SetMode(0);
+    end;
+}

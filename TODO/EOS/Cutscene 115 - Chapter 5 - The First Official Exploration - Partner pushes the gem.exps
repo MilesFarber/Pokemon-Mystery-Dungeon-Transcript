@@ -1,0 +1,216 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D04P31A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(67);
+    screen_FadeIn(1, 5);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(But that was...!)",
+            }
+        default:
+            {
+                english="(But that was...!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_ATTENDANT1>(67);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_ANGRY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urrrrrrgh![K] Urrrrrrgh!",
+            }
+        case 2:
+            {
+                english=" Urrrrrrgh![K] Urrrrrrgh!",
+            }
+        default:
+            {
+                english=" Urrrrrrgh![K] Urrrrrrgh!",
+            }
+    }
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 0, 16);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I can't get it out...",
+            }
+        case 2:
+            {
+                english=" It's no good. I can't pull it out...",
+            }
+        default:
+            {
+                english=" N-no. It just won't come out...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    se_Play(8965);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, 0, -16);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Mail({
+        english="""
+            [CN][partner] just happened
+            [CN]to push the gigantic gem!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6658);
+    Wait(30);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Aaaack! That's...)",
+            }
+        default:
+            {
+                english="(Aaaack! That's...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 0, 16);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(60);
+    se_Play(5131);
+    camera_SetEffect(2, 1, 1);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER>(1, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    SetEffect<actor ACTOR_UNIT_NPC1>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_UNIT_NPC2>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? What's going on?",
+            }
+        case 2:
+            {
+                english=" Huh? What's going on?",
+            }
+        default:
+            {
+                english=" Huh? What's happening?",
+            }
+    }
+    message_Close();
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(2);
+    ExecuteCommon<actor ACTOR_UNIT_NPC1>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_UNIT_NPC2>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(5130);
+    camera_SetEffect(2, 3, 1);
+    Wait(30);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_UNIT_NPC1>(1, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_UNIT_NPC2>(1, 10, DIR_RIGHT);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_UNIT_NPC1>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC2>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waaah! It's a flood!",
+            }
+        case 2:
+            {
+                english=" Waaah! It's a flood!",
+            }
+        default:
+            {
+                english=" Waaah! It's a flood!",
+            }
+    }
+    message_Close();
+    bgm_PlayFadeIn(BGM_STORMY_OCEAN1, 0, 256);
+    supervision_SpecialActing(7, 0, 0);
+    MovePositionOffset<actor ACTOR_PLAYER>(1.5, -80, 0);
+    MovePositionOffset<actor ACTOR_UNIT_NPC2>(1.5, -96, 0);
+    Wait(10);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1.1992, -40, 0);
+    Wait(20);
+    MovePositionOffset<actor ACTOR_UNIT_NPC1>(1.1992, -40, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    SetAnimation<actor ACTOR_PLAYER>(11);
+    SlidePositionOffset<actor ACTOR_PLAYER>(2, -180, 0);
+    SlidePositionOffset<actor ACTOR_UNIT_NPC2>(2, -180, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    SetAnimation<actor ACTOR_ATTENDANT1>(11);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(2, -180, 0);
+    SlidePositionOffset<actor ACTOR_UNIT_NPC1>(2, -180, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SHOUTING, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waaaaaaah!",
+            }
+        case 2:
+            {
+                english=" Waaaaaaah!",
+            }
+        default:
+            {
+                english=" Waaaaaaah!",
+            }
+    }
+    Wait(30);
+    screen_FadeOut(1, 30);
+    supervision_SpecialActing(3, 0, 0);
+    Wait(60);
+    se_FadeOut(5130, 120);
+    bgm_FadeOut(120);
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

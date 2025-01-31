@@ -1,0 +1,53 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(122, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D73P41A);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    back_SetWeather(11);
+    supervision_SpecialActing(34, 0, 0);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_BETOBETAA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-3, -1);
+    message_Talk({
+        english=" Icky, sticky...grimy, slimy...",
+    });
+    message_Talk({
+        english=" We looove dirt and slime...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(11013);
+    SetAnimation<actor ACTOR_NPC_BETOBETON3>(18);
+    WaitAnimation<actor ACTOR_NPC_BETOBETON3>();
+    SetAnimation<actor ACTOR_NPC_BETOBETON3>(2);
+    message_SetFace(ACTOR_NPC_BETOBETON, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(-1, -2);
+    message_Talk({
+        english=" We drive away cleanlinessss!",
+    });
+    message_Close();
+    bgm_FadeOut(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(122, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

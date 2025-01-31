@@ -1,0 +1,117 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    back_SetGround(LEVEL_H02P99A);
+    supervision_Acting(2);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(60);
+    MovePositionMark<performer 0>(1, Position<'m0', 34.5, 24.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_PLAYER>(0.5, Position<'m1', 34.5, 25.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecutePerformer(0);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 1, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I see...[K] This is a hollow chamber
+            in the face of the cliff.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_Acting(1);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.5, Position<'m2', 34.5, 20.5>);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_NPC_JUPUTORU>(4, 10, ACTOR_ATTENDANT1);
+    Wait(60);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Whew.[K] I'm glad no one's
+                    wrecked this place.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Whew.[K] I'm glad no one's
+                    wrecked this place.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Whew.[K] No one's been here to
+                    mess it up.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It goes to show nobody takes
+                    any notice of this place.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's proof for how little
+                    notice this place attracts.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It goes to show how little
+                    interest there is in this place.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It might be better if we stayed
+                    here for a while.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It may be better if we stay
+                    here for the time being.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It may be better if we stay
+                    here for a while.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Agreed.",
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    Wait(60);
+    WaitBgm(BGM_OCEAN1);
+    end;
+}

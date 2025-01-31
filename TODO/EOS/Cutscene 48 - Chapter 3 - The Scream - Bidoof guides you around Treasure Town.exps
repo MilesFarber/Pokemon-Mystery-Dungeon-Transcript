@@ -1,0 +1,181 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_T01P01A);
+    supervision_StationCommon(0);
+    supervision_StationCommon(99);
+    supervision_Acting(0);
+    supervision_LoadStation(LEVEL_T01P01A, 'UM03');
+    supervision_Station(10);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    screen_FadeInAll(0, 30);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m0', 40, 26.5>);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 48, 24.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 48, 27.5>);
+    Wait(120);
+    MovePositionMark<performer 0>(1, Position<'m3', 44, 26.5>);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitExecutePerformer(0);
+    Wait(20);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             This is the main square
+            for the local Pokémon...
+        """,
+    });
+    message_Talk({
+        english=" It's called Treasure Town.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Oh, I can tell you about Treasure
+                    Town too.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Oh, I can tell you about Treasure
+                    Town too.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh, I can tell you about Treasure
+                    Town too.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UPRIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    Move2PositionMark<performer 0>(2, Position<'m4', 65, 21.5>);
+    WaitExecutePerformer(0);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That place is [CS:K]Duskull[CR] Bank.",
+            }
+        case 2:
+            {
+                english=" That over there is [CS:K]Duskull[CR] Bank.",
+            }
+        default:
+            {
+                english=" That over there is [CS:K]Duskull[CR] Bank.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We can save our money there.",
+            }
+        case 2:
+            {
+                english=" We can save our money there.",
+            }
+        default:
+            {
+                english=" We can save our money there.",
+            }
+    }
+    message_Close();
+    Move2PositionMark<performer 0>(2, Position<'m5', 22.5, 21.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UPLEFT);
+    Wait(10);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecutePerformer(0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And that over there is the
+                    [CS:K]Electivire[CR] Link Shop.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And that over there is the
+                    [CS:K]Electivire[CR] Link Shop.
+                """,
+            }
+        default:
+            {
+                english="""
+                     And that over there is the
+                    [CS:K]Electivire[CR] Link Shop.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's where you can do things
+                    like link moves together, but...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's where you can do things
+                    like link moves together, but...
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's where you can do things
+                    like link moves together, but...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I guess [CS:N]Electivire[CR] isn't
+                    around today.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It looks as if [CS:N]Electivire[CR] isn't
+                    here today.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It looks as if [CS:N]Electivire[CR] isn't
+                    around today.
+                """,
+            }
+    }
+    message_Close();
+    MovePositionOffset<performer 0>(1, -100, 0);
+    Wait(15);
+    screen_FadeOutAll(1, 60);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

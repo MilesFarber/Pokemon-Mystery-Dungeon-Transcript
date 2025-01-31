@@ -1,0 +1,299 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             All right![K] Made it through
+            the dungeon!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             What you see over there is
+            the pinnacle, [CS:Y]Grovyle[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Got it![K] Let's go!",
+    });
+    message_Close();
+    back_SetGround(LEVEL_P05P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetOutputAttribute<actor ACTOR_PLAYER_FUTURE>(8);
+    SetOutputAttribute<actor ACTOR_NPC_YONOWAARU_N8>(8);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    bgm2_PlayFadeIn(BGM_ON_THE_CEILING, 90, 128);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1, Position<'m0', 22.5, 38.5>);
+    Wait(55);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N8>(1, Position<'m1', 27.5, 41.5>);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(50);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 2, DIR_DOWN);
+    Wait(25);
+    MovePositionMark<performer 0>(0.25, Position<'m2', 25.5, 31>);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1, Position<'m3', 22.5, 31.5>);
+    Wait(20);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_DOWNRIGHT);
+    Wait(50);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(8, 10, DIR_DOWNLEFT);
+    Wait(10);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_UPRIGHT);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_DOWN);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(5);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(0.5, 0, -14);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(8, 10, DIR_UPLEFT);
+    Wait(40);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N8>(1, Position<'m4', 27.5, 31.5>);
+    Wait(10);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(8, 2, DIR_DOWNLEFT);
+    Wait(50);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    WaitExecutePerformer(0);
+    Wait(40);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english=" ...[K]Nobody's...[K]here, huh...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(0.5, 8, 0);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_UPRIGHT);
+    Wait(40);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(8, 10, DIR_DOWNRIGHT);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english=" That's very strange...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_RIGHT);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_UPRIGHT);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_UP);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Master [CS:N]Dialga[CR] is always
+            over there.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Why isn't [CS:N]Dialga[CR]
+            there now?
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Sableye[CR] said that [CS:N]Dialga[CR] would
+            send a final agent.
+        """,
+    });
+    message_Talk({
+        english="""
+             But to send another agent back
+            to the past...
+        """,
+    });
+    message_Talk({
+        english="""
+             I expect it would take an
+            enormous amount of power.
+        """,
+    });
+    message_Talk({
+        english="""
+             To generate that kind of power...[K]
+            [CS:N]Dialga[CR] would have to hold still for some time...
+        """,
+    });
+    message_Talk({
+        english="""
+             I thought he was in
+            [CS:P]Temporal Tower[CR]...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 1, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Your guess is correct.[K]
+            I thought so too...
+        """,
+    });
+    message_Talk({
+        english="""
+             I thought so...[K]
+            That should be right...
+        """,
+    });
+    message_Talk({
+        english=" ...[K]However...",
+    });
+    message_Talk({
+        english="""
+             If he's going to send an agent
+            back to the past...[K]there's another method.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Back to the past...[K]
+            Another method?
+        """,
+    });
+    bgm2_FadeOut(60);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_LEFT);
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             That's right...[K] If he needs to
+            send the agent through time...
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:Y]Grovyle[CR]...[K]you should know what
+            method I'm talking about.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I-I...[K]should know what method?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8973);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" N-no...[K] It can't be!",
+    });
+    message_Talk({
+        english=" The Passage of Time!?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yes.[K] The Passage of Time.",
+    });
+    message_Talk({
+        english="""
+             Rather than waiting for Master
+            [CS:N]Dialga[CR] to regenerate...
+        """,
+    });
+    message_Talk({
+        english="""
+             They will most likely look for
+            [CS:N]Celebi[CR] and use the Passage of Time
+            to send the agent back to the past.
+        """,
+    });
+    message_Talk({
+        english=" I'm sure of it.",
+    });
+    message_Talk({
+        english="""
+             Master [CS:N]Dialga[CR]...[K]probably left
+            here to catch [CS:N]Celebi[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:N]D-Dialga[CR]...left to catch
+            [CS:N]Celebi[CR]!?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             B-but...[K] I don't think it will be
+            that easy to catch [CS:N]Celebi[CR]...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             If it were just the [CS:N]Sableye[CR],
+            you'd be right...
+        """,
+    });
+    message_Talk({
+        english="""
+             However, it is a different story
+            if Master [CS:N]Dialga[CR] himself went to catch her.
+        """,
+    });
+    message_KeyWait();
+    bgm_FadeOut(120);
+    message_Talk({
+        english="""
+             And that new henchman...[K]
+            I'm worried about their ability...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_RIGHT);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" [CS:P]Dusk Forest[CR]!",
+    });
+    message_Talk({
+        english="""
+             I always met [CS:N]Celebi[CR] in
+            [CS:P]Dusk Forest[CR]!
+        """,
+    });
+    message_Close();
+    MovePositionOffset<actor ACTOR_PLAYER_FUTURE>(1.5, 0, 160);
+    Wait(8);
+    MovePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(1.5, 0, 160);
+    Wait(30);
+    screen_FadeOut(1, 30);
+    Wait(30);
+    end;
+}

@@ -1,0 +1,102 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 60];
+    back_SetGround(LEVEL_D32P12A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m0', 28.5, 33.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m1', 31.5, 35>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m2', 25.5, 35>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m3', 28.5, 35.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(30);
+    message_ResetActor();
+    message_Talk({
+        english=" That was good work!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    MovePositionOffset<performer 0>(1, 0, 24);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_DOWN);
+    Wait(5);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC3>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(1, Position<'m4', 28.5, 39.5>);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m5', 31.5, 39.5>);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m6', 25.5, 39.5>);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             You handled that battle with
+            superb aplomb.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             You're going to make us look bad
+            if we don't pick up the pace!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Tee-hee! This has become
+            unusually exciting for me!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             But we'll beat you to solving the
+            next mystery!
+        """,
+    });
+    message_Talk({
+        english=" We're off!",
+    });
+    message_Close();
+    MovePositionOffset<actor ACTOR_NPC_CHAAREMU>(1, -24, -24);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_NPC_SAANAITO>(1, 24, -24);
+    Wait(5);
+    Move2PositionOffset<actor ACTOR_NPC_MIMIROPPU>(1, 48, -24);
+    Wait(10);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(16, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(16, 2, DIR_UP);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(16, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC3>(16, 10, DIR_UP);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m7', 22.5, 28.5>);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m8', 34.5, 28.5>);
+    MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(1, Position<'m9', 34.5, 28.5>);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m10', 28.5, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m11', 28.5, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(1, Position<'m12', 28.5, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m13', 28.5, 15.5>);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m14', 28.5, 15.5>);
+    MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(1, Position<'m15', 28.5, 15.5>);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    supervision_RemoveActing(1);
+    end;
+}

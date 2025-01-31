@@ -1,0 +1,103 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Argh...[K] We didn't do so well...",
+    });
+    message_Talk({
+        english=" We should turn back for now.",
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D53P11A);
+    supervision_Acting(1);
+    supervision_Acting(2);
+    supervision_Acting(3);
+    supervision_Acting(4);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    supervision_RemoveActing(1);
+    supervision_RemoveActing(2);
+    supervision_RemoveActing(3);
+    supervision_RemoveActing(4);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_YONOWAARU_N9>();
+    SetPositionInitial<actor ACTOR_NPC_SEREBII>();
+    SetPositionInitial<actor ACTOR_NPC_YAMIRAMI>();
+    SetPositionInitial<actor ACTOR_NPC_YAMIRAMI2>();
+    SetPositionInitial<actor ACTOR_NPC_YAMIRAMI3>();
+    SetPositionInitial<actor ACTOR_NPC_YAMIRAMI4>();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(2);
+    SetAnimation<actor ACTOR_NPC_SEREBII>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_VAST_ICE_MOUNTAIN, 0, 256);
+    Wait(30);
+    se_Play(11534);
+    supervision_Acting(1);
+    SetOutputAttribute<object OBJECT_D01P11B2_12>(1);
+    SetAnimation<object OBJECT_D01P11B2_12>(17);
+    Wait(10);
+    supervision_Acting(2);
+    SetOutputAttribute<object OBJECT_D01P11B2_13>(1);
+    SetAnimation<object OBJECT_D01P11B2_13>(17);
+    Wait(10);
+    supervision_Acting(3);
+    SetOutputAttribute<object OBJECT_D01P11B2_14>(1);
+    SetAnimation<object OBJECT_D01P11B2_14>(17);
+    Wait(10);
+    supervision_Acting(4);
+    SetOutputAttribute<object OBJECT_D01P11B2_15>(1);
+    SetAnimation<object OBJECT_D01P11B2_15>(17);
+    Wait(30);
+    Destroy<object OBJECT_D01P11B2_12>();
+    Wait(10);
+    Destroy<object OBJECT_D01P11B2_13>();
+    Wait(10);
+    Destroy<object OBJECT_D01P11B2_14>();
+    Wait(10);
+    Destroy<object OBJECT_D01P11B2_15>();
+    se_Play(8973);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(5);
+    SlidePositionOffset<actor ACTOR_NPC_YAMIRAMI>(1, 0, -4);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(2);
+    Wait(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(5);
+    SlidePositionOffset<actor ACTOR_NPC_YAMIRAMI2>(1, -4, 0);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI2>(EFFECT_EXCLAMATION_MARK, 3);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(5);
+    SlidePositionOffset<actor ACTOR_NPC_YAMIRAMI3>(1, -4, 0);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI3>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(2);
+    Wait(3);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(5);
+    SlidePositionOffset<actor ACTOR_NPC_YAMIRAMI4>(1, 0, 4);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI4>(EFFECT_EXCLAMATION_MARK, 3);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(2);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" There's no time.",
+    });
+    message_Talk({
+        english="""
+             Until we disappear, we should do
+            everything we can to hold off Master [CS:N]Dialga[CR]...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Got it.[K] Let's hurry up and go.",
+    });
+    message_Close();
+    end;
+}

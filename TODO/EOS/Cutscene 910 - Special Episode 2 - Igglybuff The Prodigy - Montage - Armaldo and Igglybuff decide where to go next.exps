@@ -1,0 +1,93 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_A_FUN_EXPLORATION, 0, 256);
+    back_SetGround(LEVEL_P19P02A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(6667);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(25);
+    SetOutputAttribute<actor ACTOR_PLAYER_PUPURIN>(2);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_P19P02A2_370>(18);
+    WaitAnimation<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(50);
+    back_SetBackEffect(4);
+    SetAnimation<object OBJECT_P19P02A1_369>(9);
+    Wait(15);
+    message_Mail({
+        english="""
+            [CN]We would open up the map and look
+            [CN]for a place to explore.
+        """,
+    });
+    message_Close();
+    back_SetBackEffect(5);
+    SetAnimation<object OBJECT_P19P02A1_369>(1);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWNLEFT);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hey, Master...[K] Let's explore
+            this place today! ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             This place...[K]labeled "The End of
+            the World"! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_ANGRY, 3);
+    ExecuteCommon<actor ACTOR_NPC_AAMARUDO>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_ANGRY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Come on! There is no way we
+            could go to such a place.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UPRIGHT);
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(12);
+    Wait(10);
+    supervision_RemoveActing(1);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    WaitAnimation<actor ACTOR_NPC_AAMARUDO>();
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(2);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    SetOutputAttribute<actor ACTOR_PLAYER_PUPURIN>(1);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_ANGRY, 3);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_LAUGHING, 3);
+    Wait(100);
+    back_SetBackEffect(4);
+    PauseEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_ANGRY);
+    PauseEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_LAUGHING);
+    SetAnimation<object OBJECT_P19P02A1_369>(9);
+    Wait(15);
+    message_Mail({
+        english="""
+            [CN]We'd decide where to go together like
+            [CN]two old friends...
+        """,
+    });
+    message_Mail({
+        english="[CN]And then head out exploring right away...",
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

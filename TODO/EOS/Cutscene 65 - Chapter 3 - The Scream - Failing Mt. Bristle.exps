@@ -1,0 +1,47 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hurry! We have to rescue
+                    [CS:N]Azurill[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Hurry! We have to rescue
+                    [CS:N]Azurill[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Hurry! We have to rescue
+                    [CS:N]Azurill[CR]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Quick! Off to [CS:P]Mt. Bristle[CR]!",
+            }
+        case 2:
+            {
+                english=" Hurry! Off to [CS:P]Mt. Bristle[CR]!",
+            }
+        default:
+            {
+                english=" Hurry! Off to [CS:P]Mt. Bristle[CR]!",
+            }
+    }
+    message_Close();
+    end;
+}

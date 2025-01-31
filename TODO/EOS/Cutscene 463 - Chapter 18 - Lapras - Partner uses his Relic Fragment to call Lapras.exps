@@ -1,0 +1,358 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_OCEAN1, 0, 256);
+    back_SetGround(LEVEL_P11P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's true.)",
+            }
+        default:
+            {
+                english="(It's true.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(The sea is visible beyond the rock walls.)",
+            }
+        default:
+            {
+                english="(The sea is visible beyond the rock walls.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (It's nearly evening.[K] We didn't notice the time
+                    go by.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (It's nearly evening.[K] We didn't notice the time
+                    go by.)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             The tide rises up to here from
+            that gap in the walls.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Oh![K] That's...)",
+            }
+        default:
+            {
+                english="(Oh![K] That's...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_PLAYER>(0.7969, Position<'m0', 40, 35.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? [hero], what's up?",
+            }
+        case 2:
+            {
+                english="""
+                     What? [hero], what's
+                    wrong?
+                """,
+            }
+        default:
+            {
+                english="""
+                     What? [hero], what's the
+                    matter?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_JUPUTORU>();
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_RIGHT);
+    MovePositionMark<performer 0>(1, Position<'m1', 36, 37.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 36, 37>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    se_Play(8974);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey! Look at this!",
+            }
+        case 2:
+            {
+                english=" Hey! Look at this!",
+            }
+        default:
+            {
+                english=" Hey! Look at this!",
+            }
+    }
+    message_Close();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V23P05A);
+    camera2_SetPositionMark(Position<'m3', 19.5, 16.5>);
+    screen2_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Th-this is...[K]the same as the
+                    pattern on my Relic Fragment.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Th-this is...[K]the same as the
+                    pattern on my Relic Fragment.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Th-this is...[K]the same as the
+                    pattern on my Relic Fragment.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I suppose that this is the pattern
+                    that [CS:N]Chatot[CR] described.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I guess this is the same pattern
+                    that [CS:N]Chatot[CR] described.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I guess this is the same pattern
+                    that [CS:N]Chatot[CR] described.
+                """,
+            }
+    }
+    message_Close();
+    screen2_FadeOut(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I'll bring out the Relic Fragment.",
+            }
+        case 2:
+            {
+                english="""
+                     Let me bring out the Relic
+                    Fragment.
+                """,
+            }
+        default:
+            {
+                english=" I'll bring out the Relic Fragment.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(120);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.5, 0, -8);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 2, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    se_Play(6410);
+    supervision_Acting(1);
+    Wait(15);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(0.5, 0, 8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(60);
+    se_Play(8454);
+    SetAnimation<object OBJECT_P11P01A3_146>(2);
+    Wait(45);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey![K] The Relic Fragment!",
+            }
+        case 2:
+            {
+                english=" Hey![K] The Relic Fragment!",
+            }
+        default:
+            {
+                english=" Oh![K] The Relic Fragment!",
+            }
+    }
+    message_Close();
+    se_FadeOut(8454, 120);
+    screen2_FadeIn(1, 30);
+    Wait(30);
+    bgm2_PlayFadeIn(BGM_GLOWING_NOISE, 0, 256);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    supervision_Acting(2);
+    SetEffect<performer 3>(668, 3);
+    se_Play(8973);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_EXCLAMATION_MARK, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Whoa! The pattern on the wall's
+                    glowing now?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Wow! The pattern on the wall's
+                    glowing now?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Wow! The pattern on the wall's
+                    glowing now?!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's as if...[K]it's reacting to the
+                    Relic Fragment!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's as if...[K]it's reacting to the
+                    Relic Fragment!
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's as if...[K]it's reacting to the
+                    Relic Fragment!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_FadeOut(10);
+    se_Play(7449);
+    screen2_WhiteChange(0, 5, 256, 64);
+    screen_WhiteChange(1, 5, 256, 64);
+    SetEffect<performer 3>(EFFECT_NONE, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SHOUTING, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waaah!",
+            }
+        case 2:
+            {
+                english=" Waaah!",
+            }
+        default:
+            {
+                english=" Waaah!",
+            }
+    }
+    Wait(60);
+    message_CloseEnforce();
+    supervision_Acting(3);
+    SetAnimation<object OBJECT_P11P01A2_145>(17);
+    WaitAnimation<object OBJECT_P11P01A2_145>();
+    se_Play(7444);
+    WaitExecuteObject(OBJECT_P11P01A2_145);
+    SetAnimation<object OBJECT_P11P01A2_145>(2);
+    Wait(5);
+    se_FadeOut(7444, 120);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_LEFT);
+    Wait(30);
+    screen2_WhiteChange(0, 30, 64, 0);
+    screen_WhiteOut(1, 30);
+    back2_SetMode(0);
+    end;
+}
+
+def 1 for actor ACTOR_NPC_DEBUG {
+    @label_0;
+    back2_SetEffect(5, 48);
+    Wait(48);
+    back2_SetEffect(3, 48);
+    Wait(48);
+    jump @label_0;
+}

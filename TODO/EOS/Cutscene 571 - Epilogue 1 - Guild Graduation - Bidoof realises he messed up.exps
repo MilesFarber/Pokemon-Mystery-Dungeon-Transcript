@@ -1,0 +1,42 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    back_SetGround(LEVEL_D31P31A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_BIPPA>();
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_SAD, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             B-but I thought it'd be too dark
+            down there for you all, so I opened it up.
+        """,
+    });
+    message_Talk({
+        english="""
+             M-maybe I did something I
+            shouldn't have...?
+        """,
+    });
+    message_Talk({
+        english="""
+             Uh, helping out with the
+            graduation exam and all...
+        """,
+    });
+    message_Talk({
+        english="""
+             This is all so new to me, I don't
+            have the foggiest idea about what I should
+            be doing...
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

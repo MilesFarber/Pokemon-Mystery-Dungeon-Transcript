@@ -1,0 +1,48 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[42, 3];
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Ooogh...[K] That was pretty tough...",
+    });
+    message_Talk({
+        english=" I'll have to try it again.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yep. ♪",
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_P19P01A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_AAMARUDO>();
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(2);
+    bgm_PlayFadeIn(BGM_A_FUN_EXPLORATION, 0, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" We've still got time today.",
+    });
+    message_Talk({
+        english="""
+             Lets prepare for our exploration
+            and make another try at [CS:P]Eastern Cave[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oh! ♪",
+    });
+    message_Close();
+    end;
+}

@@ -1,0 +1,190 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_SYMPATHY, 0, 256);
+    back_SetGround(LEVEL_P15P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    MovePositionMark<performer 0>(0.5, Position<'m0', 35.5, 20.5>);
+    screen_FadeIn(1, 60);
+    message_Mail({
+        english="""
+            [CN]To do that...[K]I've come to
+            [CN]the most famous place among explorers...
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]I've come to train at Guildmaster
+            [CN][CS:N]Wigglytuff[CR]'s Guild! Yup yup!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecutePerformer(0);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(20);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(20);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Well, I'm off!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_BIIDARU>(1, -8, 0);
+    WaitExecuteLives(ACTOR_NPC_BIIDARU);
+    message_SetFace(ACTOR_NPC_BIIDARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Please say hello to everyone in
+            the guild for me. Yup yup!
+        """,
+    });
+    message_Talk({
+        english=" Oh... And be careful!",
+    });
+    message_Talk({
+        english="""
+             You're kind of a big eater...[K]
+            Don't you go eating anything weird!
+        """,
+    });
+    message_Talk({
+        english="""
+             Remember...[K] If you get in
+            trouble, you can always come back home to us.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Sniff... [K]M-Mama...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_BIPPA_BRO>(1, -4, 4);
+    WaitExecuteLives(ACTOR_NPC_BIPPA_BRO);
+    message_SetFace(ACTOR_NPC_BIPPA_BRO, FACE_STUNNED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Do your best, Big Bro!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_BIPPA_SIS>(1, -4, -4);
+    WaitExecuteLives(ACTOR_NPC_BIPPA_SIS);
+    message_SetFace(ACTOR_NPC_BIPPA_SIS, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Take care!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_TEARY_EYED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Sniff... You guys...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(20);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(29);
+    WaitAnimation<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    Wait(15);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I'm fine![K]
+            Don't you worry about me! Yup yup!
+        """,
+    });
+    message_Talk({
+        english="""
+             When I come home,[K]
+            I'll be big! I'll make you proud of me!
+        """,
+    });
+    message_Talk({
+        english=" Just wait and see!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<performer 0>(0.5, -64, 0);
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(0.5, -64, 0);
+    Wait(15);
+    Turn2Direction<actor ACTOR_NPC_BIPPA_BRO>(4, 10, DIR_LEFT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_BIPPA_SIS>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(45);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 1, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(20);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             By golly, everyone![K]
+            I'm off!
+        """,
+    });
+    message_Close();
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(1.1992, -160, 0);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_NPC_BIPPA_BRO>(1, -64, 0);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_NPC_BIPPA_SIS>(1, -32, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA_SIS);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA_BRO>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA_BRO);
+    SetEffect<actor ACTOR_NPC_BIPPA_BRO>(EFFECT_JOYOUS, 3);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Bidoof's Family[CR]: Do your best!",
+    });
+    message_Close();
+    SetEffect<actor ACTOR_NPC_BIPPA_BRO>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_BIPPA_BRO>(51);
+    Wait(7);
+    SetAnimation<actor ACTOR_NPC_BIPPA_SIS>(42);
+    Wait(5);
+    SetAnimation<actor ACTOR_NPC_BIIDARU>(42);
+    Wait(120);
+    bgm_FadeOut(120);
+    screen2_FadeOut(0, 60);
+    screen_FadeOut(1, 60);
+    back2_SetMode(0);
+    Wait(90);
+    message_Narration(30, {
+        english="[CN]So I left my hometown...",
+    });
+    message_Narration(30, {
+        english="""
+            [CN]And entered the Guildmaster's
+            [CN]guild as an apprentice.
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]But the training at the guild...
+            [CN]For me, was...
+        """,
+    });
+    message_Narration(30, {
+        english="[CN]More difficult than I thought...",
+    });
+    message_Close();
+    end;
+}

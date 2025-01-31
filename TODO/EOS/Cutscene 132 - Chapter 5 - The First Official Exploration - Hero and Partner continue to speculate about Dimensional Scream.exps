@@ -1,0 +1,384 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P07C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    bgm_PlayFadeIn(BGM_I_SAW_SOMETHING_AGAIN, 0, 256);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It... It's true...)",
+            }
+        default:
+            {
+                english="(It... It's true...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (It was always after touching something!
+                    That's when I got those dizzy spells!)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (It was always after touching something!
+                    That's when I got those dizzy spells!)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (When I touch something, I see something
+                    connected to it...[K] Right?)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (When I touch something, I see something
+                    connected to it...[K] Right?)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" There's another thing.",
+            }
+        case 2:
+            {
+                english=" There's one more thing.",
+            }
+        default:
+            {
+                english=" There's another thing.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The time we rescued [CS:N]Azurill[CR], you
+                    saw something in the future...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     When we rescued [CS:N]Azurill[CR], you
+                    had a vision of the future...
+                """,
+            }
+        default:
+            {
+                english="""
+                     When we rescued [CS:N]Azurill[CR], you
+                    had a vision of the future...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But this time, you saw
+                    [CS:N]Wigglytuff[CR] going into the cave, right?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But this time, you saw
+                    [CS:N]Wigglytuff[CR] going into the cave, right?
+                """,
+            }
+        default:
+            {
+                english="""
+                     But this time, you saw
+                    [CS:N]Wigglytuff[CR] going into the cave, right?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" So that means...",
+            }
+        case 2:
+            {
+                english=" So that means...",
+            }
+        default:
+            {
+                english=" So that means...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This time, you saw something
+                    that happened in the past.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This time, you saw an event
+                    that occurred in the past.
+                """,
+            }
+        default:
+            {
+                english="""
+                     This time, you saw something
+                    that took place in the past.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Th-that's true!)",
+            }
+        default:
+            {
+                english="(Th-that's true!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" In other words, [hero]...",
+            }
+        case 2:
+            {
+                english=" In other words, [hero]...",
+            }
+        default:
+            {
+                english=" In other words, [hero]...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If you touch something, you see
+                    its past or future.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If you touch something, you see
+                    its past or future.
+                """,
+            }
+        default:
+            {
+                english="""
+                     If you touch something, you see
+                    its past or future.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You must have that kind of
+                    special ability!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You must have that kind of
+                    special ability!
+                """,
+            }
+        default:
+            {
+                english="""
+                     You must have that kind of
+                    special ability!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This could be something totally
+                    awesome!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This could be something totally
+                    incredible!
+                """,
+            }
+        default:
+            {
+                english="""
+                     This could be something totally
+                    amazing!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" You could use it in lots of ways!",
+            }
+        case 2:
+            {
+                english=" You could use it in lots of ways!",
+            }
+        default:
+            {
+                english=" You could use it in lots of ways!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Not just for exploring, either!
+                    The ability could be useful for many things!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Not just for exploring, either!
+                    The ability could be useful for many things!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Not just for exploring, either!
+                    The ability could be useful for many things!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" This is awesome, [hero]!",
+            }
+        case 2:
+            {
+                english=" It's fantastic, [hero]!",
+            }
+        default:
+            {
+                english=" It's amazing, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(W-well, yes! I guess that's true...)",
+            }
+        default:
+            {
+                english="(W-well, yes! I guess that's true...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (But that doesn't mean I always get a vision
+                    every time I touch something...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (But that doesn't mean I always get a vision
+                    every time I touch something...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (It would be useful if I could have visions
+                    when I wanted, but...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (It would be useful if I could have visions
+                    when I wanted, but...)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(120);
+    supervision_Acting(1);
+    Wait(1);
+    MovePositionMark<actor ACTOR_NPC_PERAPPU>(1, Position<'m0', 15, 22.5>);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" Hey, you two!",
+    });
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PERAPPU);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_Talk({
+        english="""
+             The Guildmaster wants to see
+            you right away.
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 60);
+    WaitBgm(BGM_I_SAW_SOMETHING_AGAIN);
+    end;
+}

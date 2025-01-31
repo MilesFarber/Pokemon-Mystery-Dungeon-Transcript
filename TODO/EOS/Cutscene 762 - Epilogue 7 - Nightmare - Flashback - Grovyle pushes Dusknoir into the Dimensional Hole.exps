@@ -1,0 +1,118 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_IN_THE_HANDS_OF_FATE, 0, 256);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_D28P44A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(55);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(33);
+    SetAnimation<object OBJECT_D28P34A2_75>(10);
+    SetAnimation<object OBJECT_D28P34A2_77>(10);
+    SetEffect<performer 3>(653, 3);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_LC_FACEOUTW);
+    message_Talk({
+        english=" [partner]![K] This is it for me!",
+    });
+    message_Talk({
+        english="""
+             I'm taking [CS:N]Dusknoir[CR]...[K]back to
+            the future!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?![K] Wh-what?!",
+            }
+        case 2:
+            {
+                english=" Huh?![K] Wh-what?!",
+            }
+        default:
+            {
+                english=" Huh?![K] Wh-what?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_LC_FACEOUTW);
+    message_Talk({
+        english="""
+             I can never come back
+            here again.
+        """,
+    });
+    message_Talk({
+        english="""
+             Watch [hero]'s back...[K]
+            Promise me!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" B-but...!",
+            }
+        case 2:
+            {
+                english=" B-but...!",
+            }
+        default:
+            {
+                english=" B-but...!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Take your place, [CS:N]Grovyle[CR]...?[K]
+                    I can't!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Take your place, [CS:N]Grovyle[CR]...?[K]
+                    I can't!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Take your place, [CS:N]Grovyle[CR]...?[K]
+                    I can't!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_LC_FACEOUTW);
+    message_Talk({
+        english="""
+             You must and you will.[K] Because
+            you can, [partner].
+        """,
+    });
+    message_Talk({
+        english="""
+             You two are...[K]the greatest of
+            combinations.
+        """,
+    });
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

@@ -1,0 +1,37 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_SEALED_RUIN, 0, 256);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    message_Mail({
+        english="[CN]Would you like to keep going?",
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+        default:
+            @label_0;
+            message_Close();
+            MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 28.5, 3.5>);
+            Wait(15);
+            MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 28.5, 3.5>);
+            Wait(20);
+            if ( scn($SCENARIO_MAIN) >= [29, 84] ) {
+                @label_2;
+                main_EnterDungeon(65, 30);
+                main_EnterDungeon(-1, 30);
+                hold;
+                end;
+            } else {
+                $SCENARIO_MAIN = scn[29, 84];
+                jump @label_2;
+            }
+            break;
+        case menu({
+            english="No",
+        }):
+            message_Close();
+            end;
+    }
+}

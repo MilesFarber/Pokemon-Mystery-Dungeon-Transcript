@@ -1,0 +1,48 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh... That didn't go well...",
+            }
+        case 2:
+            {
+                english=" Ugh... That didn't go well...",
+            }
+        default:
+            {
+                english=" Ugh... That didn't go well...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hmmm... This is pretty
+                    challenging...[K] Let's call it off for today.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Hmmm... This won't be easy...
+                    Let's call it off for today.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Hmmm... This is really hard...
+                    Let's call it off for today.
+                """,
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    Wait(60);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

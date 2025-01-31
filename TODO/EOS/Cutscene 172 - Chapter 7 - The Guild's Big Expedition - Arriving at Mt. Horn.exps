@@ -1,0 +1,78 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[9, 4];
+    dungeon_mode(10) = DMODE_OPEN;
+    back_SetGround(LEVEL_D07P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_MT_HORN, 0, 256);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m0', 22, 25.5>);
+    Wait(50);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 18, 26.5>);
+    Wait(20);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m2', 18, 24.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english="""
+             Whew... By golly, I reckon we're
+            finally through.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_BIPPA);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_BIPPA);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Yeah, but we're still pretty far
+                    from the base camp.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Yes, but we still have a long
+                    ways to go for the base camp.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Yes, but we're still quite far
+                    from the base camp.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's check the Wonder Map.",
+            }
+        case 2:
+            {
+                english=" Let's check the Wonder Map.",
+            }
+        default:
+            {
+                english=" Let's look at the Wonder Map.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    se_Play(6667);
+    screen_FadeOut(1, 15);
+    end;
+}

@@ -1,0 +1,75 @@
+
+def 0 {
+    back2_SetMode(5);
+    back_SetGround(LEVEL_V37P03A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_SHEIMI_FC, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             That's right. Flying is so
+            much fun!
+        """,
+    });
+    message_Talk({
+        english="""
+             It's not much, but this is
+            a gift from me to you!
+        """,
+    });
+    message_Talk({
+        english="""
+             All right, let's soar down to the
+            base of the mountain!
+        """,
+    });
+    message_Talk({
+        english=" Hold on tight!",
+    });
+    message_Close();
+    se_Play(11019);
+    MovePositionMark<performer 0>(10, Position<'m0', 16, 27.5>);
+    screen2_WhiteOut(0, 15);
+    screen_WhiteOutAll(1, 15);
+    screen_FadeOut(0, 0);
+    back2_SetMode(0);
+    WaitSe(11019);
+    screen2_FadeIn(0, 30);
+    screen_FadeInAll(1, 30);
+    Wait(60);
+    message_Narration(30, {
+        english="""
+            [CN]And so Team [team:],
+            [CN]which had successfully climbed to the
+            [CN][CS:P]Sky Peak[CR] Summit...
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]Thanked [CS:N]Shaymin[CR]
+            [CN]graciously and returned to Treasure Town.
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]And on the evening of the day they returned,
+            [CN]there was a huge party at [CS:K]Spinda[CR]'s Café...
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]Everyone stayed up until dawn,
+            [CN]discussing the exploration...
+        """,
+    });
+    message_Close();
+    screen2_FadeOut(0, 30);
+    screen_FadeOut(1, 30);
+    back2_SetMode(0);
+    Wait(60);
+    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+    end;
+}

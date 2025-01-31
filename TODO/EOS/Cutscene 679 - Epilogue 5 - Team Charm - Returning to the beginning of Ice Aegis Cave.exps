@@ -1,0 +1,127 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 58];
+    back_SetGround(LEVEL_D32P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m0', 28.5, 38.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m1', 31.5, 40.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m2', 25.5, 40.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m3', 28.5, 41.5>);
+    Wait(15);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_MIMIROPPU>();
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Oh, Team [team:].[K]
+            You've ended up back here like us.
+        """,
+    });
+    message_Talk({
+        english="""
+             You have to solve a mystery to
+            move ahead, it seems. This is vexing.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I would assume this stone
+            marker holds the key.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 2, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    Wait(15);
+    message_Talk({
+        english="""
+             The surface of the stone marker
+            is scored by deep grooves shaped like [CS:K]Unown[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             The cave is filled by hordes of
+            [CS:K]Unown[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             There most certainly is a
+            connection between those facts.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             "If you seek passage, close your
+            eyes, then submit your proof." Well, that's not
+            much to go on.
+        """,
+    });
+    message_Talk({
+        english="""
+             Well, I closed my eyes, but that
+            did nothing. We must be overlooking something.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWNLEFT);
+    message_Talk({
+        english="""
+             We'll go into the cave and
+            search again.
+        """,
+    });
+    message_Talk({
+        english=" See you again.",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m4', 23.5, 28.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m5', 33.5, 28.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(1, Position<'m6', 33.5, 28.5>);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m7', 28.5, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m8', 28.5, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(1, Position<'m9', 28.5, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m10', 28.5, 15.5>);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m11', 28.5, 15.5>);
+    MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(1, Position<'m12', 28.5, 15.5>);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    supervision_RemoveActing(1);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m13', 33.5, 38.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m14', 23, 38.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m15', 26, 40.5>);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC3>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC1);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC2);
+    end;
+}

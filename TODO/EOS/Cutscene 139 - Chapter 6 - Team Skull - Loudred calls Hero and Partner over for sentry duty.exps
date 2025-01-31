@@ -1,0 +1,175 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    $SCENARIO_MAIN = scn[7, 4];
+    supervision_LoadStation(LEVEL_G01P04A, 'UM06');
+    supervision_StationCommon(0);
+    supervision_StationCommon(99);
+    supervision_Station(3);
+    supervision_Acting(0);
+    Wait(1);
+    SetPositionInitial<actor ACTOR_NPC_PERAPPU>();
+    SetPositionInitial<actor ACTOR_NPC_DOGOOMU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    bgm_FadeOut(10);
+    se_Play(8971);
+    camera_SetEffect(2, 2, 3.0);
+    message_SetActor(ACTOR_NPC_DOGOOMU);
+    message_Talk({
+        english=" HEY, YOU TWO!",
+    });
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(10);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    camera_SetEffect(0, 0, 0);
+    WaitSe(8971);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, -48, 0);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, -48, 0);
+    screen_FadeOut(1, 60);
+    camera_SetMyself<performer 0>();
+    SetPositionMark<performer 0>(Position<'m0', 23.5, 40>);
+    SetPositionMark<actor ACTOR_PLAYER>(Position<'m1', 28, 36.5>);
+    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m2', 28, 40.5>);
+    SetDirection<actor ACTOR_PLAYER>(DIR_LEFT);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DIGUDA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I'm sorry, but I have something
+            else I have to do today.
+        """,
+    });
+    message_Talk({
+        english="""
+             Please take over my sentry duty
+            again today. Bye.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetDirection<actor ACTOR_NPC_DIGUDA>(DIR_DOWN);
+    se_Play(6422);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(24);
+    WaitAnimation<actor ACTOR_NPC_DIGUDA>();
+    Destroy<actor ACTOR_NPC_DIGUDA>();
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-3, 0);
+    message_Talk({
+        english=" All right! Let's DO this!",
+    });
+    message_Talk({
+        english="""
+             You've done this sentry-duty
+            thing once before, RIGHT?
+        """,
+    });
+    message_Talk({
+        english="""
+             You'll be fine without me
+            explaining the job again?
+        """,
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes, no problem!",
+        }):
+        default:
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_Talk({
+                english=" Good![K] Then, let's get to WORK!",
+            });
+            message_Talk({
+                english=" Buck up and do a GOOD job!",
+            });
+            message_Close();
+            Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNLEFT);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+            MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 25, 36.5>);
+            MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m4', 28, 39.5>);
+            MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m5', 24, 37.5>);
+            MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m6', 26, 37.5>);
+            bgm_FadeOut(60);
+            screen_FadeOut(1, 30);
+            Wait(30);
+            $SCENARIO_MAIN = scn[7, 5];
+            @label_2;
+            end;
+        case menu({
+            english="No, please explain...",
+        }):
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_ANGRY, 3);
+            Wait(15);
+            se_Play(8971);
+            camera_SetEffect(2, 2, 3.0);
+            SetAnimation<actor ACTOR_NPC_DOGOOMU>(19);
+            WaitAnimation<actor ACTOR_NPC_DOGOOMU>();
+            SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+            SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_ANGRY, 3);
+            Wait(5);
+            SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+            SetAnimation<actor ACTOR_PLAYER>(68);
+            SetAnimation<actor ACTOR_ATTENDANT1>(68);
+            WaitAnimation<actor ACTOR_PLAYER>();
+            WaitAnimation<actor ACTOR_ATTENDANT1>();
+            WaitSe(8971);
+            camera_SetEffect(0, 0, 0);
+            message_SetFace(ACTOR_NPC_DOGOOMU, FACE_ANGRY, FACE_POS_TOP_L_CENTER);
+            message_FacePositionOffset(-3, 0);
+            message_Talk({
+                english="""
+                     WHAT?! You need me to explain
+                    it again?!
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            SetAnimation<actor ACTOR_PLAYER>(9);
+            SetAnimation<actor ACTOR_ATTENDANT1>(9);
+            Wait(20);
+            SetAnimation<actor ACTOR_PLAYER>(2);
+            SetAnimation<actor ACTOR_ATTENDANT1>(2);
+            SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+            Wait(30);
+            SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_LAUGHING, 3);
+            message_SetFace(ACTOR_NPC_DOGOOMU, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+            message_FacePositionOffset(-3, 0);
+            message_Talk({
+                english="""
+                     All right. I've got a BIG heart.
+                    I'll explain as much as you want.
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Wait(30);
+            se_Play(8961);
+            SetEffect<actor ACTOR_PLAYER>(EFFECT_SWEAT_DROP, 3);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROP, 3);
+            WaitEffect<actor ACTOR_PLAYER>();
+            WaitEffect<actor ACTOR_ATTENDANT1>();
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            screen_FadeOut(1, 30);
+            jump @label_2;
+    }
+}

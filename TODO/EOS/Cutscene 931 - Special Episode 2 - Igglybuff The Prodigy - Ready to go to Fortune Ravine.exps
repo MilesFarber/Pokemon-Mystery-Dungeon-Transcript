@@ -1,0 +1,98 @@
+
+def 0 {
+    supervision_Acting(0);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(2);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    SetPositionLives<performer 0>(6);
+    camera_SetMyself<performer 0>();
+    MovePositionMark<performer 0>(1, Position<'m0', 28.5, 30.5>);
+    WaitExecutePerformer(0);
+    Turn2DirectionLives<actor ACTOR_NPC_AAMARUDO>(4, 10, ACTOR_PLAYER_PUPURIN);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(2, 0);
+    message_Talk({
+        english="""
+             Huh?[K] Junior, did you finish
+            getting ready?
+        """,
+    });
+    Turn2DirectionLives<actor ACTOR_PLAYER_PUPURIN>(4, 10, ACTOR_NPC_AAMARUDO);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yep!",
+        }):
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m2', 28.5, 30.5>);
+            WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+            Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UP);
+            WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+            Wait(4);
+            Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWN);
+            WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+            message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+            message_Talk({
+                english=" Yep. ♪",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            MovePositionMark<actor ACTOR_NPC_AAMARUDO>(1, Position<'m3', 31.5, 27.5>);
+            WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+            Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWNLEFT);
+            WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+            Wait(4);
+            Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UPRIGHT);
+            WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+            message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english=" All right!",
+            });
+            message_Talk({
+                english="""
+                     OK, let's go![K]
+                    To [CS:P]Fortune Ravine[CR]!
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_STANDARD);
+            message_Talk({
+                english=" Yep. ♪",
+            });
+            message_Close();
+            MovePositionOffset<actor ACTOR_PLAYER_PUPURIN>(1, 0, 180);
+            Wait(4);
+            MovePositionOffset<actor ACTOR_NPC_AAMARUDO>(1, 0, 180);
+            Wait(40);
+            bgm_FadeOut(60);
+            screen_FadeOut(1, 60);
+            Wait(30);
+            supervision_ExecuteCommon(CORO_EVENT_N03_10);
+            hold;
+        case menu({
+            english="Not yet.",
+        }):
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_FacePositionOffset(2, 0);
+            message_Talk({
+                english=" What do you mean, not yet?",
+            });
+            message_Talk({
+                english=" Once you're ready, we'll go.",
+            });
+            message_Close();
+            SetAnimation<actor ACTOR_NPC_AAMARUDO>(4);
+            end;
+        default:
+            Move2PositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m1', 28.5, 30.5>);
+            WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+            Turn2DirectionLives<actor ACTOR_NPC_AAMARUDO>(4, 10, ACTOR_PLAYER_PUPURIN);
+            WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+            Turn2DirectionLives<actor ACTOR_PLAYER_PUPURIN>(4, 10, ACTOR_PLAYER_APPOINT);
+            WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+            jump @label_0;
+    }
+}

@@ -1,0 +1,43 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_IN_THE_FUTURE, 0, 256);
+    $SCENARIO_MAIN = scn[18, 2];
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    message_Mail({
+        english="[CN][hero] tested the doors.",
+    });
+    message_Mail({
+        english="[CN]The doors failed to open.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (It's no good.[K] Like [partner] said, these
+                    doors won't open.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (It's no good.[K] Like [partner] said, these
+                    doors won't open.)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It sure looks like we've been locked up!)",
+            }
+        default:
+            {
+                english="(It sure looks like we've been locked up!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    end;
+}

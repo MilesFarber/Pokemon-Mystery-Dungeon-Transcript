@@ -1,0 +1,733 @@
+
+def 0 {
+    $SCENARIO_SIDE = scn[45, 9];
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_CHAAREMU>();
+    SetPositionInitial<actor ACTOR_NPC_SAANAITO>();
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    camera_SetMyself<performer 0>();
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I wonder if there's...[K]some kind
+            of puzzle...
+        """,
+    });
+    message_Talk({
+        english="""
+             We probably have to solve a
+            puzzle in order to move on...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_SAANAITO);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Hey, [CS:N]Gardevoir[CR].[K] Got any ideas?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" No.",
+    });
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Sorry...[K] But I don't have
+            the faintest idea.
+        """,
+    });
+    message_Talk({
+        english="""
+             Right here, there's two
+            entrances, but other than that...[K]
+            there's nothing...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hmm...[K] If [CS:N]Gardevoir[CR] doesn't
+            know, then there's not much chance that we'd
+            figure it out.
+        """,
+    });
+    message_Close();
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Wait a sec![K] I don't want to be
+            put on the same level as you, [CS:N]Medicham[CR].
+        """,
+    });
+    message_Close();
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Eh?[K] What do you mean by that?",
+    });
+    message_Talk({
+        english="""
+             Just ask yourself--have you
+            figured anything out, [CS:Y]Lopunny[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Well, no.[K] Actually, I don't have
+            a clue, either. [M:H8]
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(8, 10, DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(26);
+    WaitAnimation<actor ACTOR_NPC_CHAAREMU>();
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             That answers that...[K] And that
+            was pretty much what I expected to hear,
+            so I'm not mad...
+        """,
+    });
+    message_Talk({
+        english="""
+             We've been together for a while,
+            haven't we...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             That's just like you,
+            [CS:N]Medicham[CR]! ♪[K]
+            Thank you! [M:H8]
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Wait(6);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" You're welcome.",
+    });
+    message_Talk({
+        english="""
+             However...[K] Hmm... Honestly,
+            what should we do...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    supervision_Acting(1);
+    message_ResetActor();
+    message_Talk({
+        english=" Heeey! Wait!",
+    });
+    message_Close();
+    se_Play(10251);
+    supervision_Acting(2);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_CHARMS>();
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_DOWN);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWN);
+    WaitEffect<actor ACTOR_NPC_SAANAITO>();
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    SetAnimation<object OBJECT_P03P02A1_128>(20);
+    SlidePositionMark<object OBJECT_P03P02A1_128>(1.1992, Position<'m0', 31.5, 23>);
+    Wait(55);
+    MovePositionOffset<actor ACTOR_PLAYER_CHARMS>(1, 28, -4);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(8, 10, DIR_UPRIGHT);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(8, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitExecuteObject(OBJECT_P03P02A1_128);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Wh...[K] What?!",
+    });
+    message_Close();
+    WaitLockLives(5, ACTOR_NPC_PUKURIN);
+    Unlock(5);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWN);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWN);
+    Wait(2);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWNRIGHT);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWNLEFT);
+    Wait(2);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    Wait(15);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UPRIGHT);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UPLEFT);
+    Wait(2);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitLockLives(6, ACTOR_NPC_PUKURIN);
+    SetOutputAttribute<object OBJECT_P03P02A1_128>(128);
+    se_Play(8710);
+    WaitSe(8710);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Yay, I caught you! ♪[K] My
+            Perfect Apple! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Unlock(6);
+    WaitLockLives(7, ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_SIGH, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Y-you're...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" [CS:N]Wigglytuff[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Unlock(7);
+    WaitLockLives(8, ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Oh! It's Team [CS:X]Charm[CR]. ♪",
+    });
+    message_Talk({
+        english=" Yay! Friendly friends!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Unlock(8);
+    WaitLockLives(9, ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Wh-why...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Why is [CS:N]Wigglytuff[CR] here?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oh![K] Let me guess!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             You've come in search of the
+            treasure as well?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    Unlock(9);
+    WaitLockLives(10, ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Huh?[K] Treasure?",
+    });
+    message_Talk({
+        english="""
+             I don't know anything about that.[K]
+            Treasure, I mean.
+        """,
+    });
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_WORRIED, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             My Perfect Apple just up and ran
+            away from me...
+        """,
+    });
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             I was chasing it as it rolled
+            away...[K] And somehow I found myself here.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8961);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SWEAT_DROP, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SWEAT_DROP, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_PLAYER_CHARMS>();
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SIGH, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Oh...[K] I see.",
+    });
+    message_Talk({
+        english=" It's fine, it's fine...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Unlock(10);
+    WaitLockLives(11, ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             So what are all of you
+            doing here?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             We can't seem to go
+            any farther.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(2);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    Unlock(11);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             You see the two entrances
+            over there?
+        """,
+    });
+    message_Talk({
+        english="""
+             It doesn't matter which entrance
+            we enter...
+        """,
+    });
+    message_Talk({
+        english="""
+             No matter what, we end up
+            right back here.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitLockLives(12, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_NPC_PUKURIN);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             We guess there's a puzzle
+            to solve...[K] Because we're all really puzzled!
+        """,
+    });
+    message_Talk({
+        english="""
+             Can you think of something to
+            try, [CS:N]Wigglytuff[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    clear $EVENT_LOCAL;
+    Unlock(12);
+    Wait(94);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Yay! Perfect Apple,
+            Perfect Apple! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_ANGRY, 3);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Aww...",
+    });
+    message_Talk({
+        english="""
+             Weren't you paying attention
+            to our explanation?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_NONE, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_NPC_SAANAITO);
+    Wait(3);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_SAANAITO);
+    Wait(3);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    se_Play(8961);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SWEAT_DROP, 3);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_SWEAT_DROP, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             If you've got a plan, we'd love to
+            hear it...
+        """,
+    });
+    message_Talk({
+        english="""
+             If you could lend us your
+            wisdom, we might be able to figure this out...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I think we're going to have to
+            look for help from somewhere else... ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" You said it!",
+    });
+    message_Talk({
+        english=" It was a mistake to ask him!",
+    });
+    message_Talk({
+        english="""
+             He's not listening to a
+            word we say!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Nope.[K] I'm listening carefully.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_CHARMS>();
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_PUKURIN);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_NPC_PUKURIN);
+    WaitEffect<actor ACTOR_NPC_SAANAITO>();
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_PUKURIN);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Huh?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             You helped me. ♪[K] So it would
+            be terribly rude for me not to pay attention.
+        """,
+    });
+    message_Talk({
+        english="""
+             Thinking about it...[K] It's a pretty
+            cool problem, isn't it?
+        """,
+    });
+    message_Talk({
+        english="""
+             There's only two
+            entrances here...
+        """,
+    });
+    message_Talk({
+        english="""
+             If you enter either one,
+            swoosh--start again, start again!
+            
+        """,
+    });
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_SIGH, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" I give up too. ♪[K] I don't know.",
+    });
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" ...[K]However...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" However?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             I guess, I wonder...[K]if the paths
+            you can see are the only ones. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(2);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(2);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" The visible paths...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Aren't the only ones...?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    $EVENT_LOCAL = 1;
+    WaitLockLives(13, ACTOR_NPC_PUKURIN);
+    se_Play(6916);
+    SetOutputAttribute<actor ACTOR_NPC_PUKURIN>(128);
+    supervision_Acting(3);
+    SetAnimation<object OBJECT_D56P11A1_518>(5);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Whoops![K] M-my Perfect Apple!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_RemoveActing(3);
+    se_Play(10252);
+    ResetOutputAttribute<actor ACTOR_NPC_PUKURIN>(128);
+    ResetOutputAttribute<object OBJECT_P03P02A1_128>(128);
+    SetAnimation<object OBJECT_P03P02A1_128>(3);
+    MovePositionMark<object OBJECT_P03P02A1_128>(1, Position<'m1', 31.5, 18.5>);
+    WaitExecuteObject(OBJECT_P03P02A1_128);
+    se_Play(10253);
+    supervision_Acting(4);
+    SetAnimation<object OBJECT_D56P11A3_521>(17);
+    supervision_RemoveActing(2);
+    WaitAnimation<object OBJECT_D56P11A3_521>();
+    WaitExecuteObject(OBJECT_D56P11A3_521);
+    supervision_RemoveActing(4);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_SHOCKED, 3);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" P-Perfect Apple!",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m2', 31.5, 21>);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UP);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UP);
+    Wait(2);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_TEARY_EYED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Perfect Apple! Perfect Apple!!",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(2.5, Position<'m3', 31.5, 18.5>);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    se_Play(10253);
+    supervision_Acting(5);
+    SetAnimation<object OBJECT_D56P11A3_522>(17);
+    supervision_RemoveActing(1);
+    WaitAnimation<object OBJECT_D56P11A3_522>();
+    WaitExecuteObject(OBJECT_D56P11A3_522);
+    supervision_RemoveActing(5);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_SHOCKED, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SHOCKED, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Where'd it go?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:N]Wigglytuff[CR] just walked through
+            the wall!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_NPC_SAANAITO);
+    Wait(3);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_STUNNED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             What in the world![K] [CS:N]Wigglytuff[CR]
+            disappeared!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" But--[K]if that's the case...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             You know it![K] If that's the case,
+            then that wall...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             That wall might be an invisible...[K]
+            hidden doorway!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8975);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             What?! Could that be true?![K]
+            If that's true...
+        """,
+    });
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:N]Gardevoir[CR]! [CS:Y]Lopunny[CR]![K]
+            Let's find out for ourselves!
+        """,
+    });
+    message_Close();
+    bgm_PlayFadeIn(BGM_ILLUSION_STONE_CHAMBER, 0, 256);
+    ResetOutputAttribute<actor ACTOR_PLAYER_CHARMS>(2);
+    ResetOutputAttribute<actor ACTOR_NPC_CHAAREMU>(2);
+    ResetOutputAttribute<actor ACTOR_NPC_SAANAITO>(2);
+    end;
+}
+
+def 1 for actor ACTOR_NPC_PUKURIN {
+    SetAnimation(2);
+    Lock(5);
+    MovePositionMark(1.5, Position<'m4', 31.5, 24.5>);
+    SetEffect(EFFECT_LAUGHING, 3);
+    Lock(6);
+    SetEffect(EFFECT_NONE, 3);
+    Lock(7);
+    Turn2Direction(4, 10, DIR_DOWNRIGHT);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    SetEffect(EFFECT_LAUGHING, 3);
+    Lock(8);
+    SetEffect(EFFECT_NONE, 3);
+    WaitEffect();
+    Lock(9);
+    SetEffect(EFFECT_QUESTION_MARK, 3);
+    Turn2DirectionLives(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(10);
+    Lock(10);
+    Turn2Direction(4, 10, DIR_DOWNRIGHT);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Turn2DirectionLives(4, 10, ACTOR_NPC_CHAAREMU);
+    Lock(11);
+    Turn2Direction(4, 10, DIR_UPLEFT);
+    Wait(50);
+    Turn2Direction(4, 10, DIR_UPRIGHT);
+    Wait(50);
+    Turn2Direction(4, 10, DIR_UPLEFT);
+    Lock(12);
+    Turn2Direction(4, 10, DIR_DOWNLEFT);
+    Wait(90);
+    SetAnimation(5);
+    SetEffect(EFFECT_APPLE_ON_HEAD, 3);
+    @label_1;
+    forever {
+        Turn2Direction(8, 1, DIR_UP);
+        Wait(20);
+        switch ( $EVENT_LOCAL ) {
+            case 1:
+                break_loop;
+                break;
+            default:
+                Turn2Direction(8, 1, DIR_DOWN);
+                Wait(20);
+                switch ( $EVENT_LOCAL ) {
+                    case 1:
+                        break_loop;
+                        break;
+                    default:
+                        continue;  // may be redundant
+                }
+                break;
+        }
+    }
+    @label_0;
+    Turn2Direction(8, 1, DIR_UP);
+    SetEffect(EFFECT_NONE, 3);
+    Lock(13);
+    hold;
+}

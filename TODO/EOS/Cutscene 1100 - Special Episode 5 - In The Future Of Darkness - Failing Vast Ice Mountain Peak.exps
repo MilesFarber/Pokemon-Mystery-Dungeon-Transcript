@@ -1,0 +1,55 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Argh...[K] We didn't do so well...",
+    });
+    message_Talk({
+        english=" We should turn back for now.",
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D53P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_YONOWAARU_N9>();
+    SetPositionInitial<actor ACTOR_NPC_SEREBII>();
+    SetAnimation<actor ACTOR_NPC_SEREBII>(2);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_VAST_ICE_MOUNTAIN_PEAK, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             If we don't find Master [CS:N]Dialga[CR]
+            on the peak...
+        """,
+    });
+    message_Talk({
+        english="""
+             Then he's most likely at
+            the pinnacle.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             We're almost to the pinnacle.[K]
+            Let's break through here.
+        """,
+    });
+    message_Close();
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_UP);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_SEREBII>(4, 10, DIR_UP);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N9>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    end;
+}

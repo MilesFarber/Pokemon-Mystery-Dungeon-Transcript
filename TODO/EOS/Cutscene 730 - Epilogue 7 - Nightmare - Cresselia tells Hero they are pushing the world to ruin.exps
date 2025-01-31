@@ -1,0 +1,187 @@
+
+def 0 {
+    sound_Stop();
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_S02P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_WELCOME_TO_THE_WORLD_OF_POKEMON, 0, 256);
+    screen_FadeInAll(1, 60);
+    Wait(60);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="......",
+            }
+        default:
+            {
+                english="......",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="............",
+            }
+        default:
+            {
+                english="............",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="..................",
+            }
+        default:
+            {
+                english="..................",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="This...",
+            }
+        default:
+            {
+                english="This...",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="Is this...[K] Is this a dream...?",
+            }
+        default:
+            {
+                english="Is this...[K] Is this a dream...?",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="...Oh?[K] There's someone here.",
+            }
+        default:
+            {
+                english="...Oh?[K] There's someone here.",
+            }
+    }
+    message_Close();
+    Wait(60);
+    se_Play(6922);
+    supervision_Acting(1);
+    SetAnimation<actor ACTOR_NPC_KURESERIA>(22);
+    WaitAnimation<actor ACTOR_NPC_KURESERIA>();
+    WaitExecuteLives(ACTOR_NPC_KURESERIA);
+    SetAnimation<actor ACTOR_NPC_KURESERIA>(2);
+    Wait(80);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="Who is it...?",
+            }
+        default:
+            {
+                english="Who is it...?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" ...[K]I am...",
+    });
+    message_Talk({
+        english=" I am [CS:N]Cresselia[CR].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="[CS:N]C-Cresselia[CR]...?!",
+            }
+        default:
+            {
+                english="[CS:N]C-Cresselia[CR]...?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Your...[K]your very existence is...",
+    });
+    message_Talk({
+        english=" pushing the world toward ruin.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="The world...[K]to ruin?[K] How am I doing that?!",
+            }
+        default:
+            {
+                english="The world...[K]to ruin?[K] How am I doing that?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Because you are in this world.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(10);
+    se_Play(5127);
+    screen_WhiteOutAll(1, 5);
+    Wait(2);
+    screen_FadeInAll(1, 5);
+    Wait(10);
+    message_Talk({
+        english=" Because you...[K]exist here...",
+    });
+    message_Talk({
+        english=" If you remain...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5127);
+    screen_WhiteOutAll(1, 5);
+    Wait(2);
+    screen_FadeInAll(1, 5);
+    Wait(10);
+    message_Talk({
+        english=" The world will be destroyed!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5143);
+    screen_WhiteOutAll(1, 5);
+    Wait(2);
+    screen_FadeInAll(1, 5);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOutAll(1, 5);
+    Wait(2);
+    screen_FadeInAll(1, 5);
+    Wait(15);
+    se_Play(6403);
+    message_SetFace(ACTOR_PLAYER, FACE_SHOUTING, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="Waaaah!",
+            }
+        default:
+            {
+                english="Waaaah!",
+            }
+    }
+    screen_WhiteOutAll(1, 30);
+    message_CloseEnforce();
+    screen_WhiteOut(1, 0);
+    screen_FadeInAll(1, 0);
+    end;
+}

@@ -1,0 +1,83 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_HIDDEN_HIGHLAND, 0, 256);
+    back_SetGround(LEVEL_D41P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             However, [CS:N]Grovyle[CR] and
+            [hero] decided to meddle.
+        """,
+    });
+    message_Talk({
+        english="""
+             I learned of their impending
+            arrival from the future...
+        """,
+    });
+    message_Talk({
+        english="""
+             And I attacked [CS:N]Grovyle[CR] and
+            [hero] as they traveled in time...[K]
+            So that I would be rid of them.
+        """,
+    });
+    message_Talk({
+        english="""
+             But...[K]an unforeseen event made
+            it impossible to be rid of either of them.
+        """,
+    });
+    message_Talk({
+        english="""
+             It should have been enough.[K]
+            Especially for [CS:N]Grovyle[CR].[K] However...
+        """,
+    });
+    message_Talk({
+        english="""
+             Do you know how you came to
+            be a Pokémon, [hero]?
+        """,
+    });
+    message_Talk({
+        english="""
+             During the accident...[K]you shielded
+            [CS:N]Grovyle[CR] from my attack.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I shielded [CS:N]Grovyle[CR]...?!)",
+            }
+        default:
+            {
+                english="(I shielded [CS:N]Grovyle[CR]...?!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Yes, you absorbed the brunt of
+            the attack I'd intended for [CS:N]Grovyle[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             It appears your fierce will to
+            protect your partner became entangled with the
+            many dimensions during your time travel.
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

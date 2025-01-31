@@ -1,0 +1,172 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Ugh, we didn't do so good,
+                    did we?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Ugh, we didn't do well,
+                    did we?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Ugh, we didn't do well,
+                    did we?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This is pretty tough. Let's go
+                    home and regroup.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This is tougher than expected.
+                    Let's go home and regroup.
+                """,
+            }
+        default:
+            {
+                english="""
+                     This is tougher than I expected.
+                    Let's go home and regroup.
+                """,
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_G01P03A);
+    supervision_StationCommon(0);
+    supervision_LoadStation(LEVEL_G01P03A, 'UM15');
+    supervision_Station(2);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    SetPositionInitial<actor ACTOR_NPC_BIPPA>();
+    SetPositionInitial<actor ACTOR_NPC_DOGOOMU>();
+    SetPositionInitial<actor ACTOR_NPC_CHIRIIN>();
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_BIPPA>(4);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(4);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(4);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(4);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(4);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(4);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Did you all get knocked out?[K]
+            Same thing happened to me, by golly!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             It's a BRUTAL place. That cave
+            is unforgiving!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             But we mustn't give up! Let's
+            keep our spirits up!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We solved the secret of the
+                    three crystals.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We've solved the mystery of the
+                    three crystals.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We figured out the mystery of
+                    the three crystals.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We're getting closer. Let's keep
+                    at it, [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I'm sure we were nearly done.
+                    Let's keep at it, [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We're getting closer. Let's keep
+                    at it, [hero]!
+                """,
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    supervision_RemoveActing(1);
+    SetPositionMark<actor ACTOR_PLAYER>(Position<'m0', 45, 28.5>);
+    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m1', 42, 28.5>);
+    SetPositionMark<actor ACTOR_NPC_CHIRIIN>(Position<'m2', 64.5, 29.5>);
+    SetPositionMark<actor ACTOR_NPC_DOGOOMU>(Position<'m3', 41, 34.5>);
+    SetPositionMark<actor ACTOR_NPC_BIPPA>(Position<'m4', 44, 37.5>);
+    camera_SetDefault();
+    SetDirection<actor ACTOR_PLAYER>(DIR_DOWN);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_DOWN);
+    SetDirection<actor ACTOR_NPC_CHIRIIN>(DIR_DOWN);
+    SetDirection<actor ACTOR_NPC_DOGOOMU>(DIR_DOWNRIGHT);
+    SetDirection<actor ACTOR_NPC_BIPPA>(DIR_UPLEFT);
+    Wait(30);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    end;
+}

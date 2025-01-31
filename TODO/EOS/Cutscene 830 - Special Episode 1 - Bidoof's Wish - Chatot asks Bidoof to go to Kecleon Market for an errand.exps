@@ -1,0 +1,372 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P04A);
+    supervision_LoadStation(LEVEL_G01P04A, 'UN01');
+    supervision_Station(0);
+    supervision_Station(10);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    supervision_Acting(2);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_PERAPPU>();
+    SetPositionInitial<actor ACTOR_NPC_GUREGGURU>();
+    SetPositionInitial<actor ACTOR_NPC_DOGOOMU>();
+    SetPositionInitial<actor ACTOR_NPC_DIGUDA>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    Wait(30);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: THREE![K] SMILES GO FOR MILES!",
+    });
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+    message_Close();
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" OK, Pokémon! Get to work! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+    Wait(1);
+    SetDirection<actor ACTOR_NPC_GUREGGURU>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(23);
+    SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(23);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(23);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(23);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(24);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(23);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(23);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(25);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: HOORAY!",
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(2);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DIGUDA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+    SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(25);
+    WaitAnimation<actor ACTOR_NPC_DAGUTORIO>();
+    Destroy<actor ACTOR_NPC_DAGUTORIO>();
+    SetDirection<actor ACTOR_NPC_DIGUDA>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(24);
+    WaitAnimation<actor ACTOR_NPC_DIGUDA>();
+    Destroy<actor ACTOR_NPC_DIGUDA>();
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m0', 52.5, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_GUREGGURU>(1.1992, Position<'m1', 28, 31.5>);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m2', 40.5, 23.5>, Position<'m3', 40.5, 16.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m4', 40.5, 23.5>, Position<'m5', 40.5, 16.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1.1992, Position<'m6', 30, 34>);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1.1992, Position<'m7', 48.5, 31.5>, Position<'m8', 40.5, 23.5>, Position<'m9', 40.5, 16.5>);
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(1.1992, -80, 0);
+    Destroy<actor ACTOR_NPC_PUKURIN>();
+    MovePositionMark<actor ACTOR_PLAYER_BIPPA>(1.1992, Position<'m10', 44.5, 27.5>);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Hey, [CS:Y]Bidoof[CR].",
+    });
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    MovePositionMark<actor ACTOR_PLAYER_BIPPA>(1.5, Position<'m11', 51.5, 27.5>);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             Yes![K]
+            What is it?
+        """,
+    });
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_RemoveActing(1);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Today's assignment. ♪",
+    });
+    message_Talk({
+        english="""
+             Please go to [CS:K]Kecleon[CR] Market and
+            find out how many [CS:I]Oran Berries[CR] they have for
+            sale today. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" .........",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             ........[K]Huh?[K]
+            What's wrong, [CS:Y]Bidoof[CR]?
+        """,
+    });
+    message_Talk({
+        english="""
+             You're always doing little
+            errands like this.[K] It's nothing too difficult. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Golly, it's not that...",
+    });
+    message_Talk({
+        english="""
+             Just that I seem to always be
+            running errands...
+        """,
+    });
+    message_Talk({
+        english="""
+             What I really want is to get
+            exploration assignments. Yup yup...
+        """,
+    });
+    message_Talk({
+        english="""
+             Don't you think I can do a job
+            from the Job Bulletin Board sometime?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5122);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(18);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_SURPRISED, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" What? [K]This isn't a joke!",
+    });
+    message_Talk({
+        english="""
+             If I let you do one of those
+            assignments right now...
+        """,
+    });
+    message_Talk({
+        english="""
+             How badly do you think you
+            would mess it up?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Sniff...[K] Then I'll just...[K]
+            I'll just...
+        """,
+    });
+    message_Talk({
+        english=" The story of my life... Yup yup...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8961);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             ...[K][CS:Y]Bidoof[CR].[K]
+            Don't be so impatient.
+        """,
+    });
+    message_Talk({
+        english="""
+             You're just a little slower than
+            everyone else.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 1, 0);
+    Wait(1);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SPECIAL2, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Sniff...[K] Golly, you don't have to
+            be so direct...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             But I know the day will come
+            where you'll get to do exploration jobs.
+        """,
+    });
+    message_Talk({
+        english="""
+             If you want to be a top
+            explorer, you have to start somewhere.
+        """,
+    });
+    message_Talk({
+        english="""
+             Do your best...[K]
+            And work hard at your training.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Sniff... So you're telling me I
+            just need to be patient...
+        """,
+    });
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             By golly, I get it.[K]
+            I'm gonna work hard. Yup yup!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_HAPPY, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" That's right! Just like that!",
+    });
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Now that you get it, if you could
+            go run that errand I mentioned...
+        """,
+    });
+    message_Talk({
+        english="""
+             Please go to [CS:K]Kecleon[CR] Market and
+            find out how many [CS:I]Oran Berries[CR] they have for
+            sale today. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Yes, sir! Yup yup!",
+    });
+    message_Close();
+    Wait(30);
+    message_Mail({
+        english="""
+            [CN]The Special Episode
+            [CN]"Bidoof's Wish"
+            [CN]stars [CS:Y]Bidoof[CR] as the main character.
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]You will progress through the story with
+            [CN][CS:Y]Bidoof[CR] as the playable character.
+        """,
+    });
+    message_Mail({
+        english="[CN]So, just as [CS:N]Chatot[CR] requested...",
+    });
+    message_Mail({
+        english="[CN]Head to [CS:K]Kecleon[CR] Market in Treasure Town.",
+    });
+    message_Mail({
+        english="[CN]Also...",
+    });
+    message_Mail({
+        english="""
+            [CN]You can save your progress
+            [CN]at the Watering Hole or [CS:Y]Bidoof[CR]'s bed.
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]The Watering Hole is at the intersection
+            [CN]just down the stairs from the guild...
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN][CS:Y]Bidoof[CR]'s bed is to the
+            [CN]right and down in the crew rooms.
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]When you want to save your progress, please
+            [CN]go to the Watering Hole or [CS:Y]Bidoof[CR]'s bed.
+        """,
+    });
+    message_Close();
+    end;
+}

@@ -1,0 +1,168 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_A_NEW_WORLD, 0, 256);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V38P06C);
+    back_SetGround(LEVEL_D53P41C);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 15.5, 15.5>);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_P09P01A1_141>(3);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+    message_Talk({
+        english=" ...[K]We...",
+    });
+    message_Talk({
+        english=" We...[K]truly...are still here...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_SEREBII>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SEREBII);
+    message_SetFace(ACTOR_NPC_SEREBII, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Wonderful!!",
+    });
+    message_Talk({
+        english="""
+             But I don't know why we were
+            fading and then didn't disappear...
+        """,
+    });
+    message_Talk({
+        english=" But anyway...[K] Everyone is alive!",
+    });
+    message_Talk({
+        english=" Everyone is safe!",
+    });
+    message_Talk({
+        english="""
+             Isn't this just an amazingly
+            wonderful thing?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             ...[K]If this happened,
+            does that mean...?
+        """,
+    });
+    message_Talk({
+        english="""
+             This was a miracle...[K]
+            Can we say that...?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SEREBII>(EFFECT_NONE, 3);
+    message_SetActor(ACTOR_NPC_DARK_DIARUGA);
+    message_Talk({
+        english=" NO.[K] IT WAS NO MIRACLE.",
+    });
+    se_Play(8965);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_YONOWAARU_N9>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(2);
+    SetEffect<actor ACTOR_NPC_SEREBII>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SEREBII>();
+    WaitExecuteLives(ACTOR_NPC_SEREBII);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_UP);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N9>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SEREBII>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_SEREBII);
+    message_Close();
+    MovePositionOffset<performer 0>(1, 0, -88);
+    WaitExecutePerformer(0);
+    Wait(90);
+    MovePositionOffset<performer 0>(1, 0, 88);
+    MovePositionMark<actor ACTOR_NPC_DIARUGA>(1, Position<'m1', 31.5, 29.5>);
+    Wait(60);
+    Slide2PositionOffset<actor ACTOR_NPC_YONOWAARU_N9>(1, -8, 16);
+    Wait(5);
+    Slide2PositionOffset<actor ACTOR_PLAYER_FUTURE>(1, 0, 8);
+    Wait(7);
+    Slide2PositionOffset<actor ACTOR_NPC_SEREBII>(1, 8, 8);
+    WaitExecuteLives(ACTOR_NPC_DIARUGA);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" [CS:N]Dialga[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Master [CS:N]Dialga[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             FOR A VERY LONG TIME...[K]
+            I SAW ONLY DARKNESS...
+        """,
+    });
+    message_Talk({
+        english=" AND DURING THAT TIME...",
+    });
+    message_Talk({
+        english="""
+             THE WORLD BECAME FILLED
+            WITH CHAOS...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" M-Master [CS:N]Dialga[CR]...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" I TAKE RESPONSIBILITY FOR IT!",
+    });
+    message_Talk({
+        english="""
+             NOW THAT THINGS HAVE BEEN
+            RESOLVED...[K]I'LL SUPPORT THIS
+            NEW WORLD FROM HERE ON OUT.
+        """,
+    });
+    message_Close();
+    se_Play(11537);
+    SetAnimation<actor ACTOR_NPC_DIARUGA>(24);
+    WaitAnimation<actor ACTOR_NPC_DIARUGA>();
+    WaitExecuteLives(ACTOR_NPC_DIARUGA);
+    supervision_Acting(1);
+    SetOutputAttribute<object OBJECT_D53P41C1_442>(8);
+    SetAnimation<object OBJECT_D53P41C1_442>(1);
+    Wait(60);
+    SetOutputAttribute<object OBJECT_D53P41C1_442>(128);
+    se_Play(11540);
+    SetAnimation<actor ACTOR_NPC_DIARUGA>(19);
+    WaitAnimation<actor ACTOR_NPC_DIARUGA>();
+    camera_SetEffect(2, 1, 1.0);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" GRRR-OOOOOO...OOOOOH!",
+    });
+    camera_SetEffect(0, 0, 0);
+    message_CloseEnforce();
+    SetPositionOffset<object OBJECT_D53P41C1_442>(0, -4);
+    ResetOutputAttribute<object OBJECT_D53P41C1_442>(128);
+    SetAnimation<object OBJECT_D53P41C1_442>(18);
+    Wait(10);
+    screen2_WhiteOut(0, 60);
+    screen_WhiteOut(1, 60);
+    back2_SetMode(0);
+    Wait(60);
+    end;
+}

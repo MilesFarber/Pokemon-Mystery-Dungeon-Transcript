@@ -1,0 +1,43 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    back_SetGround(LEVEL_D16P31A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    SetAnimation<object OBJECT_D16P31A3_41>(10);
+    SetAnimation<object OBJECT_D16P31A4_43>(10);
+    SetAnimation<object OBJECT_D16P31A6_51>(10);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Groudon's stone statue held the secret!)",
+            }
+        default:
+            {
+                english="(Groudon's stone statue held the secret!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (Then, on the way to the [CS:P]Underground Lake[CR],
+                    where we met [CS:N]Mesprit[CR]...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (Then, on the way to the [CS:P]Underground Lake[CR],
+                    where we met [CS:N]Mesprit[CR]...)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    screen_FadeOut(1, 30);
+    end;
+}

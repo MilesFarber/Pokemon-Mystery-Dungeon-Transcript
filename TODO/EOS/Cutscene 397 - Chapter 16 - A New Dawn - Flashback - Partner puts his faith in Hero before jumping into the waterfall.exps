@@ -1,0 +1,76 @@
+
+def 0 {
+    back_SetGround(LEVEL_D04P11A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Well... All right.",
+            }
+        case 2:
+            {
+                english=" Well... OK.",
+            }
+        default:
+            {
+                english=" Well... OK.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I'm going to believe you,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I'm putting my faith in you,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     I'm going to believe you,
+                    [hero]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Yes! I totally believe in you,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Yes! I totally believe in you,
+                    [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     Yes! I totally believe in you,
+                    [hero]!
+                """,
+            }
+    }
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Close();
+    screen_FadeOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

@@ -1,0 +1,78 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D03P11A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JIBAKOIRU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             We have been able to arrest a
+            wanted outlaw! ZZZT!
+        """,
+    });
+    message_Talk({
+        english="""
+             ZZZT! We owe you great thanks
+            for your cooperation! ZZZT!
+        """,
+    });
+    message_Close();
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_JIBAKOIRU>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_NPC_KOIRU>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_NPC_KOIRU2>(EFFECT_LAUGHING, 3);
+    SetAnimation<actor ACTOR_NPC_JIBAKOIRU>(22);
+    WaitAnimation<actor ACTOR_NPC_JIBAKOIRU>();
+    SetAnimation<actor ACTOR_NPC_JIBAKOIRU>(2);
+    SetEffect<actor ACTOR_NPC_JIBAKOIRU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KOIRU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KOIRU2>(EFFECT_NONE, 3);
+    Wait(20);
+    message_Talk({
+        english="""
+             ZZZT! We will send the reward
+            to your guild. Thank you again! ZZZT!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_JIBAKOIRU>(4, 10, ACTOR_NPC_SURIIPU);
+    WaitExecuteLives(ACTOR_NPC_JIBAKOIRU);
+    message_Talk({
+        english=" ZZZT! Now come with us! ZZZT!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SURIIPU>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_NPC_SURIIPU>();
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_SIGH, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Awww...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_JIBAKOIRU>(1, 200, 0);
+    Wait(15);
+    ResetHitAttribute<actor ACTOR_NPC_KOIRU>(31);
+    ResetHitAttribute<actor ACTOR_NPC_KOIRU2>(31);
+    ResetHitAttribute<actor ACTOR_NPC_SURIIPU>(31);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_RURIRI>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_KOIRU>(4, 10, DIR_RIGHT);
+    MovePositionOffset<actor ACTOR_NPC_SURIIPU>(1, 16, 16);
+    MovePositionOffset<actor ACTOR_NPC_KOIRU2>(1, 32, 32);
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_SURIIPU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_KOIRU2);
+    Turn2Direction<actor ACTOR_PLAYER>(16, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(16, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_RURIRI>(16, 10, DIR_RIGHT);
+    MovePositionOffset<actor ACTOR_NPC_KOIRU>(1, 200, 0);
+    MovePositionOffset<actor ACTOR_NPC_SURIIPU>(1, 200, 0);
+    MovePositionOffset<actor ACTOR_NPC_KOIRU2>(1, 200, 0);
+    screen_FadeOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

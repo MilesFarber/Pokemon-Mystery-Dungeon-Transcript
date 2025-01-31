@@ -1,0 +1,49 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's go down to the beach first.",
+            }
+        case 2:
+            {
+                english="""
+                     We should go down to the
+                    beach first.
+                """,
+            }
+        default:
+            {
+                english=" Let's go down to the beach first.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We may see [CS:N]Grovyle[CR] if we go
+                    to the beach.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Grovyle[CR] could be waiting for
+                    us there.
+                """,
+            }
+        default:
+            {
+                english=" If we do, we may see [CS:N]Grovyle[CR].",
+            }
+    }
+    message_Close();
+    end;
+}

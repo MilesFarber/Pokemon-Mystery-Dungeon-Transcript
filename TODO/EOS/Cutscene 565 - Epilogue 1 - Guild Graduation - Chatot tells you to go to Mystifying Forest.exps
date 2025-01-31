@@ -1,0 +1,74 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english=" Ah, you two.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PERAPPU);
+    message_Talk({
+        english="""
+             You two should focus on your
+            graduation exam.
+        """,
+    });
+    message_Talk({
+        english="""
+             This is what you must do. Go to
+            the deepest part of [CS:P]Mystifying Forest[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             There you will find a place
+            called [CS:P]Luminous Spring[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             Bring back the treasure of
+            [CS:P]Luminous Spring[CR] and you will graduate! ♪
+        """,
+    });
+    message_Talk({
+        english=" I wish you the best of luck! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's ace this graduation exam,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's get through this graduation
+                    exam, [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's do our best on the
+                    graduation exam, [hero]!
+                """,
+            }
+    }
+    message_Close();
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    end;
+}

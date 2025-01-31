@@ -1,0 +1,309 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P09C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    WaitLockLives(5, ACTOR_PLAYER_KIMAWARI);
+    bgm2_PlayFadeIn(BGM_OCEAN2, 30, 190);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    Wait(60);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_LC_FACEOUTW);
+    message_Talk({
+        english="""
+             Hey, [CS:Y]Sunflora[CR], look.[K] The moon
+            tonight is really pretty.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(60);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_PLAYER_KIMAWARI);
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Huh?[K] [CS:Y]Sunflora[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(0.5, Position<'m0', 28.5, 15.5>);
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" What are you doing?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Huh?[K] You're writing something!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_FadeOut(60);
+    Unlock(5);
+    WaitLockLives(6, ACTOR_PLAYER_KIMAWARI);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Oh my gosh![K] D-don't look!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_DOWN);
+    clear $EVENT_LOCAL;
+    Unlock(6);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SIGH, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" I'm so embarrassed!",
+    });
+    message_Talk({
+        english="""
+             Oh my gosh![K]
+            Oh my gosh![K]
+            Oh my gosh!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" Wh-what?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" Oh! Don't tell me!",
+    });
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             I know![K] You just started
+            keeping a diary, right, [CS:Y]Sunflora[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    $EVENT_LOCAL = 1;
+    WaitLockLives(7, ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yep!",
+    });
+    message_Talk({
+        english=" To reflect on my day...",
+    });
+    message_Talk({
+        english="""
+             I've decided to start keeping a
+            diary from now on!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Unlock(7);
+    WaitLockLives(8, ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SIGH, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I'm incredibly embarrassed
+            about it...
+        """,
+    });
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Anyway...[K] I'll do my best
+            to write in it!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_CHIRIIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             That's wonderful![K] Do your best,
+            [CS:Y]Sunflora[CR]!
+        """,
+    });
+    message_Talk({
+        english="""
+             Don't worry, I promise not to
+            sneak any peeks at it!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Unlock(8);
+    WaitLockLives(9, ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SIGH, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             S-sneak a peek?![K] That's not
+            allowed. Not at all!
+        """,
+    });
+    message_Talk({
+        english=" I-if someone sneaked a peek...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    clear $EVENT_LOCAL;
+    Unlock(9);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SIGH, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Oh my gosh! Oh my gosh!
+            Oh my gosh! Oh my gosh! Oh my gosh!
+            
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    $EVENT_LOCAL = 1;
+    WaitLockLives(10, ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             ...[K]Well...[K] If it's only
+            a little peek...?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Unlock(10);
+    WaitLockLives(11, ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SIGH, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Nope![K] No good!",
+    });
+    message_Talk({
+        english=" It's just no good!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    clear $EVENT_LOCAL;
+    Unlock(11);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SIGH, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I'm too embarrassed![K]
+            Oh my gosh!
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 90);
+    Wait(30);
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER_KIMAWARI {
+    SetAnimation(44);
+    Lock(5);
+    SetAnimation(2);
+    se_Play(8967);
+    SetEffect(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect();
+    Turn2Direction(1, 10, DIR_UPLEFT);
+    CallCommon(CORO_JUMP_SURPRISE_FUNC);
+    SetEffect(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect();
+    Lock(6);
+    @label_1;
+    forever {
+        SetEffect(438, 3);
+        MovePositionMark(2, Position<'m1', 30.5, 19.5>);
+        switch ( $EVENT_LOCAL ) {
+            case 1:
+                break_loop;
+                break;
+            default:
+                MovePositionMark(2, Position<'m2', 26.5, 19.5>);
+                switch ( $EVENT_LOCAL ) {
+                    case 1:
+                        break_loop;
+                        break;
+                    default:
+                        continue;  // may be redundant
+                }
+                break;
+        }
+    }
+    @label_0;
+    SetEffect(EFFECT_NONE, 3);
+    MovePositionMark(2, Position<'m3', 28.5, 19.5>);
+    Turn2DirectionLives(4, 10, ACTOR_NPC_CHIRIIN);
+    Lock(7);
+    se_Play(8972);
+    SetEffect(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect();
+    Lock(8);
+    se_Play(8969);
+    SetEffect(EFFECT_SHOCKED, 3);
+    WaitEffect();
+    Lock(9);
+    @label_3;
+    forever {
+        SetEffect(438, 3);
+        MovePositionMark(2, Position<'m4', 30.5, 19.5>);
+        switch ( $EVENT_LOCAL ) {
+            case 1:
+                break_loop;
+                break;
+            default:
+                MovePositionMark(2, Position<'m5', 26.5, 19.5>);
+                switch ( $EVENT_LOCAL ) {
+                    case 1:
+                        break_loop;
+                        break;
+                    default:
+                        continue;  // may be redundant
+                }
+                break;
+        }
+    }
+    @label_2;
+    SetEffect(EFFECT_NONE, 3);
+    MovePositionMark(2, Position<'m6', 28.5, 19.5>);
+    Turn2DirectionLives(4, 10, ACTOR_NPC_CHIRIIN);
+    Lock(10);
+    CallCommon(CORO_HEAD_SHAKE_FUNC);
+    Lock(11);
+    @label_5;
+    forever {
+        SetEffect(438, 3);
+        MovePositionMark(2, Position<'m7', 30.5, 19.5>);
+        switch ( $EVENT_LOCAL ) {
+            case 1:
+                break_loop;
+                break;
+            default:
+                MovePositionMark(2, Position<'m8', 26.5, 19.5>);
+                switch ( $EVENT_LOCAL ) {
+                    case 1:
+                        break_loop;
+                        break;
+                    default:
+                        continue;  // may be redundant
+                }
+                break;
+        }
+    }
+    @label_4;
+    SetEffect(EFFECT_NONE, 3);
+    MovePositionMark(2, Position<'m9', 26.5, 19.5>);
+    Turn2DirectionLives(4, 10, ACTOR_NPC_CHIRIIN);
+    Lock(12);
+    hold;
+}

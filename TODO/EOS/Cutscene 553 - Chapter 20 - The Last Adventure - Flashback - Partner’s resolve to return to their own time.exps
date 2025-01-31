@@ -1,0 +1,85 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_MEMORIES_RETURNED, 0, 256);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V17P01A);
+    back_SetGround(LEVEL_P07P01A);
+    supervision_Acting(0);
+    Wait(1);
+    camera2_SetPositionMark(Position<'m0', 21, 21.5>);
+    camera_SetMyself<performer 0>();
+    SetPositionMark<performer 0>(Position<'m1', 22.5, 47.5>);
+    Destroy<actor ACTOR_NPC_JUPUTORU>();
+    SetPositionMark<actor ACTOR_PLAYER>(Position<'m2', 26, 49.5>);
+    SetDirection<actor ACTOR_PLAYER>(DIR_LEFT);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_RIGHT);
+    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m3', 15, 49.5>);
+    SetPositionOffset<actor ACTOR_ATTENDANT1>(28, 0);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    MovePositionOffset<actor ACTOR_PLAYER>(0.7969, 24, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [hero].",
+            }
+        case 2:
+            {
+                english=" [hero].",
+            }
+        default:
+            {
+                english=" [hero].",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We have to...[K] We have to
+                    get back!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We have to...[K] We have to
+                    get back!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We have to...[K] We have to
+                    get back!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Back to our own world!",
+            }
+        case 2:
+            {
+                english=" Back to our own world!",
+            }
+        default:
+            {
+                english=" Back to our own world!",
+            }
+    }
+    message_Close();
+    screen2_WhiteOut(0, 30);
+    screen_WhiteOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

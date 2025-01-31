@@ -1,0 +1,204 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_THROUGH_THE_SEA_OF_TIME, 0, 256);
+    back_SetGround(LEVEL_V24P05A);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 15);
+    SetPositionMark<performer 0>(Position<'m0', 58.5, 33>);
+    Wait(2);
+    SetPositionMark<performer 0>(Position<'m1', 97.5, 33>);
+    Wait(2);
+    SetPositionMark<performer 0>(Position<'m2', 19.5, 87>);
+    Wait(2);
+    SetPositionMark<performer 0>(Position<'m3', 58.5, 87>);
+    Wait(2);
+    SetPositionMark<performer 0>(Position<'m4', 97.5, 87>);
+    Wait(2);
+    SetPositionMark<performer 0>(Position<'m5', 19.5, 141>);
+    Wait(2);
+    SetPositionMark<performer 0>(Position<'m6', 58.5, 141>);
+    Wait(2);
+    SetPositionMark<performer 0>(Position<'m7', 97.5, 141>);
+    Wait(2);
+    MovePositionOffset<performer 0>(0.0469, 0, -300);
+    Wait(60);
+    message_SetWaitMode(80, 30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" [CS:N]Lapras[CR]...!",
+    });
+    message_KeyWait();
+    message_Talk({
+        english=" Is that it?!",
+    });
+    message_KeyWait();
+    message_SetWaitMode(120, 30);
+    message_Talk({
+        english=" Is that the [CS:P]Hidden Land[CR]?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_RAPURASU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Yes! That's the [CS:P]Hidden Land[CR]!",
+    });
+    message_KeyWait();
+    message_Talk({
+        english=" We're going in!",
+    });
+    message_Close();
+    se_Play(6403);
+    screen_WhiteOut(1, 30);
+    message_SetWaitMode(-1, -1);
+    Wait(60);
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetOutputAttribute(8);
+    SetOutputAttribute(4);
+    SetOutputAttribute(2048);
+    SetAnimation(2);
+    Wait(50);
+    @label_0;
+    forever {
+        Slide2PositionOffset(1, 0, 1);
+        Wait(30);
+        Slide2PositionOffset(1, 0, -1);
+        Wait(80);
+        continue;  // may be redundant
+    }
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetOutputAttribute(8);
+    SetOutputAttribute(4);
+    SetOutputAttribute(2048);
+    SetAnimation(2);
+    Wait(50);
+    Slide2PositionOffset(1, 0, 1);
+    Wait(30);
+    Slide2PositionOffset(1, 0, -1);
+    Wait(80);
+    jump @label_0;
+}
+
+def 3 for actor ACTOR_NPC_JUPUTORU {
+    SetOutputAttribute(8);
+    SetOutputAttribute(2048);
+    SetAnimation(2);
+    Wait(50);
+    Slide2PositionOffset(1, 0, 1);
+    Wait(30);
+    Slide2PositionOffset(1, 0, -1);
+    Wait(80);
+    jump @label_0;
+}
+
+def 4 for object OBJECT_V24P01A3_291 {
+    SetOutputAttribute(8);
+    SetOutputAttribute(2048);
+    Wait(50);
+    Slide2PositionOffset(1, 0, 1);
+    Wait(30);
+    Slide2PositionOffset(1, 0, -1);
+    Wait(80);
+    jump @label_0;
+}
+
+def 5 for object OBJECT_V24P05A1_303 {
+    SetOutputAttribute(8);
+    SetOutputAttribute(2);
+    SetOutputAttribute(2048);
+    Wait(50);
+    Slide2PositionOffset(1, 0, 1);
+    Wait(30);
+    Slide2PositionOffset(1, 0, -1);
+    Wait(80);
+    jump @label_0;
+}
+
+def 6 for object OBJECT_V24P05A3_305 {
+    SetOutputAttribute(128);
+    Wait(30);
+    @label_1;
+    forever {
+        Wait(40);
+        ResetOutputAttribute(128);
+        SetAnimation(17);
+        Wait(60);
+        SetOutputAttribute(128);
+        continue;  // may be redundant
+    }
+}
+
+def 7 for object OBJECT_V24P05A3_306 {
+    SetOutputAttribute(128);
+    Wait(10);
+    @label_2;
+    forever {
+        Wait(50);
+        ResetOutputAttribute(128);
+        SetAnimation(18);
+        Wait(60);
+        SetOutputAttribute(128);
+        continue;  // may be redundant
+    }
+}
+
+def 8 for object OBJECT_V24P05A4_307 {
+    SetOutputAttribute(128);
+    Wait(20);
+    @label_3;
+    forever {
+        Wait(20);
+        ResetOutputAttribute(128);
+        SetAnimation(17);
+        Wait(60);
+        SetOutputAttribute(128);
+        continue;  // may be redundant
+    }
+}
+
+def 9 for object OBJECT_V24P05A4_308 {
+    SetOutputAttribute(128);
+    Wait(15);
+    @label_4;
+    forever {
+        Wait(40);
+        ResetOutputAttribute(128);
+        SetAnimation(18);
+        Wait(60);
+        SetOutputAttribute(128);
+        continue;  // may be redundant
+    }
+}
+
+def 10 for object OBJECT_V24P05A5_309 {
+    SetOutputAttribute(128);
+    Wait(20);
+    @label_5;
+    forever {
+        Wait(60);
+        ResetOutputAttribute(128);
+        SetAnimation(17);
+        Wait(60);
+        SetOutputAttribute(128);
+        continue;  // may be redundant
+    }
+}
+
+def 11 for object OBJECT_V24P05A5_310 {
+    SetOutputAttribute(128);
+    Wait(30);
+    @label_6;
+    forever {
+        Wait(120);
+        ResetOutputAttribute(128);
+        SetAnimation(18);
+        Wait(60);
+        SetOutputAttribute(128);
+        continue;  // may be redundant
+    }
+}

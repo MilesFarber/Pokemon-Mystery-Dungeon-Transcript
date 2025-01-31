@@ -1,0 +1,172 @@
+
+def 0 {
+    back_SetGround(LEVEL_D04P12A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(6657);
+    SetAnimation<actor ACTOR_PLAYER>(65);
+    SetAnimation<actor ACTOR_ATTENDANT1>(65);
+    MovePositionMark<actor ACTOR_PLAYER>(2.5, Position<'m0', 27.5, 49.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(2.5, Position<'m1', 23.5, 46.5>);
+    SetDirection<actor ACTOR_PLAYER>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER>(68);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_RIGHT);
+    SetAnimation<actor ACTOR_ATTENDANT1>(68);
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yowowow...",
+            }
+        case 2:
+            {
+                english=" Yowowow...",
+            }
+        default:
+            {
+                english=" Yowowow...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_ATTENDANT1>(63);
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_PLAYER>(63);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    bgm_PlayFadeIn(BGM_WATERFALL_CAVE, 0, 256);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" W-what is this?!",
+            }
+        case 2:
+            {
+                english=" W-what is this?!",
+            }
+        default:
+            {
+                english=" W-what is this?!",
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yes! It is a cave!",
+            }
+        case 2:
+            {
+                english=" Yes! It is a cave!",
+            }
+        default:
+            {
+                english=" Yes! It is a cave!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You were right after all,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You were right after all,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     You were right after all,
+                    [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's go explore this cave,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's go explore this cave,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's go explore this cave,
+                    [hero]!
+                """,
+            }
+    }
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's see what secrets it holds!",
+            }
+        case 2:
+            {
+                english=" Let's see what secrets it holds!",
+            }
+        default:
+            {
+                english=" Let's see what secrets it holds!",
+            }
+    }
+    message_Close();
+    MovePositionOffset<actor ACTOR_PLAYER>(1.1992, 0, -160);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1.1992, 0, -160);
+    Wait(30);
+    screen_FadeOut(1, 30);
+    $SCENARIO_MAIN = scn[6, 5];
+    main_EnterDungeon(6, 0);
+    switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+    main_EnterDungeon(-1, 0);
+    hold;
+    end;
+}

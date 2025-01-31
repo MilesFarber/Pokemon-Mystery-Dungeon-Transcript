@@ -1,0 +1,25 @@
+
+def 0 {
+    screen_FadeOut(1, 30);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetPositionMark<actor ACTOR_PLAYER>(Position<'m0', 43.5, 20.5>);
+    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m1', 39.5, 20.5>);
+    SetDirection<actor ACTOR_PLAYER>(DIR_UP);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_UP);
+    screen_FadeIn(1, 30);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             [hero]! [partner]!
+            You rang?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    switch ( message_Menu(MENU_TEAM_ASSEMBLY) ) { }
+    main_SetGround(LEVEL_G01P03A);
+    main_EnterGround(LEVEL_D73P11A, 30);
+    hold;
+    end;
+}

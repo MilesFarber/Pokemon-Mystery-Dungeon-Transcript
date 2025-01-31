@@ -1,0 +1,387 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_P01P03A);
+    supervision_StationCommon(7);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetOutputAttribute<actor ACTOR_PLAYER>(128);
+    SetOutputAttribute<actor ACTOR_ATTENDANT1>(128);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    Wait(30);
+    ResetOutputAttribute<actor ACTOR_PLAYER>(128);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 29.5, 29.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1, Position<'m1', 27, 25.5>);
+    Wait(20);
+    ResetOutputAttribute<actor ACTOR_ATTENDANT1>(128);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 25, 29.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Oh, [hero]!",
+    });
+    message_Talk({
+        english=" Were you just at the café?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_CHIRIIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Perfect timing![K]
+            The truth is... I have something to ask you...
+        """,
+    });
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             In the past, when you've wanted
+            to take team members with you to explore,
+            they waited for you at this Watering Hole...
+        """,
+    });
+    message_Talk({
+        english="""
+             But now that the café
+            has just opened...
+        """,
+    });
+    message_Talk({
+        english="""
+             Everyone has been saying they'd
+            like to wait while relaxing at the café.
+        """,
+    });
+    message_Talk({
+        english="""
+             I completely understand that...[K]
+            I mean, I understand how they feel.
+        """,
+    });
+    message_Talk({
+        english="""
+             So, [hero], what do
+            you think?
+        """,
+    });
+    message_Talk({
+        english="""
+             Would you like to meet up with
+            your team members waiting at the café?
+        """,
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="OK.",
+        }):
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            ExecuteCommon<actor ACTOR_NPC_CHIRIIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+            message_SetFace(ACTOR_NPC_CHIRIIN, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+            message_Talk({
+                english=" Thank you, [hero]!",
+            });
+            message_Talk({
+                english="""
+                     I'll make sure to let
+                    everyone know!
+                """,
+            });
+            message_Talk({
+                english="""
+                     I'm sure everyone will be happy
+                    to hear that!
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8964);
+            SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+            WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+            WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+            message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+            message_Talk({
+                english=" Oh! [K]I almost forgot!",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1, Position<'m3', 34, 19.5>);
+            Wait(20);
+            MovePositionMark<performer 0>(1, Position<'m4', 27, 23.5>, Position<'m5', 35, 23.5>);
+            MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m6', 34.5, 24.5>);
+            Wait(10);
+            Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m7', 29, 25.5>, Position<'m8', 31, 23>);
+            WaitExecuteLives(ACTOR_PLAYER);
+            Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+            WaitExecutePerformer(0);
+            message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+            message_Talk({
+                english="""
+                     I placed a secret signpost here...[K]
+                    Did you see it, [hero]?
+                """,
+            });
+            switch ( message_SwitchMenu(0, 1) ) {
+                case menu({
+                    english="Yes",
+                }):
+                default:
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_DOWN);
+                    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+                    ExecuteCommon<actor ACTOR_NPC_CHIRIIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+                    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+                    message_Talk({
+                        english="""
+                             Of course you would,
+                            [hero]!
+                        """,
+                    });
+                    message_Talk({
+                        english="""
+                             You must have rung the bell,
+                            because your team has assembled here already.
+                        """,
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_RIGHT);
+                    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+                    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+                    message_Talk({
+                        english="""
+                             As you know, when you ring this
+                            bell...[K] I come here from the guild...
+                        """,
+                    });
+                    message_Talk({
+                        english="""
+                             You can still assemble your
+                            exploration team here!
+                        """,
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_DOWN);
+                    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+                    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+                    message_Talk({
+                        english="""
+                             So when you want to assemble
+                            your team, just ring this bell!
+                        """,
+                    });
+                    message_Talk({
+                        english="""
+                             That's all, [hero]![K]
+                            Good luck exploring!
+                        """,
+                    });
+                    message_Close();
+                    @label_4;
+                    screen_FadeOut(1, 30);
+                    Wait(30);
+                    supervision_RemoveActing(1);
+                    SetPositionMark<actor ACTOR_PLAYER>(Position<'m9', 34.5, 24.5>);
+                    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m10', 31, 24.5>);
+                    SetDirection<actor ACTOR_PLAYER>(DIR_UP);
+                    SetDirection<actor ACTOR_ATTENDANT1>(DIR_UP);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    camera_SetDefault();
+                    screen_FadeIn(1, 30);
+                    end;
+                case menu({
+                    english="No",
+                }):
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_DOWN);
+                    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+                    se_Play(8972);
+                    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+                    WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+                    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+                    message_Talk({
+                        english=" I...I knew it!",
+                    });
+                    message_Talk({
+                        english="""
+                             I'm sorry, [hero].[K]
+                            I guess I should explain!
+                        """,
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_RIGHT);
+                    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+                    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+                    message_Talk({
+                        english="""
+                             If you ring the bell attached to
+                            this sign...[K] I'll come here from the guild...
+                        """,
+                    });
+                    message_Talk({
+                        english="""
+                             You can still assemble your
+                            exploration team here!
+                        """,
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_DOWN);
+                    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+                    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+                    message_Talk({
+                        english="""
+                             So when you want to assemble
+                            your team, just ring this bell!
+                        """,
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    se_Play(8972);
+                    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+                    WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+                    WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+                    message_Talk({
+                        english="""
+                             ...[K]M-maybe you already
+                            did ring the bell to summon me here before...
+                        """,
+                    });
+                    message_Talk({
+                        english="""
+                             ...and you did assemble your
+                            team here...
+                        """,
+                    });
+                    message_Talk({
+                        english="""
+                             Regardless, you rather
+                            carelessly answered my question
+                            with a "No."
+                        """,
+                    });
+                    message_Talk({
+                        english="""
+                             Maybe you just wanted to see
+                            what would happen if you answered with
+                            a "No"...
+                        """,
+                    });
+                    message_Talk({
+                        english="""
+                             Anyway...[K] If you ring the bell
+                            here, your team will assemble...
+                        """,
+                    });
+                    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+                    message_Talk({
+                        english=" So try it sometime and see!",
+                    });
+                    message_Talk({
+                        english="""
+                             That's all, [hero]![K]
+                            Good luck exploring!
+                        """,
+                    });
+                    message_Close();
+                    jump @label_4;
+            }
+            break;
+        case menu({
+            english="No way.",
+        }):
+        default:
+            @label_1;
+            forever {
+                CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                se_Play(8968);
+                SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_SHOCKED, 3);
+                WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+                WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                message_SetFace(ACTOR_NPC_CHIRIIN, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+                message_Talk({
+                    english="""
+                         W-what?![K]
+                        N-no...[K]way?!
+                    """,
+                });
+                CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                se_Play(8972);
+                SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+                WaitEffect<actor ACTOR_NPC_CHIRIIN>();
+                WaitExecuteLives(ACTOR_NPC_CHIRIIN);
+                message_SetFace(ACTOR_NPC_CHIRIIN, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+                message_Talk({
+                    english="""
+                         Are you making fun of me,
+                        [hero]? You are! I know it!
+                    """,
+                });
+                message_Talk({
+                    english="""
+                         You said "No way" to see
+                        how I'd react, didn't you?
+                    """,
+                });
+                message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+                message_Talk({
+                    english=" ...[K]I understand how you feel...",
+                });
+                message_Talk({
+                    english="""
+                         Even if you select a "No," you
+                        eventually have to select the "Yes," so
+                        it always ends up the same anyway...
+                    """,
+                });
+                message_Talk({
+                    english="""
+                         That comes up frequently, that
+                        sort of thing...[K] But...
+                    """,
+                });
+                message_Talk({
+                    english=" I'll ask you again, [hero].",
+                });
+                message_Talk({
+                    english="""
+                         Would you like to meet up with
+                        your team members waiting at the café?
+                    """,
+                });
+                switch ( message_SwitchMenu(0, 1) ) {
+                    case menu({
+                        english="OK!",
+                    }):
+                    default:
+                        break_loop;
+                        break;
+                    case menu({
+                        english="No way.",
+                    }):
+                        continue;  // may be redundant
+                        break;
+                }
+            }
+            jump @label_0;
+    }
+}

@@ -1,0 +1,139 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_RESTORED, 0, 256);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_D73P31A);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    screen2_FadeIn(0, 60);
+    screen_FadeIn(1, 60);
+    MovePositionMark<actor ACTOR_NPC_KUCHIITO>(0.5, Position<'m1', 25.5, 33.5>);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    ExecuteCommon<actor ACTOR_NPC_KUCHIITO>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    MovePositionMark<actor ACTOR_NPC_GOORIKII>(0.5, Position<'m2', 24.5, 38.5>);
+    Wait(20);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(0.5, Position<'m3', 36, 37.5>);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(8, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_NPC_KINOGASSA>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(0.5, Position<'m4', 37.5, 42.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(0.5, Position<'m5', 42.5, 35.5>);
+    ExecuteCommon<actor ACTOR_NPC_GOORIKII>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_PLAYER_APPOINT>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(5);
+    SlidePositionMark<actor ACTOR_NPC_KINOGASSA>(0.5, Position<'m6', 30.5, 40.5>);
+    ExecuteCommon<actor ACTOR_ADVENTURE_NPC1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_ADVENTURE_NPC2>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(2);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_INSPIRED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             This is the summit?
+            It's just such a change from what we
+            were looking at before...
+        """,
+    });
+    message_Talk({
+        english=" It's so beautiful...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_INSPIRED, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english="""
+             I've never seen such beautiful
+            scenery before...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_GOORIKII, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english=" .........",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_SHEIMI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Congratulations on reaching
+            the summit!
+        """,
+    });
+    message_Talk({
+        english=" This is the [CS:P]Sky Peak[CR] Summit!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_GOORIKII>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_GOORIKII);
+    SetEffect<actor ACTOR_NPC_GOORIKII>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_NPC_GOORIKII, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english="""
+             Wow!
+            We did it!!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_GOORIKII>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_LAUGHING, 3);
+    ExecuteCommon<actor ACTOR_NPC_KINOGASSA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_INSPIRED, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english="""
+             At last! We've reached
+            the summit!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_KUCHIITO>(0.7969, 16, -16);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    Turn2Direction<actor ACTOR_NPC_KUCHIITO>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    Wait(20);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KUCHIITO>();
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_INSPIRED, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(2, -2);
+    message_Talk({
+        english=" Hey, everyone! Look over here!",
+    });
+    message_Close();
+    Turn2Direction<actor ACTOR_NPC_SHEIMI>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_GOORIKII>(4, 10, DIR_UP);
+    Wait(5);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 2, DIR_UP);
+    Wait(3);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC2);
+    MovePositionMark<actor ACTOR_NPC_KUCHIITO>(1, Position<'m7', 27.5, 21.5>);
+    Wait(30);
+    MovePositionMark<performer 0>(1, Position<'m8', 31.5, 24.5>);
+    MovePositionMark<actor ACTOR_NPC_GOORIKII>(1, Position<'m9', 28.5, 24.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_KINOGASSA>(1, Position<'m10', 28.5, 37.5>, Position<'m11', 28.5, 32.5>, Position<'m12', 31.5, 24.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m13', 39.5, 25.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m14', 36.5, 24.5>);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m15', 34, 21.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(45);
+    screen2_FadeOut(0, 30);
+    screen_FadeOut(1, 30);
+    back2_SetMode(0);
+    end;
+}

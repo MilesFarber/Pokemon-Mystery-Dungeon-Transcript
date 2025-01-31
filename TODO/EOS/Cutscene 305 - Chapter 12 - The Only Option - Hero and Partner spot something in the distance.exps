@@ -1,0 +1,172 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_V15P02A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    MovePositionMark<performer 0>(0.5, Position<'m0', 57, 22.5>);
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetWaitMode(100, 60);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Incredible!",
+            }
+        case 2:
+            {
+                english=" Incredible!",
+            }
+        default:
+            {
+                english=" Fantastic!",
+            }
+    }
+    message_KeyWait();
+    message_SetWaitMode(150, 45);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Look at all those crystals
+                    sticking up from the lake.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Look at all those crystals
+                    emerging from the lake's surface.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Look at all those crystals
+                    sticking up from the surface.
+                """,
+            }
+    }
+    message_KeyWait();
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Is this lake...[K]where [CS:N]Azelf[CR] lives?",
+            }
+        case 2:
+            {
+                english=" Is this lake...[K]where [CS:N]Azelf[CR] lives?",
+            }
+        default:
+            {
+                english=" Is this lake...[K]where [CS:N]Azelf[CR] lives?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetWaitMode(-1, -1);
+    WaitExecutePerformer(0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ............",
+            }
+        case 2:
+            {
+                english=" ............",
+            }
+        default:
+            {
+                english=" ............",
+            }
+    }
+    message_KeyWait();
+    se_Play(8978);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [hero]!",
+            }
+        case 2:
+            {
+                english=" Hey, [hero]!",
+            }
+        default:
+            {
+                english=" Oh, [hero]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Look over there!",
+            }
+        case 2:
+            {
+                english=" Look over there!",
+            }
+        default:
+            {
+                english=" Look over there!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Look! In the middle of the
+                    lake...[K] Where it's like an island...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Look! In the middle of the
+                    lake...[K] Where it's like an island...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Look! In the middle of the
+                    lake...[K] Where it's like an island...
+                """,
+            }
+    }
+    message_Close();
+    MovePositionMark<performer 0>(2.5, Position<'m1', 44, 22.5>);
+    WaitExecutePerformer(0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" There's someone there!",
+            }
+        case 2:
+            {
+                english=" I think I see someone!",
+            }
+        default:
+            {
+                english=" I think I see someone!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's go!",
+            }
+        case 2:
+            {
+                english=" Let's go!",
+            }
+        default:
+            {
+                english=" Let's go!",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    Wait(30);
+    end;
+}

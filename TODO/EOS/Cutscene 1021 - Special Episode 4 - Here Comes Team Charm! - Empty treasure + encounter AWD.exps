@@ -1,0 +1,300 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(157, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D56P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_D56P41A1_437>(10);
+    bgm2_PlayFadeIn(BGM_CAVE_AMBIANCE, 30, 256);
+    screen_FadeIn(1, 30);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1.5, Position<'m0', 32, 35.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1.5, Position<'m1', 25, 35.5>);
+    Wait(24);
+    MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1.5, Position<'m2', 28.5, 38>);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    ExecuteCommon<actor ACTOR_NPC_SAANAITO>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Wait(6);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(4);
+    ExecuteCommon<actor ACTOR_PLAYER_CHARMS>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" There's no one here.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1.5, Position<'m3', 28.5, 18.5>);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1.5, Position<'m4', 32, 17>);
+    Wait(9);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1.5, Position<'m5', 25, 17>);
+    Wait(12);
+    MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1.5, Position<'m6', 28.5, 19>);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_RIGHT);
+    WaitExecutePerformer(0);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             ...[K]I knew it, the treasure's just
+            not here...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             I bet there's some kind of secret
+            to it.[K] Let's look.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_FadeOut(60);
+    message_ResetActor();
+    message_SetFace(ACTOR_NPC_DORAPION, 32766, FACE_POS_STANDARD);
+    message_Talk({
+        english=" They're here![K] Over there!",
+    });
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWN);
+    Wait(3);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    message_Close();
+    MovePositionMark<performer 0>(1, Position<'m7', 28.5, 26.5>);
+    supervision_Acting(1);
+    Wait(1);
+    MovePositionMark<actor ACTOR_NPC_MANYUURA>(2, Position<'m8', 28.5, 28>);
+    Wait(12);
+    MovePositionMark<actor ACTOR_NPC_DORAPION>(2, Position<'m9', 33, 28.5>);
+    Wait(12);
+    MovePositionMark<actor ACTOR_NPC_AABOKKU>(2, Position<'m10', 24, 29>);
+    Wait(24);
+    MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1, Position<'m11', 28.5, 22.5>);
+    Wait(9);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m12', 32, 21.5>);
+    Wait(9);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m13', 25, 21.5>);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_AABOKKU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             They pretended to run away and
+            hid over here insssstead!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DORAPION, FACE_ANGRY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             But we're not going to fall for
+            that trick!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_TEAM_CHARMS_THEME, 0, 256);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Hee-hee!",
+    });
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             You're pretty simple
+            fellows, huh? [M:H8]
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AABOKKU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" What?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             You think we seriously
+            ran away?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" We didn't run away!",
+    });
+    message_Talk({
+        english="""
+             We were waiting...[K]for you,
+            Team [CS:X]AWD[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DORAPION, FACE_ANGRY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" What are you saying?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             We absolutely cannot forgive
+            scoundrels like you!
+        """,
+    });
+    message_Close();
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             We're the treasure hunters--
+            Team [CS:X]Charm[CR]!
+        """,
+    });
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             You![K] We're going to punish you,
+            so get ready!
+        """,
+    });
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(1, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(24);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(24);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(27);
+    WaitAnimation<actor ACTOR_PLAYER_CHARMS>();
+    WaitAnimation<actor ACTOR_NPC_CHAAREMU>();
+    WaitAnimation<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5127);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" Humph![K] Interesting!",
+    });
+    message_Talk({
+        english="""
+             We let you run away last time
+            we fought...
+        """,
+    });
+    message_Talk({
+        english="""
+             You're not running away
+            this time!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             [CS:N]Arbok[CR]! [CS:N]Drapion[CR]!
+            Let's go!
+        """,
+    });
+    message_Close();
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_AABOKKU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(3);
+    ExecuteCommon<actor ACTOR_NPC_DORAPION>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_AABOKKU);
+    WaitExecuteLives(ACTOR_NPC_DORAPION);
+    SetEffect<actor ACTOR_NPC_AABOKKU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DORAPION>(EFFECT_JOYOUS, 3);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Arbok[CR] & [CS:N]Drapion[CR]: YEAH!",
+    });
+    Wait(18);
+    SetEffect<actor ACTOR_NPC_AABOKKU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DORAPION>(EFFECT_NONE, 3);
+    message_Close();
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5127);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_TOP_RC_FACER);
+    message_Talk({
+        english="""
+             [CS:N]Medicham[CR]! [CS:Y]Lopunny[CR]!
+            Here they come!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_TOP_L_FACEOUTW);
+    message_Talk({
+        english=" Anytime!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             OK.
+            Let's go! [M:H8]
+        """,
+    });
+    message_Close();
+    supervision_SpecialActing(24, 0, 0);
+    supervision_SpecialActing(25, 0, 0);
+    se_Play(10249);
+    supervision_SpecialActing(26, 0, 0);
+    Wait(120);
+    screen_WhiteOutAll(1, 30);
+    supervision_SpecialActing(3, 0, 0);
+    main_EnterDungeon(157, 30);
+    main_EnterDungeon(-1, 30);
+    end;
+}

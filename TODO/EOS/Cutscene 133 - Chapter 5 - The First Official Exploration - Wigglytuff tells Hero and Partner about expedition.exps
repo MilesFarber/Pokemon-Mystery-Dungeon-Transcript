@@ -1,0 +1,357 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P05C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm2_PlayFadeIn(BGM_FIRE_CRACKLING3, 60, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Guildmaster, I've brought you
+            Team [team:].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(60);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Guildmaster...[K]Guildmaster?",
+    });
+    message_Close();
+    bgm2_FadeOut(120);
+    Wait(60);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(1, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    se_Play(8974);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Hiya!",
+    });
+    message_Talk({
+        english="""
+             Your team went through a lot
+            today! Yes, a lot-lot!
+        """,
+    });
+    message_Talk({
+        english="""
+             But don't worry! I'm keeping 
+            watch on your activities!
+        """,
+    });
+    message_Talk({
+        english="""
+             I should tell you why I called
+            you here.
+        """,
+    });
+    message_Talk({
+        english="""
+             We're planning to mount a full
+            expedition soon! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8963);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_QUESTION_MARK, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" An expedition?",
+            }
+        case 2:
+            {
+                english=" An expedition?",
+            }
+        default:
+            {
+                english=" An expedition?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Yes! The guild will go explore
+            someplace far away!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PERAPPU);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PERAPPU);
+    message_Talk({
+        english="""
+             It's much harder than exploring
+            our nearby area.
+        """,
+    });
+    message_Talk({
+        english="""
+             That's why we need to prepare
+            for the big trip properly.
+        """,
+    });
+    message_Talk({
+        english="""
+             We carefully choose which guild
+            members go on the expedition.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Really?!",
+            }
+        case 2:
+            {
+                english=" Really?!",
+            }
+        default:
+            {
+                english=" Really?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Usually, we would never, ever
+            consider rookies to be expedition members.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_UPLEFT);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PUKURIN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Talk({
+        english="""
+             But you two are working so
+            very hard!
+        """,
+    });
+    message_Talk({
+        english="""
+             That's why we're making a
+            special exception this time!
+        """,
+    });
+    message_Talk({
+        english="""
+             We decided to include you in
+            the list of candidates for the expedition!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    se_Play(8974);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" R-really?!",
+            }
+        case 2:
+            {
+                english=" R-really?!",
+            }
+        default:
+            {
+                english=" R-really?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PERAPPU);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Now, now!",
+    });
+    message_Talk({
+        english="""
+             You haven't been chosen as
+            expedition members yet.
+        """,
+    });
+    message_Talk({
+        english="""
+             There is still time before we
+            set out on the expedition.
+        """,
+    });
+    message_Talk({
+        english="""
+             If you fail to do good work
+            before then, you cannot expect to be selected
+            for the expedition.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" I'm sure you two can do it!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_UPLEFT);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PUKURIN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Talk({
+        english=" Try hard!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yup!",
+            }
+        case 2:
+            {
+                english=" Yes!",
+            }
+        default:
+            {
+                english=" Yep!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     An expedition! Isn't it amazing,
+                    [hero]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     An expedition! Isn't it fantastic,
+                    [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     An expedition! Isn't it fantastic,
+                    [hero]?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     My heart is pounding all of a
+                    sudden!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     My heart is pounding all of a
+                    sudden!
+                """,
+            }
+        default:
+            {
+                english="""
+                     My pulse is racing all of a
+                    sudden!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's do our best and make sure
+                    we get picked for the expedition!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's try our best and make sure
+                    we get picked for the expedition!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's try our best and make sure
+                    we get picked for the expedition!
+                """,
+            }
+    }
+    message_Close();
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    SetAnimation<actor ACTOR_ATTENDANT1>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    SetAnimation<actor ACTOR_ATTENDANT1>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    SetAnimation<actor ACTOR_PLAYER>(66);
+    SetAnimation<actor ACTOR_ATTENDANT1>(66);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    Wait(80);
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 90);
+    Wait(60);
+    $SCENARIO_MAIN = scn[7, 0];
+    end;
+}

@@ -1,0 +1,81 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_RESTORED, 0, 200);
+    back_SetGround(LEVEL_V26P10A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_V26P10A1_335>(17);
+    WaitAnimation<object OBJECT_V26P10A1_335>();
+    WaitExecuteObject(OBJECT_V26P10A1_335);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This place...[K] It's [CS:P]Treeshroud
+                    Forest[CR].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This...[K] It must be [CS:P]Treeshroud
+                    Forest[CR].
+                """,
+            }
+        default:
+            {
+                english="""
+                     This...[K] It must be [CS:P]Treeshroud
+                    Forest[CR].
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<object OBJECT_V26P10A1_335>(17);
+    WaitAnimation<object OBJECT_V26P10A1_335>();
+    WaitExecuteObject(OBJECT_V26P10A1_335);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But it's different![K] When we
+                    were in [CS:P]Treeshroud Forest[CR], time was stopped!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But it's not the same![K] When we
+                    were in [CS:P]Treeshroud Forest[CR], time was stopped!
+                """,
+            }
+        default:
+            {
+                english="""
+                     But it's not the same![K] When we
+                    were in [CS:P]Treeshroud Forest[CR], time was stopped!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Time is...[K] Time is moving again!",
+            }
+        case 2:
+            {
+                english=" Time is...[K] Time is moving again!",
+            }
+        default:
+            {
+                english=" Time is...[K] Time is moving again!",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 60);
+    end;
+}

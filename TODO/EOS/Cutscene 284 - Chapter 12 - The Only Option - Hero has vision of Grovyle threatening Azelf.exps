@@ -1,0 +1,55 @@
+
+def 0 {
+    back_SetGround(LEVEL_D17P34A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_NPC_AGUNOMU>(DIR_DOWNRIGHT);
+    SetAnimation<actor ACTOR_NPC_AGUNOMU>(42);
+    switch ( sector() ) {
+        case 0:
+        default:
+            @label_0;
+            screen_FadeIn(1, 30);
+            bgm_PlayFadeIn(BGM_OH_NO, 0, 256);
+            Wait(30);
+            @label_2;
+            message_SetFaceOnly(ACTOR_NPC_AGUNOMU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+            message_Talk({
+                english=" Ugh...[K]urgh...",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+            message_Talk({
+                english=" Now I'll take it![K] The Time Gear!",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.7969, Position<'m0', 46, 27.5>);
+            MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.7969, Position<'m1', 46, 24.5>);
+            MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.7969, Position<'m2', 43.5, 17.5>);
+            message_SetFaceOnly(ACTOR_NPC_AGUNOMU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+            message_Talk({
+                english=" No...[K]you can't take it...[K] Never...",
+            });
+            message_Close();
+            switch ( sector() ) {
+                case 0:
+                default:
+                    MovePositionOffset<performer 0>(3, 0, 180);
+                    Wait(15);
+                    screen_FadeOut(1, 15);
+                    @label_5;
+                    end;
+                case 1:
+                    se_Play(5139);
+                    screen_WhiteOut(1, 5);
+                    screen_FlushIn(1, 0, 1, 0, 0, 0);
+                    jump @label_5;
+            }
+            break;
+        case 1:
+            screen_FlushOut(1, 0, 6, 0, 0, 0);
+            screen_FadeIn(1, 5);
+            Wait(30);
+            jump @label_2;
+    }
+}

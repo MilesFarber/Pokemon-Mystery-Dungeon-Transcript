@@ -1,0 +1,292 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D32P44A);
+    supervision_Acting(1);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    Destroy<object OBJECT_D32P44A2_85>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_REJIGIGASU>(23);
+    WaitAnimation<actor ACTOR_NPC_REJIGIGASU>();
+    Wait(45);
+    MovePositionMark<performer 0>(1, Position<'m0', 37.5, 38.5>);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(5);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(5);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(5);
+    SetAnimation<actor ACTOR_PLAYER_APPOINT>(5);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC1>(5);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC2>(5);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC3>(5);
+    SlidePositionOffset<actor ACTOR_NPC_MIMIROPPU>(1, 0, 24);
+    SlidePositionOffset<actor ACTOR_NPC_SAANAITO>(1, 0, 24);
+    SlidePositionOffset<actor ACTOR_NPC_CHAAREMU>(1, 0, 24);
+    SlidePositionOffset<actor ACTOR_PLAYER_APPOINT>(1, 0, 24);
+    SlidePositionOffset<actor ACTOR_ADVENTURE_NPC1>(1, 0, 24);
+    SlidePositionOffset<actor ACTOR_ADVENTURE_NPC2>(1, 0, 24);
+    SlidePositionOffset<actor ACTOR_ADVENTURE_NPC3>(1, 0, 24);
+    se_Play(6918);
+    camera_SetEffect(2, 2, 2.0);
+    Wait(20);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_PLAYER_APPOINT>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC1>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC2>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC3>(2);
+    camera_SetEffect(0, 0, 0);
+    WaitExecuteLives(ACTOR_NPC_REJIGIGASU);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_HAPPY, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" We did it!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5133);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_D32P44A2_85>(18);
+    WaitAnimation<object OBJECT_D32P44A2_85>();
+    WaitExecuteObject(OBJECT_D32P44A2_85);
+    SetAnimation<object OBJECT_D32P44A2_85>(17);
+    WaitSe(5133);
+    se_Play(8966);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(5);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(5);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(5);
+    SetAnimation<actor ACTOR_PLAYER_APPOINT>(5);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC1>(5);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC2>(5);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC3>(5);
+    SlidePositionOffset<actor ACTOR_NPC_MIMIROPPU>(1, 0, 8);
+    SlidePositionOffset<actor ACTOR_NPC_SAANAITO>(1, 0, 8);
+    SlidePositionOffset<actor ACTOR_NPC_CHAAREMU>(1, 0, 8);
+    SlidePositionOffset<actor ACTOR_PLAYER_APPOINT>(1, 0, 8);
+    SlidePositionOffset<actor ACTOR_ADVENTURE_NPC1>(1, 0, 8);
+    SlidePositionOffset<actor ACTOR_ADVENTURE_NPC2>(1, 0, 8);
+    SlidePositionOffset<actor ACTOR_ADVENTURE_NPC3>(1, 0, 8);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_PLAYER_APPOINT>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC1>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC2>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC3>(2);
+    WaitSe(8966);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Wh-what is this?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(-5, 0);
+    message_Talk({
+        english="""
+             There's an inscription on the
+            stone marker!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(0.7969, Position<'m1', 37.5, 35.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(30);
+    message_Mail({
+        english="""
+            [CN][player] checked
+            [CN]the stone marker.
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]"Close your eyes, then let your
+            [CN]aura flow into the ground."
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    @label_2;
+    forever {
+        message_Mail({
+            english="[CN]Will you close your eyes?",
+        });
+        switch ( message_SwitchMenu(0, 1) ) {
+            case menu({
+                english="Yes",
+            }):
+                break_loop;
+                break;
+            case menu({
+                english="No",
+            }):
+            default:
+                CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                se_Play(8971);
+                ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+                WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+                message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_TOP_L_FACEINW);
+                message_Talk({
+                    english="""
+                         Now, hold on![K] You're not about
+                        to get cold feet now!
+                    """,
+                });
+                CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                continue;  // may be redundant
+        }
+    }
+    @label_0;
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    Wait(15);
+    message_Mail({
+        english="[CN][player] did as instructed.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(7948);
+    SetAnimation<object OBJECT_D32P44A2_85>(2);
+    Wait(20);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(180);
+    se_FadeOut(7948, 15);
+    Wait(15);
+    se_Play(7950);
+    SetEffect<performer 3>(644, 3);
+    WaitEffect<performer 3>();
+    WaitExecutePerformer(3);
+    Wait(30);
+    message_Mail({
+        english="[CN]And [player]'s aura spread to the ground!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_REJIGIGASU>(24);
+    WaitAnimation<actor ACTOR_NPC_REJIGIGASU>();
+    message_ImitationSound({
+        english="[CN]GZZZ... GZZZZ...",
+    });
+    Wait(15);
+    MovePositionOffset<performer 0>(2, 0, -40);
+    WaitExecuteLives(ACTOR_NPC_REJIGIGASU);
+    Wait(30);
+    message_CloseEnforce();
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english=" What?!",
+    });
+    WaitExecuteLives(ACTOR_NPC_REJIGIGASU);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+    message_FacePositionOffset(2, 0);
+    message_Talk({
+        english=" [CS:N]Regigigas[CR]!",
+    });
+    WaitExecuteLives(ACTOR_NPC_REJIGIGASU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english=" We're in for another round?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_FadeOut(7950, 60);
+    SetAnimation<actor ACTOR_NPC_REJIGIGASU>(25);
+    WaitAnimation<actor ACTOR_NPC_REJIGIGASU>();
+    WaitSe(7950);
+    se_Play(6930);
+    message_SetFace(ACTOR_NPC_REJIGIGASU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" GRRRROOOOHHHH!",
+    });
+    WaitExecuteLives(ACTOR_NPC_REJIGIGASU);
+    WaitSe(6930);
+    message_CloseEnforce();
+    SetAnimation<actor ACTOR_NPC_REJIGIGASU>(26);
+    WaitAnimation<actor ACTOR_NPC_REJIGIGASU>();
+    Wait(45);
+    se_Play(7953);
+    camera_SetEffect(2, 2, 2.0);
+    message_ImitationSound({
+        english="Gzzzz...ummmm...mmmm...",
+    });
+    Wait(40);
+    WaitSe(7953);
+    se_Play(5131);
+    camera_SetEffect(2, 1, 1.0);
+    Wait(60);
+    camera_SetEffect(0, 0, 0);
+    WaitExecuteLives(ACTOR_NPC_REJIGIGASU);
+    message_CloseEnforce();
+    MovePositionOffset<performer 0>(2, 0, 40);
+    WaitExecutePerformer(0);
+    Wait(60);
+    bgm_PlayFadeIn(BGM_EARTHQUAKE2, 0, 256);
+    camera_SetEffect(2, 1, 1.0);
+    message_ImitationSound({
+        english="GRRRRR...OOOOHHHH...OOOOHHHH!",
+    });
+    Wait(120);
+    message_CloseEnforce();
+    Wait(10);
+    bgm2_PlayFadeIn(BGM_EARTHQUAKE3, 0, 256);
+    camera_SetEffect(1, 1, 1.0);
+    Wait(30);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Wa-wa-waaah!",
+    });
+    WaitExecuteLives(ACTOR_NPC_REJIGIGASU);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(-5, 0);
+    message_Talk({
+        english=" Hurry, we have to get out!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_MIMIROPPU>(1.5, 0, 160);
+    MovePositionOffset<actor ACTOR_NPC_SAANAITO>(1.5, 0, 160);
+    MovePositionOffset<actor ACTOR_NPC_CHAAREMU>(1.5, 0, 160);
+    MovePositionOffset<actor ACTOR_PLAYER_APPOINT>(1.5, 0, 160);
+    MovePositionOffset<actor ACTOR_ADVENTURE_NPC1>(1.5, 0, 160);
+    MovePositionOffset<actor ACTOR_ADVENTURE_NPC2>(1.5, 0, 160);
+    MovePositionOffset<actor ACTOR_ADVENTURE_NPC3>(1.5, 0, 160);
+    Wait(60);
+    se_FadeOut(5131, 120);
+    screen_FadeOut(1, 30);
+    camera_SetEffect(0, 0, 0);
+    Wait(45);
+    end;
+}

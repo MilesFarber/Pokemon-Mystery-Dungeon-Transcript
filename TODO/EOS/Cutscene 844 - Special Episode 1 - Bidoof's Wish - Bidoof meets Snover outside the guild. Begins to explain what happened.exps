@@ -1,0 +1,126 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P01A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    MovePositionOffset<actor ACTOR_NPC_YUKIKABURI>(0.5, 24, 0);
+    bgm2_PlayFadeIn(BGM_OCEAN3, 60, 190);
+    screen_FadeIn(1, 30);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    Turn2Direction<actor ACTOR_NPC_YUKIKABURI>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    MovePositionOffset<actor ACTOR_NPC_YUKIKABURI>(0.5, -48, 0);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    Turn2Direction<actor ACTOR_NPC_YUKIKABURI>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    MovePositionOffset<actor ACTOR_NPC_YUKIKABURI>(0.5, 24, 0);
+    Wait(30);
+    supervision_Acting(1);
+    Turn2Direction<actor ACTOR_NPC_YUKIKABURI>(4, 10, DIR_UP);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_YUKIKABURI>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_YUKIKABURI>();
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    message_SetFaceOnly(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Huh? You are?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_PLAYER_BIPPA>(1, Position<'m0', 30, 24.5>);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" You're from yesterday!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFaceOnly(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             ...Y-yes.[K] Nice to meet you.[K]
+            M-my name is [CS:N]Snover[CR].
+        """,
+    });
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I'm really sorry to have caused
+            you trouble yesterday.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_YUKIKABURI>(24);
+    WaitAnimation<actor ACTOR_NPC_YUKIKABURI>();
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    SetAnimation<actor ACTOR_NPC_YUKIKABURI>(2);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SPECIAL2, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Never mind that...[K] What
+            about those scary Pokémon that were
+            chasing you...
+        """,
+    });
+    message_Talk({
+        english=" A-are you all right?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Y-yes. I'm OK.[K]
+            But...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YUKIKABURI>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english="""
+             Truth is I had a bit of a
+            scary encounter...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_FadeOut(60);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Whaaat?[K] Scary encounter...[K]
+            What happened?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_AIR_OF_UNEASE, 0, 256);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english="""
+             After we met, I tried my best to
+            run away...
+        """,
+    });
+    message_Talk({
+        english="""
+             But [CS:N]Bagon[CR] and [CS:N]Gligar[CR] caught up
+            with me...
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

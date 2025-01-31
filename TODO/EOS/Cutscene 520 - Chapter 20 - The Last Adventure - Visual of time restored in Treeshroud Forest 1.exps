@@ -1,0 +1,49 @@
+
+def 0 {
+    back_SetGround(LEVEL_V26P09A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_TIME_RESTORED, 0, 200);
+    screen_FadeIn(1, 60);
+    Wait(60);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Th-this is...",
+            }
+        case 2:
+            {
+                english=" Th-this is...",
+            }
+        default:
+            {
+                english=" Th-this is...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_PLAYER);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([CS:N]Dialga[CR] must be showing this to us...)",
+            }
+        default:
+            {
+                english="([CS:N]Dialga[CR] must be showing this to us...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(He must be using telepathy to do so.)",
+            }
+        default:
+            {
+                english="(He must be using telepathy to do so.)",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

@@ -1,0 +1,146 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 22];
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             We're almost to the
+            6th Station Clearing! Keep going!
+        """,
+    });
+    message_Close();
+    back_SetGround(LEVEL_D73P26A);
+    supervision_LoadStation(LEVEL_D73P26A, 'US31');
+    supervision_Station(13);
+    supervision_Station(43);
+    supervision_StationCommon(0);
+    supervision_StationCommon(9);
+    supervision_StationCommon(10);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_SHEIMI>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC1>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC2>();
+    SetAnimation<actor ACTOR_NPC_SHEIMI>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC1>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC2>(2);
+    camera_SetMyself<performer 0>();
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_JOYOUS, 3);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_SKY_PEAK_SNOWFIELD, 0, 256);
+    Wait(30);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(5);
+    MovePositionMark<actor ACTOR_NPC_SHEIMI>(1, Position<'m0', 28.5, 33.5>);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m1', 28.5, 37.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m2', 31.5, 38.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m3', 25.5, 38.5>);
+    Wait(60);
+    se_Play(8978);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(2);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_KINOGASSA>();
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWN);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_GOORIKII>(4, 10, DIR_DOWN);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_KUCHIITO>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Yeah! We're here!",
+    });
+    message_Talk({
+        english="""
+             We reached the 6th Station
+            Clearing before you, so we made another base!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Yes!
+            Thank you so much, as always!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_WORRIED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             But you know...from here on, the
+            mountain is covered with snow. We can't
+            really set up any more bases.
+        """,
+    });
+    message_Talk({
+        english="""
+             So from here on, you have to
+            climb on your own. Sorry.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             No problem at all. We're glad
+            you were able to make bases up to this point.
+            They'll be a great help.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Heh-heh. You're welcome.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KINOGASSA>();
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Oh, that's right. From here on,
+            we're going to make a serious effort to reach
+            the summit.
+        """,
+    });
+    message_Talk({
+        english=" See you along the path!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yep! See you there!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" All right, we're off!",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_NPC_GOORIKII>(1, Position<'m4', 28.5, 21.5>, Position<'m5', 28.5, 15.5>);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_KUCHIITO>(8, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(8, 10, DIR_UPRIGHT);
+    Wait(15);
+    MovePositionMark<actor ACTOR_NPC_KINOGASSA>(1, Position<'m6', 28.5, 21.5>, Position<'m7', 28.5, 15.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_KUCHIITO>(1, Position<'m8', 28.5, 21.5>, Position<'m9', 28.5, 15.5>);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    Destroy<actor ACTOR_NPC_GOORIKII>();
+    Destroy<actor ACTOR_NPC_KINOGASSA>();
+    Destroy<actor ACTOR_NPC_KUCHIITO>();
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m10', 35.5, 40.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m11', 21.5, 40.5>);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC1);
+    WaitExecuteLives(ACTOR_ADVENTURE_NPC2);
+    end;
+}

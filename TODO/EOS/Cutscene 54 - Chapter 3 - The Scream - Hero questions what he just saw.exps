@@ -1,0 +1,461 @@
+
+def 0 {
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_T01P02A);
+    supervision_StationCommon(0);
+    supervision_StationCommon(99);
+    supervision_Acting(0);
+    supervision_LoadStation(LEVEL_T01P02A, 'UM03');
+    supervision_Station(10);
+    SetPositionInitial<actor ACTOR_NPC_KAKUREON1>();
+    SetPositionInitial<actor ACTOR_NPC_KAKUREON2>();
+    SetAnimation<actor ACTOR_NPC_KAKUREON1>(2);
+    SetAnimation<actor ACTOR_NPC_KAKUREON2>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeInAll(1, 5);
+    Wait(30);
+    se_Play(8973);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetAnimation<actor ACTOR_PLAYER>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER>(0.7969, -8, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(What was that?)",
+            }
+        default:
+            {
+                english="(What was that?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I'm sure I heard a shout for help just now...)",
+            }
+        default:
+            {
+                english="(I'm sure I heard a shout for help just now...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionTurn<actor ACTOR_PLAYER>(4, 2, 4);
+    Wait(30);
+    Turn2DirectionTurn<actor ACTOR_PLAYER>(4, 1, 5);
+    Wait(30);
+    Turn2DirectionTurn<actor ACTOR_PLAYER>(4, 2, 4);
+    Wait(60);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Did that shout come from you?)",
+            }
+        default:
+            {
+                english="(Did that shout come from you?)",
+            }
+    }
+    message_Close();
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_RURIRI>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_RURIRI>();
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Is something the matter?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_MARIRU);
+    message_Talk({
+        english="""
+             Hey, [CS:N]Azurill[CR]![K] What's going on?
+            Hurry home!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_RURIRI>(4, 1, ACTOR_NPC_MARIRU);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_Talk({
+        english=" Yup! I'm coming! Wait up!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_RURIRI>(4, 2, ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(23);
+    WaitAnimation<actor ACTOR_NPC_RURIRI>();
+    SetAnimation<actor ACTOR_NPC_RURIRI>(2);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON1>(8, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(8, 10, DIR_RIGHT);
+    MovePositionMark<performer 0>(1, Position<'m0', 53, 24.5>);
+    MovePositionMark<actor ACTOR_NPC_RURIRI>(1, Position<'m1', 52.5, 24.5>);
+    MovePositionMark<actor ACTOR_NPC_MARIRU>(1, Position<'m2', 56, 24.5>);
+    WaitExecutePerformer(0);
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Are you all right?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english=" Yup!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             We're done with our shopping...
+            Now we gotta look for an item we've lost!
+        """,
+    });
+    message_Talk({
+        english=" Let's get going.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_RURIRI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english=" Yup! I'm coming!",
+    });
+    message_Close();
+    Move2PositionMark<actor ACTOR_NPC_MARIRU>(1, Position<'m3', 72, 24.5>);
+    Wait(15);
+    ResetHitAttribute<actor ACTOR_NPC_RURIRI>(31);
+    Move2PositionMark<actor ACTOR_NPC_RURIRI>(1, Position<'m4', 72, 24.5>);
+    WaitExecuteLives(ACTOR_NPC_MARIRU);
+    Destroy<actor ACTOR_NPC_MARIRU>();
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    Destroy<actor ACTOR_NPC_RURIRI>();
+    Wait(30);
+    MovePositionLives<performer 0>(1, ACTOR_PLAYER);
+    WaitExecutePerformer(0);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ha! Those little guys are cute.",
+            }
+        case 2:
+            {
+                english=" Ha! Those little guys are cute.",
+            }
+        default:
+            {
+                english=" Ha! Those little guys are cute.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    bgm_FadeOut(120);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    Turn2Direction<actor ACTOR_NPC_KAKUREON1>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(4, 10, DIR_DOWNLEFT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Huh?[K] What's wrong,
+                    [hero]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Oh?[K] What's the matter,
+                    [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Huh?[K] What's the matter,
+                    [hero]?
+                """,
+            }
+    }
+    message_Close();
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_EXPLANATION_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Huh? Did I hear a shout for help
+                    just then?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Huh? Did I hear a shout for help
+                    just then?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Pardon? Did I hear a shout for
+                    help just then?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Uh, no... I didn't hear anything
+                    like that!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Uh, no... I didn't hear anything
+                    like that!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Uh, no... I didn't hear anything
+                    like that!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_KAKUREON1);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [CS:N]Kecleon[CR] brothers.",
+            }
+        case 2:
+            {
+                english=" Hey, [CS:N]Kecleon[CR] brothers.",
+            }
+        default:
+            {
+                english=" Say, [CS:N]Kecleon[CR] brothers.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Did you hear anything strange
+                    just a moment ago?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Did you hear anything strange
+                    just a moment ago?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Did you hear anything strange
+                    just a moment ago?
+                """,
+            }
+    }
+    message_Close();
+    se_Play(8963);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_QUESTION_MARK, 3);
+    Wait(10);
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KAKUREON2>();
+    WaitExecuteLives(ACTOR_NPC_KAKUREON2);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" No, nothing out of the ordinary.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KAKUREON2, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" I didn't hear anything odd either.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     See? The [CS:N]Kecleon[CR] brothers
+                    didn't hear anything like that either.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It sounds like the [CS:N]Kecleon[CR]
+                    brothers didn't hear anything odd either.
+                """,
+            }
+        default:
+            {
+                english="""
+                     The [CS:N]Kecleon[CR] brothers didn't hear
+                    anything strange either.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You probably just imagined it,
+                    [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You must have imagined it,
+                    [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     You must have just imagined it,
+                    [hero].
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(No, I'm positive that I didn't imagine it.)",
+            }
+        default:
+            {
+                english="(No, I'm positive that I didn't imagine it.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I definitely heard it!)",
+            }
+        default:
+            {
+                english="(I definitely heard it!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That shout that I heard...)",
+            }
+        default:
+            {
+                english="(That shout that I heard...)",
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 15);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    Wait(15);
+    message_EmptyActor();
+    message_Explanation({
+        english="[CN]H-h-h...HELP!",
+    });
+    message_Close();
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 15);
+    Wait(15);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(There's no mistaking it...)",
+            }
+        default:
+            {
+                english="(There's no mistaking it...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That was [CS:N]Azurill[CR]'s scream!)",
+            }
+        default:
+            {
+                english="(That was [CS:N]Azurill[CR]'s scream!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Uh, are you daydreaming?",
+            }
+        case 2:
+            {
+                english=" Uh, are you daydreaming?",
+            }
+        default:
+            {
+                english=" Uh, are you daydreaming?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's go already, [hero]!",
+            }
+        case 2:
+            {
+                english=" Let's move it, [hero]!",
+            }
+        default:
+            {
+                english=" Let's hustle, [hero]!",
+            }
+    }
+    message_Close();
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KAKUREON2);
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    end;
+}

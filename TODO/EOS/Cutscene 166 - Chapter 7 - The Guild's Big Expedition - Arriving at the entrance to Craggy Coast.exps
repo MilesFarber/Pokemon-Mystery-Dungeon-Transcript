@@ -1,0 +1,269 @@
+
+def 0 {
+    sound_Stop();
+    back_SetBanner2(LEVEL_V02P08A, 0, 132, 104, 7, {
+        english="""
+            The Guild's
+            Big Expedition
+        """,
+    });
+    screen_FadeIn(1, 45);
+    Wait(160);
+    screen_FadeOut(1, 45);
+    Wait(15);
+    back_SetGround(LEVEL_D06P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_CRAGGY_COAST, 0, 256);
+    ResetHitAttribute<actor ACTOR_PLAYER>(31);
+    ResetHitAttribute<actor ACTOR_ATTENDANT1>(31);
+    ResetHitAttribute<actor ACTOR_NPC_BIPPA>(31);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 40, 32.5>);
+    Wait(50);
+    Move2PositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m1', 40, 32.5>);
+    Wait(50);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m2', 40, 32.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m3', 51, 30.5>);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Move2PositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m4', 43, 29.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m5', 43, 31.5>);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Wait(10);
+    MovePositionOffset<performer 0>(1, 48, 0);
+    WaitExecutePerformer(0);
+    se_Play(8968);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(0, 2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Wow! The sea is right up this
+                    way, [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Wow! The sea is right up this
+                    way, [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Wow! The sea is right up this
+                    way, [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<performer 0>(1, -48, 0);
+    WaitExecutePerformer(0);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" And just look at this cliff!",
+            }
+        case 2:
+            {
+                english=" And just look at this cliff!",
+            }
+        default:
+            {
+                english=" And just look at this cliff!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_SAD, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(-1, 2);
+    message_Talk({
+        english="""
+             Yup yup! I reckon this is looking
+            more and more like a true expedition!
+        """,
+    });
+    message_Talk({
+        english="""
+             The path ahead surely will get
+            tricky, just what real explorers like to see!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_FacePositionOffset(-1, 2);
+    message_Talk({
+        english="""
+             And this...[K]this here is
+            something well known to all us explorers...
+        """,
+    });
+    message_Talk({
+        english=" It's a Kangaskhan Rock.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Kangaskhan Rock?",
+            }
+        case 2:
+            {
+                english=" Kangaskhan Rock?",
+            }
+        default:
+            {
+                english=" Kangaskhan Rock?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 2, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(-1, 2);
+    message_Talk({
+        english="""
+             Yes sirree, you heard right. That
+            there's a Kangaskhan Rock.
+        """,
+    });
+    message_Talk({
+        english="""
+             A Kangaskhan Rock lets you stow
+            and take out items, and it lets you save a
+            record of your progress.
+        """,
+    });
+    message_Talk({
+        english=" It's a real help to travelers.",
+    });
+    message_Talk({
+        english="""
+             ...Well, I haven't had much of
+            a chance to use Kangaskhan Rocks...
+        """,
+    });
+    message_Talk({
+        english="""
+             Reckon I shouldn't oughta talk
+            like a big shot...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_SAD, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(-1, 2);
+    message_Talk({
+        english="""
+             Gulp...![K] I just want to say again
+            that this here's my first expedition!
+        """,
+    });
+    message_Talk({
+        english="""
+             I'm feeling kind of nervous,
+            by golly.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ha ha ha. That goes for us too.",
+            }
+        case 2:
+            {
+                english=" Ha ha ha. That goes for us too.",
+            }
+        default:
+            {
+                english=" Ha ha ha. That goes for us too.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We're all new at this. Let's just
+                    do our best.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We're all beginners at this.
+                    Let's just do our best.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We're all beginners at this.
+                    Let's just do our best.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m6', 47, 30.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's have a look at the
+                    Wonder Map.
+                """,
+            }
+        case 2:
+            {
+                english=" Let's check the Wonder Map.",
+            }
+        default:
+            {
+                english="""
+                     Let's have a look at the
+                    Wonder Map.
+                """,
+            }
+    }
+    message_Close();
+    se_Play(6667);
+    screen_FadeOut(1, 15);
+    end;
+}

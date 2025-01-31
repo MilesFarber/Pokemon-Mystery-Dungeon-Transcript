@@ -1,0 +1,220 @@
+
+def 0 {
+    sound_Stop();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V02P06A);
+    camera2_SetPositionMark(Position<'m0', 19.5, 15.5>);
+    screen2_FadeIn(1, 60);
+    Wait(150);
+    screen2_FadeOut(1, 60);
+    back2_SetMode(0);
+    back_SetGround(LEVEL_G01P07C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 60);
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Sigh... Things aren't going as
+                    well as we'd hoped.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Sigh... We're not making as much
+                    progress as we'd hoped.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Sigh... Things aren't going as
+                    well as we'd hoped.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     When we talked with [CS:N]Torkoal[CR],
+                    I thought there was hope!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     When we talked with [CS:N]Torkoal[CR],
+                    I started thinking we had a hope!
+                """,
+            }
+        default:
+            {
+                english="""
+                     When we talked with [CS:N]Torkoal[CR],
+                    I thought we had a hope!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ..................",
+            }
+        case 2:
+            {
+                english=" ..................",
+            }
+        default:
+            {
+                english=" ..................",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I wonder how [CS:N]Grovyle[CR] is doing?",
+            }
+        case 2:
+            {
+                english=" I wonder how [CS:N]Grovyle[CR] is doing?",
+            }
+        default:
+            {
+                english=" I wonder how [CS:N]Grovyle[CR] is doing?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Has he gathered the Time Gears?",
+            }
+        case 2:
+            {
+                english=" Has he gathered the Time Gears?",
+            }
+        default:
+            {
+                english=" Has he gathered the Time Gears?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We have to hurry too!",
+            }
+        case 2:
+            {
+                english=" We need to hurry too!",
+            }
+        default:
+            {
+                english=" We have to hurry too!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But there's no point in getting
+                    all flustered.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But there's no point in getting
+                    all flustered.
+                """,
+            }
+        default:
+            {
+                english="""
+                     But there's no point in getting
+                    all worked up.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Especially since everyone is
+                    helping out.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Especially since everyone is
+                    helping out.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Especially since everyone is
+                    helping out.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We should get some sleep...[K]
+                    then start with fresh resolve tomorrow!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We should get some sleep...[K]
+                    then start with fresh resolve tomorrow!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We should get some sleep...[K]
+                    then start a fresh effort tomorrow!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     All right, [hero].
+                    Good night.
+                """,
+            }
+        case 2:
+            {
+                english=" OK, [hero]. Good night.",
+            }
+        default:
+            {
+                english=" OK, [hero]. Good night.",
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 90);
+    Wait(60);
+    $SCENARIO_MAIN = scn[23, 0];
+    end;
+}

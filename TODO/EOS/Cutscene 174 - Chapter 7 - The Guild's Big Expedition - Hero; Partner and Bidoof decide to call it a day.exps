@@ -1,0 +1,264 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_MT_HORN, 0, 256);
+    back_SetGround(LEVEL_D07P11A);
+    supervision_StationCommon(0);
+    supervision_LoadStation(LEVEL_D07P11A, 'UM08');
+    supervision_Station(4);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_BIPPA>();
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 15);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We're nearly there.",
+            }
+        case 2:
+            {
+                english=" We're nearly there.",
+            }
+        default:
+            {
+                english=" It's not far now.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We just need to cross this
+                    mountain to reach the base camp.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If we cross over this mountain,
+                    we'll reach the base camp.
+                """,
+            }
+        default:
+            {
+                english="""
+                     If we cross this mountain, we'll
+                    reach the base camp.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8720);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Wait(10);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_BIPPA>();
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_SIGH, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Whoops... That was my belly
+            growling.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8720);
+    WaitSe(8720);
+    se_Play(8720);
+    WaitSe(8720);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitEffect<actor ACTOR_PLAYER>();
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 2, DIR_UP);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ha ha ha! Us too!",
+            }
+        case 2:
+            {
+                english=" Ha ha ha! Us too!",
+            }
+        default:
+            {
+                english=" Ha ha ha! Us too!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNRIGHT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If we start climbing the
+                    mountain now, I think it'll be night before
+                    we finish.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If we start climbing the
+                    mountain now, I think it'll be night before
+                    we finish.
+                """,
+            }
+        default:
+            {
+                english="""
+                     If we start climbing the
+                    mountain now, I think it'll be night before
+                    we finish.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Do you want to call it a day?[K]
+                    We can rest here tonight.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Do you want to call it a day?[K]
+                    We can rest here tonight.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Do you want to call it a day?[K]
+                    We can rest here tonight.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" I agree completely!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Then let's eat!",
+            }
+        case 2:
+            {
+                english=" Then let's eat!",
+            }
+        default:
+            {
+                english=" Then let's eat!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_SIGH, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yeeeehaw!",
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 90);
+    Wait(120);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_NONE, 3);
+    message_ResetActor();
+    message_Narration(30, {
+        english="""
+            
+            [CN]The next morning...
+        """,
+    });
+    message_Close();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_MT_HORN, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     All right, gang. We have to
+                    get moving.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     All right, gang. We have to
+                    get moving.
+                """,
+            }
+        default:
+            {
+                english="""
+                     All right, gang. We have to
+                    get moving.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m0', 35, 25.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    Wait(20);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 41, 26.5>);
+    Wait(40);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m2', 39, 24.5>);
+    MovePositionMark<performer 0>(1, Position<'m3', 38, 24.5>);
+    Move2PositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m4', 41, 19.5>);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m5', 45, 22.5>);
+    MovePositionMark<performer 0>(1, Position<'m6', 43, 20.5>);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m7', 41, 22.5>);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             Crossing this mountain's going
+            to take us to the base camp. Yup yup!
+        """,
+    });
+    message_Talk({
+        english=" Let's get it done!",
+    });
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_Close();
+    end;
+}

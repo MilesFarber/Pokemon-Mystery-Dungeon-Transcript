@@ -1,0 +1,126 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[13, 2];
+    back_SetGround(LEVEL_D11P11A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_AMP_PLAINS, 0, 256);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 26.5, 24.5>);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 30.5, 24.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Wait(10);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So this is the entrance to
+                    [CS:P]Amp Plains[CR], huh?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This must be the entrance to
+                    [CS:P]Amp Plains[CR].
+                """,
+            }
+        default:
+            {
+                english="""
+                     This must be the entrance to
+                    [CS:P]Amp Plains[CR].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I don't know what sort of
+                    creeps would do something like this...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I can't imagine what sort of
+                    bullies would do something like this...
+                """,
+            }
+        default:
+            {
+                english="""
+                     I can't imagine what sort of
+                    creeps would do something like this...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_ANGRY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I mean, threatening little kids
+                    like those brothers really stinks.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I mean, threatening little kids
+                    like those brothers really stinks.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I mean, threatening little kids
+                    like those brothers really stinks.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We've got to get their [CS:Z]Water
+                    Float[CR] back for sure, [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We have to get their [CS:Z]Water
+                    Float[CR] back, [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's make sure we get their
+                    [CS:Z]Water Float[CR] back, [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 26.5, 16.5>);
+    Wait(10);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 30.5, 16.5>);
+    Wait(20);
+    main_EnterDungeon(17, 30);
+    switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

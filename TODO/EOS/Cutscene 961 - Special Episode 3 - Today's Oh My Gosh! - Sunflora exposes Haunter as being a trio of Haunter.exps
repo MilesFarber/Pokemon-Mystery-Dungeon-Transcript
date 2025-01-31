@@ -1,0 +1,216 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[43, 9];
+    back_SetDungeonBanner(164, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" There![K] Right there!",
+    });
+    message_Talk({
+        english=" [CS:N]Haunter[CR] is RIGHT THERE!",
+    });
+    message_Close();
+    Wait(45);
+    back_SetGround(LEVEL_D57P43A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetOutputAttribute<actor ACTOR_NPC_GOOSUTO2>(128);
+    SetOutputAttribute<actor ACTOR_NPC_GOOSUTO3>(128);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 256);
+    Wait(30);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I've found you!",
+    });
+    message_Talk({
+        english=" [CS:N]Haunter[CR]![K] I'm going to arrest you!",
+    });
+    message_Talk({
+        english=" You might as well give up!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Heh heh![K] You've been more
+            persistent than anyone else who's tried to
+            catch me!
+        """,
+    });
+    message_Talk({
+        english="""
+             You're ridiculously stubborn![K]
+            But it's still completely useless...
+            
+        """,
+    });
+    message_Talk({
+        english=" Don't you get it?! I'm invincible!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" .........",
+    });
+    message_Talk({
+        english="""
+             I have...[K] I have proof that you're
+            not invincible!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_GOOSUTO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_GOOSUTO>();
+    WaitExecuteLives(ACTOR_NPC_GOOSUTO);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" What?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             There's no such thing as an
+            invincible Pokémon!
+        """,
+    });
+    message_Talk({
+        english="""
+             It was nothing but a ruse, right
+            from the beginning!
+        """,
+    });
+    message_Talk({
+        english="""
+             It wasn't invincibility or
+            anything else![K] Was it, guys?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_GOOSUTO>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_NPC_GOOSUTO>();
+    WaitExecuteLives(ACTOR_NPC_GOOSUTO);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" G-[K]guys...[K] What do you mean?!",
+    });
+    message_Talk({
+        english=" You found this out?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yes.",
+    });
+    message_Talk({
+        english="""
+             I figured out there isn't
+            just one of you.
+        """,
+    });
+    message_Talk({
+        english=" Come on out![K] The rest of you!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(9996);
+    supervision_Acting(1);
+    SetOutputAttribute<object OBJECT_D57P43A1_432>(4);
+    SetAnimation<object OBJECT_D57P43A1_432>(17);
+    WaitAnimation<object OBJECT_D57P43A1_432>();
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(18);
+    Wait(8);
+    StopAnimation<actor ACTOR_PLAYER_KIMAWARI>();
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(768);
+    WaitAnimation<actor ACTOR_PLAYER_KIMAWARI>();
+    Wait(4);
+    supervision_Acting(2);
+    SetOutputAttribute<object OBJECT_D57P43A1_433>(4);
+    SetAnimation<object OBJECT_D57P43A1_433>(2);
+    MovePositionLives<object OBJECT_D57P43A1_433>(1.5, ACTOR_NPC_GOOSUTO);
+    WaitExecuteObject(OBJECT_D57P43A1_433);
+    SetAnimation<object OBJECT_D57P43A1_433>(19);
+    WaitAnimation<object OBJECT_D57P43A1_433>();
+    WaitExecuteObject(OBJECT_D57P43A1_432);
+    Destroy<object OBJECT_D57P43A1_432>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    SetAnimation<actor ACTOR_PLAYER_KIMAWARI>(2);
+    se_Play(5121);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    SetEffect<actor ACTOR_NPC_GOOSUTO>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO>(22);
+    WaitExecuteObject(OBJECT_D57P43A1_433);
+    Destroy<object OBJECT_D57P43A1_433>();
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Uwah!",
+    });
+    Wait(20);
+    se_Play(9989);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO2>(22);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO3>(22);
+    SetOutputAttribute<actor ACTOR_NPC_GOOSUTO2>(64);
+    ResetOutputAttribute<actor ACTOR_NPC_GOOSUTO2>(128);
+    SetOutputAttribute<actor ACTOR_NPC_GOOSUTO3>(64);
+    ResetOutputAttribute<actor ACTOR_NPC_GOOSUTO3>(128);
+    back_SetEffect(11, 60);
+    Slide2PositionMark<actor ACTOR_NPC_GOOSUTO2>(1, Position<'m0', 25.5, 23.5>);
+    Slide2PositionMark<actor ACTOR_NPC_GOOSUTO3>(1, Position<'m1', 33.5, 23.5>);
+    WaitBackEffect();
+    WaitExecuteLives(ACTOR_NPC_GOOSUTO3);
+    message_CloseEnforce();
+    WaitSe(9989);
+    se_Play(8966);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I knew it!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO>(2);
+    Wait(5);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO2>(2);
+    Wait(3);
+    SetAnimation<actor ACTOR_NPC_GOOSUTO3>(2);
+    Wait(15);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_GOOSUTO>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_GOOSUTO>();
+    WaitExecuteLives(ACTOR_NPC_GOOSUTO);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_ANGRY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Y...[K] You!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I knew it!",
+    });
+    message_Talk({
+        english="""
+             There isn't just one [CS:N]Haunter[CR]...[K]
+            There's three!
+        """,
+    });
+    message_Talk({
+        english=" That time...",
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

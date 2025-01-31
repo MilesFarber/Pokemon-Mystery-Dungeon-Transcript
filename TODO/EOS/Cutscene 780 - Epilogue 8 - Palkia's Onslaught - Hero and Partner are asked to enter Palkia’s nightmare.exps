@@ -1,0 +1,441 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D39P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetDirection<actor ACTOR_NPC_PARUKIA>(DIR_DOWNRIGHT);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(44);
+    camera_SetEffect(2, 1, 1);
+    screen_FadeIn(1, 30);
+    se_Play(6930);
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(2, 0);
+    message_Talk({
+        english=" GRRR-OOOOO-AAAAH!",
+    });
+    WaitSe(6930);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(43);
+    Wait(15);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(30);
+    message_Talk({
+        english=" GRRR-OOOO...[K]AAAAAAH!",
+    });
+    camera_SetEffect(2, 1, 1);
+    se_Play(6930);
+    SetEffect<actor ACTOR_NPC_PARUKIA>(EFFECT_SHOCKED, 3);
+    SetDirection<actor ACTOR_NPC_PARUKIA>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(24);
+    WaitAnimation<actor ACTOR_NPC_PARUKIA>();
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    SetDirection<actor ACTOR_NPC_PARUKIA>(DIR_DOWNRIGHT);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(44);
+    Wait(90);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    se_Play(6924);
+    SetDirection<actor ACTOR_NPC_PARUKIA>(DIR_RIGHT);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(24);
+    screen_FadeChange(1, 5, 0, 192);
+    Wait(15);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(60);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ...H-huh?",
+            }
+        case 2:
+            {
+                english=" ...H-huh?",
+            }
+        default:
+            {
+                english=" ...H-huh?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Palkia[CR]...[K] [CS:N]Palkia[CR] has stopped
+                    moving...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Palkia[CR]...[K] [CS:N]Palkia[CR] has stopped
+                    moving...
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Palkia[CR]...[K] [CS:N]Palkia[CR] has stopped
+                    moving...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What's happening...?",
+            }
+        case 2:
+            {
+                english=" What happened to him...?",
+            }
+        default:
+            {
+                english=" What happened to him...?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" [CS:N]Palkia[CR] has been...",
+    });
+    message_KeyWait();
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    message_Talk({
+        english="""
+             [CS:N]Palkia[CR] has been enveloped by
+            the nightmare.
+        """,
+    });
+    message_Talk({
+        english=" Just as [CS:N]Azurill[CR] has.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_IN_THE_FUTURE, 0, 256);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     A voice![K] Where is it coming
+                    from?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     A voice![K] Where is it coming
+                    from?
+                """,
+            }
+        default:
+            {
+                english="""
+                     A voice![K] Where is it coming
+                    from?
+                """,
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Who are you?",
+            }
+        case 2:
+            {
+                english=" Who are you?",
+            }
+        default:
+            {
+                english=" Who are you?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     What do you mean, [CS:N]Palkia[CR] has
+                    been enveloped in a nightmare?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     What do you mean, [CS:N]Palkia[CR] has
+                    been enveloped in a nightmare?
+                """,
+            }
+        default:
+            {
+                english="""
+                     What do you mean, [CS:N]Palkia[CR] has
+                    been enveloped in a nightmare?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english="""
+             It means that the power of darkness has
+            spread so much farther.
+        """,
+    });
+    message_Talk({
+        english="""
+             If its growth remains unchecked, the
+            world will become drowned in darkness.
+        """,
+    });
+    message_Talk({
+        english=" But you two...",
+    });
+    message_Talk({
+        english=" Would you two enter [CS:N]Palkia[CR]'s nightmare?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What?",
+            }
+        case 2:
+            {
+                english=" What?",
+            }
+        default:
+            {
+                english=" What?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Palkia[CR]'s[K] nightmare?!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Palkia[CR]'s[K] nightmare?!",
+            }
+        default:
+            {
+                english=" [CS:N]Palkia[CR]'s[K] nightmare?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" Yes.",
+    });
+    message_Talk({
+        english=" By entering his nightmare...",
+    });
+    message_Talk({
+        english=" You will learn why [CS:N]Palkia[CR] attacked you.",
+    });
+    message_Talk({
+        english=" So? What will you do?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 2, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What'll we do, [hero]?",
+            }
+        case 2:
+            {
+                english=" What'll we do, [hero]?",
+            }
+        default:
+            {
+                english=" What'll we do, [hero]?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Should we go into the
+                    nightmare?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Should we go into the
+                    nightmare?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Should we go into the
+                    nightmare?
+                """,
+            }
+    }
+    @label_2;
+    forever {
+        switch ( message_SwitchMenu(0, 1) ) {
+            case menu({
+                english="Enter the nightmare",
+            }):
+                break_loop;
+                break;
+            case menu({
+                english="Refuse",
+            }):
+            default:
+                CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                se_Play(8968);
+                SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+                WaitEffect<actor ACTOR_ATTENDANT1>();
+                WaitExecuteLives(ACTOR_ATTENDANT1);
+                message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" Wh-what, you won't?",
+                        }
+                    case 2:
+                        {
+                            english=" Wh-what, you won't go in?",
+                        }
+                    default:
+                        {
+                            english=" Wh-what, you won't go in?",
+                        }
+                }
+                CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english=" But...[K]if we don't do anything...",
+                        }
+                    case 2:
+                        {
+                            english=" But...[K]if we don't do anything...",
+                        }
+                    default:
+                        {
+                            english=" But...[K]if we don't do anything...",
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 We will never be able to return
+                                to Treasure Town.
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 We will never be able to return
+                                to Treasure Town.
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 We will never be able to return
+                                to Treasure Town.
+                            """,
+                        }
+                }
+                message_SwitchTalk ($PARTNER_TALK_KIND) {
+                    case 1:
+                        {
+                            english="""
+                                 We have no choice. We have to
+                                go into the nightmare.
+                            """,
+                        }
+                    case 2:
+                        {
+                            english="""
+                                 We don't have any choice.
+                                We have to go into the nightmare.
+                            """,
+                        }
+                    default:
+                        {
+                            english="""
+                                 We don't have any choice.
+                                We have to go into the nightmare.
+                            """,
+                        }
+                }
+                continue;  // may be redundant
+        }
+    }
+    @label_0;
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" Fine! You've decided!",
+    });
+    message_Talk({
+        english=" I will send you into [CS:N]Palkia[CR]'s nightmare.",
+    });
+    message_Close();
+    Wait(20);
+    bgm_FadeOut(30);
+    se_Play(8195);
+    supervision_Acting(1);
+    SetOutputAttribute<object OBJECT_G01P07A1_108>(4);
+    SetAnimation<object OBJECT_G01P07A1_108>(17);
+    WaitAnimation<object OBJECT_G01P07A1_108>();
+    WaitExecuteObject(OBJECT_G01P07A1_108);
+    SetAnimation<object OBJECT_G01P07A1_108>(2);
+    screen_FadeOut(1, 30);
+    WaitSe(8195);
+    Wait(60);
+    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+    $SCENARIO_MAIN_BIT_FLAG[8] = 1;
+    $COMPULSORY_SAVE_POINT = 25;
+    CallCommon(CORO_HANYOU_SAVE_FUNC);
+    end;
+}

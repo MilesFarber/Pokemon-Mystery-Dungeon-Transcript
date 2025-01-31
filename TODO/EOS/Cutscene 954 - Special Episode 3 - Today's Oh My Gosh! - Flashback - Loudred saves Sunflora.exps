@@ -1,0 +1,56 @@
+
+def 0 {
+    back_SetGround(LEVEL_D57P42A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_D57P41A1_425>(3);
+    SetAnimation<object OBJECT_D57P41A1_426>(2);
+    SetAnimation<object OBJECT_D57P41A1_427>(1);
+    SetPositionMark<performer 0>(Position<'m0', 35.5, 33.5>);
+    SetDirection<actor ACTOR_NPC_DOGOOMU>(DIR_RIGHT);
+    SetDirection<actor ACTOR_PLAYER_KIMAWARI>(DIR_LEFT);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" A-are you ALL RIGHT, [CS:Y]Sunflora[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Y-yeah... (Y-you saved me...)",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I-is that SO?[K] GOOD.",
+    });
+    message_Talk({
+        english="""
+             Anyway...[K] It's not LIKE you to
+            FALL BEHIND those guys like THAT.
+        """,
+    });
+    message_Talk({
+        english="""
+             Then AGAIN, you DID just
+            take a LOT of DAMAGE.
+        """,
+    });
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_JOYOUS, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             On THAT note, I just GOT here,
+            so I'm doing FINE![K] Ha ha ha!
+        """,
+    });
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_LAUGHING, 3);
+    Wait(15);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+    screen_WhiteOut(1, 60);
+    Wait(30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

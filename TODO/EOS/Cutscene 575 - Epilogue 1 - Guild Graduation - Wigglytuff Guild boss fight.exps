@@ -1,0 +1,56 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D31P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_THE_POWER_OF_DARKNESS, 0, 256);
+    Wait(30);
+    message_SetFaceEmpty(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english="""
+            [CS:N]Grand Master[CR]: Muah-hahahaha![K] Welcome...[K]
+            to the world of darkness.
+        """,
+    });
+    message_Talk({
+        english="""
+            [CS:N]Grand Master[CR]: Coming to our lair is the last
+            mistake you will ever make.[K] You're not
+            walking out of here.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFaceEmpty(ACTOR_NPC_PUKURIN, FACE_SIGH, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english="""
+            [CS:N]Grand Master[CR]: Prepare to face the terror that
+            is the grand master of all things bad!
+        """,
+    });
+    message_Talk({
+        english="[CS:N]Grand Master[CR]: YOOM...TAH!",
+    });
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(17);
+    WaitAnimation<actor ACTOR_NPC_PUKURIN>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(2);
+    bgm_FadeOut(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    message_CloseEnforce();
+    WaitSe(5143);
+    se_Play(5136);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    end;
+}

@@ -1,0 +1,138 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Ugh, we didn't do so good,
+                    did we?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Ugh, we didn't do so well,
+                    did we?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Ugh, we didn't do so well,
+                    did we?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This is pretty tough. Let's go
+                    home and regroup.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This is tougher than expected.
+                    Let's go home and regroup.
+                """,
+            }
+        default:
+            {
+                english="""
+                     This is tougher than I'd
+                    expected. Let's go home and regroup.
+                """,
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_G01P03A);
+    supervision_StationCommon(0);
+    supervision_LoadStation(LEVEL_G01P03A, 'UM15');
+    supervision_Station(1);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Everyone else is still out at
+            [CS:P]Crystal Cave[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             They're doing their best to
+            search the place.
+        """,
+    });
+    message_Talk({
+        english="""
+             You two should get moving and
+            join them.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We'll go as soon as we
+                    get ready.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We should go as soon as we
+                    get ready.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We'd better go as soon as
+                    we're ready.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Off to [CS:P]Crystal Cave[CR]!",
+            }
+        case 2:
+            {
+                english=" Off to [CS:P]Crystal Cave[CR]!",
+            }
+        default:
+            {
+                english=" Off to [CS:P]Crystal Cave[CR]!",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 60);
+    Destroy<actor ACTOR_NPC_PERAPPU>();
+    SetPositionMark<actor ACTOR_PLAYER>(Position<'m0', 44.5, 28.5>);
+    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m1', 41.5, 28.5>);
+    SetDirection<actor ACTOR_PLAYER>(DIR_DOWN);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_DOWN);
+    camera_SetDefault();
+    Wait(30);
+    screen_FadeIn(1, 30);
+    end;
+}

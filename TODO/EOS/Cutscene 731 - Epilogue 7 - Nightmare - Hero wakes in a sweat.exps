@@ -1,0 +1,116 @@
+
+def 0 {
+    back_SetGround(LEVEL_H02P99C);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    SetAnimation<actor ACTOR_ATTENDANT1>(62);
+    WaitSe(6403);
+    screen_FadeIn(0, 5);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="Gasp!",
+            }
+        default:
+            {
+                english="Gasp!",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="...[K]Wh-what was that?",
+            }
+        default:
+            {
+                english="...[K]Wh-what was that?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="[partner] is...[K]asleep.",
+            }
+        default:
+            {
+                english="[partner] is...[K]asleep.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="I guess...[K]that was a dream...?",
+            }
+        default:
+            {
+                english="I guess...[K]that was a dream...?",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="What a strange dream, though.",
+            }
+        default:
+            {
+                english="What a strange dream, though.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="Well, there's nothing I can do about that...",
+            }
+        default:
+            {
+                english="Well, there's nothing I can do about that...",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="It's not even dawn...[K] I'll get more sleep.",
+            }
+        default:
+            {
+                english="It's not even dawn...[K] I'll get more sleep.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER>(76);
+    Wait(60);
+    SetAnimation<actor ACTOR_PLAYER>(62);
+    Wait(60);
+    bgm_FadeOut(180);
+    screen_FadeOut(1, 90);
+    WaitBgm(BGM_OCEAN1);
+    Wait(60);
+    end;
+}

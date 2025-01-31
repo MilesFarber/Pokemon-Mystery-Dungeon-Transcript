@@ -1,0 +1,34 @@
+
+def 0 {
+    if ( scn($SCENARIO_SIDE) >= [40, 2] ) {
+        @label_0;
+        message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+        message_Talk({
+            english="""
+                 I don't have time to be looking
+                at job requests! Yup yup!
+            """,
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        @label_1;
+        Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_DOWN);
+        WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+        end;
+    } else {
+        message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+        message_Talk({
+            english="""
+                 Sniff...[K] Golly, I really want to
+                be assigned to do a job...
+            """,
+        });
+        message_Talk({
+            english="""
+                 But I'll just have to wait.[K]
+                So, off to [CS:K]Kecleon[CR] Market.
+            """,
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        jump @label_1;
+    }
+}

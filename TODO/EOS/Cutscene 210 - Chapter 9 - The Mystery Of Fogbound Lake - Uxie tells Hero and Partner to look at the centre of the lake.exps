@@ -1,0 +1,174 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR, 0, 256);
+    back_SetGround(LEVEL_P04P01C);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Unbelievable!",
+            }
+        case 2:
+            {
+                english=" That's incredible!",
+            }
+        default:
+            {
+                english=" It's so very incredible!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Such a big lake! Who'd ever
+                    expect it way up here on this plateau!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Who'd expect to see such a big
+                    lake on a plateau so high up?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Who would have guessed that a
+                    big lake could be high up on this plateau!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And look! Those [CS:N]Volbeat[CR] and
+                    [CS:N]Illumise[CR] flying around...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And those floating [CS:N]Volbeat[CR] and
+                    [CS:N]Illumise[CR]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     And just look at those fluttering
+                    [CS:N]Volbeat[CR] and [CS:N]Illumise[CR]...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Amazing!",
+            }
+        case 2:
+            {
+                english=" So beautiful!",
+            }
+        default:
+            {
+                english=" This couldn't be more dazzling!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Water constantly wells up from
+            far below this place.
+        """,
+    });
+    message_Talk({
+        english="""
+             It flows up so heavily that it
+            has long formed this enormous lake.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YUKUSHII>(8, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_YUKUSHII);
+    message_Talk({
+        english="""
+             Now cast your eyes to the
+            glowing area at the lake's center.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yep, I see it!",
+            }
+        case 2:
+            {
+                english=" Yes, I see it!",
+            }
+        default:
+            {
+                english=" Sure, I can see it!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's coming from below!",
+            }
+        case 2:
+            {
+                english=" It's radiating from below!",
+            }
+        default:
+            {
+                english="""
+                     It's shining up from beneath
+                    the waves!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That sorta blue, sorta green
+                    light, right?
+                """,
+            }
+        case 2:
+            {
+                english=" That blue green radiance, right?",
+            }
+        default:
+            {
+                english=" The bluish green radiance, right?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Step forward for a closer look.",
+    });
+    message_Close();
+    Turn2Direction<actor ACTOR_NPC_YUKUSHII>(8, 2, DIR_UP);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.7969, Position<'m0', 17, 46>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_PLAYER>(0.7969, Position<'m1', 22, 46>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    screen_FadeOut(1, 30);
+    end;
+}

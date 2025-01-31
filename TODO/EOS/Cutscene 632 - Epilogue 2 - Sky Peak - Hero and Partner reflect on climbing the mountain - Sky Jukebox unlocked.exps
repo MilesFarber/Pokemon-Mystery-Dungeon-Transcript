@@ -1,0 +1,320 @@
+
+def 0 {
+    sound_Stop();
+    message_Narration(30, {
+        english="[CN]The next day...",
+    });
+    message_Close();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_H02P99A);
+    supervision_Acting(0);
+    supervision_StationCommon(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_PLAYER>(DIR_RIGHT);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER>(76);
+    SetAnimation<actor ACTOR_ATTENDANT1>(76);
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER>(63);
+    Wait(5);
+    SetAnimation<actor ACTOR_ATTENDANT1>(63);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's late, [hero]!",
+            }
+        case 2:
+            {
+                english=" It's late, [hero]!",
+            }
+        default:
+            {
+                english=" It's late, [hero]!",
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yesterday was so much fun!",
+            }
+        case 2:
+            {
+                english=" Yesterday was so much fun!",
+            }
+        default:
+            {
+                english=" Yesterday was so much fun!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I'm kind of tired from staying up
+                    all night talking...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I'm kind of tired from staying up
+                    all night talking...
+                """,
+            }
+        default:
+            {
+                english="""
+                     I'm kind of tired from staying up
+                    all night talking...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I won't be able to forget
+                    everyone's smiling faces!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I won't be able to forget
+                    everyone's smiling faces!
+                """,
+            }
+        default:
+            {
+                english="""
+                     I won't be able to forget
+                    everyone's smiling faces!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [hero].",
+            }
+        case 2:
+            {
+                english=" Hey, [hero].",
+            }
+        default:
+            {
+                english=" Hey, [hero].",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I've asked you this before, but...",
+            }
+        case 2:
+            {
+                english=" I've asked you this before, but...",
+            }
+        default:
+            {
+                english=" I've asked you this before, but...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Exploring is so much fun,
+                    isn't it?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Exploring is so much fun,
+                    isn't it?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Exploring is so much fun,
+                    isn't it?
+                """,
+            }
+    }
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yeah!",
+        }):
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Right!",
+                    }
+                case 2:
+                    {
+                        english=" Right!",
+                    }
+                default:
+                    {
+                        english=" Right!",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            @label_2;
+            Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             All right! Let's go have fun
+                            exploring today!
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             All right! Let's go have fun
+                            exploring today!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             All right! Let's go have fun
+                            exploring today!
+                        """,
+                    }
+            }
+            message_Close();
+            SetAnimation<actor ACTOR_PLAYER>(71);
+            WaitAnimation<actor ACTOR_PLAYER>();
+            WaitExecuteLives(ACTOR_PLAYER);
+            SetAnimation<actor ACTOR_PLAYER>(71);
+            WaitAnimation<actor ACTOR_PLAYER>();
+            WaitExecuteLives(ACTOR_PLAYER);
+            SetAnimation<actor ACTOR_PLAYER>(2);
+            Wait(30);
+            Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+            WaitExecuteLives(ACTOR_PLAYER);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            Wait(20);
+            SetAnimation<actor ACTOR_PLAYER>(66);
+            SetAnimation<actor ACTOR_ATTENDANT1>(66);
+            WaitAnimation<actor ACTOR_PLAYER>();
+            WaitAnimation<actor ACTOR_ATTENDANT1>();
+            Wait(80);
+            SetAnimation<actor ACTOR_PLAYER>(2);
+            SetAnimation<actor ACTOR_ATTENDANT1>(2);
+            Wait(45);
+            bgm_FadeOut(120);
+            screen2_FadeOut(0, 30);
+            screen_FadeOut(1, 30);
+            back2_SetMode(0);
+            Wait(90);
+            me_Play(7);
+            message_Explanation({
+                english="""
+                    [CN]A message has arrived from the
+                    [CN]Exploration Team Federation...[W:30]
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_Explanation({
+                english="[CN]If you want to hear that song again...",
+            });
+            message_KeyWait();
+            me_Play(1);
+            message_Explanation({
+                english="""
+                    [CN]There's now a machine available for you to
+                    [CN]listen to the game music anytime!
+                    [CN]The Sky Jukebox is now available![W:100]
+                """,
+            });
+            message_Explanation({
+                english="""
+                    [CN]To access the Sky Jukebox, select
+                    [CN]Other from the Top Menu.
+                """,
+            });
+            message_Explanation({
+                english="""
+                    [CN]To use the Sky Jukebox, save your adventure
+                    [CN]and return to the Top Menu.
+                """,
+            });
+            message_Close();
+            Wait(30);
+            camera_SetDefault();
+            screen2_FadeIn(0, 30);
+            screen_FadeIn(1, 30);
+            bgm_PlayFadeIn(BGM_DO_YOUR_BEST_AS_ALWAYS, 0, 256);
+            end;
+        case menu({
+            english="Nope...",
+        }):
+        default:
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_JOYOUS, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Ah ha ha ha ha ha!
+                            Stayed up too late. Still half asleep!
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Ah ha ha ha ha ha!
+                            Stayed up too late. Still half asleep!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Ah ha ha ha ha ha!
+                            Stayed up too late. Still half asleep!
+                        """,
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+            jump @label_2;
+    }
+}

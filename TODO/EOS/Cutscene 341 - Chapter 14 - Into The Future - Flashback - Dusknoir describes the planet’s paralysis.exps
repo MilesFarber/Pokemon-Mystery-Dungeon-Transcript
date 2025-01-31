@@ -1,0 +1,83 @@
+
+def 0 {
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_T01P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             It was nothing less than...[K]
+            causing the planet's paralysis.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_S_PERAPPU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_S_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_S_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" The planet's...[K]paralysis?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Yes.",
+    });
+    message_Talk({
+        english="""
+             If a planet becomes paralyzed,
+            all movement upon it ceases.
+        """,
+    });
+    message_Talk({
+        english="""
+             When a Time Gear is removed,
+            the flow of time slows in its region.
+        """,
+    });
+    message_Talk({
+        english="""
+             As many more are taken, time
+            slows in an ever-larger area.
+        """,
+    });
+    message_Talk({
+        english="""
+             Eventually, the planet's flow
+            slows down so much that it stops entirely.
+        """,
+    });
+    message_Talk({
+        english="""
+             Ultimately, the planet reaches a
+            state of total paralysis...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HIMEGUMA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(0, -3);
+    message_Talk({
+        english="""
+             If the planet is paralyzed...[K]
+            What happens to this world?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             In a world where the planet has
+            become paralyzed...
+        """,
+    });
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

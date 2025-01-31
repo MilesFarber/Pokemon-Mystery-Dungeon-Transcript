@@ -1,0 +1,303 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D10P41A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 2.0);
+    SetAnimation<actor ACTOR_PLAYER>(3);
+    SetAnimation<actor ACTOR_ATTENDANT1>(3);
+    MoveHeight<actor ACTOR_PLAYER>(2, 5);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 5);
+    Wait(1);
+    MoveHeight<actor ACTOR_PLAYER>(2, 0);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 0);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(15);
+    camera_SetEffect(0, 0, 0);
+    Wait(90);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 2.0);
+    SetAnimation<actor ACTOR_PLAYER>(3);
+    SetAnimation<actor ACTOR_ATTENDANT1>(3);
+    MoveHeight<actor ACTOR_PLAYER>(2, 5);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 5);
+    Wait(1);
+    MoveHeight<actor ACTOR_PLAYER>(2, 0);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 0);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(15);
+    camera_SetEffect(0, 0, 0);
+    Wait(15);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(30);
+    se_Play(6930);
+    message_ImitationSound({
+        english="GRROOOOOOH...GRROOOOOOH...!",
+    });
+    WaitSe(6930);
+    message_CloseEnforce();
+    supervision_Acting(1);
+    Wait(1);
+    MovePositionOffset<actor ACTOR_NPC_GURAADON>(0.5, 0, 80);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(10);
+    camera_SetEffect(0, 0, 0);
+    Wait(10);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(10);
+    camera_SetEffect(0, 0, 0);
+    Wait(10);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(10);
+    camera_SetEffect(0, 0, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(10);
+    camera_SetEffect(0, 0, 0);
+    Wait(10);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(10);
+    camera_SetEffect(0, 0, 0);
+    Wait(10);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(10);
+    camera_SetEffect(0, 0, 0);
+    Wait(10);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(10);
+    camera_SetEffect(0, 0, 0);
+    Wait(10);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(10);
+    camera_SetEffect(0, 0, 0);
+    WaitExecuteLives(ACTOR_NPC_GURAADON);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wh-what is that?!",
+            }
+        case 2:
+            {
+                english=" Waaah! Wh-what is that?!",
+            }
+        default:
+            {
+                english=" Waaah! Wh-what is that?!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It looks like the statue!",
+            }
+        case 2:
+            {
+                english=" It looks like the statue!",
+            }
+        default:
+            {
+                english=" It looks like the statue!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Th-that Pokémon...[K]really exists?",
+            }
+        case 2:
+            {
+                english=" Th-that Pokémon...[K]really exists?",
+            }
+        default:
+            {
+                english=" Th-that Pokémon...[K]really exists?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    camera_SetEffect(2, 1, 1.0);
+    se_Play(6930);
+    SetAnimation<actor ACTOR_NPC_GURAADON>(9);
+    message_ResetActor();
+    message_Talk({
+        english=" GRROOOOOOH...GRROOOOOOH...!",
+    });
+    WaitSe(6930);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_GURAADON>(2);
+    Wait(15);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_STUNNED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Eep!",
+            }
+        case 2:
+            {
+                english=" Eep!",
+            }
+        default:
+            {
+                english=" Eep!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFaceOnly(ACTOR_NPC_GURAADON, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" GRROOOOOOH...!",
+    });
+    message_Talk({
+        english="""
+             YOU! HAVE YOU COME TO DESECRATE
+            THIS PLACE?
+        """,
+    });
+    message_Talk({
+        english=" DEPART NOW!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     B-but...[K] We just want to go to
+                    [CS:P]Fogbound Lake[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     B-but...[K] All we want is to go to
+                    [CS:P]Fogbound Lake[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     B-b-but...[K] W-w-we only want to
+                    go to [CS:P]Fogbound Lake[CR]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_GURAADON>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_GURAADON>();
+    WaitExecuteLives(ACTOR_NPC_GURAADON);
+    message_SetFaceOnly(ACTOR_NPC_GURAADON, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" WHAT?! [CS:P]FOGBOUND LAKE[CR]?!",
+    });
+    message_Talk({
+        english="""
+             I AM THE GUARDIAN OF [CS:P]FOGBOUND
+            LAKE[CR]![K] I AM [CS:N]GROUDON[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_GURAADON, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             YOU WILL NEVER LEAVE HERE
+            ALIVE, INTRUDERS!
+        """,
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_GURAADON>(19);
+    WaitAnimation<actor ACTOR_NPC_GURAADON>();
+    Wait(15);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 2.0);
+    SetAnimation<actor ACTOR_PLAYER>(3);
+    SetAnimation<actor ACTOR_ATTENDANT1>(3);
+    MoveHeight<actor ACTOR_PLAYER>(2, 5);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 5);
+    Wait(1);
+    MoveHeight<actor ACTOR_PLAYER>(2, 0);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 0);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(15);
+    camera_SetEffect(0, 0, 0);
+    Wait(15);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(30);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whaaat?!",
+            }
+        case 2:
+            {
+                english=" Whaaat?!",
+            }
+        default:
+            {
+                english=" Whaaat?!",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 15);
+    end;
+}

@@ -1,0 +1,49 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    back_SetGround(LEVEL_P19P01A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_AAMARUDO>();
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(2);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_AAMARUDO>(1, Position<'m0', 28.5, 24>);
+    Wait(6);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m1', 28.5, 27>);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 1, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UPRIGHT);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Oh! There's an opening in the
+            rock here, deep in the forest!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 1, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UP);
+    Wait(10);
+    message_SetFaceOnly(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" We're going in.",
+    });
+    message_Close();
+    Move2PositionMark<actor ACTOR_NPC_AAMARUDO>(1, Position<'m2', 37.5, 18.5>);
+    Wait(6);
+    MovePositionOffset<actor ACTOR_PLAYER_PUPURIN>(1, 0, -24);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Move2PositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m3', 37, 18.5>);
+    Wait(30);
+    bgm_FadeOut(150);
+    screen_FadeOut(1, 60);
+    Wait(60);
+    end;
+}

@@ -1,0 +1,92 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    back_SetGround(LEVEL_V03P09A);
+    supervision_Acting(0);
+    camera_SetPositionMark(Position<'m0', 19.5, 17.5>);
+    back_SetEffect(5, 0);
+    back_SetBackEffect(2);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 60);
+    Wait(30);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" At the center of such places...",
+            }
+        case 2:
+            {
+                english=" At the center of such places...",
+            }
+        default:
+            {
+                english=" At the center of such places...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" is what's known as a Time Gear.",
+            }
+        case 2:
+            {
+                english=" is what's known as a Time Gear.",
+            }
+        default:
+            {
+                english=" is what's known as a Time Gear.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Time Gears serve a very
+                    important function.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Time Gears serve a very
+                    important function.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Time Gears serve a very
+                    important function.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Each one protects time and keeps
+                    time flowing properly in its region.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Each one protects time and keeps
+                    time flowing properly in its region.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Each one protects time and keeps
+                    time flowing properly in its region.
+                """,
+            }
+    }
+    message_Close();
+    Wait(30);
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

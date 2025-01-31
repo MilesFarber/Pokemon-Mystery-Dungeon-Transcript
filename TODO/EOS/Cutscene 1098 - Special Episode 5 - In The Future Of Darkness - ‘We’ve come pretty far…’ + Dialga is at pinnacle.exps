@@ -1,0 +1,77 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[48, 7];
+    back_SetGround(LEVEL_D53P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_YONOWAARU_N9>();
+    SetPositionInitial<actor ACTOR_NPC_SEREBII>();
+    SetAnimation<actor ACTOR_NPC_SEREBII>(2);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_VAST_ICE_MOUNTAIN_PEAK, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1.1992, Position<'m0', 28.5, 33>);
+    MovePositionMark<actor ACTOR_NPC_SEREBII>(1.1992, Position<'m1', 25.5, 36>);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N9>(1.1992, Position<'m2', 31.5, 37.5>);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" [CS:N]Celebi[CR].",
+    });
+    Turn2Direction<actor ACTOR_NPC_SEREBII>(4, 10, DIR_UPRIGHT);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N9>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    message_Talk({
+        english="""
+             We've climbed pretty far...[K]
+            Where is this?
+        """,
+    });
+    message_Talk({
+        english="""
+             Is it much farther to reach
+            the pinnacle?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SEREBII, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             No, not at all.[K] The pinnacle is
+            only a little farther.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I've been thinking about what
+            could have happened, since we haven't seen
+            Master [CS:N]Dialga[CR] so far...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(3);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNRIGHT);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_SEREBII>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_SEREBII);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Right.[K] I think he may have
+            reached the pinnacle already.
+        """,
+    });
+    message_Talk({
+        english=" Let's hurry.",
+    });
+    message_Close();
+    end;
+}

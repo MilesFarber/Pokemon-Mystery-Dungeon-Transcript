@@ -1,0 +1,115 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh...[K] We got wiped out.",
+            }
+        case 2:
+            {
+                english=" Ugh...[K] That didn't go well.",
+            }
+        default:
+            {
+                english=" Ugh...[K] That wasn't so good.",
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D28P21A);
+    supervision_StationCommon(0);
+    supervision_LoadStation(LEVEL_D28P21A, 'UM24');
+    supervision_Station(4);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_HIDDEN_HIGHLAND, 0, 256);
+    Wait(30);
+    WaitLockLives(5, ACTOR_PLAYER);
+    Unlock(5);
+    Wait(15);
+    Unlock(7);
+    Wait(15);
+    Unlock(9);
+    Lock(3);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_DOWN);
+    Wait(15);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urk! This is pretty hard.",
+            }
+        case 2:
+            {
+                english=" Urk! That was challenging.",
+            }
+        default:
+            {
+                english=" Urk! It's not easy...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_JUPUTORU);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" We've come this far.",
+    });
+    message_Talk({
+        english="""
+             We'll get through whatever
+            it takes.
+        """,
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(4);
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetDirection(DIR_RIGHT);
+    SetAnimation(76);
+    Lock(5);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_DOWN_FUNC);
+    Lock(6);
+    hold;
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetDirection(DIR_LEFT);
+    SetAnimation(76);
+    Lock(7);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Unlock(3);
+    Lock(8);
+    hold;
+}
+
+def 3 for actor ACTOR_NPC_JUPUTORU {
+    SetPositionInitial();
+    SetAnimation(29);
+    Lock(9);
+    Wait(30);
+    SetAnimation(31);
+    WaitAnimation();
+    SetAnimation(2);
+    Wait(15);
+    Turn2Direction(4, 10, DIR_UPLEFT);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Lock(10);
+    hold;
+}

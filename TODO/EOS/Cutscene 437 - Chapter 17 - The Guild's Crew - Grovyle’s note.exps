@@ -1,0 +1,506 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_OCEAN1, 0, 256);
+    back_SetGround(LEVEL_H02P99A);
+    supervision_LoadStation(LEVEL_H02P99A, 'UM22');
+    supervision_Station(4);
+    supervision_StationCommon(0);
+    supervision_Acting(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(60);
+    supervision_Acting(0);
+    MovePositionMark<performer 0>(1, Position<'m0', 34.5, 24.5>);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER>(0.5, Position<'m1', 34.5, 25.5>);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecutePerformer(0);
+    supervision_Acting(1);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.5, Position<'m2', 34.5, 20.5>);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Grovyle[CR]'s not here...",
+            }
+        case 2:
+            {
+                english=" [CS:N]Grovyle[CR] isn't here...",
+            }
+        default:
+            {
+                english=" [CS:N]Grovyle[CR] isn't here...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey! Over there!",
+            }
+        case 2:
+            {
+                english=" Hey! Over there!",
+            }
+        default:
+            {
+                english=" Oh! Over there!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m3', 43.5, 24.5>);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, 16, 16);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m4', 40.5, 25.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m5', 43.5, 22.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" There's a sheet of paper!",
+            }
+        case 2:
+            {
+                english=" There's a sheet of paper!",
+            }
+        default:
+            {
+                english=" There's a sheet of paper here!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     There's something written on it
+                    in footprint runes.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     There's something written on it
+                    in footprint runes.
+                """,
+            }
+        default:
+            {
+                english="""
+                     There's something written on it
+                    in footprint runes.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" This is a letter from [CS:N]Grovyle[CR]!",
+            }
+        case 2:
+            {
+                english=" This is a letter from [CS:N]Grovyle[CR]!",
+            }
+        default:
+            {
+                english=" This is a letter from [CS:N]Grovyle[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It must be a message for us.[K]
+                    I'll read it.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It must be a message for us.[K]
+                    I'll read it.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It must be a message for us.[K]
+                    I'll read it.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_ChangeVolume(120, 0);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    Wait(15);
+    message_Mail({
+        english="""
+            [CN][partner] began reading
+            [CN]the letter from [CS:N]Grovyle[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    message_Mail({
+        english="""
+            "To [hero] and [partner]:[K]
+            How are you doing?"
+        """,
+    });
+    message_Mail({
+        english="\"How goes your search for the [CS:P]Hidden Land[CR]?\"",
+    });
+    message_Mail({
+        english="""
+            "Things are going well on my end. I've already
+            collected three Time Gears."
+        """,
+    });
+    message_Mail({
+        english="\"I have to find only two more Time Gears.\"",
+    });
+    message_Mail({
+        english="\"I plan to join you when I've collected all five.\"",
+    });
+    message_Mail({
+        english="""
+            "Plans have proceeded smoothly. [CS:N]Azelf[CR] and his
+            friends understood the situation. And they have
+            fully cooperated."
+        """,
+    });
+    message_Mail({
+        english="""
+            "[CS:N]Azelf[CR] told me that members of your guild let
+            them know I was coming. Thank you."
+        """,
+    });
+    message_Mail({
+        english="""
+            "It's heartening to know that more and more
+            Pokémon are coming to trust us."
+        """,
+    });
+    message_Mail({
+        english="""
+            "However, I will continue to stay away from
+            Treasure Town and the guild."
+        """,
+    });
+    message_Mail({
+        english="""
+            "First, I'm not certain if the Pokémon in this
+            world trust me entirely or not."
+        """,
+    });
+    message_Mail({
+        english="""
+            "But there's something more troubling
+            than that."
+        """,
+    });
+    message_Mail({
+        english="""
+            "[CS:N]Dusknoir[CR] is liable to return from the future
+            at any time."
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Dusknoir[CR]?!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Dusknoir[CR]?!",
+            }
+        default:
+            {
+                english=" [CS:N]Dusknoir[CR]?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Come to think of it...",
+            }
+        case 2:
+            {
+                english=" Come to think of it...",
+            }
+        default:
+            {
+                english=" Come to think of it...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR] failed to get rid of us
+                    in the future.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR] failed to get rid of us
+                    in the future.
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR] failed to get rid of us
+                    in the future.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It makes sense that he'd come
+                    back to our world after us.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I wouldn't put it past him to
+                    chase us here. He still wants us gone.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I wouldn't put it past him to
+                    chase us here. He still wants us gone.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" All right, let me keep reading.",
+            }
+        case 2:
+            {
+                english=" OK, I'll keep reading.",
+            }
+        default:
+            {
+                english=" OK, I'll finish reading.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_Mail({
+        english="""
+            "Since [CS:N]Dusknoir[CR] will be coming, we should keep
+            a low profile."
+        """,
+    });
+    message_Mail({
+        english="""
+            "This is another reason I should stay away
+            from Treasure Town and the guild."
+        """,
+    });
+    message_Mail({
+        english="""
+            "I may instead come back to Sharpedo Bluff or
+            the beach."
+        """,
+    });
+    message_Mail({
+        english="""
+            "If we should meet, we can then exchange
+            information."
+        """,
+    });
+    message_Mail({
+        english="\"Good luck on your end.\"",
+    });
+    message_Mail({
+        english="""
+            "Together, we shall stop the planet's paralysis."
+                                      - From [CS:N]Grovyle[CR]
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_FadeOut(120);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     ...[K]OK, it sounds like [CS:N]Grovyle[CR] is
+                    hard at work.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     ...[K]OK, it sounds like [CS:N]Grovyle[CR] is
+                    hard at work.
+                """,
+            }
+        default:
+            {
+                english="""
+                     ...[K]OK, it sounds like [CS:N]Grovyle[CR] is
+                    hard at work.
+                """,
+            }
+    }
+    bgm_ChangeVolume(60, 256);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We'd better hold up our end too.",
+            }
+        case 2:
+            {
+                english=" We'd better not fail on our end.",
+            }
+        default:
+            {
+                english=" We can't fail on our end.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     According to this letter...[K][CS:N]Grovyle[CR]
+                    will show up either here or at the beach.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     According to this letter...[K][CS:N]Grovyle[CR]
+                    will show up either here or at the beach.
+                """,
+            }
+        default:
+            {
+                english="""
+                     According to this letter...[K][CS:N]Grovyle[CR]
+                    will show up either here or at the beach.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Maybe we will see [CS:N]Grovyle[CR] if we
+                    go down to the beach.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If we go down to the beach,
+                    maybe we will see [CS:N]Grovyle[CR] there.
+                """,
+            }
+        default:
+            {
+                english="""
+                     If we go down to the beach,
+                    maybe we will see [CS:N]Grovyle[CR] there.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's go down to the beach
+                    before we go back to the guild.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We should go down to the beach
+                    before we go back to the guild.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's go to the beach before we
+                    go back to the guild.
+                """,
+            }
+    }
+    message_Close();
+    end;
+}

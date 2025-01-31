@@ -1,0 +1,138 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh...[K] That wasn't so good.",
+            }
+        case 2:
+            {
+                english=" Ugh...[K] That's not how it's done...",
+            }
+        default:
+            {
+                english=" Ugh...[K] That didn't go well...",
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D41P21A);
+    supervision_StationCommon(0);
+    supervision_LoadStation(LEVEL_D41P21A, 'US22');
+    supervision_Station(4);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    WaitLockLives(5, ACTOR_PLAYER);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_DEEP_DARK_CRATER, 0, 256);
+    Wait(30);
+    Unlock(5);
+    Wait(15);
+    Unlock(7);
+    Wait(15);
+    Unlock(9);
+    Lock(3);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_DOWN);
+    Wait(15);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 4);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urk! This is harsh...",
+            }
+        case 2:
+            {
+                english=" Urk! This is a real challenge...",
+            }
+        default:
+            {
+                english=" Urk! What a struggle...",
+            }
+    }
+    message_Close();
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But we have to keep going.
+                    There's nothing else we can do.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But there's no other option.
+                    We have to keep going.
+                """,
+            }
+        default:
+            {
+                english="""
+                     But we have to keep going.
+                    That's all we can do.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" So true.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_KURESERIA);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_KURESERIA);
+    message_Talk({
+        english=" We mustn't give up now.",
+    });
+    message_Close();
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetPositionInitial();
+    SetDirection(DIR_RIGHT);
+    SetAnimation(76);
+    Lock(5);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_DOWN_FUNC);
+    Lock(6);
+    hold;
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetPositionInitial();
+    SetDirection(DIR_LEFT);
+    SetAnimation(76);
+    Lock(7);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Unlock(3);
+    Lock(8);
+    hold;
+}
+
+def 3 for actor ACTOR_NPC_KURESERIA {
+    SetPositionInitial();
+    SetAnimation(2);
+    Lock(9);
+    Lock(10);
+    hold;
+}

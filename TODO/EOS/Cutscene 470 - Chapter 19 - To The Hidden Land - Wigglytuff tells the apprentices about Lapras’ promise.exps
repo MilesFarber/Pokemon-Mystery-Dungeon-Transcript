@@ -1,0 +1,66 @@
+
+def 0 {
+    back_SetGround(LEVEL_G01P04C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hey, hey! So what was that
+            promise?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I think [CS:N]Lapras[CR] recognized that
+            we were an exploration team right away.
+        """,
+    });
+    message_Talk({
+        english=" So he said to us...",
+    });
+    message_Talk({
+        english="""
+             that he couldn't tell if we were
+            bandits with big ambitions...
+        """,
+    });
+    message_Talk({
+        english="""
+             or if we were an exploration
+            team with good intentions...
+        """,
+    });
+    message_Talk({
+        english="""
+             so he asked, for the sake of the
+            world's peace...
+        """,
+    });
+    message_Talk({
+        english="""
+             that we please not investigate
+            the peculiar pattern there. [K]That's what he
+            asked of us.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_Talk({
+        english="""
+             So...[K]what was your reply,
+            Guildmaster?
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

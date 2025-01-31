@@ -1,0 +1,170 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_P01P04A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_TOGEPII>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIKARASU>(4);
+    SetAnimation<actor ACTOR_NPC_OKUTAN>(4);
+    SetAnimation<actor ACTOR_NPC_SANDOPAN>(4);
+    SetAnimation<actor ACTOR_NPC_JIGUZAGUMA>(4);
+    se_Play(6669);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 46, 36.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 41.5, 36.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wow, there's quite a crowd.",
+            }
+        case 2:
+            {
+                english=" Wow, there's a crowd.",
+            }
+        default:
+            {
+                english=" Wow, there's a crowd.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m2', 43.5, 27.5>);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, 16, -16, 0, -32);
+    Wait(7);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 46, 29>);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m4', 41.5, 29>);
+    Wait(30);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_NPC_PATCHIIRU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PATCHIIRU);
+    SetEffect<actor ACTOR_NPC_PATCHIIRU>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_JOYOUS, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             May I have everyone's attention,
+            please! First of all, I'd like to thank you for
+            taking time out of your busy schedules!
+        """,
+    });
+    se_FadeOut(6669, 90);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PATCHIIRU>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_TOGEPII>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIKARASU>(2);
+    SetAnimation<actor ACTOR_NPC_JIGUZAGUMA>(2);
+    SetAnimation<actor ACTOR_NPC_OKUTAN>(2);
+    SetAnimation<actor ACTOR_NPC_HERAKUROSU>(2);
+    SetAnimation<actor ACTOR_NPC_SANDOPAN>(2);
+    SetAnimation<actor ACTOR_NPC_JIGUZAGUMA>(2);
+    SetEffect<actor ACTOR_NPC_NYOROTONO>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_HERAKUROSU>(EFFECT_NONE, 3);
+    MovePositionMark<actor ACTOR_NPC_SUTORAIKU>(1, Position<'m5', 49, 31.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_ZANGUUSU>(1, Position<'m6', 43.5, 31>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_SANDOPAN>(1, Position<'m7', 38.5, 31.5>);
+    Turn2Direction<actor ACTOR_NPC_NYUURA>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_BARIYAADO>(4, 10, DIR_UPRIGHT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_REDIBA>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_NYOROTONO>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SANDOPAN>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_TOGEPII>(4, 10, DIR_UP);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_JIGUZAGUMA>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_HERAKUROSU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_ZANGUUSU>(4, 10, DIR_UP);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_SUTORAIKU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_OKUTAN>(4, 10, DIR_UPLEFT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_PACHIRISU>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_YAMIKARASU>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_KAGEBOUZU>(4, 10, DIR_UPLEFT);
+    MovePositionOffset<actor ACTOR_NPC_JIGUZAGUMA>(1, 0, -8);
+    Wait(60);
+    bgm_PlayFadeIn(BGM_SPINDAS_CAFE, 0, 256);
+    message_SetFace(ACTOR_NPC_PATCHIIRU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I've got some happy news for
+            everyone today!
+        """,
+    });
+    message_Talk({
+        english="""
+             Has anyone here ever heard of a
+            mountain called [CS:P]Sky Peak[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_OKUTAN>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_OKUTAN>();
+    WaitExecuteLives(ACTOR_NPC_OKUTAN);
+    message_SetFace(ACTOR_NPC_OKUTAN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" [CS:P]Sky Peak[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_BARIYAADO>(4, 10, ACTOR_NPC_OKUTAN);
+    WaitExecuteLives(ACTOR_NPC_BARIYAADO);
+    message_SetFace(ACTOR_NPC_BARIYAADO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I've heard of it.",
+    });
+    message_Close();
+    Turn2DirectionLives<actor ACTOR_NPC_NYUURA>(4, 10, ACTOR_NPC_BARIYAADO);
+    Turn2DirectionLives<actor ACTOR_NPC_REDIBA>(4, 10, ACTOR_NPC_BARIYAADO);
+    Wait(3);
+    Turn2DirectionLives<actor ACTOR_NPC_NYOROTONO>(4, 10, ACTOR_NPC_BARIYAADO);
+    Turn2Direction<actor ACTOR_NPC_SUTORAIKU>(4, 10, DIR_UPLEFT);
+    Wait(4);
+    Turn2DirectionLives<actor ACTOR_NPC_TOGEPII>(4, 10, ACTOR_NPC_BARIYAADO);
+    Turn2DirectionLives<actor ACTOR_NPC_JIGUZAGUMA>(4, 10, ACTOR_NPC_BARIYAADO);
+    Turn2DirectionLives<actor ACTOR_NPC_HERAKUROSU>(4, 10, ACTOR_NPC_BARIYAADO);
+    Turn2DirectionLives<actor ACTOR_NPC_ZANGUUSU>(4, 10, ACTOR_NPC_BARIYAADO);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_BARIYAADO);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_SANDOPAN>(4, 10, ACTOR_NPC_BARIYAADO);
+    Turn2DirectionLives<actor ACTOR_NPC_OKUTAN>(4, 10, ACTOR_NPC_BARIYAADO);
+    Turn2DirectionLives<actor ACTOR_NPC_PACHIRISU>(4, 10, ACTOR_NPC_BARIYAADO);
+    Wait(2);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2DirectionLives<actor ACTOR_NPC_YAMIKARASU>(4, 10, ACTOR_NPC_BARIYAADO);
+    Turn2DirectionLives<actor ACTOR_NPC_KAGEBOUZU>(4, 10, ACTOR_NPC_BARIYAADO);
+    WaitExecuteLives(ACTOR_NPC_KAGEBOUZU);
+    Wait(15);
+    screen_FadeOut(1, 30);
+    end;
+}
+
+def 1 for actor ACTOR_NPC_NYOROTONO {
+    SetAnimation(2);
+    Wait(30);
+    @label_0;
+    forever {
+        SetEffect(EFFECT_LAUGHING, 3);
+        WaitRandom(60, 90);
+        SetEffect(EFFECT_NONE, 3);
+        WaitRandom(60, 180);
+        continue;  // may be redundant
+    }
+}
+
+def 2 for actor ACTOR_NPC_HERAKUROSU {
+    @label_1;
+    SetAnimation(4);
+    SetEffect(EFFECT_JOYOUS, 3);
+    WaitRandom(60, 90);
+    SetEffect(EFFECT_NONE, 3);
+    SetAnimation(2);
+    WaitRandom(90, 180);
+    jump @label_1;
+}

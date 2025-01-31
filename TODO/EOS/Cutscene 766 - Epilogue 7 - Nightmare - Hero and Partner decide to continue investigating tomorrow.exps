@@ -1,0 +1,210 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_H01P99A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So, basically...[K] [CS:N]Lapras[CR] didn't
+                    know much about the distortion of space.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So, basically...[K] [CS:N]Lapras[CR] didn't
+                    know much about the distortion of space.
+                """,
+            }
+        default:
+            {
+                english="""
+                     So, basically...[K] [CS:N]Lapras[CR] didn't
+                    know much about the distortion of space.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But he did tell us that [CS:N]Palkia[CR]
+                    controls space itself...[K] And that this being
+                    dwells in [CS:P]Spacial Rift[CR].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But he did tell us that [CS:N]Palkia[CR]
+                    controls space itself...[K] And that this being
+                    dwells in [CS:P]Spacial Rift[CR].
+                """,
+            }
+        default:
+            {
+                english="""
+                     But he did tell us that [CS:N]Palkia[CR]
+                    controls space itself...[K] And that this being
+                    dwells in [CS:P]Spacial Rift[CR].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Palkia[CR], huh...",
+            }
+        case 2:
+            {
+                english=" [CS:N]Palkia[CR], huh...",
+            }
+        default:
+            {
+                english=" [CS:N]Palkia[CR], huh...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If we can meet with [CS:N]Palkia[CR],
+                    we'd be able to ask about the distortion
+                    of space.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If we can meet with [CS:N]Palkia[CR],
+                    we'd be able to ask about the distortion
+                    of space.
+                """,
+            }
+        default:
+            {
+                english="""
+                     If we can meet with [CS:N]Palkia[CR],
+                    we'd be able to ask about the distortion
+                    of space.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But we don't know where
+                    [CS:P]Spacial Rift[CR] is...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But we don't have a clue as to
+                    where [CS:P]Spacial Rift[CR] is...
+                """,
+            }
+        default:
+            {
+                english="""
+                     But we don't know where
+                    [CS:P]Spacial Rift[CR] is...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hmm...[K] I guess there isn't any
+                    point in worrying about it right now.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Hmm...[K] I guess there isn't any
+                    point in worrying about it right now.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Hmm...[K] I guess there isn't any
+                    point in worrying about it right now.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's continue to look into
+                    this tomorrow.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's continue to investigate
+                    this tomorrow.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's continue to look into
+                    this tomorrow.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     There's no giving up now,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     There's no giving up now,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     There's no giving up now,
+                    [hero]!
+                """,
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    WaitBgm(BGM_OCEAN1);
+    end;
+}

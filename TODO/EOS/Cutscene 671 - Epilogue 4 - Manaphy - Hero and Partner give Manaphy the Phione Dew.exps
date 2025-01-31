@@ -1,0 +1,143 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_H02P99A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_MANAFI>(46);
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Ah! You obtained a Phione Dew!",
+    });
+    message_Talk({
+        english=" Quick! Give it to [CS:N]Manaphy[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_ATTENDANT1>(71);
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" OK!",
+            }
+        case 2:
+            {
+                english=" OK!",
+            }
+        default:
+            {
+                english=" OK!",
+            }
+    }
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_RIGHT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Here you go, [CS:N]Manaphy[CR].[K]
+                    It's a Phione Dew.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Here, take this, [CS:N]Manaphy[CR].[K]
+                    It's a Phione Dew.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Here, take this, [CS:N]Manaphy[CR].[K]
+                    It's a Phione Dew.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(120);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.5, 8, -8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(0.5, -8, 8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(60);
+    message_SetFace(ACTOR_NPC_MANAFI, FACE_SPECIAL2, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" ...[K]Urf...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_MANAFI>(27);
+    WaitAnimation<actor ACTOR_NPC_MANAFI>();
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    Wait(60);
+    message_SetFace(ACTOR_NPC_MANAFI, FACE_STUNNED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             ...[K]Thanks...[K] [hero]...[K]
+            [partner]...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_AT_THE_END_OF_THE_DAY, 0, 256);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SIGH, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whew, am I glad!",
+            }
+        case 2:
+            {
+                english=" Whew, am I glad!",
+            }
+        default:
+            {
+                english=" Whew, thank goodness!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" It seems to be working.",
+    });
+    message_Talk({
+        english="""
+             He should be fine, given two or
+            three days of rest.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That's great...[K] Am I ever glad...",
+            }
+        case 2:
+            {
+                english=" That's great...[K] Am I ever glad...",
+            }
+        default:
+            {
+                english=" That's great...[K] Am I ever glad...",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 90);
+    Wait(30);
+    end;
+}

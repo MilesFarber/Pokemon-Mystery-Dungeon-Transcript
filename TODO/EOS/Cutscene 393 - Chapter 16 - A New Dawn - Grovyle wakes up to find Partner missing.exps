@@ -1,0 +1,43 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_H02P99C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetAnimation<actor ACTOR_PLAYER>(62);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(29);
+    SetOutputAttribute<object OBJECT_H02P99C1_115>(2);
+    bgm_PlayFadeIn(BGM_OCEAN1, 120, 256);
+    screen_FadeIn(1, 60);
+    Wait(60);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(31);
+    WaitAnimation<actor ACTOR_NPC_JUPUTORU>();
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(2);
+    Wait(45);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(8, 10, DIR_LEFT);
+    Wait(20);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_JUPUTORU>();
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Hm?[K] [partner] isn't here...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_JUPUTORU>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_Talk({
+        english=" Maybe outside...?",
+    });
+    message_Close();
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, -60, 0);
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(1, 0, -56);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.7969, Position<'m0', 61.5, 17.5>);
+    Destroy<actor ACTOR_NPC_JUPUTORU>();
+    Wait(30);
+    screen_FadeOut(1, 30);
+    end;
+}

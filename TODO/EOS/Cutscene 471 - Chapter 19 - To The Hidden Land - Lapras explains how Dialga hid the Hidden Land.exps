@@ -1,0 +1,166 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_V24P01A);
+    supervision_Acting(0);
+    SetOutputAttribute<object OBJECT_V24P01A1_287>(2);
+    SetOutputAttribute<actor ACTOR_PLAYER>(4);
+    SetOutputAttribute<actor ACTOR_ATTENDANT1>(4);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(2);
+    SetAnimation<object OBJECT_V24P01A1_287>(2);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetActor(ACTOR_NPC_RAPURASU);
+    message_Talk({
+        english="""
+             [CS:N]Wigglytuff[CR] promised to honor
+            my request, most agreeably.
+        """,
+    });
+    message_Talk({
+        english="""
+             He said he owed me thanks for
+            coming to [CS:N]Chatot[CR]'s aid...
+        """,
+    });
+    message_Talk({
+        english="""
+             and that he would stop all
+            investigations into the matter.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<object OBJECT_V24P01A1_287>(1);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" So that's what happened.",
+            }
+        case 2:
+            {
+                english=" So that's what happened.",
+            }
+        default:
+            {
+                english=" So that's what happened.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But...[K]why didn't you want
+                    anyone to investigate the pattern?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But...[K]why didn't you want
+                    anyone to investigate the pattern?
+                """,
+            }
+        default:
+            {
+                english="""
+                     But...[K]why didn't you want
+                    anyone to investigate the pattern?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_RAPURASU);
+    message_Talk({
+        english="""
+             In the [CS:P]Hidden Land[CR]...[K]is [CS:P]Temporal
+            Tower[CR] where [CS:N]Dialga[CR] reigns.
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Dialga[CR] feared intruders could
+            wreak havoc at the tower that regulates time.
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Dialga[CR] decided to protect
+            [CS:P]Temporal Tower[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             He hid the [CS:P]Hidden Land[CR] in a gap
+            in time.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" A gap in time?",
+            }
+        case 2:
+            {
+                english=" A gap in time?",
+            }
+        default:
+            {
+                english=" A gap in time?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_RAPURASU);
+    message_Talk({
+        english=" Yes.[K] It is hard to explain, but...",
+    });
+    message_Talk({
+        english="""
+             It is a gap in time itself...[K]
+            It's the space between parts of a split second.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I see.[K] No wonder the place
+            couldn't be found.
+        """,
+    });
+    message_Talk({
+        english=" A gap in time...",
+    });
+    message_Talk({
+        english="""
+             No one could ever hope to go to
+            such a place.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<object OBJECT_V24P01A1_287>(2);
+    message_SetActor(ACTOR_NPC_RAPURASU);
+    message_Talk({
+        english="""
+             No.[K] [CS:N]Dialga[CR] left one key for
+            entering the [CS:P]Hidden Land[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             That's a special fragment with a
+            mysterious pattern etched into it.
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 30);
+    end;
+}

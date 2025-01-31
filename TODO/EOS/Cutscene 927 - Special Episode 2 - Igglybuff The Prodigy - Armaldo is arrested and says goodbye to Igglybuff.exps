@@ -1,0 +1,1227 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[42, 11];
+    back_SetGround(LEVEL_P22P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_BEYOND_THE_DREAM, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m0', 23.5, 17.5>);
+    MovePositionMark<actor ACTOR_NPC_AAMARUDO>(1, Position<'m1', 27.5, 17.5>);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Uwaaaahhh. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_NONE, 3);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_PLAYER_PUPURIN>(4, 10, ACTOR_NPC_AAMARUDO);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Hey, Master.[K] This is outside. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_AAMARUDO>(4, 10, ACTOR_PLAYER_PUPURIN);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             It looks like once you leave the
+            ravine, it connects to this place.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_AAMARUDO>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Among the rocks and stones...[K]
+            I can see some crumbled pillars and what
+            looks like a stone wall.
+        """,
+    });
+    message_Talk({
+        english=" Don't tell me that this is...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(30);
+    se_Play(8965);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oh! Master!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_AAMARUDO>(4, 10, ACTOR_PLAYER_PUPURIN);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Look over there!",
+    });
+    message_Close();
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V33P01A);
+    camera2_SetPositionMark(Position<'m2', 16, 23.5>);
+    Wait(1);
+    camera2_MovePositionMark(0.5, Position<'m3', 16, 14.5>);
+    se_Play(9736);
+    screen2_FadeIn(1, 30);
+    WaitMoveCamera2();
+    Wait(30);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             I can see some kind of ruins off
+            in the distance...
+        """,
+    });
+    message_Talk({
+        english="""
+             I knew it. This is...[K]an ancient
+            city that's been buried by time, I believe.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Hey, Master!",
+    });
+    message_Talk({
+        english="""
+             I bet there's a bunch of treasure
+            over there. ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             Hurry, let's go! ♪
+            So excited! ♪
+        """,
+    });
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Oh.",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m4', 23.5, 16.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_AAMARUDO>(1, Position<'m5', 27.5, 16.5>);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    bgm_FadeOut(10);
+    message_ResetActor();
+    message_Talk({
+        english=" Wait!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    MovePositionMark<performer 0>(1, Position<'m6', 25.5, 25.5>);
+    MovePositionMark<actor ACTOR_NPC_NIDOKINGU>(1, Position<'m7', 25.5, 24.5>);
+    WaitExecutePerformer(0);
+    message_SetFace(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I've finally found you,[K] [CS:N]Armaldo[CR]!",
+    });
+    message_Talk({
+        english="""
+             My name is [CS:N]Nidoking[CR]![K]
+            I'm an explorer!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_AAMARUDO>();
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" What...[K] What did you say?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN_PAPA>(1.1992, Position<'m8', 21.5, 26>);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN_MAMA>(1.1992, Position<'m9', 19.5, 26>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_JIBAKOIRU>(1.1992, Position<'m10', 29.5, 25>);
+    MovePositionMark<actor ACTOR_NPC_KOIRU>(1.1992, Position<'m11', 27.5, 27>);
+    MovePositionMark<actor ACTOR_NPC_KOIRU2>(1.1992, Position<'m12', 31.5, 27>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_UPAA>(1.1992, Position<'m13', 16.5, 27>);
+    MovePositionMark<actor ACTOR_NPC_MUCHUURU>(1.1992, Position<'m14', 19.5, 28>);
+    MovePositionMark<actor ACTOR_NPC_SUBOMII>(1.1992, Position<'m15', 22.5, 28>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_JUPETTA>(1.1992, Position<'m16', 30.5, 29>);
+    MovePositionMark<actor ACTOR_NPC_SUKORUPI>(1.1992, Position<'m17', 33.5, 27.5>);
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_AAMARUDO>();
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" Oh![K] [CS:N]Papa[CR]! [CS:N]Mama[CR]!",
+    });
+    message_Talk({
+        english=" And everyone!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" A-are you all right, [CS:Y]Igglybuff[CR]?!",
+    });
+    message_Talk({
+        english=" You're not hurt?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" I'm fine, [CS:N]Mama[CR]. Why?",
+    });
+    message_Talk({
+        english="""
+             Friends, friends...[K]
+            What's with everyone?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8975);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MUCHUURU);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" [CS:Y]Igglybuff[CR]! Listen carefully!",
+    });
+    message_Talk({
+        english="""
+             Over there...[K] The Pokémon next
+            to you, [CS:Y]Igglybuff[CR], is...
+        """,
+    });
+    message_Talk({
+        english=" An outlaw!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_WORRIED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" What?[K] An outlaw?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_UPAA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_UPAA);
+    message_SetFace(ACTOR_NPC_UPAA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_FacePositionOffset(0, -3);
+    message_Talk({
+        english="""
+             A bad guy! That's what that
+            Pokémon is!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_PUPURIN>(4, 10, ACTOR_NPC_AAMARUDO);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_WORRIED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" Master is...[K]a bad guy...?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" That's right.",
+    });
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    message_Talk({
+        english="""
+             This guy--[K][CS:N]Armaldo[CR]--is a
+            Pokémon we've been chasing for a while.
+        """,
+    });
+    bgm2_PlayFadeIn(BGM_ON_THE_CEILING, 0, 128);
+    message_Talk({
+        english="""
+             In order to catch [CS:N]Armaldo[CR],
+            I came here.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_JIBAKOIRU>(0.5, 0, -8);
+    WaitExecuteLives(ACTOR_NPC_JIBAKOIRU);
+    Turn2Direction<actor ACTOR_NPC_JIBAKOIRU>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_JIBAKOIRU);
+    message_SetFace(ACTOR_NPC_JIBAKOIRU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             ZZZT! [CS:N]Nidoking[CR] is telling the
+            truth. ZZZT!
+        """,
+    });
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWNRIGHT);
+    message_Talk({
+        english="""
+             ZZZT! [CS:N]Armaldo[CR] is a
+            "B" rank outlaw...
+        """,
+    });
+    message_Talk({
+        english="""
+             We've been searching
+            the entire region for him. ZZZT!
+        """,
+    });
+    message_Talk({
+        english="""
+             ZZZT! As soon as we heard
+            from [CS:N]Nidoking[CR], we came running. ZZZT!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" ...[K]Th-that...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_FadeOut(180);
+    message_SetFace(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" So.[K] Let the kid go, [CS:N]Armaldo[CR].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(2, 0);
+    message_Talk({
+        english=" .........",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_AAMARUDO>(0.2969, Position<'m18', 27.5, 20>);
+    Wait(7);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(32, 10, DIR_DOWNRIGHT);
+    bgm_PlayFadeIn(BGM_IT_CANT_BE, 0, 256);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" ...It's a lie...",
+    });
+    message_Talk({
+        english=" It can't be true...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    MovePositionMark<actor ACTOR_NPC_NIDOKINGU>(0.5, Position<'m19', 23.5, 20.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_JIBAKOIRU>(0.5, Position<'m20', 27.5, 23>);
+    MovePositionMark<actor ACTOR_NPC_KOIRU>(0.5, Position<'m21', 25.5, 24>);
+    MovePositionMark<actor ACTOR_NPC_KOIRU2>(0.5, Position<'m22', 29.5, 24>);
+    WaitExecuteLives(ACTOR_NPC_JIBAKOIRU);
+    Turn2Direction<actor ACTOR_NPC_JIBAKOIRU>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_NIDOKINGU);
+    message_SetFace(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-3, -2);
+    message_Talk({
+        english=" Kid.[K] It's all right.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_NIDOKINGU);
+    message_SetFace(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-3, -2);
+    message_Talk({
+        english="""
+             To drag a kid into this...[K] You're
+            the lowest.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_NIDOKINGU>(0.5, 8, 0);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" N-no![K] I asked him!",
+    });
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english="""
+             And...[K] Master isn't a
+            bad Pokémon!
+        """,
+    });
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JIBAKOIRU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             ZZZT! All right, let's finish
+            this! ZZZT!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_AAMARUDO>(0.2969, 0, 4);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" S-stop...",
+    });
+    message_Talk({
+        english=" Please...[K] Listen to me...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_NIDOKINGU>(0.5, Position<'m23', 27.5, 19>);
+    Turn2Direction<actor ACTOR_NPC_JIBAKOIRU>(8, 10, DIR_DOWN);
+    MovePositionMark<actor ACTOR_NPC_KOIRU>(0.5, Position<'m24', 25.5, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_KOIRU2>(0.5, Position<'m25', 29.5, 21.5>);
+    WaitExecuteLives(ACTOR_NPC_KOIRU2);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_KOIRU>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_KOIRU2>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KOIRU2);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_UPRIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_UPRIGHT);
+    message_SetFace(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(2, 0);
+    message_Talk({
+        english=" Hurry up! Move it!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_NIDOKINGU>(0.1992, 0, 24);
+    MovePositionOffset<actor ACTOR_NPC_AAMARUDO>(0.1992, 0, 24);
+    MovePositionOffset<actor ACTOR_NPC_JIBAKOIRU>(0.1992, 0, 24);
+    MovePositionOffset<actor ACTOR_NPC_KOIRU>(0.1992, 0, 24);
+    MovePositionOffset<actor ACTOR_NPC_KOIRU2>(0.1992, 0, 24);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(60);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(9);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english="""
+             ...OOOOOooooooooo...
+            OOOOoooooooooooOOOOOoooooooo...
+        """,
+    });
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(32, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(32, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(32, 10, DIR_RIGHT);
+    bgm_FadeOut(90);
+    bgm2_PlayFadeIn(BGM_EARTHQUAKE1, 45, 256);
+    Wait(30);
+    camera2_SetEffect(2, 1, 1.0);
+    camera_SetEffect(2, 1, 1.0);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_NIDOKINGU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_JIBAKOIRU>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KOIRU>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_SUKORUPI>(EFFECT_EXCLAMATION_MARK, 3);
+    ExecuteCommon<actor ACTOR_NPC_UPAA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_SUBOMII>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_JUPETTA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Wait(25);
+    message_CloseEnforce();
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    ExecuteCommon<actor ACTOR_NPC_NIDOKINGU>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_NPC_JIBAKOIRU>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(7);
+    ExecuteCommon<actor ACTOR_NPC_KOIRU>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_KOIRU2>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    Wait(7);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_PAPA>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_MAMA>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_UPAA>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_JUPETTA>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(7);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_SUBOMII>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_SUKORUPI>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_KOIRU, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Whoa.[K] What...[K] What is this?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" Yoo...[K] Yooo...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    camera_SetEffect(2, 2, 2.0);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_NPC_NIDOKINGU>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_NPC_JIBAKOIRU>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(7);
+    ExecuteCommon<actor ACTOR_NPC_KOIRU>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_KOIRU2>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    Wait(7);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_PAPA>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_MAMA>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_UPAA>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_JUPETTA>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(7);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_SUBOMII>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_SUKORUPI>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_NIDOKINGU, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" Th-the ground...[K] Is it shaking?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_EARTHQUAKE3, 30, 256);
+    camera_SetEffect(1, 1, 1.0);
+    Wait(30);
+    se_Play(6917);
+    SetEffect<performer 3>(244, 3);
+    WaitEffect<performer 3>();
+    Turn2Direction<actor ACTOR_NPC_KOIRU>(1, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_KOIRU2>(1, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_JIBAKOIRU>(1, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(1, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(1, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(1, 10, DIR_UP);
+    ExecuteCommon<actor ACTOR_NPC_UPAA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(1, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(1, 10, DIR_UPLEFT);
+    ExecuteCommon<actor ACTOR_NPC_SUKORUPI>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecutePerformer(3);
+    SetPositionMark<performer 3>(Position<'m26', 31, 16.5>);
+    se_Play(6917);
+    SetEffect<performer 3>(244, 3);
+    WaitEffect<performer 3>();
+    Turn2Direction<actor ACTOR_NPC_KOIRU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_KOIRU2>(4, 10, DIR_UP);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_JIBAKOIRU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_UPRIGHT);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_PAPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_UPRIGHT);
+    ExecuteCommon<actor ACTOR_NPC_UPAA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UP);
+    ExecuteCommon<actor ACTOR_NPC_SUBOMII>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_UP);
+    ExecuteCommon<actor ACTOR_NPC_SUKORUPI>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecutePerformer(3);
+    SetPositionMark<performer 3>(Position<'m27', 23.5, 18.5>);
+    se_Play(6917);
+    SetEffect<performer 3>(244, 3);
+    WaitEffect<performer 3>();
+    SetEffect<actor ACTOR_NPC_NIDOKINGU>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_NPC_NIDOKINGU>(5);
+    SlidePositionOffset<actor ACTOR_NPC_NIDOKINGU>(2.5, 24, 0);
+    WaitExecuteLives(ACTOR_NPC_NIDOKINGU);
+    SetAnimation<actor ACTOR_NPC_NIDOKINGU>(2);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(1, 10, DIR_LEFT);
+    ExecuteCommon<actor ACTOR_NPC_KOIRU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_KOIRU2>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Turn2Direction<actor ACTOR_NPC_JIBAKOIRU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_UP);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_MAMA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_UPRIGHT);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_SUBOMII>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_UPLEFT);
+    WaitExecutePerformer(3);
+    Wait(20);
+    message_SetFace(ACTOR_NPC_JIBAKOIRU, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" WAWAWAWAWAH!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" YOOOOOOOOOOOOOOOOOMMM...",
+    });
+    message_Close();
+    screen2_FadeOut(0, 2);
+    screen_FadeOut(1, 2);
+    bgm_FadeOut(15);
+    bgm2_FadeOut(15);
+    message_Explanation({
+        english="""
+            [CN]WAIT!![K]
+            [CN]STOP IT! JUNIOR!!
+        """,
+    });
+    message_Close();
+    camera2_SetEffect(0, 0, 0);
+    camera_SetEffect(0, 0, 0);
+    Wait(1);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" ...Huh?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KOIRU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_KOIRU2>(4, 10, DIR_UPLEFT);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_JIBAKOIRU>(4, 10, ACTOR_NPC_AAMARUDO);
+    Turn2DirectionLives<actor ACTOR_NPC_NIDOKINGU>(4, 10, ACTOR_NPC_AAMARUDO);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_UPRIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_UPRIGHT);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_MUCHUURU>(4, 10, ACTOR_NPC_AAMARUDO);
+    Turn2DirectionLives<actor ACTOR_NPC_SUBOMII>(4, 10, ACTOR_NPC_AAMARUDO);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_JUPETTA>(4, 10, ACTOR_NPC_AAMARUDO);
+    Turn2DirectionLives<actor ACTOR_NPC_SUKORUPI>(4, 10, ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" I'm asking you![K] Stop, please!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" M-Master...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english="""
+             If you blast [CS:N]Nidoking[CR] and
+            [CS:N]Magnezone[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             You'll become a bad guy too, and
+            then what will you do?!
+        """,
+    });
+    message_Talk({
+        english=" So please stop now!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english="""
+             But--[K]Master isn't a
+            bad Pokémon!
+        """,
+    });
+    message_Talk({
+        english="""
+             I've been with you this long, I
+            know that!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_AAMARUDO>(4, 10, ACTOR_NPC_JIBAKOIRU);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Officer [CS:N]Magnezone[CR].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JIBAKOIRU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" ZZZT! Yes? ZZZT!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Could you give me a minute?",
+    });
+    message_Talk({
+        english=" It's all right.[K] I won't try to run.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JIBAKOIRU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" ZZZT! ...[K]Understood. ZZZT!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SlidePositionOffset<actor ACTOR_NPC_KOIRU>(0.5, -12, 0);
+    SlidePositionOffset<actor ACTOR_NPC_KOIRU2>(0.5, 12, 0);
+    WaitExecuteLives(ACTOR_NPC_KOIRU2);
+    Wait(30);
+    MovePositionOffset<performer 0>(0.5, 0, -32);
+    MovePositionMark<actor ACTOR_NPC_AAMARUDO>(0.5, Position<'m28', 26, 18.5>);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(32, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_KOIRU>(32, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_KOIRU2>(32, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_JIBAKOIRU>(32, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(32, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(32, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(32, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(32, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(32, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(32, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(32, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    Wait(30);
+    bgm_PlayFadeIn(BGM_DEFEND_GLOBE, 0, 256);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" I'm sorry, Junior.",
+    });
+    message_Talk({
+        english="""
+             Just like [CS:N]Nidoking[CR] said...[K]
+            I'm an outlaw.
+        """,
+    });
+    message_Talk({
+        english=" I'm a bad guy.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SHOUTING, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" That...[K] That's not true!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" Listen, Junior.",
+    });
+    message_Talk({
+        english="""
+             I am an outlaw and they were
+            searching the entire region for me.
+        """,
+    });
+    message_Talk({
+        english="""
+             To avoid getting caught...[K] I've
+            just been running, running, running.
+        """,
+    });
+    message_Talk({
+        english="""
+             And I took a break in
+            [CS:P]Murky Forest[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             I started that rumor about
+            [CS:P]Murky Forest[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             The rumor that a monster lurked
+            deep in the darkness.
+        """,
+    });
+    message_Talk({
+        english="""
+             Because of that, nobody came
+            out there...[K] So I thought I wouldn't get caught.
+        """,
+    });
+    message_Talk({
+        english="""
+             That's how I took shelter in
+            [CS:P]Murky Forest[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             I meant to tell you the truth
+            much sooner...
+        """,
+    });
+    message_Talk({
+        english="""
+             But I just couldn't bring
+            myself to...[K] I'm sorry.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" M-Master...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" Anyway.[K] I am a bad guy.",
+    });
+    message_Talk({
+        english=" But...[K] You're different.",
+    });
+    message_Talk({
+        english=" So you...[K] You can't be with me.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" But--",
+    });
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Haven't we had so much fun
+            together?!
+        """,
+    });
+    message_Talk({
+        english="""
+             I thought you were going to
+            teach me even more as we kept on exploring!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SlidePositionOffset<actor ACTOR_PLAYER_PUPURIN>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_PUPURIN>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_PUPURIN>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_PLAYER_PUPURIN>(1, 1, 0);
+    Wait(3);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             If Master disappears...[K] I'll...[K]
+            What will I do...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english=" Junior.[K] Did you enjoy exploring?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(33);
+    WaitAnimation<actor ACTOR_PLAYER_PUPURIN>();
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Yeah...",
+    });
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, 0);
+    message_Talk({
+        english="""
+             So...[K] Become an amazing
+            explorer someday, for me.
+        """,
+    });
+    message_Talk({
+        english=" Don't be a blockhead like me.",
+    });
+    message_Talk({
+        english=" You've got a gift for exploring.",
+    });
+    message_Talk({
+        english="""
+             So you should...[K]do your best to
+            be an amazing explorer, for me.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" M-Master...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_JIBAKOIRU>(0.5, 0, -12);
+    WaitExecuteLives(ACTOR_NPC_JIBAKOIRU);
+    message_SetFace(ACTOR_NPC_JIBAKOIRU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" ZZZT! It's about time. ZZZT!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    Wait(30);
+    MovePositionOffset<performer 0>(0.5, 0, 32);
+    MovePositionMark<actor ACTOR_NPC_AAMARUDO>(0.5, Position<'m29', 26, 21.5>);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_PLAYER_PUPURIN>(0.5, 8, 8);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" D-don't go!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, -2);
+    message_Talk({
+        english=" Junior.",
+    });
+    message_Talk({
+        english="""
+             I really enjoyed exploring with
+            you these past few days.
+        """,
+    });
+    message_Talk({
+        english="""
+             I knew there was a danger of
+            being caught like this...
+        """,
+    });
+    message_Talk({
+        english="""
+             But...[K] Despite that risk, we
+            went on explorations...
+        """,
+    });
+    message_Talk({
+        english="""
+             And when you were with me,
+            I had a lot of fun.
+        """,
+    });
+    message_Talk({
+        english="""
+             This was the first time I ever
+            really enjoyed exploring.
+        """,
+    });
+    message_Talk({
+        english="""
+             And you are the one who has
+            shown me how fun it can be.
+        """,
+    });
+    message_Talk({
+        english=" Thank you very much.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Oooooohhhh...[K] Master...",
+    });
+    message_Talk({
+        english=" Don't...[K] I don't want you to go...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-1, -2);
+    message_Talk({
+        english=" Junior. Try to understand.",
+    });
+    message_Talk({
+        english="""
+             I have to answer for the things
+            I've done.
+        """,
+    });
+    message_Talk({
+        english="""
+             But when I've finished...[K] Then, if
+            I still feel the same...
+        """,
+    });
+    message_Talk({
+        english=" I'll become an explorer.",
+    });
+    message_Talk({
+        english="""
+             I don't know when that will be...[K]
+            But when that day comes...
+        """,
+    });
+    message_Talk({
+        english="""
+             When that day comes...[K] I'd like
+            to go exploring with you again.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" It's...[K] It's a promise!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Sorry to have kept you waiting.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionMark<actor ACTOR_NPC_NIDOKINGU>(0.5, Position<'m30', 28.5, 19.5>);
+    MovePositionMark<actor ACTOR_NPC_JIBAKOIRU>(0.5, Position<'m31', 26, 24>);
+    MovePositionMark<actor ACTOR_NPC_KOIRU>(0.5, Position<'m32', 23.5, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_KOIRU2>(0.5, Position<'m33', 28.5, 21.5>);
+    WaitExecuteLives(ACTOR_NPC_KOIRU2);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 2, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_JIBAKOIRU>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_KOIRU>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_KOIRU2>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KOIRU2);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_NPC_NIDOKINGU>(0.2969, 0, 64);
+    MovePositionOffset<actor ACTOR_NPC_AAMARUDO>(0.2969, 0, 64);
+    MovePositionOffset<actor ACTOR_NPC_JIBAKOIRU>(0.2969, 0, 64);
+    MovePositionOffset<actor ACTOR_NPC_KOIRU>(0.2969, 0, 64);
+    MovePositionOffset<actor ACTOR_NPC_KOIRU2>(0.2969, 0, 64);
+    Wait(45);
+    MovePositionOffset<performer 0>(0.2969, 0, 32);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(5);
+    Slide2PositionOffset<actor ACTOR_NPC_PUKURIN_PAPA>(0.5, -8, 8);
+    Wait(5);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_MAMA>(5);
+    Slide2PositionOffset<actor ACTOR_NPC_PUKURIN_MAMA>(0.5, -8, 8);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_UPAA>(5);
+    Slide2PositionOffset<actor ACTOR_NPC_UPAA>(0.5, -8, 8);
+    SetAnimation<actor ACTOR_NPC_MUCHUURU>(5);
+    Slide2PositionOffset<actor ACTOR_NPC_MUCHUURU>(0.5, -16, 16);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(2);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(32, 10, DIR_DOWNRIGHT);
+    SetAnimation<actor ACTOR_NPC_SUBOMII>(5);
+    Slide2PositionOffset<actor ACTOR_NPC_SUBOMII>(0.5, -16, 16);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_MAMA>(2);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(32, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_UPAA);
+    SetAnimation<actor ACTOR_NPC_UPAA>(2);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(32, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_MUCHUURU);
+    SetAnimation<actor ACTOR_NPC_MUCHUURU>(2);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(32, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_SUBOMII);
+    SetAnimation<actor ACTOR_NPC_SUBOMII>(2);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(32, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(32, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(32, 10, DIR_LEFT);
+    SetAnimation<actor ACTOR_NPC_SUKORUPI>(5);
+    Slide2PositionOffset<actor ACTOR_NPC_SUKORUPI>(0.5, 8, 8);
+    Wait(5);
+    SetAnimation<actor ACTOR_NPC_JUPETTA>(5);
+    Slide2PositionOffset<actor ACTOR_NPC_JUPETTA>(0.5, 16, 16);
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    SetAnimation<actor ACTOR_NPC_SUKORUPI>(2);
+    WaitExecuteLives(ACTOR_NPC_JUPETTA);
+    SetAnimation<actor ACTOR_NPC_JUPETTA>(2);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(0.5, Position<'m34', 26, 21>);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_CRYING, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" Master![K] Master!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_KOIRU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_KOIRU2>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_JIBAKOIRU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" Take this!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(24);
+    WaitAnimation<actor ACTOR_NPC_AAMARUDO>();
+    Wait(15);
+    se_Play(9737);
+    SetOutputAttribute<actor ACTOR_PLAYER_PUPURIN>(2);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_P22P01A1_376>(17);
+    MovePositionOffset<object OBJECT_P22P01A1_376>(1.1992, 0, -52);
+    WaitExecuteObject(OBJECT_P22P01A1_376);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(32);
+    WaitAnimation<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(60);
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(2);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" Be seeing you.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Destroy<object OBJECT_P22P01A1_376>();
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_KOIRU>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_KOIRU2>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_JIBAKOIRU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_JIBAKOIRU);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_RIGHT);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_NPC_NIDOKINGU>(0.2969, 0, 180);
+    MovePositionOffset<actor ACTOR_NPC_AAMARUDO>(0.2969, 0, 180);
+    MovePositionOffset<actor ACTOR_NPC_JIBAKOIRU>(0.2969, 0, 180);
+    MovePositionOffset<actor ACTOR_NPC_KOIRU>(0.2969, 0, 180);
+    MovePositionOffset<actor ACTOR_NPC_KOIRU2>(0.2969, 0, 180);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(32, 10, DIR_DOWN);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(32, 10, DIR_DOWN);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(32, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(32, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(32, 10, DIR_DOWN);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(32, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(32, 10, DIR_DOWNLEFT);
+    MovePositionOffset<actor ACTOR_PLAYER_PUPURIN>(0.2969, 0, 12);
+    Wait(50);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" MASTER!",
+    });
+    message_Close();
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(30);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_CRYING, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(1, 0);
+    message_Talk({
+        english=" WAAAAAAAAAaaaaaaaaaaahhhhh!",
+    });
+    message_Close();
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_UPRIGHT);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UP);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_UPRIGHT);
+    Wait(7);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_UPLEFT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_UPLEFT);
+    Wait(30);
+    Move2PositionMark<actor ACTOR_NPC_PUKURIN_PAPA>(1.1992, Position<'m35', 27.5, 25.5>);
+    Wait(5);
+    Move2PositionMark<actor ACTOR_NPC_PUKURIN_MAMA>(1.1992, Position<'m36', 24.5, 25.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_SUBOMII>(1, Position<'m37', 24.5, 27.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_MUCHUURU>(1, Position<'m38', 21.5, 26.5>);
+    MovePositionMark<actor ACTOR_NPC_UPAA>(1, Position<'m39', 20.5, 24.5>);
+    Wait(10);
+    Move2PositionMark<actor ACTOR_NPC_JUPETTA>(1, Position<'m40', 28.5, 27.5>);
+    Wait(5);
+    Move2PositionMark<actor ACTOR_NPC_SUKORUPI>(1, Position<'m41', 30.5, 25.5>);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    Wait(60);
+    message_Mail({
+        english="[CN]The last thing Master gave me...",
+    });
+    message_Mail({
+        english="""
+            [CN]Was the thing we found on the first
+            [CN]exploration Master and I went on...
+        """,
+    });
+    message_Mail({
+        english="[CN]A [CS:Z]Defend Globe[CR].",
+    });
+    message_Close();
+    screen2_FadeOut(0, 90);
+    screen_FadeOut(1, 90);
+    back2_SetMode(0);
+    Wait(30);
+    bgm_FadeOut(210);
+    end;
+}

@@ -1,0 +1,200 @@
+
+def 0 {
+    sound_Stop();
+    switch ( ProcessSpecial(PROCESS_SPECIAL_NEXT_DAY, 0, 0) ) { }
+    message_Narration(30, {
+        english="[CN]The next morning...",
+    });
+    message_Close();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_H02P99A);
+    supervision_LoadStation(LEVEL_H02P99A, 'US03');
+    supervision_Station(20);
+    supervision_StationCommon(0);
+    SetPositionInitial<actor ACTOR_PLAYER>();
+    SetPositionInitial<actor ACTOR_ATTENDANT1>();
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER>(76);
+    SetAnimation<actor ACTOR_ATTENDANT1>(76);
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER>(63);
+    Wait(5);
+    SetAnimation<actor ACTOR_ATTENDANT1>(63);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Good morning, [hero]!",
+            }
+        case 2:
+            {
+                english=" Good morning, [hero]!",
+            }
+        default:
+            {
+                english=" Good morning, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Good morning, [CS:N]Mana[CR]...!",
+            }
+        case 2:
+            {
+                english=" Good morning, [CS:N]Mana[CR]...!",
+            }
+        default:
+            {
+                english=" Good morning, [CS:N]Mana[CR]...!",
+            }
+    }
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Manaphy[CR]?",
+            }
+        case 2:
+            {
+                english=" [CS:N]Manaphy[CR]?",
+            }
+        default:
+            {
+                english=" [CS:N]Manaphy[CR]?",
+            }
+    }
+    message_Close();
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(1, 10, ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(1, 2, ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, [hero]![K] [CS:N]Manaphy[CR]...?",
+            }
+        case 2:
+            {
+                english=" Oh, [hero]![K] [CS:N]Manaphy[CR]...?",
+            }
+        default:
+            {
+                english=" Oh, [hero]![K] [CS:N]Manaphy[CR]...?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Manaphy[CR] is missing!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Manaphy[CR] is missing!",
+            }
+        default:
+            {
+                english=" [CS:N]Manaphy[CR] is missing!",
+            }
+    }
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     What...[K]what should we do?![K]
+                    Where did he go?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     What...[K] What should we do?![K]
+                    Where could he have gone?
+                """,
+            }
+        default:
+            {
+                english="""
+                     What...[K] What should we do?![K]
+                    Where did he go?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     W-we'd better go look for
+                    [CS:N]Manaphy[CR]!
+                """,
+            }
+        case 2:
+            {
+                english=" L-let's go look for [CS:N]Manaphy[CR]!",
+            }
+        default:
+            {
+                english=" L-let's go look for [CS:N]Manaphy[CR]!",
+            }
+    }
+    message_Close();
+    screen2_FadeOut(1, 30);
+    back2_SetMode(0);
+    end;
+}

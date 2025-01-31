@@ -1,0 +1,158 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_HAVE_TO_GET_HOME, 0, 192);
+    back_SetGround(LEVEL_P13P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_ATTENDANT1>(512);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    back_SetBackScrollSpeed(4.0, 0.0);
+    screen_FadeIn(1, 60);
+    Wait(120);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" .....................",
+            }
+        case 2:
+            {
+                english=" .....................",
+            }
+        default:
+            {
+                english=" .....................",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     ...I have to live...[K] I have to get
+                    home alive...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     ...I have to live...[K] I have to get
+                    home alive...
+                """,
+            }
+        default:
+            {
+                english="""
+                     ...I have to live...[K] I have to get
+                    home alive...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     ...Get home...[K]and tell everyone
+                    about what happened.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     ...Get home...[K]and tell everyone
+                    about what happened.
+                """,
+            }
+        default:
+            {
+                english="""
+                     ...Get home...[K]and tell everyone
+                    about what happened.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Because it's...[K] [hero]'s...",
+            }
+        case 2:
+            {
+                english=" Because it's...[K] [hero]'s...",
+            }
+        default:
+            {
+                english=" Because it's...[K] [hero]'s...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's [hero]'s...[K]last wish...",
+            }
+        case 2:
+            {
+                english=" It's [hero]'s...[K]last wish...",
+            }
+        default:
+            {
+                english=" It's [hero]'s...[K]last wish...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(160);
+    bgm_FadeOut(160);
+    Wait(140);
+    bgm_PlayFadeIn(BGM_FARTHER_AWAY, 0, 256);
+    back_SetBackScrollSpeed(0.0, 0.0);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(5);
+    message_SetWaitMode(160, 90);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Th-there's...",
+            }
+        case 2:
+            {
+                english=" Th-there's...",
+            }
+        default:
+            {
+                english=" Th-there's...",
+            }
+    }
+    message_KeyWait();
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" There's the Rainbow Stoneship...",
+            }
+        case 2:
+            {
+                english=" There's the Rainbow Stoneship...",
+            }
+        default:
+            {
+                english=" There's the Rainbow Stoneship...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    SetAnimation<actor ACTOR_ATTENDANT1>(768);
+    Move2PositionOffset<actor ACTOR_ATTENDANT1>(0.7969, 24, 8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(5);
+    Move2PositionOffset<actor ACTOR_ATTENDANT1>(0.5, 32, -8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(5);
+    Move2PositionOffset<actor ACTOR_ATTENDANT1>(1, 24, 8);
+    Move2PositionOffset<actor ACTOR_ATTENDANT1>(1, 80, 4);
+    Wait(30);
+    screen_FadeOut(1, 30);
+    Wait(30);
+    end;
+}

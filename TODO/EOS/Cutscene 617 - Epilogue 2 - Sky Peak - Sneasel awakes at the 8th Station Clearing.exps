@@ -1,0 +1,229 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_NPC_NYUURA, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oof...[K] Unnh...",
+    });
+    message_Close();
+    back_SetGround(LEVEL_D73P28A);
+    supervision_StationCommon(10);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_DENRYUU>();
+    SetAnimation<actor ACTOR_NPC_DENRYUU>(2);
+    SetAnimation<actor ACTOR_NPC_NYUURA>(23);
+    bgm2_PlayFadeIn(BGM_FIRE_CRACKLING4, 30, 256);
+    screen_FadeIn(1, 60);
+    Wait(30);
+    SlidePositionOffset<actor ACTOR_NPC_NYUURA>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_NYUURA>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_NYUURA>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_NYUURA>(1, 1, 0);
+    message_SetFace(ACTOR_NPC_NYUURA, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(0, -3);
+    message_Talk({
+        english=" Oof... Unnh...",
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_NYUURA>(24);
+    WaitAnimation<actor ACTOR_NPC_NYUURA>();
+    WaitExecuteLives(ACTOR_NPC_NYUURA);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_GOORIKII>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(2);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_GOORIKII>();
+    WaitExecuteLives(ACTOR_NPC_GOORIKII);
+    Turn2Direction<actor ACTOR_NPC_GOORIKII>(4, 10, DIR_DOWNRIGHT);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_KUCHIITO>(4, 10, DIR_DOWNRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWNRIGHT);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_SURPRISED, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Oh! He's awake!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m0', 34.5, 34.5>);
+    Move2PositionMark<actor ACTOR_NPC_GOORIKII>(1, Position<'m1', 31.5, 33.5>);
+    Wait(10);
+    Move2PositionMark<actor ACTOR_NPC_KINOGASSA>(1, Position<'m2', 30.5, 30.5>);
+    Wait(7);
+    Move2PositionMark<actor ACTOR_NPC_KUCHIITO>(1, Position<'m3', 33, 28.5>);
+    Turn2Direction<actor ACTOR_NPC_GOORIKII>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_KUCHIITO>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    ExecuteCommon<actor ACTOR_NPC_SHEIMI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" [CS:N]Sneasel[CR]! Are you all right?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_NYUURA, FACE_PAIN, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, -4);
+    message_Talk({
+        english=" Uh... Where am I?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_FadeOut(60);
+    Wait(20);
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             You fainted at the
+            7th Station Clearing.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             If [CS:N]Ampharos[CR] hadn't carried
+            you here, things would not have gone well for
+            you, seriously.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_NYUURA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, -4);
+    message_Talk({
+        english=" You did that for me?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DENRYUU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             It wasn't just me. Everyone here
+            came to your rescue.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_NYUURA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, -4);
+    message_Talk({
+        english=" I see...[K] I...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_NYUURA>(EFFECT_SHOCKED, 3);
+    message_SetFace(ACTOR_NPC_NYUURA, FACE_PAIN, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, -4);
+    message_Talk({
+        english=" Unnh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             It's all right. You don't have to
+            say anything.
+        """,
+    });
+    message_Talk({
+        english="""
+             You should really take it easy
+            and rest.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_NYUURA, FACE_PAIN, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(1, -4);
+    message_Talk({
+        english=" .........",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_DENRYUU>(0.5, -8, -8);
+    WaitExecuteLives(ACTOR_NPC_DENRYUU);
+    message_SetFace(ACTOR_NPC_DENRYUU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             All of you may go on ahead
+            through the mountain pass. I can take care
+            of him.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SHEIMI>(4, 10, DIR_DOWNRIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    message_SetFace(ACTOR_NPC_DENRYUU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             You were all headed to the
+            summit, weren't you?
+        """,
+    });
+    message_Talk({
+        english="""
+             This is the 8th Station, so you're
+            almost there.
+        """,
+    });
+    message_Talk({
+        english=" Do your best!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_KUCHIITO>();
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_WORRIED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" B-but...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DENRYUU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             There's nothing to be 
+            accomplished by all of you staying here.
+        """,
+    });
+    message_Talk({
+        english="""
+             I can handle this on my own.
+            Go on ahead.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_WORRIED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Are you sure...?",
+    });
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             Well, all right. We'll leave
+            [CS:N]Sneasel[CR] in your care.
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(60);
+    screen_FadeOut(1, 30);
+    supervision_RemoveActing(1);
+    supervision_LoadStation(LEVEL_D73P28A, 'US31');
+    supervision_Station(17);
+    supervision_Station(18);
+    supervision_Station(41);
+    supervision_StationCommon(9);
+    camera_SetDefault();
+    Wait(30);
+    bgm_PlayFadeIn(BGM_FIRE_CRACKLING4, 10, 256);
+    screen_FadeIn(1, 30);
+    end;
+}

@@ -1,0 +1,299 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    back_SetGround(LEVEL_G01P04A);
+    supervision_Acting(0);
+    Wait(1);
+    supervision_StationCommon(99);
+    supervision_StationCommon(0);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    SetDirection<actor ACTOR_NPC_GUREGGURU>(DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_GUREGGURU);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-3, 0);
+    message_Talk({
+        english="""
+             Look, all you two have to do is
+            inspect the footprints of visitors, then tell me
+            what Pokémon they are.
+        """,
+    });
+    message_Talk({
+        english=" All right? Understood?",
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Understood",
+        }):
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_Talk({
+                english=" Good! Then let's get to WORK!",
+            });
+            message_Talk({
+                english=" Buck up and do a GOOD job!",
+            });
+            message_Close();
+            Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNLEFT);
+            Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+            MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 25, 36.5>);
+            MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 28, 39.5>);
+            MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m2', 24, 37.5>);
+            MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m3', 26, 37.5>);
+            screen_FadeOut(1, 30);
+            $SCENARIO_MAIN = scn[5, 2];
+            bgm_FadeOut(120);
+            Wait(60);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Waah! It's pitch black in here,
+                            [hero]...
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Ack! It's pitch black in here,
+                            [hero]...
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Yow! It's pitch black in here,
+                            [hero]...
+                        """,
+                    }
+            }
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" We'll have to feel our way...",
+                    }
+                case 2:
+                    {
+                        english=" We'll have to feel our way...",
+                    }
+                default:
+                    {
+                        english=" We'll have to feel our way...",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Wait(20);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" ...",
+                    }
+                case 2:
+                    {
+                        english=" ...",
+                    }
+                default:
+                    {
+                        english=" ...",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" ......",
+                    }
+                case 2:
+                    {
+                        english=" ......",
+                    }
+                default:
+                    {
+                        english=" ......",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Well, we should be getting close
+                            to the sentry post...
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Well, we should be getting close
+                            to the sentry post...
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Well, we should be getting close
+                            to the sentry post...
+                        """,
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8978);
+            WaitSe(8978);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Hey![K] There![K] I see light,
+                            [hero]!
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Oh![K] There![K] I see light,
+                            [hero]!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Oh![K] There it is![K] I see light,
+                            [hero]!
+                        """,
+                    }
+            }
+            message_Close();
+            back2_SetMode(4);
+            back2_SetGround(LEVEL_V04P02A);
+            camera2_SetPositionMark(Position<'m4', 19.5, 16>);
+            screen2_FadeIn(1, 30);
+            Wait(30);
+            message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+            message_Talk({
+                english="""
+                     HOW'S IT GOING?![K] Have you
+                    taken position at the sentry post?!
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Yup! We're here!",
+                    }
+                case 2:
+                    {
+                        english=" Yes! We're in position!",
+                    }
+                default:
+                    {
+                        english=" Yep! We're here!",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+            message_Talk({
+                english=" GOOD!",
+            });
+            message_Talk({
+                english="""
+                     Pokémon visitors will step onto
+                    the grill above the sentry post!
+                """,
+            });
+            message_Talk({
+                english="""
+                     Identify them by footprint, then
+                    inform me![K] Got that?!
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Yup! Got it!",
+                    }
+                case 2:
+                    {
+                        english=" Yes! Understood!",
+                    }
+                default:
+                    {
+                        english=" Yep! We got it!",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+            message_Talk({
+                english=" GOOD! Let's get started!",
+            });
+            message_Close();
+            screen2_FadeOut(0, 30);
+            screen_FadeOut(1, 30);
+            back2_SetMode(0);
+            end;
+        case menu({
+            english="Please explain again",
+        }):
+        default:
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_ANGRY, 3);
+            Wait(15);
+            se_Play(8971);
+            camera_SetEffect(2, 2, 3.0);
+            SetAnimation<actor ACTOR_NPC_DOGOOMU>(19);
+            WaitAnimation<actor ACTOR_NPC_DOGOOMU>();
+            SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+            SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_ANGRY, 3);
+            Wait(5);
+            SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+            SetAnimation<actor ACTOR_PLAYER>(68);
+            SetAnimation<actor ACTOR_ATTENDANT1>(68);
+            WaitAnimation<actor ACTOR_PLAYER>();
+            WaitAnimation<actor ACTOR_ATTENDANT1>();
+            WaitSe(8971);
+            camera_SetEffect(0, 0, 0);
+            message_SetFace(ACTOR_NPC_DOGOOMU, FACE_ANGRY, FACE_POS_TOP_L_CENTER);
+            message_FacePositionOffset(-3, 0);
+            message_Talk({
+                english="""
+                     Really?! You're not just messing
+                    with me, ARE you?
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            SetAnimation<actor ACTOR_PLAYER>(9);
+            SetAnimation<actor ACTOR_ATTENDANT1>(9);
+            Wait(20);
+            SetAnimation<actor ACTOR_PLAYER>(2);
+            SetAnimation<actor ACTOR_ATTENDANT1>(2);
+            SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+            Wait(30);
+            SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_LAUGHING, 3);
+            message_SetFace(ACTOR_NPC_DOGOOMU, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+            message_FacePositionOffset(-3, 0);
+            message_Talk({
+                english="""
+                     All right. I've got a BIG heart.
+                    I'll explain as much as you want.
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Wait(30);
+            se_Play(8961);
+            SetEffect<actor ACTOR_PLAYER>(EFFECT_SWEAT_DROP, 3);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROP, 3);
+            WaitEffect<actor ACTOR_PLAYER>();
+            WaitEffect<actor ACTOR_ATTENDANT1>();
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            screen_FadeOut(1, 15);
+            end;
+    }
+}

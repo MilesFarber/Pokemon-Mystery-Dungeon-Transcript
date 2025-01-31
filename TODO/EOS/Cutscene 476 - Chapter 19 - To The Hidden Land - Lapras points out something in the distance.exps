@@ -1,0 +1,104 @@
+
+def 0 {
+    bgm2_PlayFadeIn(BGM_OCEAN1, 0, 256);
+    back_SetGround(LEVEL_V24P02A);
+    supervision_Acting(0);
+    SetOutputAttribute<object OBJECT_V24P02A1_292>(2);
+    SetOutputAttribute<actor ACTOR_PLAYER>(4);
+    SetOutputAttribute<actor ACTOR_ATTENDANT1>(4);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [CS:N]Lapras[CR].",
+            }
+        case 2:
+            {
+                english=" Hey, [CS:N]Lapras[CR].",
+            }
+        default:
+            {
+                english=" Say, [CS:N]Lapras[CR].",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<object OBJECT_V24P02A1_292>(2);
+    message_SetActor(ACTOR_NPC_RAPURASU);
+    message_Talk({
+        english=" Yes?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You've been swimming a long
+                    time. Are you doing OK?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You've been swimming a long
+                    time. Are you doing OK?
+                """,
+            }
+        default:
+            {
+                english="""
+                     You've been swimming a long
+                    time. Are you doing OK?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_RAPURASU);
+    message_Talk({
+        english=" I'm fine, [partner].",
+    });
+    message_Talk({
+        english="""
+             No need for concern.[K] Because
+            we're almost there.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<object OBJECT_V24P02A1_292>(1);
+    message_Talk({
+        english=" See![K] It's coming into view!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?",
+            }
+        case 2:
+            {
+                english=" What?",
+            }
+        default:
+            {
+                english=" What?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_RAPURASU);
+    message_Talk({
+        english="""
+             On the far horizon. Do you see
+            where the sea looks a little different?
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

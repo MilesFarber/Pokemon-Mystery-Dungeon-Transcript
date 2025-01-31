@@ -1,0 +1,54 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(61, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D32P44A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m0', 37.5, 26.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m1', 40.5, 28.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m2', 34.5, 28.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m3', 37.5, 30.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    ExecuteCommon<actor ACTOR_PLAYER_APPOINT>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_ADVENTURE_NPC1>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(4);
+    ExecuteCommon<actor ACTOR_ADVENTURE_NPC2>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    Wait(7);
+    ExecuteCommon<actor ACTOR_ADVENTURE_NPC3>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(30);
+    message_Mail({
+        english="[CN]This area's master isn't here.",
+    });
+    message_Mail({
+        english="""
+            [CN]It's impossible to go farther.[K]
+            [CN]It's time to go back.
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    WaitBgm(BGM_IN_THE_DEPTHS_OF_THE_PIT);
+    message_Explanation({
+        english="""
+            [CN][player] cleared [CS:P]Aegis Cave[CR]
+            [CN]in admirable fashion!
+        """,
+    });
+    message_Close();
+    switch ( message_Menu(MENU_DUNGEON_EXPLORATION_RESULTS) ) { }
+    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+    end;
+}

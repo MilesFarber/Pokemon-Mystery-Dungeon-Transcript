@@ -1,0 +1,693 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[45, 13];
+    back_SetDungeonBanner(157, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             We've come pretty far...[K] How
+            much longer till we find the treasure?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Don't be so impatient, [CS:N]Medicham[CR].[K]
+            We'll get it sooner or later.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Everyone! Look![K]
+            There's a light over there!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" YAY![K] Wh-what is it?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Let's go and find out!",
+    });
+    message_Close();
+    back_SetGround(LEVEL_D56P41A);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_D56P41A1_437>(9);
+    bgm2_PlayFadeIn(BGM_CAVE_AMBIANCE, 30, 256);
+    screen_FadeIn(0, 30);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1.5, Position<'m0', 32, 35.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1.5, Position<'m1', 25, 35.5>);
+    Wait(24);
+    MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1.5, Position<'m2', 28.5, 38.5>);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             [CS:N]Medicham[CR]! [CS:Y]Lopunny[CR]![K]
+            There's a treasure chest over there!
+        """,
+    });
+    message_Close();
+    bgm2_FadeOut(60);
+    MovePositionMark<performer 0>(1.5, Position<'m3', 28.5, 18.5>);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1.5, Position<'m4', 32, 17>);
+    Wait(9);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1.5, Position<'m5', 25, 17>);
+    Wait(12);
+    MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1.5, Position<'m6', 28.5, 19>);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_RIGHT);
+    WaitExecutePerformer(0);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    bgm_PlayFadeIn(BGM_BEYOND_THE_DREAM, 0, 256);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Wow![K] That treasure chest
+            is HUGE!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             The rumors of a treasure in the
+            depths of [CS:P]Boulder Quarry[CR]...seem to be true...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             ...You said it. Looks like treasure
+            to me...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:Y]Lopunny[CR]! Open it![K] Quick!
+            I can't wait!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Hee hee![K] Patience is a virtue,
+            [CS:N]Medicham[CR]!
+        """,
+    });
+    message_Talk({
+        english="""
+             Opening a treasure chest should
+            be done with grace and splendor...
+        """,
+    });
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             After all, aren't we
+            Team [CS:X]Charm[CR]? [M:H8]
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I know, I know, but...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8975);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Argh! The suspense is
+            getting to me!
+        """,
+    });
+    message_Talk({
+        english="""
+             Forget the graces, [CS:Y]Lopunny[CR]![K] Just
+            hurry up!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Hee hee![K] Can you be a little
+            more mindful? A little less rash?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_RIGHT);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" All right, all right. I'll open it!",
+    });
+    message_Talk({
+        english="""
+             Ta dah...[K] The moment this
+            treasure chest is opened...
+        """,
+    });
+    message_Talk({
+        english="""
+             What kind of treasure will be
+            revealed to our eyes...
+        """,
+    });
+    message_Talk({
+        english="""
+             What wealth of beautiful things
+            will we find...
+        """,
+    });
+    message_Talk({
+        english="""
+             That thought is filling me with
+            excitement...
+        """,
+    });
+    message_Talk({
+        english=" Oh![K] Truly...[K] Truly...[K] Please...",
+    });
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Don't disappoint
+            me! [M:H8]
+        """,
+    });
+    message_Close();
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    se_Play(8971);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_ANGRY, 3);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I don't care about all that!
+            Open it already, [CS:Y]Lopunny[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    bgm_FadeOut(60);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Here...
+            goes! [M:H8]
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(10);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_UP);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_NONE, 3);
+    message_Mail({
+        english="[CN][CS:Y]Lopunny[CR] opened the treasure chest!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(10254);
+    SetEffect<performer 3>(652, 3);
+    SetAnimation<object OBJECT_D56P41A1_437>(17);
+    Wait(38);
+    screen_WhiteOutAll(1, 30);
+    screen_WhiteOut(1, 0);
+    screen_FadeInAll(1, 0);
+    WaitEndAnimation<object OBJECT_D56P41A1_437>();
+    SetAnimation<object OBJECT_D56P41A1_437>(10);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Ta dah![K] What...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" What kind of treasure...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Is...
+            inside? [M:H8]
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetOutputAttribute<actor ACTOR_NPC_CHAAREMU>(1);
+    SetOutputAttribute<actor ACTOR_NPC_SAANAITO>(1);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SHOCKED, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" N...[K] NOTHING?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" The treasure chest!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" There's nothing in it!",
+    });
+    message_Close();
+    se_Play(8969);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             It's totally empty![K] I don't
+            believe this!
+        """,
+    });
+    message_Close();
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_STUNNED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Maybe I'm simply exhausted?",
+    });
+    message_Talk({
+        english=" Maybe I'm simply imagining this?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" It is not your imagination.",
+    });
+    message_Talk({
+        english="""
+             There is absolutely nothing inside
+            that treasure chest...
+        """,
+    });
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" But...[K] Why not?...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SHOCKED, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_EXCLAMATION_MARK, 3);
+    message_ResetActor();
+    message_Talk({
+        english=" Y-YOU!!",
+    });
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWN);
+    Wait(3);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    message_Close();
+    bgm_PlayFadeIn(BGM_GROWING_ANXIETY, 0, 256);
+    MovePositionMark<performer 0>(1, Position<'m7', 28.5, 26.5>);
+    supervision_Acting(1);
+    Wait(1);
+    MovePositionMark<actor ACTOR_NPC_MANYUURA>(2, Position<'m8', 28.5, 28>);
+    Wait(12);
+    MovePositionMark<actor ACTOR_NPC_DORAPION>(2, Position<'m9', 33, 28.5>);
+    Wait(12);
+    MovePositionMark<actor ACTOR_NPC_AABOKKU>(2, Position<'m10', 24, 29>);
+    WaitExecuteLives(ACTOR_NPC_MANYUURA);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SHOCKED, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SHOCKED_MIRRORED, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Team [CS:X]AWD[CR]?!",
+    });
+    message_Close();
+    se_Play(8969);
+    SetEffect<actor ACTOR_NPC_DORAPION>(EFFECT_SHOCKED, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_MANYUURA>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_AABOKKU>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_DORAPION>();
+    WaitExecuteLives(ACTOR_NPC_DORAPION);
+    message_SetFace(ACTOR_NPC_DORAPION, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Aaaah![K] Th-the treasure!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AABOKKU, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Did you already ssssneak off
+            with it?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             Humph![K] Looks like we were
+            too late.
+        """,
+    });
+    message_Close();
+    se_Play(8973);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SHOCKED, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_SHOCKED, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" N-no! Hang on!",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1, Position<'m11', 28.5, 22.5>);
+    Wait(9);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m12', 32, 21.5>);
+    Wait(9);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m13', 25, 21.5>);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             We're not the ones who took
+            the treasure!
+        """,
+    });
+    message_Talk({
+        english="""
+             When we opened the
+            treasure chest...
+        """,
+    });
+    message_Talk({
+        english=" It was totally empty!",
+    });
+    message_Close();
+    se_Play(8971);
+    SetEffect<actor ACTOR_NPC_DORAPION>(EFFECT_ANGRY, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_AABOKKU>(EFFECT_ANGRY, 3);
+    Wait(6);
+    message_SetFace(ACTOR_NPC_DORAPION, FACE_ANGRY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Don't lie! You cheater!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_DORAPION>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_AABOKKU>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" It's not a lie![K] It's the truth!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" ...[K]Humph!",
+    });
+    message_Talk({
+        english="""
+             If you're going to lie, could you
+            at least be a tiny little bit more convincing?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" What...?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             If you're going to keep lying
+            like that...
+        """,
+    });
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_ANGRY, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             Then you're not a real
+            exploration team!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" What'd you say?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_ANGRY, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             You're underqualified to obtain
+            that treasure!
+        """,
+    });
+    message_Talk({
+        english="""
+             I guess we'll just have to take it
+            by force then!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    se_Play(8971);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_ANGRY, 3);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Humph![K] You're all talk!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Attacking us with false
+            accusations...
+        """,
+    });
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_ANGRY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I knew the rumors were true.
+            You're just villains!
+        """,
+    });
+    message_Talk({
+        english="""
+             We just can't forgive an
+            exploration team like you!
+        """,
+    });
+    message_Close();
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_NONE, 3);
+    bgm_PlayFadeIn(BGM_TEAM_CHARMS_THEME, 0, 256);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             We made a promise to [CS:N]Sentret[CR]
+            too. Looks like we'll be able to keep it!
+        """,
+    });
+    message_Close();
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_NONE, 3);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             We're the treasure hunters--
+            Team [CS:X]Charm[CR]!
+        """,
+    });
+    message_Talk({
+        english="""
+             You![K] We're going to punish you,
+            so get ready!
+        """,
+    });
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(1, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(24);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(24);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(27);
+    WaitAnimation<actor ACTOR_PLAYER_CHARMS>();
+    WaitAnimation<actor ACTOR_NPC_CHAAREMU>();
+    WaitAnimation<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5127);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" Humph!",
+    });
+    message_Talk({
+        english="""
+             I knew it would come to this
+            from the moment we first met you!
+        """,
+    });
+    message_Talk({
+        english="""
+             You've never come up against a
+            band of thieves like Team [CS:X]AWD[CR].
+            Prepare to feel our true terribleness...
+        """,
+    });
+    message_Talk({
+        english=" Make sure you savor it!",
+    });
+    message_Close();
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             [CS:N]Arbok[CR]! [CS:N]Drapion[CR]!
+            Let's go!
+        """,
+    });
+    message_Close();
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_AABOKKU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(3);
+    ExecuteCommon<actor ACTOR_NPC_DORAPION>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_AABOKKU);
+    WaitExecuteLives(ACTOR_NPC_DORAPION);
+    SetEffect<actor ACTOR_NPC_AABOKKU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DORAPION>(EFFECT_JOYOUS, 3);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Arbok[CR] & [CS:N]Drapion[CR]: YEAH!",
+    });
+    Wait(18);
+    SetEffect<actor ACTOR_NPC_AABOKKU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DORAPION>(EFFECT_NONE, 3);
+    message_Close();
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5127);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_TOP_RC_FACER);
+    message_Talk({
+        english="""
+             [CS:N]Medicham[CR]! [CS:Y]Lopunny[CR]!
+            Here they come!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_TOP_L_FACEOUTW);
+    message_Talk({
+        english=" Anytime!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             OK.
+            Let's go! [M:H8]
+        """,
+    });
+    message_Close();
+    supervision_SpecialActing(24, 0, 0);
+    supervision_SpecialActing(25, 0, 0);
+    se_Play(10249);
+    supervision_SpecialActing(26, 0, 0);
+    Wait(120);
+    screen_WhiteOutAll(1, 30);
+    supervision_SpecialActing(3, 0, 0);
+    main_EnterDungeon(157, 30);
+    main_EnterDungeon(-1, 30);
+    end;
+}

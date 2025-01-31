@@ -1,0 +1,239 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[26, 4];
+    back_SetGround(LEVEL_D30P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_TEMPORAL_SPIRE, 0, 256);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 26, 35.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 31, 35.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We've climbed pretty far up.",
+            }
+        case 2:
+            {
+                english=" We've climbed a long ways up.",
+            }
+        default:
+            {
+                english=" We've come up a long way.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I wonder how much more we
+                    have to go to the top...?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     How much farther is it to the
+                    top...?
+                """,
+            }
+        default:
+            {
+                english="""
+                     I wonder how much more we
+                    have to climb to reach the top...?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5130);
+    camera_SetEffect(2, 2, 2.0);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa![K] Another quake!",
+            }
+        case 2:
+            {
+                english=" Wa-waah![K] Another tremor!",
+            }
+        default:
+            {
+                english=" Wa-waah![K] Another tremor!",
+            }
+    }
+    WaitExecuteLives(ACTOR_PLAYER);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    se_FadeOut(5130, 90);
+    camera_SetEffect(0, 0, 0);
+    Wait(60);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ...[K]That quake was really strong.",
+            }
+        case 2:
+            {
+                english=" ...[K]That tremor was powerful.",
+            }
+        default:
+            {
+                english=" ...[K]That tremor was really strong.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 2, ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It must be getting worse...",
+            }
+        case 2:
+            {
+                english=" It must be getting worse...",
+            }
+        default:
+            {
+                english=" It must be getting worse...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The tower must be falling apart
+                    faster...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The tower must be falling apart
+                    faster...
+                """,
+            }
+        default:
+            {
+                english="""
+                     The tower must be breaking up
+                    faster...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I'm not sure it's true, but...",
+            }
+        case 2:
+            {
+                english=" I'm not sure it's true, but...",
+            }
+        default:
+            {
+                english=" I'm not sure it's true, but...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If [CS:P]Temporal Tower[CR] controls
+                    time like [CS:N]Lapras[CR] said...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If [CS:P]Temporal Tower[CR] regulates
+                    time like [CS:N]Lapras[CR] said...
+                """,
+            }
+        default:
+            {
+                english="""
+                     If [CS:P]Temporal Tower[CR] regulates
+                    time like [CS:N]Lapras[CR] said...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Then, if the tower collapses...",
+            }
+        case 2:
+            {
+                english=" Then, if the tower collapses...",
+            }
+        default:
+            {
+                english=" Then, if the tower collapses...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Our planet's paralysis will begin.",
+            }
+        case 2:
+            {
+                english=" Our planet's paralysis will begin.",
+            }
+        default:
+            {
+                english=" Our planet's paralysis will begin.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5131);
+    camera_SetEffect(2, 1, 1.0);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    se_FadeOut(5131, 90);
+    camera_SetEffect(0, 0, 0);
+    Wait(45);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" So let's move it, [hero]!",
+            }
+        case 2:
+            {
+                english=" So let's hustle, [hero]!",
+            }
+        default:
+            {
+                english=" So let's hurry, [hero]!",
+            }
+    }
+    message_Close();
+    end;
+}

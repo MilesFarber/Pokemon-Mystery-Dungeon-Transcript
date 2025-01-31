@@ -1,0 +1,117 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    bgm_FadeOut(60);
+    screen_FadeOut(1, 30);
+    back2_SetMode(0);
+    WaitSubScreen();
+    supervision_RemoveCommon(13);
+    supervision_RemoveCommon(14);
+    supervision_RemoveCommon(15);
+    supervision_Acting(1);
+    supervision_Acting(3);
+    SetAnimation<object OBJECT_D16P31A8_55>(9);
+    SetAnimation<object OBJECT_D16P31A2_37>(10);
+    camera_SetPositionMark(Position<'m0', 37.5, 28.5>);
+    SetFunctionAttribute<actor ACTOR_PLAYER>(2);
+    SetFunctionAttribute<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetPositionMark<actor ACTOR_PLAYER>(Position<'m1', 39.5, 28.5>);
+    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m2', 35.5, 28.5>);
+    SetDirection<actor ACTOR_PLAYER>(DIR_UP);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_UP);
+    Wait(30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(7176);
+    SetAnimation<object OBJECT_D16P31A8_55>(17);
+    SetAnimation<object OBJECT_D16P31A2_37>(18);
+    WaitAnimation<object OBJECT_D16P31A2_37>();
+    WaitExecuteObject(OBJECT_D16P31A2_37);
+    SetAnimation<object OBJECT_D16P31A2_37>(17);
+    WaitAnimation<object OBJECT_D16P31A2_37>();
+    WaitExecuteObject(OBJECT_D16P31A2_37);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(60);
+    bgm_PlayFadeIn(BGM_EARTHQUAKE1, 0, 256);
+    camera_SetEffect(2, 1, 1.0);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waaah! A tremor!",
+            }
+        case 2:
+            {
+                english=" Waaah! A tremor!",
+            }
+        default:
+            {
+                english=" Waaah! A tremor!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    se_Play(7177);
+    supervision_Acting(2);
+    SetOutputAttribute<object OBJECT_D16P31A9_58>(4);
+    SetAnimation<object OBJECT_D16P31A9_58>(17);
+    WaitAnimation<object OBJECT_D16P31A9_58>();
+    WaitExecuteObject(OBJECT_D16P31A9_58);
+    SetAnimation<object OBJECT_D16P31A9_58>(18);
+    WaitAnimation<object OBJECT_D16P31A9_58>();
+    WaitExecuteObject(OBJECT_D16P31A9_58);
+    SetAnimation<object OBJECT_D16P31A9_58>(3);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Wait(10);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's dangerous, [hero]!
+                    Let's take cover!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's dangerous, [hero]!
+                    Let's back off!
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's dangerous, [hero]!
+                    Let's back off!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1.5, Position<'m3', 35.5, 50.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_PLAYER>(1.5, Position<'m4', 39.5, 50.5>);
+    Wait(20);
+    MovePositionOffset<actor ACTOR_UNIT_NPC1>(1.5, 0, 180);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_UNIT_NPC2>(1.5, 0, 180);
+    bgm_FadeOut(60);
+    se_FadeOut(7177, 60);
+    screen_FadeOut(1, 30);
+    camera_SetEffect(0, 0, 0);
+    WaitBgm(BGM_EARTHQUAKE1);
+    end;
+}

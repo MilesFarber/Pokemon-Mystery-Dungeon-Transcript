@@ -1,0 +1,437 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    $SCENARIO_SIDE = scn[40, 2];
+    back_SetGround(LEVEL_T01P02A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_KAKUREON1>();
+    SetPositionInitial<actor ACTOR_NPC_KAKUREON2>();
+    SetAnimation<actor ACTOR_NPC_KAKUREON1>(2);
+    SetAnimation<actor ACTOR_NPC_KAKUREON2>(2);
+    Wait(1);
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -64, 0);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 30);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Whew...[K] Here's [CS:K]Kecleon[CR] Market.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m0', 42, 24.5>);
+    MovePositionMark<actor ACTOR_PLAYER_BIPPA>(1, Position<'m1', 42, 25.5>);
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, -12);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Howdy!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Welcome... ♪[K]
+            To [CS:K]Kecleon[CR] Shop. ♪
+        """,
+    });
+    message_Talk({
+        english=" Have you come to shop? ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_NONE, 3);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SPECIAL2, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             N-not quite...[K] Sorry to bother
+            you, but I'm not here to buy anything...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             ...[K]Just asking about inventory,
+            as always...[K] Sigh... So disappointing...
+        """,
+    });
+    message_Close();
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KAKUREON1>();
+    WaitExecuteLives(ACTOR_NPC_KAKUREON1);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_LAUGHING, 3);
+    ExecuteCommon<actor ACTOR_NPC_KAKUREON1>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             That's all right. Don't worry. ♪[K]
+            Inventory inquiries are no problem. ♪[K]
+            Really. ♪
+        """,
+    });
+    message_KeyWait();
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_NONE, 3);
+    message_Talk({
+        english="""
+             ...What have you come to
+            check on?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:I]Oran Berries[CR].[K]
+            Really sorry to bother you... Sorry.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" No, no. It's no bother at all. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON1>(4, 2, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_KAKUREON1);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Let's see...[CS:I]Oran Berries[CR]...[K]
+            We have two in stock today...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON1>(4, 1, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KAKUREON1);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Two of them. [K]OK, thanks!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Do your best at your work! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(60);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_NONE, 3);
+    Wait(30);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KAKUREON1>();
+    WaitExecuteLives(ACTOR_NPC_KAKUREON1);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" ...[K]Huh? [K]Is there something else?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             N-no. [K]Well, there's nothing
+            more I need to do...
+        """,
+    });
+    message_Talk({
+        english=" I just have a little problem...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Oh...[K] What kind of problem?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KAKUREON2, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             It's OK to ask me about it.
+            [K]Come on, spit it out! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             ...[K]The truth is that no matter
+            what I do...[K]I always seem to mess it up...
+        """,
+    });
+    message_Talk({
+        english="""
+             I'm always making mistakes at
+            the guild...
+        """,
+    });
+    message_Talk({
+        english="""
+             I really want to be an explorer
+            like all the other apprentices in the guild...
+        """,
+    });
+    message_Talk({
+        english=" For example...",
+    });
+    message_Talk({
+        english="""
+             To become an explorer really
+            quickly...[K]what should I do?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KAKUREON2>();
+    WaitExecuteLives(ACTOR_NPC_KAKUREON2);
+    message_SetFace(ACTOR_NPC_KAKUREON2, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Oh! If that's it...[K]you just need
+            a TM! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(8, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" TM?[K] ...That's the way?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KAKUREON2, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Yep. ♪[K] With a TM, you can
+            learn a new move. ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             If you did that, you'd be very
+            helpful in explorations. ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             Yes, you will definitely
+            be helpful. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(4, 1, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_KAKUREON2);
+    message_SetFace(ACTOR_NPC_KAKUREON2, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Hmmm...[K] How about...[K]
+            Here it is!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(4, 2, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KAKUREON2);
+    message_SetFace(ACTOR_NPC_KAKUREON2, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" How about this one?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_Mail({
+        english="""
+            [CN][CS:N]Kecleon[CR] showed [CS:Y]Bidoof[CR]
+            [CN]the TM [M:I0][CS:I]Hidden Power[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [M:I0][CS:I]Hidden Power[CR]...[K]
+            That sounds pretty strong...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KAKUREON2, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             That's right. ♪[K]
+            It's a very strong move! ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             If you used this TM, you could
+            learn [CS:M]Hidden Power[CR]! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Is that right...?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(15);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             ... (Sniff...[K] If I learn [CS:M]Hidden[CR]
+            [CS:M]Power[CR], then I could be more useful...)
+        """,
+    });
+    message_Talk({
+        english="""
+             (And the guild members would
+            appreciate me more...)
+        """,
+    });
+    message_Talk({
+        english="""
+             (If I buy this...[K]then the day
+            I become the best explorer will get closer...)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(15);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             By the way...[K]how much is this
+            [M:I0][CS:I]Hidden Power[CR] thing?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_JOYOUS, 3);
+    ExecuteCommon<actor ACTOR_NPC_KAKUREON2>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_KAKUREON2, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Oh! [K]You're interested in
+            buying it. ♪ I'm excited! ♪
+        """,
+    });
+    message_KeyWait();
+    SetEffect<actor ACTOR_NPC_KAKUREON2>(EFFECT_NONE, 3);
+    message_Talk({
+        english="""
+             The price...[K]let me see...[K]
+            It's [CS:G]6[MP]500[CR][M:S0].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Whaaat?![K]
+            It's that expensive?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KAKUREON2, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             You're surprised? [K]
+            Well, TMs are very expensive...
+        """,
+    });
+    message_Talk({
+        english="""
+             But you think that's too
+            expensive, right?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SPECIAL2, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Sniff...[K] No...[K]
+            Please hold on a moment...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Sniff...[K] What should I do...?[K]
+            Should I buy it? Shouldn't I? I don't know...
+        """,
+    });
+    message_Talk({
+        english="""
+             To tell you the truth...[K]I've got
+            the money for it, but...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, 8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    se_Play(8713);
+    supervision_Acting(1);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, -8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I've got my own money...[K]
+            I always carry it with me...[CS:G]7[MP]000[CR][M:S0].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english=" But...[K]but this money...",
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOutAll(1, 60);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

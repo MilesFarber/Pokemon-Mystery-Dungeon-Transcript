@@ -1,0 +1,153 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(43, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D30P41A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_HEAVY_FEELING, 0, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(7690);
+    screen_WhiteOut(1, 3);
+    Wait(2);
+    screen_FadeIn(1, 3);
+    Wait(40);
+    SetAnimation<actor ACTOR_NPC_DARK_DIARUGA>(19);
+    WaitAnimation<actor ACTOR_NPC_DARK_DIARUGA>();
+    camera_SetEffect(2, 1, 1.0);
+    se_Play(6930);
+    message_SetFace(ACTOR_NPC_DARK_DIARUGA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             GRRR-OOOOOO...OOOOOH!![K]
+            YOU AGAIN?!
+        """,
+    });
+    WaitSe(6930);
+    camera_SetEffect(0, 0, 0);
+    WaitExecuteLives(ACTOR_NPC_DARK_DIARUGA);
+    SetAnimation<actor ACTOR_NPC_DARK_DIARUGA>(2);
+    message_Talk({
+        english="""
+             YOUR EFFORTS ARE FUTILE!
+            I WON'T LET YOU DESTROY THE TOWER!
+        """,
+    });
+    message_Talk({
+        english="""
+             TIME MUST NOT...[K] TIME...[K]
+            GRRR-OOOOOO...OOOOOH!
+        """,
+    });
+    SetAnimation<actor ACTOR_NPC_DARK_DIARUGA>(19);
+    WaitAnimation<actor ACTOR_NPC_DARK_DIARUGA>();
+    camera_SetEffect(2, 1, 1.0);
+    se_Play(6930);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitExecuteLives(ACTOR_NPC_DARK_DIARUGA);
+    WaitSe(6930);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    SetAnimation<actor ACTOR_NPC_DARK_DIARUGA>(2);
+    Wait(15);
+    message_SetFace(ACTOR_PLAYER, FACE_DETERMINED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([CS:N]Dialga[CR]'s taken on more darkness!)",
+            }
+        default:
+            {
+                english="([CS:N]Dialga[CR]'s taken on more darkness!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That darkness will soon consume him!)",
+            }
+        default:
+            {
+                english="(That darkness will soon consume him!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(We have to stop it!)",
+            }
+        default:
+            {
+                english="(We have to stop it!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(For the world![K] For the future!)",
+            }
+        default:
+            {
+                english="(For the world![K] For the future!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" H-here he comes, [hero]!",
+            }
+        case 2:
+            {
+                english=" H-here he comes, [hero]!",
+            }
+        default:
+            {
+                english=" H-here he comes, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_DARK_DIARUGA>(18);
+    WaitAnimation<actor ACTOR_NPC_DARK_DIARUGA>();
+    camera_SetEffect(2, 1, 1.0);
+    se_Play(6930);
+    message_SetFace(ACTOR_NPC_DARK_DIARUGA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" GRRR-OOOOOO...OOOOOH!",
+    });
+    WaitSe(6930);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    bgm_Stop();
+    se_Play(5140);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5140);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(43, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

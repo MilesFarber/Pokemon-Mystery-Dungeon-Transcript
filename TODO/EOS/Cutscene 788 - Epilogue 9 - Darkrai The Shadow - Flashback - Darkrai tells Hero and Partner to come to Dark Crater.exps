@@ -1,0 +1,58 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D39P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    SetAnimation<actor ACTOR_NPC_DAAKURAI>(43);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             You are more than welcome to
+            try and stop me.
+        """,
+    });
+    message_Talk({
+        english=" Come to me in the [CS:P]Dark Crater[CR].",
+    });
+    message_Close();
+    screen_WhiteOut(1, 30);
+    Wait(30);
+    SetPositionOffset<actor ACTOR_NPC_KURESERIA>(0, -32);
+    Destroy<actor ACTOR_NPC_DAAKURAI>();
+    SetDirection<actor ACTOR_PLAYER>(DIR_LEFT);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_UP);
+    SetDirection<actor ACTOR_NPC_PARUKIA>(DIR_RIGHT);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetActor(ACTOR_NPC_DAAKURAI);
+    message_Talk({
+        english="""
+             You two...[K] I shall be waiting in
+            the [CS:P]Dark Crater[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ...[K][CS:P]Dark[CR]...[K] [CS:P]Crater[CR]...",
+            }
+        case 2:
+            {
+                english=" ...[K][CS:P]Dark[CR]...[K] [CS:P]Crater[CR]...",
+            }
+        default:
+            {
+                english=" ...[K][CS:P]Dark[CR]...[K] [CS:P]Crater[CR]...",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

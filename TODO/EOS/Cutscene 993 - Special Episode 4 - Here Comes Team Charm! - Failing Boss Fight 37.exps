@@ -1,0 +1,112 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Everyone...[K]all right?",
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D55P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_CHAAREMU>();
+    SetPositionInitial<actor ACTOR_NPC_SAANAITO>();
+    SetDirection<actor ACTOR_PLAYER_CHARMS>(DIR_DOWNLEFT);
+    SetDirection<actor ACTOR_NPC_CHAAREMU>(DIR_DOWN);
+    SetDirection<actor ACTOR_NPC_SAANAITO>(DIR_RIGHT);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(22);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(22);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(22);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_BOULDER_QUARRY, 0, 256);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(23);
+    Wait(10);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(23);
+    Wait(7);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(23);
+    WaitAnimation<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_RIGHT);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(2);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_DOWN);
+    Wait(10);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(8, 10, ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Yeah.[K] I'm fine.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I'm all right too.[K] But I was a
+            little unprepared.
+        """,
+    });
+    message_Talk({
+        english="""
+             They were a little stronger...[K]
+            than I expected.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_NPC_SAANAITO);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             What should we do?[K] Look for
+            another way?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_PLAYER_CHARMS);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_WORRIED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             No.[K] If we do that, there's a
+            chance we'll get even more lost...
+        """,
+    });
+    message_Talk({
+        english=" And it will take a while.",
+    });
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Anyhow...[K] We should think of a
+            way to cross over there somehow.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yeah.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Got it.",
+    });
+    message_Close();
+    end;
+}

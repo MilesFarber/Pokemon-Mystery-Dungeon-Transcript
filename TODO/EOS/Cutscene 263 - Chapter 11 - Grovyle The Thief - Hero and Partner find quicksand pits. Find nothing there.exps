@@ -1,0 +1,419 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[14, 5];
+    back_SetGround(LEVEL_D14P11A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 27, 35.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 31, 35.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_UNIT_NPC1>(1, Position<'m2', 29, 40.5>);
+    MovePositionMark<actor ACTOR_UNIT_NPC2>(1, Position<'m3', 25.5, 40.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Is this the deepest part of
+                    the desert?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Is this the deepest part of
+                    the desert?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Is this the deepest part of
+                    the desert?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(8974);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh no! It's quicksand!",
+            }
+        case 2:
+            {
+                english=" Watch out! It's quicksand!",
+            }
+        default:
+            {
+                english=" Waah! There's quicksand!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m4', 29, 27.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m5', 27, 28.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m6', 31, 28.5>);
+    MovePositionMark<actor ACTOR_UNIT_NPC2>(1, Position<'m7', 24.5, 33.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_UNIT_NPC1>(1, Position<'m8', 28, 34.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The sand's getting sucked down
+                    there, and there, and there!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The sand's getting sucked down
+                    here and there!
+                """,
+            }
+        default:
+            {
+                english="""
+                     The sand's getting sucked down
+                    here and there!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     They're like sand whirlpools, and
+                    we'll be sucked down if we get close!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     They're like sand whirlpools, and
+                    we'll be pulled in if we get close!
+                """,
+            }
+        default:
+            {
+                english="""
+                     They're like sand whirlpools, and
+                    we'll be pulled under if we get close!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's dangerous here!",
+            }
+        case 2:
+            {
+                english=" It's dangerous here!",
+            }
+        default:
+            {
+                english=" It's dangerous here!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I don't see anything around here
+                    that looks like a Time Gear!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I don't see anything around here
+                    that remotely looks like a Time Gear!
+                """,
+            }
+        default:
+            {
+                english="""
+                     I don't see anything around here
+                    that even remotely looks like a Time Gear!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I guess there's nothing here.",
+            }
+        case 2:
+            {
+                english=" Maybe there's nothing here.",
+            }
+        default:
+            {
+                english=" I guess there's nothing here.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?[K] What's up, [hero]?",
+            }
+        case 2:
+            {
+                english="""
+                     Oh?[K] What's the matter,
+                    [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh?[K] What's wrong,
+                    [hero]?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_UNIT_NPC2>(4, 10, DIR_UPRIGHT);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(...............)",
+            }
+        default:
+            {
+                english="(...............)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(This feeling...)",
+            }
+        default:
+            {
+                english="(This feeling...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's like the one I got at [CS:P]Fogbound Lake[CR]...)",
+            }
+        default:
+            {
+                english="(It's like the one I got at [CS:P]Fogbound Lake[CR]...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I...[K]I know this place!)",
+            }
+        default:
+            {
+                english="(I...[K]I know this place!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (Maybe I have only heard of this place...[K]but it
+                    seems like I've been here before...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (Maybe I have only heard of this place...[K]but it
+                    seems like I've been here before...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I can't tell which...)",
+            }
+        default:
+            {
+                english="(I can't tell which...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Either way, I do know this place...)",
+            }
+        default:
+            {
+                english="(Either way, I do know this place...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [hero]!",
+            }
+        case 2:
+            {
+                english=" Listen, [hero]!",
+            }
+        default:
+            {
+                english=" Say, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You were daydreaming!
+                    What's up?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     What's the matter? You were
+                    off in your own thoughts there.
+                """,
+            }
+        default:
+            {
+                english="""
+                     What's wrong? You seemed to
+                    be in a daze there.
+                """,
+            }
+    }
+    message_KeyWait();
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I hate to say it, but there seems
+                    to be nothing here.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Well, there seems to be nothing
+                    here. How disappointing!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Well, there seems to be nothing
+                    here. How disappointing!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's report our findings to the
+                    guild. Let's go home.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's report our findings to the
+                    guild. Let's go home.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's report our findings to the
+                    guild. Let's go home.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.5, 16, -16);
+    Turn2Direction<actor ACTOR_PLAYER>(32, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_UNIT_NPC1>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_UNIT_NPC2>(4, 10, DIR_UPRIGHT);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.5, Position<'m9', 31, 27>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.5, 0, 180);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_PLAYER>(0.5, 0, 180);
+    Wait(45);
+    Turn2Direction<actor ACTOR_UNIT_NPC1>(8, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_UNIT_NPC2>(8, 10, DIR_DOWN);
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    Wait(60);
+    worldmap_SetMode(3);
+    worldmap_SetLevel(2);
+    back2_SetMode(3);
+    WaitSubScreen();
+    worldmap_ChangeLevel(3);
+    worldmap_SetCamera(21);
+    WaitSubScreen();
+    me_Play(6);
+    message_Mail({
+        english="[CN]The clouds parted over the [CS:P]Northern Desert[CR]!",
+    });
+    WaitMe(6);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    screen2_FadeOut(1, 15);
+    back2_SetMode(0);
+    end;
+}

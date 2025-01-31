@@ -1,0 +1,161 @@
+
+def 0 {
+    sound_Stop();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V02P06A);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 16.5>);
+    screen2_FadeIn(1, 60);
+    Wait(150);
+    screen2_FadeOut(1, 60);
+    back2_SetMode(0);
+    back_SetGround(LEVEL_P17P02C);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m1', 19, 16.5>);
+    camera_SetMyself<performer 0>();
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_P17P02C1_532>(1);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(42);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_HAPPY, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Sleep now sweet, little child. ♪[K]
+            You are truly adorable. ♪
+        """,
+    });
+    message_Talk({
+        english=" Sleep now sweet, little child. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_PLAYER_PUPURIN);
+    message_Talk({
+        english=" ...[K]Mmmmmm... [K]Mmmmmmmm...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecuteObject(OBJECT_P17P02C1_532);
+    Destroy<object OBJECT_P17P02C1_532>();
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" ...[K]All right, he's sleeping.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_DOWNRIGHT);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_WORRIED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Hey, [CS:N]Papa[CR].[K] I've been worried
+            about something...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Huh?[K] What is it, [CS:N]Mama[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(150);
+    Move2PositionMark<performer 0>(0.7969, Position<'m2', 34, 26>);
+    Move2PositionMark<actor ACTOR_NPC_PUKURIN_MAMA>(1, Position<'m3', 32, 26>);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_LEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_RIGHT);
+    WaitExecutePerformer(0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    Wait(20);
+    bgm2_PlayFadeIn(BGM_FIRE_CRACKLING3, 30, 256);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_WORRIED, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(3, -5);
+    message_Talk({
+        english="""
+             I heard from [CS:Y]Igglybuff[CR]'s
+            friends today...
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:Y]Igglybuff[CR][K] is being manipulated
+            by some bullies.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Some bullies?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_WORRIED, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(3, -5);
+    message_Talk({
+        english="""
+             Yeah.[K] [CS:Y]Igglybuff[CR]'s friends came
+            to talk to me about it...
+        """,
+    });
+    message_Talk({
+        english="""
+             Hey, [CS:N]Papa[CR].[K] You don't think
+            he'd become like them, do you?
+        """,
+    });
+    message_Talk({
+        english="""
+             Sometimes, I really have no clue
+            what that child is thinking...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_MAMA>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_WORRIED, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(3, -5);
+    message_Talk({
+        english=" So I'm a little worried...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Yeah...[K] That does seem
+            troublesome...
+        """,
+    });
+    message_Talk({
+        english=" But...",
+    });
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" But I think it's all right.",
+    });
+    message_Talk({
+        english=" [CS:Y]Igglybuff[CR] is still so cheerful...",
+    });
+    message_Talk({
+        english="""
+             No matter how he may seem,
+            deep down, he has a good heart.
+        """,
+    });
+    message_Talk({
+        english="""
+             Besides...[K] Didn't we have this
+            discussion before...
+        """,
+    });
+    message_Talk({
+        english="""
+             Back when...[K] I climbed that
+            mountain with [CS:Y]Igglybuff[CR]. On our way home...
+        """,
+    });
+    message_Close();
+    bgm2_FadeOut(60);
+    screen_FadeOut(1, 60);
+    end;
+}

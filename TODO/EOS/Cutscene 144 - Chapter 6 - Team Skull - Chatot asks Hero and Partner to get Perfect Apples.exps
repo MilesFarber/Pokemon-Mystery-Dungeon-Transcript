@@ -1,0 +1,400 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    $SCENARIO_MAIN = scn[8, 1];
+    supervision_Acting(0);
+    Wait(1);
+    supervision_StationCommon(0);
+    supervision_StationCommon(99);
+    SetPositionInitial<actor ACTOR_NPC_DOGAASU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    WaitExecuteLives(ACTOR_NPC_GUREGGURU);
+    SetPositionMark<performer 0>(Position<'m0', 60.5, 31.5>);
+    camera_SetMyself<performer 0>();
+    WaitExecutePerformer(0);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english=" Ah, you two.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(120);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(0, -1);
+    message_Talk({
+        english="""
+             Your task today is to obtain
+            stock to replenish the larder.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Larder? You mean, go get
+                    some food?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Larder? You mean, go get
+                    some food?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Larder? You mean, go get
+                    some food?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m1', 57, 30>);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 55, 31>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 59, 31>);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Correct. ♪",
+    });
+    message_Talk({
+        english="""
+             We inspected the larder
+            this morning.
+        """,
+    });
+    message_Talk({
+        english="""
+             For some mysterious reason, the
+            guild's food stock has dropped sharply all
+            of a sudden.
+        """,
+    });
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_PAIN, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Furthermore, our entire stock of
+            Perfect Apples has disappeared. That was the
+            only item to get completely cleaned out.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Perfect Apples?
+                    What are those?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Perfect Apples?
+                    What are those?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Perfect Apples?
+                    What are those?
+                """,
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             They're very big and very
+            delicious [CS:I]Apples[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             But more than that, they are
+            the Guildmaster's favorite food! ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             If there were no Perfect
+            Apples, the Guildmaster would, um...
+        """,
+    });
+    message_Talk({
+        english=" The Guildmaster w-w-would...",
+    });
+    message_Talk({
+        english=" ...erk!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Go on. If there were no Perfect
+                    Apples, what would happen to [CS:N]Wigglytuff[CR]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Go on. If there were no Perfect
+                    Apples, what would happen to [CS:N]Wigglytuff[CR]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Go on. If there were no Perfect
+                    Apples, what would happen to [CS:N]Wigglytuff[CR]?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_PAIN, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" The G-Guildmaster would...[K]...[K]...",
+    });
+    message_Talk({
+        english=" ...[K]Yes, that's what would happen.",
+    });
+    message_Close();
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(1, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             That's why I'm begging you two
+            to get some Perfect Apples.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Uh, what did he just say?![K]
+                    I didn't hear! It'll drive me nuts, not knowing!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Uh, what did he just say?![K]
+                    I didn't hear! It'll drive me crazy, not knowing!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Uh, what did he just say?![K]
+                    I didn't hear! It'll really bug me, not knowing!
+                """,
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But, oh well.",
+            }
+        case 2:
+            {
+                english=" But, oh well.",
+            }
+        default:
+            {
+                english=" But, oh well.",
+            }
+    }
+    message_KeyWait();
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Sure, we'll go get some. You can
+                    count on us!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Sure, we'll go get some. You can
+                    count on us!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Sure, we'll go get some. You can
+                    count on us!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_HAPPY, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Good! ♪",
+    });
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Perfect Apples can be found
+            deep in [CS:P]Apple Woods[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             Now, listen, this may seem like
+            a simple errand, but it's a crucial job.
+        """,
+    });
+    message_Talk({
+        english="""
+             After all, this is all about the
+            Guildmaster's...
+        """,
+    });
+    message_Talk({
+        english=" ...erk!",
+    });
+    message_Talk({
+        english=" ...[K]So please don't fail! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" OK!",
+            }
+        case 2:
+            {
+                english=" OK!",
+            }
+        default:
+            {
+                english=" OK!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's give it our best,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's keep doing our best,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's keep doing our best,
+                    [hero]!
+                """,
+            }
+    }
+    message_Close();
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m4', 50.5, 31>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m5', 50.5, 31>);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(16, 10, DIR_LEFT);
+    MovePositionMark<performer 0>(1, Position<'m6', 22.5, 30>);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m7', 40.5, 21.5>);
+    Wait(10);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m8', 40.5, 21.5>);
+    bgm_FadeOut(190);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m9', 40.5, 11.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m10', 40.5, 11.5>);
+    Destroy<actor ACTOR_ATTENDANT1>();
+    Destroy<actor ACTOR_PLAYER>();
+    MovePositionMark<performer 0>(1, Position<'m11', 22.5, 35.5>);
+    WaitExecutePerformer(0);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Whoa-ho-ho! Looks like they're
+            going out foraging for food.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_BOTTOM_RC_FACEOUTW);
+    message_Talk({
+        english="""
+             That's because we feasted last
+            night. A thankless task thanks to us,
+            chaw-haw-haw!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-3, 1);
+    message_Talk({
+        english="""
+             Heh-heh-heh! Let's mess
+            with them!
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 60);
+    dungeon_mode(7) = DMODE_OPEN;
+    main_SetGround(LEVEL_G01P02A);
+    main_EnterGround(LEVEL_G01P01A, 30);
+    hold;
+    end;
+}

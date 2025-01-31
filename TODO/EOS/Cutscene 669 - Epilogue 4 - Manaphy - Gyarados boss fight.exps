@@ -1,0 +1,84 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(53, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D35P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 256);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_FIONE4>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_FIONE8>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m0', 43.5, 44.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m1', 46.5, 47>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m2', 40.5, 46.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m3', 43.5, 48.5>);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_FIONE3>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_FIONE6>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(15);
+    Turn2Direction<actor ACTOR_NPC_FIONE1>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_FIONE2>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_FIONE3>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_FIONE4>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_FIONE5>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_FIONE6>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_FIONE7>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_FIONE8>(1, 10, DIR_DOWN);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_GYARADOSU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_GYARADOSU>();
+    WaitExecuteLives(ACTOR_NPC_GYARADOSU);
+    MovePositionOffset<performer 0>(1, 0, 24);
+    Turn2Direction<actor ACTOR_NPC_GYARADOSU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_GYARADOSU);
+    WaitExecutePerformer(0);
+    message_SetFace(ACTOR_NPC_GYARADOSU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" OH?[K] WHAT, BACK AGAIN?",
+    });
+    message_Talk({
+        english=" NO MERCY FOR MEDDLERS!",
+    });
+    message_KeyWait();
+    bgm_Stop();
+    se_Play(6930);
+    camera_SetEffect(2, 1, 1.0);
+    SetAnimation<actor ACTOR_NPC_GYARADOSU>(18);
+    message_Talk({
+        english=" GRRAAAAHH!",
+    });
+    Move2PositionOffset<actor ACTOR_NPC_FIONE1>(2.5, 0, -64);
+    Move2PositionOffset<actor ACTOR_NPC_FIONE2>(2.5, -64, -40);
+    Move2PositionOffset<actor ACTOR_NPC_FIONE3>(2.5, 64, -40);
+    Move2PositionOffset<actor ACTOR_NPC_FIONE4>(2.5, -64, -40);
+    Move2PositionOffset<actor ACTOR_NPC_FIONE5>(2.5, 64, -40);
+    Move2PositionOffset<actor ACTOR_NPC_FIONE6>(2.5, -64, -40);
+    Move2PositionOffset<actor ACTOR_NPC_FIONE7>(2.5, 0, -64);
+    Move2PositionOffset<actor ACTOR_NPC_FIONE8>(2.5, 64, -40);
+    WaitSe(6930);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    se_Play(5136);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    end;
+}

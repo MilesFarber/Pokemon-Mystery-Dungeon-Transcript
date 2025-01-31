@@ -1,0 +1,274 @@
+
+def 0 {
+    bgm2_PlayFadeIn(BGM_ON_THE_BEACH_AT_DUSK, 0, 256);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V21P02B);
+    back_SetGround(LEVEL_H01P99E);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 20, 18.5>);
+    camera_SetMyself<performer 0>();
+    screen2_FadeIn(0, 30);
+    bgm_ChangeVolume(140, 190);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             But when all seemed lost...[K]
+            you refused to give up.
+        """,
+    });
+    message_Talk({
+        english=" Even I had given up.",
+    });
+    message_Talk({
+        english=" What compelled you?",
+    });
+    message_Talk({
+        english="""
+             How did you manage...[K]to stay
+            so strong?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Well...[K]I wonder too.",
+            }
+        case 2:
+            {
+                english=" Well...[K]I wonder too.",
+            }
+        default:
+            {
+                english=" Well...[K]I wonder too.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I really don't know...",
+            }
+        case 2:
+            {
+                english=" I really don't know...",
+            }
+        default:
+            {
+                english=" I really don't know...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But maybe...",
+            }
+        case 2:
+            {
+                english=" But maybe...",
+            }
+        default:
+            {
+                english=" But maybe...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Maybe it was because
+                    [hero] stood by me.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Maybe it was because
+                    [hero] stood by me.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Maybe it was because
+                    [hero] stood by me.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" [hero]...?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_JUPUTORU);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Take a look at this.",
+            }
+        case 2:
+            {
+                english=" Take a look at this.",
+            }
+        default:
+            {
+                english=" Have a look at this.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.5, 4, 4);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    se_Play(6410);
+    supervision_Acting(1);
+    Wait(15);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(0.5, -4, -4);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(15);
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(0.5, -8, -8);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" This...[K] What could it be...?",
+    });
+    message_Talk({
+        english="""
+             There's an odd pattern inscribed
+            on it.
+        """,
+    });
+    message_Talk({
+        english="""
+             I've never seen anything like
+            it.[K] This pattern is new to me...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This is my Relic Fragment.[K]
+                    It's my personal treasure.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This is my Relic Fragment.[K]
+                    It's my personal treasure.
+                """,
+            }
+        default:
+            {
+                english="""
+                     This is my Relic Fragment.[K]
+                    It's my personal treasure.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's my dream to one day solve
+                    the mystery of this fragment.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I have this dream of one day
+                    solving the mystery behind this fragment.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's my dream to one day solve
+                    the mystery behind this fragment.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But I was such a coward...[K]
+                    I couldn't even work up enough courage to
+                    see if I could apprentice at the guild.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But I was such a coward...[K]
+                    I couldn't work up the courage to go to the
+                    guild and apply as an apprentice.
+                """,
+            }
+        default:
+            {
+                english="""
+                     But I was scared so easily...[K]
+                    I didn't even have the courage to apply as an
+                    apprentice at the guild.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It was then...[K]that I met
+                    [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It was then...[K]that I met
+                    [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     That was when...[K]I met
+                    [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [hero]...",
+            }
+        case 2:
+            {
+                english=" [hero]...",
+            }
+        default:
+            {
+                english=" [hero]...",
+            }
+    }
+    message_Close();
+    bgm_ChangeVolume(140, 0);
+    screen2_FadeOut(0, 30);
+    screen_FadeOut(1, 30);
+    back2_SetMode(0);
+    end;
+}

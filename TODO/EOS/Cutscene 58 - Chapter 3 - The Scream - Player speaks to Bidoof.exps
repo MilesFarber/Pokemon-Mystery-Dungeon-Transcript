@@ -1,0 +1,50 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_BIPPA);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english="""
+             Huh?[K] Are you folks all set and
+            ready for some exploring?
+        """,
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            supervision_ExecuteCommon(CORO_EVENT_M03_05_06);
+            @label_2;
+            CallCommon(CORO_EVENT_END_FREE);
+            SetAnimation<actor ACTOR_NPC_BIPPA>(4);
+            end;
+        case menu({
+            english="No",
+        }):
+        default:
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_Talk({
+                english=" Not yet, huh?",
+            });
+            message_Talk({
+                english="""
+                     Just give me a holler when
+                    you're all ready to go.
+                """,
+            });
+            message_Talk({
+                english="""
+                     Then we'll all have a gander at
+                    the Outlaw Notice Board and pick out a suitable
+                    outlaw for you.
+                """,
+            });
+            message_Close();
+            Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_DOWN);
+            WaitExecuteLives(ACTOR_NPC_BIPPA);
+            jump @label_2;
+    }
+}

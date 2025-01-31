@@ -1,0 +1,70 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[40, 4];
+    back_SetGround(LEVEL_D42P21A);
+    supervision_StationCommon(0);
+    supervision_StationCommon(30);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_YUKIKABURI>();
+    SetAnimation<actor ACTOR_NPC_YUKIKABURI>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_DEEP_STAR_CAVE, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_BIPPA>(1, Position<'m0', 26.5, 33.5>);
+    MovePositionMark<actor ACTOR_NPC_YUKIKABURI>(1, Position<'m1', 30.5, 33.5>);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    Wait(15);
+    Turn2Direction<actor ACTOR_NPC_YUKIKABURI>(0.5, 10, DIR_UPLEFT);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_YUKIKABURI>(0.5, 10, DIR_UP);
+    Wait(15);
+    Turn2Direction<actor ACTOR_NPC_YUKIKABURI>(0.5, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(10);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" We've gone pretty far...",
+    });
+    Turn2Direction<actor ACTOR_NPC_YUKIKABURI>(0.5, 10, DIR_UP);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_BIPPA>(4, 10, ACTOR_NPC_YUKIKABURI);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Aren't we to [CS:N]Jirachi[CR]'s place yet?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_YUKIKABURI>(4, 10, ACTOR_PLAYER_BIPPA);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Hmm... I don't really
+            know, either...
+        """,
+    });
+    message_Talk({
+        english="""
+             It's probably close. We just need
+            to go a little farther...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Is that right?!",
+    });
+    message_Talk({
+        english="""
+             All right, let's dig our heels in!
+            I'll do my best!
+        """,
+    });
+    message_Close();
+    end;
+}

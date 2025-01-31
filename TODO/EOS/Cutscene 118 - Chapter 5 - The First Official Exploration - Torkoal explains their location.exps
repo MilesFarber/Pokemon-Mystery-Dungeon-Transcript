@@ -1,0 +1,118 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    worldmap_SetMode(4);
+    worldmap_SetLevel(1);
+    back2_SetMode(3);
+    WaitSubScreen();
+    worldmap_SetCamera(192);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" There.[K] We are here.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    worldmap_SetArrow(192);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" This is the Hot Spring's location.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh. I get it.",
+            }
+        case 2:
+            {
+                english=" Oh. I see.",
+            }
+        default:
+            {
+                english=" Oh. OK.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    worldmap_DeleteArrow();
+    worldmap_MoveCamera(7);
+    WaitSubScreen();
+    worldmap_SetArrow(7);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" The waterfall is over here, so...",
+            }
+        case 2:
+            {
+                english=" The waterfall is here, so...",
+            }
+        default:
+            {
+                english="""
+                     The waterfall's located here,
+                    so...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hey! Check this out,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Hey! Check this out,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Hey! Check this out,
+                    [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    worldmap_DeleteArrow();
+    worldmap_MoveCamera(192);
+    WaitSubScreen();
+    worldmap_SetArrow(192);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The water carried us all the way
+                    over here.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The water carried us all the way
+                    over here.
+                """,
+            }
+        default:
+            {
+                english="""
+                     The water carried us all the way
+                    over here.
+                """,
+            }
+    }
+    message_Close();
+    se_Play(6667);
+    screen2_FadeOut(1, 15);
+    back2_SetMode(0);
+    end;
+}

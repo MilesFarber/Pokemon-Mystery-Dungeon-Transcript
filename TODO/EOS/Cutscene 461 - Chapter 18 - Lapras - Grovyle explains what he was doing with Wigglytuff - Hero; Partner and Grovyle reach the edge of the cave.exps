@@ -1,0 +1,249 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Grovyle[CR], how did you end up
+                    coming here?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Grovyle[CR], how did you know to
+                    join us here?
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Grovyle[CR], how did you end up
+                    coming here?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" [CS:N]Wigglytuff[CR] brought me.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? [CS:N]Wigglytuff[CR] did?",
+            }
+        case 2:
+            {
+                english=" What? [CS:N]Wigglytuff[CR] did?",
+            }
+        default:
+            {
+                english=" Pardon? [CS:N]Wigglytuff[CR] did?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             That's right. [CS:N]Wigglytuff[CR] had been
+            looking for me.
+        """,
+    });
+    message_Talk({
+        english="""
+             As soon as he found me, he
+            asked me to go with him. He said you were
+            close to finding the [CS:P]Hidden Land[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             It worked out fine, because I
+            planned to join you anyway.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Planned to join us...?[K]
+                    Wait, does that mean...?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Planned to join us...?[K]
+                    Wait, does that mean...?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Planned to join us...?[K]
+                    Wait, does that mean...?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             That's right.[K] I've collected all
+            the necessary Time Gears.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Awesome!",
+            }
+        case 2:
+            {
+                english=" Yes!",
+            }
+        default:
+            {
+                english=" Yes!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Now all we have to do is get to
+                    the [CS:P]Hidden Land[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     All we have to do now is get to
+                    the [CS:P]Hidden Land[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     All we have to do now is get to
+                    the [CS:P]Hidden Land[CR]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So let's find the place with
+                    the strange pattern!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So let's find that place with the
+                    strange pattern now!
+                """,
+            }
+        default:
+            {
+                english="""
+                     So let's get to the place with
+                    that strange pattern!
+                """,
+            }
+    }
+    message_Close();
+    back_SetGround(LEVEL_P11P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(1, Position<'m0', 32, 42.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 29, 43.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m2', 35, 47.5>);
+    ExecuteCommon<actor ACTOR_NPC_JUPUTORU>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.5, Position<'m3', 27, 41.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    se_Play(8967);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa! There's water here!",
+            }
+        case 2:
+            {
+                english=" Wow! There's water here!",
+            }
+        default:
+            {
+                english=" Wow! There's water here!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ...Wait a second. It's seawater!",
+            }
+        case 2:
+            {
+                english=" ...Hold on. This is seawater!",
+            }
+        default:
+            {
+                english=" ...Hold on. This is seawater!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m4', 29, 37.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.5, Position<'m5', 28, 37>);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(1, Position<'m6', 32, 35>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m7', 35, 37.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Look at that, [hero]!",
+            }
+        case 2:
+            {
+                english=" Look at that, [hero]!",
+            }
+        default:
+            {
+                english=" Look at that, [hero]!",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

@@ -1,0 +1,131 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 45];
+    message_Narration(30, {
+        english="[CN]The next morning...",
+    });
+    message_Close();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_H02P99A);
+    supervision_StationCommon(0);
+    supervision_LoadStation(LEVEL_H02P99A, 'US03');
+    supervision_Station(15);
+    supervision_Station(20);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_MANAFI>();
+    SetAnimation<actor ACTOR_NPC_MANAFI>(2);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER>(76);
+    SetAnimation<actor ACTOR_ATTENDANT1>(76);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_DO_YOUR_BEST_AS_ALWAYS, 0, 256);
+    Wait(30);
+    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetAnimation<actor ACTOR_PLAYER>(63);
+    Wait(5);
+    SetAnimation<actor ACTOR_ATTENDANT1>(63);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Good morning, [hero]!",
+            }
+        case 2:
+            {
+                english=" Good morning, [hero]!",
+            }
+        default:
+            {
+                english=" Good morning, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_MANAFI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    message_SetFace(ACTOR_NPC_MANAFI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Hi!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_MANAFI);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_MANAFI);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Good morning, [CS:N]Manaphy[CR]!",
+            }
+        case 2:
+            {
+                english=" Good morning, [CS:N]Manaphy[CR]!",
+            }
+        default:
+            {
+                english=" Good morning, [CS:N]Manaphy[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" All right, [hero].",
+            }
+        case 2:
+            {
+                english=" OK, [hero].",
+            }
+        default:
+            {
+                english=" OK, [hero].",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We need to give a [CS:I]Blue Gummi[CR]
+                    to [CS:N]Manaphy[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We need to give a [CS:I]Blue Gummi[CR]
+                    to [CS:N]Manaphy[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We need to give a [CS:I]Blue Gummi[CR]
+                    to [CS:N]Manaphy[CR]!
+                """,
+            }
+    }
+    message_Close();
+    screen2_FadeOut(1, 30);
+    back2_SetMode(0);
+    end;
+}

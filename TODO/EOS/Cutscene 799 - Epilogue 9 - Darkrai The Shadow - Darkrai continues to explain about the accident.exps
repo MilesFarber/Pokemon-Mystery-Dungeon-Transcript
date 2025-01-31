@@ -1,0 +1,30 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_V01P07B);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    camera_SetMyself<performer 0>();
+    MovePositionOffset<performer 0>(0.3984, -180, 0);
+    SetEffect<performer 3>(EFFECT_VERY_HEAVY_RAIN, 3);
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    screen_FadeIn(1, 30);
+    message_SetActor(ACTOR_NPC_DAAKURAI);
+    message_Talk({
+        english="""
+             Yes. You and [CS:N]Grovyle[CR] had an
+            accident while traveling through time.
+        """,
+    });
+    message_Talk({
+        english="""
+             You became separated as a
+            result of it.
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

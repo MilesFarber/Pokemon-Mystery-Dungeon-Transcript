@@ -1,0 +1,168 @@
+
+def 0 {
+    $SCENARIO_SIDE = scn[42, 5];
+    sound_Stop();
+    switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+    back2_SetMode(0);
+    back_SetGround(LEVEL_P19P01A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_AAMARUDO>();
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(2);
+    bgm_PlayFadeIn(BGM_A_FUN_EXPLORATION, 0, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m0', 28.5, 26>);
+    Wait(45);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_AAMARUDO>();
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UPRIGHT);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_LAUGHING, 3);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Good morning, Master. ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Oh hi, Junior.",
+    });
+    message_Talk({
+        english="""
+             Before you got here, I was doing
+            some research on [CS:P]Fortune Ravine[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             It's a lot harder than any of the
+            dungeons we've visited so far.
+        """,
+    });
+    message_Talk({
+        english="""
+             Even with my strength...[K]it will
+            probably be difficult.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Huh?[K] So we're not going?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_WORRIED, FACE_POS_TOP_RC_FACER);
+    message_Talk({
+        english="""
+             Maybe, maybe not.[K] I'm 
+            concerned about what to do.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m1', 31.5, 26>);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Let's go! ♪[K] It will be fine,
+            I know. ♪
+        """,
+    });
+    message_KeyWait();
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Together, Master and I
+            are invincible! ♪
+        """,
+    });
+    message_Talk({
+        english=" It's all right, all right! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" ...[K] (That's right...)",
+    });
+    message_Talk({
+        english="""
+             (No thanks to me...[K] This kid is
+            an exploration prodigy...)
+        """,
+    });
+    message_Talk({
+        english="""
+             (If I tried to go alone, I couldn't
+            do it...[K] But if he's with me...)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" ...[K]All right. [K]I agree.",
+    });
+    message_Talk({
+        english=" Let's go.[K] To [CS:P]Fortune Ravine[CR].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    Wait(15);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_JOYOUS, 3);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" M-Master!",
+    });
+    message_Talk({
+        english="""
+             I knew we were going to go![K]
+            That's my Master. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Take care of your exploration
+            preparations at the Kangaskhan Rock.
+        """,
+    });
+    message_Talk({
+        english=" Once you're ready, we'll go.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yep. ♪",
+    });
+    message_Close();
+    end;
+}

@@ -1,0 +1,176 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_I_SAW_SOMETHING_AGAIN, 0, 256);
+    back_SetGround(LEVEL_G01P10C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(44);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(45);
+    SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_RIGHT);
+    screen_FadeChange(1, 30, 0, 192);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Right then...[K]that Pokémon
+            handed me something...
+        """,
+    });
+    message_Talk({
+        english="""
+             And right afterward those two
+            scary-looking Pokémon arrived...[K]I was so
+            scared, I couldn't remember what happened.
+        """,
+    });
+    message_Talk({
+        english="""
+             But no matter how I try to
+            figure it out, I just can't...
+        """,
+    });
+    message_Talk({
+        english=" I guess I should look and see.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, -8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    se_Play(6667);
+    Wait(30);
+    supervision_Acting(1);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, 8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             ...[K]This is pretty old...[K]
+            It looks like a map.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(15);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             ...Huh?[K] There's some kind of
+            mark...[K] It looks like there's something written.
+        """,
+    });
+    message_Talk({
+        english="""
+             What could be written here,
+            I wonder?[K] Let's see...
+        """,
+    });
+    message_Talk({
+        english=" [CS:P]Star[CR]... [K][CS:P]Cave[CR]...?",
+    });
+    message_Talk({
+        english="""
+             At this marked spot...[K]seems
+            there's a place called [CS:P]Star Cave[CR]?
+        """,
+    });
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SIGH, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             However...[K][CS:P]Star Cave[CR]...[K]
+            It certainly sounds enticing...
+        """,
+    });
+    message_Talk({
+        english="""
+             Somehow I just get a feeling...[K]
+            There has to be something really special there.
+            
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Sniff...[K] Now I'm so excited,
+            I can't sleep. Yup yup...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(15);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             ...Nope.[K] I have to sleep if I
+            want to do any good at training tomorrow...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, -8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    se_Play(6667);
+    supervision_RemoveActing(1);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, 8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Sniff...[K] I really should sleep.[K]
+            Good night, you all.
+        """,
+    });
+    message_Close();
+    SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(25);
+    WaitAnimation<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(46);
+    Wait(60);
+    se_Play(9217);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_SPECIAL2, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             GUGOGOGOGOGOoooooooooaahhh!
+            GUGOGOGOGOGOoooooooooaaaaaaaaahhhhhhhhh!
+        """,
+    });
+    message_Talk({
+        english="""
+             GUGOah![K] GUGOGOGOGOGO!
+            GOGOGOGOGOGOGOooooooaaaaaaahhhhhhhhh!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SPECIAL2, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english=" Sniff...[K] Sniff...",
+    });
+    message_Talk({
+        english=" S-sleep.[K] Yup yup, sleepy time...",
+    });
+    message_Close();
+    Wait(45);
+    se_FadeOut(9217, 120);
+    screen_FadeOut(1, 120);
+    Wait(60);
+    end;
+}

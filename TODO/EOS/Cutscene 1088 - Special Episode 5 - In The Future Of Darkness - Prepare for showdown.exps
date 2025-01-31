@@ -1,0 +1,37 @@
+
+def 0 {
+    sound_Stop();
+    if ( $SCENARIO_MAIN_BIT_FLAG[8] ) {
+        @label_0;
+        $SCENARIO_MAIN_BIT_FLAG[8] = 0;
+        back_SetGround(LEVEL_D52P32A);
+        supervision_Acting(0);
+        camera_SetMyself<performer 0>();
+        bgm_PlayFadeIn(BGM_IN_THE_FUTURE, 0, 256);
+        screen_FadeIn(1, 30);
+        Wait(90);
+        MovePositionOffset<performer 0>(0.5, 0, 200);
+        Wait(150);
+        screen_FadeOut(1, 30);
+        end;
+    } else {
+        message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+        message_Talk({
+            english=" Looks like we made it through.",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+        message_Talk({
+            english=" I think the [CS:N]Sableye[CR] are up ahead.",
+        });
+        message_Talk({
+            english=" Let's proceed with caution.",
+        });
+        message_Close();
+        Wait(60);
+        $SCENARIO_MAIN_BIT_FLAG[8] = 1;
+        $COMPULSORY_SAVE_POINT_SIDE = 2;
+        CallCommon(CORO_HANYOU_SAVE_FUNC);
+        jump @label_0;
+    }
+}

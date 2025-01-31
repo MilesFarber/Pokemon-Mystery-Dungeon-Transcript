@@ -1,0 +1,87 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(140, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_P08P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_OH_NO, 0, 256);
+    Wait(30);
+    message_EmptyActor();
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(17);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI5>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI6>(17);
+    message_Talk({
+        english="[CS:N]Sableye[CR]: Wheh-heh-heh!",
+    });
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI6>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI6);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI5>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI6>(17);
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI6>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI6);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI5>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI6>(4);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:Y]Grovyle[CR]![K] You can't fail
+            this time!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Humph![K] I should say the
+            same thing!
+        """,
+    });
+    message_Talk({
+        english=" Let's go!",
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(12);
+    Wait(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(12);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(12);
+    Wait(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(12);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI5>(12);
+    Wait(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI6>(12);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    bgm_FadeOut(30);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(140, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

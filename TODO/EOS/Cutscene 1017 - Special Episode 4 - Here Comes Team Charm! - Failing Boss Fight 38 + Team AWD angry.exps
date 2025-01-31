@@ -1,0 +1,80 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D56P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm2_PlayFadeIn(BGM_CAVE_AMBIANCE, 30, 256);
+    screen_FadeIn(1, 30);
+    Wait(15);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_DORAPION>(EFFECT_SHOCKED_MIRRORED, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_MANYUURA>(EFFECT_SHOCKED, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_AABOKKU>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_DORAPION>();
+    WaitExecuteLives(ACTOR_NPC_DORAPION);
+    ExecuteCommon<actor ACTOR_NPC_MANYUURA>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_NPC_AABOKKU>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(7);
+    ExecuteCommon<actor ACTOR_NPC_DORAPION>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_DORAPION);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_AABOKKU, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english=" Th-they're...[K]not here!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DORAPION, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english=" Wh-where'd they go?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_ANGRY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Team [CS:X]Charm[CR]![K] They ran away!",
+    });
+    message_Close();
+    ExecuteCommon<actor ACTOR_NPC_MANYUURA>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MANYUURA);
+    Turn2Direction<actor ACTOR_NPC_MANYUURA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_MANYUURA);
+    Turn2Direction<actor ACTOR_NPC_DORAPION>(4, 10, DIR_UPLEFT);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_AABOKKU>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_AABOKKU);
+    message_SetFace(ACTOR_NPC_MANYUURA, FACE_ANGRY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Look for them![K] They should be
+            close by!
+        """,
+    });
+    message_Talk({
+        english=" Get the treasure from them!",
+    });
+    message_Close();
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_AABOKKU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(3);
+    ExecuteCommon<actor ACTOR_NPC_DORAPION>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_AABOKKU);
+    WaitExecuteLives(ACTOR_NPC_DORAPION);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Arbok[CR] & [CS:N]Drapion[CR]: YEAH!",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_NPC_DORAPION>(2.5, Position<'m0', 33, 56>);
+    Wait(12);
+    MovePositionMark<actor ACTOR_NPC_AABOKKU>(2.5, Position<'m1', 24, 56.5>);
+    Wait(12);
+    MovePositionMark<actor ACTOR_NPC_MANYUURA>(2.5, Position<'m2', 28.5, 56>);
+    Wait(24);
+    bgm2_FadeOut(120);
+    screen_FadeOut(1, 60);
+    Wait(60);
+    end;
+}

@@ -1,0 +1,69 @@
+
+def 0 {
+    sound_Stop();
+    se_Play(8198);
+    screen_WhiteOut(1, 30);
+    back_SetGround(LEVEL_D39P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(45);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_PARUKIA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PARUKIA>();
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" THEY...DISAPPEARED?",
+    });
+    message_Talk({
+        english=" NO! THEY HAVE MERELY FLED!",
+    });
+    message_Talk({
+        english="""
+             I HAD ALMOST DISPOSED OF
+            THEM FOREVER...[K] SO BE IT.
+        """,
+    });
+    message_Talk({
+        english="""
+             BUT THEY CAN NEVER ESCAPE
+            [CS:P]SPACIAL RIFT[CR]!
+        """,
+    });
+    message_Talk({
+        english="""
+             I WILL HUNT THEM DOWN...[K]
+            AND BE DONE WITH THEM! ONCE AND FOR ALL!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(25);
+    WaitAnimation<actor ACTOR_NPC_PARUKIA>();
+    se_Play(8200);
+    supervision_Acting(1);
+    SetOutputAttribute<object OBJECT_H02P99C5_120>(1);
+    SetAnimation<object OBJECT_H02P99C5_120>(17);
+    WaitAnimation<object OBJECT_H02P99C5_120>();
+    Wait(10);
+    message_SetActor(ACTOR_NPC_PARUKIA);
+    message_Talk({
+        english=" GRRR-OOOOOOOO!",
+    });
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    Destroy<actor ACTOR_NPC_PARUKIA>();
+    WaitExecuteObject(OBJECT_H02P99C5_120);
+    SetAnimation<object OBJECT_H02P99C5_120>(4);
+    Wait(10);
+    message_CloseEnforce();
+    SetAnimation<object OBJECT_H02P99C5_120>(22);
+    WaitAnimation<object OBJECT_H02P99C5_120>();
+    WaitExecuteObject(OBJECT_H02P99C5_120);
+    Destroy<object OBJECT_H02P99C5_120>();
+    Wait(30);
+    screen_FadeOut(1, 30);
+    Wait(60);
+    WaitSe(8200);
+    end;
+}

@@ -1,0 +1,234 @@
+
+def 0 {
+    sound_Stop();
+    if ( variation ) {
+        @label_0;
+        switch ( ProcessSpecial(53, -1, 0) ) { }
+        message_SetWaitMode(300, 300);
+        message_Explanation({
+            english="""
+                [CN]Thanks for playing!
+                [CN]We hope you enjoyed
+                [CN]the demo!
+            """,
+        });
+        message_KeyWait();
+        switch ( ProcessSpecial(PROCESS_SPECIAL_JUMP_TO_TITLE_SCREEN, 0, 0) ) { }
+        end;
+    } else {
+        back2_SetMode(4);
+        back2_SetGround(LEVEL_V02P06A);
+        camera2_SetPositionMark(Position<'m0', 19.5, 15.5>);
+        screen2_FadeIn(1, 60);
+        Wait(150);
+        screen2_FadeOut(1, 60);
+        back2_SetMode(0);
+        back_SetGround(LEVEL_G01P07C);
+        supervision_Acting(0);
+        camera_SetMyself<performer 0>();
+        SetAnimation<actor ACTOR_PLAYER>(76);
+        SetAnimation<actor ACTOR_ATTENDANT1>(76);
+        screen_FadeChange(1, 60, 0, 192);
+        bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+        Wait(30);
+        message_SetActor(ACTOR_ATTENDANT1);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Hey, [hero]...",
+                }
+            case 2:
+                {
+                    english=" Listen, [hero]...",
+                }
+            default:
+                {
+                    english=" Say, [hero]...",
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         Today was pretty hectic, wasn't
+                        it! So much happened!
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         Wasn't today hectic? So much
+                        happened!
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         Today was pretty hectic with
+                        everything we went through, wasn't it?
+                    """,
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         But I'm glad we managed to pull
+                        off our first job.
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         But I'm relieved that our first
+                        job was a success.
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         But I'm glad our first job turned
+                        out so well.
+                    """,
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         I was really steamed about how
+                        [CS:N]Wigglytuff[CR]'s Guild took most of the money...
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         It was really upsetting how
+                        [CS:N]Wigglytuff[CR]'s Guild took most of the money...
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         I was really mad about how
+                        [CS:N]Wigglytuff[CR]'s Guild took most of the money...
+                    """,
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         That's just the cost of training,
+                        I guess. We can't do anything about it.
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         That's just the cost of training,
+                        I guess. We can't do anything about it.
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         That's just the cost of training,
+                        I guess. We can't do anything about it.
+                    """,
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         What meant the most to me
+                        today, though, was getting thanked by [CS:N]Spoink[CR]!
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         But what made me really happy
+                        today, though, was getting thanked by [CS:N]Spoink[CR]!
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         But what made me really happy
+                        today, though, was getting thanked by [CS:N]Spoink[CR]!
+                    """,
+                }
+        }
+        message_Close();
+        Wait(45);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Yawn... I'm getting sleepy.",
+                }
+            case 2:
+                {
+                    english=" Yawn... I'm getting sleepy.",
+                }
+            default:
+                {
+                    english=" Yawn... I'm getting sleepy.",
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         I'm going to sleep.[K] Let's do a
+                        good job again tomorrow.
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         I'm going to sleep.[K] Let's try our
+                        best again tomorrow.
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         I'm going to sleep.[K] Let's try our
+                        best again tomorrow.
+                    """,
+                }
+        }
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Good night, [hero]...",
+                }
+            case 2:
+                {
+                    english=" Good night, [hero]...",
+                }
+            default:
+                {
+                    english=" Sleep tight, [hero]...",
+                }
+        }
+        message_Close();
+        Wait(30);
+        SetAnimation<actor ACTOR_ATTENDANT1>(62);
+        Wait(10);
+        SetAnimation<actor ACTOR_PLAYER>(62);
+        Wait(80);
+        bgm_FadeOut(120);
+        screen_FadeOut(1, 120);
+        WaitBgm(BGM_GOODNIGHT);
+        Wait(30);
+        if ( variation ) {
+            jump @label_0;
+        } else {
+            $SCENARIO_MAIN = scn[4, 0];
+            end;
+        }
+    }
+}

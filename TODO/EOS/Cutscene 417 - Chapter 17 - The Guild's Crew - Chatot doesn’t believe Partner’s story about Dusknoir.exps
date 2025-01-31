@@ -1,0 +1,608 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P04A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    Wait(30);
+    se_Play(5122);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_DOGOOMU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_GUREGGURU>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(18);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_SURPRISED, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" ...What?![K] What was that again?",
+    });
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_Talk({
+        english=" Just...[K]just hold on for a moment.",
+    });
+    message_Talk({
+        english=" Let me get this story straight!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" OK...",
+            }
+        case 2:
+            {
+                english=" OK...",
+            }
+        default:
+            {
+                english=" OK...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Ahem! Let me summarize your
+            story so far...
+        """,
+    });
+    message_Talk({
+        english="""
+             First...[K] [CS:N]Grovyle[CR] is actually a
+            good Pokémon...?
+        """,
+    });
+    message_Talk({
+        english="""
+             And he was collecting the Time
+            Gears to save the world?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Right.",
+            }
+        case 2:
+            {
+                english=" Yes.",
+            }
+        default:
+            {
+                english=" Yep!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             And the great [CS:N]Dusknoir[CR] only
+            pretended to be kind and helpful...?
+        """,
+    });
+    message_Talk({
+        english="""
+             But he was actually a heinous
+            and wicked villain?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Yup...though I didn't really
+                    phrase it as "heinous and wicked"...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Yes...though I didn't really
+                    phrase it as "heinous and wicked"...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Yep...though I didn't really
+                    phrase it as "heinous and wicked"...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Also, [hero] was really
+            [CS:N]Grovyle[CR]'s partner?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yup.",
+            }
+        case 2:
+            {
+                english=" Yes.",
+            }
+        default:
+            {
+                english=" Yep.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             So [CS:N]Dusknoir[CR] wanted to get rid
+            of both [hero] and [CS:N]Grovyle[CR]...?
+        """,
+    });
+    message_Talk({
+        english=" So he took them to the future?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yup. And me too.",
+            }
+        case 2:
+            {
+                english=" Yes. And me too.",
+            }
+        default:
+            {
+                english=" Yep. And me too.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Then you managed to escape
+            from [CS:N]Dusknoir[CR] by the skin of your teeth...?
+        """,
+    });
+    message_Talk({
+        english="""
+             And you barely made it back
+            home from the future?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yup.",
+            }
+        case 2:
+            {
+                english=" Yes.",
+            }
+        default:
+            {
+                english=" Yep.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             And finally, this planet will soon
+            become paralyzed...[K]and to prevent that...
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Grovyle[CR] has started gathering
+            Time Gears again?
+        """,
+    });
+    message_Talk({
+        english="""
+             Meanwhile, you two are
+            looking for a place called the [CS:P]Hidden Land[CR]?[K]
+            Is that your story in its full entirety?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yup. That's all of it!",
+            }
+        case 2:
+            {
+                english=" Yes. That's all of it!",
+            }
+        default:
+            {
+                english=" Yep! That's all of it!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" ........................",
+    });
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_JOYOUS, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Hee![K] Hee-heeee! Hee-heeee!",
+    });
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_LAUGHING, 3);
+    message_KeyWait();
+    message_Talk({
+        english=" [partner] and [hero]...",
+    });
+    message_Talk({
+        english="""
+             You must have had a bad dream
+            or something!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What?!",
+            }
+        case 2:
+            {
+                english=" What?!",
+            }
+        default:
+            {
+                english=" What?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             Why don't you two just go to
+            your room and get some rest! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Now, wait a second!",
+            }
+        case 2:
+            {
+                english=" What? Wait a second!",
+            }
+        default:
+            {
+                english=" Now, hold on a second!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" You're saying we're lying?",
+            }
+        case 2:
+            {
+                english=" You think we're lying?",
+            }
+        default:
+            {
+                english=" Are you accusing us of lying?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     What we just told you, it's true.
+                    All of it.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     What we just told you is
+                    all true.
+                """,
+            }
+        default:
+            {
+                english="""
+                     What we just told you is
+                    all true.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_HAPPY, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" I'm sure...I'm sure... ♪",
+    });
+    message_Talk({
+        english="""
+             I'm sure you two are suffering
+            from exhaustion!
+        """,
+    });
+    message_Talk({
+        english=" A good nap will fix that! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's not it, [CS:N]Chatot[CR]![K] I tell you,
+                    we're not lying!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's not it, [CS:N]Chatot[CR]![K] Seriously,
+                    we're telling you the truth!
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's not it, [CS:N]Chatot[CR]![K] Please
+                    believe us, we're not lying!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5122);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(18);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_ANGRY, 3);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_ANGRY, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" That's quite enough!",
+    });
+    message_Talk({
+        english="""
+             So tell me! Is there any part of
+            your story that's even remotely plausible?
+        """,
+    });
+    message_Talk({
+        english=" A place called the [CS:P]Hidden Land[CR]?!",
+    });
+    message_Talk({
+        english="""
+             I'm the head of intelligence here,
+            and I've heard of no such place.
+        """,
+    });
+    message_Talk({
+        english="""
+             Besides, the great [CS:N]Dusknoir[CR] is
+            far too kind to do anything like you've alleged!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_NONE, 3);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Well, sure, I couldn't believe the
+                    truth about [CS:N]Dusknoir[CR] either...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Well, yes, I couldn't believe the
+                    truth about [CS:N]Dusknoir[CR] either...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Well, yes, I couldn't believe the
+                    truth about [CS:N]Dusknoir[CR] either...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It was a huge shock. And it was
+                    really hard to accept.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It came as a huge shock. And it
+                    was really hard to accept.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It was a huge shock. And it was
+                    really hard to accept.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But...!",
+            }
+        case 2:
+            {
+                english=" But...!",
+            }
+        default:
+            {
+                english=" But...!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5122);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(18);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_ANGRY, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" I'll hear no more of this!",
+    });
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_KeyWait();
+    message_Talk({
+        english="""
+             I don't care what you say! The
+            great [CS:N]Dusknoir[CR], the villain?!
+        """,
+    });
+    message_KeyWait();
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_Talk({
+        english=" That's simply unbelievable!",
+    });
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Seriously, don't you two feel the
+            same way?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             How can anybody seriously think
+            of the great [CS:N]Dusknoir[CR] as a villain?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(4);
+    message_SetFace(ACTOR_NPC_DAGUTORIO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" We hold [CS:N]Dusknoir[CR] in high esteem.",
+    });
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNLEFT);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_DAGUTORIO);
+    message_Talk({
+        english=" We cannot believe it.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+    ExecuteCommon<actor ACTOR_NPC_PERAPPU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" See?![K] See?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    se_Play(5122);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(26);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PERAPPU);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PERAPPU);
+    message_Talk({
+        english="""
+             See?[K] Everyone shares the
+            same opinion!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" But...",
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_NPC_KIMAWARI);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_KIMAWARI);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    Turn2DirectionLives<actor ACTOR_NPC_PUKURIN>(4, 10, ACTOR_NPC_KIMAWARI);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_NPC_KIMAWARI);
+    Turn2DirectionLives<actor ACTOR_NPC_DIGUDA>(4, 10, ACTOR_NPC_KIMAWARI);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UPRIGHT);
+    Turn2DirectionLives<actor ACTOR_NPC_GUREGGURU>(4, 10, ACTOR_NPC_KIMAWARI);
+    Turn2DirectionLives<actor ACTOR_NPC_DAGUTORIO>(4, 10, ACTOR_NPC_KIMAWARI);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_KIMAWARI);
+    Turn2DirectionLives<actor ACTOR_NPC_DOGOOMU>(4, 10, ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Hm?[K] What is it, [CS:N]Sunflora[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             There is something I don't 
+            understand.
+        """,
+    });
+    message_Talk({
+        english=" That time...",
+    });
+    message_Talk({
+        english="""
+             when the great [CS:N]Dusknoir[CR] was
+            about to return to the future...
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

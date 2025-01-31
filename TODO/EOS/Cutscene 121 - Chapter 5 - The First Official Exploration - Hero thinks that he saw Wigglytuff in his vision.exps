@@ -1,0 +1,71 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_THAT_SHAPE, 0, 256);
+    back_SetGround(LEVEL_S02P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    screen_FlushOut(1, 0, 6, 0, 0, 0);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(23);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    Wait(30);
+    message_SetActor(ACTOR_PLAYER);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That shape...)",
+            }
+        default:
+            {
+                english="(That shape...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I've seen that shape before...)",
+            }
+        default:
+            {
+                english="(I've seen that shape before...)",
+            }
+    }
+    message_SetActor(ACTOR_PLAYER);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That shape...[K] There's no mistaking it!)",
+            }
+        default:
+            {
+                english="(That shape...[K] There's no mistaking it!)",
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    Wait(20);
+    SetDirection<actor ACTOR_NPC_PUKURIN>(DIR_DOWNRIGHT);
+    WaitAnimation<actor ACTOR_NPC_PUKURIN>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    se_Play(8966);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    SetDirection<actor ACTOR_NPC_PUKURIN>(DIR_RIGHT);
+    WaitSe(8966);
+    message_SetActor(ACTOR_PLAYER);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That was...[K][CS:N]Wigglytuff[CR]!)",
+            }
+        default:
+            {
+                english="(That was...[K][CS:N]Wigglytuff[CR]!)",
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

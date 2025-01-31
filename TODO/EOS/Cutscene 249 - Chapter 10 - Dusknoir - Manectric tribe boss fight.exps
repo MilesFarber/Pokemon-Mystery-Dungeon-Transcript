@@ -1,0 +1,78 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(19, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D12P41A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(6401);
+    screen_WhiteOut(1, 3);
+    Wait(3);
+    screen_FadeIn(1, 3);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_RAIBORUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" You trespass again?!",
+    });
+    message_Talk({
+        english=" To claim our territory?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitSe(6401);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" You're wrong! We came to...",
+            }
+        case 2:
+            {
+                english="""
+                     You've got it wrong! We came
+                    only to...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Please, no! You're wrong!
+                    We came only to...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_RAIBORUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Save your lies!",
+    });
+    message_Talk({
+        english=" Prepare to fight!",
+    });
+    message_Close();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(19, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

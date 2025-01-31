@@ -1,0 +1,52 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(37, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D26P43A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_KABUTOPUSU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" You again!",
+    });
+    message_Talk({
+        english="""
+             You can come back all you want!
+            Nothing will ever change!
+        """,
+    });
+    message_Talk({
+        english="""
+             Every time you come here...[K]
+            We will always crush you!
+        """,
+    });
+    message_Talk({
+        english=" Take THIS!",
+    });
+    SetAnimation<actor ACTOR_NPC_KABUTOPUSU>(12);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(37, 0);
+    main_EnterDungeon(-1, 0);
+    hold;
+    end;
+}

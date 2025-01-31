@@ -1,0 +1,34 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    back_SetGround(LEVEL_V03P09A);
+    back_SetBackScrollSpeed(3, 3);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    back_SetEffect(7, 0);
+    back_SetBackEffect(2);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_EmptyActor();
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (When I saw the Time Gear...[K] Why did my
+                    heart start pounding so wildly...?)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (When I saw the Time Gear...[K] Why did my
+                    heart start pounding so wildly...?)
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 60);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

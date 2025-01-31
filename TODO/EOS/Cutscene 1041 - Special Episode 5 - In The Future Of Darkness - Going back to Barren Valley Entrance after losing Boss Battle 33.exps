@@ -1,0 +1,40 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Argh...[K] That didn't go well...",
+    });
+    message_Talk({
+        english=" I should turn back for now.",
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D46P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(29);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_BARREN_VALLEY, 0, 256);
+    Wait(30);
+    Wait(15);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(31);
+    WaitAnimation<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I can't falter now.",
+    });
+    message_Talk({
+        english=" I can't waste any time.",
+    });
+    message_Close();
+    end;
+}

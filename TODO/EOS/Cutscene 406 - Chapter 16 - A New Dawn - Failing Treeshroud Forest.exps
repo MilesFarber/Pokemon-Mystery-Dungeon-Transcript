@@ -1,0 +1,194 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh! We blew that attempt!",
+            }
+        case 2:
+            {
+                english=" Ugh! We didn't make it.",
+            }
+        default:
+            {
+                english=" Ugh! That ended badly.",
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D24P11A);
+    supervision_LoadStation(LEVEL_D24P11A, 'UM20');
+    supervision_Station(2);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_TREESHROUD_FOREST, 0, 256);
+    Wait(30);
+    WaitLockLives(5, ACTOR_PLAYER);
+    Unlock(5);
+    Wait(15);
+    Unlock(7);
+    Wait(15);
+    Unlock(9);
+    Lock(3);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_DOWN);
+    Wait(15);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh...we were careless.",
+            }
+        case 2:
+            {
+                english="""
+                     Ugh...we were caught being
+                    careless.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Ugh...we should have been
+                    more careful.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" This is pretty rough going...",
+            }
+        case 2:
+            {
+                english=" This isn't quite so easy...",
+            }
+        default:
+            {
+                english=" It's harder than I thought...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_JUPUTORU);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" I thought so.",
+    });
+    message_Talk({
+        english="""
+             This place does feel different
+            compared to my last time through.
+        """,
+    });
+    message_Talk({
+        english="""
+             The Pokémon here weren't so
+            savage before.
+        """,
+    });
+    message_Talk({
+        english="""
+             There may be something taking
+            place here...
+        """,
+    });
+    message_Talk({
+        english=" ...somewhere in its depths.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Ugh! We should pick up the
+                    pace then.
+                """,
+            }
+        case 2:
+            {
+                english=" Ugh! We'd better hurry up then.",
+            }
+        default:
+            {
+                english=" Ugh! We'd better hurry then.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     When you're ready, we have to
+                    go back into the forest, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     When you're ready, let's go back
+                    into the forest, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     When you're ready, let's go back
+                    into the forest, [hero].
+                """,
+            }
+    }
+    message_Close();
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetDirection(DIR_RIGHT);
+    SetAnimation(76);
+    Lock(5);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_DOWN_FUNC);
+    Lock(6);
+    hold;
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetDirection(DIR_LEFT);
+    SetAnimation(76);
+    Lock(7);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Unlock(3);
+    Lock(8);
+    hold;
+}
+
+def 3 for actor ACTOR_NPC_JUPUTORU {
+    SetAnimation(29);
+    Lock(9);
+    SetAnimation(31);
+    WaitAnimation();
+    SetAnimation(2);
+    CallCommon(CORO_LOOK_AROUND_LEFT_FUNC);
+    Lock(10);
+    hold;
+}

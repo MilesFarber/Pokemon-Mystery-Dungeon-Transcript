@@ -1,0 +1,146 @@
+
+def 0 {
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V26P04A);
+    back_SetGround(LEVEL_P12P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    camera2_SetPositionMark(Position<'m0', 18.5, 17.5>);
+    back_SetBackScrollSpeed(0, 3.0);
+    back2_SetBackScrollSpeed(0, 6.3984);
+    SetOutputAttribute<object OBJECT_V26P04A1_323>(8);
+    MovePositionOffset<object OBJECT_V26P04A1_323>(0.0664, 0, -800);
+    SetOutputAttribute<object OBJECT_V26P04A2_326>(4);
+    SetOutputAttribute<object OBJECT_V26P04A2_326>(8);
+    MovePositionOffset<object OBJECT_V26P04A2_326>(0.1172, 0, -800);
+    WaitBgmSignal();
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(120);
+    message_SetWaitMode(210, 90);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:P]Temporal Tower[CR] is...[K]getting
+                    farther and farther away...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:P]Temporal Tower[CR] is...[K]getting
+                    farther and farther away...
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:P]Temporal Tower[CR] is...[K]getting
+                    farther and farther away...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(45);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" .....................",
+            }
+        case 2:
+            {
+                english=" .....................",
+            }
+        default:
+            {
+                english=" .....................",
+            }
+    }
+    message_KeyWait();
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And [hero]...[K] I'm getting 
+                    farther away from [hero]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And [hero]...[K] I'm getting 
+                    farther away from [hero]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     And [hero]...[K] I'm getting 
+                    farther away from [hero]...
+                """,
+            }
+    }
+    message_KeyWait();
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, [hero]...",
+            }
+        case 2:
+            {
+                english=" Oh, [hero]...",
+            }
+        default:
+            {
+                english=" Oh, [hero]...",
+            }
+    }
+    message_Close();
+    Wait(90);
+    bgm_FadeOut(240);
+    screen2_FadeOut(0, 160);
+    screen_FadeOut(1, 160);
+    back2_SetMode(0);
+    message_SetWaitMode(-1, -1);
+    WaitBgm(BGM_FARTHER_AWAY);
+    bgm_PlayFadeIn(BGM_A_WISH_FOR_PEACE, 0, 180);
+    message_Narration(30, {
+        english="""
+            [CN]And so, [hero]
+            [CN]and [partner]...
+        """,
+    });
+    message_Narration(30, {
+        english="[CN]finally succeeded in their mission...",
+    });
+    message_Narration(30, {
+        english="[CN]and saved the world from disaster.",
+    });
+    message_Narration(30, {
+        english="""
+            [CN][partner] departed from
+            [CN][CS:P]Temporal Tower[CR]...
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]traveled across the
+            [CN]ravaged [CS:P]Hidden Land[CR]...
+        """,
+    });
+    message_Narration(30, {
+        english="[CN]rode [CS:N]Lapras[CR] across the sea...",
+    });
+    message_Narration(30, {
+        english="""
+            [CN]and safely returned
+            [CN]to Treasure Town.
+        """,
+    });
+    message_Close();
+    Wait(60);
+    end;
+}

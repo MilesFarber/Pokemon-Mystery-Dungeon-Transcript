@@ -1,0 +1,75 @@
+
+def 0 {
+    sound_Stop();
+    message_Narration(30, {
+        english="[CN]The next morning...",
+    });
+    message_Close();
+    Wait(30);
+    se_Play(8971);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             HEY![K]
+            HEEEEEEEEEYYYYYYYYYYY!!!
+        """,
+    });
+    message_KeyWait();
+    se_Play(8970);
+    message_Talk({
+        english="""
+             GET UUUUUUUUUUUUUUPPPPPP![K]
+            IT'S MOOOOOOOOORNNNIIIIIIIIIINNNNNNGGGG!
+        """,
+    });
+    WaitSe(8970);
+    message_Close();
+    back_SetGround(LEVEL_G01P10A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(27);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8971);
+    camera_SetEffect(2, 2, 3.0);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(18);
+    WaitAnimation<actor ACTOR_NPC_DOGOOMU>();
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    camera_SetEffect(0, 0, 0);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             IT'S MOOOOOORNIIIIIIINNNNGGG!
+            HURRY AND GET UUUUUUUUUUUUUUUUPPPPP!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1, Position<'m0', 27, 15.5>);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    Destroy<actor ACTOR_NPC_DOGOOMU>();
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_DIZZY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Hu-uuh...?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(28);
+    WaitAnimation<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    $SCENARIO_MAIN_BIT_FLAG[1] = 1;
+    main_SetGround(LEVEL_G01P10A);
+    $SCENARIO_MAIN_BIT_FLAG[7] = 1;
+    CallCommon(CORO_HANYOU_SAVE_FUNC);
+    end;
+}

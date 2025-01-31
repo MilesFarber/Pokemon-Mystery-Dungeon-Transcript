@@ -1,0 +1,171 @@
+
+def 0 {
+    Wait(60);
+    $SCENARIO_MAIN = scn[23, 2];
+    back_SetGround(LEVEL_P01P03A);
+    supervision_StationCommon(7);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    MovePositionMark<actor ACTOR_NPC_KOOTASU>(0.5, Position<'m0', 27, 23>);
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Oh, to be young again!",
+    });
+    message_Talk({
+        english="""
+             If I was younger, I'd certainly
+            join the challenge to find the [CS:P]Hidden Land[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_NONE, 3);
+    bgm_FadeOut(10);
+    message_ResetActor();
+    message_Talk({
+        english=" Whoa-ho-ho![K] Hold it there, old-timer!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    Wait(15);
+    se_Play(8963);
+    ExecuteCommon<actor ACTOR_NPC_KOOTASU>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_SURPRISED, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Wh-who is it?",
+    });
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_TEAM_SKULL, 0, 256);
+    MovePositionMark<actor ACTOR_NPC_ZUBATTO>(1.5, Position<'m1', 27, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGAASU>(1.5, Position<'m2', 27, 26.5>);
+    MovePositionMark<actor ACTOR_NPC_SUKATANKU>(1, Position<'m3', 31.5, 23>);
+    Wait(60);
+    Turn2Direction<actor ACTOR_NPC_KOOTASU>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_UP);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    ExecuteCommon<actor ACTOR_NPC_KOOTASU>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Wha-what is it? What do you
+            want?
+        """,
+    });
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Chaw-haw-haw! Well, we're
+            Team [CS:X]Skull[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Heh-heh! Did you have business
+            with [CS:N]Wigglytuff[CR]'s Guild, old-timer?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english="""
+             Whoa-ho-ho! I overheard you
+            say something that sounded fun!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Something about the [CS:P]Hidden Land[CR].
+            Chaw-haw-haw!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" I... I was only...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(1, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_ZUBATTO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_ZUBATTO>();
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Huh? Someone's coming!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SUKATANKU>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    Turn2Direction<actor ACTOR_NPC_KOOTASU>(8, 10, DIR_UP);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" Whoa-ho-ho! Guild chumps?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_SUKATANKU>(4, 10, ACTOR_NPC_KOOTASU);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    Turn2DirectionLives<actor ACTOR_NPC_KOOTASU>(8, 10, ACTOR_NPC_SUKATANKU);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 2, DIR_DOWN);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Old-timer...",
+    });
+    message_Talk({
+        english="""
+             Why don't we take this chat
+            somewhere we won't be disturbed? Chaw-haw!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_KOOTASU>();
+    WaitExecuteLives(ACTOR_NPC_KOOTASU);
+    message_SetFace(ACTOR_NPC_KOOTASU, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Hey...!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionMark<actor ACTOR_NPC_ZUBATTO>(1, Position<'m4', 25, 23>);
+    Turn2Direction<actor ACTOR_NPC_SUKATANKU>(4, 10, DIR_RIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 10, DIR_RIGHT);
+    MovePositionOffset<actor ACTOR_NPC_SUKATANKU>(1, 160, 0);
+    Wait(10);
+    MovePositionOffset<actor ACTOR_NPC_KOOTASU>(1, 160, 0);
+    MovePositionOffset<actor ACTOR_NPC_DOGAASU>(1, 160, 0);
+    MovePositionOffset<actor ACTOR_NPC_ZUBATTO>(1, 160, 0);
+    Wait(60);
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    Wait(30);
+    WaitBgm(BGM_TEAM_SKULL);
+    main_SetGround(LEVEL_G01P04A);
+    main_EnterGround(LEVEL_G01P03A, 30);
+    hold;
+    end;
+}

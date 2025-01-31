@@ -1,0 +1,683 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D17P45A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_AGUNOMU>(24);
+    screen_FadeIn(1, 30);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(12);
+    WaitAnimation<actor ACTOR_NPC_JUPUTORU>();
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    MovePositionMark<performer 0>(2.5, Position<'m0', 43.5, 28.5>);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    SlidePositionMark<actor ACTOR_ATTENDANT1>(3, Position<'m1', 43.5, 28.5>);
+    Wait(3);
+    screen_FadeIn(1, 2);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SlidePositionMark<actor ACTOR_PLAYER>(3, Position<'m2', 49, 26.5>);
+    SetEffect<actor ACTOR_UNIT_NPC1>(EFFECT_SHOCKED_MIRRORED, 3);
+    Slide2PositionMark<actor ACTOR_UNIT_NPC1>(3, Position<'m3', 35.5, 26.5>);
+    SetEffect<actor ACTOR_UNIT_NPC2>(EFFECT_SHOCKED_MIRRORED, 3);
+    Slide2PositionMark<actor ACTOR_UNIT_NPC2>(3, Position<'m4', 31, 24.5>);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(68);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(68);
+    SetAnimation<actor ACTOR_UNIT_NPC1>(11);
+    SetAnimation<actor ACTOR_UNIT_NPC2>(11);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(2);
+    message_SetFace(ACTOR_PLAYER, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Urgh...)",
+            }
+        default:
+            {
+                english="(Urgh...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urrrggh...",
+            }
+        case 2:
+            {
+                english=" Urrrggh...",
+            }
+        default:
+            {
+                english=" Urrrggh...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, -1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, -1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.7969, Position<'m5', 43.5, 23>);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Get out of the way!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, -1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, -1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(8968);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" (I...I can't talk...)",
+            }
+        case 2:
+            {
+                english=" (I...I can't talk...)",
+            }
+        default:
+            {
+                english=" (I...I can't talk...)",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     .......................................
+                    (But...[K]I won't step aside!)
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     .......................................
+                    (But...[K]I won't step aside!)
+                """,
+            }
+        default:
+            {
+                english="""
+                     .......................................
+                    (But...[K]I won't step aside! Ever!)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" You refuse?!",
+    });
+    message_Talk({
+        english=" Then you leave me no choice!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5124);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(25);
+    Wait(15);
+    message_SetFace(ACTOR_PLAYER, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(N-no!)",
+            }
+        default:
+            {
+                english="(N-no!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([partner]'s in serious trouble!)",
+            }
+        default:
+            {
+                english="([partner]'s in serious trouble!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(B-but...I can't move...)",
+            }
+        default:
+            {
+                english="(B-but...I can't move...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" .................. (Urk...)",
+            }
+        case 2:
+            {
+                english=" .................. (Urk...)",
+            }
+        default:
+            {
+                english=" .................. (Urk...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" This is all for the Time Gear!",
+    });
+    message_Talk({
+        english=" Forgive me!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SHOUTING, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ..................! (WAAAAAAAAAH!)",
+            }
+        case 2:
+            {
+                english=" ..................! (WAAAAAAAAAH!)",
+            }
+        default:
+            {
+                english=" ..................! (WAAAAAAAAAH!)",
+            }
+    }
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(12);
+    Wait(15);
+    se_Play(7690);
+    screen_WhiteOut(1, 5);
+    Wait(15);
+    message_CloseEnforce();
+    Wait(10);
+    message_EmptyActor();
+    message_Talk({
+        english="""
+            
+            [CN]Stop!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_Acting(1);
+    Wait(1);
+    SetPositionOffset<actor ACTOR_NPC_JUPUTORU>(0, -8);
+    screen_FadeIn(1, 1);
+    se_Play(7180);
+    WaitSe(7180);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Gah!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" (Oh! [CS:N]Dusknoir[CR]!)",
+            }
+        case 2:
+            {
+                english=" (Oh! [CS:N]Dusknoir[CR]!)",
+            }
+        default:
+            {
+                english=" (Oh! [CS:N]Dusknoir[CR]!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english=" Are you all right, [partner]?",
+    });
+    message_Talk({
+        english=" Please! Let me handle this!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(12);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU>();
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_SHOCKED, 3);
+    MovePositionMark<performer 0>(2.5, Position<'m6', 43.5, 26>);
+    SlidePositionMark<actor ACTOR_NPC_JUPUTORU>(2.5, Position<'m7', 43.5, 18.5>);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(29);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(2);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_PAIN, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Rrrroh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(31);
+    WaitAnimation<actor ACTOR_NPC_JUPUTORU>();
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(2);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Y-you?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_YONOWAARU>(0.2969, 0, -8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english=" It's been too long!",
+    });
+    message_KeyWait();
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    message_Talk({
+        english="""
+             It wasn't easy finding you,
+            [CS:N]Grovyle[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" (Huh? What was that?!)",
+            }
+        case 2:
+            {
+                english=" (What...what was that?!)",
+            }
+        default:
+            {
+                english=" (What...what was that?!)",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     .................................
+                    (The great [CS:N]Dusknoir[CR] knows [CS:N]Grovyle[CR]?!)
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     .................................
+                    (The great [CS:N]Dusknoir[CR] knows [CS:N]Grovyle[CR]?!)
+                """,
+            }
+        default:
+            {
+                english="""
+                     .................................
+                    (The great [CS:N]Dusknoir[CR] knows [CS:N]Grovyle[CR]?!)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Gah!",
+    });
+    message_Talk({
+        english="""
+             Even here...[K]you chased me
+            even here!
+        """,
+    });
+    message_Talk({
+        english="""
+             You're tenacious, all right! You
+            cling to me beyond expectation!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             [CS:N]Grovyle[CR]! You're not getting away
+            this time!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_SIGH, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" [CS:N]Dusknoir[CR]...",
+    });
+    message_Talk({
+        english="""
+             I'm surprised to see you in
+            this world...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" But I'm ready!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(10);
+    se_Play(5124);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(25);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english=" So you'll fight.[K] Then so be it.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(7179);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(25);
+    Wait(30);
+    message_Talk({
+        english=" But can you win?[K] Against ME?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(7690);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(12);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(12);
+    Wait(15);
+    screen_WhiteOut(1, 1);
+    Destroy<actor ACTOR_NPC_JUPUTORU>();
+    Wait(45);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(2);
+    MovePositionOffset<actor ACTOR_NPC_YONOWAARU>(1, 0, -8);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    screen_FadeIn(1, 1);
+    Wait(15);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ([CS:N]Grovyle[CR] vanished?!)",
+            }
+        case 2:
+            {
+                english=" ([CS:N]Grovyle[CR] vanished?!)",
+            }
+        default:
+            {
+                english=" ([CS:N]Grovyle[CR] vanished?!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_YONOWAARU>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             That blasted [CS:N]Grovyle[CR]![K] He never
+            intended to fight me at all!
+        """,
+    });
+    message_Talk({
+        english=" There's no escaping ME!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(7181);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU>(26);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    Destroy<actor ACTOR_NPC_YONOWAARU>();
+    Wait(30);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     .................................
+                    (The great [CS:N]Dusknoir[CR] vanished too?!)
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     .................................
+                    (The great [CS:N]Dusknoir[CR] vanished too?!)
+                """,
+            }
+        default:
+            {
+                english="""
+                     .................................
+                    (The great [CS:N]Dusknoir[CR] vanished too?!)
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     .................................
+                    (What just happened?! I don't understand!)
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     .................................
+                    (What just happened?! I don't understand!)
+                """,
+            }
+        default:
+            {
+                english="""
+                     .................................
+                    (What just happened?! I don't understand!)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, -1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, 1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1, -1, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     .................................
+                    (Urgh... Trying to move, but I can't...)
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     .................................
+                    (Urgh... Trying to move, but I can't...)
+                """,
+            }
+        default:
+            {
+                english="""
+                     .................................
+                    (Urgh... Trying to move, but I can't...)
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     .................................
+                    (I can't...[K] Feeling faint...)
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     .................................
+                    (I can't...[K] Feeling faint...)
+                """,
+            }
+        default:
+            {
+                english="""
+                     .................................
+                    (I can't...[K] Feeling faint...)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_ATTENDANT1>(72);
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    supervision_Acting(2);
+    Wait(1);
+    message_SetActor(ACTOR_NPC_KIMAWARI);
+    message_Talk({
+        english=" Eek! There! There they are!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_HEIGANI);
+    message_Talk({
+        english=" Hey, hey! Come on, hurry!",
+    });
+    message_Close();
+    MovePositionMark<performer 0>(1, Position<'m8', 43.5, 36>);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1.1992, Position<'m9', 36, 35.5>);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m10', 39.5, 34.5>);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1.1992, Position<'m11', 47, 36.5>);
+    MovePositionMark<actor ACTOR_NPC_DAGUTORIO>(1.1992, Position<'m12', 43.5, 37.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1.1992, Position<'m13', 50, 34.5>);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_UPRIGHT);
+    WaitExecutePerformer(0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    se_Play(8974);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_EXCLAMATION_MARK, 3);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_SHOCKED, 3);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Oh, golly! They're down!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Hey, hey! Are you all right?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DAGUTORIO, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" They're badly hurt!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_KIMAWARI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hurry! We need to get them
+            back to the guild for treatment!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" All right!",
+    });
+    message_Close();
+    MovePositionOffset<actor ACTOR_NPC_HEIGANI>(1, 0, -48);
+    Wait(15);
+    Move2PositionMark<actor ACTOR_NPC_KIMAWARI>(1, Position<'m14', 40, 31.5>);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m15', 47, 29.5>);
+    MovePositionMark<actor ACTOR_NPC_DAGUTORIO>(1, Position<'m16', 43.5, 33.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1, Position<'m17', 50, 28.5>);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1, Position<'m18', 41.5, 28.5>);
+    screen_FadeOut(1, 60);
+    Wait(30);
+    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+    worldmap_SetMode(3);
+    worldmap_SetLevel(4);
+    back2_SetMode(3);
+    WaitSubScreen();
+    worldmap_ChangeLevel(5);
+    worldmap_SetCamera(26);
+    WaitSubScreen();
+    message_Mail({
+        english="""
+            [CN]The clouds parted over
+            [CN][CS:P]Crystal Crossing[CR] and the
+            [CN]vicinities of the [CS:P]Forest Area[CR]!
+        """,
+    });
+    message_Close();
+    screen2_FadeOut(1, 15);
+    back2_SetMode(0);
+    $SCENARIO_MAIN_BIT_FLAG[8] = 1;
+    $COMPULSORY_SAVE_POINT = 13;
+    CallCommon(CORO_HANYOU_SAVE_FUNC);
+    end;
+}

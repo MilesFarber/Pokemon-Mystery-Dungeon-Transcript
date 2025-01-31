@@ -1,0 +1,197 @@
+
+def 0 {
+    message_Narration(30, {
+        english="[CN]And so...",
+    });
+    message_Narration(30, {
+        english="""
+            [CN]And so my exploration of [CS:P]Star Cave[CR]
+            [CN]came to an end, yup yup.
+        """,
+    });
+    message_Narration(30, {
+        english="[CN]And now...",
+    });
+    message_Close();
+    back_SetGround(LEVEL_G01P04A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_A_WISH_FOR_PEACE, 0, 256);
+    Wait(30);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_PARTNER_FIRST>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PARTNER_FIRST>();
+    WaitExecuteLives(ACTOR_NPC_PARTNER_FIRST);
+    message_SetFace(ACTOR_NPC_PARTNER_FIRST, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? [c_name:NPC_HERO_FIRST].",
+            }
+        case 2:
+            {
+                english=" Huh? [c_name:NPC_HERO_FIRST].",
+            }
+        default:
+            {
+                english=" Huh? [c_name:NPC_HERO_FIRST].",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Your eyes look a bit puffy,
+                    [c_name:NPC_HERO_FIRST]... What's wrong?[K] Couldn't sleep?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Your eyes look a bit puffy,
+                    [c_name:NPC_HERO_FIRST]... What's wrong?[K] Couldn't sleep?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Your eyes look a bit puffy,
+                    [c_name:NPC_HERO_FIRST]... What's wrong?[K] Couldn't sleep?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ...Huh?[K] My eyes too?",
+            }
+        case 2:
+            {
+                english=" ...Huh?[K] My eyes too?",
+            }
+        default:
+            {
+                english=" ...Huh?[K] My eyes too?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I see.[K] We're pretty busy every
+                    day with assignments, aren't we?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I see.[K] We're pretty busy every
+                    day with assignments, aren't we?
+                """,
+            }
+        default:
+            {
+                english="""
+                     I see.[K] We're pretty busy every
+                    day with assignments, aren't we?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PARTNER_FIRST>(EFFECT_LAUGHING, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_HERO_FIRST>(EFFECT_LAUGHING, 3);
+    Wait(60);
+    SetEffect<actor ACTOR_NPC_PARTNER_FIRST>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_HERO_FIRST>(EFFECT_NONE, 3);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PARTNER_FIRST, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We've just entered the guild,
+                    and there's still so much we don't know, but...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We've just entered the guild,
+                    and there's still so much we don't know, but...
+                """,
+            }
+        default:
+            {
+                english="""
+                     We've just entered the guild,
+                    and there's still so much we don't know, but...
+                """,
+            }
+    }
+    message_SetFace(ACTOR_NPC_PARTNER_FIRST, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's keep at it!",
+            }
+        case 2:
+            {
+                english=" Let's keep at it!",
+            }
+        default:
+            {
+                english=" Let's keep at it!",
+            }
+    }
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_HERO_FIRST>(71);
+    WaitAnimation<actor ACTOR_NPC_HERO_FIRST>();
+    WaitExecuteLives(ACTOR_NPC_HERO_FIRST);
+    SetAnimation<actor ACTOR_NPC_HERO_FIRST>(2);
+    Wait(30);
+    MovePositionOffset<performer 0>(1, -96, 0);
+    MovePositionMark<performer 0>(1, Position<'m0', 48.5, 31.5>);
+    WaitExecutePerformer(0);
+    Wait(30);
+    message_Mail({
+        english="[CN]Really...",
+    });
+    message_Mail({
+        english="""
+            [CN]There really is a new
+            [CN]apprentice!
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]And not only that...[K]
+            [CN]There are two of them![K] Sniff...
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 60);
+    Wait(30);
+    message_Narration(30, {
+        english="""
+            [CN][CS:N]Jirachi[CR]!
+            [CN]Thank you so much! Yup yup!
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]As your older buddy, [c_name:NPC_HERO_FIRST]
+            [CN]and [c_name:NPC_PARTNER_FIRST], I won't let you down!
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]I'm going to work hard at my guild
+            [CN]training each and every day!
+        """,
+    });
+    message_Close();
+    Wait(60);
+    end;
+}

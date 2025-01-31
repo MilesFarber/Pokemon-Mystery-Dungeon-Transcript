@@ -1,0 +1,435 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_IN_THE_FUTURE, 0, 256);
+    $SCENARIO_MAIN = scn[18, 3];
+    back_SetGround(LEVEL_D18P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" The planet's paralysis...",
+            }
+        case 2:
+            {
+                english=" The planet's paralysis...",
+            }
+        default:
+            {
+                english=" The planet's paralysis...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's true that this place appears
+                    just like [CS:N]Dusknoir[CR] described it.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Sure, this place resembles
+                    [CS:N]Dusknoir[CR]'s description.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's true that this place appears
+                    just like [CS:N]Dusknoir[CR] described it.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But even then...",
+            }
+        case 2:
+            {
+                english=" But even then...",
+            }
+        default:
+            {
+                english=" But even then...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's hard to understand how the
+                    planet has been paralyzed in the future.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's hard to understand how the
+                    planet has been paralyzed in the future.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's hard to understand how the
+                    planet has been paralyzed in the future.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             You're free to believe...or
+            reject...what I'm telling you.
+        """,
+    });
+    message_Talk({
+        english="""
+             Either way, I suggest you leave
+            here as soon as you can.
+        """,
+    });
+    message_Talk({
+        english="""
+             I'm going.[K] Don't let those [CS:N]Sableye[CR]
+            catch you.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(0.7969, Position<'m0', 48.5, 17.5>);
+    Wait(10);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Destroy<actor ACTOR_NPC_JUPUTORU>();
+    Wait(60);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNLEFT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urk... [hero].",
+            }
+        case 2:
+            {
+                english=" Urk... [hero].",
+            }
+        default:
+            {
+                english=" Urk... [hero].",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I don't know what to think
+                    anymore.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I don't know what to think
+                    anymore.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I don't know what to think
+                    anymore.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Wasn't the planet's paralysis
+                    supposed to be caused by all those Time Gears
+                    going missing?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Wasn't the planet's paralysis
+                    supposed to be caused by all those Time Gears
+                    going missing?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Wasn't the planet's paralysis
+                    supposed to be caused by all those Time Gears
+                    going missing?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's why we all tried to stop
+                    [CS:N]Grovyle[CR] from stealing the Time Gears.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's why we all tried to stop
+                    [CS:N]Grovyle[CR] from stealing the Time Gears.
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's why we all tried to stop
+                    [CS:N]Grovyle[CR] from stealing the Time Gears.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We did everything we were
+                    supposed to, right?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We did everything we were
+                    supposed to, right?
+                """,
+            }
+        default:
+            {
+                english="""
+                     We did everything we were
+                    supposed to, right?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Uxie[CR] and the others said they'd
+                    return the Time Gears to their rightful places.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Uxie[CR] and the others said they
+                    would return the recaptured Time Gears to
+                    their rightful places.
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Uxie[CR] and the others said they'd
+                    return the Time Gears to their rightful places.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That was supposed to prevent
+                    the planet's paralysis!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That should have prevented the
+                    planet's paralysis!
+                """,
+            }
+        default:
+            {
+                english="""
+                     That should have prevented the
+                    planet's paralysis!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But despite all our efforts...",
+            }
+        case 2:
+            {
+                english=" But despite all our efforts...",
+            }
+        default:
+            {
+                english=" But despite all our efforts...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Why is the planet still
+                    paralyzed...[K]in our future?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Why is the planet still
+                    paralyzed...[K]in our future?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Why is the planet still
+                    paralyzed...[K]in our future?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Arrgh! I don't know who or what
+                    to believe anymore!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Arrgh! I don't know who or what
+                    to believe anymore!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Arrgh! I don't know who or what
+                    to believe anymore!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english=" Wheh-heh-heh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(30);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(1, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waah! The [CS:N]Sableye[CR]!",
+            }
+        case 2:
+            {
+                english=" Waah! The [CS:N]Sableye[CR]!",
+            }
+        default:
+            {
+                english=" Waah! The [CS:N]Sableye[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(1, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(1, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We can't stick around here,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We can't stay here,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We can't stay here,
+                    [hero]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's get ready quickly so we
+                    can get rolling!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's get ready quickly so we
+                    can get moving!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's get ready quickly so we
+                    can get going again!
+                """,
+            }
+    }
+    message_Close();
+    bgm_PlayFadeIn(BGM_CHASM_CAVE, 0, 256);
+    end;
+}

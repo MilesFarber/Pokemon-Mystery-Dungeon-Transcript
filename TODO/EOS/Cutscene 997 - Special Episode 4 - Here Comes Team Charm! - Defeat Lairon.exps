@@ -1,0 +1,146 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D55P41A);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    supervision_Acting(2);
+    supervision_Acting(3);
+    supervision_Acting(4);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_D55P41A1_450>(11);
+    SetAnimation<object OBJECT_D55P41A1_451>(14);
+    bgm2_PlayFadeIn(BGM_HEAVY_WIND5, 30, 256);
+    screen_FadeIn(1, 30);
+    message_SetFace(ACTOR_NPC_BOSUGODORA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             GRR...[K] GRAA-HAHAHAHA...[K]
+            GRAA-HAHAHAHA-HAHAHAHA.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KODORA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Grooooooaaaaaahh...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_BOSUGODORA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_BOSUGODORA>();
+    WaitExecuteLives(ACTOR_NPC_KODORA);
+    message_SetFace(ACTOR_NPC_BOSUGODORA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Eeeeek...[K] R-run...[K] R-run...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_KODORA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_KODORA5>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_KODORA3>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_KODORA4>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_KODORA2>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_KODORA6>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_KODORA6>();
+    WaitExecuteLives(ACTOR_NPC_KODORA6);
+    message_SetFace(ACTOR_NPC_KODORA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" RUUUUUUUNNNNN!",
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_BOSUGODORA>(5);
+    SlidePositionOffset<actor ACTOR_NPC_BOSUGODORA>(2.5, 0, -12);
+    WaitExecuteLives(ACTOR_NPC_BOSUGODORA);
+    se_Play(10250);
+    SetAnimation<actor ACTOR_NPC_BOSUGODORA>(22);
+    WaitAnimation<actor ACTOR_NPC_BOSUGODORA>();
+    Wait(20);
+    camera_SetEffect(1, 1.0, 1.0);
+    WaitExecuteLives(ACTOR_NPC_BOSUGODORA);
+    supervision_RemoveActing(1);
+    camera_SetEffect(0, 0.0, 0.0);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWNLEFT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWNRIGHT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    ExecuteCommon<actor ACTOR_NPC_SAANAITO>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(3);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Wait(3);
+    ExecuteCommon<actor ACTOR_PLAYER_CHARMS>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    se_Play(7430);
+    Move2PositionMark<actor ACTOR_NPC_KODORA3>(2.5, Position<'m0', 42.5, 26.5>);
+    Move2PositionMark<actor ACTOR_NPC_KODORA6>(2.5, Position<'m1', 20.5, 26.5>);
+    WaitExecuteLives(ACTOR_NPC_KODORA6);
+    Move2PositionMark<actor ACTOR_NPC_KODORA3>(2.5, Position<'m2', 45.5, 24>);
+    Move2PositionMark<actor ACTOR_NPC_KODORA6>(2.5, Position<'m3', 17.5, 24>);
+    Move2PositionMark<actor ACTOR_NPC_KODORA2>(2.5, Position<'m4', 42.5, 26.5>);
+    Move2PositionMark<actor ACTOR_NPC_KODORA5>(2.5, Position<'m5', 20.5, 26.5>);
+    WaitExecuteLives(ACTOR_NPC_KODORA6);
+    supervision_RemoveActing(4);
+    WaitExecuteLives(ACTOR_NPC_KODORA5);
+    Move2PositionMark<actor ACTOR_NPC_KODORA2>(2.5, Position<'m6', 45.5, 24>);
+    Move2PositionMark<actor ACTOR_NPC_KODORA5>(2.5, Position<'m7', 17.5, 24>);
+    Move2PositionMark<actor ACTOR_NPC_KODORA>(2.5, Position<'m8', 38, 33.5>, Position<'m9', 42.5, 26.5>, Position<'m10', 45.5, 24>);
+    Move2PositionMark<actor ACTOR_NPC_KODORA4>(2.5, Position<'m11', 25, 33.5>, Position<'m12', 20.5, 26.5>, Position<'m13', 17.5, 24>);
+    WaitExecuteLives(ACTOR_NPC_KODORA5);
+    supervision_RemoveActing(3);
+    WaitExecuteLives(ACTOR_NPC_KODORA4);
+    supervision_RemoveActing(2);
+    Wait(35);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english="""
+             Hee![K] They panicked and
+            ran off...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m14', 27.5, 28.5>);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             We're Team [CS:X]Charm[CR], don't
+            underestimate us!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_SAANAITO);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWNRIGHT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Well, at least we won't be
+            held back anymore.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Let's keep moving.",
+    });
+    message_Close();
+    MovePositionMark<performer 0>(1, Position<'m15', 31.5, 17>);
+    MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1, Position<'m16', 31.5, 13.5>);
+    Wait(9);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m17', 27.5, 15.5>);
+    Wait(6);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m18', 35.5, 15.5>);
+    Wait(15);
+    bgm2_FadeOut(120);
+    screen_FadeOut(1, 60);
+    Wait(60);
+    end;
+}

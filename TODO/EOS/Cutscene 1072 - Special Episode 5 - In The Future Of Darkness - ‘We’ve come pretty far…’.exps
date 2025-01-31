@@ -1,0 +1,51 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[48, 2];
+    back_SetGround(LEVEL_D51P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_YONOWAARU_N9>();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_DARK_ICE_MOUNTAIN, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1, Position<'m0', 26, 34.5>);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N9>(1, Position<'m1', 31, 34.5>);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    Wait(6);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" We've climbed pretty far.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             We will reach the peak soon,
+            it seems.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N9>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yes.",
+    });
+    message_Talk({
+        english="""
+             However, I don't know what lies
+            ahead for us.
+        """,
+    });
+    message_Talk({
+        english=" Be prepared.",
+    });
+    message_Close();
+    end;
+}

@@ -1,0 +1,135 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    $SCENARIO_MAIN = scn[29, 33];
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_NPC_BARIYAADO>(2);
+    Turn2DirectionLives<actor ACTOR_NPC_BARIYAADO>(4, 10, ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_BARIYAADO);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_BARIYAADO);
+    WaitExecuteLives(ACTOR_NPC_BARIYAADO);
+    message_SetFace(ACTOR_NPC_BARIYAADO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hello! You have been exploring
+            today as usual, yes? So very energetic!
+        """,
+    });
+    message_Talk({
+        english="""
+             Have you heard? The tale of the
+            famous explorer [CS:N]Scizor[CR]?
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Scizor[CR] was an explorer
+            extraordinaire whose fame stretched across
+            this very world.
+        """,
+    });
+    message_Talk({
+        english="""
+             Truly, he had a reputation that
+            all explorers aspired toward.
+        """,
+    });
+    message_Talk({
+        english="""
+             But this great explorer, he went
+            missing while he was exploring [CS:P]Blizzard Island[CR],
+            far in the southwest.
+        """,
+    });
+    message_Talk({
+        english="""
+             Many an exploration team set
+            out to rescue the great explorer.
+        """,
+    });
+    message_Talk({
+        english="""
+             But one and all, they were
+            turned back by the bitter cold and swirling
+            blizzards till none dared try again.
+        """,
+    });
+    message_Talk({
+        english="""
+             It is a tale from many
+            years ago.
+        """,
+    });
+    message_Talk({
+        english="""
+             There also have been rumors.
+            They say that the explorer [CS:N]Scizor[CR] was
+            searching for an amazing treasure.
+        """,
+    });
+    message_Talk({
+        english="""
+             You're an incredible team,
+            Team [team:], what with saving the
+            world and all.
+        """,
+    });
+    message_Talk({
+        english="""
+             No exploration teams have gone
+            to [CS:P]Blizzard Island[CR] since the rescue efforts
+            were called off years ago.
+        """,
+    });
+    message_Talk({
+        english="""
+             By any chance, would you be
+            willing to go, Team [team:]?
+        """,
+    });
+    message_Talk({
+        english="""
+             I hear that [CS:P]Blizzard Island[CR] is in
+            the southwest of the map.
+        """,
+    });
+    message_Close();
+    screen_FadeOutAll(1, 15);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    worldmap_SetMode(3);
+    worldmap_SetLevel(6);
+    back2_SetMode(3);
+    WaitSubScreen();
+    worldmap_ChangeLevel(7);
+    worldmap_SetCamera(47);
+    WaitSubScreen();
+    message_Mail({
+        english="""
+            [CN]The clouds lifted over the
+            [CN][CS:P]Icy Area[CR] and its vicinities!
+        """,
+    });
+    message_Mail({
+        english="[CN]And...",
+    });
+    message_Close();
+    worldmap_BlinkMark(47);
+    worldmap_SetArrow(47);
+    me_Play(6);
+    message_Mail({
+        english="""
+            [CN]You can now go to
+            [CN][CS:P]Blizzard Island[CR]!
+        """,
+    });
+    WaitMe(6);
+    message_Close();
+    screen2_FadeOut(1, 15);
+    back2_SetMode(0);
+    dungeon_mode(46) = DMODE_OPEN;
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 30);
+    worldmap_SetLevel(8);
+    end;
+}

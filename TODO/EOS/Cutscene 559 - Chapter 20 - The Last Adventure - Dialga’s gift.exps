@@ -1,0 +1,61 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_RESTORED, 0, 160);
+    back_SetGround(LEVEL_D30P32A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 60);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" [partner].",
+    });
+    message_Talk({
+        english=" WHEN YOU LEFT HERE...",
+    });
+    message_Talk({
+        english="""
+             WHEN YOU BID FAREWELL TO
+            THIS PLACE FROM THE RAINBOW STONESHIP...
+        """,
+    });
+    message_Talk({
+        english="""
+             YOUR SORROW...[K] I FELT ITS
+            INTENSITY EVEN HERE.
+        """,
+    });
+    message_Talk({
+        english="""
+             AND IF THAT IS HOW YOU FEEL
+            EVEN NOW...
+        """,
+    });
+    message_Talk({
+        english="""
+             AND IF [hero] WERE TO
+            SHARE THOSE FEELINGS...
+        """,
+    });
+    message_Talk({
+        english=" I WILL GRANT YOUR WISH.",
+    });
+    message_Talk({
+        english=" THE WORLD NEEDS YOU BOTH.",
+    });
+    message_Talk({
+        english="""
+             THAT IS WHY...[K] I WILL TRUST
+            YOU WITH A GIFT.
+        """,
+    });
+    message_Talk({
+        english=" I LEAVE TO YOU...[K]THE FUTURE!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_DIARUGA>(4, 1, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_DIARUGA);
+    Wait(30);
+    screen_FadeOut(1, 30);
+    end;
+}

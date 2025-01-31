@@ -1,0 +1,41 @@
+
+def 0 {
+    sound_Stop();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V02P06A);
+    camera2_SetPositionMark(Position<'m0', 19.5, 15.5>);
+    screen2_FadeIn(1, 60);
+    Wait(150);
+    screen2_FadeOut(1, 60);
+    back2_SetMode(0);
+    back_SetGround(LEVEL_G01P10C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(44);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(45);
+    screen_FadeChange(1, 60, 0, 192);
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Today I should sleep and rest up,
+            and I can try again tomorrow. Yup yup.
+        """,
+    });
+    message_Talk({
+        english=" Yup yup. Good night.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(25);
+    WaitAnimation<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(46);
+    Wait(120);
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 120);
+    end;
+}

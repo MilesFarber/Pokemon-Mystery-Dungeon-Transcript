@@ -1,0 +1,331 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P03A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_JOB_CLEAR, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I've gotten the bounty from
+            Officer [CS:N]Magnezone[CR] for the captured outlaw! ♪
+        """,
+    });
+    message_Talk({
+        english=" Well done, you two! ♪",
+    });
+    message_Talk({
+        english="""
+             Here's your share for the job.[K]
+            It's yours to keep! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    me_Play(4);
+    message_Mail({
+        english="""
+            [CN][hero]'s team received
+            [CN]the [CS:G]3[MP]000[CR][M:S0] bounty that was on
+            [CN]the head of the captured outlaw!
+        """,
+    });
+    WaitMe(4);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_Mail({
+        english="[CN]However...",
+    });
+    message_Mail({
+        english="""
+            [CN]Because [CS:G]2[MP]700[CR][M:S0] of that
+            [CN]is the guild's share...
+        """,
+    });
+    message_Mail({
+        english="[CN]That portion was withheld...",
+    });
+    message_Mail({
+        english="""
+            [CN]As a result,
+            [CN][hero]'s team...
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]Received only the
+            [CN]remaining [CS:G]300[CR][M:S0]!
+        """,
+    });
+    message_Close();
+    $CARRY_GOLD += 300;
+    bgm_Stop();
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitSe(8968);
+    Wait(15);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?! We get only this much?!",
+            }
+        case 2:
+            {
+                english=" What?! This is all we get?!",
+            }
+        default:
+            {
+                english=" No way! This is all we get?!",
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_KeyWait();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" After all that hard work...",
+            }
+        case 2:
+            {
+                english=" After all that hard work...",
+            }
+        default:
+            {
+                english=" After all our effort...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             ...[K]But of course![K] It's all part
+            of the training!
+        """,
+    });
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             And we expect just as much
+            effort tomorrow![K] Hee-heeee! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(16, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(16, 10, DIR_UPLEFT);
+    MovePositionMark<actor ACTOR_NPC_PERAPPU>(1, Position<'m0', 45.5, 25.5>);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    MovePositionMark<actor ACTOR_NPC_PERAPPU>(1, Position<'m1', 45.5, 22.5>);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Destroy<actor ACTOR_NPC_PERAPPU>();
+    Wait(60);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urf...",
+            }
+        case 2:
+            {
+                english=" Urf...",
+            }
+        default:
+            {
+                english=" Urf...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 1, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 2, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You know, it would make me
+                    happy if our share was just a little bigger.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I'd be happy if our share of the
+                    reward was just a little bigger.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It would be nice if they'd give
+                    us a slightly bigger share of the reward.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But that's OK.[K] We managed to
+                    rescue [CS:N]Azurill[CR].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But that's all right.[K] We managed
+                    to rescue [CS:N]Azurill[CR].
+                """,
+            }
+        default:
+            {
+                english="""
+                     But that's all right.[K] We managed
+                    to rescue [CS:N]Azurill[CR].
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(190);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And it's all thanks to you,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And it's all thanks to you,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     And it's all thanks to you,
+                    [hero]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Because you had that dream,
+                    [hero]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Because you had that dream,
+                    [hero]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Because you had that dream,
+                    [hero]...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We knew about [CS:N]Azurill[CR]'s
+                    trouble in advance.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We learned about [CS:N]Azurill[CR]'s
+                    trouble in advance.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We learned about [CS:N]Azurill[CR]'s
+                    trouble in advance.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's true!)",
+            }
+        default:
+            {
+                english="(It's true!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I can't explain it, but...)",
+            }
+        default:
+            {
+                english="(I can't explain it, but...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That first shout I heard from [CS:N]Azurill[CR]...)",
+            }
+        default:
+            {
+                english="(That first shout I heard from [CS:N]Azurill[CR]...)",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 15);
+    Wait(20);
+    message_Explanation({
+        english="[CN]H-h-h...HELP!",
+    });
+    message_Close();
+    screen_FadeIn(1, 15);
+    Wait(20);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(And that dream I had...)",
+            }
+        default:
+            {
+                english="(And that dream I had...)",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 15);
+    end;
+}

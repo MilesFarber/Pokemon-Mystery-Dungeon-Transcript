@@ -1,0 +1,119 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_T01P02A);
+    supervision_StationCommon(0);
+    supervision_StationCommon(99);
+    supervision_Acting(0);
+    supervision_LoadStation(LEVEL_T01P02A, 'UM03');
+    supervision_Station(10);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    MovePositionMark<performer 0>(1.5, Position<'m0', 42, 20.5>);
+    screen_FadeInAll(1, 30);
+    WaitExecutePerformer(0);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This is [CS:K]Kecleon[CR] Market.[K] You
+                    can buy and sell items here.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Here we have [CS:K]Kecleon[CR] Market.
+                    You can buy and sell items here.
+                """,
+            }
+        default:
+            {
+                english="""
+                     This is [CS:K]Kecleon[CR] Market. You
+                    can buy and sell items here.
+                """,
+            }
+    }
+    message_Close();
+    Move2PositionMark<performer 0>(1.5, Position<'m1', 22.5, 20.5>);
+    WaitExecutePerformer(0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And there's [CS:K]Kangaskhan[CR] Storage.
+                    Items stored here will never be lost.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And there's [CS:K]Kangaskhan[CR] Storage.
+                    Items stored here will never be lost.
+                """,
+            }
+        default:
+            {
+                english="""
+                     And there's [CS:K]Kangaskhan[CR] Storage.
+                    Items stored here will never be lost.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If you have precious items that
+                    you can't afford to lose, store them here
+                    before you go on an adventure.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If you have precious items that
+                    you can't afford to lose, store them here
+                    before you go on an adventure.
+                """,
+            }
+        default:
+            {
+                english="""
+                     If you have precious items that
+                    you can't afford to lose, store them here
+                    before you go on an adventure.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And those are the basics for
+                    exploration teams.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And those are the basic places
+                    that exploration teams visit.
+                """,
+            }
+        default:
+            {
+                english="""
+                     And those are the basic places
+                    that exploration teams visit.
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 60);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

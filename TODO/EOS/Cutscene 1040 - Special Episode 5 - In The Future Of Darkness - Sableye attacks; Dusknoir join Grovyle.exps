@@ -1,0 +1,423 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[47, 3];
+    back_SetDungeonBanner(135, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D46P31A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1, Position<'m0', 28.5, 29.5>);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I think I'm almost through.",
+    });
+    message_Talk({
+        english="""
+             But it's still a ways to
+            [CS:P]Temporal Tower[CR].[K] Mustn't lose any time.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    message_SetActor(ACTOR_NPC_YONOWAARU);
+    message_Talk({
+        english=" [CS:Y]Grovyle[CR]!",
+    });
+    bgm_PlayFadeIn(BGM_PLANETS_PARALYSIS, 0, 256);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 2, DIR_DOWN);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N8>(1, Position<'m1', 28.5, 36.5>);
+    Wait(30);
+    MovePositionMark<performer 0>(1, Position<'m2', 28.5, 34.5>);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I was positive you'd come
+            after me...[K][CS:N]Dusknoir[CR]. So, hello.
+        """,
+    });
+    message_Talk({
+        english="""
+             Do you seriously intend to fight?
+            In the condition you're in?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Ah.[K] You're injured too.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_Acting(1);
+    Wait(1);
+    MovePositionMark<actor ACTOR_NPC_YAMIRAMI>(1.5, Position<'m3', 28.5, 24.5>);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_YAMIRAMI>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_NPC_YAMIRAMI, FACE_SIGH, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" [CS:Y]Gro-Grovyle[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<performer 0>(1, 0, -16);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(4, 10, ACTOR_NPC_YAMIRAMI);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI>(1, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    message_SetFace(ACTOR_NPC_YAMIRAMI, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" There he is![K] Over there!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Sableye[CR]: Wheh-heh-heh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6420);
+    Move2PositionMark<actor ACTOR_NPC_YAMIRAMI>(1.5, Position<'m4', 22.5, 28.5>);
+    Move2PositionMark<actor ACTOR_NPC_YAMIRAMI2>(1.5, Position<'m5', 25.5, 25.5>);
+    Wait(20);
+    MovePositionOffset<performer 0>(0.5, 0, 16);
+    SlidePositionOffset<actor ACTOR_PLAYER_FUTURE>(1.5, 0, 8);
+    Move2PositionMark<actor ACTOR_NPC_YAMIRAMI3>(1.5, Position<'m6', 34.5, 28.5>);
+    Wait(20);
+    Move2PositionMark<actor ACTOR_NPC_YAMIRAMI4>(1.5, Position<'m7', 31.5, 25.5>);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI2>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI4>(4, 10, DIR_DOWN);
+    se_FadeOut(6420, 30);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI3>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI3);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Ha hah hah ha...[K] Ha heh heh heh!",
+    });
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(39);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N8>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    message_KeyWait();
+    message_Talk({
+        english="""
+             [CS:Y]Grovyle[CR]![K] I regret to inform you
+            that the situation has changed!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(8, 10, DIR_UPLEFT);
+    Wait(45);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(8, 10, DIR_UPRIGHT);
+    Wait(45);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(8, 10, DIR_UP);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:N]Sableye[CR]! Your arrival is
+            admirably timed!
+        """,
+    });
+    message_Talk({
+        english="""
+             Be so good as to
+            knock out [CS:Y]Grovyle[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(17);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(17);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Sableye[CR]: Wheh-heh-heh!",
+    });
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI4>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(17);
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI3>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI3);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(4);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(7188);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(22);
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI2>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI2);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_UPLEFT);
+    WaitSe(7188);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(24);
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI2>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI2);
+    se_Play(10499);
+    SetDirection<actor ACTOR_NPC_YAMIRAMI2>(DIR_DOWNRIGHT);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(23);
+    Slide2PositionMark<actor ACTOR_NPC_YAMIRAMI2>(4, Position<'m8', 34.5, 32.5>);
+    message_SetFace(ACTOR_NPC_YAMIRAMI, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Wheh-heh-heh!",
+    });
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(5);
+    Slide2PositionOffset<actor ACTOR_PLAYER_FUTURE>(4, -32, 32);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Slide2PositionOffset<actor ACTOR_PLAYER_FUTURE>(4, 32, -32);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI2);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI2>(1, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(4);
+    message_CloseEnforce();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_UPRIGHT);
+    se_Play(10499);
+    SetDirection<actor ACTOR_NPC_YAMIRAMI4>(DIR_DOWNLEFT);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(23);
+    Slide2PositionMark<actor ACTOR_NPC_YAMIRAMI4>(4, Position<'m9', 22.5, 32.5>);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(5);
+    Slide2PositionOffset<actor ACTOR_PLAYER_FUTURE>(4, -32, -32);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Slide2PositionOffset<actor ACTOR_PLAYER_FUTURE>(4, 32, 32);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI4);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI4>(1, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(4);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Agh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI2>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI2);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI4>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWN);
+    SetEffect<actor ACTOR_NPC_YONOWAARU_N8>(EFFECT_EXCLAMATION_MARK, 3);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    MovePositionOffset<performer 0>(2.5, 0, 16);
+    se_Play(10499);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(23);
+    Slide2PositionMark<actor ACTOR_NPC_YAMIRAMI2>(4, Position<'m10', 22.5, 38.5>);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(5);
+    Slide2PositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(4, 32, 32);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    Slide2PositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(4, -32, -32);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(1, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_YONOWAARU_N8>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_YONOWAARU_N8>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(4);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI2>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI2);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_FacePositionOffset(-2, -5);
+    message_Talk({
+        english="""
+             Wh...[K] What do you think
+            you are doing?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(10499);
+    SetDirection<actor ACTOR_NPC_YAMIRAMI4>(DIR_DOWNRIGHT);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(23);
+    Slide2PositionMark<actor ACTOR_NPC_YAMIRAMI4>(4, Position<'m11', 34.5, 38.5>);
+    message_SetFace(ACTOR_NPC_YAMIRAMI, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Wheh-heh-heh!",
+    });
+    se_Play(5126);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Slide2PositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(2.5, 8, 0);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    Slide2PositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(2.5, -8, 0);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(25);
+    SetDirection<actor ACTOR_NPC_YONOWAARU_N8>(DIR_DOWN);
+    message_CloseEnforce();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(4);
+    Turn2Direction<actor ACTOR_NPC_YAMIRAMI4>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI4);
+    SetEffect<actor ACTOR_NPC_YONOWAARU_N8>(EFFECT_SHOCKED_MIRRORED, 3);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_PAIN, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -4);
+    message_Talk({
+        english="""
+             Gah! [K]Wh-what is the
+            meaning of this?!
+        """,
+    });
+    message_KeyWait();
+    SetDirection<actor ACTOR_NPC_YONOWAARU_N8>(DIR_RIGHT);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N8>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_Talk({
+        english="""
+             Why...[K] What do you mean by
+            suddenly attacking me?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(4);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Don't ask why! Just fight back!
+            [CS:N]Dusknoir[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, ACTOR_PLAYER_FUTURE);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    se_Play(8973);
+    SetEffect<actor ACTOR_NPC_YONOWAARU_N8>(EFFECT_SHOCKED, 3);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" What?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Don't you get it?!",
+    });
+    message_Talk({
+        english="""
+             These guys...[K]
+            I'm not the only one they're aiming at anymore!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" What are you saying?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI>(0.5, 8, 8);
+    Wait(5);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(1, 10, DIR_UP);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_FUTURE>(0.2969, 0, 8);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI4>(0.5, -8, -8);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(5);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(0.2969, 0, -8);
+    Wait(3);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI3>(0.5, -8, 8);
+    Wait(5);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI2>(0.5, 8, -8);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI2);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" Why...[K] Why me...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" I don't know either!",
+    });
+    message_Talk({
+        english=" Believe me...[K]if this goes on...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI>(0.5, 8, 8);
+    Wait(5);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(1, 10, DIR_UP);
+    SlidePositionOffset<actor ACTOR_PLAYER_FUTURE>(0.2969, 0, 4);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI4>(0.5, -8, -8);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_DOWN);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(0.2969, 0, -4);
+    Wait(3);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI3>(0.5, -8, 8);
+    Wait(5);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI2>(0.5, 8, -8);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI2);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             We'll...[K] Both of us will get
+            knocked out!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(17);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(17);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Sableye[CR]: Wheh-heh-heh!",
+    });
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI4>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(17);
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI3>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI3);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(2);
+    message_CloseEnforce();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    bgm_FadeOut(30);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(135, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

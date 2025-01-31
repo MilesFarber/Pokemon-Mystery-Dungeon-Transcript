@@ -1,0 +1,26 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    back_SetGround(LEVEL_V03P12A);
+    supervision_Acting(0);
+    camera_SetPositionMark(Position<'m0', 60, 16.5>);
+    screen_FadeIn(1, 15);
+    Wait(30);
+    message_ResetActor();
+    message_Talk({
+        english="""
+             I have no quarrel with you. But I am
+            taking it with me.
+        """,
+    });
+    message_Talk({
+        english=" The third Time Gear!",
+    });
+    message_Close();
+    Wait(30);
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 90);
+    Wait(60);
+    $SCENARIO_MAIN = scn[13, 0];
+    end;
+}

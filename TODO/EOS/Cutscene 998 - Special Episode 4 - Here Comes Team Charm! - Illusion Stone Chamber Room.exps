@@ -1,0 +1,143 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D56P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_NPC_CHAAREMU>();
+    SetPositionInitial<actor ACTOR_NPC_SAANAITO>();
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_ILLUSION_STONE_CHAMBER, 0, 256);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m0', 27.5, 26.5>);
+    MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1, Position<'m1', 31.5, 28.5>);
+    Wait(6);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m2', 35.5, 26.5>);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Somehow it seems like the
+            scenery has changed slightly from before...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Huh?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m3', 31.5, 26.5>);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UPRIGHT);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UPRIGHT);
+    Wait(6);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Wait(45);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UPLEFT);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UPLEFT);
+    Wait(6);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Wait(30);
+    WaitExecutePerformer(0);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UPRIGHT);
+    Wait(6);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UPRIGHT);
+    Wait(6);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    se_Play(8963);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Here...[K] There's two entrances?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             Looks like the labyrinth
+            continues...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             We probably have to choose the
+            correct entrance to proceed.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Yeah...[K] But which one should
+            we choose?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 2, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hmm...[K] Just looking at them,
+            they seem to be the same...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             I think it's fine.[K] Pick whichever
+            one you like. [M:H8]
+        """,
+    });
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    Wait(4);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_PLAYER_CHARMS);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Yeah.[K] No sense in
+            worrying about it.
+        """,
+    });
+    message_Talk({
+        english="""
+             For now, go ahead and pick an
+            entrance and we'll find out if it's the right one.
+        """,
+    });
+    message_Close();
+    end;
+}

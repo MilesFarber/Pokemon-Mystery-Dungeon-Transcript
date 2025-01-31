@@ -1,0 +1,121 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urk! That was no good!",
+            }
+        case 2:
+            {
+                english=" Urk! We didn't do so well!",
+            }
+        default:
+            {
+                english=" Urk! That wasn't so good.",
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D26P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    WaitLockLives(5, ACTOR_PLAYER);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_LOWER_BRINE_CAVE, 0, 256);
+    Wait(30);
+    Unlock(5);
+    Wait(15);
+    Unlock(7);
+    Lock(3);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Wait(15);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh! This is pretty rough.",
+            }
+        case 2:
+            {
+                english=" Ugh! This is pretty difficult!",
+            }
+        default:
+            {
+                english=" Ugh! This is kind of rough!",
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But I'm worried about [CS:N]Chatot[CR].
+                    We can't waste any time.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But I'm worried about [CS:N]Chatot[CR].
+                    We have to hurry.
+                """,
+            }
+        default:
+            {
+                english="""
+                     But I'm worried about [CS:N]Chatot[CR].
+                    We've got to hurry.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" There's no giving up!",
+            }
+        case 2:
+            {
+                english=" There's no giving up!",
+            }
+        default:
+            {
+                english=" There's no giving up!",
+            }
+    }
+    message_Close();
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetPositionInitial();
+    SetDirection(DIR_RIGHT);
+    SetAnimation(76);
+    Lock(5);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_DOWN_FUNC);
+    Lock(6);
+    hold;
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetPositionInitial();
+    SetDirection(DIR_LEFT);
+    SetAnimation(76);
+    Lock(7);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Unlock(3);
+    Lock(8);
+    hold;
+}

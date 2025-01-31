@@ -1,0 +1,107 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_V24P01A);
+    supervision_Acting(0);
+    SetOutputAttribute<object OBJECT_V24P01A1_287>(2);
+    SetOutputAttribute<actor ACTOR_PLAYER>(4);
+    SetOutputAttribute<actor ACTOR_ATTENDANT1>(4);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(2);
+    SetAnimation<object OBJECT_V24P01A1_287>(1);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, I see...",
+            }
+        case 2:
+            {
+                english=" Oh, I see...",
+            }
+        default:
+            {
+                english=" Oh, I see...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's how you met [CS:N]Wigglytuff[CR],
+                    [CS:N]Lapras[CR]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's how you met [CS:N]Wigglytuff[CR],
+                    [CS:N]Lapras[CR]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's how you met [CS:N]Wigglytuff[CR],
+                    [CS:N]Lapras[CR]?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<object OBJECT_V24P01A1_287>(2);
+    message_SetActor(ACTOR_NPC_RAPURASU);
+    message_Talk({
+        english="""
+             Yes.[K] I didn't intend to reveal
+            myself at all...
+        """,
+    });
+    message_Talk({
+        english="""
+             But I changed my mind the
+            instant I saw [CS:N]Chatot[CR] on the ground.
+        """,
+    });
+    message_Talk({
+        english=" I simply had to help.",
+    });
+    message_Talk({
+        english=" Afterward...",
+    });
+    message_Talk({
+        english="""
+             I made [CS:N]Wigglytuff[CR] promise me
+            something.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" A promise?",
+            }
+        case 2:
+            {
+                english=" A promise?",
+            }
+        default:
+            {
+                english=" A promise?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_RAPURASU);
+    message_Talk({
+        english=" Yes.",
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 30);
+    end;
+}

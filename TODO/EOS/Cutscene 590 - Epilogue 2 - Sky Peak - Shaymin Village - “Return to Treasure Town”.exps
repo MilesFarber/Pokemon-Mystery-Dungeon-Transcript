@@ -1,0 +1,35 @@
+
+def 0 {
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Mail({
+        english="""
+            [CN]Return to
+            [CN]Treasure Town?
+        """,
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+        default:
+            @label_0;
+            message_Close();
+            if ( scn($SCENARIO_MAIN) >= [29, 11] ) {
+                @label_2;
+                bgm_FadeOut(60);
+                main_EnterGround(LEVEL_P01P01A, 30);
+                hold;
+            } else {
+                $SCENARIO_MAIN = scn[29, 11];
+                jump @label_2;
+            }
+            break;
+        case menu({
+            english="No",
+        }):
+            message_Close();
+            end;
+    }
+}

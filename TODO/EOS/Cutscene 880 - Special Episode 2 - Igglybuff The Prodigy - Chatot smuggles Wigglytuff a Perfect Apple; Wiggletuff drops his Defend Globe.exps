@@ -1,0 +1,240 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P05C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm2_PlayFadeIn(BGM_FIRE_CRACKLING3, 60, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_PERAPPU>(1, Position<'m0', 25.5, 27.5>);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Wait(20);
+    se_Play(6410);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_P03P02A1_128>(9);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(5);
+    SlidePositionOffset<actor ACTOR_NPC_PERAPPU>(0.5, 0, 8);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Sorry to have kept you waiting.[K]
+            Here's your Perfect Apple! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm2_ChangeVolume(30, 0);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Yay! ♪[K] Thank you! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_NONE, 3);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN>(1, 0, 8);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    se_Play(8710);
+    Wait(15);
+    supervision_RemoveActing(1);
+    Wait(15);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(5);
+    SlidePositionOffset<actor ACTOR_NPC_PUKURIN>(1, 0, -8);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(2);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_APPLE_ON_HEAD, 3);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(5);
+    Wait(55);
+    se_Play(8961);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_STUNNED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" This is the last time!",
+    });
+    message_Talk({
+        english="""
+             Each night I sneak away from
+            everyone and bring you a Perfect Apple
+            from storage...
+        """,
+    });
+    message_Talk({
+        english=" I'm fed up with it!",
+    });
+    message_Talk({
+        english=" Please, let me stop doing this!",
+    });
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I'm begging![K] 
+            (...That is, the Guildmaster...[K]would sneak in
+            and eat one anyway if I didn't bring him one...)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    se_Play(9485);
+    supervision_Acting(3);
+    SetOutputAttribute<object OBJECT_P22P01A1_376>(1);
+    SetAnimation<object OBJECT_P22P01A1_376>(18);
+    Slide2PositionMark<object OBJECT_P22P01A1_376>(0.7969, Position<'m1', 30, 28>);
+    Wait(10);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_NONE, 3);
+    supervision_Acting(2);
+    SetAnimation<object OBJECT_P03P02A1_128>(18);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(2);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWNRIGHT);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_RIGHT);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    bgm2_ChangeVolume(30, 256);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Oh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(5);
+    Slide2PositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m2', 30, 26.5>);
+    Wait(4);
+    MovePositionMark<actor ACTOR_NPC_PERAPPU>(1, Position<'m3', 27.5, 28.5>);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(2);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Is this...[K]a [CS:Z]Defend Globe[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN>(1, 0, 8);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    se_Play(8710);
+    Wait(15);
+    supervision_RemoveActing(3);
+    Wait(15);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(5);
+    SlidePositionOffset<actor ACTOR_NPC_PUKURIN>(1, 0, -8);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    SetAnimation<actor ACTOR_NPC_PUKURIN>(2);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             ...[K]It's all right.[K]
+            It's not damaged.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWNLEFT);
+    Wait(8);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_UPRIGHT);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_LAUGHING, 3);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_HAPPY, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             That's good. ♪[K] I thought it got
+            chipped or broken when I dropped it. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hee-hee! That's kind of a rare
+            item for you, Guildmaster. ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             You're usually pretty rough with
+            items, Guildmaster...
+        """,
+    });
+    message_Talk({
+        english="""
+             But it's nice to see there is an
+            item that you take good care of. ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             Guildmaster is always taking
+            care of Perfect Apples... (...That is, he's like
+            that again today.)
+        """,
+    });
+    message_Talk({
+        english="""
+             That is, it seems like that
+            [CS:Z]Defend Globe[CR] is a very precious
+            exclusive item, isn't it?
+        """,
+    });
+    message_Talk({
+        english="""
+             But...[K] This item only has an
+            effect on Bug-type Pokémon...
+        """,
+    });
+    message_Talk({
+        english="""
+             So even though you're holding on
+            to it, Guildmaster, it's not very useful, is it?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Yes.[K] I know you're right...",
+    });
+    message_Talk({
+        english=" But...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" But this is a special thing.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Special thing?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Yep. ♪ Special thing.",
+    });
+    message_Talk({
+        english="""
+             It's why...[K] When I decided to
+            become an explorer...
+        """,
+    });
+    message_Talk({
+        english=" The starting point.",
+    });
+    message_Close();
+    bgm2_FadeOut(120);
+    screen_FadeOut(1, 90);
+    Wait(60);
+    end;
+}

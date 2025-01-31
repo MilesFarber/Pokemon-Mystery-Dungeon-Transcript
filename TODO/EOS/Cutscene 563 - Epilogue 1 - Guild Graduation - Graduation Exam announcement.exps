@@ -1,0 +1,867 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 1];
+    message_Narration(30, {
+        english="""
+            [CN]As a result of [hero]
+            [CN]and [partner]'s heroic actions...
+        """,
+    });
+    message_Narration(30, {
+        english="[CN]the destruction of time was stopped...",
+    });
+    message_Narration(30, {
+        english="""
+            [CN]and peace returned to
+            [CN]the world of Pokémon.
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]Of course, not everything
+            [CN]returned to normal right away.
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]Some places remained where time
+            [CN]was still out of control...
+        """,
+    });
+    message_Narration(30, {
+        english="""
+            [CN]But overall, things were
+            [CN]becoming better everywhere.
+        """,
+    });
+    message_Narration(30, {
+        english="[CN]As for [hero] and [partner]...",
+    });
+    message_Narration(30, {
+        english="[CN]They returned to [CS:N]Wigglytuff[CR]'s Guild...",
+    });
+    message_Narration(30, {
+        english="""
+            [CN]And fell back into their daily
+            [CN]routine of vigorous training.
+        """,
+    });
+    message_Narration(30, {
+        english="[CN]One morning, several months later...",
+    });
+    message_Close();
+    back_SetGround(LEVEL_G01P04A);
+    supervision_LoadStation(LEVEL_G01P04A, 'US01');
+    supervision_Station(8);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    supervision_Acting(2);
+    supervision_Acting(3);
+    SetPositionInitial<actor ACTOR_NPC_PERAPPU>();
+    SetPositionInitial<actor ACTOR_NPC_DOGOOMU>();
+    SetPositionInitial<actor ACTOR_NPC_DIGUDA>();
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    Wait(30);
+    se_Play(8968);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_DOGOOMU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_SHOCKED_MIRRORED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_GUREGGURU>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(1, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?![K] G-graduation?!",
+            }
+        case 2:
+            {
+                english=" What?![K] Graduation?!",
+            }
+        default:
+            {
+                english=" Pardon?![K] Graduation?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             That's right.[K] Graduation from
+            the guild! ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             If you graduate, you can leave
+            the guild.
+        """,
+    });
+    message_Talk({
+        english="""
+             You'll be rid of the harsh daily
+            training program too.
+        """,
+    });
+    message_Talk({
+        english="""
+             Of course, that all depends on
+            your passing the graduation exam.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    se_Play(8975);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Hey, hey, hey! [CS:N]Chatot[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_NPC_HEIGANI);
+    Turn2DirectionLives<actor ACTOR_NPC_GUREGGURU>(4, 10, ACTOR_NPC_HEIGANI);
+    Turn2DirectionLives<actor ACTOR_NPC_DAGUTORIO>(4, 10, ACTOR_NPC_HEIGANI);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_HEIGANI);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_HEIGANI);
+    Turn2DirectionLives<actor ACTOR_NPC_DOGOOMU>(4, 10, ACTOR_NPC_HEIGANI);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_HEIGANI);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_DIGUDA>(4, 10, ACTOR_NPC_HEIGANI);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_HEIGANI);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_HEIGANI);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Talk({
+        english="""
+             Hey, hey! We've been around a
+            lot longer than those two.
+        """,
+    });
+    message_Talk({
+        english="""
+             Hey, hey! Why do [hero]
+            and [partner] get to take the graduation
+            exam before we do?
+        """,
+    });
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             They've already proven
+            themselves to be worthy many times over.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_GUREGGURU>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_NPC_DAGUTORIO>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_PERAPPU);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_UPRIGHT);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_PERAPPU);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_DIGUDA>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PERAPPU);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Talk({
+        english="""
+             And after all, [hero] and
+            [partner] saved the world. ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             It's only natural that they've
+            earned the right to be tested.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             ...And that's how it goes.[K]
+            We will soon conduct the graduation exam.
+            I expect you to be prepared for it! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_DOGOOMU);
+    WaitExecuteLives(ACTOR_NPC_KIMAWARI);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, 2);
+    message_Talk({
+        english="""
+             [CS:N]Loudred[CR] took the graduation
+            exam last year.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_NPC_DOGOOMU);
+    Turn2DirectionLives<actor ACTOR_NPC_GUREGGURU>(4, 10, ACTOR_NPC_DOGOOMU);
+    Turn2DirectionLives<actor ACTOR_NPC_DAGUTORIO>(4, 10, ACTOR_NPC_DOGOOMU);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_DOGOOMU);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_DOGOOMU);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_NPC_DOGOOMU);
+    Turn2DirectionLives<actor ACTOR_NPC_DOGOOMU>(4, 10, ACTOR_NPC_KIMAWARI);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_DIGUDA>(4, 10, ACTOR_NPC_DOGOOMU);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_DOGOOMU);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_DOGOOMU);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_HEIGANI);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" And promptly failed! Hey, hey!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_DOGOOMU>(4, 10, ACTOR_NPC_HEIGANI);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_DOGOOMU>();
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+    message_Talk({
+        english=" G-g-get LOST!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(1, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So...[K] What are we supposed to
+                    do for this graduation exam?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So...[K] What do we have to do
+                    for this graduation exam?
+                """,
+            }
+        default:
+            {
+                english="""
+                     So...[K] What are we supposed to
+                    do for this graduation exam?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN>(0.5, 0, 16);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_GUREGGURU>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_DAGUTORIO>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_UPRIGHT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_UPLEFT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_DIGUDA>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             I want you to explore the depths
+            of a wood named [CS:P]Mystifying Forest[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             You should find a place called
+            [CS:P]Luminous Spring[CR] there.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(1, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:P]Luminous Spring[CR]?",
+            }
+        case 2:
+            {
+                english=" [CS:P]Luminous Spring[CR]?",
+            }
+        default:
+            {
+                english=" [CS:P]Luminous Spring[CR]?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Yup! ♪[K] It was where Pokémon
+            once went to evolve.
+        """,
+    });
+    message_Talk({
+        english="""
+             But maybe because of the time
+            troubles we had...[K]no sunlight shines on the
+            spring now.
+        """,
+    });
+    message_Talk({
+        english=" Now nothing can evolve there.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             We want you to travel to
+            [CS:P]Luminous Spring[CR].[K] And return with
+            its treasure! ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             If you can bring that treasure
+            back to the guild, you pass the exam.
+        """,
+    });
+    message_Talk({
+        english="""
+             You will then be recognized as a
+            fully trained exploration team...
+        """,
+    });
+    message_Talk({
+        english="""
+             And graduate from the guild
+            with full honors! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(1, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Gotcha![K] We just have to bring
+                    back the treasure!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     OK![K] We have to bring back
+                    the treasure!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Sure thing![K] We just have to
+                    bring back the treasure!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(1, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's do this right, [hero]!",
+            }
+        case 2:
+            {
+                english=" Let's do this, [hero]!",
+            }
+        default:
+            {
+                english=" Let's do this, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(90);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             But...[K]you have to watch out for
+            one thing.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_PERAPPU>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_DAGUTORIO>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_PUKURIN);
+    Wait(4);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_DOGOOMU>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_PUKURIN);
+    Wait(4);
+    Turn2DirectionLives<actor ACTOR_NPC_DIGUDA>(4, 10, ACTOR_NPC_PUKURIN);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_PUKURIN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitBgm(BGM_WIGGLYTUFFS_GUILD_REMIX);
+    message_Talk({
+        english="""
+             There you'll find...[K]a frighteningly
+            strong enemy.
+        """,
+    });
+    message_Talk({
+        english="""
+             The grand master of all things
+            bad lives there.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(1, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The...[K]grand master of all
+                    things bad?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The...[K]grand master of all
+                    things bad?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     The...[K]grand master of all
+                    things bad?!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Yup.",
+    });
+    message_Talk({
+        english="""
+             The grand master is
+            terribly wicked.
+        """,
+    });
+    message_Talk({
+        english="""
+             It's a horrifying presence that
+            no one would ever want to meet...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_LAUGHING, 3);
+    bgm_PlayFadeIn(BGM_GUILDMASTER_WIGGLYTUFF, 0, 256);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" So... Good luck with that! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(8969);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_FacePositionOffset(1, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What... Huh?!",
+            }
+        case 2:
+            {
+                english=" What... Huh?!",
+            }
+        default:
+            {
+                english=" What... Huh?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWN);
+    Wait(15);
+    se_Play(5122);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(18);
+    WaitAnimation<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    SetAnimation<actor ACTOR_NPC_PERAPPU>(2);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             That will do for the
+            morning briefing!
+        """,
+    });
+    message_Talk({
+        english="""
+             All right, everyone! ♪[K] Let's get
+            down to work! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+    Wait(1);
+    SetDirection<actor ACTOR_NPC_GUREGGURU>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(23);
+    SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(23);
+    SetDirection<actor ACTOR_NPC_CHIRIIN>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(23);
+    SetDirection<actor ACTOR_NPC_HEIGANI>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(23);
+    SetDirection<actor ACTOR_NPC_BIPPA>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(24);
+    SetDirection<actor ACTOR_NPC_DOGOOMU>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(23);
+    SetDirection<actor ACTOR_NPC_KIMAWARI>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(23);
+    SetDirection<actor ACTOR_NPC_DIGUDA>(DIR_UP);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(25);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: HOORAY!",
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(2);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+    MovePositionLives<performer 0>(1, ACTOR_PLAYER);
+    SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(25);
+    WaitAnimation<actor ACTOR_NPC_DAGUTORIO>();
+    Destroy<actor ACTOR_NPC_DAGUTORIO>();
+    SetDirection<actor ACTOR_NPC_DIGUDA>(DIR_DOWN);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(24);
+    WaitAnimation<actor ACTOR_NPC_DIGUDA>();
+    Destroy<actor ACTOR_NPC_DIGUDA>();
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_LEFT);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m0', 52.5, 22.5>);
+    MovePositionMark<actor ACTOR_NPC_GUREGGURU>(1.1992, Position<'m1', 28, 31.5>);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m2', 40.5, 23.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m3', 40.5, 23.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1.1992, Position<'m4', 30, 34>);
+    Move2PositionMark<actor ACTOR_NPC_BIPPA>(1.1992, Position<'m5', 40.5, 23.5>);
+    Move2PositionOffset<actor ACTOR_NPC_KIMAWARI>(1.1992, -32, 0);
+    Move2PositionMark<actor ACTOR_NPC_KIMAWARI>(1.1992, Position<'m6', 40.5, 23.5>);
+    Destroy<actor ACTOR_NPC_PUKURIN>();
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m7', 40.5, 16.5>);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m8', 40.5, 16.5>);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1.1992, Position<'m9', 40.5, 16.5>);
+    supervision_RemoveActing(1);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     What'll we do, [hero]?!
+                    The grand master of all things bad!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     What'll we do, [hero]?!
+                    The grand master of all things bad!
+                """,
+            }
+        default:
+            {
+                english="""
+                     What'll we do, [hero]?!
+                    The grand master of all things bad!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetPositionMark<actor ACTOR_NPC_DOGOOMU>(Position<'m10', 40, 32.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [CS:N]Loudred[CR]!",
+            }
+        case 2:
+            {
+                english=" Hey, [CS:N]Loudred[CR]!",
+            }
+        default:
+            {
+                english=" Oh, [CS:N]Loudred[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1.5, Position<'m11', 49, 31.5>);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1.5, -64, 0);
+    Wait(10);
+    MovePositionOffset<actor ACTOR_PLAYER>(1.5, -48, 0);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNLEFT);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    WaitExecutePerformer(0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Loudred[CR], you took the graduation
+                    exam last year, right?[K] Can you tell
+                    me something?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Loudred[CR], you took the graduation
+                    exam last year, didn't you?[K] There's something
+                    we'd like to know.
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Loudred[CR], you took the graduation
+                    exam last year, right?[K] Can you tell
+                    me something?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     What was the grand master of
+                    all things bad like?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Can you tell us what the grand
+                    master of all things bad was like?
+                """,
+            }
+        default:
+            {
+                english="""
+                     What was the grand master of
+                    all things bad like?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_DOGOOMU>();
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             Ugh, I'm sorry, but I'm NOT
+            allowed to talk about it.[K] It's the guild rule.
+            I CAN'T talk about it.
+        """,
+    });
+    message_KeyWait();
+    bgm_FadeOut(120);
+    message_Talk({
+        english=" But...[K]I will tell you this.",
+    });
+    message_Talk({
+        english="""
+             You're in for...[K]a dreadful,
+            terrifying time.
+        """,
+    });
+    message_Talk({
+        english="""
+             What I went through...[K] Even
+            now, when I let myself remember it...
+        """,
+    });
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(18);
+    message_Talk({
+        english=" WAAAAH!",
+    });
+    WaitAnimation<actor ACTOR_NPC_DOGOOMU>();
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    message_Close();
+    se_Play(7430);
+    MovePositionOffset<actor ACTOR_NPC_DOGOOMU>(3, -80, 0);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    Destroy<actor ACTOR_NPC_DOGOOMU>();
+    Wait(45);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNLEFT);
+    Wait(5);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(-2, 4);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Ugh...[K] Asking [CS:N]Loudred[CR] didn't give
+                    us anything to go on.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Ugh...[K] [CS:N]Loudred[CR] didn't tell us
+                    anything useful.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Ugh...[K] [CS:N]Loudred[CR] was useless for
+                    getting information.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We're going to have to do our
+                    best to graduate on our own, I guess.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We'll just have to do our best to
+                    graduate on our own.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We'll just have to do our best to
+                    graduate on our own.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's go down to Treasure Town
+                    and get ready.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's go to Treasure Town and
+                    get ready.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I guess we should go down to
+                    Treasure Town and get ready.
+                """,
+            }
+    }
+    message_Close();
+    MovePositionLives<performer 0>(1, ACTOR_PLAYER);
+    WaitExecutePerformer(0);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWN);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    end;
+}

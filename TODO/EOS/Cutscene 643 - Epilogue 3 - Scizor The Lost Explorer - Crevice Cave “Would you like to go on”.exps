@@ -1,0 +1,36 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    SetAnimation<actor ACTOR_PLAYER_APPOINT>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC1>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC2>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC3>(2);
+    Turn2DirectionLives<actor ACTOR_ADVENTURE_NPC1>(4, 10, ACTOR_PLAYER_APPOINT);
+    Turn2DirectionLives<actor ACTOR_ADVENTURE_NPC2>(4, 10, ACTOR_PLAYER_APPOINT);
+    Turn2DirectionLives<actor ACTOR_ADVENTURE_NPC3>(4, 10, ACTOR_PLAYER_APPOINT);
+    message_Mail({
+        english="[CN]Would you like to go on?",
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+        default:
+            @label_0;
+            message_Close();
+            Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_UP);
+            bgm_FadeOut(60);
+            screen_FadeOut(1, 30);
+            WaitBgm(BGM_IN_THE_DEPTHS_OF_THE_PIT);
+            main_EnterDungeon(47, 0);
+            switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+            main_EnterDungeon(-1, 0);
+            hold;
+            end;
+        case menu({
+            english="No",
+        }):
+            message_Close();
+            end;
+    }
+}

@@ -1,0 +1,451 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(62, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    $SCENARIO_MAIN = scn[29, 75];
+    back_SetGround(LEVEL_D36P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 29.5, 36.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 33.5, 36.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey!",
+            }
+        case 2:
+            {
+                english=" Hey!",
+            }
+        default:
+            {
+                english=" Oh!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Isn't that [CS:N]Drowzee[CR] over there?!",
+            }
+        case 2:
+            {
+                english=" Isn't that [CS:N]Drowzee[CR] there?!",
+            }
+        default:
+            {
+                english=" Isn't that [CS:N]Drowzee[CR] there?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m2', 31.5, 21.5>);
+    WaitExecutePerformer(0);
+    Wait(30);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m3', 29.5, 23.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m4', 33.5, 23.5>);
+    Wait(5);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Drowzee[CR]!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Drowzee[CR]!",
+            }
+        default:
+            {
+                english=" [CS:N]Drowzee[CR]!",
+            }
+    }
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_SURIIPU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SURIIPU>();
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SURIIPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    Wait(10);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_SURIIPU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    ExecuteCommon<actor ACTOR_NPC_SURIIPU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Wa-wah! You two?!",
+    });
+    message_Talk({
+        english=" What did you come here for?!",
+    });
+    message_Talk({
+        english="""
+             I... I've kept my nose clean! I've
+            stayed out of a life of crime!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa! Hold up, [CS:N]Drowzee[CR].",
+            }
+        case 2:
+            {
+                english=" W-wait! That's not it, [CS:N]Drowzee[CR].",
+            }
+        default:
+            {
+                english="""
+                     W-wait! Please listen,
+                    [CS:N]Drowzee[CR]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We didn't come here to arrest
+                    you, [CS:N]Drowzee[CR].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We're not here to arrest you,
+                    [CS:N]Drowzee[CR].
+                """,
+            }
+        default:
+            {
+                english="""
+                     We didn't climb here to catch
+                    you, [CS:N]Drowzee[CR].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But we did come for you.
+                    We need your help, [CS:N]Drowzee[CR].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But we are here for you.
+                    We need your help, [CS:N]Drowzee[CR].
+                """,
+            }
+        default:
+            {
+                english="""
+                     But we did come here for you.
+                    We need your help, [CS:N]Drowzee[CR].
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_SURIIPU>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SURIIPU>();
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_SIGH, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" H-huh? Me?[K] You need my help?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Yup.[K] You remember that little
+                    [CS:N]Azurill[CR], right?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Yes.[K] You remember that little
+                    [CS:N]Azurill[CR], right?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Yep.[K] You remember that little
+                    [CS:N]Azurill[CR], right?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That [CS:N]Azurill[CR] has fallen asleep
+                    and won't wake up.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That [CS:N]Azurill[CR] has been locked in
+                    sleep and won't wake up.
+                """,
+            }
+        default:
+            {
+                english="""
+                     That [CS:N]Azurill[CR] has been sleeping
+                    for days and won't wake up.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_SURIIPU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SURIIPU>();
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Huh? That [CS:N]Azurill[CR] tyke?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     No one knows why he won't
+                    wake up.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     No one knows why he won't
+                    wake up.
+                """,
+            }
+        default:
+            {
+                english="""
+                     No one knows why he won't
+                    wake up.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's when we heard that you,
+                    [CS:N]Drowzee[CR], can possibly go into dreams.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's when we heard that you,
+                    [CS:N]Drowzee[CR], can possibly enter dreams.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Then we heard maybe you can
+                    go into dreams, [CS:N]Drowzee[CR].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That's why we searched for you.",
+            }
+        case 2:
+            {
+                english=" That's why we searched for you.",
+            }
+        default:
+            {
+                english=" That's why we searched for you.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" ..................",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [CS:N]Drowzee[CR]...",
+            }
+        case 2:
+            {
+                english=" So, [CS:N]Drowzee[CR]...",
+            }
+        default:
+            {
+                english=" Say, [CS:N]Drowzee[CR]...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     What do you say?[K] Will you
+                    help us?
+                """,
+            }
+        case 2:
+            {
+                english=" How about it?[K] Will you help us?",
+            }
+        default:
+            {
+                english="""
+                     Well, what do you think?[K]
+                    Will you please help us?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" ..................",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SURIIPU>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_SIGH, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" ...I...[K]I...",
+    });
+    message_Talk({
+        english="""
+             I did a rotten thing to that little
+            [CS:N]Azurill[CR] way back when...
+            
+        """,
+    });
+    message_Talk({
+        english="""
+             I don't know if doing this would
+            ever make up for it, but...
+        """,
+    });
+    message_Talk({
+        english="""
+             If it would help [CS:N]Azurill[CR] even
+            a little...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SURIIPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_SURIIPU);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             I don't know how useful I can
+            be, but...[K] I'd be glad to help, if you'll let me.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Drowzee[CR]!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Drowzee[CR]!",
+            }
+        default:
+            {
+                english=" [CS:N]Drowzee[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Lead me back to [CS:N]Azurill[CR].
+            Let's not waste time!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" OK!",
+            }
+        case 2:
+            {
+                english=" OK!",
+            }
+        default:
+            {
+                english=" OK!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's this way! Quick!",
+            }
+        case 2:
+            {
+                english=" It's this way! Quick!",
+            }
+        default:
+            {
+                english=" It's this way! Let's hurry!",
+            }
+    }
+    message_Close();
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1.5, 0, 180);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_PLAYER>(1.5, 0, 180);
+    MovePositionOffset<actor ACTOR_NPC_SURIIPU>(1.5, 0, 180);
+    Wait(30);
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    Wait(60);
+    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+    $SCENARIO_MAIN_BIT_FLAG[8] = 1;
+    $COMPULSORY_SAVE_POINT = 24;
+    CallCommon(CORO_HANYOU_SAVE_FUNC);
+    end;
+}

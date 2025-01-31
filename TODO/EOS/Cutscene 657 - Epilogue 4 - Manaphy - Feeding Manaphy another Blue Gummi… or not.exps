@@ -1,0 +1,561 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_DO_YOUR_BEST_AS_ALWAYS, 0, 256);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_NPC_MANAFI>(2);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_MANAFI);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_MANAFI);
+    Turn2DirectionLives<actor ACTOR_NPC_MANAFI>(4, 10, ACTOR_PLAYER);
+    ExecuteCommon<actor ACTOR_NPC_MANAFI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    message_SetFace(ACTOR_NPC_MANAFI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Goomi! Goomi!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_Mail({
+        english="""
+            [CN]Would you like to give a
+            [CN][CS:I]Blue Gummi[CR] to [CS:N]Manaphy[CR]?
+        """,
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+            @label_0;
+            message_Close();
+            switch ( ProcessSpecial(PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG, 121, 0) ) {
+                case >= 1:
+                    switch ( ProcessSpecial(PROCESS_SPECIAL_REMOVE_ITEMS_TYPE_IN_BAG, 121, 0) ) { }
+                    bgm_FadeOut(120);
+                    screen_FadeOut(1, 30);
+                    supervision_Acting(0);
+                    SetPositionMark<performer 0>(Position<'m0', 38.5, 25.5>);
+                    camera_SetMyself<performer 0>();
+                    SetPositionMark<actor ACTOR_PLAYER>(Position<'m1', 40.5, 25.5>);
+                    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m2', 36.5, 25.5>);
+                    SetPositionMark<actor ACTOR_NPC_MANAFI>(Position<'m3', 38.5, 22.5>);
+                    SetDirection<actor ACTOR_PLAYER>(DIR_UPLEFT);
+                    SetDirection<actor ACTOR_ATTENDANT1>(DIR_UPRIGHT);
+                    SetDirection<actor ACTOR_NPC_MANAFI>(DIR_DOWN);
+                    Wait(30);
+                    WaitBgm(BGM_DO_YOUR_BEST_AS_ALWAYS);
+                    bgm_PlayFadeIn(BGM_OCEAN1, 90, 190);
+                    bgm_ChangeVolume(0, 190);
+                    screen_FadeIn(1, 30);
+                    Wait(30);
+                    message_Mail({
+                        english="""
+                            [CN][hero] gave a
+                            [CN][CS:I]Blue Gummi[CR] to [CS:N]Manaphy[CR].
+                        """,
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    $SCENARIO_MAIN = scn[29, 46];
+                    se_Play(8978);
+                    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_EXCLAMATION_MARK, 3);
+                    WaitEffect<actor ACTOR_NPC_MANAFI>();
+                    WaitExecuteLives(ACTOR_NPC_MANAFI);
+                    ExecuteCommon<actor ACTOR_NPC_MANAFI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+                    WaitExecuteLives(ACTOR_NPC_MANAFI);
+                    message_SetFace(ACTOR_NPC_MANAFI, FACE_JOYOUS, FACE_POS_TOP_C_FACEL);
+                    message_Talk({
+                        english=" Goomi! ♪",
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Wait(15);
+                    message_SetFace(ACTOR_NPC_MANAFI, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+                    message_Talk({
+                        english=" Chew, chew...",
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Is it tasty? Er...[K] Goomi tasty?",
+                            }
+                        case 2:
+                            {
+                                english=" Is it tasty? Er...[K] Goomi tasty?",
+                            }
+                        default:
+                            {
+                                english=" Is it tasty? Er...[K] Goomi tasty?",
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2Direction<actor ACTOR_NPC_MANAFI>(4, 10, DIR_DOWNLEFT);
+                    WaitExecuteLives(ACTOR_NPC_MANAFI);
+                    se_Play(8962);
+                    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_QUESTION_MARK, 3);
+                    WaitEffect<actor ACTOR_NPC_MANAFI>();
+                    WaitExecuteLives(ACTOR_NPC_MANAFI);
+                    message_SetFace(ACTOR_NPC_MANAFI, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+                    message_Talk({
+                        english=" Tasty?",
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Yup. Tasty?",
+                            }
+                        case 2:
+                            {
+                                english=" That's right. Tasty?",
+                            }
+                        default:
+                            {
+                                english=" Yes. Tasty?",
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_LAUGHING, 3);
+                    ExecuteCommon<actor ACTOR_NPC_MANAFI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+                    WaitExecuteLives(ACTOR_NPC_MANAFI);
+                    message_SetFace(ACTOR_NPC_MANAFI, FACE_HAPPY, FACE_POS_TOP_C_FACEL);
+                    message_Talk({
+                        english=" Tasty! ♪ Goomi tasty! ♪",
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_NONE, 3);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Ha![K] The little guy's going to
+                                    grow up in no time at this pace!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Ha![K] The little guy's going to
+                                    grow up in no time at this pace!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Ha![K] The little cutie's going to
+                                    grow up in no time at this rate!
+                                """,
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    bgm_FadeOut(180);
+                    message_SetFace(ACTOR_NPC_MANAFI, FACE_STUNNED, FACE_POS_TOP_C_FACEL);
+                    message_Talk({
+                        english=" .....................",
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    se_Play(8962);
+                    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+                    WaitEffect<actor ACTOR_ATTENDANT1>();
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Huh? Is something the matter?",
+                            }
+                        case 2:
+                            {
+                                english=" What? Is something wrong?",
+                            }
+                        default:
+                            {
+                                english=" Oh? Is something the matter?",
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    message_SetFace(ACTOR_NPC_MANAFI, FACE_SIGH, FACE_POS_TOP_C_FACEL);
+                    message_Talk({
+                        english=" ...Yawn...[K] Snuffle...",
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    SetAnimation<actor ACTOR_NPC_MANAFI>(25);
+                    WaitAnimation<actor ACTOR_NPC_MANAFI>();
+                    WaitExecuteLives(ACTOR_NPC_MANAFI);
+                    Wait(15);
+                    se_Play(8978);
+                    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+                    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+                    WaitEffect<actor ACTOR_ATTENDANT1>();
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    Wait(45);
+                    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+                    Wait(15);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Ha! I guess the little guy got
+                                    full, and now he's sleepy.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Ha! The little guy ate his fill.
+                                    Now he needs to sleep it off.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Ha! The little cutie must be
+                                    full. He's gone to sleep now.
+                                """,
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Let's let him sleep.",
+                            }
+                        case 2:
+                            {
+                                english=" Let's be quiet and let him sleep.",
+                            }
+                        default:
+                            {
+                                english=" We should let him sleep.",
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_MANAFI);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_MANAFI);
+                    Wait(30);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Sleep tight, [CS:N]Manaphy[CR].",
+                            }
+                        case 2:
+                            {
+                                english=" Sleep tight, [CS:N]Manaphy[CR].",
+                            }
+                        default:
+                            {
+                                english=" Sleep tight, [CS:N]Manaphy[CR].",
+                            }
+                    }
+                    message_Close();
+                    bgm_FadeOut(120);
+                    screen_FadeOut(1, 90);
+                    Wait(60);
+                    switch ( ProcessSpecial(PROCESS_SPECIAL_NEXT_DAY, 0, 0) ) { }
+                    message_Narration(30, {
+                        english="[CN]The next morning...",
+                    });
+                    message_Close();
+                    back2_SetMode(4);
+                    back2_SetGround(LEVEL_V24P08A);
+                    $ATTENDANT2_KIND = 10;
+                    Destroy<actor ACTOR_NPC_MANAFI>();
+                    supervision_Acting(1);
+                    supervision_StationCommon(1);
+                    camera2_SetPositionMark(Position<'m4', 19, 15.5>);
+                    SetPositionMark<performer 0>(Position<'m5', 36, 27.5>);
+                    SetPositionMark<actor ACTOR_PLAYER>(Position<'m6', 38.5, 27.5>);
+                    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m7', 32.5, 27.5>);
+                    SetDirection<actor ACTOR_PLAYER>(DIR_RIGHT);
+                    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+                    SetAnimation<actor ACTOR_PLAYER>(76);
+                    SetAnimation<actor ACTOR_ATTENDANT1>(76);
+                    screen2_FadeIn(0, 30);
+                    screen_FadeIn(1, 30);
+                    bgm_PlayFadeIn(BGM_DO_YOUR_BEST_AS_ALWAYS, 0, 256);
+                    Wait(30);
+                    SetEffect<actor ACTOR_ATTENDANT2>(EFFECT_EXCLAMATION_MARK, 3);
+                    SetAnimation<actor ACTOR_PLAYER>(63);
+                    Wait(5);
+                    SetAnimation<actor ACTOR_ATTENDANT1>(63);
+                    WaitAnimation<actor ACTOR_PLAYER>();
+                    WaitAnimation<actor ACTOR_ATTENDANT1>();
+                    WaitExecuteLives(ACTOR_PLAYER);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    SetAnimation<actor ACTOR_PLAYER>(2);
+                    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+                    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+                    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+                    Wait(30);
+                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Good morning, [hero]!",
+                            }
+                        case 2:
+                            {
+                                english=" Good morning, [hero]!",
+                            }
+                        default:
+                            {
+                                english=" Good morning, [hero]!",
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    ExecuteCommon<actor ACTOR_ATTENDANT2>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+                    WaitExecuteLives(ACTOR_ATTENDANT2);
+                    message_SetFace(ACTOR_NPC_MANAFI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+                    message_FacePositionOffset(1, 0);
+                    message_Talk({
+                        english=" Hi!",
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_ATTENDANT2);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT2);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Good morning, [CS:N]Manaphy[CR].",
+                            }
+                        case 2:
+                            {
+                                english=" Good morning, [CS:N]Manaphy[CR].",
+                            }
+                        default:
+                            {
+                                english=" Good morning, [CS:N]Manaphy[CR].",
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    message_SetFace(ACTOR_NPC_MANAFI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+                    message_FacePositionOffset(1, 0);
+                    message_Talk({
+                        english="""
+                             Morning! [hero]!
+                            [partner]!
+                        """,
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    se_Play(8967);
+                    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+                    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+                    WaitEffect<actor ACTOR_ATTENDANT1>();
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Whoa! The little guy called us
+                                    by name!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Wow! The little guy called us
+                                    by name!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Wow! The little cutie greeted us
+                                    by name!
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" That's awesome, [CS:N]Manaphy[CR]!",
+                            }
+                        case 2:
+                            {
+                                english=" That's awesome, [CS:N]Manaphy[CR]!",
+                            }
+                        default:
+                            {
+                                english=" That's awesome, [CS:N]Manaphy[CR]!",
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    se_Play(8974);
+                    ExecuteCommon<actor ACTOR_ATTENDANT2>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+                    WaitExecuteLives(ACTOR_ATTENDANT2);
+                    message_SetFace(ACTOR_NPC_MANAFI, FACE_JOYOUS, FACE_POS_TOP_R_CENTER);
+                    message_FacePositionOffset(1, 0);
+                    message_Talk({
+                        english=" Awesome!",
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Well, [hero].[K] What should
+                                    we do with him today?
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Well, [hero].[K] What should
+                                    we do with him today?
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Well, [hero].[K] What should
+                                    we do with him today?
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     Eating and sleeping all the time
+                                    doesn't seem healthy enough...
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     Eating and sleeping all the time
+                                    doesn't seem healthy enough...
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     Eating and sleeping all the time
+                                    doesn't seem healthy enough...
+                                """,
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    se_Play(8965);
+                    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+                    WaitEffect<actor ACTOR_ATTENDANT1>();
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     I know![K] Let's take the little guy
+                                    for a walk at the beach!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     I know![K] Let's take the little guy
+                                    for a walk at the beach!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     I know![K] Let's take the little cutie
+                                    for a walk at the beach!
+                                """,
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    ExecuteCommon<actor ACTOR_ATTENDANT2>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+                    WaitExecuteLives(ACTOR_ATTENDANT2);
+                    message_SetFace(ACTOR_NPC_MANAFI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+                    message_FacePositionOffset(1, 0);
+                    message_Talk({
+                        english=" Walk! ♪",
+                    });
+                    message_Close();
+                    screen2_FadeOut(1, 30);
+                    back2_SetMode(0);
+                    end;
+                default:
+                    @label_3;
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    message_Mail({
+                        english="[CN][hero] doesn't have a [CS:I]Blue Gummi[CR]...",
+                    });
+                    message_Close();
+                    end;
+            }
+            break;
+        case menu({
+            english="No",
+        }):
+        default:
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            SetAnimation<actor ACTOR_NPC_MANAFI>(42);
+            message_SetFace(ACTOR_NPC_MANAFI, FACE_CRYING, FACE_POS_STANDARD);
+            message_Talk({
+                english=" Weh...[K] Weh...[K] Waaaah!",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8972);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+            WaitEffect<actor ACTOR_ATTENDANT1>();
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Whoa, whoa... Please don't cry!",
+                    }
+                case 2:
+                    {
+                        english=" Oh no... Please don't cry!",
+                    }
+                default:
+                    {
+                        english=" Oh, no no... Please don't cry!",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Don't worry, little guy.[K] We'll be
+                            back soon with a tasty [CS:I]Blue Gummi[CR] for you.
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Don't you cry, little guy.[K] We'll be
+                            back soon with a tasty [CS:I]Blue Gummi[CR] for you.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Don't you cry, cutie.[K] We'll be
+                            back soon with a tasty [CS:I]Blue Gummi[CR] for you.
+                        """,
+                    }
+            }
+            message_Close();
+            SetAnimation<actor ACTOR_NPC_MANAFI>(2);
+            end;
+    }
+}

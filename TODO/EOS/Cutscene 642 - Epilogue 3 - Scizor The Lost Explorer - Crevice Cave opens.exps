@@ -1,0 +1,79 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 35];
+    back_SetGround(LEVEL_D79P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC1>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC2>();
+    SetPositionInitial<actor ACTOR_ADVENTURE_NPC3>();
+    SetAnimation<actor ACTOR_ADVENTURE_NPC1>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC2>(2);
+    SetAnimation<actor ACTOR_ADVENTURE_NPC3>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m0', 37.5, 34.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m1', 40.5, 37>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m2', 34.5, 37>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m3', 37.5, 38.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    MovePositionMark<performer 0>(1, Position<'m4', 37.5, 17.5>);
+    WaitExecutePerformer(0);
+    Wait(90);
+    MovePositionMark<performer 0>(1, Position<'m5', 37.5, 36.5>);
+    WaitExecutePerformer(0);
+    message_Mail({
+        english="""
+            [CN]There is a huge, jagged chasm
+            [CN]cutting through the wall of ice!
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]It appears to lead into
+            [CN]a series of caves.
+        """,
+    });
+    message_KeyWait();
+    se_Play(8966);
+    message_Mail({
+        english="[CN]It's the entrance to another dungeon!",
+    });
+    WaitSe(8966);
+    message_Close();
+    bgm_FadeOut(60);
+    screen_FadeOut(1, 30);
+    worldmap_SetMode(4);
+    worldmap_SetLevel(8);
+    back2_SetMode(3);
+    WaitSubScreen();
+    worldmap_SetCamera(48);
+    worldmap_SetArrow(48);
+    worldmap_BlinkMark(48);
+    Wait(30);
+    me_Play(6);
+    message_Mail({
+        english="""
+            [CN]You can now enter
+            [CN][CS:P]Crevice Cave[CR]!
+        """,
+    });
+    WaitMe(6);
+    message_Close();
+    screen2_FadeOut(1, 15);
+    back2_SetMode(0);
+    dungeon_mode(47) = DMODE_OPEN;
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    end;
+}

@@ -1,0 +1,115 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D56P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    SetAnimation<object OBJECT_D56P11A2_519>(10);
+    SetPositionInitial<actor ACTOR_NPC_CHAAREMU>();
+    SetPositionInitial<actor ACTOR_NPC_SAANAITO>();
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetOutputAttribute<actor ACTOR_PLAYER_CHARMS>(2);
+    SetOutputAttribute<actor ACTOR_NPC_CHAAREMU>(2);
+    SetOutputAttribute<actor ACTOR_NPC_SAANAITO>(2);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_ILLUSION_STONE_CHAMBER, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m0', 35.5, 26.5>, Position<'m1', 27.5, 26.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1, Position<'m2', 37, 24.5>, Position<'m3', 31.5, 24.5>);
+    Wait(9);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m4', 35.5, 26.5>, Position<'m5', 35.5, 26.5>);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    se_Play(8963);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_QUESTION_MARK, 3);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    Wait(2);
+    SetEffect<actor ACTOR_PLAYER_CHARMS>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    Wait(2);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_PLAYER_CHARMS>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_NPC_SAANAITO>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_NPC_SAANAITO);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_PLAYER_CHARMS>(4, 10, ACTOR_NPC_CHAAREMU);
+    Wait(9);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Back where we started...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" We're right back here again...",
+    });
+    message_Close();
+    se_Play(8975);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_ANGRY, 3);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" ...What did you expect?",
+    });
+    message_Talk({
+        english="""
+             We went in the same entrance
+            as before!
+        """,
+    });
+    message_Close();
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             [CS:Y]Lopunny[CR]![K]
+            Aren't you going to try the other entrance?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_HAPPY, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Huh?[K] That was interesting.",
+    });
+    message_Talk({
+        english="""
+             I seem to be a
+            bit confused. [M:H8]
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8975);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" This isn't interesting at all!",
+    });
+    message_Talk({
+        english="""
+             This time, select a different
+            entrance already! Gee whiz!
+        """,
+    });
+    message_Close();
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_NONE, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    ResetOutputAttribute<actor ACTOR_PLAYER_CHARMS>(2);
+    ResetOutputAttribute<actor ACTOR_NPC_CHAAREMU>(2);
+    ResetOutputAttribute<actor ACTOR_NPC_SAANAITO>(2);
+    end;
+}

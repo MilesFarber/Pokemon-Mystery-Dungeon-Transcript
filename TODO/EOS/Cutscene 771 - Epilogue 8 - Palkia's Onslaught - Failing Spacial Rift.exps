@@ -1,0 +1,134 @@
+
+def 0 {
+    sound_Stop();
+    if ( scn($SCENARIO_MAIN) >= [29, 82] ) {
+        @label_0;
+        back_SetGround(LEVEL_S04P01A);
+        screen_FadeIn(1, 0);
+        message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Ugh...[K] We couldn't get through...",
+                }
+            case 2:
+                {
+                    english=" Ugh...[K] We couldn't break through.",
+                }
+            default:
+                {
+                    english=" Ugh...[K] We couldn't break through.",
+                }
+        }
+        message_KeyWait();
+        screen_FadeOutAll(1, 60);
+        message_CloseEnforce();
+        CallCommon(CORO_FADE_OUT_ALL_AFTER);
+        back_SetGround(LEVEL_D38P12A);
+        supervision_StationCommon(0);
+        supervision_Acting(0);
+        camera_SetMyself<performer 0>();
+        screen_FadeIn(1, 30);
+        bgm_PlayFadeIn(BGM_CHASM_CAVE, 0, 256);
+        Wait(30);
+        WaitLockLives(5, ACTOR_PLAYER);
+        Unlock(5);
+        Wait(15);
+        Unlock(7);
+        Lock(3);
+        Wait(15);
+        Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+        Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+        Wait(15);
+        SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+        message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Hmm... We were a bit careless.",
+                }
+            case 2:
+                {
+                    english=" Hmm... We were a bit careless.",
+                }
+            default:
+                {
+                    english=" Hmm... We were a bit careless.",
+                }
+        }
+        message_Close();
+        ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+        WaitExecuteLives(ACTOR_ATTENDANT1);
+        message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         If we stick around here, [CS:N]Palkia[CR]
+                        could find us.
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         If we stay here, [CS:N]Palkia[CR] could
+                        find us.
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         We can't stay here, because
+                        [CS:N]Palkia[CR] could find us.
+                    """,
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+        WaitExecuteLives(ACTOR_PLAYER);
+        message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english=" Let's get away from here.",
+                }
+            case 2:
+                {
+                    english="""
+                         We need to get out of here
+                        right away.
+                    """,
+                }
+            default:
+                {
+                    english=" We should get away from here.",
+                }
+        }
+        message_Close();
+        end;
+    } else {
+        $SCENARIO_MAIN = scn[29, 82];
+        jump @label_0;
+    }
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetDirection(DIR_RIGHT);
+    SetAnimation(76);
+    Lock(5);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_DOWN_FUNC);
+    Lock(6);
+    hold;
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetDirection(DIR_LEFT);
+    SetAnimation(76);
+    Lock(7);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Unlock(3);
+    Lock(8);
+    hold;
+}

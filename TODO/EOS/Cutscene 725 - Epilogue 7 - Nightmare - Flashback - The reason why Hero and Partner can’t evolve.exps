@@ -1,0 +1,115 @@
+
+def 0 {
+    back_SetGround(LEVEL_P14P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_P14P01A1_153>(2);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Why can't I evolve?",
+            }
+        case 2:
+            {
+                english=" Why can't I evolve?",
+            }
+        default:
+            {
+                english=" Why can't I evolve?",
+            }
+    }
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]Why can you not evolve...?",
+    });
+    message_Talk({
+        english="""
+            [CN]It may be influenced by a distortion
+            [CN]in the fabric of space...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Distortion?[K] The fabric of space?",
+            }
+        case 2:
+            {
+                english=" Distortion?[K] The fabric of space?",
+            }
+        default:
+            {
+                english=" Distortion?[K] The fabric of space?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]Why that should be, I do not know...",
+    });
+    message_Talk({
+        english="""
+            [CN]But your presence...[K]is somehow related
+            [CN]to the distortion of space itself.
+        """,
+    });
+    message_Talk({
+        english="""
+            [CN]And as a result of that,
+            [CN]you cannot evolve...
+        """,
+    });
+    message_Talk({
+        english="""
+            [CN]No.[K] It is not only you...[K]
+            [CN]There is yet another...
+        """,
+    });
+    message_Talk({
+        english="""
+            [CN]The one behind you...[K]is also
+            [CN]forbidden its evolution.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_RINGUMA>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_RINGUMA2>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_RINGUMA2>();
+    WaitExecuteLives(ACTOR_NPC_RINGUMA2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA2>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_RINGUMA2);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?! [hero] too?!",
+            }
+        case 2:
+            {
+                english=" What?! [hero] too?!",
+            }
+        default:
+            {
+                english=" What?! [hero] too?!",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

@@ -1,0 +1,581 @@
+
+def 0 {
+    sound_Stop();
+    back_SetBanner2(LEVEL_V01P08B, 0, 128, 156, 17, {
+        english="The Guild's Crew",
+    });
+    screen_FadeIn(1, 45);
+    Wait(160);
+    screen_FadeOut(1, 45);
+    Wait(15);
+    dungeon_mode(212) = DMODE_OPEN;
+    $SCENARIO_MAIN = scn[22, 1];
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V02P01A);
+    back_SetGround(LEVEL_G01P01B);
+    supervision_Acting(11);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_G01P01A3_95>(9);
+    bgm_PlayFadeIn(BGM_FIRE_CRACKLING_LOUDER, 90, 256);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(90);
+    MovePositionMark<performer 0>(1, Position<'m0', 30, 24.5>);
+    WaitExecutePerformer(0);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Here we are, [hero].
+                    [CS:N]Wigglytuff[CR]'s Guild.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Here we are, [hero].
+                    [CS:N]Wigglytuff[CR]'s Guild.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Here we are, [hero].
+                    [CS:N]Wigglytuff[CR]'s Guild.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It feels like we've been gone
+                    a long time.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It feels as if we were gone
+                    a long time.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It feels like we haven't been
+                    here in a long time.
+                """,
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But...",
+            }
+        case 2:
+            {
+                english=" But...",
+            }
+        default:
+            {
+                english=" But...",
+            }
+    }
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Now that we're here, it's kind of
+                    hard to go in.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Now that we're here, it's kind of
+                    awkward to go in.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Now that we're here, it feels
+                    kind of awkward to go in.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You know, how we suddenly
+                    disappeared and all...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     After all, we were suddenly
+                    taken away in front of everyone...
+                """,
+            }
+        default:
+            {
+                english="""
+                     After all, we did vanish in
+                    front of everyone in a mysterious way...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It'd be kind of strange to just
+                    walk in and say, "Hi, we're home!"
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It would be sort of strange to
+                    suddenly show up.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It would be sort of awkward,
+                    even embarrassing, to walk in out of the blue!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     No.[K] We can't be feeling
+                    embarrassed now.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     No.[K] We can't be acting all
+                    bashful now.
+                """,
+            }
+        default:
+            {
+                english="""
+                     No.[K] We can't go around acting
+                    embarrassed now.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We've got to see everyone and
+                    tell them the truth.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We have to see everyone and
+                    tell them the truth.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We have to see everyone and
+                    tell them the truth.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    bgm_FadeOut(180);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" All right.",
+            }
+        case 2:
+            {
+                english=" OK.",
+            }
+        default:
+            {
+                english=" OK.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I'll stand above the sentry post.",
+            }
+        case 2:
+            {
+                english=" I'll stand above the sentry post.",
+            }
+        default:
+            {
+                english=" I'll stand above the sentry post.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.7969, Position<'m1', 30, 22>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    message_SetActor(ACTOR_NPC_DIGUDA);
+    message_Talk({
+        english="""
+             Pokémon detected![K]
+            Pokémon detected!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_DOGOOMU);
+    message_Talk({
+        english="""
+             Whose footprint?[K]
+            Whose footprint?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_DIGUDA);
+    message_Talk({
+        english=" The footprint belongs to...",
+    });
+    message_Talk({
+        english=" The f-f-footprint belongs to...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(60);
+    message_SetActor(ACTOR_NPC_DOGOOMU);
+    message_Talk({
+        english="""
+             What's wrong, [CS:N]Diglett[CR]?![K]
+            Respond! Respond!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6662);
+    WaitSe(6662);
+    message_SetActor(ACTOR_NPC_DOGOOMU);
+    message_Talk({
+        english=" What...?[K] HEY, [CS:N]Diglett[CR]!",
+    });
+    message_Talk({
+        english="""
+             Where do you think you're
+            burrowing off to?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_DIGUDA);
+    message_Talk({
+        english=" That...[K] That footprint...",
+    });
+    message_Talk({
+        english=" It's [partner]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_BIPPA);
+    message_Talk({
+        english=" What...?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_KIMAWARI);
+    message_Talk({
+        english=" Wha...?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: WHAT?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_Acting(1);
+    se_Play(6414);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(23);
+    WaitAnimation<actor ACTOR_NPC_DIGUDA>();
+    Wait(15);
+    WaitSe(6414);
+    se_Play(8967);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+    Turn2Direction<actor ACTOR_NPC_DIGUDA>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_DIGUDA);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DIGUDA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" It is [partner]!",
+    });
+    message_Talk({
+        english=" And [hero] too!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Diglett[CR]![K] Long time no see!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Diglett[CR]![K] Long time no see!",
+            }
+        default:
+            {
+                english=" [CS:N]Diglett[CR]![K] Long time no see!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5131);
+    camera_SetEffect(2, 1, 1.0);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa! What is that?",
+            }
+        case 2:
+            {
+                english=" Waah! What is that?!",
+            }
+        default:
+            {
+                english=" Waah! What is that?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Stop(5131);
+    se_Play(6408);
+    SetAnimation<object OBJECT_G01P01A3_95>(17);
+    WaitAnimation<object OBJECT_G01P01A3_95>();
+    WaitExecuteObject(OBJECT_G01P01A3_95);
+    camera_SetEffect(0, 0, 0);
+    Wait(10);
+    supervision_Acting(2);
+    Wait(5);
+    WaitSe(6408);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(10);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_PLAYER);
+    MovePositionMark<actor ACTOR_PLAYER>(0.5, Position<'m2', 32, 25.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    Wait(15);
+    se_Play(6916);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1.1992, Position<'m3', 30, 23.5>);
+    Wait(15);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionMark<actor ACTOR_ATTENDANT1>(1.1992, Position<'m4', 28, 25.5>);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(4);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    supervision_Acting(3);
+    ResetHitAttribute<actor ACTOR_NPC_BIPPA>(31);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1.1992, Position<'m5', 30, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1.1992, Position<'m6', 34.5, 25.5>);
+    supervision_Acting(4);
+    ResetHitAttribute<actor ACTOR_NPC_CHIRIIN>(31);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m7', 30, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m8', 25.5, 25.5>);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_LEFT);
+    supervision_Acting(5);
+    ResetHitAttribute<actor ACTOR_NPC_HEIGANI>(31);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m9', 30, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m10', 33, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_RIGHT);
+    supervision_Acting(6);
+    ResetHitAttribute<actor ACTOR_NPC_GUREGGURU>(31);
+    MovePositionMark<actor ACTOR_NPC_GUREGGURU>(1.1992, Position<'m11', 30, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_GUREGGURU>(1.1992, Position<'m12', 27, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_GUREGGURU>(4, 2, DIR_DOWNRIGHT);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_NPC_HEIGANI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Hey, hey! It's true!",
+    });
+    supervision_Acting(7);
+    se_Play(6414);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(24);
+    WaitAnimation<actor ACTOR_NPC_DAGUTORIO>();
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+    Turn2Direction<actor ACTOR_NPC_DAGUTORIO>(4, 10, DIR_DOWNLEFT);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(4);
+    supervision_Acting(8);
+    ResetHitAttribute<actor ACTOR_NPC_KIMAWARI>(31);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1.1992, Position<'m13', 32, 21.5>);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_DOWN);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_NPC_KIMAWARI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Oh my gosh! It really is
+            [hero] and [partner]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(17);
+    WaitAnimation<actor ACTOR_NPC_DOGOOMU>();
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(4);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" You're both ALIVE!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_NPC_CHIRIIN, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEINW);
+    message_Talk({
+        english=" We worried so much about you!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 4);
+    WaitEffect<actor ACTOR_NPC_BIPPA>();
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_BIPPA);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_TEARY_EYED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" I...I...[K]I was...[K]by golly!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Wait(15);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_TEARY_EYED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" E-everyone...[K] We're home...",
+            }
+        case 2:
+            {
+                english=" E-everyone...[K] We're home...",
+            }
+        default:
+            {
+                english=" E-everyone...[K] We're home...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    supervision_Acting(9);
+    Wait(60);
+    SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 0);
+    SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 0);
+    SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_NONE, 0);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+    SetAnimation<actor ACTOR_NPC_HEIGANI>(2);
+    SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+    SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+    SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_NPC_DIGUDA>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_NPC_DOGOOMU>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_NPC_BIPPA>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_NPC_CHIRIIN>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_NPC_HEIGANI>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_NPC_GUREGGURU>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_NPC_DAGUTORIO>(4, 10, ACTOR_NPC_PERAPPU);
+    Turn2DirectionLives<actor ACTOR_NPC_KIMAWARI>(4, 10, ACTOR_NPC_PERAPPU);
+    Wait(60);
+    MovePositionMark<actor ACTOR_NPC_KIMAWARI>(1, Position<'m14', 36, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_LEFT);
+    MovePositionMark<actor ACTOR_NPC_GUREGGURU>(1, Position<'m15', 24, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_GUREGGURU>(4, 10, DIR_RIGHT);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1, Position<'m16', 27, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_RIGHT);
+    MovePositionMark<actor ACTOR_NPC_PERAPPU>(0.5, Position<'m17', 33, 21.5>);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 1, DIR_UPLEFT);
+    Wait(60);
+    supervision_Acting(10);
+    Wait(45);
+    ResetHitAttribute<actor ACTOR_NPC_PUKURIN>(31);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN>(0.5, Position<'m18', 30, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_PERAPPU>(32, 10, DIR_DOWNLEFT);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_DAGUTORIO>(8, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_DIGUDA>(8, 10, DIR_DOWNRIGHT);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(8, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_HEIGANI>(8, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_GUREGGURU>(8, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_KIMAWARI>(8, 10, DIR_DOWNLEFT);
+    Wait(10);
+    Turn2Direction<actor ACTOR_NPC_CHIRIIN>(8, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(8, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN);
+    Wait(60);
+    message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Welcome home! ♪[K]
+            [partner]! ♪ [K][hero]! ♪
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen2_FadeOut(0, 60);
+    screen_FadeOut(1, 60);
+    back2_SetMode(0);
+    WaitBgm(BGM_WIGGLYTUFFS_GUILD);
+    end;
+}

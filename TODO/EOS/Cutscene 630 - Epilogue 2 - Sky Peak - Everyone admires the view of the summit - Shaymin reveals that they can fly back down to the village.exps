@@ -1,0 +1,287 @@
+
+def 0 {
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_D73P31A);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_GOORIKII, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" .........",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english="""
+             I-I'm so glad that I climbed
+            this mountain...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_INSPIRED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Me too...",
+    });
+    message_Talk({
+        english="""
+             This is...[K]
+            I'm speechless...
+        """,
+    });
+    message_Talk({
+        english=" I think this is the first time...",
+    });
+    message_Talk({
+        english="""
+             This must be the fabled
+            treasure that is superior to all
+            other treasure...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" [CS:N]Shaymin[CR]...",
+    });
+    message_Close();
+    MovePositionMark<performer 0>(0.5, Position<'m1', 31.5, 28>);
+    MovePositionMark<actor ACTOR_NPC_SHEIMI>(0.7969, Position<'m2', 31.5, 29.5>);
+    Turn2DirectionLives<actor ACTOR_NPC_GOORIKII>(4, 10, ACTOR_NPC_SHEIMI);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_KUCHIITO>(4, 10, ACTOR_NPC_SHEIMI);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_PLAYER_APPOINT>(4, 10, ACTOR_NPC_SHEIMI);
+    Wait(5);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_DOWNLEFT);
+    Turn2DirectionLives<actor ACTOR_ADVENTURE_NPC2>(4, 10, ACTOR_NPC_SHEIMI);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Thank you so much for guiding
+            us here.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" My pleasure!",
+    });
+    message_Talk({
+        english="""
+             I had fun climbing the mountain
+            with all of you!
+        """,
+    });
+    message_Talk({
+        english=" So, thank you very much!",
+    });
+    message_Talk({
+        english="""
+             Well...[K]we should do this
+            again sometime!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_KUCHIITO>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english=" Yes!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             It seems like you really enjoyed
+            the view from the summit...
+        """,
+    });
+    message_Talk({
+        english="""
+             Shall we head back to the base
+            of the mountain?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_KUCHIITO>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english=" Yeah!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(160);
+    Wait(45);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             .........[K]
+            ................................................
+        """,
+    });
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_SIGH, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english=" ...Heading back means...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8969);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_KINOGASSA>();
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Aaaah!
+            We didn't think about how to get back down!
+        """,
+    });
+    message_Talk({
+        english=" You've got to go back down!?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_SHOCKED, 3);
+    Wait(7);
+    SetEffect<actor ACTOR_NPC_GOORIKII>(EFFECT_SHOCKED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_GOORIKII, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" .........",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Calm down. It's fine.",
+    });
+    message_Talk({
+        english="""
+             I'll take you all back to the base
+            of the mountain, no problem.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_NONE, 3);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KUCHIITO>();
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english=" Huh? How will you do that?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SHEIMI>(8, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             There's a special flower here
+            called the [CS:I]Gracidea[CR]. It's a special flower for
+            us [CS:K]Shaymin[CR].
+        """,
+    });
+    message_Talk({
+        english=" How is it special, you ask?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<performer 0>(0.5, 0, 24);
+    WaitExecutePerformer(0);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_NPC_SHEIMI>(CORO_EXPLANATION_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    Wait(30);
+    supervision_Acting(2);
+    se_Play(11018);
+    SetOutputAttribute<object OBJECT_D73P41A6_403>(1);
+    SetAnimation<object OBJECT_D73P41A6_403>(17);
+    WaitAnimation<object OBJECT_D73P41A6_403>();
+    Destroy<actor ACTOR_NPC_SHEIMI>();
+    WaitExecuteObject(OBJECT_D73P41A6_403);
+    Destroy<object OBJECT_D73P41A6_403>();
+    supervision_Acting(1);
+    se_Play(8969);
+    SetEffect<actor ACTOR_NPC_GOORIKII>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_NPC_KINOGASSA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_SHOCKED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_EXCLAMATION_MARK, 3);
+    ExecuteCommon<actor ACTOR_ADVENTURE_NPC2>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(60);
+    Turn2Direction<actor ACTOR_NPC_SHEIMI_FC>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI_FC);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_SHEIMI_FC, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I just touch the flower like this,
+            and I can change Forme temporarily.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<performer 0>(1, 0, -24);
+    WaitExecutePerformer(0);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Wow...",
+    });
+    message_Talk({
+        english="""
+             Are you really that adorable...[K]
+            [CS:N]Shaymin[CR]...?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_GOORIKII, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" .........",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SHEIMI_FC>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_SHEIMI_FC, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hee-hee-hee.
+            When I'm in this Forme, I can fly.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SHEIMI_FC>(EFFECT_NONE, 3);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_KUCHIITO>();
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english=" You can fly? That means...",
+    });
+    message_Close();
+    screen2_FadeOut(0, 15);
+    screen_FadeOut(1, 15);
+    back2_SetMode(0);
+    end;
+}

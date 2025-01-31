@@ -1,0 +1,77 @@
+
+def 0 {
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V34P01A);
+    back_SetGround(LEVEL_G01P05A);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 16.5, 16.5>);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetPositionMark<actor ACTOR_PLAYER_KIMAWARI>(Position<'m1', 24.5, 29.5>);
+    SetDirection<actor ACTOR_PLAYER_KIMAWARI>(DIR_UPLEFT);
+    SetDirection<actor ACTOR_NPC_PERAPPU>(DIR_LEFT);
+    SetAnimation<actor ACTOR_NPC_JIBAKOIRU>(25);
+    screen2_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 128);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             His alias is the Invincible
+            [CS:N]Haunter[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_KIMAWARI>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I-invincible?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JIBAKOIRU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" ZZZT! That's right. ZZZT!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_KIMAWARI>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_NPC_JIBAKOIRU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             ZZZT! It doesn't matter how
+            many times you knock him out, he always
+            gets right back up, good as new. ZZZT!
+        """,
+    });
+    message_Talk({
+        english="""
+             ZZZT! He must be invincible,
+            that [CS:N]Haunter[CR]! ZZZT!
+        """,
+    });
+    message_Talk({
+        english="""
+             ZZZT! That's why we haven't
+            been able to catch him! ZZZT!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             ... (An invincible Pokémon...[K]
+            [CS:N]Haunter[CR]...)
+        """,
+    });
+    message_Close();
+    screen2_WhiteOut(0, 30);
+    screen_WhiteOut(1, 30);
+    back2_SetMode(0);
+    screen2_FlushIn(1, 0, 1, 0, 0, 0);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

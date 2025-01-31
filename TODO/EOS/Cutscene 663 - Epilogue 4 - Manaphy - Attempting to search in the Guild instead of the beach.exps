@@ -1,0 +1,48 @@
+
+def 0 {
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Chatot[CR]'s going to search inside
+                    for us, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Chatot[CR]'s going to search inside
+                    for us, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Chatot[CR]'s going to search inside
+                    for us, [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We have to look outside!",
+            }
+        case 2:
+            {
+                english=" We should be looking outside!",
+            }
+        default:
+            {
+                english=" We should be searching outside!",
+            }
+    }
+    message_Close();
+    end;
+}

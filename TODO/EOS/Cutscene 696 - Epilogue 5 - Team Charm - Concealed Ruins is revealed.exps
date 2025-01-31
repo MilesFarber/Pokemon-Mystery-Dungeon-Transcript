@@ -1,0 +1,360 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_EARTHQUAKE2, 0, 256);
+    bgm2_PlayFadeIn(BGM_EARTHQUAKE3, 0, 256);
+    back_SetGround(LEVEL_D32P14A);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    camera_SetEffect(2, 1, 1.0);
+    SetOutputAttribute<object OBJECT_D32P14A1_83>(8);
+    SetOutputAttribute<actor ACTOR_NPC_CHAAREMU>(8);
+    SetOutputAttribute<actor ACTOR_NPC_MIMIROPPU>(8);
+    SetOutputAttribute<actor ACTOR_NPC_SAANAITO>(8);
+    SetOutputAttribute<actor ACTOR_PLAYER_APPOINT>(8);
+    SetOutputAttribute<actor ACTOR_ADVENTURE_NPC1>(8);
+    SetOutputAttribute<actor ACTOR_ADVENTURE_NPC2>(8);
+    SetOutputAttribute<actor ACTOR_ADVENTURE_NPC3>(8);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1.5, Position<'m0', 39.5, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(1.5, Position<'m1', 27.5, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1.5, Position<'m2', 25.5, 25.5>);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1.5, Position<'m3', 30.5, 23.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1.5, Position<'m4', 33.5, 22>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1.5, Position<'m5', 34.5, 25.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1.5, Position<'m6', 37.5, 23.5>);
+    bgm_FadeOut(210);
+    bgm2_FadeOut(210);
+    screen_FadeIn(1, 30);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1.5, Position<'m7', 23.5, 21.5>);
+    MovePositionMark<performer 0>(0.7969, Position<'m8', 29.5, 24.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(60);
+    camera_SetEffect(0, 0, 0);
+    Wait(45);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Is everyone all right?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             Seems that way.
+            Everyone's here.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Thank goodness...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_WORRIED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(4, -1);
+    message_Talk({
+        english=" ...[K]But the treasures...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC3>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yes... Quite disheartening...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(8, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    se_Play(8974);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Oh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_SHOCKED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    message_Talk({
+        english=" Look at that!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UP);
+    Wait(5);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_UP);
+    Wait(5);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC3>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V28P01A);
+    camera2_SetPositionMark(Position<'m9', 18.5, 15.5>);
+    screen2_FadeIn(1, 60);
+    bgm_PlayFadeIn(BGM_HIDDEN_LAND, 0, 256);
+    Wait(60);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_SHOCKED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(4, -1);
+    message_Talk({
+        english=" Oh![K] That's...!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             The ground heaved up! And a gap
+            opened in the face of the cliff!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" That tremor earlier...",
+    });
+    message_Talk({
+        english="""
+             What [CS:N]Regigigas[CR] and the others
+            were protecting...[K] This must have been it!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(4);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_HAPPY, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             I get it now! That's where they
+            hid the treasures! And they're undisturbed!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_MIMIROPPU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(4);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(4, -1);
+    message_Talk({
+        english="""
+             Wonderful![K] This exploration
+            turned out to be a huge success after all!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_HAPPY, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Ha ha! Yeah!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(4);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_LAUGHING, 3);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC3>(4, 10, DIR_LEFT);
+    Wait(90);
+    screen2_FadeOut(1, 30);
+    back2_SetMode(0);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_NONE, 3);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             But the credit doesn't belong to
+            us this time.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(2);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_NONE, 3);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    Wait(30);
+    message_Talk({
+        english="""
+             Team [team:].[K] The credit
+            belongs entirely to you.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             I'd say it does![K] The treasures in
+            there, all of it belongs to you!
+        """,
+    });
+    ExecuteCommon<actor ACTOR_NPC_CHAAREMU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_KeyWait();
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_HAPPY, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             My word, weren't you
+            something special!
+        """,
+    });
+    message_Talk({
+        english="""
+             It was like seeing [CS:N]Wigglytuff[CR]
+            in action in the old days!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_LAUGHING, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_LAUGHING, 3);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: HA HA HA!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_SAANAITO>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_NONE, 3);
+    Wait(45);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             So, shall we go on to our next
+            adventure, old friends?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_TOP_LC_FACEOUTW);
+    message_FacePositionOffset(4, -1);
+    message_Talk({
+        english=" Yes, let's do that!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(4, -1);
+    message_Talk({
+        english="""
+             We enjoyed ourselves very
+            much, Team [team:]. It was fun
+            exploring with you!
+        """,
+    });
+    message_Talk({
+        english="""
+             If we keep up our explorations,
+            we may run into each other someday.
+        """,
+    });
+    message_Talk({
+        english="""
+             But next time, we'll beat you to
+            the treasure!
+        """,
+    });
+    message_Talk({
+        english="""
+             Take care! Send our love to
+            [CS:N]Wigglytuff[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_MIMIROPPU>(1, -120, 0);
+    MovePositionOffset<actor ACTOR_NPC_SAANAITO>(1, -120, 0);
+    MovePositionOffset<actor ACTOR_NPC_CHAAREMU>(1, -120, 0);
+    Wait(60);
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    WaitBgm(BGM_HIDDEN_LAND);
+    Wait(30);
+    worldmap_SetMode(4);
+    back2_SetMode(3);
+    WaitSubScreen();
+    worldmap_SetCamera(71);
+    worldmap_SetArrow(71);
+    worldmap_BlinkMark(71);
+    Wait(30);
+    me_Play(6);
+    message_Mail({
+        english="""
+            [CN]You can now go to
+            [CN]the [CS:P]Concealed Ruins[CR]!
+        """,
+    });
+    WaitMe(6);
+    message_Close();
+    screen2_FadeOut(1, 30);
+    back2_SetMode(0);
+    dungeon_mode(70) = DMODE_OPEN_AND_REQUEST;
+    $SCENARIO_MAIN = scn[29, 67];
+    $REQUEST_CLEAR_COUNT = 0;
+    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+    end;
+}

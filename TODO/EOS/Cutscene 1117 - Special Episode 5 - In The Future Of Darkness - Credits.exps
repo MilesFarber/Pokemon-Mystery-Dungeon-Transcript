@@ -1,0 +1,59 @@
+
+def 0 {
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V38P06D);
+    back_SetGround(LEVEL_V38P06C);
+    bgm_PlayFadeIn(BGM_LIFE_GOES_ON_ENDING, 0, 256);
+    message_SetWaitMode(210, 90);
+    message_Explanation({
+        english="""
+            [CN][c_name:NPC_HERO_FIRST]! [K][c_name:NPC_PARTNER_FIRST]![K]
+            [CN]Can you hear me?!
+        """,
+    });
+    message_Explanation({
+        english="[CN]We are still alive!!",
+    });
+    message_Close();
+    message_SetWaitMode(-1, -1);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    switch ( message_Menu(MENU_STAFF_CREDITS1) ) { }
+    Wait(15);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    Wait(60);
+    switch ( message_Menu(MENU_STAFF_CREDITS2) ) { }
+    Wait(180);
+    switch ( message_Menu(MENU_STAFF_CREDITS2) ) { }
+    switch ( message_Menu(MENU_STAFF_CREDITS2) ) { }
+    switch ( message_Menu(MENU_STAFF_CREDITS3) ) { }
+    bgm_FadeOut(210);
+    screen2_FadeOut(0, 180);
+    screen_FadeOut(1, 180);
+    back2_SetMode(0);
+    supervision_RemoveActing(0);
+    Wait(60);
+    WaitBgm(BGM_LIFE_GOES_ON_ENDING);
+    back_SetGround(LEVEL_V26P11A);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 60);
+    Wait(360);
+    message_EmptyActor();
+    message_Explanation({
+        english="",
+    });
+    message_Close();
+    screen_FadeOut(1, 120);
+    Wait(90);
+    switch ( message_Menu(MENU_STAFF_CREDITS4) ) { }
+    $SPECIAL_EPISODE_TYPE = -1;
+    $SIDE08_BOSS2ND[0] = 0;
+    adventure_log = 1004;
+    switch ( message_Menu(MENU_SAVE_MENU) ) { }
+    switch ( ProcessSpecial(24, 0, 0) ) { }
+    end;
+}

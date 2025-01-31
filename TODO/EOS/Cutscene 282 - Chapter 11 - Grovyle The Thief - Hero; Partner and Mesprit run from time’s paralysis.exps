@@ -1,0 +1,122 @@
+
+def 0 {
+    back_SetGround(LEVEL_D15P41A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    camera_SetEffect(2, 1, 1.0);
+    bgm_PlayFadeIn(BGM_EARTHQUAKE3, 30, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC1>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC2>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waah! What's going on?",
+            }
+        case 2:
+            {
+                english=" Waah! What's happening?",
+            }
+        default:
+            {
+                english=" Waah! What's happening?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_EMURITTO, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             It's happening because the thief
+            took the Time Gear!
+        """,
+    });
+    message_Talk({
+        english=" So time in this whole area...",
+    });
+    message_Talk({
+        english="""
+             Time will stop all around the
+            [CS:P]Underground Lake[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC1>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC2>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What?!",
+            }
+        case 2:
+            {
+                english=" What?!",
+            }
+        default:
+            {
+                english=" Excuse me?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_EMURITTO, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             If we don't hurry, we'll be
+            trapped in time!
+        """,
+    });
+    message_Talk({
+        english=" Hurry! Run with all your might!",
+    });
+    message_Close();
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_DOWN);
+    Wait(5);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_EMURITTO>(8, 10, DIR_DOWN);
+    MovePositionOffset<actor ACTOR_PLAYER>(0.5, 0, 160);
+    Wait(15);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.5, 0, 160);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_NPC_EMURITTO>(0.5, 0, 160);
+    MovePositionOffset<actor ACTOR_UNIT_NPC1>(0.5, 0, 160);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_UNIT_NPC2>(0.5, 0, 160);
+    Wait(45);
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    WaitBgm(BGM_EARTHQUAKE3);
+    camera_SetEffect(0, 0, 0);
+    worldmap_SetMode(3);
+    worldmap_SetLevel(3);
+    back2_SetMode(3);
+    WaitSubScreen();
+    worldmap_ChangeLevel(4);
+    worldmap_SetCamera(22);
+    WaitSubScreen();
+    message_Mail({
+        english="""
+            [CN]The clouds lifted over
+            [CN][CS:P]Quicksand Cave[CR] and the
+            [CN]vicinities of the [CS:P]Arid Area[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    screen2_FadeOut(1, 15);
+    back2_SetMode(0);
+    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+    $SCENARIO_MAIN_BIT_FLAG[8] = 1;
+    $COMPULSORY_SAVE_POINT = 12;
+    CallCommon(CORO_HANYOU_SAVE_FUNC);
+    end;
+}

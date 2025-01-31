@@ -1,0 +1,250 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_RESTORED, 0, 200);
+    back_SetGround(LEVEL_D30P32A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 60);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             [CS:P]TEMPORAL TOWER[CR] SURVIVED
+            THE CRISIS.[K] TIME HAS RETURNED TO NORMAL
+            HERE...
+        """,
+    });
+    message_Talk({
+        english="""
+             THUS, TIME HAS RESUMED IN
+            PLACES WHERE IT HAD STOPPED.
+        """,
+    });
+    message_Talk({
+        english="""
+             BECAUSE YOU STOPPED THE
+            RUIN OF [CS:P]TEMPORAL TOWER[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             THE PLANET'S PARALYSIS HAS
+            BEEN PREVENTED.
+        """,
+    });
+    message_Talk({
+        english="""
+             THE WORLD'S PEACE...[K]HAS BEEN
+            RESTORED.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" R-really?!",
+            }
+        case 2:
+            {
+                english=" R-really?!",
+            }
+        default:
+            {
+                english=" R-really?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Wait(20);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We did it, [hero]!",
+            }
+        case 2:
+            {
+                english=" We did it, [hero]!",
+            }
+        default:
+            {
+                english=" We did it, [hero]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We finally did it!",
+            }
+        case 2:
+            {
+                english=" We finally did it!",
+            }
+        default:
+            {
+                english=" We finally did it!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We brought peace to the world!",
+            }
+        case 2:
+            {
+                english=" We brought peace to the world!",
+            }
+        default:
+            {
+                english=" We brought peace to the world!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_DIARUGA);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_DIARUGA);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" ALLOW ME TO THANK YOU.",
+    });
+    message_Talk({
+        english="""
+             I THANK YOU FOR REACHING THE
+            [CS:P]HIDDEN LAND[CR]...
+        """,
+    });
+    message_Talk({
+        english="""
+             YOU HAD THE COURAGE TO
+            STAND UP TO ME, EVEN AS I RAGED OUT
+            OF CONTROL...
+        """,
+    });
+    message_Talk({
+        english="""
+             AND YOU PREVENTED THE RUIN
+            OF [CS:P]TEMPORAL TOWER[CR] IN THE NICK OF TIME.
+        """,
+    });
+    message_Talk({
+        english="""
+             THANK YOU.[K] ALL THIS, I OWE
+            TO YOU.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]D-Dialga[CR]...",
+            }
+        case 2:
+            {
+                english=" [CS:N]D-Dialga[CR]...",
+            }
+        default:
+            {
+                english=" [CS:N]D-Dialga[CR]...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             BUT ALL IS NOT YET AS IT
+            SHOULD BE... IT WILL TAKE TIME.
+        """,
+    });
+    message_Talk({
+        english="""
+             I MUST SEE TO THE REPAIR OF
+            [CS:P]TEMPORAL TOWER[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_DIARUGA>(8, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_DIARUGA);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english="""
+             THE [CS:P]HIDDEN LAND[CR], TOO, HAS
+            BEEN RAVAGED...
+        """,
+    });
+    message_Talk({
+        english="""
+             BUT THE RAINBOW STONESHIP
+            SHOULD STILL BE OPERABLE...
+        """,
+    });
+    message_Talk({
+        english="""
+             AND [CS:N]LAPRAS[CR] SHOULD BE
+            AWAITING YOUR RETURN.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_DIARUGA>(8, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_DIARUGA);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" OK!",
+            }
+        case 2:
+            {
+                english=" OK!",
+            }
+        default:
+            {
+                english=" OK!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's go home, [hero]!",
+            }
+        case 2:
+            {
+                english=" Let's go home, [hero]!",
+            }
+        default:
+            {
+                english=" Let's go home, [hero]!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Back to Treasure Town!",
+            }
+        case 2:
+            {
+                english=" Back to Treasure Town!",
+            }
+        default:
+            {
+                english=" Back to Treasure Town!",
+            }
+    }
+    message_Close();
+    bgm_FadeOut(160);
+    screen_FadeOut(1, 90);
+    Wait(90);
+    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+    $SCENARIO_MAIN_BIT_FLAG[8] = 1;
+    $COMPULSORY_SAVE_POINT = 22;
+    CallCommon(CORO_HANYOU_SAVE_FUNC);
+    end;
+}

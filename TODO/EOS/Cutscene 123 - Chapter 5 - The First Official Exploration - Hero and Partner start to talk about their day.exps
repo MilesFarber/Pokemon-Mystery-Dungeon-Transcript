@@ -1,0 +1,350 @@
+
+def 0 {
+    sound_Stop();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V02P06A);
+    camera2_SetPositionMark(Position<'m0', 19.5, 15.5>);
+    screen2_FadeIn(1, 60);
+    Wait(150);
+    screen2_FadeOut(1, 60);
+    back2_SetMode(0);
+    back_SetGround(LEVEL_G01P07C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_SAD, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Today was exhausting.)",
+            }
+        default:
+            {
+                english="(Today was exhausting.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I should get to sleep early.)",
+            }
+        default:
+            {
+                english="(I should get to sleep early.)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Sigh...[K] We went through a lot
+                    today, didn't we?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Sigh...[K] We went through a lot
+                    today.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Sigh...[K] We went through a lot
+                    today, didn't we?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But you know what? It was
+                    incredibly fun for me!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But you know what? It was
+                    incredibly fun for me!
+                """,
+            }
+        default:
+            {
+                english="""
+                     But you know what? It was
+                    incredibly fun for me!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Sure, there was that huge
+                    letdown...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Sure, there was that huge
+                    letdown...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Sure, there was that huge
+                    letdown...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But it was our first exploration!
+                    I thought I was going to explode from
+                    excitement and anticipation the whole time.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But it was our first exploration!
+                    I thought I was going to explode from
+                    excitement and anticipation the whole time.
+                """,
+            }
+        default:
+            {
+                english="""
+                     But it was our first exploration!
+                    I was ready to burst with excitement and
+                    anticipation the whole time.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It made me feel glad I became
+                    an exploration team member.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It made me realize I made the
+                    right decision in joining an exploration team.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I realized I did the right thing in
+                    becoming an exploration team member.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetOutputAttribute<actor ACTOR_ATTENDANT1>(4);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.5, 8, 8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    se_Play(6410);
+    supervision_Acting(1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(0.5, -8, -8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(20);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     One day I'm sure I'll solve the
+                    secret of my Relic Fragment.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     One day I'm sure I'll solve the
+                    secret of my Relic Fragment.
+                """,
+            }
+        default:
+            {
+                english="""
+                     One day I'm sure I'll solve the
+                    secret of my Relic Fragment.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That's my dream.",
+            }
+        case 2:
+            {
+                english=" That's the dream I have.",
+            }
+        default:
+            {
+                english=" That's my dream.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If it ever came true, I'd surely
+                    faint from happiness!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If it ever came true, I'd surely
+                    faint from sheer happiness!
+                """,
+            }
+        default:
+            {
+                english="""
+                     If it ever came true, I'd surely
+                    faint from sheer happiness!
+                """,
+            }
+    }
+    message_KeyWait();
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_JOYOUS, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ha ha ha ha!",
+            }
+        case 2:
+            {
+                english=" Ha ha ha ha!",
+            }
+        default:
+            {
+                english=" Ha ha ha ha!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_LAUGHING, 3);
+    Wait(90);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(0.5, 8, 8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    se_Play(8710);
+    supervision_RemoveActing(1);
+    Wait(15);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(0.5, -8, -8);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(20);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But seriously, thanks...",
+            }
+        case 2:
+            {
+                english=" But seriously, thanks...",
+            }
+        default:
+            {
+                english=" But seriously, thanks...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(...!)",
+            }
+        default:
+            {
+                english="(...!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I can explore because of you,
+                    [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I can explore because of you,
+                    [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     I can explore because of you,
+                    [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yup...",
+            }
+        case 2:
+            {
+                english=" Yes...",
+            }
+        default:
+            {
+                english=" Yep...",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

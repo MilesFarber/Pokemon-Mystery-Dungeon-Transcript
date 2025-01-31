@@ -1,0 +1,455 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(23, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    $SCENARIO_MAIN = scn[15, 3];
+    back_SetGround(LEVEL_D15P41A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 35, 31.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 40, 31.5>);
+    MovePositionMark<actor ACTOR_UNIT_NPC1>(1, Position<'m2', 37.5, 36.5>);
+    MovePositionMark<actor ACTOR_UNIT_NPC2>(1, Position<'m3', 41.5, 36.5>);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Th-this is...",
+            }
+        case 2:
+            {
+                english=" Th-this is...",
+            }
+        default:
+            {
+                english=" Th-this is...",
+            }
+    }
+    message_Close();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V14P01A);
+    camera2_SetPositionMark(Position<'m4', 34.5, 17.5>);
+    screen2_FadeIn(1, 30);
+    Wait(60);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" fantastic...",
+            }
+        case 2:
+            {
+                english=" fantastic...",
+            }
+        default:
+            {
+                english=" fantastic...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I wasn't expecting this...[K]
+                    this huge lake sprawling underground...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I didn't expect to see this...[K]
+                    this huge lake sprawling underground...
+                """,
+            }
+        default:
+            {
+                english="""
+                     I didn't expect to see this...[K]
+                    this huge lake extending underground...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hey! There's something glowing
+                    way over there!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Look! Something's glowing way
+                    over there!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh! There's something glowing
+                    way over there!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That light...[K] I'm sure I've seen
+                    it before...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That light...[K] I'm sure I've seen
+                    it before...
+                """,
+            }
+        default:
+            {
+                english="""
+                     That light...[K] I'm sure I've seen
+                    it before...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8965);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That's it! I got it!",
+            }
+        case 2:
+            {
+                english=" That's it! I've got it now!",
+            }
+        default:
+            {
+                english=" That's it! I've got it now!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's the same kind of light that
+                    we saw at [CS:P]Fogbound Lake[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's the same kind of light that
+                    we saw at [CS:P]Fogbound Lake[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's the same kind of light that
+                    we saw at [CS:P]Fogbound Lake[CR]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That means...",
+            }
+        case 2:
+            {
+                english=" That means...",
+            }
+        default:
+            {
+                english=" That means...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That light may be coming from
+                    a Time Gear!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That light could be coming from
+                    a Time Gear!
+                """,
+            }
+        default:
+            {
+                english="""
+                     That light may be coming from
+                    a Time Gear!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    screen2_FadeOut(1, 30);
+    back2_SetMode(0);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's get a closer look at it,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We need to get a closer look at
+                    it, [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's get a closer look at it,
+                    [hero]!
+                """,
+            }
+    }
+    message_Close();
+    MovePositionMark<performer 0>(1, Position<'m5', 37.5, 24.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.1992, Position<'m6', 35, 25.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_PLAYER>(1.1992, Position<'m7', 40, 25.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_UNIT_NPC1>(1, Position<'m8', 37.5, 29.5>);
+    Wait(3);
+    MovePositionMark<actor ACTOR_UNIT_NPC2>(1, Position<'m9', 41.5, 29.5>);
+    Wait(30);
+    bgm_FadeOut(30);
+    se_Play(6925);
+    screen_FadeChange(1, 5, 256, 128);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC2>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wah! It went dark!",
+            }
+        case 2:
+            {
+                english=" Wah! It went dark!",
+            }
+        default:
+            {
+                english=" Wah! It went dark!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" Wait!",
+    });
+    message_Talk({
+        english=" What?![K] Who are you?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC2>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Waaah! Where's that voice
+                    coming from?
+                """,
+            }
+        case 2:
+            {
+                english=" Waaah! Who said that?",
+            }
+        default:
+            {
+                english=" Waah! Who said that?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    message_ResetActor();
+    message_Talk({
+        english=" ..................",
+    });
+    message_Talk({
+        english=" Why...",
+    });
+    message_Talk({
+        english=" Why did you come here?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Why?[K] We just came to look
+                    for a Time Gear!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Why?[K] We just came to look
+                    for a Time Gear!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Why?[K] We just came to look
+                    for a Time Gear!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" Stay away from the Time Gear!",
+    });
+    message_Talk({
+        english="""
+             If you won't leave the Time Gear
+            alone...[K]I'll stop you!
+        """,
+    });
+    message_Close();
+    screen_FadeChange(1, 5, 128, 256);
+    se_Play(7171);
+    supervision_Acting(1);
+    SetAnimation<actor ACTOR_NPC_EMURITTO>(22);
+    WaitAnimation<actor ACTOR_NPC_EMURITTO>();
+    WaitExecuteLives(ACTOR_NPC_EMURITTO);
+    SetAnimation<actor ACTOR_NPC_EMURITTO>(2);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_UNIT_NPC1>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_UNIT_NPC2>(EFFECT_EXCLAMATION_MARK, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Who...who are you?!",
+            }
+        case 2:
+            {
+                english=" Who...who are you?!",
+            }
+        default:
+            {
+                english=" Who...who are you?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" I'm [CS:N]Mesprit[CR]!",
+    });
+    message_SetFace(ACTOR_NPC_EMURITTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Here at the deep [CS:P]Underground
+            Lake[CR], I protect the Time Gear!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_UNIT_NPC2>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Protect the Time Gear?!",
+            }
+        case 2:
+            {
+                english=" Protect the Time Gear?!",
+            }
+        default:
+            {
+                english=" Protect the Time Gear?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_EMURITTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I won't allow you to disturb the
+            Time Gear!
+        """,
+    });
+    message_Talk({
+        english=" Get ready!",
+    });
+    message_Close();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(23, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

@@ -1,0 +1,408 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    SetAnimation<actor ACTOR_NPC_SURIIPU>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2DirectionLives<actor ACTOR_NPC_SURIIPU>(4, 10, ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_SURIIPU);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_SURIIPU);
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oh!",
+    });
+    message_Talk({
+        english="""
+             Are you two ready to go into
+            the dream?
+        """,
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Ready",
+        }):
+        default:
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            switch ( ProcessSpecial(PROCESS_SPECIAL_IS_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) {
+                case 1:
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Yup! We're good to go!",
+                            }
+                        case 2:
+                            {
+                                english=" Yes! We're all set!",
+                            }
+                        default:
+                            {
+                                english=" Yep! Everything's ready!",
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    @label_5;
+                    bgm_FadeOut(120);
+                    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+                    message_Talk({
+                        english=" Good.",
+                    });
+                    message_Talk({
+                        english=" Then come over here.",
+                    });
+                    message_Close();
+                    screen_FadeOut(1, 60);
+                    SetDirection<actor ACTOR_NPC_MARIRU>(DIR_RIGHT);
+                    SetDirection<actor ACTOR_NPC_SURIIPU>(DIR_DOWNRIGHT);
+                    SetDirection<actor ACTOR_PLAYER>(DIR_DOWN);
+                    SetDirection<actor ACTOR_ATTENDANT1>(DIR_RIGHT);
+                    SetPositionMark<actor ACTOR_NPC_MARIRU>(Position<'m0', 19.5, 23>);
+                    SetPositionMark<actor ACTOR_PLAYER>(Position<'m1', 25.5, 20.5>);
+                    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m2', 23, 23>);
+                    SetPositionMark<actor ACTOR_NPC_SURIIPU>(Position<'m3', 23, 20.5>);
+                    supervision_Acting(0);
+                    camera_SetMyself<performer 0>();
+                    Wait(45);
+                    screen_FadeIn(1, 30);
+                    Wait(30);
+                    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+                    message_FacePositionOffset(1, 1);
+                    message_Talk({
+                        english="""
+                             I'm going to send you into
+                            [CS:N]Azurill[CR]'s dream.
+                        """,
+                    });
+                    message_Talk({
+                        english=" Here goes!",
+                    });
+                    message_Close();
+                    se_Play(8195);
+                    supervision_Acting(1);
+                    SetOutputAttribute<object OBJECT_G01P07A1_108>(4);
+                    SetAnimation<object OBJECT_G01P07A1_108>(17);
+                    WaitAnimation<object OBJECT_G01P07A1_108>();
+                    WaitExecuteObject(OBJECT_G01P07A1_108);
+                    SetAnimation<object OBJECT_G01P07A1_108>(2);
+                    screen_FadeOut(1, 30);
+                    WaitSe(8195);
+                    supervision_ExecuteActing(LEVEL_D37P11A, 'S20P0902', 0);
+                    hold;
+                    end;
+                default:
+                    switch ( ProcessSpecial(PROCESS_SPECIAL_IS_TEAM_SETUP_PARTNER_AND_HERO_ONLY, 0, 0) ) {
+                        case 1:
+                            Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+                            WaitExecuteLives(ACTOR_ATTENDANT1);
+                            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                case 1:
+                                    {
+                                        english=" Hold on a second, [hero].",
+                                    }
+                                case 2:
+                                    {
+                                        english=" Hold on, [hero].",
+                                    }
+                                default:
+                                    {
+                                        english=" Hold on, [hero].",
+                                    }
+                            }
+                            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                            Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+                            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                case 1:
+                                    {
+                                        english="""
+                                             When we go into the [CS:P]nightmare[CR],
+                                            you should be the leader, [hero].
+                                        """,
+                                    }
+                                case 2:
+                                    {
+                                        english="""
+                                             When we go into the [CS:P]nightmare[CR],
+                                            you should be the leader, [hero].
+                                        """,
+                                    }
+                                default:
+                                    {
+                                        english="""
+                                             When we go into the [CS:P]nightmare[CR],
+                                            you should go as the leader, [hero]. 
+                                        """,
+                                    }
+                            }
+                            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                case 1:
+                                    {
+                                        english="""
+                                             After all, that's the way we've
+                                            always done it for important missions.
+                                        """,
+                                    }
+                                case 2:
+                                    {
+                                        english="""
+                                             After all, that's the way we've
+                                            always handled things on important missions.
+                                        """,
+                                    }
+                                default:
+                                    {
+                                        english="""
+                                             After all, we've always gone on
+                                            our important missions that way.
+                                        """,
+                                    }
+                            }
+                            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                case 1:
+                                    {
+                                        english="""
+                                             So I think that you should be the
+                                            leader, [hero]...[K] What do you think?
+                                        """,
+                                    }
+                                case 2:
+                                    {
+                                        english="""
+                                             So I think that you should be the
+                                            leader, [hero]...[K] What do you think?
+                                        """,
+                                    }
+                                default:
+                                    {
+                                        english="""
+                                             So I think that you should be the
+                                            leader, [hero]...[K] What do you think?
+                                        """,
+                                    }
+                            }
+                            switch ( message_SwitchMenu(0, 1) ) {
+                                case menu({
+                                    english="Accept leadership",
+                                }):
+                                default:
+                                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                                    switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+                                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                        case 1:
+                                            {
+                                                english="""
+                                                     Cool![K] That's it, then! You're the
+                                                    leader, [hero]!
+                                                """,
+                                            }
+                                        case 2:
+                                            {
+                                                english="""
+                                                     OK![K] That's settled, then! You're
+                                                    the leader, [hero]!
+                                                """,
+                                            }
+                                        default:
+                                            {
+                                                english="""
+                                                     OK![K] You're the team leader,
+                                                    [hero]!
+                                                """,
+                                            }
+                                    }
+                                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                        case 1:
+                                            {
+                                                english=" Let's go! Into the [CS:P]nightmare[CR]!",
+                                            }
+                                        case 2:
+                                            {
+                                                english=" Let's go! Into the [CS:P]nightmare[CR]!",
+                                            }
+                                        default:
+                                            {
+                                                english=" Let's go! Into the [CS:P]nightmare[CR]!",
+                                            }
+                                    }
+                                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_SURIIPU);
+                                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_SURIIPU);
+                                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                        case 1:
+                                            {
+                                                english="""
+                                                     All right, [CS:N]Drowzee[CR]![K]
+                                                    Do your thing!
+                                                """,
+                                            }
+                                        case 2:
+                                            {
+                                                english=" OK, [CS:N]Drowzee[CR]![K] It's your show!",
+                                            }
+                                        default:
+                                            {
+                                                english="""
+                                                     All right, [CS:N]Drowzee[CR]![K]
+                                                    We're counting on you!
+                                                """,
+                                            }
+                                    }
+                                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                                    jump @label_5;
+                                case menu({
+                                    english="Refuse",
+                                }):
+                                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                                    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+                                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                        case 1:
+                                            {
+                                                english="""
+                                                     Whoa![K] Hang on, we're going with
+                                                    me as leader?
+                                                """,
+                                            }
+                                        case 2:
+                                            {
+                                                english="""
+                                                     What?[K] Wait, so I'm going as
+                                                    the leader?
+                                                """,
+                                            }
+                                        default:
+                                            {
+                                                english="""
+                                                     What?[K] So I'm going to go as
+                                                    the leader?
+                                                """,
+                                            }
+                                    }
+                                    message_Close();
+                                    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+                                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                        case 1:
+                                            {
+                                                english="""
+                                                     Hmm...[K] I don't feel confident
+                                                    about doing that...
+                                                """,
+                                            }
+                                        case 2:
+                                            {
+                                                english="""
+                                                     Hmm...[K] I don't have the
+                                                    confidence to do that...
+                                                """,
+                                            }
+                                        default:
+                                            {
+                                                english="""
+                                                     Hmm...[K] I don't feel confident
+                                                    enough to be the leader...
+                                                """,
+                                            }
+                                    }
+                                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                                        case 1:
+                                            {
+                                                english="""
+                                                     If we're going into the
+                                                    [CS:P]nightmare[CR], you should be the leader,
+                                                    [hero]...
+                                                """,
+                                            }
+                                        case 2:
+                                            {
+                                                english="""
+                                                     If we're going into the
+                                                    [CS:P]nightmare[CR], you should be the leader,
+                                                    [hero]...
+                                                """,
+                                            }
+                                        default:
+                                            {
+                                                english="""
+                                                     If we're going to go into the
+                                                    [CS:P]nightmare[CR], I think you should be the leader,
+                                                    [hero]...
+                                                """,
+                                            }
+                                    }
+                                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                                    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_SURIIPU);
+                                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                                    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_SURIIPU);
+                                    @label_1;
+                                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                                    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_STANDARD);
+                                    message_Talk({
+                                        english="""
+                                             I'm all ready to send you into
+                                            the dream.
+                                        """,
+                                    });
+                                    message_Talk({
+                                        english=" Tell me when you're ready.",
+                                    });
+                                    message_Close();
+                                    end;
+                            }
+                            break;
+                        default:
+                            @label_4;
+                            message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_STANDARD);
+                            message_Talk({
+                                english=" By the way...",
+                            });
+                            message_Talk({
+                                english="""
+                                     [CS:N]Azurill[CR] is in a very delicate
+                                    state now.
+                                """,
+                            });
+                            message_Talk({
+                                english="""
+                                     Judging by the resonations from
+                                    [CS:N]Azurill[CR]'s dream...
+                                """,
+                            });
+                            message_Talk({
+                                english="""
+                                     I believe that only the two of
+                                    you should enter the [CS:P]nightmare[CR].[K] What do you
+                                    think of that plan?
+                                """,
+                            });
+                            message_Talk({
+                                english="""
+                                     Will just the two of you go into
+                                    the [CS:P]nightmare[CR]?
+                                """,
+                            });
+                            switch ( message_SwitchMenu(0, 1) ) {
+                                case menu({
+                                    english="Go as a duo",
+                                }):
+                                default:
+                                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                                    switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+                                    jump @label_5;
+                                case menu({
+                                    english="Don't enter the [CS:P]nightmare[CR]",
+                                }):
+                                    jump @label_1;
+                            }
+                            break;
+                    }
+                    break;
+            }
+            break;
+        case menu({
+            english="Not yet",
+        }):
+            jump @label_1;
+    }
+}

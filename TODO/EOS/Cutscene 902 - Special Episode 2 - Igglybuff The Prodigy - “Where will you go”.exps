@@ -1,0 +1,26 @@
+
+def 0 {
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(2);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_MAMA>(2);
+    message_ResetActor();
+    message_Mail({
+        english="[CN]Where will you go?",
+    });
+    message_Close();
+    switch ( main_EnterAdventure(-1, 30) ) {
+        case 0:
+            @label_0;
+            message_Close();
+            switch ( main_EnterAdventure(251, 30) ) { }
+            hold;
+            end;
+        default:
+            message_Close();
+            SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(4);
+            SetAnimation<actor ACTOR_NPC_PUKURIN_MAMA>(4);
+            end;
+    }
+}

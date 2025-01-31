@@ -1,0 +1,59 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_EARTHQUAKE3, 0, 256);
+    bgm2_PlayFadeIn(BGM_HEAVY_FEELING, 0, 256);
+    back_SetGround(LEVEL_D30P34A);
+    supervision_Acting(4);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_D30P33A5_554>(11);
+    SetAnimation<actor ACTOR_NPC_DARK_DIARUGA>(25);
+    SetAnimation<actor ACTOR_PLAYER>(68);
+    SetAnimation<actor ACTOR_ATTENDANT1>(68);
+    camera_SetEffect(1, 1, 1.0);
+    screen_FadeIn(1, 1);
+    Wait(30);
+    se_Play(7690);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_D30P33A4_78>(17);
+    WaitAnimation<object OBJECT_D30P33A4_78>();
+    WaitExecuteObject(OBJECT_D30P33A4_78);
+    supervision_RemoveActing(1);
+    se_Play(7690);
+    supervision_Acting(2);
+    SetAnimation<object OBJECT_D30P33A4_78>(17);
+    WaitAnimation<object OBJECT_D30P33A4_78>();
+    WaitExecuteObject(OBJECT_D30P33A4_78);
+    supervision_RemoveActing(2);
+    se_Play(8455);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SHOUTING, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waaaaah!",
+            }
+        case 2:
+            {
+                english=" Waaaaah!",
+            }
+        default:
+            {
+                english=" Waaaaah!",
+            }
+    }
+    Wait(40);
+    se_Play(6403);
+    bgm_FadeOut(120);
+    bgm2_FadeOut(120);
+    screen_WhiteOutAll(1, 90);
+    Wait(60);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    Wait(180);
+    screen_WhiteOut(1, 0);
+    screen_FadeInAll(1, 0);
+    WaitBgm(BGM_EARTHQUAKE3);
+    WaitBgm2(BGM_HEAVY_FEELING);
+    WaitSe(6403);
+    end;
+}

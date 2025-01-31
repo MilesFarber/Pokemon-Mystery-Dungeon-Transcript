@@ -1,0 +1,154 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR, 0, 256);
+    back_SetGround(LEVEL_V03P09A);
+    back_SetBackScrollSpeed(3, 3);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    back_SetEffect(7, 0);
+    back_SetBackEffect(2);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(............)",
+            }
+        default:
+            {
+                english="(............)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(What could that be?)",
+            }
+        default:
+            {
+                english="(What could that be?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (I can't figure it out...[K]but it's making my
+                    heart race!)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (I can't figure it out...[K]but it's making my
+                    heart race!)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(But why? Why should it stir me up so much?)",
+            }
+        default:
+            {
+                english="(But why? Why should it stir me up so much?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Why is my pulse speeding all of a sudden?)",
+            }
+        default:
+            {
+                english="(Why is my pulse speeding all of a sudden?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" That's fantastic![K] But...",
+            }
+        case 2:
+            {
+                english=" That's fantastic![K] But...",
+            }
+        default:
+            {
+                english=" That's fantastic![K] But...",
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What is that?",
+            }
+        case 2:
+            {
+                english=" What is that?",
+            }
+        default:
+            {
+                english=" What is that?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It has such a mysterious quality!",
+            }
+        case 2:
+            {
+                english=" It has such a mystical quality!",
+            }
+        default:
+            {
+                english=" Oooh...[K]it seems so mystical!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" That is...[K]a Time Gear.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What?![K] Really?![K] A Time Gear?!",
+            }
+        case 2:
+            {
+                english=" What?![K] That's a Time Gear?!",
+            }
+        default:
+            {
+                english="""
+                     What?![K] Really and truly?![K]
+                    That's a Time Gear?!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKUSHII, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yes.",
+    });
+    message_Talk({
+        english=" I guard the Time Gear.",
+    });
+    message_Talk({
+        english=" It's the sole reason I'm here.",
+    });
+    message_Close();
+    screen_FadeOutAll(1, 60);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

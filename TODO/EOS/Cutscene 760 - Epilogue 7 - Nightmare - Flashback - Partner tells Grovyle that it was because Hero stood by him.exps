@@ -1,0 +1,89 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_IN_THE_HANDS_OF_FATE, 0, 256);
+    back_SetGround(LEVEL_H01P99E);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Well...[K]I wonder too.",
+            }
+        case 2:
+            {
+                english=" Well...[K]I wonder too.",
+            }
+        default:
+            {
+                english=" Well...[K]I wonder too.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I really don't know...",
+            }
+        case 2:
+            {
+                english=" I really don't know...",
+            }
+        default:
+            {
+                english=" I really don't know...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But maybe...",
+            }
+        case 2:
+            {
+                english=" But maybe...",
+            }
+        default:
+            {
+                english=" But maybe...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Maybe it was because
+                    [hero] stood by me.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Maybe it was because
+                    [hero] stood by me.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Maybe it was because
+                    [hero] stood by me.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" [hero]...?",
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

@@ -1,0 +1,249 @@
+
+def 0 {
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V38P06C);
+    back_SetGround(LEVEL_D53P41C);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 15.5, 15.5>);
+    camera_SetMyself<performer 0>();
+    SetOutputAttribute<object OBJECT_D53P41C1_442>(8);
+    SetAnimation<object OBJECT_D53P41C1_442>(11);
+    SetAnimation<object OBJECT_D53P41C1_442>(19);
+    WaitAnimation<object OBJECT_D53P41C1_442>();
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    WaitExecuteObject(OBJECT_D53P41C1_442);
+    Destroy<object OBJECT_D53P41C1_442>();
+    Wait(90);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" M-Master [CS:N]Dialga[CR]...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_PLAYER_FUTURE>(0.5, 0, -16);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english="""
+             [CS:N]Dialga[CR]...[K]I have something
+            I want to ask...
+        """,
+    });
+    bgm_PlayFadeIn(BGM_ITS_NOT_A_MIRACLE, 0, 256);
+    message_Talk({
+        english="""
+             Earlier when we did not
+            disappear...
+        """,
+    });
+    message_Talk({
+        english="""
+             You said it wasn't a miracle...[K]
+            But was it thanks to you?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" NO.[K] IT WAS NOT ME.",
+    });
+    message_Talk({
+        english="""
+             I DON'T HAVE THE POWER
+            NECESSARY TO STOP YOU FROM
+            DISAPPEARING.
+        """,
+    });
+    message_Talk({
+        english=" HOWEVER...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_DIARUGA>(8, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_DIARUGA);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_TOP_RC_FACEOUTW);
+    message_FacePositionOffset(2, 0);
+    message_Talk({
+        english=" A BEING HIGHER THAN MYSELF...",
+    });
+    message_Talk({
+        english="""
+             THAT BEING'S POWER...[K]COULD
+            HAVE DONE IT.
+        """,
+    });
+    message_Talk({
+        english="""
+             THIS WAS SURELY...[K]THAT
+            POWER AT WORK, I BELIEVE.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_DIARUGA>(8, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_DIARUGA);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DIARUGA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             AND SO...[K]I MUST EXPRESS
+            MY GRATITUDE.
+        """,
+    });
+    message_Talk({
+        english="""
+             IT'S WONDERFUL THAT YOU'VE
+            RETURNED THE WORLD FROM DARKNESS
+            FOR ME.
+        """,
+    });
+    message_Talk({
+        english=" I'M TRULY...[K]TRULY GRATEFUL.",
+    });
+    message_Talk({
+        english="""
+             TO YOU...[K]AND THE ONES WHO
+            STOPPED THE PLANET'S PARALYSIS IN
+            THE PAST...
+        """,
+    });
+    message_Talk({
+        english=" YOUR FRIENDS...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" ...![K] Th-that's right!",
+    });
+    message_Talk({
+        english=" We...[K]we are still here...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(150);
+    MovePositionOffset<performer 0>(0.5, 0, -24, 40, 0);
+    Move2PositionMark<actor ACTOR_PLAYER_FUTURE>(0.7969, Position<'m1', 36, 31.5>, Position<'m2', 38.5, 31.5>);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N9>(32, 10, DIR_RIGHT);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_DIARUGA>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Turn2Direction<actor ACTOR_NPC_SEREBII>(32, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(50);
+    bgm_PlayFadeIn(BGM_THOUGHTS_FOR_FRIENDS, 0, 256);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(2, 1);
+    message_Talk({
+        english=" [c_name:NPC_HERO_FIRST]![K] You too...",
+    });
+    message_Talk({
+        english=" I hope you're safe as well!?",
+    });
+    message_Talk({
+        english="""
+             If you didn't disappear either...[K]
+            Are you still alive?
+        """,
+    });
+    message_Talk({
+        english=" And [c_name:NPC_PARTNER_FIRST]![K] You...",
+    });
+    message_Talk({
+        english="""
+             The fate of Pokémon in the
+            future when you changed history...
+        """,
+    });
+    message_Talk({
+        english="""
+             My fate and that of
+            [c_name:NPC_HERO_FIRST]...
+        """,
+    });
+    message_Talk({
+        english="""
+             I expect you'll find out later,
+            but right now you're...
+        """,
+    });
+    message_Talk({
+        english=" What are you thinking?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(150);
+    MovePositionOffset<performer 0>(0.5, 16, 0);
+    MovePositionOffset<actor ACTOR_PLAYER_FUTURE>(0.5, 16, 0);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_SEREBII>(8, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_SEREBII);
+    MovePositionOffset<actor ACTOR_NPC_YONOWAARU_N9>(0.5, 20, 0);
+    Turn2Direction<actor ACTOR_NPC_DIARUGA>(8, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_DIARUGA);
+    Wait(45);
+    bgm_PlayFadeIn(BGM_A_MESSAGE_ON_THE_WIND, 0, 256);
+    message_SetWaitMode(180, 90);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_FacePositionOffset(2, 1);
+    message_Talk({
+        english=" ... (The wind![K] The light!)",
+    });
+    message_KeyWait();
+    message_SetWaitMode(270, 120);
+    message_Talk({
+        english="""
+             (If you can carry my message...[K]
+            Please send it to [c_name:NPC_HERO_FIRST] and
+            [c_name:NPC_PARTNER_FIRST]!)
+        """,
+    });
+    message_KeyWait();
+    message_SetWaitMode(290, 120);
+    message_Talk({
+        english="""
+             (Thanks to you, the future has
+            been freed from darkness!)
+        """,
+    });
+    message_KeyWait();
+    message_SetWaitMode(250, 120);
+    message_Talk({
+        english="""
+             (And we...and the other
+            Pokémon in the future...are safe!)
+        """,
+    });
+    message_KeyWait();
+    message_Talk({
+        english=" (We didn't disappear!)",
+    });
+    message_KeyWait();
+    message_SetWaitMode(290, 120);
+    message_Talk({
+        english="""
+             (From now on, we're going to
+            combine our strengths and rebuild this world.)
+        """,
+    });
+    message_KeyWait();
+    message_SetWaitMode(280, 120);
+    message_Talk({
+        english="""
+             (For [CS:N]Celebi[CR], who has supported
+            me all this way...[K] After this...)
+        """,
+    });
+    message_KeyWait();
+    message_SetWaitMode(260, 120);
+    message_Talk({
+        english=" (Above all, we...[K]are still alive!)",
+    });
+    message_Close();
+    screen2_FadeOut(0, 15);
+    screen_FadeOut(1, 15);
+    back2_SetMode(0);
+    message_SetWaitMode(-1, -1);
+    end;
+}

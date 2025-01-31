@@ -1,0 +1,77 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    $SCENARIO_SIDE = scn[41, 2];
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_P17P01A);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    supervision_Acting(1);
+    se_Play(9729);
+    SetAnimation<object OBJECT_P17P01A1_382>(17);
+    WaitAnimation<object OBJECT_P17P01A1_382>();
+    WaitExecuteObject(OBJECT_P17P01A1_382);
+    SetAnimation<object OBJECT_P17P01A1_382>(18);
+    WaitAnimation<object OBJECT_P17P01A1_382>();
+    WaitExecuteObject(OBJECT_P17P01A1_382);
+    Wait(20);
+    supervision_Acting(2);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    MovePositionOffset<actor ACTOR_PLAYER_PUPURIN>(0.5, 0, 8);
+    Wait(15);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SUBOMII>();
+    WaitExecuteLives(ACTOR_NPC_SUBOMII);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_JOYOUS, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_JOYOUS, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_JOYOUS, 3);
+    message_SetFace(ACTOR_NPC_UPAA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oh! [CS:Y]Igglybuff[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Hi, everyone! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MUCHUURU);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yay! ♪ Let's go! Let's go! ♪",
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m1', 19.5, 18.5>);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_JOYOUS, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_JOYOUS, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_JOYOUS, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_JOYOUS, 3);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m2', 50.5, 18.5>);
+    MovePositionMark<actor ACTOR_NPC_UPAA>(1, Position<'m3', 47.5, 20>);
+    MovePositionMark<actor ACTOR_NPC_SUBOMII>(1, Position<'m4', 53.5, 20>);
+    MovePositionMark<actor ACTOR_NPC_MUCHUURU>(1, Position<'m5', 50.5, 21>);
+    Wait(60);
+    screen_FadeOut(1, 30);
+    end;
+}

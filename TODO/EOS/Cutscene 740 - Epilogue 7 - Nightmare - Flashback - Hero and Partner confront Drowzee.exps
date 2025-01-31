@@ -1,0 +1,45 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D03P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We won't let you do that![K]
+                    [CS:N]Drowzee[CR], you bully!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We won't let you do that![K]
+                    [CS:N]Drowzee[CR], you bully!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We won't let you do that![K]
+                    [CS:N]Drowzee[CR], you bully!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_SURIIPU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_SURIIPU>();
+    message_SetFace(ACTOR_NPC_SURIIPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" H-how did you find this place?!",
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

@@ -1,0 +1,807 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_CRYSTAL_CAVE, 0, 256);
+    back_SetGround(LEVEL_P14P01A);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_P14P01A1_153>(2);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Wigglytuff[CR] also said this was
+                    where Pokémon would come to evolve...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Wigglytuff[CR] also said this was
+                    where Pokémon would come to evolve...
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Wigglytuff[CR] also said this was
+                    where Pokémon would come to evolve...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But what is evolution?",
+            }
+        case 2:
+            {
+                english=" But what is evolution?",
+            }
+        default:
+            {
+                english=" But what is evolution?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_RINGUMA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Oh, you don't know what
+            evolution is? What it means to evolve?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_NPC_HIMEGUMA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             Some kinds of Pokémon can
+            evolve if specific conditions are first met.
+        """,
+    });
+    message_Talk({
+        english="""
+             When a Pokémon evolves, its
+            appearance changes, sometimes dramatically.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Really?![K] Your appearance
+                    changes?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Really?![K] Your appearance
+                    changes?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Really?![K] Your appearance
+                    changes?!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_RINGUMA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" That's right.",
+    });
+    message_Talk({
+        english="""
+             And it may not just be how you
+            look that changes, either.
+        """,
+    });
+    message_Talk({
+        english="""
+             When you evolve, sometimes
+            your form and abilities can even change.
+            How about that?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" R-really?!",
+            }
+        case 2:
+            {
+                english=" R-really?!",
+            }
+        default:
+            {
+                english=" R-really?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HIMEGUMA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Yup!",
+    });
+    message_Talk({
+        english=" I've wanted to get stronger.",
+    });
+    message_Talk({
+        english="""
+             So I've been hoping to evolve
+            for a long time.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_HIMEGUMA>(4, 10, ACTOR_NPC_RINGUMA);
+    WaitExecuteLives(ACTOR_NPC_HIMEGUMA);
+    Turn2DirectionLives<actor ACTOR_NPC_RINGUMA>(4, 10, ACTOR_NPC_HIMEGUMA);
+    message_Talk({
+        english=" I'll try it out right away.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_HIMEGUMA>(0.7969, Position<'m0', 37.5, 26>);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_HIMEGUMA);
+    Turn2Direction<actor ACTOR_NPC_HIMEGUMA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_HIMEGUMA);
+    Wait(60);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]Those that seek awakening...",
+    });
+    message_Talk({
+        english="""
+            [CN]This is [CS:P]Luminous Spring[CR].[K]
+            [CN]Do you seek to evolve?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HIMEGUMA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Yup! Please!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]Do you need an item to do so?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_HIMEGUMA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Nope! I don't need one!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]So be it...",
+    });
+    message_Talk({
+        english="""
+            [CN]Seeker of awakening...[K]
+            [CN]Let us begin.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetOutputAttribute<actor ACTOR_NPC_HIMEGUMA>(32);
+    message_Mail({
+        english="[CN]Something is happening...[K]to [CS:N]Teddiursa[CR]...",
+    });
+    message_Mail({
+        english="[CN][CS:N]Teddiursa[CR]'s appearance is changing...",
+    });
+    message_Close();
+    se_Play(5135);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    screen_WhiteOut(1, 2);
+    supervision_RemoveActing(1);
+    supervision_Acting(2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(30);
+    me_Play(8);
+    message_Mail({
+        english="[CN][CS:N]Teddiursa[CR] evolved into [CS:N]Ursaring[CR]!",
+    });
+    WaitMe(8);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_RINGUMA>(EFFECT_SHOCKED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Whoa![K] [CS:N]Teddiursa[CR] looks just like
+                    [CS:N]Ursaring[CR] now!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Waah![K] [CS:N]Teddiursa[CR] looks just like
+                    [CS:N]Ursaring[CR] now!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Waah![K] [CS:N]Teddiursa[CR] looks just like
+                    [CS:N]Ursaring[CR] now!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_RINGUMA2>(4);
+    message_SetFace(ACTOR_NPC_RINGUMA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Yay!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_RINGUMA2>(2);
+    MovePositionMark<actor ACTOR_NPC_RINGUMA2>(1, Position<'m1', 35.5, 30.5>);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA2>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_RINGUMA2);
+    bgm_PlayFadeIn(BGM_CRYSTAL_CAVE, 0, 256);
+    message_SetFace(ACTOR_NPC_RINGUMA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Hey, [CS:N]Ursaring[CR]![K] I've evolved!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_RINGUMA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Congratulations![K] All the leveling
+            up you went through finally paid off!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_RINGUMA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_RINGUMA>();
+    WaitExecuteLives(ACTOR_NPC_RINGUMA);
+    message_SetFace(ACTOR_NPC_RINGUMA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Now it's hard to tell us apart...",
+    });
+    message_Talk({
+        english=" But good for you!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We should try evolving too,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's try evolving too,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We should try evolving too,
+                    [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA2>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_RINGUMA2);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I'll try first, OK?",
+            }
+        case 2:
+            {
+                english=" I'll try first.",
+            }
+        default:
+            {
+                english=" I'll try it first.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 37.5, 26>);
+    Wait(7);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, -24, 0);
+    MovePositionOffset<actor ACTOR_NPC_RINGUMA>(1, 16, 0);
+    MovePositionOffset<actor ACTOR_NPC_RINGUMA2>(1, -16, 0);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA2>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(60);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]Those that seek awakening...",
+    });
+    message_Talk({
+        english="""
+            [CN]This is [CS:P]Luminous Spring[CR].[K]
+            [CN]Do you seek to evolve?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yep! I want to evolve!",
+            }
+        case 2:
+            {
+                english=" Yes! I want to evolve!",
+            }
+        default:
+            {
+                english=" Yes! I want to evolve!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Please! Oh, this is exciting!",
+            }
+        case 2:
+            {
+                english=" Please! Oh, this is exciting!",
+            }
+        default:
+            {
+                english=" Please! Oh, this is exciting!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]Do you need an item to do so?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" An item?[K] ...I don't know...",
+            }
+        case 2:
+            {
+                english=" An item?[K] ...I don't know...",
+            }
+        default:
+            {
+                english=" An item?[K] ...I don't know...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Uh, no. I don't need one.",
+            }
+        case 2:
+            {
+                english=" Um, no. No item for me.",
+            }
+        default:
+            {
+                english=" Um, no. I don't need an item.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]So be it...",
+    });
+    message_Talk({
+        english="""
+            [CN]Seeker of awakening...[K]
+            [CN]Let us begin.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(120);
+    Wait(120);
+    message_Talk({
+        english="[CN]....................................",
+    });
+    message_Talk({
+        english="""
+            [CN]No.[K] Impossible...
+            [CN]You may not evolve.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_RINGUMA>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_RINGUMA2>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? Why not?!",
+            }
+        case 2:
+            {
+                english=" What? Why not?!",
+            }
+        default:
+            {
+                english=" What? Why not?!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Why can't I evolve?",
+            }
+        case 2:
+            {
+                english=" Why can't I evolve?",
+            }
+        default:
+            {
+                english=" Why can't I evolve?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Is it maybe because I haven't
+                    met my requirements for evolving?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Is it maybe because I haven't
+                    met my requirements for evolving?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Is it maybe because I haven't
+                    met my requirements for evolving?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]No.[K] That is not it...",
+    });
+    message_Talk({
+        english="""
+            [CN]It is not merely a problem
+            [CN]of not meeting requirements...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Then, why?",
+            }
+        case 2:
+            {
+                english=" Then, why?",
+            }
+        default:
+            {
+                english=" Then, why?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 2, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Teddiursa[CR] was able to evolve...",
+            }
+        case 2:
+            {
+                english=" [CS:N]Teddiursa[CR] was able to evolve...",
+            }
+        default:
+            {
+                english=" [CS:N]Teddiursa[CR] was able to evolve...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Why can't I evolve?",
+            }
+        case 2:
+            {
+                english=" Why can't I evolve?",
+            }
+        default:
+            {
+                english=" Why can't I evolve?",
+            }
+    }
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]Why can you not evolve...?",
+    });
+    message_Talk({
+        english="""
+            [CN]It may be influenced by a distortion
+            [CN]in the fabric of space...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Distortion?[K] The fabric of space?",
+            }
+        case 2:
+            {
+                english=" Distortion?[K] The fabric of space?",
+            }
+        default:
+            {
+                english=" Distortion?[K] The fabric of space?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]Why that should be, I do not know...",
+    });
+    message_Talk({
+        english="""
+            [CN]But your presence...[K]is somehow related
+            [CN]to the distortion of space itself.
+        """,
+    });
+    message_Talk({
+        english="""
+            [CN]And as a result of that,
+            [CN]you cannot evolve...
+        """,
+    });
+    message_Talk({
+        english="""
+            [CN]No.[K] It is not only you...[K]
+            [CN]There is yet another...
+        """,
+    });
+    message_Talk({
+        english="""
+            [CN]The one behind you...[K]is also
+            [CN]forbidden its evolution.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_RINGUMA>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_RINGUMA2>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_RINGUMA2>();
+    WaitExecuteLives(ACTOR_NPC_RINGUMA2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_RINGUMA2>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_RINGUMA2);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?! [hero] too?!",
+            }
+        case 2:
+            {
+                english=" What?! [hero] too?!",
+            }
+        default:
+            {
+                english=" What?! [hero] too?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(What...[K]me too?)",
+            }
+        default:
+            {
+                english="(What...[K]me too?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_EmptyActor();
+    message_Talk({
+        english="[CN]That is all that I can tell...",
+    });
+    message_Talk({
+        english="""
+            [CN]This is [CS:P]Luminous Spring[CR].[K]
+            [CN]If you seek new evolution,
+            [CN]then you shall return...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5125);
+    screen_WhiteOut(1, 30);
+    back_ChangeGround(LEVEL_P14P01A2);
+    Wait(60);
+    screen_FadeIn(1, 30);
+    Wait(60);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I guess it's not just me...",
+            }
+        case 2:
+            {
+                english=" Looks like it's not just me...",
+            }
+        default:
+            {
+                english=" Looks like it's not just me...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I guess you can't evolve, either,
+                    [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I guess you can't evolve, either,
+                    [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     You can't evolve, either,
+                    [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I don't get why we're not
+                    allowed to evolve, though.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I don't understand why we can't
+                    evolve, though.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I don't understand why we're not
+                    allowed to evolve, though.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Anyway, we have the Perfect
+                    Apple that was in the treasure box.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Anyway, we have the Perfect
+                    Apple that was in the treasure box.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Anyway, we have the Perfect
+                    Apple that was in the treasure box.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's take it back to the guild.",
+            }
+        case 2:
+            {
+                english="""
+                     We should go back to the guild
+                    with it.
+                """,
+            }
+        default:
+            {
+                english=" Let's go back to the guild with it.",
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    Wait(90);
+    WaitBgm(BGM_IN_THE_DEPTHS_OF_THE_PIT);
+    end;
+}

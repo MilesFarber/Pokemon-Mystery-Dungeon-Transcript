@@ -1,0 +1,188 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    bgm2_PlayFadeIn(BGM_STORM, 0, 256);
+    back_SetGround(LEVEL_V03P06A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(42);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(1024);
+    SetEffect<performer 3>(EFFECT_VERY_HEAVY_RAIN, 3);
+    SetAnimation<object OBJECT_V03P06A2_200>(3);
+    SetAnimation<object OBJECT_V03P06A1_196>(3);
+    screen_FadeChange(1, 15, 0, 192);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(1.5, Position<'m0', 25.5, 25.5>);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(22);
+    Wait(60);
+    se_Play(6401);
+    screen_WhiteOut(1, 2);
+    Wait(3);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    screen_WhiteOut(1, 2);
+    Wait(3);
+    screen_FadeIn(1, 2);
+    screen_FadeChange(1, 0, 0, 192);
+    Wait(60);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But my guess is that if a Time
+                    Gear is removed from a region...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But my guess is that if a Time
+                    Gear is removed from a region...
+                """,
+            }
+        default:
+            {
+                english="""
+                     But my guess is that if a Time
+                    Gear is removed from a region...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The flow of time in that region
+                    will probably stop too.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The flow of time in that region
+                    will probably stop too.
+                """,
+            }
+        default:
+            {
+                english="""
+                     The flow of time in that region
+                    will probably stop too.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(42);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(768);
+    MovePositionOffset<actor ACTOR_NPC_JUPUTORU>(0.5, 0, -40);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    SetAnimation<actor ACTOR_NPC_JUPUTORU>(256);
+    Wait(30);
+    se_Play(6401);
+    screen_WhiteOut(1, 2);
+    Wait(3);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    screen_WhiteOut(1, 2);
+    Wait(3);
+    screen_FadeIn(1, 2);
+    screen_FadeChange(1, 0, 0, 192);
+    Wait(45);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That's why everyone makes sure
+                    never to disturb the Time Gears.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That's why everyone makes sure
+                    never to disturb the Time Gears.
+                """,
+            }
+        default:
+            {
+                english="""
+                     That's why everyone makes sure
+                    never to disturb the Time Gears.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Everyone has long been certain
+                    that some kind of disaster would strike.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Everyone has long been certain
+                    that some kind of disaster would strike.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Everyone has long been certain
+                    that some kind of disaster would strike.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So everyone stays away from
+                    the Time Gears and doesn't tamper with them.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     So everyone stays away from
+                    the Time Gears and doesn't tamper with them.
+                """,
+            }
+        default:
+            {
+                english="""
+                     So everyone stays away from
+                    the Time Gears and doesn't tamper with them.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Even the most hardened criminal
+                    Pokémon know to avoid messing with them.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Even the most hardened criminal
+                    Pokémon know to avoid messing with them.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Even the most hardened criminal
+                    Pokémon know to avoid messing with them.
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 15);
+    end;
+}

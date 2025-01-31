@@ -1,0 +1,102 @@
+
+def 0 {
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    back_SetGround(LEVEL_D28P44A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_D28P34A2_77>(10);
+    SetEffect<performer 3>(653, 3);
+    bgm_PlayFadeIn(BGM_IN_THE_HANDS_OF_FATE, 0, 256);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_SAD, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That's right...)",
+            }
+        default:
+            {
+                english="(That's right...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (If the future is changed, [CS:N]Grovyle[CR] will
+                    disappear...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (If the future is changed, [CS:N]Grovyle[CR] will
+                    disappear...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(And...[K]I will disappear too...)",
+            }
+        default:
+            {
+                english="(And...[K]I will disappear too...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.5, Position<'m0', 34.5, 23.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Destroy<object OBJECT_D28P34A2_77>();
+    Wait(45);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, [hero].",
+            }
+        case 2:
+            {
+                english=" Hey, [hero].",
+            }
+        default:
+            {
+                english=" Say, [hero].",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The last thing [CS:N]Grovyle[CR] said to
+                    you, [hero]...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The last thing [CS:N]Grovyle[CR] said to
+                    you, [hero]...
+                """,
+            }
+        default:
+            {
+                english="""
+                     The last thing [CS:N]Grovyle[CR] said to
+                    you, [hero]...
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

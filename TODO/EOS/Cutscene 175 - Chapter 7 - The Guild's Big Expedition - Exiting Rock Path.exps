@@ -1,0 +1,144 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[9, 6];
+    back_SetGround(LEVEL_D07P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    Wait(1);
+    supervision_LoadStation(LEVEL_D07P11A, 'UM08');
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_MT_HORN, 0, 256);
+    supervision_Acting(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 39, 22.5>);
+    Wait(50);
+    supervision_Acting(3);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m1', 45, 22.5>);
+    Wait(50);
+    supervision_Station(5);
+    supervision_Acting(1);
+    SetPositionInitial<actor ACTOR_NPC_BIPPA>();
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    Move2PositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m2', 41, 19.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? This place again?!",
+            }
+        case 2:
+            {
+                english=" Huh? This place again?!",
+            }
+        default:
+            {
+                english=" Huh? This place again?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(2, 1);
+    message_Talk({
+        english="""
+             Seems to me that we're back
+            where we came from.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It looks like taking that [CS:P]Rock
+                    Path[CR] brings us right back where we started.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It looks like taking that [CS:P]Rock
+                    Path[CR] brings us right back where we started.
+                """,
+            }
+        default:
+            {
+                english="""
+                     It looks like taking that [CS:P]Rock
+                    Path[CR] brings us right back where we started.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(2, 1);
+    message_Talk({
+        english="""
+             If we aim to get across,
+            I reckon we ought to choose [CS:P]Mt. Horn[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We're close to the base
+                    camp now.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We're close to the base
+                    camp now.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We're close to the base
+                    camp now.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's get it done, [hero]!",
+            }
+        case 2:
+            {
+                english=" Let's get it done, [hero]!",
+            }
+        default:
+            {
+                english=" Let's get it done, [hero]!",
+            }
+    }
+    message_Close();
+    end;
+}

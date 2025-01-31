@@ -1,0 +1,348 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 81];
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SHOUTING, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waaaaaah!",
+            }
+        case 2:
+            {
+                english=" Waaaaaah!",
+            }
+        default:
+            {
+                english=" Waaaaaah!",
+            }
+    }
+    message_Close();
+    back_SetGround(LEVEL_D38P12A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    WaitLockLives(5, ACTOR_PLAYER);
+    screen_FadeIn(1, 30);
+    Unlock(5);
+    Wait(10);
+    Unlock(8);
+    Lock(3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Owowow...",
+            }
+        case 2:
+            {
+                english=" Owowow...",
+            }
+        default:
+            {
+                english=" Owowow...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Unlock(6);
+    Wait(10);
+    Unlock(9);
+    Lock(3);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh...[K] Are you OK, [hero]?",
+            }
+        case 2:
+            {
+                english=" Ugh...[K] Are you OK, [hero]?",
+            }
+        default:
+            {
+                english=" Ugh...[K] Are you OK, [hero]?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    bgm_PlayFadeIn(BGM_CHASM_CAVE, 0, 256);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It looks like we landed
+                    somewhere else...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It looks like we landed
+                    somewhere else...
+                """,
+            }
+        default:
+            {
+                english="""
+                     It looks like we landed
+                    somewhere else...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     But this is all such a shock![K]
+                    Who knew things would turn out this way?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     But this is all such a shock![K]
+                    Who knew things would turn out this way?
+                """,
+            }
+        default:
+            {
+                english="""
+                     But this is all such a shock![K]
+                    Who knew things would turn out this way?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I don't understand...[K] Why did
+                    [CS:N]Palkia[CR] suddenly attack us?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I don't understand...[K] Why did
+                    [CS:N]Palkia[CR] suddenly attack us?
+                """,
+            }
+        default:
+            {
+                english="""
+                     I don't understand...[K] Why did
+                    [CS:N]Palkia[CR] suddenly attack us?
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     He seemed to be bellowing about
+                    the distortion of space...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     He seemed to be bellowing about
+                    the distortion of space...
+                """,
+            }
+        default:
+            {
+                english="""
+                     He seemed to be bellowing about
+                    the distortion of space...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(...[CS:N]Palkia[CR]...)",
+            }
+        default:
+            {
+                english="(...[CS:N]Palkia[CR]...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    ([CS:N]Palkia[CR] seemed to know that we caused
+                    the distortion of space.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    ([CS:N]Palkia[CR] seemed to know that we caused
+                    the distortion of space.)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(And then he attacked us...)",
+            }
+        default:
+            {
+                english="(And then he attacked us...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(But I don't understand why...)",
+            }
+        default:
+            {
+                english="(But I don't understand why...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     There's no mistaking one thing.
+                    [CS:N]Palkia[CR] is trying to get rid of us.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     There's no mistaking one thing.
+                    [CS:N]Palkia[CR] is trying to get rid of us.
+                """,
+            }
+        default:
+            {
+                english="""
+                     There's no mistaking one thing.
+                    [CS:N]Palkia[CR] is trying to get rid of us.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     He might attempt another
+                    attack...[K] We should get out of here as soon as
+                    we can.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     He might attempt another
+                    attack...[K] We should get out of here as soon as
+                    we can.
+                """,
+            }
+        default:
+            {
+                english="""
+                     He might attempt another
+                    attack...[K] We should get out of here as soon as
+                    we can.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We need to roll as soon as we're
+                    ready, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's go as soon as we're ready,
+                    [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's go as soon as we're ready,
+                    [hero].
+                """,
+            }
+    }
+    message_Close();
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetDirection(DIR_UP);
+    SetAnimation(72);
+    ResetFunctionAttribute(256);
+    Lock(5);
+    SlidePositionMark(6, Position<'m0', 32, 27.5>);
+    SetFunctionAttribute(256);
+    SetAnimation(11);
+    se_Play(7939);
+    SlideHeight(2, 12);
+    Wait(2);
+    SlideHeight(2, 0);
+    SetDirection(DIR_RIGHT);
+    SetAnimation(68);
+    Wait(60);
+    Lock(6);
+    SetAnimation(63);
+    WaitAnimation();
+    SetAnimation(2);
+    Lock(7);
+    hold;
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetDirection(DIR_UP);
+    SetAnimation(72);
+    ResetFunctionAttribute(256);
+    Lock(8);
+    SlidePositionMark(6, Position<'m1', 28, 27.5>);
+    SetFunctionAttribute(256);
+    SetAnimation(11);
+    SlideHeight(2, 12);
+    Wait(2);
+    SlideHeight(2, 0);
+    SetDirection(DIR_LEFT);
+    SetAnimation(68);
+    Wait(45);
+    Unlock(3);
+    Lock(9);
+    SetAnimation(63);
+    WaitAnimation();
+    SetAnimation(2);
+    Unlock(3);
+    Lock(10);
+    hold;
+}

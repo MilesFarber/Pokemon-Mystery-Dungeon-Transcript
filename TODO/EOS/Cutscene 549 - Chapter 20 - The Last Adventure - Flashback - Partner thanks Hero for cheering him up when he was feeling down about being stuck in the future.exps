@@ -1,0 +1,62 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_MEMORIES_RETURNED, 0, 256);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_S04P01A);
+    back_SetGround(LEVEL_P06P01A);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [hero], thanks.",
+            }
+        case 2:
+            {
+                english=" [hero], thank you.",
+            }
+        default:
+            {
+                english=" [hero], thank you.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(15);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You were worried about me for
+                    being so down.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You tried to pick me up because
+                    I was feeling down.
+                """,
+            }
+        default:
+            {
+                english="""
+                     You tried to cheer me up
+                    because I was feeling down.
+                """,
+            }
+    }
+    message_Close();
+    screen2_FadeOut(0, 30);
+    screen_WhiteOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

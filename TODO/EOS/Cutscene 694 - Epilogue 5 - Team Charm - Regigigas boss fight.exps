@@ -1,0 +1,69 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(61, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D32P44A);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_LOWER_BRINE_CAVE, 0, 256);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m0', 37.5, 34.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m1', 40.5, 36.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m2', 34.5, 36.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m3', 37.5, 38.5>);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(30);
+    bgm_FadeOut(60);
+    se_Play(6925);
+    screen_FadeChange(1, 30, 256, 192);
+    WaitSe(6925);
+    message_ResetActor();
+    message_Talk({
+        english=" ........................",
+    });
+    message_Talk({
+        english=" SHOW ALL OF YOUR POWER!",
+    });
+    message_Talk({
+        english="""
+             PROVE YOURSELVES WORTHY TO
+            BECOME MY MASTER.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_Stop();
+    se_Play(7952);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    screen_WhiteOut(1, 15);
+    Wait(90);
+    supervision_RemoveActing(1);
+    supervision_Acting(2);
+    screen_FadeIn(1, 30);
+    Wait(60);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    se_Play(5136);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    end;
+}

@@ -1,0 +1,53 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hmmm...[K] Just as I suspected.
+            This is a bit difficult...
+        """,
+    });
+    message_Talk({
+        english=" We should try again.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yep. ♪",
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D45P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_AAMARUDO>();
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_FORTUNE_RAVINE_DEPTHS, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" This place is a bit difficult...",
+    });
+    message_Talk({
+        english="""
+             But we shouldn't give up. Let's
+            keep trying.[K] Come on!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Yep. ♪[K] Let's do our best,
+            Master! ♪
+        """,
+    });
+    message_Close();
+    end;
+}

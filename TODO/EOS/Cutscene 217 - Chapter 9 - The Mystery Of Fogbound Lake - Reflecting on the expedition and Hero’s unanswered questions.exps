@@ -1,0 +1,546 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_RESTORED, 0, 256);
+    back2_SetMode(5);
+    back_SetGround(LEVEL_V10P03C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_V10P03C1_227>(1);
+    SetOutputAttribute<object OBJECT_V10P03C1_227>(8);
+    screen2_FadeIn(0, 60);
+    screen_FadeIn(1, 60);
+    Wait(30);
+    Wait(180);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" ..................",
+            }
+        case 2:
+            {
+                english=" ..................",
+            }
+        default:
+            {
+                english=" ..................",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Are you looking at this,
+                    [hero]? This is too magical!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Are you taking in this view,
+                    [hero]? This is so magical!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Are you taking in this view,
+                    [hero]? This is utterly magical!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Too bad we didn't learn anything
+                    about your past, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's really too bad that we didn't
+                    learn anything about your past, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's really a shame that we didn't
+                    learn anything about your past, [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But I'm glad we came!",
+            }
+        case 2:
+            {
+                english=" But I'm glad we came!",
+            }
+        default:
+            {
+                english=" But I'm glad we came!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It was great to see such a
+                    cool thing with everyone!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I'm happy that I got to see
+                    such a beautiful scene with everyone!
+                """,
+            }
+        default:
+            {
+                english="""
+                     I'm happy that I was able to
+                    share such a beautiful moment with everyone!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I gotta say that I'm really happy!",
+            }
+        case 2:
+            {
+                english=" I'm truly happy.",
+            }
+        default:
+            {
+                english=" I just couldn't be happier!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I'm glad I came too.)",
+            }
+        default:
+            {
+                english="(I'm glad I came too.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Sure, it's true we never learned who I am...)",
+            }
+        default:
+            {
+                english="(Sure, it's true we never learned who I am...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Hang on a minute...[K][CS:N]Uxie[CR] said...)",
+            }
+        default:
+            {
+                english="(Hang on a minute...[K][CS:N]Uxie[CR] said...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([CS:N]Uxie[CR] said he didn't know me...)",
+            }
+        default:
+            {
+                english="([CS:N]Uxie[CR] said he didn't know me...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(But if that's true...)",
+            }
+        default:
+            {
+                english="(But if that's true...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(How did I know about this place?!)",
+            }
+        default:
+            {
+                english="(How did I know about this place?!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(And that Time Gear!)",
+            }
+        default:
+            {
+                english="(And that Time Gear!)",
+            }
+    }
+    message_Close();
+    screen2_FadeOut(0, 60);
+    screen_FadeOut(1, 60);
+    back2_SetMode(0);
+    end;
+}
+
+def 1 for object OBJECT_V10P01C1_212 {
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    @label_0;
+    forever {
+        MovePositionMark(0.25, Position<'m0', 31, 46.5>);
+        Wait(10);
+        MovePositionMark(0.25, Position<'m1', 9, 46.5>);
+        Wait(19);
+        continue;  // may be redundant
+    }
+}
+
+def 2 for object OBJECT_V10P01C1_213 {
+    @label_1;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.3477, Position<'m2', 30, 40.5>);
+    Wait(10);
+    MovePositionMark(0.3477, Position<'m3', 10, 40.5>);
+    Wait(14);
+    jump @label_1;
+}
+
+def 3 for object OBJECT_V10P01C1_214 {
+    @label_2;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.3477, Position<'m4', 11, 43.5>);
+    Wait(11);
+    MovePositionMark(0.3477, Position<'m5', 28, 43.5>);
+    Wait(15);
+    jump @label_2;
+}
+
+def 4 for object OBJECT_V10P01C2_218 {
+    @label_3;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.2969, Position<'m6', 23, 27.5>);
+    Wait(10);
+    MovePositionMark(0.2969, Position<'m7', 15, 27.5>);
+    Wait(14);
+    jump @label_3;
+}
+
+def 5 for object OBJECT_V10P01C2_219 {
+    @label_4;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.3477, Position<'m8', 13, 31.5>);
+    Wait(15);
+    MovePositionMark(0.3477, Position<'m9', 25, 31.5>);
+    Wait(9);
+    jump @label_4;
+}
+
+def 6 for object OBJECT_V10P01C2_220 {
+    @label_5;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.25, Position<'m10', 29, 37.5>);
+    Wait(15);
+    MovePositionMark(0.25, Position<'m11', 10, 37.5>);
+    Wait(22);
+    jump @label_5;
+}
+
+def 7 for object OBJECT_V10P01C3_224 {
+    @label_6;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.2969, Position<'m12', 26, 35.5>);
+    Wait(15);
+    MovePositionMark(0.2969, Position<'m13', 11, 35.5>);
+    Wait(14);
+    jump @label_6;
+}
+
+def 8 for object OBJECT_V10P01C1_210 {
+    @label_7;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.3477, Position<'m14', 5, 42.5>);
+    Wait(10);
+    MovePositionMark(0.3477, Position<'m15', 35, 42.5>);
+    Wait(15);
+    jump @label_7;
+}
+
+def 9 for object OBJECT_V10P01C1_211 {
+    @label_8;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.2969, Position<'m16', 11, 29.5>);
+    Wait(12);
+    MovePositionMark(0.2969, Position<'m17', 26, 29.5>);
+    Wait(10);
+    jump @label_8;
+}
+
+def 10 for object OBJECT_V10P01C2_215 {
+    @label_9;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.3477, Position<'m18', 8, 35.5>);
+    Wait(15);
+    MovePositionMark(0.3477, Position<'m19', 30, 35.5>);
+    Wait(12);
+    jump @label_9;
+}
+
+def 11 for object OBJECT_V10P01C2_216 {
+    @label_10;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.2969, Position<'m20', 29, 32.5>);
+    Wait(10);
+    MovePositionMark(0.2969, Position<'m21', 11, 32.5>);
+    Wait(13);
+    jump @label_10;
+}
+
+def 12 for object OBJECT_V10P01C2_217 {
+    @label_11;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.3164, Position<'m22', 11, 31.5>);
+    Wait(10);
+    MovePositionMark(0.3164, Position<'m23', 30, 31.5>);
+    Wait(15);
+    jump @label_11;
+}
+
+def 13 for object OBJECT_V10P01C3_221 {
+    @label_12;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.25, Position<'m24', 12, 33.5>);
+    Wait(14);
+    MovePositionMark(0.25, Position<'m25', 27, 33.5>);
+    Wait(2);
+    jump @label_12;
+}
+
+def 14 for object OBJECT_V10P01C3_222 {
+    @label_13;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.2969, Position<'m26', 10, 38.5>);
+    Wait(10);
+    MovePositionMark(0.2969, Position<'m27', 29, 38.5>);
+    Wait(12);
+    jump @label_13;
+}
+
+def 15 for object OBJECT_V10P01C3_223 {
+    @label_14;
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    MovePositionMark(0.25, Position<'m28', 26, 27.5>);
+    Wait(12);
+    MovePositionMark(0.25, Position<'m29', 12, 27.5>);
+    Wait(10);
+    jump @label_14;
+}
+
+def 16 for actor ACTOR_NPC_BARUBIITO1 {
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    ResetOutputAttribute(256);
+    Wait(5);
+    SetAnimation(42);
+    @label_15;
+    forever {
+        Slide2PositionOffset(1, 100, 0);
+        SetDirection(DIR_RIGHT);
+        Wait(60);
+        Slide2PositionOffset(1, 150, -30);
+        SetDirection(DIR_RIGHT);
+        Wait(60);
+        Slide2PositionOffset(1, 150, 0);
+        SetPositionMark(Position<'m30', 0, 39.5>);
+        Wait(60);
+        Wait(24);
+        continue;  // may be redundant
+    }
+}
+
+def 17 for actor ACTOR_NPC_BARUBIITO2 {
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    ResetOutputAttribute(256);
+    Wait(5);
+    SetAnimation(42);
+    @label_16;
+    forever {
+        Wait(60);
+        Slide2PositionOffset(1.0977, -120, 0);
+        SetDirection(DIR_LEFT);
+        Wait(50);
+        Slide2PositionOffset(1.0977, -100, -30);
+        SetDirection(DIR_LEFT);
+        Wait(75);
+        Slide2PositionOffset(1.0977, -150, 0);
+        SetPositionMark(Position<'m31', 37, 35.5>);
+        Wait(60);
+        Wait(24);
+        continue;  // may be redundant
+    }
+}
+
+def 18 for actor ACTOR_NPC_BARUBIITO3 {
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    ResetOutputAttribute(256);
+    Wait(5);
+    SetAnimation(42);
+    @label_17;
+    forever {
+        Slide2PositionOffset(0.8984, -80, -40);
+        SetDirection(DIR_LEFT);
+        Wait(55);
+        Slide2PositionOffset(0.7969, -150, -20);
+        SetDirection(DIR_LEFT);
+        Wait(45);
+        Slide2PositionOffset(0.8984, -150, 0);
+        SetPositionMark(Position<'m32', 37, 36.5>);
+        Wait(55);
+        Wait(24);
+        continue;  // may be redundant
+    }
+}
+
+def 19 for actor ACTOR_NPC_BARUBIITO4 {
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    ResetOutputAttribute(256);
+    Wait(5);
+    SetAnimation(42);
+    @label_18;
+    forever {
+        Slide2PositionOffset(0.8984, 70, 0);
+        SetDirection(DIR_RIGHT);
+        Wait(45);
+        Slide2PositionOffset(1.2969, 250, 0);
+        SetPositionMark(Position<'m33', 0, 34.5>);
+        Wait(45);
+        Wait(24);
+        continue;  // may be redundant
+    }
+}
+
+def 20 for actor ACTOR_NPC_IRUMIIZE1 {
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    ResetOutputAttribute(256);
+    SetAnimation(42);
+    Wait(5);
+    SetPositionOffset(24, 0);
+    @label_19;
+    forever {
+        Slide2PositionOffset(1, 100, 0);
+        SetDirection(DIR_RIGHT);
+        Wait(60);
+        Slide2PositionOffset(1, 150, -30);
+        SetDirection(DIR_RIGHT);
+        Wait(60);
+        Slide2PositionOffset(1, 150, 0);
+        SetPositionMark(Position<'m34', 0, 39.5>);
+        Wait(60);
+        Slide2PositionOffset(1, 24, 0);
+        continue;  // may be redundant
+    }
+}
+
+def 21 for actor ACTOR_NPC_IRUMIIZE2 {
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    ResetOutputAttribute(256);
+    SetAnimation(42);
+    Wait(5);
+    SetPositionOffset(-24, 0);
+    @label_20;
+    forever {
+        Wait(60);
+        Slide2PositionOffset(1.0977, -120, 0);
+        SetDirection(DIR_LEFT);
+        Wait(50);
+        Slide2PositionOffset(1.0977, -100, -30);
+        SetDirection(DIR_LEFT);
+        Wait(75);
+        Slide2PositionOffset(1.0977, -150, 0);
+        SetPositionMark(Position<'m35', 37, 35.5>);
+        Wait(60);
+        Slide2PositionOffset(1, -24, 0);
+        continue;  // may be redundant
+    }
+}
+
+def 22 for actor ACTOR_NPC_IRUMIIZE3 {
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    ResetOutputAttribute(256);
+    SetAnimation(42);
+    Wait(5);
+    SetPositionOffset(-24, 0);
+    @label_21;
+    forever {
+        Slide2PositionOffset(0.8984, -80, -40);
+        SetDirection(DIR_LEFT);
+        Wait(55);
+        Slide2PositionOffset(0.7969, -150, -20);
+        SetDirection(DIR_LEFT);
+        Wait(45);
+        Slide2PositionOffset(0.8984, -150, 0);
+        SetPositionMark(Position<'m36', 37, 36.5>);
+        Wait(55);
+        Slide2PositionOffset(1, -24, 0);
+        continue;  // may be redundant
+    }
+}
+
+def 23 for actor ACTOR_NPC_IRUMIIZE4 {
+    SetOutputAttribute(4);
+    SetOutputAttribute(8);
+    ResetOutputAttribute(256);
+    SetAnimation(42);
+    Wait(5);
+    SetPositionOffset(24, 0);
+    @label_22;
+    forever {
+        Slide2PositionOffset(0.8984, 70, 0);
+        SetDirection(DIR_RIGHT);
+        Wait(45);
+        Slide2PositionOffset(1.2969, 250, 0);
+        SetPositionMark(Position<'m37', 0, 34.5>);
+        Wait(45);
+        Slide2PositionOffset(1, 24, 0);
+        continue;  // may be redundant
+    }
+}

@@ -1,0 +1,242 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 65];
+    back_SetGround(LEVEL_D32P33A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_D32P44A5_88>(9);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(7950);
+    SetAnimation<object OBJECT_D32P44A5_88>(17);
+    WaitAnimation<object OBJECT_D32P44A5_88>();
+    WaitExecuteObject(OBJECT_D32P44A5_88);
+    SetAnimation<object OBJECT_D32P44A5_88>(2);
+    SetOutputAttribute<object OBJECT_D32P44A5_88>(4);
+    Wait(60);
+    MovePositionMark<object OBJECT_D32P44A5_88>(0.2969, Position<'m0', 22.5, 32>);
+    WaitExecuteObject(OBJECT_D32P44A5_88);
+    Wait(30);
+    se_FadeOut(7950, 90);
+    message_Mail({
+        english="""
+            [CN]A mysterious light
+            [CN]enveloped [player]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitSe(7950);
+    se_Play(7951);
+    SetAnimation<object OBJECT_D32P44A5_88>(19);
+    WaitAnimation<object OBJECT_D32P44A5_88>();
+    WaitExecuteObject(OBJECT_D32P44A5_88);
+    Destroy<object OBJECT_D32P44A5_88>();
+    message_Mail({
+        english="[CN]The guardian's permission was granted!",
+    });
+    WaitSe(7951);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(1, Position<'m1', 22.5, 20.5>);
+    WaitExecutePerformer(0);
+    Wait(30);
+    se_Play(7187);
+    camera_SetEffect(2, 2, 2.0);
+    Wait(10);
+    supervision_RemoveActing(0);
+    supervision_Acting(1);
+    camera_SetEffect(2, 2, 2.0);
+    Wait(15);
+    camera_SetEffect(0, 0, 0);
+    Wait(30);
+    MovePositionMark<performer 0>(1, Position<'m2', 76.5, 33.5>);
+    WaitExecutePerformer(0);
+    Wait(15);
+    se_Play(7175);
+    SetEffect<performer 4>(644, 3);
+    SetEffect<performer 5>(644, 3);
+    SetEffect<performer 6>(644, 3);
+    WaitEffect<performer 6>();
+    Wait(30);
+    supervision_Acting(2);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(22);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(22);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(22);
+    WaitExecutePerformer(6);
+    MovePositionOffset<performer 0>(1, 0, -16);
+    WaitExecutePerformer(0);
+    WaitSe(7175);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC3>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    SlidePositionOffset<actor ACTOR_NPC_MIMIROPPU>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_MIMIROPPU>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_MIMIROPPU>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_MIMIROPPU>(1, -1, 0);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    SlidePositionOffset<actor ACTOR_NPC_SAANAITO>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_SAANAITO>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_SAANAITO>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_SAANAITO>(1, -1, 0);
+    SlidePositionOffset<actor ACTOR_NPC_CHAAREMU>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_CHAAREMU>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_CHAAREMU>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_CHAAREMU>(1, -1, 0);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_PAIN, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, -1);
+    message_Talk({
+        english=" Urr... Urgh...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(23);
+    Wait(5);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(23);
+    Wait(7);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(23);
+    WaitAnimation<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_NPC_MIMIROPPU>(2);
+    SetDirection<actor ACTOR_NPC_MIMIROPPU>(DIR_LEFT);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_PAIN, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, -1);
+    message_Talk({
+        english=" Wh-what happened to us...?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_MIMIROPPU>();
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, -1);
+    message_Talk({
+        english="""
+             Oh![K] We were fighting [CS:N]Registeel[CR]
+            here...[K] Then [CS:N]Medicham[CR] got into trouble...
+        """,
+    });
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_WORRIED, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, -1);
+    message_Talk({
+        english="""
+             ...[K]After that, I just don't know.
+            I don't know what came next.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_MIMIROPPU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, -1);
+    message_Talk({
+        english="""
+             I can see that you saved us
+            though, Team [team:].
+        """,
+    });
+    message_Talk({
+        english=" Thank you! We were in a bind!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_CHAAREMU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_CHAAREMU>();
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_WORRIED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             We owe you one, Team
+            [team:].
+        """,
+    });
+    message_Talk({
+        english="""
+             If you didn't show up in time to
+            save us, that would've been it for us.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_WORRIED, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" That is so true.",
+    });
+    message_Talk({
+        english="""
+             I'm afraid we can never repay
+            you for this...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_MIMIROPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_MIMIROPPU>();
+    WaitExecuteLives(ACTOR_NPC_MIMIROPPU);
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, -1);
+    message_Talk({
+        english=" I know!",
+    });
+    message_Talk({
+        english="""
+             How about letting us back you
+            up at some point, Team [team:]?
+        """,
+    });
+    message_Talk({
+        english="""
+             Yes, I think we've already failed
+            on our own exploration.
+        """,
+    });
+    message_SetFace(ACTOR_NPC_MIMIROPPU, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(-1, -1);
+    message_Talk({
+        english="""
+             Tee-hee! Don't worry! We won't
+            try to steal your glory. Or your treasure!
+        """,
+    });
+    message_Talk({
+        english="""
+             Let's go![K] Our goal can't be far
+            off now!
+        """,
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_NPC_MIMIROPPU>(1, Position<'m3', 76.5, 15.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m4', 76.5, 15.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m5', 76.5, 15.5>);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m6', 76.5, 15.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m7', 76.5, 15.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m8', 76.5, 15.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC3>(1, Position<'m9', 76.5, 15.5>);
+    Wait(15);
+    bgm_FadeOut(60);
+    screen_FadeOut(1, 30);
+    WaitBgm(BGM_IN_THE_DEPTHS_OF_THE_PIT);
+    end;
+}

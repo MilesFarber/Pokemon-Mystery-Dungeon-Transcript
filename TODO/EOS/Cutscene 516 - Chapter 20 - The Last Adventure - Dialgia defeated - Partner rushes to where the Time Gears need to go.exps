@@ -1,0 +1,265 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[27, 0];
+    back_SetGround(LEVEL_D30P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_DARK_DIARUGA>(22);
+    WaitAnimation<actor ACTOR_NPC_DARK_DIARUGA>();
+    bgm2_PlayFadeIn(BGM_HEAVY_FEELING, 90, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DARK_DIARUGA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" GRRR-OOOOOO...OOOOOH!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5126);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(50);
+    SetAnimation<actor ACTOR_NPC_DARK_DIARUGA>(23);
+    WaitAnimation<actor ACTOR_NPC_DARK_DIARUGA>();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(140);
+    se_Play(6918);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(20);
+    camera_SetEffect(0, 0, 0);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We...[K]did it...",
+            }
+        case 2:
+            {
+                english=" We...[K]did it...",
+            }
+        default:
+            {
+                english=" We...[K]did it...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_DARK_DIARUGA>(25);
+    SlidePositionOffset<actor ACTOR_NPC_DARK_DIARUGA>(1, 1, 0);
+    WaitExecuteLives(ACTOR_NPC_DARK_DIARUGA);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_NPC_DARK_DIARUGA>(1, -1, 0);
+    WaitExecuteLives(ACTOR_NPC_DARK_DIARUGA);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_NPC_DARK_DIARUGA>(1, 1, 0);
+    WaitExecuteLives(ACTOR_NPC_DARK_DIARUGA);
+    Wait(2);
+    SlidePositionOffset<actor ACTOR_NPC_DARK_DIARUGA>(1, -1, 0);
+    WaitExecuteLives(ACTOR_NPC_DARK_DIARUGA);
+    message_SetFace(ACTOR_NPC_DARK_DIARUGA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" GRR...[K] GRRRRRR...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" OK, [hero]![K] It's time!",
+            }
+        case 2:
+            {
+                english=" OK, [hero]![K] It's time!",
+            }
+        default:
+            {
+                english=" OK, [hero]![K] It's time!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     While [CS:N]Dialga[CR] is down, I'll go put
+                    in the Time Gears.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     While [CS:N]Dialga[CR] is still down, I'll go
+                    put in the Time Gears.
+                """,
+            }
+        default:
+            {
+                english="""
+                     While [CS:N]Dialga[CR] is down, I'll go put
+                    in the Time Gears.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 30.5, 39.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(16, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    bgm_PlayFadeIn(BGM_EARTHQUAKE2, 0, 256);
+    camera_SetEffect(2, 1, 1.0);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wa-waah!",
+            }
+        case 2:
+            {
+                english=" Wa-waah!",
+            }
+        default:
+            {
+                english=" Wa-waah!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6401);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(20);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V25P03A);
+    camera2_SetPositionMark(Position<'m1', 19.5, 13.5>);
+    screen2_FadeIn(1, 5);
+    se_Play(7691);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_V25P03A1_312>(1);
+    Wait(60);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Th-this...",
+            }
+        case 2:
+            {
+                english=" Th-this...",
+            }
+        default:
+            {
+                english=" Th-this...",
+            }
+    }
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This quake is worse than
+                    before!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This tremor is the worst
+                    it's been!
+                """,
+            }
+        default:
+            {
+                english="""
+                     This tremor is the strongest
+                    so far!
+                """,
+            }
+    }
+    message_Close();
+    se_FadeOut(7691, 45);
+    screen2_FadeOut(1, 15);
+    back2_SetMode(0);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([CS:P]T-Temporal Tower[CR] is...)",
+            }
+        default:
+            {
+                english="([CS:P]T-Temporal Tower[CR] is...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    ([CS:P]Temporal Tower[CR] must be nearing total
+                    collapse...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    ([CS:P]Temporal Tower[CR] must be nearing total
+                    collapse...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(If...[K] If that were to happen...)",
+            }
+        default:
+            {
+                english="(If...[K] If that were to happen...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (The destruction will accelerate...[K]until the
+                    planet is fully paralyzed!)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (The destruction will accelerate...[K]until the
+                    planet is fully paralyzed!)
+                """,
+            }
+    }
+    message_Close();
+    se_Play(6401);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    camera_SetEffect(1, 1, 1.0);
+    Wait(15);
+    se_Play(8455);
+    screen_WhiteOut(1, 1);
+    end;
+}

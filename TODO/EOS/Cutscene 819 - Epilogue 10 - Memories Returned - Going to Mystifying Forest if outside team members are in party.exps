@@ -1,0 +1,136 @@
+
+def 0 {
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hey, [hero].[K] This is our
+                    graduation exam, right?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Listen, [hero].[K] Since this
+                    is our graduation exam...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Say, [hero].[K] Since this is
+                    our graduation exam...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I think that just we two should
+                    go. You and me, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I was thinking that just the two
+                    of us should go, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     I started thinking that just the
+                    two of us should go, [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     So how about leaving behind the
+                    other team members...[K]and just we two go?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     What do you think about leaving
+                    behind the other team members?[K] So just we
+                    two can go.
+                """,
+            }
+        default:
+            {
+                english="""
+                     So how about leaving behind the
+                    other team members...[K] That way, we can go
+                    as a pair.
+                """,
+            }
+    }
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Go as a pair",
+        }):
+        default:
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             OK![K] Let's get moving to
+                            [CS:P]Mystifying Forest[CR]!
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             That's that![K] Let's get moving to
+                            [CS:P]Mystifying Forest[CR]!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             OK![K] Let's go to [CS:P]Mystifying
+                            Forest[CR]!
+                        """,
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Let's give it our best,
+                            [hero]!
+                        """,
+                    }
+                case 2:
+                    {
+                        english=" Let's do our best, [hero]!",
+                    }
+                default:
+                    {
+                        english=" Let's do our best, [hero]!",
+                    }
+            }
+            message_Close();
+            end;
+        case menu({
+            english="Don't go to [CS:P]Mystifying Forest[CR]",
+        }):
+            message_Close();
+            end;
+    }
+}

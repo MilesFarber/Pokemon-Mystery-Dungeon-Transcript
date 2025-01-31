@@ -1,0 +1,82 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 256);
+    back_SetGround(LEVEL_T01P02A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_KAKUREON1>();
+    SetPositionInitial<actor ACTOR_NPC_KAKUREON2>();
+    SetAnimation<actor ACTOR_NPC_KAKUREON1>(2);
+    SetAnimation<actor ACTOR_NPC_KAKUREON2>(2);
+    SetPositionMark<performer 0>(Position<'m0', 42, 24.5>);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    back_SetWeather(9);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Sniff...[K] What should I do...?[K]
+            Should I buy it? Shouldn't I? I don't know...
+        """,
+    });
+    message_Talk({
+        english="""
+             To tell you the truth...[K]I've got
+            the money for it, but...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, 8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    supervision_Acting(1);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 0, -8);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I've got my own money...[K]
+            I always carry it with me...[CS:G]7[MP]000[CR][M:S0].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    back_SetBackEffect(4);
+    SetAnimation<object OBJECT_P15P01A1_356>(9);
+    message_Mail({
+        english="""
+            [CN]Right then,
+            [CN]we were watching you!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    back_SetBackEffect(5);
+    SetAnimation<object OBJECT_P15P01A1_356>(1);
+    MovePositionMark<performer 0>(1, Position<'m1', 53, 24.5>);
+    WaitExecutePerformer(0);
+    back_SetBackEffect(4);
+    SetAnimation<object OBJECT_P15P01A1_356>(9);
+    SetAnimation<actor ACTOR_NPC_GURAIGAA>(3);
+    Wait(20);
+    message_Mail({
+        english="""
+            [CN]When you pulled out that big wad
+            [CN]of money...[K] What a mark!
+            
+        """,
+    });
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetBackEffect(5);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

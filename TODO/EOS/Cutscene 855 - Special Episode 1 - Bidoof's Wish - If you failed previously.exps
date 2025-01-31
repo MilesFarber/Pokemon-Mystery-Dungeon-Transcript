@@ -1,0 +1,59 @@
+
+def 0 {
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(10);
+    screen_FadeOut(1, 30);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_RIGHT);
+    SetPositionMark<actor ACTOR_PLAYER_BIPPA>(Position<'m0', 50.5, 24>);
+    Wait(30);
+    screen_FadeIn(1, 30);
+    message_SetActor(ACTOR_NPC_YUKIKABURI);
+    message_Talk({
+        english=" [CS:Y]Bidoof[CR]!",
+    });
+    message_Close();
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    MovePositionMark<actor ACTOR_NPC_YUKIKABURI>(2, Position<'m1', 27.5, 33>);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_NPC_YUKIKABURI>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    MovePositionMark<actor ACTOR_NPC_YUKIKABURI>(2, Position<'m2', 27.5, 27>);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    Turn2Direction<actor ACTOR_PLAYER_BIPPA>(32, 10, DIR_LEFT);
+    MovePositionMark<actor ACTOR_NPC_YUKIKABURI>(2, Position<'m3', 27.5, 24>);
+    MovePositionMark<actor ACTOR_NPC_YUKIKABURI>(2, Position<'m4', 46.5, 24>);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    Wait(5);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Today we'll definitely make it
+            through [CS:P]Star Cave[CR], yup yup.
+        """,
+    });
+    message_Talk({
+        english=" We'll do our best! Yup yup!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_BOTTOM_RC_FACEOUTW);
+    message_FacePositionOffset(-7, 0);
+    message_Talk({
+        english=" Yeah!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 64, 0);
+    Wait(5);
+    MovePositionOffset<actor ACTOR_NPC_YUKIKABURI>(1, 74, 0);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    bgm_FadeOut(60);
+    switch ( main_EnterAdventure(250, 30) ) { }
+    hold;
+    end;
+}

@@ -1,0 +1,550 @@
+
+def 0 {
+    sound_Stop();
+    bgm_PlayFadeIn(BGM_A_WISH_FOR_PEACE, 0, 256);
+    switch ( $PARTNER_TALK_KIND ) {
+        case 1:
+            @label_0;
+            message_Narration(30, {
+                english="[CN]And that's how...",
+            });
+            message_Narration(30, {
+                english="""
+                    [CN]our fight against
+                    [CN][CS:N]Darkrai[CR] ended...
+                """,
+            });
+            @label_3;
+            message_Close();
+            back_SetGround(LEVEL_T01P01A);
+            supervision_Acting(0);
+            camera_SetMyself<performer 0>();
+            CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+            screen_FadeInAll(1, 30);
+            WaitLockLives(5, ACTOR_PLAYER);
+            ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_NPC_BIPPA);
+            Wait(15);
+            ExecuteCommon<actor ACTOR_NPC_HEIGANI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_NPC_HEIGANI);
+            ExecuteCommon<actor ACTOR_NPC_RURIRI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            Wait(5);
+            ExecuteCommon<actor ACTOR_NPC_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            Wait(10);
+            ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            Unlock(8);
+            Unlock(5);
+            Lock(3);
+            Unlock(9);
+            Turn2Direction<actor ACTOR_NPC_HEIGANI>(8, 10, DIR_DOWNRIGHT);
+            Turn2Direction<actor ACTOR_NPC_DIGUDA>(8, 10, DIR_DOWNLEFT);
+            Turn2Direction<actor ACTOR_NPC_BIPPA>(8, 10, DIR_UPRIGHT);
+            Turn2Direction<actor ACTOR_NPC_GUREGGURU>(8, 10, DIR_UPLEFT);
+            Turn2Direction<actor ACTOR_NPC_PUKURIN>(8, 10, DIR_DOWN);
+            Turn2Direction<actor ACTOR_NPC_DOGOOMU>(8, 10, DIR_UP);
+            Turn2Direction<actor ACTOR_NPC_SURIIPU>(8, 10, DIR_UPLEFT);
+            Turn2Direction<actor ACTOR_NPC_PERAPPU>(8, 10, DIR_DOWNRIGHT);
+            Turn2Direction<actor ACTOR_NPC_BANEBUU>(8, 10, DIR_UP);
+            Lock(3);
+            Move2PositionMark<actor ACTOR_NPC_HEIGANI>(1, Position<'m0', 38, 24.5>);
+            Move2PositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m1', 38, 27.5>);
+            Move2PositionMark<actor ACTOR_NPC_DOGOOMU>(1, Position<'m2', 44, 29.5>);
+            Wait(5);
+            Move2PositionMark<actor ACTOR_NPC_GUREGGURU>(1, Position<'m3', 46.5, 30.5>);
+            Move2PositionMark<actor ACTOR_NPC_CHIRIIN>(1, Position<'m4', 46.5, 27.5>);
+            Move2PositionMark<actor ACTOR_NPC_KIMAWARI>(1, Position<'m5', 46.5, 25.5>);
+            Wait(5);
+            Move2PositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m6', 44, 23.5>);
+            Move2PositionMark<actor ACTOR_NPC_PERAPPU>(1, Position<'m7', 40, 23>);
+            Move2PositionMark<actor ACTOR_NPC_BANEBUU>(1, Position<'m8', 40.5, 30.5>);
+            Move2PositionMark<actor ACTOR_NPC_RURIRI>(1, Position<'m9', 49, 27>);
+            Move2PositionMark<actor ACTOR_NPC_MARIRU>(1, Position<'m10', 49, 24.5>);
+            Move2PositionMark<actor ACTOR_NPC_SURIIPU>(1, Position<'m11', 48.5, 29.5>);
+            Turn2Direction<actor ACTOR_NPC_HEIGANI>(4, 10, DIR_DOWNRIGHT);
+            Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_RIGHT);
+            Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_UP);
+            Turn2Direction<actor ACTOR_NPC_GUREGGURU>(4, 10, DIR_UPLEFT);
+            Turn2Direction<actor ACTOR_NPC_CHIRIIN>(4, 10, DIR_LEFT);
+            Turn2Direction<actor ACTOR_NPC_KIMAWARI>(4, 10, DIR_LEFT);
+            Turn2Direction<actor ACTOR_NPC_PUKURIN>(4, 10, DIR_DOWN);
+            Turn2Direction<actor ACTOR_NPC_PERAPPU>(4, 10, DIR_DOWNRIGHT);
+            Turn2Direction<actor ACTOR_NPC_BANEBUU>(4, 10, DIR_UP);
+            Turn2Direction<actor ACTOR_NPC_SURIIPU>(4, 10, DIR_UPLEFT);
+            SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_PUKURIN>(EFFECT_LAUGHING, 3);
+            SetEffect<actor ACTOR_NPC_RURIRI>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_MARIRU>(EFFECT_LAUGHING, 3);
+            SetEffect<actor ACTOR_NPC_BANEBUU>(EFFECT_JOYOUS, 3);
+            SetEffect<actor ACTOR_NPC_GUREGGURU>(EFFECT_LAUGHING, 3);
+            SetEffect<actor ACTOR_NPC_BIPPA>(EFFECT_LAUGHING, 3);
+            SetEffect<actor ACTOR_NPC_HEIGANI>(EFFECT_JOYOUS, 3);
+            SetAnimation<actor ACTOR_NPC_KIMAWARI>(4);
+            SetAnimation<actor ACTOR_NPC_BIPPA>(4);
+            SetAnimation<actor ACTOR_NPC_DOGOOMU>(4);
+            SetAnimation<actor ACTOR_NPC_CHIRIIN>(4);
+            SetAnimation<actor ACTOR_NPC_BANEBUU>(4);
+            SetAnimation<actor ACTOR_NPC_DIGUDA>(4);
+            SetAnimation<actor ACTOR_NPC_PERAPPU>(4);
+            SetAnimation<actor ACTOR_NPC_SURIIPU>(4);
+            SetAnimation<actor ACTOR_NPC_GUREGGURU>(4);
+            SetAnimation<actor ACTOR_NPC_HEIGANI>(4);
+            SetAnimation<actor ACTOR_NPC_MARIRU>(4);
+            Unlock(10);
+            Unlock(6);
+            switch ( $PARTNER_TALK_KIND ) {
+                case 1:
+                    message_Mail({
+                        english="[CN]When we returned to Treasure Town...",
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]We were thrilled by how excited
+                            [CN]everyone was at our return!
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]We had been fully fooled
+                            [CN]by [CS:N]Darkrai[CR]...
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]So I had thought that neither [hero]
+                            [CN]nor I had a place in this world...
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]But when everyone surrounded
+                            [CN]us and was glad to see us back...
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]That's when I finally thought...[K]
+                            [CN]It's wonderful to be alive!
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]Little [CS:N]Azurill[CR] woke up
+                            [CN]from his nightmare...
+                        """,
+                    });
+                    message_Mail({
+                        english="[CN]I'm so glad that everyone was well.",
+                    });
+                    message_Mail({
+                        english="[CN]I remember what [CS:N]Wigglytuff[CR] said...",
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]Every Pokémon in the
+                            [CN]world exists for a reason.
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]Even the ones that
+                            [CN]mean harm to others...
+                        """,
+                    });
+                    message_Mail({
+                        english="[CN]Even that [CS:N]Darkrai[CR].",
+                    });
+                    @label_7;
+                    message_Close();
+                    screen_FadeOutAll(1, 60);
+                    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+                    Wait(60);
+                    switch ( $PARTNER_TALK_KIND ) {
+                        case 1:
+                            message_Narration(30, {
+                                english="[CN]After all this...",
+                            });
+                            message_Narration(30, {
+                                english="""
+                                    [CN]My adventures with
+                                    [CN][hero] will continue...
+                                """,
+                            });
+                            message_Narration(30, {
+                                english="[CN]We'll see many things...",
+                            });
+                            message_Narration(30, {
+                                english="[CN]And we'll make new discoveries.",
+                            });
+                            message_Narration(30, {
+                                english="""
+                                    [CN]We have gone back to
+                                    [CN][CS:P]Luminous Spring[CR] since then...
+                                """,
+                            });
+                            message_Narration(30, {
+                                english="[CN]Though we still can't evolve there.",
+                            });
+                            message_Narration(30, {
+                                english="[CN]However...",
+                            });
+                            message_Narration(30, {
+                                english="[CN]We can exist here!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]We can live here!",
+                            });
+                            message_Narration(30, {
+                                english="""
+                                    [CN]And that alone is something
+                                    [CN]that we should be happy
+                                    [CN]and grateful about!
+                                """,
+                            });
+                            message_Narration(30, {
+                                english="[CN]That's what I finally learned.",
+                            });
+                            message_Narration(30, {
+                                english="[CN]Yes, [hero]!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]Thank you for always being with me!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]Let's keep on exploring!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]May our friendship last forever!",
+                            });
+                            @label_11;
+                            message_Close();
+                            bgm_FadeOut(180);
+                            Wait(180);
+                            $SCENARIO_MAIN = scn[29, 92];
+                            $REQUEST_CLEAR_COUNT = 0;
+                            dungeon_mode(44) = DMODE_OPEN_AND_REQUEST;
+                            dungeon_mode(46) = DMODE_OPEN_AND_REQUEST;
+                            dungeon_mode(47) = DMODE_OPEN_AND_REQUEST;
+                            dungeon_mode(50) = DMODE_OPEN_AND_REQUEST;
+                            dungeon_mode(51) = DMODE_OPEN_AND_REQUEST;
+                            dungeon_mode(54) = DMODE_OPEN_AND_REQUEST;
+                            dungeon_mode(62) = DMODE_OPEN_AND_REQUEST;
+                            dungeon_mode(64) = DMODE_OPEN_AND_REQUEST;
+                            dungeon_mode(67) = DMODE_OPEN_AND_REQUEST;
+                            switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+                            $PERFORMANCE_PROGRESS_LIST[5] = 1;
+                            Wait(30);
+                            CallCommon(CORO_HANYOU_SAVE_FUNC);
+                            Wait(60);
+                            end;
+                        case 2:
+                            message_Narration(30, {
+                                english="[CN]After all this...",
+                            });
+                            message_Narration(30, {
+                                english="""
+                                    [CN]My adventures with
+                                    [CN][hero] will continue...
+                                """,
+                            });
+                            message_Narration(30, {
+                                english="[CN]We'll see many things...",
+                            });
+                            message_Narration(30, {
+                                english="[CN]And we'll make new discoveries.",
+                            });
+                            message_Narration(30, {
+                                english="""
+                                    [CN]We have gone back to
+                                    [CN][CS:P]Luminous Spring[CR] since then...
+                                """,
+                            });
+                            message_Narration(30, {
+                                english="[CN]Though we still can't evolve there.",
+                            });
+                            message_Narration(30, {
+                                english="[CN]However...",
+                            });
+                            message_Narration(30, {
+                                english="[CN]We can exist here!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]We can live here!",
+                            });
+                            message_Narration(30, {
+                                english="""
+                                    [CN]And that alone is something
+                                    [CN]that we should be happy
+                                    [CN]and grateful about!
+                                """,
+                            });
+                            message_Narration(30, {
+                                english="[CN]That's what I finally learned.",
+                            });
+                            message_Narration(30, {
+                                english="[CN]Yes, [hero]!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]Thank you for always being with me!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]Let's keep on exploring!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]May our friendship last forever!",
+                            });
+                            jump @label_11;
+                        default:
+                            @label_10;
+                            message_Narration(30, {
+                                english="[CN]After all this...",
+                            });
+                            message_Narration(30, {
+                                english="""
+                                    [CN]My adventures with
+                                    [CN][hero] will continue...
+                                """,
+                            });
+                            message_Narration(30, {
+                                english="[CN]We'll see many things...",
+                            });
+                            message_Narration(30, {
+                                english="[CN]And we'll make new discoveries.",
+                            });
+                            message_Narration(30, {
+                                english="""
+                                    [CN]We have gone back to
+                                    [CN][CS:P]Luminous Spring[CR] since then...
+                                """,
+                            });
+                            message_Narration(30, {
+                                english="[CN]Though we still can't evolve there.",
+                            });
+                            message_Narration(30, {
+                                english="[CN]However...",
+                            });
+                            message_Narration(30, {
+                                english="[CN]We can exist here!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]We can live here!",
+                            });
+                            message_Narration(30, {
+                                english="""
+                                    [CN]And that alone is something
+                                    [CN]that we should be happy
+                                    [CN]and grateful about!
+                                """,
+                            });
+                            message_Narration(30, {
+                                english="[CN]That's what I finally learned.",
+                            });
+                            message_Narration(30, {
+                                english="[CN]Yes, [hero]!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]Thank you for always being with me!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]Let's keep on exploring!",
+                            });
+                            message_Narration(30, {
+                                english="[CN]May our friendship last forever!",
+                            });
+                            jump @label_11;
+                    }
+                    break;
+                case 2:
+                    message_Mail({
+                        english="[CN]When we returned to Treasure Town...",
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]We were thrilled by how excited
+                            [CN]everyone was at our return!
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]We had been fully fooled
+                            [CN]by [CS:N]Darkrai[CR]...
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]So I had thought that neither [hero]
+                            [CN]nor I had a place in this world...
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]But when everyone surrounded
+                            [CN]us and was glad to see us back...
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]That's when I finally thought...[K]
+                            [CN]It's wonderful to be alive!
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]Little [CS:N]Azurill[CR] woke up
+                            [CN]from his nightmare...
+                        """,
+                    });
+                    message_Mail({
+                        english="[CN]I'm so glad that everyone was well.",
+                    });
+                    message_Mail({
+                        english="[CN]I remember what [CS:N]Wigglytuff[CR] said...",
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]Every Pokémon in the
+                            [CN]world exists for a reason.
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]Even the ones that
+                            [CN]mean harm to others...
+                        """,
+                    });
+                    message_Mail({
+                        english="[CN]Even that [CS:N]Darkrai[CR].",
+                    });
+                    jump @label_7;
+                default:
+                    @label_6;
+                    message_Mail({
+                        english="[CN]When we returned to Treasure Town...",
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]We were thrilled by how excited
+                            [CN]everyone was at our return!
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]We had been fully fooled
+                            [CN]by [CS:N]Darkrai[CR]...
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]So I had thought that neither [hero]
+                            [CN]nor I had a place in this world...
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]But when everyone surrounded
+                            [CN]us and was glad to see us back...
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]That's when I finally thought...[K]
+                            [CN]It's wonderful to be alive!
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]Little [CS:N]Azurill[CR] woke up
+                            [CN]from his nightmare...
+                        """,
+                    });
+                    message_Mail({
+                        english="[CN]I'm so glad that everyone was well.",
+                    });
+                    message_Mail({
+                        english="[CN]I remember what [CS:N]Wigglytuff[CR] said...",
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]Every Pokémon in the
+                            [CN]world exists for a reason.
+                        """,
+                    });
+                    message_Mail({
+                        english="""
+                            [CN]Even the ones that
+                            [CN]mean harm to others...
+                        """,
+                    });
+                    message_Mail({
+                        english="[CN]Even that [CS:N]Darkrai[CR].",
+                    });
+                    jump @label_7;
+            }
+            break;
+        case 2:
+            message_Narration(30, {
+                english="[CN]And that's how...",
+            });
+            message_Narration(30, {
+                english="""
+                    [CN]our fight against
+                    [CN][CS:N]Darkrai[CR] ended...
+                """,
+            });
+            jump @label_3;
+        default:
+            @label_2;
+            message_Narration(30, {
+                english="[CN]And that's how...",
+            });
+            message_Narration(30, {
+                english="""
+                    [CN]our fight against
+                    [CN][CS:N]Darkrai[CR] ended...
+                """,
+            });
+            jump @label_3;
+    }
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetAnimation(2);
+    Lock(5);
+    MovePositionMark(1, Position<'m12', 42, 27.5>);
+    Lock(6);
+    @label_12;
+    forever {
+        Turn2Direction(4, 10, DIR_DOWNRIGHT);
+        Wait(30);
+        Turn2Direction(4, 2, DIR_RIGHT);
+        Wait(60);
+        Turn2Direction(4, 10, DIR_DOWNLEFT);
+        Wait(50);
+        Turn2Direction(4, 10, DIR_UPLEFT);
+        Wait(50);
+        continue;  // may be redundant
+    }
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetAnimation(2);
+    Lock(8);
+    MovePositionMark(1, Position<'m13', 34, 25.5>);
+    Unlock(3);
+    Lock(9);
+    MovePositionMark(1, Position<'m14', 42, 25.5>);
+    Unlock(3);
+    Lock(10);
+    @label_13;
+    forever {
+        Wait(12);
+        Turn2Direction(4, 10, DIR_DOWNRIGHT);
+        WaitRandom(30, 60);
+        Turn2Direction(4, 2, DIR_UPRIGHT);
+        WaitRandom(60, 80);
+        Turn2Direction(4, 10, DIR_DOWN);
+        WaitRandom(50, 70);
+        Turn2Direction(4, 10, DIR_LEFT);
+        Wait(50);
+        continue;  // may be redundant
+    }
+}

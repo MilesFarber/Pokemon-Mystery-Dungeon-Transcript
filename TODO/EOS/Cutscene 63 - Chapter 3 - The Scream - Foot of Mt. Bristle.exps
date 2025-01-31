@@ -1,0 +1,158 @@
+
+def 0 {
+    back_SetGround(LEVEL_D03P11A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_MT_BRISTLE, 0, 256);
+    MovePositionMark<actor ACTOR_NPC_MARIRU>(1.5, Position<'m0', 34.5, 20.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(1.5, Position<'m1', 37, 23.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.5, Position<'m2', 32, 23.5>);
+    Turn2Direction<actor ACTOR_NPC_MARIRU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You're sure [CS:N]Drowzee[CR] and [CS:N]Azurill[CR]
+                    went off in this direction?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You think [CS:N]Drowzee[CR] and [CS:N]Azurill[CR]
+                    went in this direction?
+                """,
+            }
+        default:
+            {
+                english="""
+                     So you think that [CS:N]Drowzee[CR] and
+                    [CS:N]Azurill[CR] went off in this direction?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_SIGH, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english=" Yes...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Oh, [hero]! The [CS:N]Drowzee[CR]
+                    and [CS:N]Azurill[CR] you saw in your dream...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Oh, [hero]! The [CS:N]Drowzee[CR]
+                    and [CS:N]Azurill[CR] you saw in your dream...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh, [hero]! The [CS:N]Drowzee[CR]
+                    and [CS:N]Azurill[CR] you saw in your dream...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You said you saw them in a
+                    mountainous place, right?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You were saying you saw them
+                    in a mountainous place, right?
+                """,
+            }
+        default:
+            {
+                english="""
+                     You said you saw them in a
+                    mountainous place, didn't you?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I think the two of them are up
+                    ahead here.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I get the feeling that they're
+                    up ahead here.
+                """,
+            }
+        default:
+            {
+                english=" I think they're up ahead here.",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's roll, [hero]. Quick!",
+            }
+        case 2:
+            {
+                english=" Let's get going, [hero]!",
+            }
+        default:
+            {
+                english=" Let's get going, [hero]!",
+            }
+    }
+    message_Close();
+    Turn2Direction<actor ACTOR_NPC_MARIRU>(16, 2, DIR_UP);
+    MovePositionOffset<actor ACTOR_PLAYER>(1.5, 0, -32);
+    Wait(15);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1.5, 0, -32);
+    WaitExecuteLives(ACTOR_PLAYER);
+    MovePositionMark<actor ACTOR_PLAYER>(1.5, Position<'m3', 34.5, 9.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.5, Position<'m4', 34.5, 9.5>);
+    Wait(20);
+    screen_FadeOut(1, 30);
+    $SCENARIO_MAIN = scn[4, 5];
+    main_EnterDungeon(4, 0);
+    switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+    main_EnterDungeon(-1, 0);
+    end;
+}

@@ -1,0 +1,308 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 30];
+    back_SetDungeonBanner(122, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oh! I can see it! The summit!",
+    });
+    message_Close();
+    back_SetGround(LEVEL_D73P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    back_SetWeather(11);
+    supervision_SpecialActing(34, 0, 0);
+    bgm2_PlayFadeIn(BGM_HEAVY_WIND3, 30, 190);
+    screen_FadeIn(1, 30);
+    Wait(60);
+    MovePositionMark<actor ACTOR_NPC_SHEIMI>(1, Position<'m0', 31.5, 39.5>);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m1', 31.5, 42.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m2', 34.5, 41.5>);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m3', 28.5, 41.5>);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_SHEIMI>(1, Position<'m4', 31.5, 29.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_PLAYER_APPOINT>(1, Position<'m5', 31.5, 32.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC1>(1, Position<'m6', 34.5, 31.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_ADVENTURE_NPC2>(1, Position<'m7', 28.5, 31.5>);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    ExecuteCommon<actor ACTOR_NPC_SHEIMI>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    ExecuteCommon<actor ACTOR_PLAYER_APPOINT>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_ADVENTURE_NPC1>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_ADVENTURE_NPC2>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_SURPRISED, FACE_POS_TOP_LC_FACEOUTW);
+    message_Talk({
+        english=" Th-this is...terrible...",
+    });
+    message_Talk({
+        english="""
+             All this happened while I was
+            away for so long...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_KINOGASSA);
+    message_Talk({
+        english="""
+             Looks like someone else got
+            here first...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_PLAYER_APPOINT>();
+    WaitExecuteLives(ACTOR_PLAYER_APPOINT);
+    Turn2Direction<actor ACTOR_NPC_SHEIMI>(4, 10, DIR_DOWN);
+    Wait(3);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_DOWN);
+    MovePositionMark<actor ACTOR_NPC_GOORIKII>(1.5, Position<'m8', 31.5, 41.5>);
+    MovePositionMark<actor ACTOR_NPC_KUCHIITO>(1.5, Position<'m9', 28.5, 41.5>);
+    MovePositionMark<actor ACTOR_NPC_KINOGASSA>(1.5, Position<'m10', 34.5, 41.5>);
+    WaitExecuteLives(ACTOR_NPC_GOORIKII);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_GOORIKII>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_SHOCKED, 3);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_KINOGASSA>();
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    MovePositionMark<actor ACTOR_NPC_GOORIKII>(1.5, Position<'m11', 31.5, 36>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_KUCHIITO>(1.5, Position<'m12', 28.5, 36>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_NPC_KINOGASSA>(1.5, Position<'m13', 34.5, 36>);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" ...but what is this?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KUCHIITO, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Th-this is the summit?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_DETERMINED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" No, this is...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_Acting(1);
+    bgm2_FadeOut(60);
+    message_ResetActor();
+    message_Talk({
+        english=" Icky, sticky...grimy, slimy...",
+    });
+    message_Talk({
+        english=" We loooove dirt and slime...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_GOORIKII>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_GOORIKII>();
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 256);
+    se_Play(11011);
+    Move2PositionMark<actor ACTOR_NPC_BETOBETAA3>(0.5, Position<'m14', 25.5, 37.5>);
+    Move2PositionMark<actor ACTOR_NPC_BETOBETAA5>(0.5, Position<'m15', 37.5, 37.5>);
+    Wait(20);
+    Move2PositionMark<actor ACTOR_NPC_BETOBETAA>(0.5, Position<'m16', 27.5, 26.5>);
+    Move2PositionMark<actor ACTOR_NPC_BETOBETAA2>(0.5, Position<'m17', 35.5, 26.5>);
+    Move2PositionMark<actor ACTOR_NPC_BETOBETAA4>(0.5, Position<'m18', 31.5, 38.5>);
+    Move2PositionMark<actor ACTOR_NPC_BETOBETON>(0.5, Position<'m19', 31.5, 25.5>);
+    Move2PositionMark<actor ACTOR_NPC_BETOBETON2>(0.5, Position<'m20', 23.5, 31.5>);
+    Move2PositionMark<actor ACTOR_NPC_BETOBETON3>(0.5, Position<'m21', 40.5, 31.5>);
+    WaitExecuteLives(ACTOR_NPC_GOORIKII);
+    Turn2Direction<actor ACTOR_NPC_SHEIMI>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_DOWN);
+    Wait(3);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_LEFT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_KUCHIITO>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWNRIGHT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_GOORIKII>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_GOORIKII);
+    Wait(6);
+    SetEffect<actor ACTOR_NPC_SHEIMI>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_PLAYER_APPOINT>(EFFECT_SHOCKED, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_ADVENTURE_NPC1>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ADVENTURE_NPC2>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(3);
+    SetEffect<actor ACTOR_NPC_KUCHIITO>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_GOORIKII>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_GOORIKII>();
+    WaitExecuteLives(ACTOR_NPC_GOORIKII);
+    Wait(4);
+    ExecuteCommon<actor ACTOR_PLAYER_APPOINT>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_KUCHIITO>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(6);
+    ExecuteCommon<actor ACTOR_ADVENTURE_NPC1>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_ADVENTURE_NPC2>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_NPC_KINOGASSA>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Wait(4);
+    ExecuteCommon<actor ACTOR_NPC_GOORIKII>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(6);
+    ExecuteCommon<actor ACTOR_NPC_SHEIMI>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_SHEIMI);
+    Turn2Direction<actor ACTOR_NPC_KUCHIITO>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_PLAYER_APPOINT>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC1>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_ADVENTURE_NPC2>(4, 10, DIR_LEFT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_KINOGASSA>(4, 10, DIR_DOWNRIGHT);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(5);
+    SlidePositionOffset<actor ACTOR_NPC_KINOGASSA>(0.5, 0, -4);
+    Wait(3);
+    SetAnimation<actor ACTOR_NPC_KUCHIITO>(5);
+    SlidePositionOffset<actor ACTOR_NPC_KUCHIITO>(0.5, 0, -4);
+    Wait(5);
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    SetAnimation<actor ACTOR_NPC_KINOGASSA>(2);
+    SetAnimation<actor ACTOR_NPC_GOORIKII>(5);
+    SlidePositionOffset<actor ACTOR_NPC_GOORIKII>(0.5, 0, -4);
+    WaitExecuteLives(ACTOR_NPC_KUCHIITO);
+    SetAnimation<actor ACTOR_NPC_KUCHIITO>(2);
+    WaitExecuteLives(ACTOR_NPC_GOORIKII);
+    SetAnimation<actor ACTOR_NPC_GOORIKII>(2);
+    SetEffect<actor ACTOR_NPC_KINOGASSA>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_NPC_KINOGASSA>();
+    WaitExecuteLives(ACTOR_NPC_KINOGASSA);
+    message_SetFace(ACTOR_NPC_KINOGASSA, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english=" Wh-what...?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_DETERMINED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(1, 3);
+    message_Talk({
+        english="""
+             A group of [CS:N]Grimer[CR] and [CS:N]Muk[CR].
+            This isn't your home, you know that...
+        """,
+    });
+    message_Talk({
+        english="""
+             Please, go back where
+            you belong.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(11012);
+    Turn2Direction<actor ACTOR_NPC_BETOBETAA2>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_BETOBETAA2>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_BETOBETAA2>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_BETOBETAA2>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_BETOBETAA2>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_BETOBETAA2);
+    message_SetFace(ACTOR_NPC_BETOBETAA, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(-2, -3);
+    message_Talk({
+        english=" No. Nooooooooo.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(11012);
+    Turn2Direction<actor ACTOR_NPC_BETOBETAA>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_BETOBETAA>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_BETOBETAA>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_BETOBETAA>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_BETOBETAA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_BETOBETAA);
+    message_SetFace(ACTOR_NPC_BETOBETAA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(2, -3);
+    message_Talk({
+        english=" Lies. Liiiiiiiies.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(11013);
+    SetAnimation<actor ACTOR_NPC_BETOBETON3>(18);
+    WaitAnimation<actor ACTOR_NPC_BETOBETON3>();
+    SetAnimation<actor ACTOR_NPC_BETOBETON3>(2);
+    message_SetFace(ACTOR_NPC_BETOBETON, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(3, 0);
+    message_Talk({
+        english=" We drive away cleanlinessss!",
+    });
+    message_Close();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    message_SetFace(ACTOR_NPC_SHEIMI, FACE_DETERMINED, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(1, 3);
+    message_Talk({
+        english=" .........",
+    });
+    message_Talk({
+        english="""
+             Looks like we have to get them
+            to come to their senses...
+        """,
+    });
+    message_Talk({
+        english=" Everyone, I'm counting on you!",
+    });
+    message_Close();
+    bgm_FadeOut(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(122, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

@@ -1,0 +1,193 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[11, 5];
+    back_SetGround(LEVEL_D10P41A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_STEAM_CAVE, 0, 256);
+    Wait(30);
+    message_SetActor(ACTOR_NPC_HEIGANI);
+    message_Talk({
+        english="""
+             What if you were to face
+            [CS:N]Groudon[CR] in battle?
+        """,
+    });
+    message_Talk({
+        english=" What would happen?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetActor(ACTOR_NPC_PERAPPU);
+    message_Talk({
+        english="""
+             Battle?! Out of the question![K]
+            Squawk!
+        """,
+    });
+    se_Play(5122);
+    message_Talk({
+        english="""
+             If anyone were foolish enough to
+            face [CS:N]Groudon[CR] in a battle...
+        """,
+    });
+    message_Talk({
+        english="""
+             Well, it would be like throwing
+            your life away!
+        """,
+    });
+    message_Talk({
+        english="""
+             He is that strong![K] Like all
+            legendary Pokémon!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6914);
+    MovePositionOffset<actor ACTOR_NPC_GURAADON>(0.2969, 0, 12);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(15);
+    camera_SetEffect(0, 0, 0);
+    Wait(15);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 3.0);
+    Wait(15);
+    camera_SetEffect(0, 0, 0);
+    WaitExecuteLives(ACTOR_NPC_GURAADON);
+    Wait(45);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    camera_SetEffect(2, 1, 1.0);
+    se_Play(6930);
+    SetAnimation<actor ACTOR_NPC_GURAADON>(9);
+    message_SetFace(ACTOR_NPC_GURAADON, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" GRROOOOOOH!",
+    });
+    WaitSe(6930);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    SetAnimation<actor ACTOR_NPC_GURAADON>(2);
+    Wait(15);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_STUNNED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urk... Scary stuff!",
+            }
+        case 2:
+            {
+                english=" Urk... This is scary...",
+            }
+        default:
+            {
+                english=" Urk... I'm scared!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But we gotta be brave!",
+            }
+        case 2:
+            {
+                english=" But we need to be brave!",
+            }
+        default:
+            {
+                english=" But it's time to be brave!",
+            }
+    }
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" And I gotta face up to this!",
+            }
+        case 2:
+            {
+                english=" And I need to face up to this!",
+            }
+        default:
+            {
+                english=" And I need to stand up to this!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" No stopping now, [hero]!",
+            }
+        case 2:
+            {
+                english="""
+                     There's no giving up now,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We can't just run away now,
+                    [hero]!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_GURAADON, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             PREPARE FOR MY WRATH!
+            GRROOOOOOH!
+        """,
+    });
+    SetAnimation<actor ACTOR_NPC_GURAADON>(19);
+    WaitAnimation<actor ACTOR_NPC_GURAADON>();
+    Wait(15);
+    se_Play(6914);
+    camera_SetEffect(2, 2, 2.0);
+    SetAnimation<actor ACTOR_PLAYER>(3);
+    SetAnimation<actor ACTOR_ATTENDANT1>(3);
+    MoveHeight<actor ACTOR_PLAYER>(2, 5);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 5);
+    Wait(1);
+    MoveHeight<actor ACTOR_PLAYER>(2, 0);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 0);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(15);
+    camera_SetEffect(0, 0, 0);
+    WaitSe(6914);
+    message_Close();
+    bgm_FadeOut(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(16, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

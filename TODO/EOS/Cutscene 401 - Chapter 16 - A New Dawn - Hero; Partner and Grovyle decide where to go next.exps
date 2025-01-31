@@ -1,0 +1,43 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_H02P99A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+    message_Talk({
+        english="""
+             All right.[K] It's agreed that we
+            will collect all of the Time Gears.
+        """,
+    });
+    message_Talk({
+        english="""
+             First...[K] We have to decide which
+            Time Gear we should target.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's check the Wonder Map.",
+            }
+        case 2:
+            {
+                english=" Let's check the Wonder Map.",
+            }
+        default:
+            {
+                english=" Let's check the Wonder Map.",
+            }
+    }
+    message_Close();
+    se_Play(6667);
+    screen_FadeOut(1, 15);
+    end;
+}

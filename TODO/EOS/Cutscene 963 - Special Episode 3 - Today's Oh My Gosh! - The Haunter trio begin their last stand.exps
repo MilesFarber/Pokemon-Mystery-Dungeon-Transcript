@@ -1,0 +1,145 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_I_SAW_SOMETHING_AGAIN, 0, 256);
+    back_SetGround(LEVEL_D57P43A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    bgm_FadeOut(120);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             You've been deceiving
+            exploration team after exploration team that
+            way, until now...
+        """,
+    });
+    message_Talk({
+        english=" That's how you always escaped!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Heh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MoveHeight<actor ACTOR_NPC_GOOSUTO>(1, 2);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_GOOSUTO>(1, 0);
+    Wait(2);
+    MoveHeight<actor ACTOR_NPC_GOOSUTO>(1, 2);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_GOOSUTO>(1, 0);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Heh heh heh!",
+    });
+    message_Talk({
+        english=" Looks like we're found out!",
+    });
+    message_Talk({
+        english="""
+             Now that our secret has been
+            discovered...
+        """,
+    });
+    message_Talk({
+        english=" We can't let you return!",
+    });
+    message_Close();
+    bgm2_PlayFadeIn(BGM_EARTHQUAKE1, 10, 256);
+    camera_SetEffect(2, 1, 1.0);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Wha...",
+    });
+    message_Close();
+    se_Play(5143);
+    screen_FlushOut(1, 2, 4, 255, 45, 45);
+    Wait(5);
+    screen_FlushIn(1, 2, 4, 255, 45, 45);
+    Wait(5);
+    se_Play(5143);
+    screen_FlushOut(1, 2, 4, 255, 45, 45);
+    Wait(5);
+    screen_FlushIn(1, 2, 4, 255, 45, 45);
+    WaitSe(5143);
+    bgm_PlayFadeIn(BGM_EARTHQUAKE3, 20, 256);
+    camera_SetEffect(1, 1, 1.0);
+    Wait(90);
+    se_Play(9992);
+    supervision_Acting(1);
+    Wait(10);
+    supervision_Acting(4);
+    Wait(15);
+    supervision_Acting(2);
+    Wait(10);
+    supervision_Acting(3);
+    Wait(60);
+    screen_WhiteOut(1, 30);
+    camera_SetEffect(0, 0, 0);
+    Wait(60);
+    end;
+}
+
+def 1 for object OBJECT_D57P43A2_536 {
+    SetOutputAttribute(1);
+    SetAnimation(17);
+    WaitAnimation();
+    Destroy();
+}
+
+def 2 for object OBJECT_D57P43A3_540 {
+    SetAnimation(17);
+    WaitAnimation();
+    SetAnimation(2);
+    hold;
+}
+
+def 3 for object OBJECT_D57P43A2_537 {
+    SetOutputAttribute(1);
+    SetAnimation(17);
+    WaitAnimation();
+    Destroy();
+}
+
+def 4 for object OBJECT_D57P43A3_541 {
+    SetAnimation(17);
+    WaitAnimation();
+    SetAnimation(2);
+    hold;
+}
+
+def 5 for object OBJECT_D57P43A2_538 {
+    SetOutputAttribute(1);
+    SetAnimation(17);
+    WaitAnimation();
+    Destroy();
+}
+
+def 6 for object OBJECT_D57P43A3_542 {
+    SetAnimation(17);
+    WaitAnimation();
+    SetAnimation(2);
+    hold;
+}
+
+def 7 for object OBJECT_D57P43A2_539 {
+    SetOutputAttribute(1);
+    SetAnimation(17);
+    WaitAnimation();
+    Destroy();
+}
+
+def 8 for object OBJECT_D57P43A3_543 {
+    SetAnimation(17);
+    WaitAnimation();
+    SetAnimation(2);
+    hold;
+}

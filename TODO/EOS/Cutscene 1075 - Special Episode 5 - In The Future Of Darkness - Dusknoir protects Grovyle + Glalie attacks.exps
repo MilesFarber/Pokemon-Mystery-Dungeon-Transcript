@@ -1,0 +1,443 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[48, 4];
+    back_SetDungeonBanner(144, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D51P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(5);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(5);
+    Slide2PositionMark<actor ACTOR_PLAYER_FUTURE>(1, Position<'m0', 15, 25.5>);
+    Slide2PositionMark<actor ACTOR_NPC_YONOWAARU_N9>(1, Position<'m1', 15, 25.5>);
+    bgm_PlayFadeIn(BGM_TEMPORAL_PINNACLE, 0, 256);
+    screen_FadeIn(1, 30);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    MovePositionMark<performer 0>(1, Position<'m2', 25.5, 25.5>);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1, Position<'m3', 28.5, 25.5>);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N9>(1, Position<'m4', 19.5, 25.5>);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(2);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Wait(20);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(20);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             It seems like this is
+            the pinnacle.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english="""
+             And it looks like the trail heads
+            down the mountain from here.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(4, 10, ACTOR_NPC_YONOWAARU_N9);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" It should be much easier.",
+    });
+    message_Close();
+    bgm_FadeOut(60);
+    MovePositionMark<performer 0>(1, Position<'m5', 31.5, 25.5>);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1, Position<'m6', 35.5, 25.5>);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N9>(1, Position<'m7', 27.5, 25.5>);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    se_PlayVolume(10753, 192);
+    SetAnimation<object OBJECT_D51P41A2_408>(2);
+    SetAnimation<object OBJECT_D51P41A3_409>(2);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    SetEffect<actor ACTOR_NPC_YONOWAARU_N9>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_YONOWAARU_N9>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" [CS:Y]Grovyle[CR]! Look out! Above you!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    se_ChangeVolume(10753, 5, 256);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english=" What?!",
+    });
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(35);
+    WaitAnimation<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_SHOCKED_MIRRORED, 0);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    se_Play(10754);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    message_CloseEnforce();
+    Wait(10);
+    SetAnimation<object OBJECT_D51P41A2_408>(19);
+    SetAnimation<object OBJECT_D51P41A3_409>(19);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N9>(2, Position<'m8', 33.5, 25.5>);
+    screen_WhiteOut(1, 15);
+    se_Play(10755);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_PAIN, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Gwaaaaaaahhh!!",
+    });
+    message_Close();
+    WaitSe(10755);
+    SetDirection<actor ACTOR_PLAYER_FUTURE>(DIR_LEFT);
+    SetPositionMark<actor ACTOR_PLAYER_FUTURE>(Position<'m9', 37.5, 20.5>);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(29);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(23);
+    SetDirection<actor ACTOR_NPC_YONOWAARU_N9>(DIR_DOWN);
+    SetAnimation<object OBJECT_D51P41A2_408>(13);
+    SetOutputAttribute<object OBJECT_D51P41A2_408>(2);
+    screen_FadeIn(1, 30);
+    Wait(60);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(31);
+    WaitAnimation<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Wait(15);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" [CS:N]D-[K]Dusknoir[CR]!",
+    });
+    message_Talk({
+        english="""
+             Y-you protected me!?[K]
+            Why'd you protect me?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionMark<actor ACTOR_PLAYER_FUTURE>(1.5, Position<'m10', 33.5, 22.5>);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Turn2DirectionLives<actor ACTOR_PLAYER_FUTURE>(4, 10, ACTOR_NPC_YONOWAARU_N9);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Wait(30);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N9>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N9>(1, 1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N9>(1, -1, 0);
+    Wait(3);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N9>(1, 1, 0);
+    Wait(20);
+    SetDirection<actor ACTOR_NPC_YONOWAARU_N9>(DIR_RIGHT);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N9>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    se_Play(5121);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    SetEffect<actor ACTOR_NPC_YONOWAARU_N9>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(25);
+    SetDirection<actor ACTOR_NPC_YONOWAARU_N9>(DIR_DOWN);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N9>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_PAIN, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" Oof!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Are you all right?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_PAIN, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" Ugh...[K] N-never mind that...",
+    });
+    message_Talk({
+        english=" Look out...[K] They're coming...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    se_Play(10756);
+    message_ResetActor();
+    message_Talk({
+        english=" GOGIGIGIGI!!",
+    });
+    Wait(90);
+    message_CloseEnforce();
+    bgm_PlayFadeIn(BGM_RISING_FEAR, 0, 256);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Wait(15);
+    supervision_Acting(1);
+    Wait(1);
+    MovePositionMark<actor ACTOR_NPC_ONIGOORI>(1.5, Position<'m11', 22.5, 21.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_ONIGOORI2>(1.5, Position<'m12', 22.5, 28.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_ONIGOORI3>(1.5, Position<'m13', 40, 21.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_NPC_ONIGOORI4>(1.5, Position<'m14', 40, 28.5>);
+    Wait(30);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Move2PositionMark<actor ACTOR_PLAYER_FUTURE>(1.5, Position<'m15', 29.5, 25>);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Turn2Direction<actor ACTOR_NPC_ONIGOORI>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_ONIGOORI2>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_ONIGOORI3>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_ONIGOORI4>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_SURPRISED, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(-2, -1);
+    message_Talk({
+        english=" Th-these...[K]guys?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_PAIN, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(2, -1);
+    message_Talk({
+        english="""
+             [CS:N]Glalie[CR]...[K] They have the power to
+            do whatever they wish with ice...
+        """,
+    });
+    message_Talk({
+        english=" B-but...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ONIGOORI, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(0, -3);
+    message_Talk({
+        english=" GOGI!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ONIGOORI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_FacePositionOffset(0, -3);
+    message_Talk({
+        english=" GOGIGI!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Slide2PositionMark<actor ACTOR_NPC_ONIGOORI>(0.5, Position<'m16', 24.5, 22.5>);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Slide2PositionMark<actor ACTOR_NPC_ONIGOORI2>(0.5, Position<'m17', 24.5, 28.5>);
+    Wait(7);
+    Slide2PositionMark<actor ACTOR_NPC_ONIGOORI3>(0.5, Position<'m18', 38.5, 22.5>);
+    Wait(5);
+    Slide2PositionMark<actor ACTOR_NPC_ONIGOORI4>(0.5, Position<'m19', 38.5, 28.5>);
+    Turn2Direction<actor ACTOR_NPC_ONIGOORI>(4, 10, DIR_DOWNRIGHT);
+    Turn2Direction<actor ACTOR_NPC_ONIGOORI2>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_ONIGOORI3>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_ONIGOORI4>(4, 10, DIR_UPLEFT);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_PAIN, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(2, -1);
+    message_Talk({
+        english="""
+             But looking at them, they seem
+            to be so influenced by the darkness that
+            they've lost themselves.
+        """,
+    });
+    message_Talk({
+        english="""
+             Seems like they became
+            more vicious.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(10756);
+    message_SetFace(ACTOR_NPC_ONIGOORI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" GOGIGIGIGI!",
+    });
+    WaitSe(10756);
+    message_CloseEnforce();
+    Wait(10);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(-2, -1);
+    message_Talk({
+        english="""
+             Humph![K] We're gonna have to try
+            to take these guys!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(2, -1);
+    message_Talk({
+        english="""
+             Don't believe there are only
+            these guys, [CS:Y]Grovyle[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(-2, -1);
+    message_Talk({
+        english=" What?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(10757);
+    message_ResetActor();
+    message_Talk({
+        english=" BUAOOOOOON!",
+    });
+    Wait(60);
+    bgm2_PlayFadeIn(BGM_EARTHQUAKE1, 15, 256);
+    camera_SetEffect(2, 1, 1.0);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_SHOCKED, 3);
+    Wait(20);
+    ExecuteCommon<actor ACTOR_PLAYER_FUTURE>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    message_CloseEnforce();
+    Wait(10);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(-2, -1);
+    message_Talk({
+        english=" Wh-what?!",
+    });
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_UPLEFT);
+    message_Close();
+    SetDirection<actor ACTOR_NPC_YONOWAARU_N9>(DIR_RIGHT);
+    WaitAnimation<actor ACTOR_NPC_YONOWAARU_N9>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(2);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N9>(4, 10, DIR_UP);
+    Wait(50);
+    bgm2_FadeOut(30);
+    camera_SetEffect(0, 0, 0);
+    Wait(30);
+    supervision_Acting(2);
+    Wait(1);
+    SetAnimation<actor ACTOR_NPC_MANMUU>(23);
+    ResetFunctionAttribute<actor ACTOR_NPC_MANMUU>(256);
+    SlidePositionMark<actor ACTOR_NPC_MANMUU>(4, Position<'m20', 31.5, 19.5>);
+    WaitExecuteLives(ACTOR_NPC_MANMUU);
+    supervision_Acting(3);
+    SetOutputAttribute<object OBJECT_D51P41A1_407>(1);
+    SetAnimation<object OBJECT_D51P41A1_407>(17);
+    WaitAnimation<object OBJECT_D51P41A1_407>();
+    SetAnimation<actor ACTOR_NPC_MANMUU>(2);
+    SetFunctionAttribute<actor ACTOR_NPC_MANMUU>(256);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_SHOCKED, 3);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_UP);
+    se_Play(10758);
+    camera_SetEffect(1, 1, 1.0);
+    Wait(30);
+    camera_SetEffect(0, 0, 0);
+    MovePositionOffset<performer 0>(1, 0, 8);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_FUTURE>(1, 0, 8);
+    Wait(7);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(5);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N9>(1, 0, 8);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(2);
+    WaitExecuteObject(OBJECT_D51P41A1_407);
+    Destroy<object OBJECT_D51P41A1_407>();
+    Wait(30);
+    se_Play(10757);
+    camera_SetEffect(2, 1, 1.0);
+    SetAnimation<actor ACTOR_NPC_MANMUU>(22);
+    WaitAnimation<actor ACTOR_NPC_MANMUU>();
+    message_SetFaceOnly(ACTOR_NPC_MANMUU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" BUAOOOOOON!",
+    });
+    Wait(90);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    WaitExecuteLives(ACTOR_NPC_MANMUU);
+    SetAnimation<actor ACTOR_NPC_MANMUU>(2);
+    Wait(20);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_SURPRISED, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english=" He's a...?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" He's a [CS:K]Mamoswine[CR]!",
+    });
+    message_Talk({
+        english="""
+             Among Ice types...[K][CS:N]Mamoswine[CR]
+            are said to be the strongest Pokémon!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    se_Play(10757);
+    camera_SetEffect(2, 1, 1.0);
+    SetAnimation<actor ACTOR_NPC_MANMUU>(22);
+    WaitAnimation<actor ACTOR_NPC_MANMUU>();
+    message_SetFace(ACTOR_NPC_MANMUU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" BUAAAAOOOOOON!",
+    });
+    Wait(90);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    WaitExecuteLives(ACTOR_NPC_MANMUU);
+    SetAnimation<actor ACTOR_NPC_MANMUU>(2);
+    Wait(20);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" H-here they come!",
+    });
+    message_Close();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(144, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

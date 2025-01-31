@@ -1,0 +1,80 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_SEALED_RUIN_PIT, 0, 256);
+    $SCENARIO_MAIN = scn[19, 3];
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We've got to be getting close to
+                    the bottom now, [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We must be getting close to the
+                    bottom now, [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     We must be getting close to the
+                    bottom now, [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We've got to catch up to
+                    [CS:N]Grovyle[CR] soon.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We have to catch up to [CS:N]Grovyle[CR]
+                    soon.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We have to catch up to [CS:N]Grovyle[CR]
+                    soon.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's keep it up!",
+            }
+        case 2:
+            {
+                english=" Let's keep it up!",
+            }
+        default:
+            {
+                english=" Let's keep it up!",
+            }
+    }
+    message_Close();
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 28.5, 7.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 28.5, 7.5>);
+    Wait(30);
+    bgm_FadeOut(180);
+    screen_FadeOut(1, 30);
+    Wait(180);
+    end;
+}

@@ -1,0 +1,27 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D04P12A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 6, 0, 0, 0);
+    screen_FadeIn(1, 15);
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_DARK_PUKURIN>(42);
+    MovePositionMark<actor ACTOR_NPC_DARK_PUKURIN>(2.5, Position<'m0', 25.5, 49.5>);
+    WaitExecuteLives(ACTOR_NPC_DARK_PUKURIN);
+    SetAnimation<actor ACTOR_NPC_DARK_PUKURIN>(2);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_NPC_DARK_PUKURIN>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_DARK_PUKURIN);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_DARK_PUKURIN>(2, Position<'m1', 25.5, 20.5>);
+    MovePositionMark<performer 0>(2, Position<'m2', 25.5, 20.5>);
+    WaitExecuteLives(ACTOR_NPC_DARK_PUKURIN);
+    Destroy<actor ACTOR_NPC_DARK_PUKURIN>();
+    Wait(80);
+    se_Play(5139);
+    screen_WhiteOut(1, 5);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

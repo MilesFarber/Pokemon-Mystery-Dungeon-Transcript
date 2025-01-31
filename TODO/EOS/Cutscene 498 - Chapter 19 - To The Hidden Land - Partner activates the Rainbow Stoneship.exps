@@ -1,0 +1,131 @@
+
+def 0 {
+    bgm_Stop();
+    back_SetGround(LEVEL_D28P33A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    Slide2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 46, 25>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Wait(15);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    Wait(30);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(0.5, Position<'m1', 41, 25>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Here it is.[K] It's this hollow spot.",
+            }
+        case 2:
+            {
+                english=" Here it is.[K] It's this hollow spot.",
+            }
+        default:
+            {
+                english=" Here it is.[K] It's this hollow spot.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The Relic Fragment is supposed
+                    to go into this spot.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The Relic Fragment is supposed
+                    to go into this spot.
+                """,
+            }
+        default:
+            {
+                english="""
+                     The Relic Fragment is supposed
+                    to go into this spot.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     That'll activate the Rainbow
+                    Stoneship, [CS:N]Grovyle[CR] said...[K] Might as well try it.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     That will activate the Rainbow
+                    Stoneship, [CS:N]Grovyle[CR] said...[K] It's worth a try.
+                """,
+            }
+        default:
+            {
+                english="""
+                     That will activate the Rainbow
+                    Stoneship, [CS:N]Grovyle[CR] said...[K] Let's try it.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, -16, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(6671);
+    supervision_RemoveActing(1);
+    supervision_Acting(2);
+    Wait(15);
+    message_Mail({
+        english="""
+            [CN][partner] placed the Relic
+            [CN]Fragment in the hollow spot.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(7445);
+    screen_WhiteOut(1, 30);
+    Wait(60);
+    supervision_RemoveActing(2);
+    supervision_Acting(3);
+    SetOutputAttribute<object OBJECT_D28P33A2_67>(2);
+    Wait(60);
+    screen_FadeIn(1, 15);
+    bgm_PlayFadeIn(BGM_ANOTHER_GLOWING_NOISE, 0, 256);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(1.1992, 16, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa! It moved![K] It moved!",
+            }
+        case 2:
+            {
+                english=" Waah! It moved![K] It moved!",
+            }
+        default:
+            {
+                english=" Waah! It moved![K] It moved!",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

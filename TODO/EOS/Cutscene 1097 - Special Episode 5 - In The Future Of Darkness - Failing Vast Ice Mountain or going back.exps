@@ -1,0 +1,71 @@
+
+def 0 {
+    sound_Stop();
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Argh...[K] We didn't do so well...",
+    });
+    message_Talk({
+        english=" We should turn back for now.",
+    });
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D53P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_YONOWAARU_N9>();
+    SetPositionInitial<actor ACTOR_NPC_SEREBII>();
+    SetPositionInitial<actor ACTOR_NPC_YAMIRAMI>();
+    SetPositionInitial<actor ACTOR_NPC_YAMIRAMI2>();
+    SetPositionInitial<actor ACTOR_NPC_YAMIRAMI3>();
+    SetPositionInitial<actor ACTOR_NPC_YAMIRAMI4>();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N9>(2);
+    SetAnimation<actor ACTOR_NPC_SEREBII>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_VAST_ICE_MOUNTAIN, 0, 256);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N9>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             If we don't hurry and chase
+            after Master [CS:N]Dialga[CR]...
+        """,
+    });
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_NPC_SEREBII>(4, 10, DIR_DOWNLEFT);
+    message_KeyWait();
+    message_Talk({
+        english=" He will reach the pinnacle...",
+    });
+    message_Talk({
+        english="""
+             And he will destroy the
+            Passage of Time.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Right.[K] Once you're prepared,
+            we'll head out.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_RIGHT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_SEREBII>(4, 10, DIR_RIGHT);
+    Wait(3);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N9>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N9);
+    end;
+}

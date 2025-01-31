@@ -1,0 +1,48 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_A_NEW_WORLD, 0, 256);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V38P09A);
+    back_SetGround(LEVEL_V38P11A);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    back_SetBackScrollSpeed(4.0, 2.5);
+    SetAnimation<object OBJECT_V38P11A1_440>(17);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    message_SetFace(ACTOR_NPC_SEREBII, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Wow!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Th-the land...",
+    });
+    message_Talk({
+        english=" The land...it turned green!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SEREBII, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Such...[K]such a beautiful scene...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" This is [CS:N]Dialga[CR]'s...",
+    });
+    message_Talk({
+        english=" This is [CS:N]Dialga[CR]'s power!",
+    });
+    message_Close();
+    se_Play(11539);
+    bgm_FadeOut(150);
+    screen2_WhiteOut(0, 30);
+    screen_WhiteOut(1, 30);
+    back_SetBackScrollSpeed(0.0, 0.0);
+    back2_SetMode(0);
+    end;
+}

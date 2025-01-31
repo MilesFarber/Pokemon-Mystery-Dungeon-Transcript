@@ -1,0 +1,122 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(127, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D42P42A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_BIPPA>(1, Position<'m0', 31.5, 31.5>);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(10);
+    se_Play(8963);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Hey! [CS:N]Jirachi[CR]![K]
+            I've come back, yup yup!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" ...Yaaaaaawwwwwnnnn...",
+    });
+    bgm_FadeOut(60);
+    message_Talk({
+        english=" I'm sleeeeeepy...[K] Yaaaaawn...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_Acting(1);
+    se_Play(9224);
+    SetAnimation<actor ACTOR_NPC_JIRAACHI>(25);
+    WaitAnimation<actor ACTOR_NPC_JIRAACHI>();
+    WaitExecuteLives(ACTOR_NPC_JIRAACHI);
+    SetAnimation<actor ACTOR_NPC_JIRAACHI>(43);
+    WaitSe(9224);
+    bgm_PlayFadeIn(BGM_BEYOND_THE_DREAM, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JIRAACHI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I'm [CS:N]Jirachi[CR].[K]
+            Who are you? Zzzz... Snorf...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SPECIAL2, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I'm [CS:Y]Bidoof[CR].[K] (That's what I've
+            been telling you since the beginning...)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JIRAACHI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Hmmm...[K] I'm still so sleeeepy...
+            Yaaaaawn...
+        """,
+    });
+    message_Talk({
+        english="""
+             I tend to act strangely when I
+            sleep and cause trouble all around me, so I
+            apologize again... Zzzz... Snorf...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8961);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SPECIAL2, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+              Ugh...
+            (I thought this before, yup yup...)
+        """,
+    });
+    message_Talk({
+        english="""
+             ... (He isn't really
+            asleep, is he...? Sniff...)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    message_SetFace(ACTOR_NPC_JIRAACHI, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Ready...? Zzzz... Snorf...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    WaitSe(5143);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(127, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

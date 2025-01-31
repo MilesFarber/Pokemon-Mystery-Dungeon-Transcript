@@ -1,0 +1,129 @@
+
+def 0 {
+    switch ( sector() ) {
+        case 0:
+        default:
+            @label_0;
+            bgm2_PlayFadeIn(BGM_ON_THE_BEACH_AT_DUSK, 0, 256);
+            @label_2;
+            back_SetGround(LEVEL_D10P41A);
+            supervision_StationCommon(0);
+            supervision_Acting(0);
+            camera_SetMyself<performer 0>();
+            screen_FlushOut(1, 0, 8, 0, 0, 0);
+            screen_FadeIn(1, 30);
+            MovePositionOffset<actor ACTOR_NPC_GURAADON>(0.2969, 0, 12);
+            camera_SetEffect(2, 2, 3.0);
+            Wait(15);
+            camera_SetEffect(0, 0, 0);
+            Wait(15);
+            camera_SetEffect(2, 2, 3.0);
+            Wait(15);
+            camera_SetEffect(0, 0, 0);
+            WaitExecuteLives(ACTOR_NPC_GURAADON);
+            Wait(45);
+            SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+            ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+            camera_SetEffect(2, 1, 1.0);
+            SetAnimation<actor ACTOR_NPC_GURAADON>(9);
+            message_SetFace(ACTOR_NPC_GURAADON, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english=" GRR...GRR...OOOOOOOOOH!",
+            });
+            Wait(90);
+            message_CloseEnforce();
+            camera_SetEffect(0, 0, 0);
+            SetAnimation<actor ACTOR_NPC_GURAADON>(2);
+            Wait(15);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_STUNNED, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Urk... Scary stuff!",
+                    }
+                case 2:
+                    {
+                        english=" Urk... This is scary...",
+                    }
+                default:
+                    {
+                        english=" Urk... I'm scared!",
+                    }
+            }
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Wait(20);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" But we gotta be brave!",
+                    }
+                case 2:
+                    {
+                        english=" But we need to be brave!",
+                    }
+                default:
+                    {
+                        english=" But it's time to be brave!",
+                    }
+            }
+            ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" And I gotta face up to this!",
+                    }
+                case 2:
+                    {
+                        english=" And I need to face up to this!",
+                    }
+                default:
+                    {
+                        english=" And I need to stand up to this!",
+                    }
+            }
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" No stopping now, [hero]!",
+                    }
+                case 2:
+                    {
+                        english="""
+                             There's no giving up now,
+                            [hero]!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             We can't just run away now,
+                            [hero]!
+                        """,
+                    }
+            }
+            message_Close();
+            switch ( sector() ) {
+                case 0:
+                default:
+                    screen_FadeOut(1, 30);
+                    @label_5;
+                    screen_FlushIn(1, 0, 1, 0, 0, 0);
+                    end;
+                case 1:
+                    screen_WhiteOut(1, 30);
+                    jump @label_5;
+            }
+            break;
+        case 1:
+            bgm_PlayFadeIn(BGM_MEMORIES_RETURNED, 0, 256);
+            jump @label_2;
+    }
+}

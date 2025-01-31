@@ -1,0 +1,47 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We've got to get back the [CS:Z]Water
+                    Float[CR] this time!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We can't fail at getting back the
+                    [CS:Z]Water Float[CR] this time!
+                """,
+            }
+        default:
+            {
+                english="""
+                     We have to get the [CS:Z]Water
+                    Float[CR] back this time!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Let's head out to [CS:P]Amp Plains[CR]!",
+            }
+        case 2:
+            {
+                english=" Let's go back to [CS:P]Amp Plains[CR]!",
+            }
+        default:
+            {
+                english=" Let's head back to [CS:P]Amp Plains[CR]!",
+            }
+    }
+    message_Close();
+    end;
+}

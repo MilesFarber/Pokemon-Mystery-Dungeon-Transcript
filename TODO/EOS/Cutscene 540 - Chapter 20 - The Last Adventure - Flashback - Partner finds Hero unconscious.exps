@@ -1,0 +1,82 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_MEMORIES_RETURNED, 0, 256);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V01P03B);
+    back_SetGround(LEVEL_D01P11B);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 33, 9.5>);
+    camera_SetMyself<performer 0>();
+    screen2_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    supervision_SpecialActing(21, 600, 0);
+    supervision2_SpecialActing(21, 600, 0);
+    SetOutputAttribute<actor ACTOR_ATTENDANT1>(2);
+    SetOutputAttribute<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_PLAYER>(76);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    MovePositionMark<performer 0>(1, Position<'m1', 52, 22>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 52, 21.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Waah![K] Someone has collapsed on
+                    the sand!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Waah![K] Someone has collapsed on
+                    the sand!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Waah![K] Someone has collapsed on
+                    the sand!
+                """,
+            }
+    }
+    message_Close();
+    MovePositionMark<performer 0>(3, Position<'m3', 38.5, 22>);
+    SetAnimation<actor ACTOR_ATTENDANT1>(1024);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(3, Position<'m4', 39, 21.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(768);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What happened?![K] Are you OK?",
+            }
+        case 2:
+            {
+                english=" What happened?![K] Are you OK?",
+            }
+        default:
+            {
+                english=" What happened?![K] Are you OK?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    screen2_FadeOut(0, 30);
+    screen_FadeOut(1, 30);
+    back2_SetMode(0);
+    screen2_FlushIn(1, 0, 1, 0, 0, 0);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    supervision_SpecialActing(3, 0, 0);
+    supervision2_SpecialActing(3, 0, 0);
+    end;
+}

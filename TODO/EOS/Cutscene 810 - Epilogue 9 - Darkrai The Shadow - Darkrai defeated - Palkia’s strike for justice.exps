@@ -1,0 +1,774 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D41P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_DAAKURAI>(9);
+    screen_FadeIn(1, 30);
+    SetEffect<actor ACTOR_NPC_DAAKURAI>(EFFECT_SHOCKED, 3);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Gah![K] Gaaaah!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_DAAKURAI>(44);
+    Wait(45);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english=" We...[K]did it...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Urrgggghh!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_KURESERIA>(0.7969, 0, -16);
+    WaitExecuteLives(ACTOR_NPC_KURESERIA);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english=" This is the end for you, [CS:N]Darkrai[CR]!",
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_KURESERIA>(12);
+    WaitAnimation<actor ACTOR_NPC_KURESERIA>();
+    Wait(20);
+    SetAnimation<actor ACTOR_NPC_DAAKURAI>(11);
+    SetEffect<actor ACTOR_NPC_DAAKURAI>(EFFECT_SHOCKED, 3);
+    SlidePositionOffset<actor ACTOR_NPC_DAAKURAI>(2.5, 0, -16);
+    se_Play(5126);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitExecuteLives(ACTOR_NPC_DAAKURAI);
+    SetAnimation<actor ACTOR_NPC_DAAKURAI>(44);
+    SetAnimation<actor ACTOR_NPC_KURESERIA>(2);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Urrggghh...",
+    });
+    message_Talk({
+        english="""
+             [CS:N]C-Cresselia[CR]...[K] Don't you
+            remember...?
+        """,
+    });
+    message_KeyWait();
+    SetAnimation<actor ACTOR_NPC_DAAKURAI>(2);
+    message_Talk({
+        english=" I said you...[K]cannot catch me!",
+    });
+    message_Close();
+    se_Play(7188);
+    SetAnimation<actor ACTOR_NPC_DAAKURAI>(18);
+    WaitAnimation<actor ACTOR_NPC_DAAKURAI>();
+    WaitExecuteLives(ACTOR_NPC_DAAKURAI);
+    SetAnimation<actor ACTOR_NPC_DAAKURAI>(2);
+    Wait(15);
+    MovePositionMark<performer 0>(2, Position<'m0', 34.5, 23.5>);
+    WaitExecutePerformer(0);
+    Wait(15);
+    se_Play(8706);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_T01P01A6_179>(18);
+    WaitAnimation<object OBJECT_T01P01A6_179>();
+    WaitExecuteObject(OBJECT_T01P01A6_179);
+    SetAnimation<object OBJECT_T01P01A6_179>(1);
+    Wait(60);
+    bgm_PlayFadeIn(BGM_OH_NO, 0, 256);
+    MovePositionMark<performer 0>(2, Position<'m1', 34.5, 40.5>);
+    WaitExecutePerformer(0);
+    Wait(15);
+    se_Play(8967);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KURESERIA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey! What is that?!",
+            }
+        case 2:
+            {
+                english=" Hey! What is that?!",
+            }
+        default:
+            {
+                english=" Hey! What is that?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8973);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's a dimensional hole!)",
+            }
+        default:
+            {
+                english="(It's a dimensional hole!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Mwahaha...",
+    });
+    message_Talk({
+        english="""
+             This dimensional hole may take
+            me to the future...[K]or the past...
+        """,
+    });
+    message_Talk({
+        english="""
+             Even I don't know where it will
+            lead me...[K] But...!
+        """,
+    });
+    message_Talk({
+        english=" I've failed only in this time.",
+    });
+    message_Talk({
+        english="""
+             I will simply plunge the world
+            into darkness in another time.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8973);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" S-stop![K] [CS:N]Darkrai[CR]!",
+            }
+        case 2:
+            {
+                english=" S-stop![K] [CS:N]Darkrai[CR]!",
+            }
+        default:
+            {
+                english=" S-stop![K] [CS:N]Darkrai[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english=" You're not getting away!",
+    });
+    message_Close();
+    MovePositionMark<performer 0>(1.5, Position<'m2', 34.5, 29.5>);
+    MovePositionMark<actor ACTOR_NPC_DAAKURAI>(1.5, Position<'m3', 34.5, 23.5>);
+    Wait(15);
+    MovePositionMark<actor ACTOR_NPC_KURESERIA>(1.1992, Position<'m4', 34.5, 30>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1.1992, Position<'m5', 32.5, 32>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_PLAYER>(1.1992, Position<'m6', 36.5, 32>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh...",
+            }
+        case 2:
+            {
+                english=" Ugh...",
+            }
+        default:
+            {
+                english=" Ugh...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_DAAKURAI>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_DAAKURAI);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Humph. Too bad for you.[K] I can
+            slip away through time with just one step.
+        """,
+    });
+    message_Talk({
+        english=" You cannot catch me.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english=" Oh...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_DAAKURAI>(5);
+    SlidePositionOffset<actor ACTOR_NPC_DAAKURAI>(0.2969, 0, -12);
+    WaitExecuteLives(ACTOR_NPC_DAAKURAI);
+    SetAnimation<actor ACTOR_NPC_DAAKURAI>(2);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Good-bye to you!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urk...",
+            }
+        case 2:
+            {
+                english=" Urk...",
+            }
+        default:
+            {
+                english=" Urk...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Mwahaha![K] Well, how do you like
+            that?![K] Finally, in the end...
+        """,
+    });
+    message_Talk({
+        english=" It ends in my ultimate victory!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(10);
+    message_SetActor(ACTOR_NPC_PARUKIA);
+    message_Talk({
+        english=" I WON'T ALLOW THAT!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_DAAKURAI>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KURESERIA>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Wh-what?!",
+    });
+    message_Close();
+    ExecuteCommon<actor ACTOR_NPC_DAAKURAI>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    bgm_PlayFadeIn(BGM_EARTHQUAKE2, 0, 256);
+    camera_SetEffect(2, 1, 1.0);
+    Wait(120);
+    bgm_FadeOut(60);
+    se_Play(8195);
+    screen_WhiteOut(1, 30);
+    Wait(80);
+    se_Play(5128);
+    supervision_Acting(2);
+    Wait(1);
+    ResetFunctionAttribute<actor ACTOR_NPC_PARUKIA>(256);
+    SlidePositionOffset<actor ACTOR_NPC_PARUKIA>(6, 0, 32);
+    screen_FadeIn(1, 15);
+    Turn2Direction<actor ACTOR_NPC_DAAKURAI>(4, 10, DIR_DOWNLEFT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_NPC_DAAKURAI>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_KURESERIA>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    SetFunctionAttribute<actor ACTOR_NPC_PARUKIA>(256);
+    camera_SetEffect(0, 0, 0);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Y-you're...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]P-Palkia[CR]!",
+            }
+        case 2:
+            {
+                english=" [CS:N]P-Palkia[CR]!",
+            }
+        default:
+            {
+                english=" [CS:N]P-Palkia[CR]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(0, -3);
+    message_Talk({
+        english="""
+             YOU WILL PAY A GRAVE PRICE
+            FOR EXPANDING THE DISTORTION OF SPACE,
+            [CS:N]DARKRAI[CR]!
+        """,
+    });
+    message_Talk({
+        english=" THIS IS A STRIKE FOR JUSTICE!",
+    });
+    message_Talk({
+        english=" TAKE THIS!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(19);
+    WaitAnimation<actor ACTOR_NPC_PARUKIA>();
+    Wait(10);
+    se_Play(6930);
+    message_EmptyActor();
+    message_Talk({
+        english="GRRR-OOOOOO!",
+    });
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    camera_SetEffect(2, 1, 1.0);
+    SetEffect<actor ACTOR_NPC_DAAKURAI>(EFFECT_SHOCKED, 3);
+    Wait(90);
+    se_Play(8708);
+    SetEffect<performer 3>(EFFECT_LIGHT_END_ENGULFING, 3);
+    WaitEffect<performer 3>();
+    WaitExecutePerformer(3);
+    bgm_PlayFadeIn(BGM_EARTHQUAKE3, 0, 256);
+    camera_SetEffect(1, 1, 1.0);
+    message_CloseEnforce();
+    SetEffect<actor ACTOR_NPC_DAAKURAI>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_DAAKURAI>();
+    WaitExecuteLives(ACTOR_NPC_DAAKURAI);
+    message_SetFace(ACTOR_NPC_DAAKURAI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" What...[K] Waaaaaah!",
+    });
+    message_Close();
+    MovePositionOffset<actor ACTOR_NPC_DAAKURAI>(1, 0, -12);
+    WaitExecuteLives(ACTOR_NPC_DAAKURAI);
+    Destroy<actor ACTOR_NPC_DAAKURAI>();
+    SetEffect<performer 3>(EFFECT_NONE, 3);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(18);
+    WaitAnimation<actor ACTOR_NPC_PARUKIA>();
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(0, -3);
+    message_Talk({
+        english=" THERE IS NO ESCAPE!",
+    });
+    message_Close();
+    bgm_FadeOut(30);
+    se_Stop(8708);
+    se_Play(8707);
+    supervision_Acting(4);
+    SetOutputAttribute<object OBJECT_H02P99C6_121>(4);
+    SetAnimation<object OBJECT_H02P99C6_121>(17);
+    WaitAnimation<object OBJECT_H02P99C6_121>();
+    WaitExecuteObject(OBJECT_H02P99C6_121);
+    SetAnimation<object OBJECT_H02P99C6_121>(2);
+    Wait(30);
+    Move2PositionMark<object OBJECT_H02P99C6_121>(8, Position<'m7', 34, 18.5>);
+    screen_WhiteOut(1, 15);
+    supervision_RemoveActing(4);
+    message_SetActor(ACTOR_NPC_DAAKURAI);
+    message_Talk({
+        english=" Gaaaaaah!",
+    });
+    Wait(30);
+    screen_WhiteOutAll(1, 60);
+    message_CloseEnforce();
+    screen_FadeInAll(1, 0);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    SetPositionOffset<performer 0>(0, -24);
+    Destroy<actor ACTOR_NPC_DAAKURAI>();
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(2);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(2);
+    SetDirection<actor ACTOR_PLAYER>(DIR_UP);
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_UP);
+    SetDirection<actor ACTOR_NPC_KURESERIA>(DIR_UP);
+    Wait(60);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8705);
+    SetAnimation<object OBJECT_T01P01A6_179>(19);
+    WaitAnimation<object OBJECT_T01P01A6_179>();
+    WaitExecuteObject(OBJECT_T01P01A6_179);
+    Destroy<object OBJECT_T01P01A6_179>();
+    Wait(60);
+    MovePositionMark<performer 0>(1, Position<'m8', 34.5, 31.5>);
+    WaitExecutePerformer(0);
+    WaitSe(8705);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_KURESERIA>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(The dimensional hole...)",
+            }
+        default:
+            {
+                english="(The dimensional hole...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             The dimensional hole completely
+            shattered![K] With [CS:N]Darkrai[CR] still inside of it!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I heard [CS:N]Darkrai[CR] scream...",
+            }
+        case 2:
+            {
+                english=" I heard [CS:N]Darkrai[CR] scream...",
+            }
+        default:
+            {
+                english=" I heard [CS:N]Darkrai[CR] scream...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Did [CS:N]Darkrai[CR] disappear forever?",
+            }
+        case 2:
+            {
+                english=" Did [CS:N]Darkrai[CR] disappear forever?",
+            }
+        default:
+            {
+                english=" Did [CS:N]Darkrai[CR] disappear forever?",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_PARUKIA>(8, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(0, -3);
+    message_Talk({
+        english=" NO.[K] THAT HAS NOT HAPPENED.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    message_Talk({
+        english="""
+             HE HAS SUFFERED GRIEVOUS
+            DAMAGE...[K]AND BEEN BANISHED TO SOME
+            UNKNOWN PLACE...
+        """,
+    });
+    message_Talk({
+        english="""
+             BUT, WHEREVER HE MAY
+            BE...[K]HE LIVES.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_CENTER);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" When he recovers from injury...",
+            }
+        case 2:
+            {
+                english=" When he recovers from injury...",
+            }
+        default:
+            {
+                english=" When he recovers from injury...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Won't [CS:N]Darkrai[CR] go back to his
+                    wicked ways?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Won't [CS:N]Darkrai[CR] go back to his
+                    wicked ways?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Won't [CS:N]Darkrai[CR] go back to his
+                    wicked ways?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KURESERIA);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" That remains to be seen...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    message_Talk({
+        english="""
+             Because when [CS:N]Darkrai[CR] entered
+            the dimensional hole...[K]he began to time travel...
+        """,
+    });
+    message_Talk({
+        english="""
+             At that precise moment, he was
+            struck with [CS:N]Palkia[CR]'s attack.
+        """,
+    });
+    message_Talk({
+        english="""
+             Remember what [CS:N]Darkrai[CR] said
+            about [hero]'s arrival from the future?
+        """,
+    });
+    message_Talk({
+        english="""
+             [CS:N]Darkrai[CR] attacked during time
+            travel...[K] So [hero] got hit with amnesia.
+        """,
+    });
+    message_Talk({
+        english=" So just like [hero]...",
+    });
+    message_Talk({
+        english="""
+             It's likely that [CS:N]Darkrai[CR] has lost
+            his memory as well.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Darkrai[CR] has lost his memory?!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Darkrai[CR] has lost his memory?!",
+            }
+        default:
+            {
+                english=" [CS:N]Darkrai[CR] has lost his memory?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Yes. [CS:N]Darkrai[CR] will likely never
+            recover his memory...
+        """,
+    });
+    message_Talk({
+        english="""
+             And he will wander lost through
+            the world.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Darkrai[CR]...",
+            }
+        case 2:
+            {
+                english=" [CS:N]Darkrai[CR]...",
+            }
+        default:
+            {
+                english=" [CS:N]Darkrai[CR]...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_FacePositionOffset(0, -3);
+    message_Talk({
+        english="""
+             WE ARE DONE WITH HIM.[K]
+            HE WILL NOT LIKELY EXPAND THE DISTORTION
+            OF SPACE AGAIN.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    message_Talk({
+        english="""
+             I WILL RETURN TO
+            [CS:P]SPACIAL RIFT[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             I FORESEE NO REASON TO
+            EVER RETURN HERE.[K] FAREWELL.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8200);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(25);
+    WaitAnimation<actor ACTOR_NPC_PARUKIA>();
+    supervision_Acting(3);
+    SetOutputAttribute<object OBJECT_H02P99C5_120>(1);
+    SetAnimation<object OBJECT_H02P99C5_120>(18);
+    WaitAnimation<object OBJECT_H02P99C5_120>();
+    Wait(10);
+    message_SetActor(ACTOR_NPC_PARUKIA);
+    message_Talk({
+        english=" GRRR-OOOOOO!",
+    });
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    Destroy<actor ACTOR_NPC_PARUKIA>();
+    WaitExecuteObject(OBJECT_H02P99C5_120);
+    SetAnimation<object OBJECT_H02P99C5_120>(4);
+    Wait(30);
+    message_CloseEnforce();
+    SetAnimation<object OBJECT_H02P99C5_120>(22);
+    WaitAnimation<object OBJECT_H02P99C5_120>();
+    WaitExecuteObject(OBJECT_H02P99C5_120);
+    Destroy<object OBJECT_H02P99C5_120>();
+    Wait(90);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_KURESERIA);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             Well, that is that.[K] Shall we also
+            go back?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Yup!",
+            }
+        case 2:
+            {
+                english=" Yes!",
+            }
+        default:
+            {
+                english=" Yep!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's go home, [hero]![K]
+                    Back to Treasure Town!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's go home, [hero]![K]
+                    Back to Treasure Town!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's go home, [hero]![K]
+                    Back to Treasure Town!
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 90);
+    Wait(60);
+    end;
+}

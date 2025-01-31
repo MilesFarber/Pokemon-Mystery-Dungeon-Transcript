@@ -1,0 +1,153 @@
+
+def 0 {
+    sound_Stop();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V02P06A);
+    camera2_SetPositionMark(Position<'m0', 19.5, 16.5>);
+    screen2_FadeIn(1, 60);
+    Wait(150);
+    screen2_FadeOut(1, 60);
+    back2_SetMode(0);
+    back_SetGround(LEVEL_G01P01C);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_FIRE_CRACKLING_LOUDER, 120, 256);
+    screen_FadeIn(1, 60);
+    Wait(30);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_SUKATANKU>(0.7969, Position<'m1', 30, 26.5>);
+    MovePositionMark<actor ACTOR_NPC_ZUBATTO>(0.7969, Position<'m2', 27, 29.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGAASU>(0.7969, Position<'m3', 33, 29.5>);
+    Wait(30);
+    MovePositionMark<performer 0>(1, Position<'m4', 30, 27.5>);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    Wait(30);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_ZUBATTO>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_ZUBATTO>();
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    Turn2DirectionLives<actor ACTOR_NPC_ZUBATTO>(4, 10, ACTOR_NPC_SUKATANKU);
+    WaitExecuteLives(ACTOR_NPC_ZUBATTO);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Ch-Ch-Chief...[K] We were really
+            put in our place on that last expedition...[K] Urk!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MoveHeight<actor ACTOR_NPC_SUKATANKU>(1, 2);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_SUKATANKU>(1, 0);
+    Wait(2);
+    MoveHeight<actor ACTOR_NPC_SUKATANKU>(1, 2);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_SUKATANKU>(1, 0);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             Chaw-haw-haw... [CS:N]Wigglytuff[CR]
+            wrecked us...
+        """,
+    });
+    message_Talk({
+        english="""
+             And I'm not about to let it go!
+            So humiliating! I need payback...[K]one way
+            or another.
+        """,
+    });
+    message_Talk({
+        english="""
+             But, to be brutally honest, we
+            don't stand a chance against [CS:N]Wigglytuff[CR].
+        """,
+    });
+    message_KeyWait();
+    MoveHeight<actor ACTOR_NPC_SUKATANKU>(1, 2);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_SUKATANKU>(1, 0);
+    Wait(2);
+    MoveHeight<actor ACTOR_NPC_SUKATANKU>(1, 2);
+    Wait(1);
+    MoveHeight<actor ACTOR_NPC_SUKATANKU>(1, 0);
+    message_Talk({
+        english="""
+             Grrrrr![K] I'm so furious! It's
+            burning me up!
+        """,
+    });
+    SetEffect<actor ACTOR_NPC_SUKATANKU>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_SUKATANKU>();
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_DOGAASU>(4, 10, ACTOR_NPC_SUKATANKU);
+    WaitExecuteLives(ACTOR_NPC_DOGAASU);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Whoa-ho-ho! There's gotta be
+            some way we can get back at 'em!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_ZUBATTO, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Heh-heh-heh! I'd settle for
+            picking on wimps. Oh! Hey!
+        """,
+    });
+    message_Talk({
+        english="""
+             Instead of [CS:N]Wigglytuff[CR],
+            how about we take revenge on the wimps in
+            that Team [team:]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8965);
+    SetEffect<actor ACTOR_NPC_SUKATANKU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SUKATANKU>();
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    Turn2Direction<actor ACTOR_NPC_SUKATANKU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_SUKATANKU);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english=" Chaw-haw![K] Great idea!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_DOGAASU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             Whoa-ho-ho! And we know that
+            Team [team:] is wimpy!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SUKATANKU, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(0, -2);
+    message_Talk({
+        english="""
+             Time to do some plotting, boys!
+            Chaw-haw-haw!
+        """,
+    });
+    message_Close();
+    MovePositionOffset<actor ACTOR_NPC_SUKATANKU>(1, 0, 150);
+    Turn2Direction<actor ACTOR_NPC_ZUBATTO>(4, 1, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_DOGAASU>(16, 2, DIR_DOWN);
+    Wait(45);
+    MovePositionOffset<actor ACTOR_NPC_ZUBATTO>(1, 0, 150);
+    Wait(10);
+    MovePositionOffset<actor ACTOR_NPC_DOGAASU>(1, 0, 150);
+    Wait(45);
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 60);
+    WaitBgm(BGM_FIRE_CRACKLING_LOUDER);
+    Wait(60);
+    end;
+}

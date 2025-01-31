@@ -1,0 +1,50 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_RESTORED, 0, 256);
+    back_SetGround(LEVEL_V03P09A);
+    back_SetBackScrollSpeed(3, 3);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    back_SetEffect(7, 0);
+    back_SetBackEffect(2);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 60);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(When I see that Time Gear...)",
+            }
+        default:
+            {
+                english="(When I see that Time Gear...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Why does my pulse race when I see it?)",
+            }
+        default:
+            {
+                english="(Why does my pulse race when I see it?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(And this unease I feel...[K] What does it mean?)",
+            }
+        default:
+            {
+                english="(And this unease I feel...[K] What does it mean?)",
+            }
+    }
+    message_Close();
+    bgm_FadeOut(180);
+    screen_FadeOutAll(1, 90);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    Wait(30);
+    end;
+}

@@ -1,0 +1,126 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[9, 3];
+    back_SetGround(LEVEL_D06P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_CRAGGY_COAST, 0, 256);
+    supervision_Acting(1);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 46, 33.5>);
+    Wait(50);
+    supervision_Acting(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 46, 28.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 43, 31.5>);
+    supervision_Acting(3);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m3', 46, 28.5>);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    Move2PositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m4', 49, 31.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? This place again?!",
+            }
+        case 2:
+            {
+                english=" What? This place again?!",
+            }
+        default:
+            {
+                english=" What? This place again?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_NPC_BIPPA>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_Talk({
+        english="""
+             Seems to me that we're back out
+            where we came from. Yup yup!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It looks like that path brought us
+                    right back where we started.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It looks like that path loops back
+                    right to where we started.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I guess that path looped us right
+                    back to where we started.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             If we aim to move on, I reckon
+            we ought to choose [CS:P]Craggy Coast[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     All right. We'll take another
+                    shot at this.[K] Let's get it done!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     All right. We'll take another
+                    shot at this.[K] Let's get it done!
+                """,
+            }
+        default:
+            {
+                english="""
+                     All right. We'll take another
+                    shot at this.[K] Let's get it done!
+                """,
+            }
+    }
+    message_Close();
+    supervision_LoadStation(LEVEL_D06P11A, 'UM08');
+    supervision_Station(3);
+    end;
+}

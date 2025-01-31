@@ -1,0 +1,495 @@
+
+def 0 {
+    back_SetGround(LEVEL_D16P31A);
+    supervision_StationCommon(0);
+    supervision_StationCommon(8);
+    SetPositionInitial<actor ACTOR_UNIT_NPC1>();
+    SetPositionInitial<actor ACTOR_UNIT_NPC2>();
+    SetAnimation<actor ACTOR_UNIT_NPC1>(2);
+    SetAnimation<actor ACTOR_UNIT_NPC2>(2);
+    supervision_StationCommon(28);
+    supervision_StationCommon(23);
+    supervision_StationCommon(21);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 5);
+    bgm_PlayFadeIn(BGM_I_SAW_SOMETHING_AGAIN, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(2, 1);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That was...)",
+            }
+        default:
+            {
+                english="(That was...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Unlike my earlier experiences!)",
+            }
+        default:
+            {
+                english="(Unlike my earlier experiences!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(All I heard was a voice.)",
+            }
+        default:
+            {
+                english="(All I heard was a voice.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(No.[K] That's wrong.)",
+            }
+        default:
+            {
+                english="(No.[K] That's wrong.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(This...[K]this happened once before.)",
+            }
+        default:
+            {
+                english="(This...[K]this happened once before.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It was...[K] It was at Groudon's statue!)",
+            }
+        default:
+            {
+                english="(It was...[K] It was at Groudon's statue!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(I heard only a voice that time too.)",
+            }
+        default:
+            {
+                english="(I heard only a voice that time too.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(But why does that happen?)",
+            }
+        default:
+            {
+                english="(But why does that happen?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Why did I hear only a voice then...and now?)",
+            }
+        default:
+            {
+                english="(Why did I hear only a voice then...and now?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh? What's up, [hero]?",
+            }
+        case 2:
+            {
+                english="""
+                     Hey, what's the matter,
+                    [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Hey, is there something wrong,
+                    [hero]?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(20);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh! Did you have another vision?",
+            }
+        case 2:
+            {
+                english=" Oh! Did you have another vision?",
+            }
+        default:
+            {
+                english=" Oh! Did you have another vision?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Did another Dimensional Scream
+                    come to you?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Did another Dimensional Scream
+                    come to you?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Did another Dimensional Scream
+                    come to you?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(30);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" I knew it!",
+            }
+        case 2:
+            {
+                english=" I knew it!",
+            }
+        default:
+            {
+                english=" I knew it!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" S-so what did you see?!",
+            }
+        case 2:
+            {
+                english=" S-so what did you see?!",
+            }
+        default:
+            {
+                english=" S-so what did you see?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER);
+    bgm_FadeOut(180);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(2, 1);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(According to that voice...)",
+            }
+        default:
+            {
+                english="(According to that voice...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([CS:N]Azelf[CR] is the Being of Willpower.)",
+            }
+        default:
+            {
+                english="([CS:N]Azelf[CR] is the Being of Willpower.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (The voice said the crystals should all be made
+                    one color.)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (The voice said the crystals should all be made
+                    one color.)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Make the crystals one color...)",
+            }
+        default:
+            {
+                english="(Make the crystals one color...)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8965);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(2, 1);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That's it![K] I need to match the color!)",
+            }
+        default:
+            {
+                english="(That's it![K] I need to match the color!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (These three crystals need to be all the
+                    same color!)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (These three crystals need to be all the
+                    same color!)
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    Wait(10);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 1, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(45);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 2, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I'm guessing you have an
+                    idea now.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I guess you have an idea about
+                    what to do.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I guess you got an idea about
+                    what to do.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 1, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(60);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 2, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(2, 1);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Now, what's the color supposed to be?)",
+            }
+        default:
+            {
+                english="(Now, what's the color supposed to be?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(The color of willpower...)",
+            }
+        default:
+            {
+                english="(The color of willpower...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(That must mean the color of [CS:N]Azelf[CR]'s spirit...)",
+            }
+        default:
+            {
+                english="(That must mean the color of [CS:N]Azelf[CR]'s spirit...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="([CS:N]Azelf[CR] lives at [CS:P]Crystal Lake[CR].)",
+            }
+        default:
+            {
+                english="([CS:N]Azelf[CR] lives at [CS:P]Crystal Lake[CR].)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    ([CS:P]Crystal Cave[CR]...[K]and [CS:P]Crystal Lake[CR]...)
+                    
+                """,
+            }
+        default:
+            {
+                english="([CS:P]Crystal Cave[CR]...[K]and [CS:P]Crystal Lake[CR]...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Is [CS:N]Azelf[CR]'s spirit...[K]as clear as crystal...?)",
+            }
+        default:
+            {
+                english="(Is [CS:N]Azelf[CR]'s spirit...[K]as clear as crystal...?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Or, no...[K]could it be the color of cold water?)",
+            }
+        default:
+            {
+                english="(Or, no...[K]could it be the color of cold water?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 2, DIR_RIGHT);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I guess you really are onto
+                    something.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     I guess you really have an idea
+                    about what to do.
+                """,
+            }
+        default:
+            {
+                english="""
+                     I guess you're really
+                    convinced now.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     All right. This is your call,
+                    [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     OK. I'll leave it up to you,
+                    [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     OK. You should do whatever you
+                    need to, [hero].
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Go on and solve the secret of
+                    the three crystals!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     See if you can solve the secret
+                    of the three crystals!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Try solving the secret of the
+                    three crystals!
+                """,
+            }
+    }
+    message_Close();
+    Turn2Direction<actor ACTOR_UNIT_NPC1>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_UNIT_NPC2>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_UNIT_NPC2);
+    $CRYSTAL_COLOR_01 = 1;
+    $CRYSTAL_COLOR_02 = 3;
+    $CRYSTAL_COLOR_03 = 0;
+    end;
+}

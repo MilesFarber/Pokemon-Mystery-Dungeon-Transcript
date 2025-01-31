@@ -1,0 +1,623 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_T01P02A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    ExecuteCommon<actor ACTOR_NPC_RURIRI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Oh, wow! We got our [CS:Z]Water
+            Float[CR] back!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_RURIRI>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_NPC_MARIRU);
+    Turn2DirectionLives<actor ACTOR_NPC_MARIRU>(4, 10, ACTOR_PLAYER);
+    SetEffect<actor ACTOR_NPC_RURIRI>(EFFECT_LAUGHING, 3);
+    message_Talk({
+        english=" Yay! Thank you! Really!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_RURIRI>(EFFECT_NONE, 3);
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_TEARY_EYED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             You saved [CS:N]Azurill[CR] way back
+            when, and now this!
+        """,
+    });
+    message_Talk({
+        english="""
+             I don't know how we could ever
+            thank you!
+        """,
+    });
+    message_Talk({
+        english=" But, really...[K]thank you!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hey, that's all right!",
+            }
+        case 2:
+            {
+                english=" Oh, please! It's OK.",
+            }
+        default:
+            {
+                english=" Oh, please! It's OK.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If you want to thank anyone,
+                    thank the great [CS:N]Dusknoir[CR]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If you want to thank anyone,
+                    thank the great [CS:N]Dusknoir[CR]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     If you want to thank anyone,
+                    thank the great [CS:N]Dusknoir[CR]!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     If [CS:N]Dusknoir[CR] hadn't been there,
+                    we wouldn't be here now!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     If [CS:N]Dusknoir[CR] hadn't been there,
+                    we wouldn't be here now!
+                """,
+            }
+        default:
+            {
+                english="""
+                     If [CS:N]Dusknoir[CR] hadn't been there,
+                    we wouldn't be here now!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+    MovePositionMark<actor ACTOR_NPC_MARIRU>(1, Position<'m0', 45.5, 30>);
+    Wait(10);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWNRIGHT);
+    MovePositionMark<actor ACTOR_NPC_RURIRI>(1, Position<'m1', 45.5, 27.5>);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU>(4, 10, DIR_RIGHT);
+    Turn2Direction<actor ACTOR_NPC_MARIRU>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_NPC_RURIRI>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    message_SetFace(ACTOR_NPC_MARIRU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Thank you very much!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_RURIRI>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Thank you, [CS:N]Dusknoir[CR], sir!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             No trouble at all. I'm very happy
+            for you.
+        """,
+    });
+    message_Talk({
+        english="""
+             It's wonderful that your
+            [CS:Z]Water Float[CR] has come back to you.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_NPC_KAKUREON1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             I must say! It is so like the
+            great [CS:N]Dusknoir[CR] to be so modest!
+        """,
+    });
+    message_Talk({
+        english="""
+             And I must say that Team
+            [team:] has also been superb!
+        """,
+    });
+    message_Talk({
+        english="""
+             After all, the team has again
+            completed a difficult job!
+        """,
+    });
+    message_Talk({
+        english="""
+             When rescuing [CS:N]Azurill[CR], you were
+            so fast at pinpointing the child's whereabouts!
+        """,
+    });
+    message_Talk({
+        english="""
+             And so fast at reaching our
+            young friend too!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_KAKUREON1>(EFFECT_NONE, 3);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_KAKUREON1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_KAKUREON1);
+    Turn2DirectionLives<actor ACTOR_NPC_RURIRI>(4, 10, ACTOR_NPC_KAKUREON1);
+    Turn2DirectionLives<actor ACTOR_NPC_MARIRU>(4, 10, ACTOR_NPC_KAKUREON1);
+    Turn2DirectionLives<actor ACTOR_NPC_YONOWAARU>(4, 10, ACTOR_NPC_KAKUREON1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Oh...about the [CS:N]Azurill[CR] rescue, we
+                    have to admit something...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Oh...about the [CS:N]Azurill[CR] rescue, we
+                    have to admit something...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh...about the [CS:N]Azurill[CR] rescue, we
+                    have to admit something...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It'd be cool...if it really happened
+                    the way [CS:N]Kecleon[CR] said...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It would be great...if it truly
+                    happened the way [CS:N]Kecleon[CR] said...
+                """,
+            }
+        default:
+            {
+                english="""
+                     It would be great...if it truly
+                    happened the way [CS:N]Kecleon[CR] said...
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But that's not exactly the truth.",
+            }
+        case 2:
+            {
+                english=" But that's not really the truth.",
+            }
+        default:
+            {
+                english=" But that's not exactly the truth.",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We didn't pin down [CS:N]Azurill[CR]'s
+                    location before we rescued him.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We didn't pin down [CS:N]Azurill[CR]'s
+                    location before we rescued him.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We didn't pin down [CS:N]Azurill[CR]'s
+                    location before we rescued him.
+                """,
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     My partner here just happened
+                    to see it in a dream.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     My partner here just happened
+                    to see it in a dream.
+                """,
+            }
+        default:
+            {
+                english="""
+                     My partner here just happened
+                    to see it in a dream.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_YONOWAARU>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_YONOWAARU>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Excuse me?[K] A dream, you say?",
+    });
+    message_Talk({
+        english=" By dream, what do you mean?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_NPC_YONOWAARU);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_YONOWAARU);
+    Turn2DirectionLives<actor ACTOR_NPC_RURIRI>(4, 10, ACTOR_NPC_YONOWAARU);
+    Wait(5);
+    Turn2DirectionLives<actor ACTOR_NPC_MARIRU>(4, 10, ACTOR_NPC_YONOWAARU);
+    Wait(15);
+    se_Play(8964);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh! Right!",
+            }
+        case 2:
+            {
+                english=" Oh! That's right!",
+            }
+        default:
+            {
+                english=" Oh! That's right!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Maybe the great [CS:N]Dusknoir[CR] will
+                    know what it all means!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Maybe the great [CS:N]Dusknoir[CR] will
+                    know what it all means!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Maybe the great [CS:N]Dusknoir[CR] will
+                    know what it all means!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You see, my partner occasionally
+                    gets dizzy spells when touching something
+                    or someone.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You see, my partner occasionally
+                    gets strange dizzy spells when touching
+                    something or someone.
+                """,
+            }
+        default:
+            {
+                english="""
+                     You see, my partner occasionally
+                    gets weird dizzy spells when touching
+                    something or someone.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     And then my partner sees or
+                    hears events that happened in the past! Or just
+                    about to happen in the future!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     And then my partner sees or
+                    hears events that happened in the past! Or just
+                    about to happen in the future!
+                """,
+            }
+        default:
+            {
+                english="""
+                     And then my partner sees or
+                    hears events that happened in the past! Or just
+                    about to happen in the future!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8973);
+    SetEffect<actor ACTOR_NPC_YONOWAARU>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_YONOWAARU>();
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" What?![K] Well, that's...[K]that's...",
+    });
+    message_Talk({
+        english=" The Dimensional Scream!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1.5, Position<'m2', 42.5, 27>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1.5, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(1, -1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Huh?! What?!",
+            }
+        case 2:
+            {
+                english=" What?!",
+            }
+        default:
+            {
+                english=" What?!",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR], sir, you really know
+                    something about this?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR], sir, you really know
+                    something about this?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR], sir, you really know
+                    something about this?!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" In that case...",
+            }
+        case 2:
+            {
+                english=" In that case...",
+            }
+        default:
+            {
+                english=" In that case...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(1, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(1, 10, ACTOR_ATTENDANT1);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(1, -1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Should we ask if [CS:N]Dusknoir[CR]
+                    knows even more?!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Should we ask if [CS:N]Dusknoir[CR]
+                    knows even more?!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Should we ask if [CS:N]Dusknoir[CR]
+                    knows even more?!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Ask about what...?)",
+            }
+        default:
+            {
+                english="(Ask about what...?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Oh![K] Right!)",
+            }
+        default:
+            {
+                english="(Oh![K] Right!)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(About my own forgotten past!)",
+            }
+        default:
+            {
+                english="(About my own forgotten past!)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(1, -1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     It's OK to ask, right,
+                    [hero]?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's OK to ask, right,
+                    [hero]?
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's OK to ask, right,
+                    [hero]?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER>(71);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(1, -1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR], sir, there's something
+                    we'd like to get your advice on.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR], sir, we were
+                    wondering if we could get your advice about
+                    something.
+                """,
+            }
+        default:
+            {
+                english="""
+                     [CS:N]Dusknoir[CR], sir, we were
+                    wondering if we could get your advice about
+                    something.
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOutAll(1, 60);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    Wait(30);
+    end;
+}

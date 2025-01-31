@@ -1,0 +1,193 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_S04P01A);
+    screen_FadeIn(1, 0);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ugh...[K] What a wipeout.",
+            }
+        case 2:
+            {
+                english=" Ugh...[K] That ended terribly.",
+            }
+        default:
+            {
+                english=" Urk![K] We paid for our mistakes!",
+            }
+    }
+    message_KeyWait();
+    screen_FadeOutAll(1, 60);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    back_SetGround(LEVEL_D31P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_MYSTIFYING_FOREST, 0, 256);
+    Wait(30);
+    WaitLockLives(5, ACTOR_PLAYER);
+    Unlock(5);
+    Wait(15);
+    Unlock(7);
+    Lock(3);
+    Wait(15);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    Wait(15);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Urk![K] I guess we got too cocky.",
+            }
+        case 2:
+            {
+                english="""
+                     Urk![K] We need to be
+                    more cautious.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Urk![K] We were too careless,
+                    I think.
+                """,
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" But that grand master...",
+            }
+        case 2:
+            {
+                english=" But that grand master...",
+            }
+        default:
+            {
+                english=" But that grand master...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Are you telling me that wasn't
+                    [CS:N]Wigglytuff[CR]...?
+                """,
+            }
+        case 2:
+            {
+                english=" That was obviously [CS:N]Wigglytuff[CR]...",
+            }
+        default:
+            {
+                english="""
+                     That was [CS:N]Wigglytuff[CR], without
+                    a doubt.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Besides, the minions were all
+                    the guild's members...[K] What are they trying
+                    to prove?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Besides, the minions were all
+                    the guild's members...[K] Who are they trying
+                    to fool?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Besides, the minions were all
+                    guild members...[K] What are they trying
+                    to prove?
+                """,
+            }
+    }
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Well, anyway...[K] Let's go graduate
+                    from the guild!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Well, anyway...[K] We should still
+                    try to graduate from the guild!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Well, anyway...[K] Let's go graduate
+                    from the guild!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's keep moving forward,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english=" Let's keep at this, [hero]!",
+            }
+        default:
+            {
+                english="""
+                     We have to keep at this,
+                    [hero]!
+                """,
+            }
+    }
+    message_Close();
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER {
+    SetDirection(DIR_RIGHT);
+    SetAnimation(76);
+    Lock(5);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_DOWN_FUNC);
+    Lock(6);
+    hold;
+}
+
+def 2 for actor ACTOR_ATTENDANT1 {
+    SetDirection(DIR_RIGHT);
+    SetAnimation(76);
+    Lock(7);
+    CallCommon(CORO_WAKEUP_FUNC);
+    CallCommon(CORO_LOOK_AROUND_FUNC);
+    Unlock(3);
+    Lock(8);
+    hold;
+}

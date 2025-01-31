@@ -1,0 +1,92 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(161, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D57P42A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<object OBJECT_D57P41A1_425>(3);
+    SetAnimation<object OBJECT_D57P41A1_426>(2);
+    SetAnimation<object OBJECT_D57P41A1_427>(1);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_GROWING_ANXIETY, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Heh heh![K] No matter how many
+            times you try, the result stays the same!
+        """,
+    });
+    message_Talk({
+        english="""
+             I am invincible![K] You cannot
+            defeat me!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_DETERMINED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Invincibility...[K]doesn't exist!",
+    });
+    message_Talk({
+        english="""
+             I'm going to apprehend you
+            this time!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Heh heh! Persistent!",
+    });
+    message_Talk({
+        english="""
+             Those who don't know when to
+            give up will be really disappointed when
+            they fail!
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(30);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             That anguish...[K] How do you like
+            the taste of it?
+        """,
+    });
+    message_Close();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    message_SetFace(ACTOR_NPC_GOOSUTO, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Let's go!",
+    });
+    message_Close();
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(161, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

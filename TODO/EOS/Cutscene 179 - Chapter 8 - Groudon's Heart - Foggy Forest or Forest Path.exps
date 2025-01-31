@@ -1,0 +1,449 @@
+
+def 0 {
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Are you ready to get going,
+                    [hero]?
+                """,
+            }
+        case 2:
+            {
+                english=" Are you ready, [hero]?",
+            }
+        default:
+            {
+                english=" Are you ready, [hero]?",
+            }
+    }
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+        default:
+            @label_0;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Which way should we go?",
+                    }
+                case 2:
+                    {
+                        english=" Which way should we go?",
+                    }
+                default:
+                    {
+                        english=" Which way should we go?",
+                    }
+            }
+            switch ( message_SwitchMenu(0, 1) ) {
+                case menu({
+                    english="[CS:P]Foggy Forest[CR]",
+                }):
+                default:
+                    $SCENARIO_MAIN_BIT_FLAG[5] = 0;
+                    message_Close();
+                    screen_FadeOutAll(1, 30);
+                    Wait(10);
+                    supervision_Acting(0);
+                    Wait(1);
+                    camera_SetMyself<performer 0>();
+                    SetPositionMark<actor ACTOR_PLAYER>(Position<'m0', 39.5, 38.5>);
+                    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m1', 35.5, 38.5>);
+                    SetDirection<actor ACTOR_PLAYER>(DIR_LEFT);
+                    SetDirection<actor ACTOR_ATTENDANT1>(DIR_RIGHT);
+                    screen_FadeInAll(1, 30);
+                    Wait(30);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" All right. [CS:P]Foggy Forest[CR] it is.",
+                            }
+                        case 2:
+                            {
+                                english=" All right. [CS:P]Foggy Forest[CR] it is.",
+                            }
+                        default:
+                            {
+                                english=" All right. [CS:P]Foggy Forest[CR] it is.",
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                        case 2:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                        default:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                    }
+                    message_Close();
+                    @label_4;
+                    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m4', 37.5, 12.5>);
+                    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+                    Wait(30);
+                    bgm_FadeOut(120);
+                    MovePositionMark<performer 0>(0.7969, Position<'m5', 37.5, 28.5>);
+                    MovePositionMark<actor ACTOR_PLAYER>(0.7969, Position<'m6', 37.5, 28.5>);
+                    WaitExecuteLives(ACTOR_PLAYER);
+                    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+                    message_SwitchMonologue ($HERO_TALK_KIND) {
+                        case 4:
+                            {
+                                english="(...)",
+                            }
+                        default:
+                            {
+                                english="(...)",
+                            }
+                    }
+                    message_SwitchMonologue ($HERO_TALK_KIND) {
+                        case 4:
+                            {
+                                english="(Anyway...)",
+                            }
+                        default:
+                            {
+                                english="(Anyway...)",
+                            }
+                    }
+                    message_SwitchMonologue ($HERO_TALK_KIND) {
+                        case 4:
+                            {
+                                english="""
+                                    (Maybe the keys to unlocking my memory
+                                    are here...)
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                    (Maybe the keys to unlocking my memory
+                                    are here...)
+                                """,
+                            }
+                    }
+                    message_SwitchMonologue ($HERO_TALK_KIND) {
+                        case 4:
+                            {
+                                english="([CS:P]Fogbound Lake[CR]...)",
+                            }
+                        default:
+                            {
+                                english="([CS:P]Fogbound Lake[CR]...)",
+                            }
+                    }
+                    message_SwitchMonologue ($HERO_TALK_KIND) {
+                        case 4:
+                            {
+                                english="""
+                                    (I may find some answers if [CS:P]Fogbound Lake[CR]
+                                    can be found...)
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                    (I may find some answers if [CS:P]Fogbound Lake[CR]
+                                    can be found...)
+                                """,
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    message_SetActor(ACTOR_ATTENDANT1);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Huh? What is this?",
+                            }
+                        case 2:
+                            {
+                                english=" Huh? What is this?",
+                            }
+                        default:
+                            {
+                                english=" Huh? What is this?",
+                            }
+                    }
+                    message_Close();
+                    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+                    se_Play(8978);
+                    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+                    WaitEffect<actor ACTOR_PLAYER>();
+                    WaitExecuteLives(ACTOR_PLAYER);
+                    Wait(15);
+                    MovePositionMark<performer 0>(1, Position<'m7', 37.5, 16.5>);
+                    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m8', 37.5, 16.5>);
+                    WaitExecuteLives(ACTOR_PLAYER);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_C_FACEL);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     It looks like some kind of stone,
+                                    I guess.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     It looks like some kind of stone,
+                                    I guess.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     It looks like some kind of stone,
+                                    I guess.
+                                """,
+                            }
+                    }
+                    message_KeyWait();
+                    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     It's red and pretty. It's kind of
+                                    like a gem, actually.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     It's red and pretty. It's kind of
+                                    like a gem, actually.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     It's red and pretty. It's kind of
+                                    like a gem, actually.
+                                """,
+                            }
+                    }
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, -16, 0);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    Destroy<object OBJECT_D08P11A1_23>();
+                    se_Play(8710);
+                    message_Mail({
+                        english="""
+                            [CN][partner] picked
+                            [CN]up the red stone.
+                        """,
+                    });
+                    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+                    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWNRIGHT);
+                    WaitExecuteLives(ACTOR_ATTENDANT1);
+                    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+                    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" Hey! This stone feels warm!",
+                            }
+                        case 2:
+                            {
+                                english=" Wow! This stone feels warm!",
+                            }
+                        default:
+                            {
+                                english=" Wow! It feels warm!",
+                            }
+                    }
+                    message_KeyWait();
+                    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     It's like heat is coming from
+                                    inside the stone. It's weird.
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     It's like heat is coming from
+                                    inside the stone. It's weird.
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     It's like heat is coming from
+                                    inside the stone. It's weird.
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     It doesn't seem to be lava. What
+                                    could it be?
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     It doesn't seem to be lava. What
+                                    could it be?
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     It doesn't seem to be lava. What
+                                    could it be?
+                                """,
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" It might be rare. I'll keep it.",
+                            }
+                        case 2:
+                            {
+                                english=" It might be rare. I'll keep it.",
+                            }
+                        default:
+                            {
+                                english=" This could be rare. I'll keep it.",
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english="""
+                                     All right, let's roll,
+                                    [hero]!
+                                """,
+                            }
+                        case 2:
+                            {
+                                english="""
+                                     All right, let's roll,
+                                    [hero]!
+                                """,
+                            }
+                        default:
+                            {
+                                english="""
+                                     All right, let's roll,
+                                    [hero]!
+                                """,
+                            }
+                    }
+                    message_Close();
+                    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m9', 37.5, 1.5>);
+                    Wait(10);
+                    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m10', 37.5, 1.5>);
+                    Wait(45);
+                    screen_FadeOutAll(1, 30);
+                    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+                    $SCENARIO_MAIN = scn[10, 2];
+                    if ( $SCENARIO_MAIN_BIT_FLAG[5] ) {
+                        main_EnterDungeon(13, 0);
+                        switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                        main_EnterDungeon(-1, 0);
+                        hold;
+                    } else {
+                        main_EnterDungeon(12, 0);
+                        switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+                        main_EnterDungeon(-1, 0);
+                        hold;
+                    }
+                    break;
+                case menu({
+                    english="[CS:P]Forest Path[CR]",
+                }):
+                    $SCENARIO_MAIN_BIT_FLAG[5] = 1;
+                    message_Close();
+                    screen_FadeOutAll(1, 30);
+                    Wait(10);
+                    supervision_Acting(0);
+                    Wait(1);
+                    camera_SetMyself<performer 0>();
+                    SetPositionMark<actor ACTOR_PLAYER>(Position<'m2', 39.5, 38.5>);
+                    SetPositionMark<actor ACTOR_ATTENDANT1>(Position<'m3', 35.5, 38.5>);
+                    SetDirection<actor ACTOR_PLAYER>(DIR_LEFT);
+                    SetDirection<actor ACTOR_ATTENDANT1>(DIR_RIGHT);
+                    screen_FadeInAll(1, 30);
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" All right. [CS:P]Forest Path[CR] it is.",
+                            }
+                        case 2:
+                            {
+                                english=" All right. [CS:P]Forest Path[CR] it is.",
+                            }
+                        default:
+                            {
+                                english=" All right. [CS:P]Forest Path[CR] it is.",
+                            }
+                    }
+                    message_SwitchTalk ($PARTNER_TALK_KIND) {
+                        case 1:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                        case 2:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                        default:
+                            {
+                                english=" All right! Let's roll out!",
+                            }
+                    }
+                    message_Close();
+                    jump @label_4;
+            }
+            break;
+        case menu({
+            english="Not yet",
+        }):
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english=" Tell me when you're set.",
+                    }
+                case 2:
+                    {
+                        english="""
+                             Tell me when you're
+                            ready.
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Tell me when you're
+                            ready.
+                        """,
+                    }
+            }
+            message_Close();
+            end;
+    }
+}

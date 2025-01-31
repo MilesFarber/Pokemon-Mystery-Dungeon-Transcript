@@ -1,0 +1,65 @@
+
+def 0 {
+    sound_Stop();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V17P01A);
+    back_SetGround(LEVEL_D47P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 21.5, 17>);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_YONOWAARU_N8>();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_DARK_WASTELAND, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1, Position<'m1', 29, 21>);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N8>(1, Position<'m2', 29, 17.5>);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    Wait(15);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 1, DIR_UP);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Once we're through this
+            wasteland, we should be close to
+            [CS:P]Temporal Tower[CR].
+        """,
+    });
+    message_Talk({
+        english=" Let's get a move on!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 2, DIR_DOWN);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Compose yourself.[K] We need
+            to prepare before we go.
+        """,
+    });
+    message_Talk({
+        english="""
+             If you rush too much,
+            you'll fail.
+        """,
+    });
+    message_Talk({
+        english=" Keep a leash on your impatience.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 2, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english="""
+             Hah![K] Don't boss me around,
+            [CS:N]Dusknoir[CR]!
+        """,
+    });
+    message_Close();
+    screen2_FadeOut(1, 30);
+    back2_SetMode(0);
+    end;
+}

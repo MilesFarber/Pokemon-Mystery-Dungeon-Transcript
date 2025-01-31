@@ -1,0 +1,60 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    worldmap_SetMode(4);
+    worldmap_SetLevel(1);
+    back2_SetMode(3);
+    WaitSubScreen();
+    worldmap_SetCamera(184);
+    Wait(30);
+    worldmap_SetMark(184);
+    worldmap_SetArrow(184);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Treasure Town is here.",
+    });
+    message_KeyWait();
+    worldmap_DeleteArrow();
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             And...over here is where we
+            would like you to investigate.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    worldmap_MoveCamera(7);
+    WaitSubScreen();
+    worldmap_SetArrow(7);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             See? There is a waterfall
+            flowing here. ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             By all appearances, it's just an
+            ordinary waterfall.
+        """,
+    });
+    message_Talk({
+        english="""
+             But we've received intelligence
+            that the waterfall may conceal a secret.
+        """,
+    });
+    message_Talk({
+        english="""
+             And that's where you come in.
+            We want you lot to investigate the waterfall
+            and determine what's there.
+        """,
+    });
+    message_Close();
+    se_Play(6667);
+    screen2_FadeOut(1, 15);
+    back2_SetMode(0);
+    end;
+}

@@ -1,0 +1,49 @@
+
+def 0 {
+    back_SetGround(LEVEL_T01P02A);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    camera_SetMyself<performer 0>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(0, 30);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(22);
+    WaitAnimation<actor ACTOR_NPC_RURIRI>();
+    supervision_Acting(2);
+    SlidePositionMark<object OBJECT_P03P02A1_128>(1, Position<'m0', 42, 24.5>);
+    SetAnimation<object OBJECT_P03P02A1_128>(18);
+    WaitAnimation<object OBJECT_P03P02A1_128>();
+    Wait(30);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON1>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_KAKUREON2>(4, 10, DIR_DOWN);
+    WaitExecuteObject(OBJECT_P03P02A1_128);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, 20, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Destroy<object OBJECT_P03P02A1_128>();
+    Wait(30);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(2);
+    Move2PositionOffset<actor ACTOR_NPC_RURIRI>(1.5, -8, -16);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    MovePositionMark<actor ACTOR_NPC_RURIRI>(1.5, Position<'m1', 45, 24.5>);
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    Wait(20);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(23);
+    WaitAnimation<actor ACTOR_NPC_RURIRI>();
+    WaitExecuteLives(ACTOR_NPC_RURIRI);
+    SetAnimation<actor ACTOR_NPC_RURIRI>(2);
+    message_SetFace(ACTOR_NPC_RURIRI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             W-we're sorry to bother you.
+            Thank you so much.
+        """,
+    });
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

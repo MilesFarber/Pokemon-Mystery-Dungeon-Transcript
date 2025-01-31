@@ -1,0 +1,295 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_STORM, 0, 256);
+    back_SetGround(LEVEL_P18P01A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeOutAll(1, 0);
+    screen_FadeIn(1, 0);
+    SetEffect<performer 3>(EFFECT_VERY_HEAVY_RAIN, 3);
+    screen_FadeInAll(1, 30);
+    Wait(60);
+    se_Play(6401);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(60);
+    se_Play(6401);
+    screen_WhiteOut(1, 3);
+    Wait(2);
+    screen_FadeIn(1, 3);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN_PAPA>(0.7969, Position<'m0', 41.5, 22.5>);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(0.7969, Position<'m1', 48, 22.5>);
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    se_Play(6401);
+    screen_WhiteOut(1, 3);
+    Wait(2);
+    screen_FadeIn(1, 3);
+    supervision_Acting(2);
+    SetPositionMark<object OBJECT_P18P01A2_366>(Position<'m2', 52.5, 21.5>);
+    SetAnimation<object OBJECT_P18P01A2_366>(17);
+    WaitAnimation<object OBJECT_P18P01A2_366>();
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_P18P01A1_365>(17);
+    WaitAnimation<object OBJECT_P18P01A1_365>();
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_PAPA>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(9);
+    se_Play(9489);
+    WaitExecuteObject(OBJECT_P18P01A2_366);
+    Destroy<object OBJECT_P18P01A2_366>();
+    WaitExecuteObject(OBJECT_P18P01A1_365);
+    Destroy<object OBJECT_P18P01A1_365>();
+    Turn2DirectionLives<actor ACTOR_NPC_PUKURIN_PAPA>(1, 2, ACTOR_PLAYER_PUPURIN);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" S-so...[K]scary...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN_PAPA>(1.1992, 24, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Are you all right?! [CS:Y]Igglybuff[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Y-yeah...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6401);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_P18P01A1_365>(17);
+    WaitAnimation<object OBJECT_P18P01A1_365>();
+    Wait(20);
+    supervision_Acting(2);
+    SetAnimation<object OBJECT_P18P01A2_366>(17);
+    WaitAnimation<object OBJECT_P18P01A2_366>();
+    Wait(10);
+    se_Play(9489);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_PAPA>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    WaitExecuteObject(OBJECT_P18P01A1_365);
+    Destroy<object OBJECT_P18P01A1_365>();
+    WaitExecuteObject(OBJECT_P18P01A2_366);
+    Destroy<object OBJECT_P18P01A2_366>();
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Can you feel that? The storm is
+            causing the ground to shake!
+        """,
+    });
+    message_Talk({
+        english="""
+             We need to get off this
+            mountain quickly...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, ACTOR_PLAYER_PUPURIN);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             It's too dangerous to be here.[K]
+            Let's hurry.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_TEARY_EYED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yeah...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<performer 0>(0.5, Position<'m3', 34.5, 21.5>);
+    MovePositionMark<actor ACTOR_NPC_PUKURIN_PAPA>(0.5, Position<'m4', 32.5, 22.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(0.5, Position<'m5', 37, 22.5>);
+    WaitExecutePerformer(0);
+    supervision_Acting(2);
+    SetPositionMark<object OBJECT_P18P01A2_366>(Position<'m6', 42.5, 18.5>);
+    SetAnimation<object OBJECT_P18P01A2_366>(17);
+    WaitAnimation<object OBJECT_P18P01A2_366>();
+    supervision_Acting(1);
+    SetPositionMark<object OBJECT_P18P01A1_365>(Position<'m7', 26.5, 16.5>);
+    SetAnimation<object OBJECT_P18P01A1_365>(17);
+    WaitAnimation<object OBJECT_P18P01A1_365>();
+    se_Play(6401);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    SetEffect<actor ACTOR_PLAYER_PUPURIN>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_SHOCKED, 3);
+    Wait(30);
+    se_Play(9489);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(19);
+    WaitAnimation<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    WaitExecuteObject(OBJECT_P18P01A2_366);
+    Destroy<object OBJECT_P18P01A2_366>();
+    WaitExecuteObject(OBJECT_P18P01A1_365);
+    Destroy<object OBJECT_P18P01A1_365>();
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SHOUTING, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Waaaaaaaahhh!!",
+    });
+    Turn2DirectionLives<actor ACTOR_NPC_PUKURIN_PAPA>(1, 10, ACTOR_PLAYER_PUPURIN);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8973);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_PAPA>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN_PAPA>(1.1992, 8, 0);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" [CS:Y]I[CR]...[CS:Y]Igglybuff[CR]!",
+    });
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    supervision_Acting(3);
+    SetAnimation<object OBJECT_P18P01A4_368>(17);
+    WaitAnimation<object OBJECT_P18P01A4_368>();
+    WaitExecuteObject(OBJECT_P18P01A4_368);
+    back_SetBackEffect(4);
+    bgm_FadeOut(5);
+    PauseEffect<performer 3>(EFFECT_VERY_HEAVY_RAIN);
+    message_Mail({
+        english="[CN]And right then!",
+    });
+    message_Mail({
+        english="""
+            [CN]This huge boulder started to fall,
+            [CN]right above me!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    back_SetBackEffect(5);
+    bgm_PlayFadeIn(BGM_STORM, 10, 256);
+    ResumeEffect<performer 3>(EFFECT_VERY_HEAVY_RAIN);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(24);
+    WaitAnimation<actor ACTOR_NPC_PUKURIN_PAPA>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_SHOCKED_MIRRORED, 0);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_PAPA>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    se_Play(9490);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    message_SetWaitMode(45, 0);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" W-waaaaaaaahhhhhhh!!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" [CS:N]P[CR]...[CS:N]Papa[CR]!!",
+    });
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetWaitMode(-1, -1);
+    SetAnimation<object OBJECT_P18P01A4_368>(18);
+    supervision_Acting(4);
+    SetAnimation<object OBJECT_P18P01A3_367>(17);
+    WaitAnimation<object OBJECT_P18P01A3_367>();
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(19);
+    WaitAnimation<actor ACTOR_NPC_PUKURIN_PAPA>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    WaitExecuteObject(OBJECT_P18P01A3_367);
+    back_SetBackEffect(4);
+    bgm_FadeOut(5);
+    PauseEffect<performer 3>(EFFECT_VERY_HEAVY_RAIN);
+    message_Mail({
+        english="[CN](It's no good!)[K] (I'm going to be crushed!)",
+    });
+    message_Mail({
+        english="[CN]...And just when I thought that!",
+    });
+    message_Close();
+    back_SetBackEffect(5);
+    bgm_PlayFadeIn(BGM_STORM, 10, 256);
+    ResumeEffect<performer 3>(EFFECT_VERY_HEAVY_RAIN);
+    SetAnimation<object OBJECT_P18P01A3_367>(18);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_SHOUTING, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" YOOM...TAH!!",
+    });
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(17);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    message_CloseEnforce();
+    Wait(10);
+    bgm_FadeOut(160);
+    se_Play(7435);
+    supervision_Acting(5);
+    Wait(10);
+    screen_WhiteOutAll(1, 15);
+    supervision_RemoveActing(5);
+    supervision_RemoveActing(3);
+    supervision_RemoveActing(4);
+    Wait(90);
+    se_Play(9473);
+    WaitSe(9473);
+    bgm_PlayFadeIn(BGM_STORM, 120, 256);
+    screen_FadeInAll(1, 60);
+    WaitSe(7435);
+    Wait(60);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(2);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_PAPA>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    Wait(45);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_PAPA>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    Wait(30);
+    message_Mail({
+        english="[CN]Somehow the boulder was smashed to pieces...",
+    });
+    message_Mail({
+        english="""
+            [CN]I wasn't crushed by the boulder...[K]
+            [CN]Somehow I was saved...
+        """,
+    });
+    message_Close();
+    bgm_FadeOut(120);
+    screen_FadeOutAll(1, 60);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    SetEffect<performer 3>(EFFECT_NONE, 3);
+    Wait(30);
+    end;
+}

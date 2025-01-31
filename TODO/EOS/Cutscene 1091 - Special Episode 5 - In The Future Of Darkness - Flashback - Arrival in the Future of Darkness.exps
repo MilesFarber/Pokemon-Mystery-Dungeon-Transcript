@@ -1,0 +1,87 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_HIDDEN_HIGHLAND, 0, 256);
+    back_SetGround(LEVEL_D46P11A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    Wait(1);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(36);
+    MovePositionMark<actor ACTOR_NPC_YAMIRAMI>(1.5, Position<'m0', 22, 28>);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(27);
+    WaitAnimation<actor ACTOR_PLAYER_FUTURE>();
+    screen_FlushOut(1, 0, 8, 0, 0, 0);
+    screen_FadeIn(1, 30);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    SetEffect<actor ACTOR_PLAYER_FUTURE>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_FUTURE>();
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_SURPRISED, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" [CS:N]S-[K]Sableye[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_YAMIRAMI>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    message_SetFace(ACTOR_NPC_YAMIRAMI, FACE_SIGH, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             Wheh-heh-heh!?[K]
+            [CS:Y]G-Grovyle[CR]?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_YAMIRAMI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_YAMIRAMI>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    MovePositionOffset<actor ACTOR_NPC_YAMIRAMI>(3, -160, 0);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI);
+    Destroy<actor ACTOR_NPC_YAMIRAMI>();
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" ...[K]They've found me already...",
+    });
+    message_Talk({
+        english="""
+             I've got to get out of here as
+            fast as I can.
+            
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_Mail({
+        english="[CN]But [CS:N]Dusknoir[CR] was still unconscious then...",
+    });
+    message_Mail({
+        english="""
+            [CN]I thought I was the first of
+            [CN]us to wake up...
+        """,
+    });
+    message_Mail({
+        english="[CN]That was incorrect...",
+    });
+    message_Mail({
+        english="[CN]It was the other way around!",
+    });
+    message_Mail({
+        english="[CN][CS:N]Dusknoir[CR] regained consciousness before I did.",
+    });
+    message_Mail({
+        english="[CN]So he woke up first and talked to the [CS:N]Sableye[CR].",
+    });
+    message_Mail({
+        english="[CN]This...[K]plan of his...",
+    });
+    message_Close();
+    screen_WhiteOut(1, 30);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    end;
+}

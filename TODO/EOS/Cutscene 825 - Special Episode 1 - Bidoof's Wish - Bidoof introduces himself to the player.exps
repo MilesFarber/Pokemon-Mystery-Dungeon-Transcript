@@ -1,0 +1,354 @@
+
+def 0 {
+    sound_Stop();
+    if ( not debug ) {
+        @label_0;
+        $SCENARIO_SIDE = scn[40, 1];
+        message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD);
+        message_Talk({
+            english=" All right! Here we go today! ♪",
+        });
+        message_Talk({
+            english="""
+                 Our morning cheers![K]
+                All together now! ♪
+            """,
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_EmptyActor();
+        message_Talk({
+            english="[CS:N]Everyone[CR]: ONE![K] DON'T SHIRK WORK!",
+        });
+        message_Talk({
+            english="[CS:N]Everyone[CR]: TWO![K] RUN AWAY AND PAY!",
+        });
+        message_Close();
+        back_SetGround(LEVEL_G01P04A);
+        supervision_Acting(0);
+        supervision_Acting(1);
+        supervision_Acting(2);
+        camera_SetMyself<performer 0>();
+        SetPositionInitial<actor ACTOR_NPC_GUREGGURU>();
+        SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+        screen_FadeIn(1, 30);
+        bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+        Wait(30);
+        SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+        SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_JOYOUS, 3);
+        SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+        SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+        SetEffect<actor ACTOR_NPC_PARTNER_FIRST>(EFFECT_JOYOUS, 3);
+        message_EmptyActor();
+        message_Talk({
+            english="[CS:N]Everyone[CR]: THREE![K] SMILES GO FOR MILES!",
+        });
+        SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+        SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+        SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 3);
+        SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+        SetEffect<actor ACTOR_NPC_PARTNER_FIRST>(EFFECT_NONE, 3);
+        message_Close();
+        Wait(15);
+        message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+        message_Talk({
+            english=" OK, Pokémon! Get to work! ♪",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_JOYOUS, 3);
+        SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_JOYOUS, 3);
+        SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_JOYOUS, 3);
+        SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_JOYOUS, 3);
+        SetEffect<actor ACTOR_NPC_PARTNER_FIRST>(EFFECT_JOYOUS, 3);
+        Wait(1);
+        SetDirection<actor ACTOR_NPC_GUREGGURU>(DIR_UP);
+        SetAnimation<actor ACTOR_NPC_GUREGGURU>(23);
+        SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_UP);
+        SetAnimation<actor ACTOR_NPC_DAGUTORIO>(23);
+        SetAnimation<actor ACTOR_NPC_CHIRIIN>(23);
+        SetAnimation<actor ACTOR_NPC_HEIGANI>(23);
+        SetAnimation<actor ACTOR_PLAYER_BIPPA>(24);
+        SetAnimation<actor ACTOR_NPC_DOGOOMU>(23);
+        SetAnimation<actor ACTOR_NPC_KIMAWARI>(23);
+        SetAnimation<actor ACTOR_NPC_DIGUDA>(25);
+        SetDirection<actor ACTOR_NPC_HERO_FIRST>(DIR_UP);
+        SetAnimation<actor ACTOR_NPC_HERO_FIRST>(66);
+        SetDirection<actor ACTOR_NPC_PARTNER_FIRST>(DIR_UP);
+        SetAnimation<actor ACTOR_NPC_PARTNER_FIRST>(66);
+        message_EmptyActor();
+        message_Talk({
+            english="[CS:N]Everyone[CR]: HOORAY!",
+        });
+        message_Close();
+        SetAnimation<actor ACTOR_NPC_GUREGGURU>(2);
+        SetAnimation<actor ACTOR_NPC_DAGUTORIO>(2);
+        SetAnimation<actor ACTOR_NPC_CHIRIIN>(2);
+        SetAnimation<actor ACTOR_NPC_HEIGANI>(2);
+        SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+        SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+        SetAnimation<actor ACTOR_NPC_KIMAWARI>(2);
+        SetAnimation<actor ACTOR_NPC_DIGUDA>(2);
+        SetAnimation<actor ACTOR_NPC_HERO_FIRST>(2);
+        SetAnimation<actor ACTOR_NPC_PARTNER_FIRST>(2);
+        SetEffect<actor ACTOR_NPC_DAGUTORIO>(EFFECT_NONE, 3);
+        SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_NONE, 3);
+        SetEffect<actor ACTOR_NPC_CHIRIIN>(EFFECT_NONE, 3);
+        SetEffect<actor ACTOR_NPC_KIMAWARI>(EFFECT_NONE, 3);
+        SetEffect<actor ACTOR_NPC_PARTNER_FIRST>(EFFECT_NONE, 3);
+        MovePositionLives<performer 0>(1, ACTOR_NPC_HERO_FIRST);
+        SetDirection<actor ACTOR_NPC_DAGUTORIO>(DIR_DOWN);
+        SetAnimation<actor ACTOR_NPC_DAGUTORIO>(25);
+        WaitAnimation<actor ACTOR_NPC_DAGUTORIO>();
+        Destroy<actor ACTOR_NPC_DAGUTORIO>();
+        SetDirection<actor ACTOR_NPC_DIGUDA>(DIR_DOWN);
+        SetAnimation<actor ACTOR_NPC_DIGUDA>(24);
+        WaitAnimation<actor ACTOR_NPC_DIGUDA>();
+        Destroy<actor ACTOR_NPC_DIGUDA>();
+        Turn2Direction<actor ACTOR_NPC_HERO_FIRST>(8, 10, DIR_LEFT);
+        Turn2Direction<actor ACTOR_NPC_PARTNER_FIRST>(8, 10, DIR_LEFT);
+        MovePositionMark<actor ACTOR_NPC_PUKURIN>(1, Position<'m0', 52.5, 22.5>);
+        MovePositionMark<actor ACTOR_NPC_GUREGGURU>(1.1992, Position<'m1', 28, 31.5>);
+        MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m2', 40.5, 23.5>);
+        Wait(5);
+        MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m3', 40.5, 23.5>);
+        MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1.1992, Position<'m4', 30, 34>);
+        Move2PositionMark<actor ACTOR_PLAYER_BIPPA>(1.1992, Position<'m5', 40.5, 23.5>);
+        Move2PositionOffset<actor ACTOR_NPC_KIMAWARI>(1.1992, -32, 0);
+        Destroy<actor ACTOR_NPC_PUKURIN>();
+        Move2PositionMark<actor ACTOR_NPC_KIMAWARI>(1.1992, Position<'m6', 40.5, 23.5>);
+        MovePositionMark<actor ACTOR_NPC_CHIRIIN>(1.1992, Position<'m7', 40.5, 16.5>);
+        MovePositionMark<actor ACTOR_NPC_HEIGANI>(1.1992, Position<'m8', 40.5, 16.5>);
+        Wait(45);
+        supervision_RemoveActing(1);
+        SetDirection<actor ACTOR_PLAYER_BIPPA>(DIR_DOWNRIGHT);
+        SetPositionMark<actor ACTOR_NPC_DOGOOMU>(Position<'m9', 27, 38.5>);
+        SetDirection<actor ACTOR_NPC_DOGOOMU>(DIR_DOWNLEFT);
+        SetAnimation<actor ACTOR_NPC_DOGOOMU>(4);
+        SetPositionMark<actor ACTOR_NPC_GUREGGURU>(Position<'m10', 28.5, 27.5>);
+        SetDirection<actor ACTOR_NPC_GUREGGURU>(DIR_DOWN);
+        SetAnimation<actor ACTOR_NPC_GUREGGURU>(4);
+        Turn2DirectionLives<actor ACTOR_NPC_PARTNER_FIRST>(4, 10, ACTOR_NPC_HERO_FIRST);
+        WaitExecuteLives(ACTOR_NPC_PARTNER_FIRST);
+        Turn2DirectionLives<actor ACTOR_NPC_HERO_FIRST>(4, 10, ACTOR_NPC_PARTNER_FIRST);
+        WaitExecuteLives(ACTOR_NPC_HERO_FIRST);
+        message_SetFace(ACTOR_NPC_PARTNER_FIRST, FACE_NORMAL, FACE_POS_STANDARD);
+        message_SwitchTalk ($PARTNER_TALK_KIND) {
+            case 1:
+                {
+                    english="""
+                         [c_name:NPC_HERO_FIRST]![K] Let's do our best
+                        on our guild assignments today!
+                    """,
+                }
+            case 2:
+                {
+                    english="""
+                         [c_name:NPC_HERO_FIRST]![K] Let's do our best
+                        on our guild assignments today!
+                    """,
+                }
+            default:
+                {
+                    english="""
+                         [c_name:NPC_HERO_FIRST]![K] Let's do our best
+                        on our guild assignments today!
+                    """,
+                }
+        }
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        SetAnimation<actor ACTOR_NPC_HERO_FIRST>(71);
+        WaitAnimation<actor ACTOR_NPC_HERO_FIRST>();
+        WaitExecuteLives(ACTOR_NPC_HERO_FIRST);
+        SetAnimation<actor ACTOR_NPC_HERO_FIRST>(2);
+        Wait(30);
+        MovePositionMark<performer 0>(1.5, Position<'m11', 40.5, 31.5>, Position<'m12', 40.5, 26.5>);
+        WaitExecutePerformer(0);
+        Wait(15);
+        message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+        message_Talk({
+            english="""
+                 [c_name:NPC_HERO_FIRST]'s team...[K]
+                They're so happy today, yup yup!
+            """,
+        });
+        message_Talk({
+            english="""
+                 I'm...[K]
+                I'm not giving up either! Yup yup!
+            """,
+        });
+        message_Close();
+        supervision_SpecialActing(27, 0, 0);
+        supervision_SpecialActing(28, 130, 78);
+        supervision_SpecialActing(29, 16, 0);
+        supervision_SpecialActing(30, 64, 0);
+        bgm_ChangeVolume(60, 128);
+        Wait(60);
+        Wait(30);
+        message_Mail({
+            english="""
+                [CN]My name's [CS:Y]Bidoof[CR].[K]
+                [CN]I'm an apprentice at the guild.
+            """,
+        });
+        message_Mail({
+            english="""
+                [CN]Before [c_name:NPC_HERO_FIRST] arrived, I was the
+                [CN]newest apprentice here. Yup yup!
+            """,
+        });
+        message_Mail({
+            english="""
+                [CN]My...[K]my dream is...[K]
+                [CN]to do my best at the guild...[K]study...
+            """,
+        });
+        message_Mail({
+            english="[CN]And someday...",
+        });
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        supervision_SpecialActing(31, 64, 0);
+        bgm_ChangeVolume(60, 256);
+        Wait(60);
+        Wait(30);
+        Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_RIGHT);
+        WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+        Wait(15);
+        SetAnimation<actor ACTOR_PLAYER_BIPPA>(29);
+        WaitAnimation<actor ACTOR_PLAYER_BIPPA>();
+        WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+        SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+        Wait(30);
+        Turn2Direction<actor ACTOR_PLAYER_BIPPA>(4, 10, DIR_DOWN);
+        WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+        Wait(15);
+        message_Mail({
+            english="""
+                [CN]Someday I'll be the best explorer ever!
+                [CN]Yup yup!
+            """,
+        });
+        message_Close();
+        bgm_FadeOut(120);
+        screen_FadeOut(1, 60);
+        supervision_SpecialActing(32, 0, 0);
+        Wait(80);
+        end;
+    } else {
+        message_Notice({
+            english="[M:D2][CS:C]Start from where?[CR]",
+        });
+        switch ( message_SwitchMenu(0, 1) ) {
+            case menu({
+                english="[M:D2]Beginning",
+            }):
+            default:
+                message_Close();
+                jump @label_0;
+            case menu({
+                english="[M:D2]SectionA",
+            }):
+                message_Close();
+                $SIDE01_BOSS2ND[0] = 0;
+                $SCENARIO_SIDE = scn[40, 1];
+                main_SetGround(LEVEL_G01P08A);
+                main_EnterGround(LEVEL_G01P03A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionB",
+            }):
+                message_Close();
+                $SIDE01_BOSS2ND[0] = 0;
+                $SCENARIO_SIDE = scn[40, 2];
+                dungeon_mode(123) = DMODE_OPEN;
+                main_SetGround(LEVEL_G01P01A);
+                main_EnterGround(LEVEL_P01P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionC",
+            }):
+                message_Close();
+                $SIDE01_BOSS2ND[0] = 0;
+                $SCENARIO_SIDE = scn[40, 3];
+                dungeon_mode(123) = DMODE_OPEN;
+                main_SetGround(LEVEL_G01P08A);
+                main_EnterGround(LEVEL_G01P03A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionD(w/Snover)",
+            }):
+                message_Close();
+                $SIDE01_BOSS2ND[0] = 0;
+                $SCENARIO_SIDE = scn[40, 4];
+                dungeon_mode(123) = DMODE_OPEN;
+                main_EnterGround(LEVEL_D42P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionD(w/oSnover)",
+            }):
+                message_Close();
+                $SIDE01_BOSS2ND[0] = 1;
+                $SCENARIO_SIDE = scn[40, 6];
+                dungeon_mode(123) = DMODE_OPEN;
+                main_EnterGround(LEVEL_D42P21A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionF",
+            }):
+                message_Close();
+                $SIDE01_BOSS2ND[0] = 1;
+                $SCENARIO_SIDE = scn[40, 6];
+                dungeon_mode(123) = DMODE_OPEN;
+                main_SetGround(LEVEL_G01P01A);
+                main_EnterGround(LEVEL_P01P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionG",
+            }):
+                message_Close();
+                $SIDE01_BOSS2ND[0] = 1;
+                $SCENARIO_SIDE = scn[40, 7];
+                dungeon_mode(123) = DMODE_OPEN;
+                main_SetGround(LEVEL_G01P08A);
+                main_EnterGround(LEVEL_G01P03A, 30);
+                hold;
+            case menu({
+                english="[M:D2]SectionH",
+            }):
+                message_Close();
+                $SIDE01_BOSS2ND[0] = 1;
+                $SCENARIO_SIDE = scn[40, 8];
+                dungeon_mode(123) = DMODE_OPEN;
+                main_SetGround(LEVEL_G01P08A);
+                main_EnterGround(LEVEL_G01P03A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N01-01",
+            }):
+                $SCENARIO_SIDE = scn[40, 1];
+                @label_15;
+                message_Close();
+                main_EnterGround(LEVEL_P01P01A, 30);
+                hold;
+            case menu({
+                english="[M:D2]TALK-N01-02",
+            }):
+                $SCENARIO_SIDE = scn[40, 2];
+                jump @label_15;
+            case menu({
+                english="[M:D2]TALK-N01-03",
+            }):
+                $SCENARIO_SIDE = scn[40, 3];
+                jump @label_15;
+            case menu({
+                english="[M:D2]TALK-N01-035",
+            }):
+                $SCENARIO_SIDE = scn[40, 6];
+                jump @label_15;
+            case menu({
+                english="[M:D2]TALK-N01-04",
+            }):
+                $SCENARIO_SIDE = scn[40, 7];
+                jump @label_15;
+        }
+    }
+}

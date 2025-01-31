@@ -1,0 +1,125 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    back_SetGround(LEVEL_V04P01A);
+    supervision_Acting(0);
+    Wait(1);
+    camera_SetMyself<performer 0>();
+    ResetOutputAttribute<actor ACTOR_PLAYER>(256);
+    ResetOutputAttribute<actor ACTOR_ATTENDANT1>(256);
+    ResetOutputAttribute<actor ACTOR_NPC_DOGOOMU>(256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetActor(ACTOR_NPC_DOGOOMU);
+    message_Talk({
+        english="""
+             You two go through this tunnel
+            until you pop out at the sentry post.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_PLAYER>(2, Position<'m0', 17.5, 39.5>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(2, Position<'m1', 17.5, 39.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(2, Position<'m2', 17.5, 46.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(2, Position<'m3', 17.5, 46.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(2, Position<'m4', 7.5, 46.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(2, Position<'m5', 7.5, 46.5>);
+    MovePositionMark<actor ACTOR_PLAYER>(2, Position<'m6', 7.5, 28.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(2, Position<'m7', 7.5, 28.5>);
+    Move2PositionMark<performer 0>(2, Position<'m8', 19.5, 28.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecutePerformer(0);
+    MovePositionMark<actor ACTOR_PLAYER>(2, Position<'m9', 20, 28.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(2, Position<'m10', 18, 28.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(1, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_Talk({
+        english="""
+             From the sentry post, inspect
+            the footprints of visitors, identify them, then
+            inform me.
+        """,
+    });
+    supervision_Acting(1);
+    Wait(1);
+    ResetOutputAttribute<actor ACTOR_NPC_BIPPA>(256);
+    Wait(30);
+    MovePositionOffset<performer 0>(1.1992, 0, -96);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m11', 19, 14>);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    WaitExecutePerformer(0);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(60);
+    MovePositionMark<performer 0>(2.5, Position<'m12', 19.5, 28.5>);
+    Wait(30);
+    WaitExecutePerformer(0);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(60);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(5);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_JOYOUS, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_JOYOUS, 3);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_EXPLANATION_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_EXPLANATION_FUNC_SERIES, 0);
+    Wait(20);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(1, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    MovePositionMark<performer 0>(2.5, Position<'m13', 19.5, 40.5>);
+    WaitExecutePerformer(0);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(1, 10, DIR_LEFT);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_DOGOOMU>();
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(1, 10, DIR_RIGHT);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(18);
+    WaitAnimation<actor ACTOR_NPC_DOGOOMU>();
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(2);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    message_Talk({
+        english="""
+             I will then decide if the
+            Pokémon is suspicious or not. If it passes
+            muster, I will open the gate.
+        """,
+    });
+    Turn2Direction<actor ACTOR_PLAYER>(8, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(8, 10, DIR_DOWN);
+    MovePositionMark<performer 0>(2.5, Position<'m14', 19.5, 28.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(2.5, Position<'m15', 31.5, 39.5>);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(2.5, Position<'m16', 31.5, 18.5>);
+    Destroy<actor ACTOR_NPC_DOGOOMU>();
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    WaitExecutePerformer(0);
+    Wait(60);
+    SetPositionMark<actor ACTOR_NPC_BIPPA>(Position<'m17', 31.5, 18.5>);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(5);
+    SlidePositionMark<actor ACTOR_NPC_BIPPA>(1, Position<'m18', 31.5, 27.5>);
+    WaitExecuteLives(ACTOR_NPC_BIPPA);
+    SetAnimation<actor ACTOR_NPC_BIPPA>(2);
+    Turn2Direction<actor ACTOR_NPC_BIPPA>(8, 10, DIR_RIGHT);
+    MovePositionMark<actor ACTOR_NPC_BIPPA>(2.5, Position<'m19', 38, 27.5>);
+    Destroy<actor ACTOR_NPC_BIPPA>();
+    message_Talk({
+        english="""
+             And I'll let that cleared Pokémon
+            into the guild.[K] That's the gist of it.
+        """,
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

@@ -1,0 +1,59 @@
+
+def 0 {
+    bgm2_PlayFadeIn(BGM_OCEAN1, 0, 256);
+    back_SetGround(LEVEL_V24P04A);
+    supervision_SpecialActing(20, 0, 0);
+    supervision_Acting(0);
+    SetAnimation<object OBJECT_V24P04A1_300>(1);
+    SetOutputAttribute<object OBJECT_V24P04A3_302>(64);
+    SetOutputAttribute<object OBJECT_V24P04A3_302>(8);
+    back_SetEffect(13, 0);
+    camera_SetMyself<performer 0>();
+    CallCommon(CORO_FADE_OUT_ALL_BEFORE);
+    screen_FadeInAll(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" It's true!",
+    });
+    bgm2_FadeOut(120);
+    message_Talk({
+        english="""
+             The waves...[K] The waves are all
+            twisted up!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_THROUGH_THE_SEA_OF_TIME, 0, 256);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" [CS:N]Lapras[CR]! Wh-what is that?!",
+            }
+        case 2:
+            {
+                english=" [CS:N]Lapras[CR]! Wh-what is that?!",
+            }
+        default:
+            {
+                english=" [CS:N]Lapras[CR]! Wh-what is that?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_RAPURASU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" The edge of the gap in time.",
+    });
+    message_Talk({
+        english="""
+             That is the portal through which
+            we will go to the [CS:P]Hidden Land[CR].
+        """,
+    });
+    message_Close();
+    screen_FadeOutAll(1, 30);
+    supervision_SpecialActing(3, 0, 0);
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    end;
+}

@@ -1,0 +1,219 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[42, 2];
+    switch ( ProcessSpecial(3, 0, 0) ) { }
+    back_SetGround(LEVEL_P19P01A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_AAMARUDO>();
+    SetAnimation<actor ACTOR_NPC_AAMARUDO>(2);
+    bgm_PlayFadeIn(BGM_A_FUN_EXPLORATION, 0, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    WaitLockLives(5, ACTOR_PLAYER_PUPURIN);
+    Unlock(5);
+    Wait(40);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_AAMARUDO>();
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    Wait(40);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Good morning! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    WaitLockLives(6, ACTOR_PLAYER_PUPURIN);
+    Unlock(6);
+    Wait(20);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Hey, here you are, Junior.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitLockLives(7, ACTOR_PLAYER_PUPURIN);
+    Unlock(7);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Quick, let's go let's go! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitLockLives(8, ACTOR_PLAYER_PUPURIN);
+    Unlock(8);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" No need to be impatient.",
+    });
+    message_Talk({
+        english="""
+             Before exploring, you have to
+            make sure you're well prepared.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitLockLives(9, ACTOR_PLAYER_PUPURIN);
+    Unlock(9);
+    Wait(45);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Prepared?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Yes.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Look at this.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitLockLives(10, ACTOR_PLAYER_PUPURIN);
+    Unlock(10);
+    Wait(10);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" What...[K] What's this?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             This is called a Kangaskhan
+            Rock...[K] Here you can make a record of your
+            adventure and sort your items...
+        """,
+    });
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             It's something you shouldn't
+            pass up on your explorations.
+        """,
+    });
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Really?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitLockLives(11, ACTOR_PLAYER_PUPURIN);
+    Unlock(11);
+    Wait(40);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_AAMARUDO>();
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_NONE, 3);
+    Wait(10);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_ANGRY, 3);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_ANGRY, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english="""
+             Oh![K] Hey![K] Stop hitting it
+            like that!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_AAMARUDO>(EFFECT_NONE, 3);
+    Wait(15);
+    WaitLockLives(12, ACTOR_PLAYER_PUPURIN);
+    Unlock(12);
+    Wait(45);
+    Turn2Direction<actor ACTOR_NPC_AAMARUDO>(16, 2, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_AAMARUDO);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_AAMARUDO, FACE_NORMAL, FACE_POS_TOP_R_FACEINW);
+    message_Talk({
+        english=" Anyhow.",
+    });
+    message_Talk({
+        english="""
+             You can go ahead and use any
+            items you find at the Kangaskhan Rock as
+            you see fit...
+        """,
+    });
+    message_Talk({
+        english="""
+             So, let's use the Kangaskhan
+            Rock to finish preparations for our adventure.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_PUPURIN>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yep! ♪ Got it! ♪",
+    });
+    message_Close();
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER_PUPURIN {
+    SetAnimation(2);
+    Lock(5);
+    MovePositionMark(1, Position<'m0', 28.5, 26>);
+    SetEffect(EFFECT_LAUGHING, 3);
+    Turn2Direction(4, 10, DIR_UPRIGHT);
+    Lock(6);
+    SetEffect(EFFECT_NONE, 3);
+    Lock(7);
+    SetAnimation(4);
+    Lock(8);
+    SetAnimation(2);
+    Lock(9);
+    se_Play(8962);
+    SetEffect(EFFECT_QUESTION_MARK, 3);
+    Lock(10);
+    Turn2Direction(4, 10, DIR_UPLEFT);
+    Wait(30);
+    Lock(11);
+    Move2PositionMark(1.5, Position<'m1', 24.5, 23.5>);
+    Turn2Direction(4, 10, DIR_UP);
+    Wait(10);
+    SetEffect(EFFECT_LAUGHING, 3);
+    se_Play(9733);
+    SetAnimation(18);
+    Wait(30);
+    SetAnimation(2);
+    SetEffect(EFFECT_NONE, 3);
+    Move2PositionMark(1.5, Position<'m2', 21.5, 21.5>);
+    Turn2Direction(4, 10, DIR_RIGHT);
+    SetEffect(EFFECT_JOYOUS, 3);
+    CallCommon(CORO_JUMP_ANGRY_FUNC);
+    Wait(10);
+    SetEffect(EFFECT_NONE, 3);
+    Turn2Direction(4, 10, DIR_UPRIGHT);
+    Move2PositionMark(1.5, Position<'m3', 24.5, 23.5>);
+    Turn2Direction(4, 10, DIR_UP);
+    Wait(10);
+    SetEffect(EFFECT_JOYOUS, 3);
+    SetAnimation(5);
+    Wait(30);
+    SetAnimation(2);
+    SetEffect(EFFECT_NONE, 3);
+    SetOutputAttribute(8);
+    Move2PositionMark(1.5, Position<'m4', 27.5, 21.5>);
+    Turn2Direction(4, 10, DIR_LEFT);
+    Wait(10);
+    SetEffect(EFFECT_LAUGHING, 3);
+    SetAnimation(18);
+    Wait(30);
+    SetOutputAttribute(2);
+    SetAnimation(2);
+    SetEffect(EFFECT_NONE, 3);
+    se_FadeOut(9733, 10);
+    Lock(12);
+    Turn2Direction(4, 2, DIR_RIGHT);
+    Wait(10);
+    Move2PositionMark(1, Position<'m5', 31.5, 26>);
+    Turn2Direction(4, 10, DIR_UP);
+    hold;
+}

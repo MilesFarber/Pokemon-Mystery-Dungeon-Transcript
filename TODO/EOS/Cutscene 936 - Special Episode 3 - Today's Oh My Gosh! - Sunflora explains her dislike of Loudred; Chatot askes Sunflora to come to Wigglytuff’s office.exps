@@ -1,0 +1,305 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD, 0, 256);
+    back_SetGround(LEVEL_G01P01A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    WaitLockLives(5, ACTOR_PLAYER_KIMAWARI);
+    screen_FadeIn(1, 30);
+    Unlock(5);
+    Lock(3);
+    supervision_Acting(1);
+    Wait(20);
+    WaitLockLives(6, ACTOR_PLAYER_KIMAWARI);
+    Unlock(6);
+    supervision_Acting(2);
+    Wait(20);
+    supervision_Acting(3);
+    message_Mail({
+        english="""
+            [CN]Also, I really like the other
+            [CN]apprentices in the guild!
+        """,
+    });
+    message_Mail({
+        english="[CN]I enjoy being with them!",
+    });
+    message_Mail({
+        english="[CN]Everyone is such a dear friend to me!",
+    });
+    message_Mail({
+        english="[CN]Anyhow, being able to train at this guild...",
+    });
+    message_Mail({
+        english="[CN]Makes me very happy!",
+    });
+    message_Mail({
+        english="""
+            [CN]But...[K]
+            [CN]About my friends...
+        """,
+    });
+    message_Mail({
+        english="[CN]Recently, something troublesome happened...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitLockLives(10, ACTOR_PLAYER_KIMAWARI);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_NONE, 3);
+    supervision_Acting(4);
+    Wait(1);
+    MovePositionOffset<actor ACTOR_NPC_DOGOOMU>(1, 0, 12);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    se_Play(8973);
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_NPC_DOGOOMU>();
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_PAIN, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" ...HUMPH!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    Turn2Direction<actor ACTOR_PLAYER_KIMAWARI>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    se_Play(8969);
+    SlidePositionOffset<actor ACTOR_PLAYER_KIMAWARI>(2.5, -4, 4);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_SHOCKED_MIRRORED, 3);
+    WaitEffect<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" ...!! ([CS:N]L[CR]-[CS:N]Loudred[CR]!)",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(30);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(1, 2, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_PAIN, FACE_POS_TOP_RC_FACEOUTW);
+    message_Talk({
+        english=" Hm! HUMPH!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_KIMAWARI>(1, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_DETERMINED, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english=" Humph!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_DOGOOMU>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    Wait(20);
+    MovePositionMark<actor ACTOR_NPC_DOGOOMU>(1, Position<'m0', 30, 46.5>);
+    WaitExecuteLives(ACTOR_NPC_DOGOOMU);
+    Turn2Direction<actor ACTOR_PLAYER_KIMAWARI>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    Wait(15);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    Wait(15);
+    message_Mail({
+        english="[CN]Here is what's troublesome.",
+    });
+    message_Mail({
+        english="""
+            [CN]I haven't been getting along with
+            [CN][CS:N]Loudred[CR] too well lately...
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]And I've even gone on explorations
+            [CN]with [CS:N]Loudred[CR] in the past...
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]At the time, [CS:N]Loudred[CR] wouldn't listen to my
+            [CN]warnings and ran straight into dungeons...
+        """,
+    });
+    message_Mail({
+        english="[CN]And we were knocked out, just like that!",
+    });
+    message_Mail({
+        english="""
+            [CN]When I came to, I realized both of us
+            [CN]had fainted!
+        """,
+    });
+    message_Mail({
+        english="[CN]I couldn't believe it!",
+    });
+    message_Mail({
+        english="""
+            [CN]Since then, [CS:N]Loudred[CR] and I have not been
+            [CN]able to see eye-to-eye.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" It's...[K]a little troublesome...",
+    });
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" ...![K] But--",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8971);
+    ExecuteCommon<actor ACTOR_PLAYER_KIMAWARI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_ANGRY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" It's all [CS:N]Loudred[CR]'s fault!",
+    });
+    message_Talk({
+        english="""
+             After his terrible behavior,
+            [CS:N]Loudred[CR] hasn't even apologized!
+        """,
+    });
+    message_Talk({
+        english=" I won't forgive that![K] Humph!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_ANGRY, 3);
+    Wait(45);
+    bgm_FadeOut(150);
+    supervision_Acting(5);
+    Wait(1);
+    MovePositionOffset<actor ACTOR_NPC_PERAPPU>(1, 0, 16);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_PERAPPU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PERAPPU>();
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    bgm2_PlayFadeIn(BGM_OCEAN2, 60, 256);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Oh![K] You're here, [CS:Y]Sunflora[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_NONE, 3);
+    Turn2Direction<actor ACTOR_PLAYER_KIMAWARI>(4, 2, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Oh hi, [CS:N]Chatot[CR].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I've been looking for you.[K]
+            There's something I'd like to discuss with you.
+        """,
+    });
+    message_Talk({
+        english=" Please come with me.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PERAPPU>(1, 0, -16);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Destroy<actor ACTOR_NPC_PERAPPU>();
+    Wait(30);
+    se_Play(8962);
+    SetEffect<actor ACTOR_PLAYER_KIMAWARI>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_KIMAWARI>();
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    message_SetFace(ACTOR_PLAYER_KIMAWARI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Discuss?",
+    });
+    message_Talk({
+        english="""
+             Gosh![K] I wonder what it could
+            be...
+        """,
+    });
+    message_Close();
+    MovePositionMark<actor ACTOR_PLAYER_KIMAWARI>(1, Position<'m1', 30, 18.5>);
+    WaitExecuteLives(ACTOR_PLAYER_KIMAWARI);
+    Destroy<actor ACTOR_PLAYER_KIMAWARI>();
+    bgm2_FadeOut(90);
+    screen_FadeOut(1, 60);
+    Wait(30);
+    WaitBgm2(BGM_OCEAN2);
+    end;
+}
+
+def 1 for actor ACTOR_PLAYER_KIMAWARI {
+    SetAnimation(2);
+    Lock(5);
+    MovePositionMark(1, Position<'m2', 27.5, 30.5>);
+    Unlock(3);
+    MovePositionMark(1, Position<'m3', 27.5, 25.5>);
+    Lock(6);
+    Turn2Direction(4, 10, DIR_DOWNRIGHT);
+    Lock(7);
+    Turn2Direction(4, 10, DIR_RIGHT);
+    Lock(8);
+    Turn2Direction(4, 10, DIR_DOWNRIGHT);
+    Lock(9);
+    Turn2Direction(32, 10, DIR_DOWN);
+    Wait(32);
+    SetEffect(EFFECT_JOYOUS, 3);
+    CallCommon(CORO_JUMP_ANGRY_FUNC);
+    Lock(10);
+    hold;
+}
+
+def 2 for actor ACTOR_NPC_HEIGANI {
+    SetAnimation(2);
+    MovePositionMark(1, Position<'m4', 30, 27.5>);
+    Turn2Direction(4, 10, DIR_UPLEFT);
+    SetEffect(EFFECT_JOYOUS, 3);
+    Wait(45);
+    SetEffect(EFFECT_NONE, 3);
+    Wait(15);
+    MovePositionMark(1, Position<'m5', 30, 46.5>);
+    Destroy();
+}
+
+def 3 for actor ACTOR_NPC_CHIRIIN {
+    SetAnimation(2);
+    MovePositionMark(1, Position<'m6', 30, 25.5>);
+    Turn2Direction(4, 10, DIR_LEFT);
+    Unlock(7);
+    SetEffect(EFFECT_LAUGHING, 3);
+    Wait(30);
+    SetEffect(EFFECT_NONE, 3);
+    Wait(15);
+    MovePositionMark(1, Position<'m7', 30, 46.5>);
+    Destroy();
+}
+
+def 4 for actor ACTOR_NPC_BIPPA {
+    SetAnimation(2);
+    MovePositionMark(1, Position<'m8', 30, 22.5>);
+    Turn2Direction(4, 10, DIR_DOWNLEFT);
+    Wait(45);
+    MovePositionMark(1, Position<'m9', 30, 27.5>);
+    Unlock(8);
+    Turn2Direction(4, 10, DIR_UPLEFT);
+    Wait(15);
+    CallCommon(CORO_JUMP_ANGRY_FUNC);
+    Wait(15);
+    Unlock(9);
+    MovePositionMark(1, Position<'m10', 30, 46.5>);
+    Destroy();
+}

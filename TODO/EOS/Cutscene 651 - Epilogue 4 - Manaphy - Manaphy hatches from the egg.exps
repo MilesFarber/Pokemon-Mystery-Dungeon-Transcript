@@ -1,0 +1,482 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 42];
+    switch ( ProcessSpecial(PROCESS_SPECIAL_REMOVE_ITEMS_TYPE_IN_BAG, 178, 0) ) { }
+    message_Narration(30, {
+        english="[CN]The next morning...",
+    });
+    message_Close();
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_H02P99A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    SetDirection<actor ACTOR_ATTENDANT1>(DIR_LEFT);
+    SetAnimation<actor ACTOR_PLAYER>(76);
+    SetAnimation<actor ACTOR_ATTENDANT1>(76);
+    SetOutputAttribute<object OBJECT_D34P41A1_89>(4);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_DO_YOUR_BEST_AS_ALWAYS, 0, 256);
+    Wait(30);
+    SetAnimation<actor ACTOR_PLAYER>(63);
+    Wait(5);
+    SetAnimation<actor ACTOR_ATTENDANT1>(63);
+    WaitAnimation<actor ACTOR_PLAYER>();
+    WaitAnimation<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_DOWN);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    Wait(30);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Good morning, [hero]!",
+            }
+        case 2:
+            {
+                english=" Good morning, [hero]!",
+            }
+        default:
+            {
+                english=" Good morning, [hero]!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hey, that Egg we found at the
+                    [CS:P]Surrounded Sea[CR] yesterday...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     You know, that Egg we found at
+                    the [CS:P]Surrounded Sea[CR] yesterday...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Say, that Egg we found at the
+                    [CS:P]Surrounded Sea[CR] yesterday...
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     With such weird colors, it sure
+                    looks mystical.[K] What do you think is in it?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     It's glowing with this mystical
+                    light, isn't it?[K] What do you think is in it?
+                """,
+            }
+        default:
+            {
+                english="""
+                     It's got a strange glow to it, 
+                    doesn't it?[K] What do you think is in it?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(60);
+    MovePositionMark<performer 0>(0.7969, Position<'m1', 38, 25.5>);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(0.7969, Position<'m2', 36.5, 26.5>);
+    Wait(5);
+    MovePositionMark<actor ACTOR_PLAYER>(0.7969, Position<'m3', 40.5, 26.5>);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(45);
+    se_Play(7957);
+    SetAnimation<object OBJECT_D34P41A1_89>(18);
+    WaitAnimation<object OBJECT_D34P41A1_89>();
+    WaitExecuteObject(OBJECT_D34P41A1_89);
+    se_Play(8967);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa! It moved!",
+            }
+        case 2:
+            {
+                english=" Wa-waah! It moved!",
+            }
+        default:
+            {
+                english=" Wa-waah! It moved!",
+            }
+    }
+    message_Close();
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    Wait(10);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hey, [hero]![K] The Egg
+                    did move just now, didn't it?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Hey, [hero]![K] The Egg
+                    did move just now, didn't it?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Say, [hero].[K] The Egg
+                    did move just now, didn't it?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    Wait(60);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    se_Play(7957);
+    SetAnimation<object OBJECT_D34P41A1_89>(18);
+    WaitAnimation<object OBJECT_D34P41A1_89>();
+    WaitExecuteObject(OBJECT_D34P41A1_89);
+    se_Play(7957);
+    SetAnimation<object OBJECT_D34P41A1_89>(18);
+    WaitAnimation<object OBJECT_D34P41A1_89>();
+    WaitExecuteObject(OBJECT_D34P41A1_89);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Oh, [hero]![K] The Egg is...",
+            }
+        case 2:
+            {
+                english=" Oh, [hero]![K] The Egg is...",
+            }
+        default:
+            {
+                english=" Oh, [hero]![K] The Egg is...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" It's going to hatch!",
+            }
+        case 2:
+            {
+                english=" It's hatching!",
+            }
+        default:
+            {
+                english=" It's hatching!",
+            }
+    }
+    message_Close();
+    se_Play(7958);
+    SetAnimation<object OBJECT_D34P41A1_89>(20);
+    WaitAnimation<object OBJECT_D34P41A1_89>();
+    Wait(40);
+    screen_WhiteOut(1, 30);
+    Wait(80);
+    Destroy<object OBJECT_D34P41A1_89>();
+    supervision_Acting(1);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    WaitSe(7958);
+    se_Play(8967);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(30);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_MANAFI>();
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    message_SetFaceOnly(ACTOR_NPC_MANAFI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" .........?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8963);
+    ExecuteCommon<actor ACTOR_NPC_MANAFI>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    Wait(45);
+    message_SetFaceOnly(ACTOR_NPC_MANAFI, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Hi...iiii! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_OCEAN1, 120, 190);
+    bgm_ChangeVolume(0, 190);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Wow![K] It's a Pokémon, but I've
+                    never seen anything like this!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Wow![K] It's a Pokémon, but I've
+                    never seen anything like this!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Wow![K] It's a Pokémon, but not
+                    like any I've seen before!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_LAUGHING, 3);
+    ExecuteCommon<actor ACTOR_NPC_MANAFI>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    message_SetFaceOnly(ACTOR_NPC_MANAFI, FACE_HAPPY, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Kyakya! ♪ Kyakya! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_HAPPY, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Ha! He's cute!",
+            }
+        case 2:
+            {
+                english=" Ha! He's cute!",
+            }
+        default:
+            {
+                english=" Ha! What a cutie!",
+            }
+    }
+    message_KeyWait();
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Hey, little guy.[K] What kind of
+                    Pokémon are you?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Hey, little guy.[K] What kind of
+                    Pokémon are you?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Hi, little guy.[K] What kind of
+                    Pokémon are you?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_MANAFI>();
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    message_SetFaceOnly(ACTOR_NPC_MANAFI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" Poké?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I guess this little guy's too
+                    young to understand anything I say?
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Maybe this little guy's too young
+                    to understand anything I say?
+                """,
+            }
+        default:
+            {
+                english="""
+                     Maybe this little guy's too young
+                    to understand anything I say?
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_NPC_MANAFI>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_MANAFI>();
+    WaitExecuteLives(ACTOR_NPC_MANAFI);
+    message_SetFaceOnly(ACTOR_NPC_MANAFI, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" I say?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Um... What should we do...?[K]
+                    I've never met a Pokémon like this little
+                    guy before.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Um... What should we do...?[K]
+                    I've never had to deal with a Pokémon like this
+                    little guy before.
+                """,
+            }
+        default:
+            {
+                english="""
+                     Um... What should we do...?[K]
+                    I've never had to deal with a Pokémon like this
+                    little guy before.
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Hmmm...",
+            }
+        case 2:
+            {
+                english=" Hmmm...",
+            }
+        default:
+            {
+                english=" Hmmm...",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    se_Play(8978);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Oh, I know![K] [CS:N]Chatot[CR] might know
+                    something! He's the guild's head of intelligence!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Oh, I know![K] We should ask
+                    [CS:N]Chatot[CR]! He's the guild's head of intelligence!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh, I know![K] We should ask
+                    [CS:N]Chatot[CR]! He's the guild's head of intelligence!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Let's go see [CS:N]Chatot[CR],
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Let's go see [CS:N]Chatot[CR],
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Let's go see [CS:N]Chatot[CR],
+                    [hero]!
+                """,
+            }
+    }
+    message_Close();
+    bgm_FadeOut(120);
+    screen2_FadeOut(0, 60);
+    screen_FadeOut(1, 60);
+    back2_SetMode(0);
+    WaitBgm(BGM_OCEAN1);
+    end;
+}

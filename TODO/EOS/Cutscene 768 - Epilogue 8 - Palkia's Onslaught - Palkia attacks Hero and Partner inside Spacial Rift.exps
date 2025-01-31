@@ -1,0 +1,303 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_D38P11A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8201);
+    supervision_Acting(1);
+    SetAnimation<object OBJECT_H02P99C4_119>(17);
+    WaitAnimation<object OBJECT_H02P99C4_119>();
+    WaitExecuteObject(OBJECT_H02P99C4_119);
+    SetAnimation<object OBJECT_H02P99C4_119>(2);
+    Wait(30);
+    screen_WhiteOut(1, 30);
+    supervision_Acting(2);
+    Destroy<object OBJECT_H02P99C4_119>();
+    Wait(1);
+    SetOutputAttribute<actor ACTOR_PLAYER>(2);
+    Wait(30);
+    se_Play(5128);
+    camera_SetEffect(2, 2, 2);
+    screen_FadeIn(0, 15);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(10);
+    camera_SetEffect(0, 0, 0);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_LOOK_AROUND_RIGHT_FUNC_SERIES, 0);
+    Wait(12);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    Wait(30);
+    bgm_PlayFadeIn(BGM_SEALED_RUIN_PIT, 0, 256);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wh-where is this...?",
+            }
+        case 2:
+            {
+                english=" Wh-where is this...?",
+            }
+        default:
+            {
+                english=" Wh-where is this...?",
+            }
+    }
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             THIS IS MY DOMAIN![K]
+            [CS:P]SPACIAL RIFT[CR]!
+        """,
+    });
+    Turn2DirectionLives<actor ACTOR_PLAYER>(1, 10, ACTOR_NPC_PARUKIA);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(1, 10, ACTOR_NPC_PARUKIA);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    WaitSe(8968);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What?![K] This is [CS:P]Spacial Rift[CR]?!",
+            }
+        case 2:
+            {
+                english=" What?![K] This is [CS:P]Spacial Rift[CR]?!",
+            }
+        default:
+            {
+                english=" What?![K] This is [CS:P]Spacial Rift[CR]?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             YOU DARE DISTORT SPACE?
+            WITHOUT MY PERMISSION?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    message_Talk({
+        english=" I WILL BE RID OF YOU NOW!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    ExecuteCommon<actor ACTOR_ATTENDANT1>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    Wait(10);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(30);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" What?!",
+            }
+        case 2:
+            {
+                english=" What?!",
+            }
+        default:
+            {
+                english=" What?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PARUKIA>(0.7969, 16, 0);
+    Wait(10);
+    MovePositionOffset<performer 0>(1, 16, 0);
+    SetAnimation<actor ACTOR_PLAYER>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER>(0.7969, 16, 0);
+    Wait(5);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(0.7969, 16, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" THIS IS THE END!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PARUKIA>(1.5, 16, 0);
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(12);
+    se_Play(6421);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    MovePositionOffset<performer 0>(2.5, 24, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_PLAYER>(5);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER>(2.5, 24, 0);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(2.5, 24, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Whoa! What are you doing?!",
+            }
+        case 2:
+            {
+                english=" Waah! What are you doing?!",
+            }
+        default:
+            {
+                english=" Waah! What are you doing?!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(2);
+    MovePositionOffset<actor ACTOR_NPC_PARUKIA>(0.7969, 16, 0);
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(1, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(1, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_BOTTOM_R_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Th-there's absolutely nothing
+                    behind us!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Th-there's absolutely nothing
+                    behind us!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Th-there's absolutely nothing
+                    behind us!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(1, 2, ACTOR_NPC_PARUKIA);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(1, 10, ACTOR_NPC_PARUKIA);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(19);
+    WaitAnimation<actor ACTOR_NPC_PARUKIA>();
+    camera_SetEffect(2, 1, 1);
+    se_Play(6930);
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" GRRR-OOOOOO!",
+    });
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    Wait(90);
+    message_CloseEnforce();
+    camera_SetEffect(0, 0, 0);
+    bgm_FadeOut(30);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(2);
+    SlidePositionOffset<actor ACTOR_NPC_PARUKIA>(1.5, 24, 0);
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    se_Play(6421);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(12);
+    MovePositionOffset<performer 0>(2.5, 24, 0);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SHOCKED, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    SetAnimation<actor ACTOR_PLAYER>(11);
+    SetAnimation<actor ACTOR_ATTENDANT1>(11);
+    SlidePositionOffset<actor ACTOR_PLAYER>(2.5, 32, 0);
+    SlidePositionOffset<actor ACTOR_ATTENDANT1>(2.5, 32, 0);
+    message_SetActor(ACTOR_ATTENDANT1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Waaaaaah!",
+            }
+        case 2:
+            {
+                english=" Waaaaaah!",
+            }
+        default:
+            {
+                english=" Waaaaaah!",
+            }
+    }
+    MoveHeight<actor ACTOR_PLAYER>(5, -80);
+    MoveHeight<actor ACTOR_ATTENDANT1>(5, -80);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Destroy<actor ACTOR_PLAYER>();
+    Destroy<actor ACTOR_ATTENDANT1>();
+    Wait(90);
+    message_CloseEnforce();
+    message_SetFace(ACTOR_NPC_PARUKIA, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" GRRRR![K] THEY FELL!",
+    });
+    message_Talk({
+        english="""
+             HOWEVER...[K]THERE IS NO
+            ESCAPING ME!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    camera_SetEffect(2, 1, 1);
+    se_Play(8200);
+    SetAnimation<actor ACTOR_NPC_PARUKIA>(25);
+    WaitAnimation<actor ACTOR_NPC_PARUKIA>();
+    supervision_Acting(3);
+    SetOutputAttribute<object OBJECT_H02P99C5_120>(1);
+    SetAnimation<object OBJECT_H02P99C5_120>(19);
+    WaitAnimation<object OBJECT_H02P99C5_120>();
+    Wait(10);
+    message_SetActor(ACTOR_NPC_PARUKIA);
+    message_Talk({
+        english=" GRRR-OOOOOO!",
+    });
+    WaitExecuteLives(ACTOR_NPC_PARUKIA);
+    Destroy<actor ACTOR_NPC_PARUKIA>();
+    WaitExecuteObject(OBJECT_H02P99C5_120);
+    SetAnimation<object OBJECT_H02P99C5_120>(4);
+    camera_SetEffect(0, 0, 0);
+    Wait(30);
+    message_CloseEnforce();
+    SetAnimation<object OBJECT_H02P99C5_120>(23);
+    WaitAnimation<object OBJECT_H02P99C5_120>();
+    WaitExecuteObject(OBJECT_H02P99C5_120);
+    Destroy<object OBJECT_H02P99C5_120>();
+    Wait(90);
+    screen_FadeOut(1, 30);
+    Wait(60);
+    WaitSe(8200);
+    dungeon_mode(64) = DMODE_OPEN;
+    end;
+}

@@ -1,0 +1,85 @@
+
+def 0 {
+    back_SetGround(LEVEL_G01P07A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" This is your room! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 25.5, 23>);
+    Wait(10);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 19.5, 23>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 1, DIR_LEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    SetAnimation<actor ACTOR_ATTENDANT1>(3);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 10);
+    Wait(1);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 0);
+    Wait(2);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 10);
+    Wait(1);
+    MoveHeight<actor ACTOR_ATTENDANT1>(2, 0);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_LAUGHING, 3);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_JOYOUS, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(-2, -1);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Wow! We get beds!",
+            }
+        case 2:
+            {
+                english=" Great! We get beds!",
+            }
+        default:
+            {
+                english=" Yay! We get beds!",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_NONE, 3);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPLEFT);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_NPC_PERAPPU);
+    message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             You will live here while you
+            work for us.
+        """,
+    });
+    message_Talk({
+        english="""
+             Things will start getting busy
+            for you tomorrow! ♪[K] So rise early and start
+            living up to our code!
+        """,
+    });
+    message_Talk({
+        english="""
+             Don't stay up late. Get to sleep
+            early tonight! ♪[K] That is all.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PERAPPU>(1, -8, 8);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    MovePositionOffset<actor ACTOR_NPC_PERAPPU>(1, -88, 0);
+    WaitExecuteLives(ACTOR_NPC_PERAPPU);
+    Destroy<actor ACTOR_NPC_PERAPPU>();
+    Wait(30);
+    bgm_FadeOut(120);
+    screen_FadeOut(1, 90);
+    WaitBgm(BGM_WIGGLYTUFFS_GUILD_REMIX);
+    end;
+}

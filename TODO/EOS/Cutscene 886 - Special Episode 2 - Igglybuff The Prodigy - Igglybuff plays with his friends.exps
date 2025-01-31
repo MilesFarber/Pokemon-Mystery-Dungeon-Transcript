@@ -1,0 +1,120 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    back_SetGround(LEVEL_P16P01A);
+    supervision_LoadStation(LEVEL_P16P01A, 'UN02');
+    supervision_Station(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_MUCHUURU>();
+    SetPositionInitial<actor ACTOR_NPC_SUBOMII>();
+    SetPositionInitial<actor ACTOR_NPC_UPAA>();
+    SetAnimation<actor ACTOR_NPC_MUCHUURU>(2);
+    SetAnimation<actor ACTOR_NPC_SUBOMII>(2);
+    SetAnimation<actor ACTOR_NPC_UPAA>(2);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_SUBOMII, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Hey, what should we play today?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_JOYOUS, 3);
+    ExecuteCommon<actor ACTOR_NPC_UPAA>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UPLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWNLEFT);
+    message_SetFace(ACTOR_NPC_UPAA, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Let's play in the mud!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecuteLives(ACTOR_NPC_UPAA);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_NONE, 3);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_DOWNRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_DOWNLEFT);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_ANGRY, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" Yuck! I don't want to!",
+    });
+    message_Talk({
+        english="""
+             It's unladylike to get all muddy!
+            Smooch!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecuteLives(ACTOR_NPC_MUCHUURU);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             I brought some Gummis. Would
+            you guys like one?
+        """,
+    });
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UP);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UPLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_UPRIGHT);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_JOYOUS, 3);
+    SetAnimation<actor ACTOR_NPC_UPAA>(5);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_JOYOUS, 3);
+    SetAnimation<actor ACTOR_NPC_MUCHUURU>(5);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_JOYOUS, 3);
+    SetAnimation<actor ACTOR_NPC_SUBOMII>(4);
+    message_SetFace(ACTOR_NPC_SUBOMII, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Yay!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_UPAA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_UPAA, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english=" I want one!",
+    });
+    WaitExecuteLives(ACTOR_NPC_UPAA);
+    SetAnimation<actor ACTOR_NPC_UPAA>(5);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_HAPPY, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             I love Gummis! ♪
+            So, so much! Smooooches! ♪
+        """,
+    });
+    WaitExecuteLives(ACTOR_NPC_MUCHUURU);
+    SetAnimation<actor ACTOR_NPC_MUCHUURU>(5);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_UPAA>(2);
+    SetAnimation<actor ACTOR_NPC_MUCHUURU>(2);
+    SetAnimation<actor ACTOR_NPC_SUBOMII>(2);
+    Move2PositionMark<actor ACTOR_NPC_UPAA>(1, Position<'m0', 26.5, 18>);
+    Wait(4);
+    Move2PositionMark<actor ACTOR_NPC_MUCHUURU>(1, Position<'m1', 28.5, 19>);
+    Wait(4);
+    Move2PositionMark<actor ACTOR_NPC_SUBOMII>(1, Position<'m2', 30.5, 18>);
+    WaitExecuteLives(ACTOR_NPC_SUBOMII);
+    Wait(100);
+    screen2_FadeOut(0, 30);
+    screen_FadeOut(1, 30);
+    back2_SetMode(0);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_NONE, 3);
+    camera_SetDefault();
+    Wait(30);
+    screen_FadeIn(1, 30);
+    end;
+}

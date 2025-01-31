@@ -1,0 +1,131 @@
+
+def 0 {
+    back_SetGround(LEVEL_P02P01A);
+    switch ( sector() ) {
+        case 0:
+        default:
+            @label_0;
+            bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+            supervision_Acting(8);
+            supervision_Acting(0);
+            camera_SetMyself<performer 0>();
+            Wait(1);
+            ResetOutputAttribute<actor ACTOR_PLAYER>(256);
+            ResetOutputAttribute<actor ACTOR_ATTENDANT1>(256);
+            ResetOutputAttribute<actor ACTOR_NPC_HIMEGUMA>(256);
+            ResetOutputAttribute<actor ACTOR_NPC_RINGUMA>(256);
+            ResetOutputAttribute<actor ACTOR_NPC_YARUKIMONO>(256);
+            ResetOutputAttribute<actor ACTOR_NPC_MANKII>(256);
+            ResetOutputAttribute<actor ACTOR_NPC_OKORIZARU>(256);
+            SetEffect<actor ACTOR_PLAYER>(EFFECT_STUCK_IN_YELLOW_WATER, 4);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_STUCK_IN_YELLOW_WATER, 4);
+            SetEffect<actor ACTOR_NPC_HIMEGUMA>(EFFECT_STUCK_IN_YELLOW_WATER, 4);
+            SetEffect<actor ACTOR_NPC_RINGUMA>(EFFECT_STUCK_IN_YELLOW_WATER_DEEP, 4);
+            SetEffect<actor ACTOR_NPC_YARUKIMONO>(EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM, 4);
+            SetEffect<actor ACTOR_NPC_MANKII>(EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM2, 4);
+            SetEffect<actor ACTOR_NPC_OKORIZARU>(EFFECT_STUCK_IN_YELLOW_WATER_DEEP2, 4);
+            screen_FadeIn(1, 30);
+            Wait(30);
+            se_Play(8973);
+            SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_SHOCKED, 3);
+            WaitEffect<actor ACTOR_NPC_KOOTASU>();
+            WaitExecuteLives(ACTOR_NPC_KOOTASU);
+            @label_2;
+            message_SetFace(ACTOR_NPC_KOOTASU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english="""
+                     My goodness! It was the water
+                    that carried you all this way?
+                """,
+            });
+            message_Talk({
+                english="""
+                     What a long journey that must
+                    have been![K] Let the Hot Spring wash away your
+                    fatigue before you make your way home.
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            SetAnimation<actor ACTOR_ATTENDANT1>(71);
+            WaitAnimation<actor ACTOR_ATTENDANT1>();
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            SetAnimation<actor ACTOR_ATTENDANT1>(2);
+            message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+            message_SwitchTalk ($PARTNER_TALK_KIND) {
+                case 1:
+                    {
+                        english="""
+                             Good idea. We'll do that. Thanks,
+                            everyone!
+                        """,
+                    }
+                case 2:
+                    {
+                        english="""
+                             Good idea. We'll do that. Thanks,
+                            everyone!
+                        """,
+                    }
+                default:
+                    {
+                        english="""
+                             Good idea. We'll do that. Thanks,
+                            everyone!
+                        """,
+                    }
+            }
+            message_Close();
+            Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+            WaitExecuteLives(ACTOR_ATTENDANT1);
+            Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+            Wait(20);
+            Turn2DirectionLives<actor ACTOR_NPC_HIMEGUMA>(4, 10, ACTOR_ATTENDANT1);
+            Wait(10);
+            Turn2DirectionLives<actor ACTOR_NPC_MANKII>(4, 10, ACTOR_ATTENDANT1);
+            SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_LAUGHING, 3);
+            Wait(60);
+            switch ( sector() ) {
+                case 0:
+                default:
+                    bgm_FadeOut(120);
+                    screen_FadeOut(1, 90);
+                    Wait(60);
+                    switch ( message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP) ) { }
+                    $SCENARIO_MAIN_BIT_FLAG[8] = 1;
+                    $COMPULSORY_SAVE_POINT = 3;
+                    CallCommon(CORO_HANYOU_SAVE_FUNC);
+                    @label_5;
+                    end;
+                case 1:
+                    screen_FadeOut(1, 30);
+                    screen_FlushIn(1, 0, 1, 0, 0, 0);
+                    jump @label_5;
+            }
+            break;
+        case 1:
+            screen_FlushOut(1, 0, 8, 0, 0, 0);
+            supervision_Acting(0);
+            camera_SetMyself<performer 0>();
+            Wait(1);
+            ResetOutputAttribute<actor ACTOR_PLAYER>(256);
+            ResetOutputAttribute<actor ACTOR_ATTENDANT1>(256);
+            ResetOutputAttribute<actor ACTOR_NPC_HIMEGUMA>(256);
+            ResetOutputAttribute<actor ACTOR_NPC_RINGUMA>(256);
+            ResetOutputAttribute<actor ACTOR_NPC_YARUKIMONO>(256);
+            ResetOutputAttribute<actor ACTOR_NPC_MANKII>(256);
+            ResetOutputAttribute<actor ACTOR_NPC_OKORIZARU>(256);
+            SetEffect<actor ACTOR_PLAYER>(EFFECT_STUCK_IN_YELLOW_WATER, 4);
+            SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_STUCK_IN_YELLOW_WATER, 4);
+            SetEffect<actor ACTOR_NPC_HIMEGUMA>(EFFECT_STUCK_IN_YELLOW_WATER, 4);
+            SetEffect<actor ACTOR_NPC_RINGUMA>(EFFECT_STUCK_IN_YELLOW_WATER_DEEP, 4);
+            SetEffect<actor ACTOR_NPC_YARUKIMONO>(EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM, 4);
+            SetEffect<actor ACTOR_NPC_MANKII>(EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM2, 4);
+            SetEffect<actor ACTOR_NPC_OKORIZARU>(EFFECT_STUCK_IN_YELLOW_WATER_DEEP2, 4);
+            screen_FadeIn(1, 30);
+            Wait(30);
+            SetEffect<actor ACTOR_NPC_KOOTASU>(EFFECT_SHOCKED, 3);
+            WaitEffect<actor ACTOR_NPC_KOOTASU>();
+            WaitExecuteLives(ACTOR_NPC_KOOTASU);
+            jump @label_2;
+    }
+}

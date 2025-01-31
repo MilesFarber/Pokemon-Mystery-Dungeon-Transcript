@@ -1,0 +1,79 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P07C);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetEffect<actor ACTOR_NPC_DOGOOMU>(EFFECT_ANGRY, 3);
+    SetAnimation<actor ACTOR_NPC_DOGOOMU>(9);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_DOGOOMU, FACE_ANGRY, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" Grrr...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8961);
+    SetEffect<actor ACTOR_PLAYER>(EFFECT_SWEAT_DROP, 3);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SWEAT_DROP, 3);
+    WaitEffect<actor ACTOR_PLAYER>();
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SAD, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(-2, 0);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" Will you let it go already?",
+            }
+        case 2:
+            {
+                english=" Can you stop that already?",
+            }
+        default:
+            {
+                english=" Can you let it go, please?",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english=" We're going to bed too...",
+            }
+        case 2:
+            {
+                english=" We're going to bed too...",
+            }
+        default:
+            {
+                english=" We're going to bed too...",
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     I mean, I can understand how
+                    you'd be steamed at us, but...
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Yes, you have the right to be
+                    angry with us, but...
+                """,
+            }
+        default:
+            {
+                english="""
+                     Yes, you have the right to be
+                    angry with us, but...
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 60);
+    Wait(60);
+    end;
+}

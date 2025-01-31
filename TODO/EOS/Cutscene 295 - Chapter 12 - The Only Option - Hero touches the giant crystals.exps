@@ -1,0 +1,360 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_IN_THE_DEPTHS_OF_THE_PIT, 0, 256);
+    back_SetGround(LEVEL_D16P31A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    supervision_Acting(1);
+    supervision_Acting(3);
+    supervision_Acting(5);
+    SetAnimation<object OBJECT_D16P31A3_41>(10);
+    SetAnimation<object OBJECT_D16P31A4_43>(10);
+    SetAnimation<object OBJECT_D16P31A6_51>(10);
+    SetAnimation<object OBJECT_D16P31A8_55>(9);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="""
+                    (The quicksand pools allowed passage into the
+                    [CS:P]Underground Lake[CR]...)
+                """,
+            }
+        default:
+            {
+                english="""
+                    (The quicksand pools allowed passage into the
+                    [CS:P]Underground Lake[CR]...)
+                """,
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Could this place lead to [CS:N]Azelf[CR]'s lake?)",
+            }
+        default:
+            {
+                english="(Could this place lead to [CS:N]Azelf[CR]'s lake?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It should be like those other two places.)",
+            }
+        default:
+            {
+                english="(It should be like those other two places.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(There should also be a secret here.)",
+            }
+        default:
+            {
+                english="(There should also be a secret here.)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m0', 37.5, 21.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UP);
+    se_Play(7175);
+    SetAnimation<object OBJECT_D16P31A8_55>(17);
+    SetAnimation<object OBJECT_D16P31A3_41>(18);
+    WaitAnimation<object OBJECT_D16P31A3_41>();
+    WaitExecuteObject(OBJECT_D16P31A3_41);
+    supervision_RemoveActing(1);
+    supervision_Acting(2);
+    SetAnimation<object OBJECT_D16P31A5_47>(17);
+    WaitAnimation<object OBJECT_D16P31A5_47>();
+    WaitExecuteObject(OBJECT_D16P31A5_47);
+    SetAnimation<actor ACTOR_ATTENDANT1>(5);
+    SlidePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 37.5, 23.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    SetEffect<actor ACTOR_ATTENDANT1>(EFFECT_SHOCKED, 3);
+    WaitEffect<actor ACTOR_ATTENDANT1>();
+    message_SetFace(ACTOR_ATTENDANT1, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     Whoa! This crystal changes
+                    color when you touch it!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Wow! This crystal changes color
+                    when you touch it!
+                """,
+            }
+        default:
+            {
+                english="""
+                     Oh, wow! This crystal changes
+                    color when you touch it!
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(180);
+    Move2PositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 31, 30.5>);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    Turn2Direction<actor ACTOR_UNIT_NPC1>(4, 10, DIR_UPLEFT);
+    Turn2Direction<actor ACTOR_UNIT_NPC2>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    se_Play(7175);
+    SetPositionMark<object OBJECT_D16P31A8_55>(Position<'m3', 28.5, 29>);
+    SetAnimation<object OBJECT_D16P31A8_55>(17);
+    SetAnimation<object OBJECT_D16P31A4_43>(18);
+    WaitAnimation<object OBJECT_D16P31A4_43>();
+    WaitExecuteObject(OBJECT_D16P31A4_43);
+    supervision_RemoveActing(3);
+    supervision_Acting(4);
+    SetAnimation<object OBJECT_D16P31A7_52>(17);
+    WaitAnimation<object OBJECT_D16P31A7_52>();
+    WaitExecuteObject(OBJECT_D16P31A7_52);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEOUTW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This crystal changes color when
+                    you touch it too.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This crystal changes color when
+                    you touch it too.
+                """,
+            }
+        default:
+            {
+                english="""
+                     This crystal changes color when
+                    you touch it too.
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_UPRIGHT);
+    Wait(10);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_L_FACEINW);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     This might have something to do
+                    with solving this place's secret.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     This might have something to do
+                    with solving this place's secret.
+                """,
+            }
+        default:
+            {
+                english="""
+                     This might be a clue to solving
+                    this place's secret!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     You try touching them,
+                    [hero]!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     Try touching them for yourself,
+                    [hero]!
+                """,
+            }
+        default:
+            {
+                english="""
+                     See for yourself. Touch one of
+                    these crystals, [hero].
+                """,
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionMark<actor ACTOR_PLAYER>(1, Position<'m4', 44, 30.5>);
+    Wait(15);
+    Turn2Direction<actor ACTOR_UNIT_NPC1>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_UNIT_NPC2>(4, 10, DIR_UPRIGHT);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 10, DIR_RIGHT);
+    se_Play(7175);
+    SetPositionMark<object OBJECT_D16P31A8_55>(Position<'m5', 46.5, 29>);
+    SetAnimation<object OBJECT_D16P31A8_55>(17);
+    SetAnimation<object OBJECT_D16P31A6_51>(18);
+    WaitAnimation<object OBJECT_D16P31A6_51>();
+    WaitExecuteObject(OBJECT_D16P31A6_51);
+    supervision_RemoveActing(5);
+    supervision_Acting(6);
+    SetAnimation<object OBJECT_D16P31A2_39>(17);
+    WaitAnimation<object OBJECT_D16P31A2_39>();
+    WaitExecuteObject(OBJECT_D16P31A2_39);
+    Wait(60);
+    ExecuteCommon<actor ACTOR_PLAYER>(CORO_EXPLANATION_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER);
+    se_Play(7175);
+    SetAnimation<object OBJECT_D16P31A8_55>(17);
+    SetAnimation<object OBJECT_D16P31A2_39>(18);
+    WaitAnimation<object OBJECT_D16P31A2_39>();
+    WaitExecuteObject(OBJECT_D16P31A2_39);
+    supervision_RemoveActing(6);
+    supervision_Acting(7);
+    SetAnimation<object OBJECT_D16P31A4_45>(17);
+    WaitAnimation<object OBJECT_D16P31A4_45>();
+    WaitExecuteObject(OBJECT_D16P31A4_45);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(2, 1);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(The color does change when I touch it.)",
+            }
+        default:
+            {
+                english="(The color does change when I touch it.)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(And it can change into a variety of colors.)",
+            }
+        default:
+            {
+                english="(And it can change into a variety of colors.)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(20);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(20);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(20);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(20);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(20);
+    message_SetFace(ACTOR_PLAYER, FACE_NORMAL, FACE_POS_BOTTOM_C_FACEL);
+    message_FacePositionOffset(2, 1);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Three crystals?)",
+            }
+        default:
+            {
+                english="(Three crystals?)",
+            }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER);
+    message_SetFace(ACTOR_PLAYER, FACE_WORRIED, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(2, 1);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Changing colors?)",
+            }
+        default:
+            {
+                english="(Changing colors?)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(What could this all mean?)",
+            }
+        default:
+            {
+                english="(What could this all mean?)",
+            }
+    }
+    message_Close();
+    se_Play(5133);
+    screen_FlushOut(1, 4, 4, 128, 96, 64);
+    screen_FlushIn(1, 8, 4, 128, 96, 64);
+    screen_FlushOut(1, 8, 4, 128, 96, 64);
+    screen_FlushIn(1, 12, 4, 128, 96, 64);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    Wait(30);
+    message_SetFace(ACTOR_PLAYER, FACE_PAIN, FACE_POS_BOTTOM_C_FACER);
+    message_FacePositionOffset(2, 1);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(Urk...)",
+            }
+        default:
+            {
+                english="(Urk...)",
+            }
+    }
+    message_Close();
+    se_Play(5133);
+    screen_FlushOut(1, 4, 4, 128, 96, 64);
+    screen_FlushIn(1, 8, 4, 128, 96, 64);
+    screen_FlushOut(1, 8, 4, 128, 96, 64);
+    screen_FlushIn(1, 12, 4, 128, 96, 64);
+    screen_FlushIn(1, 0, 1, 0, 0, 0);
+    Wait(30);
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(It's starting...again...)",
+            }
+        default:
+            {
+                english="(It's starting...again...)",
+            }
+    }
+    message_SwitchMonologue ($HERO_TALK_KIND) {
+        case 4:
+            {
+                english="(A Dimensional Scream...)",
+            }
+        default:
+            {
+                english="(A Dimensional Scream...)",
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 5);
+    end;
+}

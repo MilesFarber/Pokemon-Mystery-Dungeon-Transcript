@@ -1,0 +1,102 @@
+
+def 0 {
+    sound_Stop();
+    back_SetDungeonBanner(135, 0);
+    screen_FadeIn(1, 16);
+    Wait(60);
+    screen_FadeOut(1, 16);
+    Wait(15);
+    back_SetGround(LEVEL_D46P31A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(4);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(4);
+    Wait(1);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1.5, Position<'m0', 28.5, 36.5>);
+    bgm_PlayFadeIn(BGM_OH_NO, 0, 256);
+    screen_FadeIn(1, 30);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english="""
+             Seems you're having a tough
+            battle, [CS:N]Dusknoir[CR].
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, ACTOR_PLAYER_FUTURE);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Alas![K] If not held back by these
+            injuries from fighting you, I could thrash
+            these [CS:N]Sableye[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI>(0.5, 8, 8);
+    Wait(5);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(1, 10, DIR_DOWN);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(5);
+    SlidePositionOffset<actor ACTOR_PLAYER_FUTURE>(0.2969, 0, -8);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI4>(0.5, -8, -8);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 2, DIR_UP);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(5);
+    SlidePositionOffset<actor ACTOR_NPC_YONOWAARU_N8>(0.2969, 0, 8);
+    Wait(3);
+    SetAnimation<actor ACTOR_PLAYER_FUTURE>(2);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI3>(0.5, 8, -8);
+    Wait(5);
+    Move2PositionOffset<actor ACTOR_NPC_YAMIRAMI2>(0.5, -8, 8);
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI2);
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english="""
+             Don't get distracted![K]
+            Here they come!
+        """,
+    });
+    message_Close();
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(17);
+    Wait(10);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(17);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Sableye[CR]: Wheh-heh-heh!",
+    });
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI3>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI3);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(17);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(17);
+    WaitAnimation<actor ACTOR_NPC_YAMIRAMI3>();
+    WaitExecuteLives(ACTOR_NPC_YAMIRAMI3);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI4>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI2>(2);
+    SetAnimation<actor ACTOR_NPC_YAMIRAMI3>(2);
+    message_CloseEnforce();
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(5);
+    se_Play(5143);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5143);
+    bgm_FadeOut(30);
+    CallCommon(CORO_BOSS_WIPE_FUNC);
+    main_EnterDungeon(135, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

@@ -1,0 +1,59 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_OCEAN1, 0, 256);
+    back_SetGround(LEVEL_V23P04A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(60);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The cave's mouth opens up to
+                    the sea!
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The cave's mouth opens wide to
+                    the sea!
+                """,
+            }
+        default:
+            {
+                english="""
+                     The cave's mouth opens wide to
+                    the sea!
+                """,
+            }
+    }
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     We couldn't see it because it's
+                    in the shadows outside.
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     We couldn't see it from outside
+                    because it's in the shadows.
+                """,
+            }
+        default:
+            {
+                english="""
+                     We couldn't see it from outside
+                    because it's in the shadows.
+                """,
+            }
+    }
+    message_Close();
+    screen_FadeOut(1, 30);
+    end;
+}

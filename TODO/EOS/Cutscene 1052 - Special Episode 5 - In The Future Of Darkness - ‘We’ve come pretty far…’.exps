@@ -1,0 +1,135 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_SIDE = scn[47, 7];
+    back_SetGround(LEVEL_D48P21A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_YONOWAARU_N8>();
+    SetAnimation<actor ACTOR_NPC_YONOWAARU_N8>(2);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_TEMPORAL_SPIRE, 0, 256);
+    Wait(30);
+    MovePositionMark<actor ACTOR_PLAYER_FUTURE>(1, Position<'m0', 26, 36>);
+    MovePositionMark<actor ACTOR_NPC_YONOWAARU_N8>(1, Position<'m1', 31, 36>);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" We've climbed pretty far...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_YONOWAARU_N8>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_YONOWAARU_N8);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" We're almost to the pinnacle.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_FUTURE>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_PLAYER_FUTURE);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             And there...[K] That's where Master
+            [CS:N]Dialga[CR] is...
+        """,
+    });
+    message_Talk({
+        english=" ...[K]Hey, [CS:Y]Grovyle[CR].",
+    });
+    message_Talk({
+        english="""
+             Once we've arrived at the
+            pinnacle...[K] Do you plan on fighting right away?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I don't know if it will be right
+            away or not...
+        """,
+    });
+    message_Talk({
+        english="""
+             The second I catch a whiff
+            of trouble, I'm going to move in immediately
+            to handle it.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             But before that...[K] Could you give
+            me a little time to talk to Master [CS:N]Dialga[CR]?
+        """,
+    });
+    message_Talk({
+        english="""
+             I want to know Master [CS:N]Dialga[CR]'s
+            true intentions.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" No way![K] If you talk to [CS:N]Dialga[CR]...",
+    });
+    message_Talk({
+        english="""
+             Then you'll probably begin to
+            side with [CS:N]Dialga[CR]!
+        """,
+    });
+    message_Talk({
+        english="""
+             Besides, the new henchman will
+            likely be there as well.
+        """,
+    });
+    message_Talk({
+        english="""
+             And then it will be three on one![K]
+            The chances of me winning are slim to none!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YONOWAARU, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Humph.[K] I at least...",
+    });
+    message_Talk({
+        english="""
+             I don't plan on making friends
+            with the new henchman.
+        """,
+    });
+    message_Talk({
+        english=" ...[K]Fine.",
+    });
+    message_Talk({
+        english="""
+             I won't fight by your side on
+            the pinnacle.
+        """,
+    });
+    message_Talk({
+        english="""
+             After you fight Master [CS:N]Dialga[CR]...[K]
+            And once you are defeated...
+        """,
+    });
+    message_Talk({
+        english=" I will ask Master [CS:N]Dialga[CR].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_FUTURE, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Humph.[K] Do whatever you want!",
+    });
+    message_Close();
+    end;
+}

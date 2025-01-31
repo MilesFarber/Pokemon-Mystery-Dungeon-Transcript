@@ -1,0 +1,549 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V24P08A);
+    back_SetGround(LEVEL_P17P01A);
+    supervision_Acting(0);
+    camera2_SetPositionMark(Position<'m0', 19, 15.5>);
+    camera_SetMyself<performer 0>();
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    supervision_Acting(1);
+    se_Play(9729);
+    SetAnimation<object OBJECT_P17P01A1_382>(17);
+    WaitAnimation<object OBJECT_P17P01A1_382>();
+    WaitExecuteObject(OBJECT_P17P01A1_382);
+    SetAnimation<object OBJECT_P17P01A1_382>(18);
+    WaitAnimation<object OBJECT_P17P01A1_382>();
+    WaitExecuteObject(OBJECT_P17P01A1_382);
+    Wait(20);
+    supervision_Acting(2);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_MAMA>(2);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN_MAMA>(1, 0, 10);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_UPAA>();
+    WaitExecuteLives(ACTOR_NPC_SUBOMII);
+    message_SetFace(ACTOR_NPC_SUBOMII, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" Oh![K] It's [CS:Y]Igglybuff[CR]'s [CS:N]Mama[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Move2PositionMark<actor ACTOR_NPC_PUKURIN_MAMA>(1, Position<'m1', 17.5, 18>);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_DOWN);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             I'm sorry.[K] [CS:Y]Igglybuff[CR] isn't here
+            today, either.
+        """,
+    });
+    supervision_Acting(3);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(2);
+    Move2PositionOffset<actor ACTOR_NPC_PUKURIN_PAPA>(1, 0, 8);
+    Move2PositionMark<actor ACTOR_NPC_PUKURIN_PAPA>(1, Position<'m2', 22, 17>);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWN);
+    se_Play(9730);
+    SetAnimation<object OBJECT_P17P01A1_382>(19);
+    WaitAnimation<object OBJECT_P17P01A1_382>();
+    WaitExecuteObject(OBJECT_P17P01A1_382);
+    Destroy<object OBJECT_P17P01A1_382>();
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english="""
+             You're always inviting him to
+            join you. It's not very nice of him to
+            always be too busy.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(120);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UPLEFT);
+    Wait(5);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_UPAA);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_WORRIED, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" By the way, [CS:Y]Igglybuff[CR]'s [CS:N]Mama[CR].",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_MAMA>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_DOWNRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UPRIGHT);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" What is it, [CS:N]Smoochum[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_WORRIED, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             Is it true that [CS:Y]Igglybuff[CR] goes to
+            play in [CS:P]Murky Forest[CR] every day?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_EXCLAMATION_MARK, 3);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_PAPA>();
+    WaitExecuteLives(ACTOR_NPC_SUBOMII);
+    WaitBgm(BGM_HEARTWARMING);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_SURPRISED, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" Whaaaat?![K] In [CS:P]Murky Forest[CR]?!",
+    });
+    message_KeyWait();
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_MAMA>();
+    message_Talk({
+        english=" I-is that true, [CS:N]Smoochum[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_GROWING_ANXIETY, 0, 256);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UPRIGHT);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_WORRIED, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english="""
+             We don't really know...[K] But
+            that's what we heard.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_DOWNLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UP);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_DOWNRIGHT);
+    WaitExecuteLives(ACTOR_NPC_UPAA);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_UPAA, FACE_WORRIED, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english="""
+             It looks like his [CS:N]Mama[CR] doesn't
+            know, either.
+        """,
+    });
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWNLEFT);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SUBOMII, FACE_WORRIED, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english=" If it's true...",
+    });
+    message_Talk({
+        english="""
+             I wonder if [CS:Y]Igglybuff[CR]'s OK...[K]
+            Going to that place to play all the time...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(20);
+    supervision_Acting(4);
+    SetAnimation<actor ACTOR_NPC_JUPETTA>(2);
+    SetAnimation<actor ACTOR_NPC_SUKORUPI>(2);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_UPAA);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_NPC_UPAA>();
+    message_SetFace(ACTOR_NPC_UPAA, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_FacePositionOffset(-2, 0);
+    message_Talk({
+        english=" Hey, [CS:N]Banette[CR]!",
+    });
+    Wait(8);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_RIGHT);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_JUPETTA>(1, Position<'m3', 26, 19>);
+    Wait(7);
+    MovePositionMark<actor ACTOR_NPC_SUKORUPI>(1, Position<'m4', 29.5, 21>);
+    Wait(5);
+    MovePositionMark<performer 0>(0.3984, Position<'m5', 22.5, 20.5>);
+    WaitExecutePerformer(0);
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWNRIGHT);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_NORMAL, FACE_POS_BOTTOM_L_CENTER);
+    message_Talk({
+        english="""
+             Hey, [CS:N]Banette[CR].[K] Have you seen
+            [CS:Y]Igglybuff[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWNLEFT);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" [CS:Y]Igglybuff[CR]?",
+    });
+    message_Talk({
+        english="""
+             Oh. Isn't [CS:Y]Igglybuff[CR] still going to
+            [CS:P]Murky Forest[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_MAMA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_SUBOMII>();
+    WaitExecuteLives(ACTOR_NPC_SUBOMII);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: WHAAAAAAAAT?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWNRIGHT);
+    Wait(2);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_UPLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWNRIGHT);
+    message_SetFace(ACTOR_NPC_SUKORUPI, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             We've seen him go in there
+            several times.
+        """,
+    });
+    message_KeyWait();
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_LEFT);
+    message_Talk({
+        english=" To be going to that scary place...",
+    });
+    message_Talk({
+        english="""
+             Honestly, I don't really get him.
+            [CS:Y]Igglybuff[CR], I mean.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWNLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWNRIGHT);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Oh...[K] I just saw him
+            a little while ago...
+        """,
+    });
+    message_Talk({
+        english="""
+             That scary-looking guy deep in
+            the forest...[K] [CS:Y]Igglybuff[CR] seems to have made
+            friends with him or something?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8968);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_SUBOMII>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_PAPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: WHAAAAAAAAAAAAAAAAT?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWNLEFT);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             I wonder if he's all right.[K]
+            Being with that scary guy, I mean.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN_MAMA>(0.7969, 12, 0);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWNLEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_MAMA>();
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UPLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_LEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UP);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_SAD, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" [CS:N]P[CR]-[CS:N]Papa[CR]...[K][CS:N] Papa[CR]...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(40);
+    supervision_Acting(5);
+    SetAnimation<actor ACTOR_NPC_NIDOKINGU>(2);
+    message_ResetActor();
+    message_Talk({
+        english=" Can I talk to you for a moment?",
+    });
+    bgm_FadeOut(60);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_EXCLAMATION_MARK, 3);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWN);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_EXCLAMATION_MARK, 3);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_DOWN);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_DOWN);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_DOWN);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_JUPETTA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWN);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_EXCLAMATION_MARK, 3);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_DOWN);
+    Wait(4);
+    SetEffect<actor ACTOR_NPC_SUKORUPI>(EFFECT_EXCLAMATION_MARK, 3);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWN);
+    WaitEffect<actor ACTOR_NPC_SUKORUPI>();
+    WaitExecuteLives(ACTOR_NPC_SUKORUPI);
+    MovePositionMark<actor ACTOR_NPC_NIDOKINGU>(0.7969, Position<'m6', 22.5, 25.5>);
+    Wait(20);
+    MovePositionMark<performer 0>(0.5, Position<'m7', 22.5, 24.5>);
+    WaitExecutePerformer(0);
+    WaitExecuteLives(ACTOR_NPC_NIDOKINGU);
+    message_SetFaceOnly(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Your conversation...[K] Can you tell me a bit
+            more about it, please?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_UPRIGHT);
+    WaitExecuteLives(ACTOR_NPC_NIDOKINGU);
+    message_SetFaceOnly(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Hey, you.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_JUPETTA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_JUPETTA>();
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_UPLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_RIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_DOWNRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_UPRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_RIGHT);
+    Wait(20);
+    ExecuteCommon<actor ACTOR_NPC_JUPETTA>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPETTA);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_JUPETTA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_JUPETTA>();
+    WaitExecuteLives(ACTOR_NPC_JUPETTA);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(2, -1);
+    message_Talk({
+        english=" M-me?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFaceOnly(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             The part where you said there's a
+            scary-looking guy living deep in the forest...
+        """,
+    });
+    message_Talk({
+        english=" What's he look like?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_JUPETTA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_JUPETTA>();
+    WaitExecuteLives(ACTOR_NPC_JUPETTA);
+    message_SetFace(ACTOR_NPC_JUPETTA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_FacePositionOffset(2, -1);
+    message_Talk({
+        english=" H-he looks like...",
+    });
+    message_Talk({
+        english="""
+             He's got big claws...[K]and a shell
+            that looks like armor...
+        """,
+    });
+    message_Talk({
+        english="""
+             I don't know, but he just looks
+            really scary, you know?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_NIDOKINGU);
+    Wait(20);
+    message_SetFaceOnly(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" ...[K]I'll bet it's him. It's gotta be.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionOffset<actor ACTOR_NPC_PUKURIN_PAPA>(0.5, 0, 8);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_PAPA);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_MUCHUURU>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUKORUPI>(4, 10, DIR_DOWNLEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_UPAA>(4, 10, DIR_DOWNRIGHT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_JUPETTA>(4, 10, DIR_DOWN);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_SUBOMII>(4, 10, DIR_DOWNRIGHT);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(1, -1);
+    message_Talk({
+        english=" Um...[K] Who are you?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Wait(15);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_NIDOKINGU>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_NPC_NIDOKINGU>();
+    WaitExecuteLives(ACTOR_NPC_NIDOKINGU);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_UP);
+    message_SetFaceOnly(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" My apologies for not introducing myself.",
+    });
+    message_Talk({
+        english=" I am [CS:N]Nidoking[CR].[K] I'm an explorer.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_FacePositionOffset(1, -1);
+    message_Talk({
+        english=" An explorer?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Yes.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_UPLEFT);
+    Wait(40);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(8, 10, DIR_UPRIGHT);
+    Wait(40);
+    Turn2Direction<actor ACTOR_NPC_NIDOKINGU>(4, 10, DIR_UP);
+    Wait(20);
+    message_SetFace(ACTOR_NPC_NIDOKINGU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I should introduce
+            myself properly.
+        """,
+    });
+    message_Talk({
+        english=" The truth is, I am...",
+    });
+    message_Close();
+    screen2_FadeOut(0, 30);
+    screen_FadeOut(1, 30);
+    Wait(110);
+    screen2_FadeIn(0, 30);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    Wait(20);
+    se_Play(8968);
+    ExecuteCommon<actor ACTOR_NPC_UPAA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    ExecuteCommon<actor ACTOR_NPC_PUKURIN_PAPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_SUBOMII>(EFFECT_SHOCKED_MIRRORED, 3);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_EXCLAMATION_MARK, 3);
+    SetEffect<actor ACTOR_NPC_MUCHUURU>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_NPC_SUKORUPI>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    SetEffect<actor ACTOR_NPC_JUPETTA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_JUPETTA>();
+    WaitExecuteLives(ACTOR_NPC_JUPETTA);
+    message_EmptyActor();
+    message_Talk({
+        english="[CS:N]Everyone[CR]: WHAAAAAAAAAAAAAAAAAT?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_NPC_UPAA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_NPC_UPAA>();
+    message_SetFace(ACTOR_NPC_UPAA, FACE_SURPRISED, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english=" R-really?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_MUCHUURU>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_MUCHUURU, FACE_SURPRISED, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english=" We... We've got a problem!!",
+    });
+    message_Close();
+    screen2_FadeOut(0, 60);
+    screen_FadeOut(1, 60);
+    back2_SetMode(0);
+    end;
+}

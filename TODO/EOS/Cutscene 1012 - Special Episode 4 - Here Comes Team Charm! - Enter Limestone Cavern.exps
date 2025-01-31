@@ -1,0 +1,73 @@
+
+def 0 {
+    supervision_Acting(0);
+    supervision_Acting(1);
+    supervision_Acting(2);
+    supervision_Acting(3);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(2);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(2);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(2);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(4, 10, DIR_UP);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_UP);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    message_ResetActor();
+    message_Mail({
+        english="[CN]Continue through the wall?",
+    });
+    switch ( message_SwitchMenu(0, 1) ) {
+        case menu({
+            english="Yes",
+        }):
+        default:
+            @label_0;
+            message_Close();
+            SetPositionLives<performer 0>(9);
+            camera_SetMyself<performer 0>();
+            bgm_FadeOut(60);
+            MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1, Position<'m0', 31.5, 21>);
+            WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+            MovePositionMark<actor ACTOR_PLAYER_CHARMS>(1, Position<'m1', 31.5, 18.5>);
+            supervision_Acting(4);
+            se_Play(10253);
+            SetAnimation<object OBJECT_D56P11A3_521>(17);
+            WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+            Move2PositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m2', 31.5, 23.5>);
+            supervision_RemoveActing(1);
+            WaitAnimation<object OBJECT_D56P11A3_521>();
+            WaitExecuteObject(OBJECT_D56P11A3_521);
+            supervision_RemoveActing(4);
+            WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+            Move2PositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m3', 31.5, 19.5>);
+            Move2PositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m4', 31.5, 23.5>, Position<'m5', 31.5, 19.5>);
+            WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+            Move2PositionMark<actor ACTOR_NPC_CHAAREMU>(1, Position<'m6', 31.5, 18.5>);
+            supervision_Acting(5);
+            se_Play(10253);
+            SetAnimation<object OBJECT_D56P11A3_522>(17);
+            WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+            supervision_RemoveActing(2);
+            Move2PositionMark<actor ACTOR_NPC_SAANAITO>(1, Position<'m7', 31.5, 18.5>);
+            supervision_Acting(6);
+            se_Play(10253);
+            SetAnimation<object OBJECT_D56P11A3_523>(17);
+            WaitExecuteLives(ACTOR_NPC_SAANAITO);
+            supervision_RemoveActing(3);
+            WaitAnimation<object OBJECT_D56P11A3_523>();
+            WaitExecuteObject(OBJECT_D56P11A3_522);
+            supervision_RemoveActing(5);
+            WaitAnimation<object OBJECT_D56P11A3_522>();
+            WaitExecuteObject(OBJECT_D56P11A3_523);
+            supervision_RemoveActing(6);
+            bgm_FadeOut(60);
+            main_EnterDungeon(155, 30);
+            switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { }
+            main_EnterDungeon(-1, 30);
+            hold;
+        case menu({
+            english="No",
+        }):
+            message_Close();
+            end;
+    }
+}

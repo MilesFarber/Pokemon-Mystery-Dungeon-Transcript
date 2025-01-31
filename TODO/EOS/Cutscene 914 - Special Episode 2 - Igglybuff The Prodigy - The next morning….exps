@@ -1,0 +1,65 @@
+
+def 0 {
+    sound_Stop();
+    message_Narration(30, {
+        english="[CN]The next morning...",
+    });
+    message_Close();
+    back_SetGround(LEVEL_P17P02A);
+    supervision_LoadStation(LEVEL_P17P02A, 'UN02');
+    supervision_Station(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetPositionInitial<actor ACTOR_NPC_PUKURIN_PAPA>();
+    SetPositionInitial<actor ACTOR_NPC_PUKURIN_MAMA>();
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(2);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_MAMA>(2);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(42);
+    SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(2);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_LAUGHING, 3);
+    Wait(8);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_LAUGHING, 3);
+    screen_FadeIn(1, 30);
+    bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256);
+    Wait(30);
+    Wait(80);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(23);
+    WaitAnimation<actor ACTOR_PLAYER_PUPURIN>();
+    WaitExecuteLives(ACTOR_PLAYER_PUPURIN);
+    SetAnimation<actor ACTOR_PLAYER_PUPURIN>(2);
+    MovePositionMark<actor ACTOR_PLAYER_PUPURIN>(1, Position<'m0', 26, 21>);
+    Wait(15);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_NONE, 3);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_NONE, 3);
+    Turn2Direction<actor ACTOR_PLAYER_PUPURIN>(4, 10, DIR_DOWNRIGHT);
+    Wait(4);
+    se_Play(8964);
+    SetEffect<actor ACTOR_NPC_PUKURIN_PAPA>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_PUKURIN_MAMA>(EFFECT_TWO_ARROWS_AT_SIDE_RIGHT, 3);
+    WaitEffect<actor ACTOR_NPC_PUKURIN_MAMA>();
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_PAPA>(4, 10, DIR_LEFT);
+    Wait(4);
+    Turn2Direction<actor ACTOR_NPC_PUKURIN_MAMA>(4, 10, DIR_UPLEFT);
+    WaitExecuteLives(ACTOR_NPC_PUKURIN_MAMA);
+    message_SetFace(ACTOR_PLAYER_PUPURIN, FACE_HAPPY, FACE_POS_TOP_L_FACEINW);
+    message_Talk({
+        english="""
+             Good morning, [K][CS:N]Papa[CR]. ♪
+            [CS:N]Mama[CR]. ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN_PAPA, FACE_HAPPY, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Yep. Good morning! ♪",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_PUKURIN_MAMA, FACE_HAPPY, FACE_POS_BOTTOM_R_CENTER);
+    message_Talk({
+        english=" Good morning, [CS:Y]Igglybuff[CR]! ♪",
+    });
+    message_Close();
+    end;
+}

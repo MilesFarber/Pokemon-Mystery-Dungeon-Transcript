@@ -1,0 +1,48 @@
+
+def 0 {
+    sound_Stop();
+    $SCENARIO_MAIN = scn[29, 87];
+    back_SetGround(LEVEL_H01P99A);
+    supervision_StationCommon(0);
+    supervision_LoadStation(LEVEL_H01P99A, 'US22');
+    supervision_Station(10);
+    supervision_Acting(0);
+    Wait(1);
+    SetPositionInitial<actor ACTOR_NPC_KURESERIA>();
+    SetAnimation<actor ACTOR_NPC_KURESERIA>(2);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_OCEAN1, 90, 256);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_LC_FACEOUTW);
+    message_Talk({
+        english=" To the northwest of here...",
+    });
+    message_Talk({
+        english="""
+             There is a land of volcanic
+            terrain.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_KURESERIA>(8, 10, DIR_RIGHT);
+    WaitExecuteLives(ACTOR_NPC_KURESERIA);
+    message_SetFace(ACTOR_NPC_KURESERIA, FACE_NORMAL, FACE_POS_TOP_L_CENTER);
+    message_Talk({
+        english=" The [CS:P]Dark Crater[CR] is located there.",
+    });
+    message_Talk({
+        english="""
+             Please tell me when you are
+            ready to leave.
+        """,
+    });
+    message_Talk({
+        english="""
+             I will guide you to
+            the [CS:P]Dark Crater[CR].
+        """,
+    });
+    message_Close();
+    end;
+}

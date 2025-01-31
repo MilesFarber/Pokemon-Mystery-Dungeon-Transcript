@@ -1,0 +1,45 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TIME_GEAR_REMIX, 0, 256);
+    back_SetGround(LEVEL_P12P02A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_PLAYER>(3);
+    SetAnimation<actor ACTOR_ATTENDANT1>(3);
+    SetOutputAttribute<object OBJECT_D28P33A3_68>(2);
+    Move2PositionMark<object OBJECT_D28P33A3_68>(0.7969, Position<'m0', 59.5, 27.5>);
+    Slide2PositionOffset<actor ACTOR_PLAYER>(0.7969, -128, -64);
+    Slide2PositionOffset<actor ACTOR_ATTENDANT1>(0.7969, -128, -64);
+    screen_FadeIn(1, 30);
+    WaitExecuteObject(OBJECT_D28P33A3_68);
+    se_Play(8450);
+    camera_SetEffect(2, 1, 1.0);
+    Wait(20);
+    camera_SetEffect(0, 0, 0);
+    Wait(60);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 55, 27.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Wait(20);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m2', 52.5, 27.5>);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m3', 55, 27.5>);
+    Wait(20);
+    MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m4', 45, 27.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Turn2Direction<actor ACTOR_ATTENDANT1>(4, 1, DIR_RIGHT);
+    Wait(20);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m5', 52.5, 27.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(20);
+    MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m6', 49, 27.5>);
+    WaitExecuteLives(ACTOR_PLAYER);
+    Wait(30);
+    MovePositionOffset<actor ACTOR_ATTENDANT1>(1, -80, 0);
+    MovePositionOffset<actor ACTOR_PLAYER>(1, -100, 0);
+    Wait(60);
+    screen_FadeOut(1, 30);
+    end;
+}

@@ -1,0 +1,152 @@
+
+def 0 {
+    bgm_PlayFadeIn(201, 0, 256);
+    bgm2_PlayFadeIn(BGM_EARTHQUAKE3, 0, 256);
+    back2_SetMode(4);
+    back2_SetGround(LEVEL_V39P01A);
+    back_SetGround(LEVEL_P27P01A);
+    supervision_Acting(1);
+    camera2_SetPositionMark(Position<'m0', 19.5, 12>);
+    SetOutputAttribute<object OBJECT_V39P01A1_516>(2);
+    SetAnimation<object OBJECT_V39P01A1_517>(3);
+    SetAnimation<object OBJECT_V39P01A1_516>(2);
+    camera2_SetEffect(2, 1.0, 1.0);
+    screen2_FadeIn(0, 30);
+    SlidePositionOffset<object OBJECT_V39P01A1_516>(0.1172, 0, 120);
+    SlidePositionOffset<object OBJECT_V39P01A1_517>(0.1094, 0, -34);
+    Wait(300);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    camera_SetEffect(2, 1.0, 1.0);
+    screen_FadeIn(1, 30);
+    Wait(40);
+    camera2_SetEffect(2, 0.5, 1.0);
+    Wait(10);
+    camera_SetEffect(2, 0.3984, 1.0);
+    Wait(20);
+    SetOutputAttribute<object OBJECT_V39P01A1_517>(64);
+    back2_SetEffect(12, 45);
+    Wait(20);
+    bgm2_FadeOut(210);
+    camera2_SetEffect(2, 0.1992, 1.0);
+    Wait(10);
+    camera_SetEffect(2, 0.0977, 1.0);
+    camera2_SetEffect(0, 0, 0);
+    Wait(10);
+    camera_SetEffect(0, 0, 0);
+    WaitBackEffect();
+    WaitExecuteObject(OBJECT_V39P01A1_517);
+    supervision_RemoveActing(1);
+    Wait(90);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_HAPPY, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" All right![K] That went well!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_NPC_SAANAITO);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_HAPPY, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             The treasure of the ruins
+            is ours!
+        """,
+    });
+    message_Talk({
+        english="""
+             This was a pretty easy job,
+            wasn't it? ♪
+        """,
+    });
+    message_Talk({
+        english="""
+             That's one victory right
+            after another! ♪
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(4, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    Turn2DirectionLives<actor ACTOR_NPC_CHAAREMU>(4, 10, ACTOR_PLAYER_CHARMS);
+    Wait(6);
+    Turn2DirectionLives<actor ACTOR_NPC_SAANAITO>(4, 10, ACTOR_PLAYER_CHARMS);
+    Wait(6);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             That's right...[K] We haven't lost
+            out on a treasure we've aimed for yet...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_SAANAITO, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english=" Not even one...",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_CHAAREMU, FACE_SIGH, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Team [CS:X]Charm[CR] has a 100 percent
+            success rate, and we take pride in that!
+        """,
+    });
+    message_Talk({
+        english="""
+             All right, let's go on--and
+            go undefeated!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             We're the treasure hunters--
+            Team [CS:X]Charm[CR]!
+        """,
+    });
+    message_Talk({
+        english=" Among the three of us...",
+    });
+    message_Close();
+    Turn2Direction<actor ACTOR_PLAYER_CHARMS>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_CHAAREMU>(1, 10, DIR_DOWN);
+    Turn2Direction<actor ACTOR_NPC_SAANAITO>(1, 10, DIR_DOWN);
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    SetAnimation<actor ACTOR_PLAYER_CHARMS>(24);
+    SetAnimation<actor ACTOR_NPC_CHAAREMU>(24);
+    SetAnimation<actor ACTOR_NPC_SAANAITO>(27);
+    WaitAnimation<actor ACTOR_PLAYER_CHARMS>();
+    WaitAnimation<actor ACTOR_NPC_CHAAREMU>();
+    WaitAnimation<actor ACTOR_NPC_SAANAITO>();
+    WaitExecuteLives(ACTOR_PLAYER_CHARMS);
+    WaitExecuteLives(ACTOR_NPC_CHAAREMU);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    Wait(10);
+    se_Play(5127);
+    screen_WhiteOut(1, 2);
+    Wait(2);
+    screen_FadeIn(1, 2);
+    WaitSe(5127);
+    WaitExecuteLives(ACTOR_NPC_SAANAITO);
+    message_SetFace(ACTOR_PLAYER_CHARMS, FACE_NORMAL, FACE_POS_TOP_C_FACER);
+    message_Talk({
+        english="""
+             There's nothing we
+            can't do! [M:H8]
+        """,
+    });
+    Wait(20);
+    message_Close();
+    bgm_FadeOut(60);
+    screen2_FadeOut(0, 30);
+    screen_FadeOut(1, 30);
+    back2_SetMode(0);
+    end;
+}

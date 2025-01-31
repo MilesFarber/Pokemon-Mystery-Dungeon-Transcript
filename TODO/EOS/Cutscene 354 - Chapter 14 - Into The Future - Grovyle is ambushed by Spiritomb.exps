@@ -1,0 +1,170 @@
+
+def 0 {
+    message_SetActor(ACTOR_NPC_JUPUTORU);
+    message_Talk({
+        english="""
+             I've gone quite deep.[K] There's not
+            much farther now.
+        """,
+    });
+    message_Close();
+    back_SetGround(LEVEL_D21P41A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    screen_FadeIn(1, 30);
+    Wait(30);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(1, Position<'m0', 36, 29.5>);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(15);
+    ExecuteCommon<actor ACTOR_NPC_JUPUTORU>(CORO_LOOK_AROUND_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" If I get through here...",
+    });
+    message_Talk({
+        english=" I should be at the forest.",
+    });
+    message_Talk({
+        english="""
+             The [CS:N]Sableye[CR] are coming.[K]
+            There's no time to waste.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2Direction<actor ACTOR_NPC_JUPUTORU>(4, 10, DIR_LEFT);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    Wait(15);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english="""
+             That reminds me...[K] I wonder
+            how those two are doing?
+        """,
+    });
+    message_Talk({
+        english=" Have they eluded the [CS:N]Sableye[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_JUPUTORU>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_Talk({
+        english=" Oh, forget it. This isn't the time!",
+    });
+    message_Talk({
+        english="""
+             I have to give priority to my
+            own mission no matter what!
+        """,
+    });
+    message_Talk({
+        english="""
+             I vowed to complete it even if
+            it means making sacrifices!
+        """,
+    });
+    message_Talk({
+        english=" Time to go.",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    MovePositionMark<actor ACTOR_NPC_JUPUTORU>(1, Position<'m1', 40.5, 29.5>);
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_ResetActor();
+    message_Talk({
+        english=" You there! STOP!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8967);
+    SetEffect<actor ACTOR_NPC_JUPUTORU>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_NPC_JUPUTORU>();
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Hmm?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_JUPUTORU>(CORO_LOOK_AROUND_DOWN_FUNC_SERIES, 0);
+    message_Talk({
+        english=" Who's there?!",
+    });
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_KeyWait();
+    bgm_PlayFadeIn(BGM_PLANETS_PARALYSIS, 0, 256);
+    message_ResetActor();
+    message_Talk({
+        english=" You INVADE this place with no warning!",
+    });
+    message_Talk({
+        english=" Then you DISTURB our slumber!",
+    });
+    message_Talk({
+        english=" Then, without APOLOGY, you try to leave?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english=" Who's there?![K] Who are you?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" You DARE to anger us!",
+    });
+    message_Talk({
+        english=" We expect you to PAY for these insults!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_NPC_JUPUTORU>(CORO_LOOK_AROUND_LEFT_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_NORMAL, FACE_POS_BOTTOM_L_FACEOUTW);
+    message_Talk({
+        english="""
+             Where are you?![K] Quit hiding and
+            reveal yourself!
+        """,
+    });
+    WaitExecuteLives(ACTOR_NPC_JUPUTORU);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_ResetActor();
+    message_Talk({
+        english=" You ACCUSE us of hiding?",
+    });
+    message_Talk({
+        english=" We do NOT hide.",
+    });
+    message_Talk({
+        english=" We are...[K] We are HERE!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(6925);
+    screen_FadeOut(1, 15);
+    WaitSe(6925);
+    message_Talk({
+        english=" We are [CS:N]SPIRITOMB[CR]!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_MIKARUGE, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW);
+    message_Talk({
+        english="""
+             There is NO MERCY for those
+            who transgress against us!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(7425);
+    bgm_FadeOut(160);
+    message_SetFace(ACTOR_NPC_JUPUTORU, FACE_PAIN, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Gaaaah!",
+    });
+    Wait(15);
+    screen_FadeOutAll(1, 90);
+    message_CloseEnforce();
+    CallCommon(CORO_FADE_OUT_ALL_AFTER);
+    WaitBgm(BGM_PLANETS_PARALYSIS);
+    main_EnterDungeon(30, 30);
+    main_EnterDungeon(-1, 30);
+    hold;
+    end;
+}

@@ -1,0 +1,36 @@
+
+def 0 {
+    bgm_PlayFadeIn(BGM_TREASURE_TOWN, 0, 256);
+    SetAnimation<actor ACTOR_PLAYER>(2);
+    SetAnimation<actor ACTOR_ATTENDANT1>(2);
+    Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER);
+    WaitExecuteLives(ACTOR_ATTENDANT1);
+    Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1);
+    message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD);
+    message_SwitchTalk ($PARTNER_TALK_KIND) {
+        case 1:
+            {
+                english="""
+                     The beach isn't that way,
+                    [hero].
+                """,
+            }
+        case 2:
+            {
+                english="""
+                     The beach isn't that way,
+                    [hero].
+                """,
+            }
+        default:
+            {
+                english="""
+                     The beach isn't that way,
+                    [hero].
+                """,
+            }
+    }
+    message_Close();
+    supervision_Suspend(-2);
+    end;
+}

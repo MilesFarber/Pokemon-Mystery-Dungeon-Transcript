@@ -1,0 +1,266 @@
+
+def 0 {
+    sound_Stop();
+    back_SetGround(LEVEL_G01P01A);
+    supervision_StationCommon(0);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    bgm_PlayFadeIn(BGM_OCEAN3, 60, 190);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Eek![K] That sounds
+            pretty scary!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8978);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_EXCLAMATION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Oh![K] That reminds me!",
+    });
+    message_Talk({
+        english="""
+             That thing that [CS:N]Bagon[CR] and [CS:N]Gligar[CR]
+            were looking for...[K] Was it...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    Turn2DirectionLives<actor ACTOR_NPC_YUKIKABURI>(4, 10, ACTOR_PLAYER_BIPPA);
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             That's right.[K] That thing I gave
+            you yesterday, [CS:Y]Bidoof[CR]...[K] The Ancient Map.
+        """,
+    });
+    message_Talk({
+        english="""
+             Yesterday, I was sure that if I
+            held on to that map, it would get stolen
+            from me...
+        """,
+    });
+    message_Talk({
+        english="""
+             So I decided that I had no choice
+            but to hand it to someone...
+        """,
+    });
+    message_Talk({
+        english=" And then I saw you, [CS:Y]Bidoof[CR]...",
+    });
+    message_Talk({
+        english="""
+             Afterward, I asked around
+            Treasure Town about you...[K] They all said that
+            it was probably [CS:Y]Bidoof[CR] from this guild...
+        """,
+    });
+    message_Talk({
+        english=" And so I came here to thank you.",
+    });
+    message_Talk({
+        english="""
+             I'm really sorry...[K] To have
+            caused you so much trouble.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetAnimation<actor ACTOR_NPC_YUKIKABURI>(24);
+    WaitAnimation<actor ACTOR_NPC_YUKIKABURI>();
+    WaitExecuteLives(ACTOR_NPC_YUKIKABURI);
+    SetAnimation<actor ACTOR_NPC_YUKIKABURI>(2);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    Wait(10);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             No, no! You don't have to
+            apologize! Don't worry about it, by golly!
+        """,
+    });
+    message_Talk({
+        english="""
+             I've been thinking...[K] About that
+            map you handed me...
+        """,
+    });
+    message_Talk({
+        english=" Is it really a map to [CS:P]Star Cave[CR]?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english=" That's right.",
+    });
+    message_Talk({
+        english="""
+             It's said that's where the
+            rare Pokémon[K] [CS:N]Jirachi[CR] lives...[K]
+            that [CS:P]Star Cave[CR].
+        """,
+    });
+    message_Talk({
+        english="""
+             If you meet [CS:N]Jirachi[CR], he'll grant
+            you a wish...
+        """,
+    });
+    message_Talk({
+        english="""
+             That's why those two Pokémon
+            wanted to steal the map.
+        """,
+    });
+    message_Talk({
+        english="""
+             Speaking of which...[K] I have a
+            request to make...
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8962);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_QUESTION_MARK, 3);
+    WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Yes?[K] What is it?",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_FadeOut(120);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             W-would you...[K]come with me to
+            explore [CS:P]Star Cave[CR]?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8973);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             Whaaaat?![K] Really, you want
+            little ol' me to come along?!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    bgm_PlayFadeIn(BGM_WIGGLYTUFFS_GUILD_REMIX, 0, 256);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_NORMAL, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             Yes.[K] I really want to meet
+            [CS:N]Jirachi[CR] and make a wish, but...
+        """,
+    });
+    message_Talk({
+        english="""
+             But...[K] I'm not strong enough to
+            make it very far by myself...
+        """,
+    });
+    message_Talk({
+        english="""
+             So I was hoping you would come
+            with me, [CS:Y]Bidoof[CR]!
+        """,
+    });
+    message_Talk({
+        english="""
+             You seem really dependable,
+            [CS:Y]Bidoof[CR]...[K] And kind...
+        """,
+    });
+    message_Talk({
+        english="""
+             There's nobody I'd rather go
+            exploring with than [CS:Y]Bidoof[CR]!
+        """,
+    });
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_WORRIED, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             But...[K] This is a sudden request...[K]
+            I hope I'm not bothering you?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_HEAD_SHAKE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_STUNNED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" No, no! N-not at all! Yup yup!",
+    });
+    message_Talk({
+        english="""
+             The truth is I was thinking
+            of making a wish too.
+        """,
+    });
+    message_Talk({
+        english="""
+             It's OK![K] I really want to go to
+            [CS:P]Star Cave[CR] too, yup yup!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_YUKIKABURI, FACE_INSPIRED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Really?![K] YAY! I'm so happy!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8975);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_ANGRY_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_DETERMINED, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english="""
+             If we work together...[K] We can
+            definitely meet [CS:N]Jirachi[CR]!
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_JOYOUS, 3);
+    Wait(5);
+    SetEffect<actor ACTOR_NPC_YUKIKABURI>(EFFECT_JOYOUS, 3);
+    Wait(90);
+    back_SetBackEffect(4);
+    PauseEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_JOYOUS);
+    PauseEffect<actor ACTOR_NPC_YUKIKABURI>(EFFECT_JOYOUS);
+    Wait(10);
+    message_Mail({
+        english="""
+            [CN]So that's how [CS:N]Snover[CR] and I decided
+            [CN]to go to [CS:P]Star Cave[CR] together. Yup yup!
+        """,
+    });
+    message_Mail({
+        english="""
+            [CN]But...[K] I had
+            [CN]guild training to do, yup yup...
+        """,
+    });
+    message_Mail({
+        english="[CN]So...",
+    });
+    message_Close();
+    screen_FadeOut(1, 30);
+    back_SetBackEffect(5);
+    end;
+}

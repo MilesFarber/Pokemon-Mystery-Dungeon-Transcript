@@ -1,0 +1,680 @@
+
+def 0 {
+    sound_Stop();
+    debug_Print('BIPPANONEGAIGOTO');
+    back_SetGround(LEVEL_D42P42A);
+    supervision_Acting(0);
+    camera_SetMyself<performer 0>();
+    SetAnimation<actor ACTOR_NPC_JIRAACHI>(43);
+    screen_FadeIn(1, 30);
+    Wait(30);
+    bgm_PlayFadeIn(BGM_EARTHQUAKE2, 15, 256);
+    camera_SetEffect(2, 1, 1.0);
+    Wait(30);
+    se_Play(8968);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SHOCKED_MIRRORED, 3);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Waaah!",
+    });
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_LOOK_AROUND_FAST_FUNC_SERIES, 0);
+    WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+    message_Talk({
+        english=" Wh-what's...[K]going on?!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(9225);
+    SetEffect<actor ACTOR_NPC_JIRAACHI>(EFFECT_LIGHT_ENGULFING, 3);
+    WaitEffect<actor ACTOR_NPC_JIRAACHI>();
+    WaitExecuteLives(ACTOR_NPC_JIRAACHI);
+    WaitSe(9225);
+    se_Play(9226);
+    bgm_FadeOut(90);
+    screen_WhiteOut(1, 30);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Waaaaaah!",
+    });
+    Wait(60);
+    screen_WhiteOutAll(1, 60);
+    message_CloseEnforce();
+    Wait(60);
+    camera_SetEffect(0, 0, 0);
+    screen_FadeInAll(1, 0);
+    screen_FadeIn(1, 30);
+    Wait(60);
+    se_Play(9227);
+    SetAnimation<actor ACTOR_NPC_JIRAACHI>(26);
+    WaitAnimation<actor ACTOR_NPC_JIRAACHI>();
+    WaitExecuteLives(ACTOR_NPC_JIRAACHI);
+    SetAnimation<actor ACTOR_NPC_JIRAACHI>(2);
+    WaitSe(9227);
+    Wait(30);
+    se_Play(8978);
+    SetEffect<actor ACTOR_NPC_JIRAACHI>(EFFECT_TWO_ARROWS_AT_SIDE_LEFT, 3);
+    WaitEffect<actor ACTOR_NPC_JIRAACHI>();
+    WaitExecuteLives(ACTOR_NPC_JIRAACHI);
+    message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Hah![K] All right, I'm fully awake!",
+    });
+    message_Talk({
+        english=" So, so awake! Ahhh!",
+    });
+    message_Talk({
+        english="""
+             My name is [CS:N]Jirachi[CR].[K]
+            Um...[K] Who are you?
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+    message_Talk({
+        english="""
+             I'm [CS:Y]Bidoof[CR].[K] (Golly, how many
+            times do I need to tell him?)
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Your name is [CS:Y]Bidoof[CR].",
+    });
+    message_Talk({
+        english="""
+             So, [CS:Y]Bidoof[CR].[K]
+            You better listen well.
+        """,
+    });
+    message_Talk({
+        english="""
+             I grant wishes for those who
+            manage to wake me up.
+        """,
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    se_Play(8972);
+    SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+    message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+    message_Talk({
+        english=" Waah! All of a sudden!",
+    });
+    message_Talk({
+        english=" I-I'm not ready for this yet...!",
+    });
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+    message_Talk({
+        english=" Ahem...[K] All right, I'll listen.",
+    });
+    message_KeyWait();
+    bgm_PlayFadeIn(BGM_BEYOND_THE_DREAM, 0, 256);
+    message_Talk({
+        english=" What is your wish, [CS:Y]Bidoof[CR]?",
+    });
+    @label_9;
+    forever {
+        CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+        message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+        message_Talk({
+            english=" M-my wish...",
+        });
+        message_SetActor(ACTOR_PLAYER_BIPPA);
+        message_Talk({
+            english="""
+                 My wish is...[K] Ummmm...[K]
+                Uuuuummmm...
+            """,
+        });
+        switch ( message_SwitchMenu(0, 1) ) {
+            case menu({
+                english="To become rich!",
+            }):
+            default:
+                @label_0;
+                $EVENT_LOCAL = 1;
+                message_Mail({
+                    english="""
+                        [CN]To become rich!
+                        [CN]Is this truly what you want?
+                    """,
+                });
+                @label_7;
+                switch ( message_SwitchMenu(0, 1) ) {
+                    case menu({
+                        english="Yes",
+                    }):
+                    default:
+                        message_Mail({
+                            english="[CN]Are you absolutely sure this is what you want?",
+                        });
+                        switch ( message_SwitchMenu(0, 1) ) {
+                            case menu({
+                                english="Yes",
+                            }):
+                            default:
+                                break_loop;
+                                break;
+                            case menu({
+                                english="No",
+                            }):
+                                continue;  // may be redundant
+                                break;
+                        }
+                        break;
+                    case menu({
+                        english="No",
+                    }):
+                        continue;  // may be redundant
+                        break;
+                }
+                break;
+            case menu({
+                english="To be the strongest Pokémon!",
+            }):
+                $EVENT_LOCAL = 2;
+                message_Mail({
+                    english="""
+                        [CN]To be the strongest Pokémon!
+                        [CN]Is this truly what you want?
+                    """,
+                });
+                jump @label_7;
+            case menu({
+                english="To be the best explorer!",
+            }):
+                $EVENT_LOCAL = 3;
+                message_Mail({
+                    english="""
+                        [CN]To be the best explorer!
+                        [CN]Is this truly what you want?
+                    """,
+                });
+                jump @label_7;
+            case menu({
+                english="To eat lots of yummy food!",
+            }):
+                $EVENT_LOCAL = 4;
+                message_Mail({
+                    english="""
+                        [CN]To eat lots of yummy food!
+                        [CN]Is this truly what you want?
+                    """,
+                });
+                jump @label_7;
+            case menu({
+                english="To sleep well...",
+            }):
+                $EVENT_LOCAL = 5;
+                message_Mail({
+                    english="""
+                        [CN]To sleep well!
+                        [CN]Is this truly what you want?
+                    """,
+                });
+                jump @label_7;
+            case menu({
+                english="To get lots of items!",
+            }):
+                $EVENT_LOCAL = 6;
+                message_Mail({
+                    english="""
+                        [CN]To get lots of items!
+                        [CN]Is this truly what you want?
+                    """,
+                });
+                jump @label_7;
+            case menu({
+                english="To rule the world!",
+            }):
+                $EVENT_LOCAL = 7;
+                message_Mail({
+                    english="""
+                        [CN]To rule the world!
+                        [CN]Is this truly what you want?
+                    """,
+                });
+                jump @label_7;
+        }
+    }
+    CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+    switch ( $EVENT_LOCAL ) {
+        case 1:
+        default:
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SIGH, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     .........
+                    (To become rich...!)
+                """,
+            });
+            @label_18;
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     (Th-that's[K] a really nice wish
+                    and all...)
+                """,
+            });
+            message_Talk({
+                english=" (But...)",
+            });
+            message_Talk({
+                english=" (But my dream...)",
+            });
+            @label_19;
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8962);
+            SetEffect<actor ACTOR_NPC_JIRAACHI>(EFFECT_QUESTION_MARK, 3);
+            WaitEffect<actor ACTOR_NPC_JIRAACHI>();
+            WaitExecuteLives(ACTOR_NPC_JIRAACHI);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english=" Huh?[K] Something wrong?",
+            });
+            message_Talk({
+                english=" What's your wish, [CS:Y]Bidoof[CR]?",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+            message_Talk({
+                english=" .........",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8963);
+            SetEffect<actor ACTOR_NPC_JIRAACHI>(EFFECT_QUESTION_MARK, 3);
+            WaitEffect<actor ACTOR_NPC_JIRAACHI>();
+            WaitExecuteLives(ACTOR_NPC_JIRAACHI);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english="""
+                     Something wrong?[K] You don't
+                    have a wish?
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            Wait(30);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+            message_Talk({
+                english=" M-my[K] dream...",
+            });
+            message_Talk({
+                english="""
+                     Is to become the best explorer
+                    ever, yup yup.
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english="""
+                     The best explorer?[K] Got it.[K]
+                    That's pretty easy! ♪
+                """,
+            });
+            message_Talk({
+                english=" OK, here we go! ♪",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8972);
+            SetEffect<actor ACTOR_PLAYER_BIPPA>(EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM, 3);
+            WaitEffect<actor ACTOR_PLAYER_BIPPA>();
+            WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+            se_Play(8974);
+            ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+            bgm_FadeOut(30);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     Uwaaaah![K] W-wait[K]
+                    a moment, please!
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english=" Huh?[K] What is it?",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     Golly, well, my dream is to
+                    become the best explorer ever, that's true...
+                """,
+            });
+            message_Talk({
+                english="""
+                     At first I thought I'd come down
+                    here and ask you for that, yup yup.
+                """,
+            });
+            message_Talk({
+                english=" B-but[K] I'm giving up on that plan.",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8969);
+            SetEffect<actor ACTOR_NPC_JIRAACHI>(EFFECT_SHOCKED, 3);
+            WaitEffect<actor ACTOR_NPC_JIRAACHI>();
+            WaitExecuteLives(ACTOR_NPC_JIRAACHI);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english=" Truly?[K] Why?",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+            message_Talk({
+                english=" Because...",
+            });
+            message_Talk({
+                english="""
+                     Because I've come to see it's not
+                    something you can wish for, by golly.
+                """,
+            });
+            message_KeyWait();
+            bgm_PlayFadeIn(BGM_SYMPATHY, 0, 256);
+            message_Talk({
+                english="""
+                     You've got to work hard...[K] Once
+                    you've really done your best...put in the effort,
+                    then you can feel like a worthy explorer.
+                """,
+            });
+            message_Talk({
+                english="""
+                     You gotta have lots of
+                    experiences...[K]lots of feelings and memories...
+                """,
+            });
+            message_Talk({
+                english="""
+                     Those are the ways you learn,
+                    grow, and get better, little by little. Yup yup.
+                """,
+            });
+            message_Talk({
+                english="""
+                     Yes sirree, I got a lot clearer on
+                    all this stuff during this adventure.
+                """,
+            });
+            message_Talk({
+                english="""
+                     So my wish to be the best
+                    explorer ever...
+                """,
+            });
+            message_Talk({
+                english="""
+                     [CS:N]Jirachi[CR]...[K] I'm not asking you for
+                    that anymore.
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english=" ...[K]I see...",
+            });
+            message_Talk({
+                english="""
+                     Well spoken. So you don't have
+                    any wishes?
+                """,
+            });
+            message_Talk({
+                english="""
+                     What you've just said...[K] It shows
+                    something about you. Not everyone can resist
+                    being greedy.
+                """,
+            });
+            message_Talk({
+                english="""
+                     You're a good Pokémon, [CS:Y]Bidoof[CR].[K]
+                    I've come to like you.
+                """,
+            });
+            message_Talk({
+                english="""
+                     So, if you don't have a wish
+                    right now...
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            se_Play(8974);
+            ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_SURPRISE_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SURPRISED, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     Oh![K] ...W-wait[K] just a moment,
+                    please! Yup yup!
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english=" What is it?",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SAD, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     You just said a nice thing about
+                    me not being greedy, [CS:N]Jirachi[CR]...[K]
+                    So maybe I shouldn't ask...
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english=" It's all right.[K] Go ahead.",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     If...[K]you'll still grant me
+                    a wish...
+                """,
+            });
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SIGH, FACE_POS_STANDARD);
+            message_Talk({
+                english=" I...I wish...",
+            });
+            message_Talk({
+                english="""
+                     I wish...[K] I wish for a buddy who
+                    I could teach stuff to.
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english="""
+                     A buddy?[K] You're training
+                    at the guild, aren't you, [CS:Y]Bidoof[CR]?
+                """,
+            });
+            message_Talk({
+                english="""
+                     So...you want a buddy, [CS:Y]Bidoof[CR]?
+                    Someone you can show around and give a
+                    helping hand to?
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     That's right.[K]
+                    During this adventure, I...
+                """,
+            });
+            message_Talk({
+                english="""
+                     Golly, thanks to the Guildmaster
+                    and everyone in the guild caring about me...[K]
+                    I feel so incredibly happy. Yup!
+                """,
+            });
+            message_Talk({
+                english="""
+                     But...[K] I don't want to get
+                    used to it and start acting spoiled or anything.
+                """,
+            });
+            message_Talk({
+                english=" That's why...",
+            });
+            message_Talk({
+                english="""
+                     That's the reason I'd like a pal
+                    or two.
+                """,
+            });
+            message_Talk({
+                english="""
+                     If I had a buddy...[K] A pal
+                    I could share what I learned with, I'd...
+                """,
+            });
+            message_Talk({
+                english="""
+                     Get better and better as I
+                    push forward, know what I mean?
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english=" ...[K]Yes.[K] Got it.",
+            });
+            message_Talk({
+                english="""
+                     Your wish, [CS:Y]Bidoof[CR]...[K]
+                    I will make it come true.
+                """,
+            });
+            message_Close();
+            ExecuteCommon<actor ACTOR_PLAYER_BIPPA>(CORO_JUMP_HAPPY_FUNC_SERIES, 0);
+            WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_STUNNED, FACE_POS_STANDARD);
+            message_Talk({
+                english=" R-really?!",
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_NPC_JIRAACHI, FACE_NORMAL, FACE_POS_TOP_R_CENTER);
+            message_Talk({
+                english="""
+                     Yep. ♪[K] Maybe it won't
+                    be soon...
+                """,
+            });
+            message_Talk({
+                english="""
+                     But sooner or later, you'll see
+                    some new faces at the guild.
+                """,
+            });
+            message_Talk({
+                english="""
+                     You should look forward
+                    to it. ♪
+                """,
+            });
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            SetAnimation<actor ACTOR_PLAYER_BIPPA>(3);
+            SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -1, 0);
+            Wait(3);
+            SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 1, 0);
+            Wait(3);
+            SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, -1, 0);
+            Wait(3);
+            SlidePositionOffset<actor ACTOR_PLAYER_BIPPA>(1, 1, 0);
+            WaitExecuteLives(ACTOR_PLAYER_BIPPA);
+            SetAnimation<actor ACTOR_PLAYER_BIPPA>(2);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_TEARY_EYED, FACE_POS_STANDARD);
+            message_Talk({
+                english=" Thank you...[K][CS:N]Jirachi[CR]...",
+            });
+            message_Talk({
+                english="""
+                     Thank you so much...[K]
+                    Sniff...
+                """,
+            });
+            message_Close();
+            bgm_FadeOut(240);
+            screen_FadeOut(1, 90);
+            Wait(60);
+            end;
+        case 2:
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_DETERMINED, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     .........
+                    (To be the strongest Pokémon...!)
+                """,
+            });
+            jump @label_18;
+        case 3:
+            CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC);
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD);
+            message_Talk({
+                english=" ... (That's right.)",
+            });
+            message_Talk({
+                english=" (My dream...[K] It was...)",
+            });
+            message_Talk({
+                english="""
+                     (To become the best explorer
+                    ever, yup yup.)
+                """,
+            });
+            jump @label_19;
+        case 4:
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SIGH, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     .........
+                    (To eat lots of yummy food...!)
+                """,
+            });
+            jump @label_18;
+        case 5:
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_STUNNED, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     .........
+                    (To sleep well...)
+                """,
+            });
+            jump @label_18;
+        case 6:
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_SIGH, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     .........
+                    (To get lots of items...!)
+                """,
+            });
+            jump @label_18;
+        case 7:
+            message_SetFace(ACTOR_PLAYER_BIPPA, FACE_DETERMINED, FACE_POS_STANDARD);
+            message_Talk({
+                english="""
+                     .........
+                    (To rule the world...!)
+                """,
+            });
+            jump @label_18;
+    }
+}
