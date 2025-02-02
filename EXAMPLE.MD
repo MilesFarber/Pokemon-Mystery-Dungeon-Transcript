@@ -123,7 +123,7 @@ By default, the Hero and Partner will be a male Pikachu named Hero, and a female
 `Partner Normal`
 `Partner Name`: This sounds bad! We have to go help!
 
-### Guidelines
+## Guidelines
 
 Please follow these guidelines when editing the .md file.
 
