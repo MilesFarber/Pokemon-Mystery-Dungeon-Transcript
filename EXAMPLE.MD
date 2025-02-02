@@ -220,31 +220,31 @@ I wonder who it is?
 **Partner**: What's wrong?
 
 ![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png)
-It's horrible! My Caterpie fell into a cavern! My poor baby!
+**Butterfree**: It's horrible! My Caterpie fell into a cavern! My poor baby!
 
 ![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Surprised.png)〽
-What?!
+**Partner**: What?!
 
-![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png):
-A huge fissure opened in the ground, and my Caterpie fell in!
+![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png)
+**Butterfree**: A huge fissure opened in the ground, and my Caterpie fell in!
 
-![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png):
-He's too young to crawl out by himself!
+![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png)
+**Butterfree**: He's too young to crawl out by himself!
 
-![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png):
-When I went to get my baby, Pokemon suddenly attacked me!
+![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png)
+**Butterfree**: When I went to get my baby, Pokemon suddenly attacked me!
 
-![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Surprised.png):
-Huh? You were attacked? By other Pokemon?
+![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Surprised.png)
+**Partner**: Huh? You were attacked? By other Pokemon?
 
-![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png):
-They must be enraged by the fissure... and out of control! That's what I think.
+![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png)
+**Butterfree**: They must be enraged by the fissure... and out of control! That's what I think.
 
-![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png):
-I'm not strong enough to fend off those wild Pokemon.... What will become of my baby?
+![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png)
+**Butterfree**: I'm not strong enough to fend off those wild Pokemon.... What will become of my baby?
 
-![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png):
-Oh! What am I to do?! Oh dear, oh dear...
+![Butterfree](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0012/Normal.png)
+**Butterfree**: Oh! What am I to do?! Oh dear, oh dear...
 
-![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Normal.png):
-This sounds bad! We have to go help!
+![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Normal.png)
+**Partner**: This sounds bad! We have to go help!
