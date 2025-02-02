@@ -6,7 +6,9 @@ In the future, there will be a menu here that allows the user to select the spec
 
 By default, the Hero and Partner will be a male Pikachu named Hero, and a female Eevee named Partner respectively. This is for simplicity, and also because they are the Pokemon Mascots.
 
-## Chapter 1 Cutscene 1 markdown *before* HTML Autoedit
+## Before
+
+### Cutscene 1 *before*
 
 💬: Where am I?
 
@@ -73,7 +75,7 @@ By default, the Hero and Partner will be a male Pikachu named Hero, and a female
 `Hero Normal`
 (My name...? That's right, my name is...)
 
-> After `Hero Name` inputs their name
+*After `Hero Name` inputs their name*
 
 `Partner Normal`
 `Partner Name`: Oh. `Hero Name`'s your name? Well....
@@ -121,7 +123,53 @@ By default, the Hero and Partner will be a male Pikachu named Hero, and a female
 `Partner Normal`
 `Partner Name`: This sounds bad! We have to go help!
 
-## Chapter 1 Cutscene 1 markdown *after* HTML Autoedit
+### Guidelines
+
+Please follow these guidelines when editing the .md file.
+
+`💬:` is used when the dialogue box displays an unknown bubble instead of the speaking character's name.
+
+`* * *` (the separator) is used for fade ins, fade outs, flashes, etc.
+
+`Character Expression` is used for displaying the portrait of the character's expression. Each character will have it's own assigned species. Please check [this sheet](https://sprites.pmdcollab.org/#/0025) to learn each expression's name. Do not use Special expressions unless you are 100% sure of what you're doing. Please use `Magnemite1 Normal` and `Magnemite2 Normal` for multiple characters of the same species, and try to keep track of them properly. Don't worry, there aren't multiple Porygons in any of the 5 games.
+
+`Asset`, without `Character` or an `Expression`, is used for things like places, zoomed in objects (such as the Relic Fragment), or an animation playing on one or both screens. Keep the name simple. You can usually find the asset in Bulbapedia.
+
+💧, 💢, and others are used for emotes that appear on top of the overworld sprite/model (NOT the portrait). If the character speaks right after or during the emote, put it next to `Character Expression`.
+
+*Italic* is used for actions. To avoid the fanfiction effect, this shouldn't be used unless it's required for clarification. For example, how does **Partner** learn **Hero**'s name? This clarifies that the player inserted the name through the game's name input box. Personality quizzes don't have to be included in the .md file because let's be honest, they would be a nightmare.
+
+**Bold** is used for colored text. Unfortunately, Github's markdown preview does not support text color, so bold will have to do for now.
+
+> This is used for the narrator. You will know it when you see it.
+
+```md
+This is the heading structure. It has been stored into a code block to avoid Markdown Lint errors.
+
+`# This heading is used for the .md file's full name. Please keep this at the top and don't use it for anything else.`
+
+`## This heading is used for the Chapter number and name, only Explorers and Super have chapters`
+
+`### This heading is used for the Cutscene number, the structure is as follows`
+
+## Chapter 1 The Movie
+### Cutscene 1
+### Cutscene 2
+### Cutscene 3
+## Chapter 2 The Bideo Gaem
+### Cutscene 4
+### Cutscene 5
+
+Each and every single cutscene must have a completely separate, non duplicate name. 
+This is because headings in markdown can be linked to, and this makes it much easier for the end user to link to a specific chapter when trying to show someone a specific line of dialogue.
+Make sure no two headings have the same name. This is important to avoid Markdown Lint errors.
+```
+
+Should everything have been typed correctly, the HTML Autoedit script will convert the above .md file, to this:
+
+## After
+
+### Cutscene 1 *after*
 
 💬:
 Where am I?
@@ -197,7 +245,7 @@ I wonder who it is?
 ![Pikachu](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0025/Normal.png)
 (My name...? That's right, my name is...)
 
-> After **Hero** inputs their name
+*After **Hero** inputs their name*
 
 ![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Normal.png)
 **Partner**: Oh. **Hero**'s your name? Well....
