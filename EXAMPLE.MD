@@ -4,7 +4,7 @@ Below is what the markdown looks like *before* and *after* HTML Autoedit. *Befor
 
 In the future, there will be a menu here that allows the user to select the species, gender, and name of the Hero (Human) and Partner (Pokemon). ~~If I have time, I will also implement this for every other Pokemon in the story, somehow... It will be useful for AU calculation. The parameter import and export will work similarly to [Cajunavenger's Ultimate Favorite Pokemon Picker](https://cajunavenger.github.io/).~~
 
-By default, the Hero and Partner will be Pikachu and Eevee respectively. This is for simplicity, and also because Pikachu and Eevee are the Pokemon Mascots.
+By default, the Hero and Partner will be a male Pikachu named Hero, and a female Eevee named Partner respectively. This is for simplicity, and also because they are the Pokemon Mascots.
 
 ## Chapter 1 Cutscene 1 markdown *before* HTML Autoedit
 
