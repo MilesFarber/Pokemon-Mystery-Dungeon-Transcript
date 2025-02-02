@@ -1,53 +1,123 @@
 # Pokemon Mystery Dungeon: Red Rescue Team
 
-## Chapter 1
+## Chapter 0
 
 ### Cutscene 1
 
 💬: Where am I?
+
 💬: Am I dreaming this?
+
 💬: I feel a pleasant breeze.
+
 💬: ...I hear a voice from somewhere...
+
 💬: I wonder who it is?
+
 * * *
+
 💬: ......
+
 💬: ............
+
 💬: ...Excuse me.
+
 💬: ...Please, wake up. Come on, wake up.
+
 * * *
+
 `Tiny Woods`
-`Partner Normal`: You're finally awake! Great!
-`Hero Normal`: (Wh-where is this...?)
-`Partner Normal`: You were passed out here. I'm glad to see you awake!
-`Partner Happy`: I'm PARTNER. Glad to meet you!
-`Partner Normal`: ...And, you are? I've never seen you around before.
-`Partner Worried`❓: Huh? You're a human?
-`Partner Worried`: But you look like a normal `Hero Species` in every way.
-`Hero Surprised`❗: (It... It's true...)
-`Hero Surprised`: (I have turned into a `Hero Species`!)
-`Hero Worried`: (...But why? I don't remember anything...)
-`Partner Worried`: Um... You're kind of weird...
-`Partner Worried`: Your name? What's your name?
-`Hero Normal`: (My name...? That's right, my name is...)
-> After `Hero Name` inputs their name
-`Partner Normal`: Oh. `Hero Name`'s your name? Well....
-`Partner Joyous`: It's a funny name!
+
+`Partner Normal`
+💬: You're finally awake! Great!
+
+`Hero Normal`
+💬: (Wh-where is this...?)
+
+`Partner Normal`
+💬: You were passed out here. I'm glad to see you awake!
+
+`Partner Happy`
+`Partner Name`: I'm PARTNER. Glad to meet you!
+
+`Partner Normal`
+`Partner Name`: ...And, you are? I've never seen you around before.
+
+`Partner Worried`❓
+`Partner Name`: Huh? You're a human?
+
+`Partner Worried`
+`Partner Name`: But you look like a normal `Hero Species` in every way.
+
+`Hero Surprised`〽
+(It... It's true...)
+
+`Hero Surprised`
+(I have turned into a `Hero Species`!)
+
+`Hero Worried`
+(...But why? I don't remember anything...)
+
 💧
+
+`Partner Worried`
+`Partner Name`: Um... You're kind of weird...
+
+`Partner Worried`
+`Partner Name`: Your name? What's your name?
+
+`Hero Normal`
+(My name...? That's right, my name is...)
+
+*After `Hero Name` inputs their name*
+
+`Partner Normal`
+`Partner Name`: Oh. `Hero Name`'s your name? Well....
+
+`Partner Joyous`
+`Partner Name`: It's a funny name!
+
+💧
+
 💬: Somebody! Please! Help me!
-`Partner Normal`: Huh? I hear shouts from over there...
-`Partner Normal`: What's wrong?
-`Butterfree Normal`: It's horrible! My Caterpie fell into a cavern! My poor baby!
-`Partner Surprised`: What?!
-`Butterfree Normal`: A huge fissure opened in the ground, and my Caterpie fell in!
-`Butterfree Normal`: He's too young to crawl out by himself!
-`Butterfree Normal`: When I went to get my baby, Pokemon suddenly attacked me!
-`Partner Surprised`: Huh? You were attacked? By other Pokemon?
-`Butterfree Normal`: They must be enraged by the fissure... and out of control! That's what I think.
-`Butterfree Normal`: I'm not strong enough to fend off those wild Pokemon.... What will become of my baby?
-`Butterfree Normal`: Oh! What am I to do?! Oh dear, oh dear...
-`Partner Normal`: This sounds bad! We have to go help!
 
+`Partner Normal`❗
+`Partner Name`: Huh? I hear shouts from over there...
 
+`Partner Normal`
+`Partner Name`: What's wrong?
+
+`Butterfree Normal`
+`Butterfree Name`: It's horrible! My Caterpie fell into a cavern! My poor baby!
+
+`Partner Surprised`〽
+`Partner Name`: What?!
+
+`Butterfree Normal`
+`Butterfree Name`: A huge fissure opened in the ground, and my Caterpie fell in!
+
+`Butterfree Normal`
+`Butterfree Name`: He's too young to crawl out by himself!
+
+`Butterfree Normal`
+`Butterfree Name`: When I went to get my baby, Pokemon suddenly attacked me!
+
+`Partner Surprised`
+`Partner Name`: Huh? You were attacked? By other Pokemon?
+
+`Butterfree Normal`
+`Butterfree Name`: They must be enraged by the fissure... and out of control! That's what I think.
+
+`Butterfree Normal`
+`Butterfree Name`: I'm not strong enough to fend off those wild Pokemon.... What will become of my baby?
+
+`Butterfree Normal`
+`Butterfree Name`: Oh! What am I to do?! Oh dear, oh dear...
+
+`Partner Normal`
+`Partner Name`: This sounds bad! We have to go help!
+
+### Cutscene 2
 
 Caterpie Tearyeyed: Waaaaah...
 Caterpie Tearyeyed: Mommy... Where are you...? Sniffle...

@@ -127,7 +127,7 @@ By default, the Hero and Partner will be a male Pikachu named Hero, and a female
 
 Please follow these guidelines when editing the .md file.
 
-`💬:` is used when the dialogue box displays an unknown bubble instead of the speaking character's name.
+💬: is used when the dialogue box displays an unknown bubble instead of the speaking character's name.
 
 `* * *` (the separator) is used for fade ins, fade outs, flashes, etc.
 
@@ -146,11 +146,11 @@ Please follow these guidelines when editing the .md file.
 ```md
 This is the heading structure. It has been stored into a code block to avoid Markdown Lint errors.
 
-`# This heading is used for the .md file's full name. Please keep this at the top and don't use it for anything else.`
+# This heading is used for the .md file's full name. Please keep this at the top and don't use it for anything else.
 
-`## This heading is used for the Chapter number and name, only Explorers and Super have chapters`
+## This heading is used for the Chapter number and name, only Explorers and Super have chapters
 
-`### This heading is used for the Cutscene number, the structure is as follows`
+### This heading is used for the Cutscene number, the structure is as follows
 
 ## Chapter 1 The Movie
 ### Cutscene 1
