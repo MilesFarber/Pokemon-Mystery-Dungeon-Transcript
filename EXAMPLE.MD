@@ -1,6 +1,6 @@
 # HTML Autoedit Example
 
-Below is what the markdown looks like *before* and *after* HTML Autoedit. *Before* is what the .md file looks like. *After* is what the user will see after inputting their parameters.
+Below is what the markdown looks like *before* and *after* HTML Autoedit. *Before* is what the .md file itself looks like, untouched, from the repository. *After* is what the end user will see after inputting their parameters in the Github Pages website.
 
 In the future, there will be a menu here that allows the user to select the species, gender, and name of the Hero (Human) and Partner (Pokemon). ~~If I have time, I will also implement this for every other Pokemon in the story, somehow... It will be useful for AU calculation. The parameter import and export will work similarly to [Cajunavenger's Ultimate Favorite Pokemon Picker](https://cajunavenger.github.io/).~~
 
