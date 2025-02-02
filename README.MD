@@ -55,7 +55,7 @@ You're finally awake! Great!
 You were passed out here. I'm glad to see you awake!
 
 ![Pikachu](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0025/Happy.png):
-I'm PARTNER. Glad to meet you!
+I'm **Partner**. Glad to meet you!
 
 ![Pikachu](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0025/Normal.png):
 ...And, you are? I've never seen you around before.
@@ -64,13 +64,13 @@ I'm PARTNER. Glad to meet you!
 Huh? You're a human?
 
 ![Pikachu](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0025/Worried.png):
-But you look like a normal `HERO_SPECIES` in every way.
+But you look like a normal **Eevee** in every way.
 
 ![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Surprised.png)❗:
 (It... It's true...)
 
 ![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Surprised.png):
-(I have turned into a `HERO_SPECIES`!)
+(I have turned into a **Eevee**!)
 
 ![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Worried.png):
 (...But why? I don't remember anything...)
@@ -84,10 +84,10 @@ Your name? What's your name?
 ![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Normal.png):
 (My name...? That's right, my name is...)
 
-> After `HERO` inputs their name
+> After **Hero** inputs their name
 
 ![Pikachu](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0025/Normal.png):
-Oh. `HERO`'s your name? Well....
+Oh. **Hero**'s your name? Well....
 
 ![Pikachu](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0025/Joyous.png)🔆:
 It's a funny name!
