@@ -1,46 +1,51 @@
+# Pokemon Mystery Dungeon: Red Rescue Team
+
+## Chapter 1
+
+### Cutscene 1
+
 💬: Where am I?
 💬: Am I dreaming this?
 💬: I feel a pleasant breeze.
 💬: ...I hear a voice from somewhere...
 💬: I wonder who it is?
-
+* * *
 💬: ......
 💬: ............
 💬: ...Excuse me.
 💬: ...Please, wake up. Come on, wake up.
-
-Partner Normal: You're finally awake! Great!
-Hero Normal: (Wh-where is this...?)
-Partner Normal: You were passed out here. I'm glad to see you awake!
-Partner Happy: I'm PARTNER. Glad to meet you!
-Partner Normal: ...And, you are? I've never seen you around before.
-
-Partner Worried: Huh? You're a human?
-Partner Worried: But you look like a normal HERO_SPECIES in every way.
-
-Hero Surprised: (It... It's true...)
-Hero Surprised: (I have turned into a Meowth!)
-Hero Worried: (...But why? I don't remember anything...)
-Partner Worried: Um... You're kind of weird...
-Partner Worried: Your name? What's your name?
-Hero Normal: (My name...? That's right, my name is...)
-
-Partner Normal: Oh. HERO's your name? Well....
-Partner Joyous: It's a funny name!
-
+* * *
+`Tiny Woods`
+`Partner Normal`: You're finally awake! Great!
+`Hero Normal`: (Wh-where is this...?)
+`Partner Normal`: You were passed out here. I'm glad to see you awake!
+`Partner Happy`: I'm PARTNER. Glad to meet you!
+`Partner Normal`: ...And, you are? I've never seen you around before.
+`Partner Worried`❓: Huh? You're a human?
+`Partner Worried`: But you look like a normal `Hero Species` in every way.
+`Hero Surprised`❗: (It... It's true...)
+`Hero Surprised`: (I have turned into a `Hero Species`!)
+`Hero Worried`: (...But why? I don't remember anything...)
+`Partner Worried`: Um... You're kind of weird...
+`Partner Worried`: Your name? What's your name?
+`Hero Normal`: (My name...? That's right, my name is...)
+> After `Hero Name` inputs their name
+`Partner Normal`: Oh. `Hero Name`'s your name? Well....
+`Partner Joyous`: It's a funny name!
+💧
 💬: Somebody! Please! Help me!
-Partner Normal: Huh? I hear shouts from over there...
-Partner Normal: What's wrong?
-Butterfree: It's horrible! My Caterpie fell into a cavern! My poor baby!
-Partner Surprised: What?!
-Butterfree: A huge fissure opened in the ground, and my Caterpie fell in!
-Butterfree: He's too young to crawl out by himself!
-Butterfree: When I went to get my baby, Pokemon suddenly attacked me!
-Partner Surprised: Huh? You were attacked? By other Pokemon?
-Butterfree: They must be enraged by the fissure... and out of control! That's what I think.
-Butterfree: I'm not strong enough to fend off those wild Pokemon.... What will become of my baby?
-Butterfree: Oh! What am I to do?! Oh dear, oh dear...
-Partner Normal: This sounds bad! We have to go help!
+`Partner Normal`: Huh? I hear shouts from over there...
+`Partner Normal`: What's wrong?
+`Butterfree Normal`: It's horrible! My Caterpie fell into a cavern! My poor baby!
+`Partner Surprised`: What?!
+`Butterfree Normal`: A huge fissure opened in the ground, and my Caterpie fell in!
+`Butterfree Normal`: He's too young to crawl out by himself!
+`Butterfree Normal`: When I went to get my baby, Pokemon suddenly attacked me!
+`Partner Surprised`: Huh? You were attacked? By other Pokemon?
+`Butterfree Normal`: They must be enraged by the fissure... and out of control! That's what I think.
+`Butterfree Normal`: I'm not strong enough to fend off those wild Pokemon.... What will become of my baby?
+`Butterfree Normal`: Oh! What am I to do?! Oh dear, oh dear...
+`Partner Normal`: This sounds bad! We have to go help!
 
 
 
