@@ -85,9 +85,7 @@ By default, the Hero and Partner will be Pikachu and Eevee respectively. This is
 
 💬: Somebody! Please! Help me!
 
-❗❗
-
-`Partner Normal`
+`Partner Normal`❗
 `Partner Name`: Huh? I hear shouts from over there...
 
 `Partner Normal`
@@ -211,9 +209,7 @@ I wonder who it is?
 
 💬: Somebody! Please! Help me!
 
-❗❗
-
-![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Normal.png)
+![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Normal.png)❗
 **Partner**: Huh? I hear shouts from over there...
 
 ![Eevee](https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0133/Normal.png)
