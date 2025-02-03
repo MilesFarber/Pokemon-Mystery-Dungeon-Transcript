@@ -4,17 +4,11 @@
 
 ### Cutscene 1
 
-💬: Where am I?
-
-💬: Am I dreaming this?
-
-💬: I feel a pleasant breeze.
-
-💬: ...I hear a voice from somewhere...
-
-💬: I wonder who it is?
-
-* * *
+> Where am I?
+> Am I dreaming this?
+> I feel a pleasant breeze.
+> ...I hear a voice from somewhere...
+> I wonder who it is?
 
 💬: ......
 

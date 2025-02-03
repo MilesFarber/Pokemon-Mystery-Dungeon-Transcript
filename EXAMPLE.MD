@@ -11,16 +11,10 @@ By default, the Hero and Partner will be a male Pikachu named Hero, and a female
 ### Cutscene 1 *before*
 
 > Where am I?
-
 > Am I dreaming this?
-
 > I feel a pleasant breeze.
-
 > ...I hear a voice from somewhere...
-
 > I wonder who it is?
-
-* * *
 
 💬: ......
 
@@ -172,16 +166,10 @@ Should everything have been typed correctly, the HTML Autoedit script will conve
 ### Cutscene 1 *after*
 
 > Where am I?
-
 > Am I dreaming this?
-
 > I feel a pleasant breeze.
-
 > ...I hear a voice from somewhere...
-
 > I wonder who it is?
-
-* * *
 
 💬: ......
 
