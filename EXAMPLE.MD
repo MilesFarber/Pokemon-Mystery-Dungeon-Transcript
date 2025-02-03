@@ -129,7 +129,7 @@ Please follow these guidelines when editing the .md file.
 
 `* * *` (the separator) is used for fade ins, fade outs, flashes, etc. that take place in the middle of a cutscene. If a separator is at the start or end of a cutscene, feel free to remove it as the heading will do the same job.
 
-`Character Expression` is used for displaying the portrait of the character's expression. Each character will have it's own assigned species. Please check [this sheet](https://sprites.pmdcollab.org/#/0025) to learn each expression's name. Do not use Special expressions unless you are 100% sure of what you're doing. Please use `Magnemite1 Normal` and `Magnemite2 Normal` for multiple characters of the same species, and try to keep track of them properly. Don't worry, there aren't multiple Porygons in any of the 5 games.
+`Character Expression` is used for displaying the portrait of the character's expression. Each character will have it's own assigned species. Please check [this sheet](https://sprites.pmdcollab.org/#/0025) to learn each expression's name. Do not use Special expressions unless you are 100% sure of what you're doing. Please use `Magnemite Normal`1 and `Magnemite Normal`2 for multiple characters of the same species, and try to keep track of them properly. Don't worry, there aren't multiple Porygons in any of the 5 games.
 
 `Asset`, without `Character` or an `Expression`, is used for things like places, zoomed in objects (such as the Relic Fragment), or an animation playing on one or both screens. Keep the name simple. You can usually find the asset in Bulbapedia.
 
