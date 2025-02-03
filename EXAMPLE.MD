@@ -10,15 +10,15 @@ By default, the Hero and Partner will be a male Pikachu named Hero, and a female
 
 ### Cutscene 1 *before*
 
-💬: Where am I?
+> Where am I?
 
-💬: Am I dreaming this?
+> Am I dreaming this?
 
-💬: I feel a pleasant breeze.
+> I feel a pleasant breeze.
 
-💬: ...I hear a voice from somewhere...
+> ...I hear a voice from somewhere...
 
-💬: I wonder who it is?
+> I wonder who it is?
 
 * * *
 
@@ -141,7 +141,7 @@ Please follow these guidelines when editing the .md file.
 
 **Bold** is used for colored text. Unfortunately, Github's markdown preview does not support text color, so bold will have to do for now.
 
-> This is used for the narrator. You will know it when you see it.
+> This is used for the narrator, or other dialogue that appears at the center of the screen. You will know it when you see it.
 
 ```md
 This is the heading structure. It has been stored into a code block to avoid Markdown Lint errors.
@@ -171,34 +171,25 @@ Should everything have been typed correctly, the HTML Autoedit script will conve
 
 ### Cutscene 1 *after*
 
-💬:
-Where am I?
+> Where am I?
 
-💬:
-Am I dreaming this?
+> Am I dreaming this?
 
-💬:
-I feel a pleasant breeze.
+> I feel a pleasant breeze.
 
-💬:
-...I hear a voice from somewhere...
+> ...I hear a voice from somewhere...
 
-💬:
-I wonder who it is?
+> I wonder who it is?
 
 * * *
 
-💬:
-......
+💬: ......
 
-💬:
-............
+💬: ............
 
-💬:
-...Excuse me.
+💬: ...Excuse me.
 
-💬:
-...Please, wake up. Come on, wake up.
+💬: ...Please, wake up. Come on, wake up.
 
 * * *
 
