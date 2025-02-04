@@ -1,4 +1,4 @@
-# Pokemon Mystery Dungeon: Red Rescue Team
+# Pokemon Mystery Dungeon: Blue Rescue Team
 
 ## Chapter 0
 
@@ -36,7 +36,7 @@
 💬: You were passed out here. I'm glad to see you awake!
 
 `Partner Happy`
-`Partner Name`: I'm PARTNER. Glad to meet you!
+`Partner Name`: I'm `Partner Name`. Glad to meet you!
 
 `Partner Normal`
 `Partner Name`: ...And, you are? I've never seen you around before.
@@ -124,20 +124,22 @@ Caterpie Tearyeyed: Huh?
 Partner Normal: Your mom's waiting. Let's get you out!
 Caterpie: Ok.
 
+* * *
+
 Butterfree: My baby's safe... I'm sorry, I don't know how I could ever thank you properly...
 Partner Happy: Oh, that's OK! It has been dangerous lately with sudden quakes and fissures like that one.
 Partner Happy: It was great to find your little boy unharmed.
 Butterfree: Please, may I have your names at least?
-Partner Normal: I'm PARTNER.
-Partner Normal: And this is HERO.
+Partner Normal: I'm `Partner Name`.
+Partner Normal: And this is `Hero Name`.
 Caterpie Inspired: ............ Cool...
 Hero Worried: (He's, uh... Staring at me adoringly...)
 Hero Worried: (Those sparkly eyes... It's a little embarrassing...)
 Hero Happy: (But, this doesn't feel bad either. It's like I'm a hero.)
 Hero Happy: (Helping Pokemon in trouble might be a good experience.)
-Caterpie Inspired: Thank you! PARTNER and HERO!
+Caterpie Inspired: Thank you! `Partner Name` and `Hero Name`!
 Butterfree: I know it isn't really enough, but this is a token of our thanks. Please accept it.
-HERO's team received the promised Oran Berry.
+`Hero Name`'s team received the promised Oran Berry.
 The team also received the item Pecha Berry.
 The team also received the item Rawst Berry.
 Butterfree: Thank you so much. Good-bye.
@@ -145,9 +147,9 @@ Partner Happy: Thank you for helping!
 Partner Normal: You're very tough. I was sure impressed.
 Partner Normal: So... What are you going to do? Do you have any plans?
 Hero Worried: (............)
-Partner Normal: ...Listen, HERO. If you don't have a place to stay, you should come with me.
+Partner Normal: ...Listen, `Hero Name`. If you don't have a place to stay, you should come with me.
 
-
+### Cutscene 3
 
 Partner Normal: Well, this is the place...
 Hero Happy: (Wow!)
@@ -156,9 +158,9 @@ Hero Happy: (I'm a human being, but I like this place. I feel weirdly happy!)
 Hero Happy: (It might be an instinct thing for Pokemon...)
 Hero Happy (Maybe this is what it feels like to want to wag your tail...)
 Hero Happy: (It doesn't matter! I'm happy!)
-Hero Happy: (Maybe I feel that way because I'm HERO_SPECIES!)
-Partner Happy: Oh, HERO. You're impressed, aren't you?
-Partner Happy: I thought so. I thought this would make a good place for you to live, HERO.
+Hero Happy: (Maybe I feel that way because I'm `Hero Species`!)
+Partner Happy: Oh, `Hero Name`. You're impressed, aren't you?
+Partner Happy: I thought so. I thought this would make a good place for you to live, `Hero Name`.
 Partner Happy: I was sure you would like it.
 Partner Normal: This is your Mailbox. They deliver mail from Pokemon here.
 Partner Normal: You know, just like the fissure Caterpie fell into...
@@ -168,43 +170,51 @@ Partner Normal: I want to help Pokemon in these tough times.
 Partner Normal: I want to help change things so all the Pokemon can live in peace.
 Partner Normal: So, uh... Well, I liked how you handled yourself when we rescued Caterpie.
 Partner Normal: Would you like to join me on a rescue team?
-Partner Normal: HERO, with you, I think we could even become the world's best rescue team. How about it?
-(If HERO chooses "Form a rescue team.")
+Partner Normal: `Hero Name`, with you, I think we could even become the world's best rescue team. How about it?
+(If `Hero Name` chooses "Form a rescue team.")
 Partner Happy: Perfect! That's it then!
-Partner Happy: We're partners in our rescue team from now on, HERO! Glad to have you on board!
+Partner Happy: We're partners in our rescue team from now on, `Hero Name`! Glad to have you on board!
 Partner Normal: The team name... Well, I don't have one yet.
-Partner Normal: So, HERO. What do you think would be a good name for us?
+Partner Normal: So, `Hero Name`. What do you think would be a good name for us?
 
-Partner Inspired: TEAM! I like it! It's a good name! It's perfect for us!
-Partner Happy: Rescue Team TEAM! Let's do good starting tomorrow!
+*After `Hero Name` inputs the `Team Name`*
 
+Partner Inspired: `Team Name`! I like it! It's a good name! It's perfect for us!
+Partner Happy: Rescue Team `Team Name`! Let's do good starting tomorrow!
 
+* * *
 
 And that is how
-HERO and PARTNER began their careers together
+`Hero Name` and `Partner Name` began their careers together
 as a rescue team.
 
-TITLE
+* * *
 
+``Blue Rescue Team Title Card``
 
+### Cutscene 4
 
 The next morning...
 
+* * *
+
 Hero Normal: ...I'm still the same.
-Hero Normal: The way I look.... I'm still HERO_SPECIES.
+Hero Normal: The way I look.... I'm still `Hero Species`.
 Hero Normal: But why would I be transformed into a Pokemon?
 Hero Worried: ............ Hmm... I don't understand this at all...
 Hero Worried: ............ I feel groggy and sleepy...
 Hero Worried: Not feeling well... I need more sleep...
 
+### Cutscene 5
+
 Hero Normal: Oof... I'm feeling refreshed!
 Hero Normal: I still look like a Pokemon, but...
 Hero Normal: ............
-Hero Normal: Oh, that's right. That Pokemon... I think it was PARTNER?
+Hero Normal: Oh, that's right. That Pokemon... I think it was `Partner Name`?
 Hero Normal: We made a promise to form a rescue team together...
-Hero Normal: I wonder what PARTNER is doing? I should go out.
+Hero Normal: I wonder what `Partner Name` is doing? I should go out.
 
-
+### Cutscene 6
 
 Partner Surprised: ...Hunh?! Oh, no!
 Partner Happy: Hahaha, sorry! I was so excited, I came out here at dawn to wait for you.
@@ -214,11 +224,11 @@ Partner Happy: .....
 Partner Normal: ............
 Partner Sad: ...But, anyway... We don't have any job offers yet... Hahahaha...
 Partner Normal: Oh, yeah! Maybe there's something in the Mailbox...
-PARTNER checked the Mailbox.
+`Partner Name` checked the Mailbox.
 The Mailbox contained a Rescue Team Starter Set!
 Partner Inspired: I knew it'd be there! It's the Rescue Team Starter Set!
 Partner Happy: They always give you one if you start a rescue team.
-PARTNER opened the Rescue Team Starter Set.
+`Partner Name` opened the Rescue Team Starter Set.
 There was a Rescue Team Badge inside!
 There was a Toolbox inside!
 There was also an issue of Pokemon News inside!
@@ -230,7 +240,7 @@ Partner Normal: Items are very useful, so let's use them on our adventures.
 Partner Normal: And finally, a copy of the Pokemon News. It's useful for rescue teams.
 Partner Normal: I'll put the Pokemon News in the Mailbox. You should read it later on.
 Partner Normal: Anything else? Is there any other mail...? Maybe not?
-PARTNER checked the Mailbox.
+`Partner Name` checked the Mailbox.
 But the Mailbox was empty.
 Partner Sad: Ok, so there isn't any mail for us after all...
 Partner Normal: If there were any rescue jobs, we would be getting mail, but...
@@ -239,11 +249,11 @@ Flap! Flap!
 Clunk!
 Partner Normal: Oh? I wonder what it could be.
 
+### Cutscene 7
 
-
-HERO checked the Mailbox.
+`Hero Name` checked the Mailbox.
 Partner Inspired: Maybe it's a rescue job offer! What does it say?
-HERO read the letter.
+`Hero Name` read the letter.
 "BZZ BZZ BZZ!
 I HEARD ABOUT YOU FROM CATERPIE.
 PLEASE. WE NEED YOUR HELP. MAGNEMITE IS IN TROUBLE.
@@ -253,28 +263,31 @@ THAT ISN'T ENOUGH TO FORM A MAGNETON. IT'S NOT COMPLETE THE WAY IT IS NOW.
 PLEASE. WE NEED HELP. BZZ BZZ BZZ.
 FROM MAGNEMITE'S FRIEND"
 Partner Normal: What do you think? Do you think we should go?
-(If Hero chooses Yes! Let's go!)
+*If `Hero Name` chooses "Yes! Let's go!"*
 Partner Happy: That's the spirit! Let's do our best!
 
-
+### Cutscene 8
 
 Magnemite: OH, YOU ARE HERE. BZBZBZZ!
 Magnemite: MY FRIENDS ARE IN THIS CAVERN. BZBZBZZ.
 Magnemite: MY FRIENDS SHOULD BE ON B6F. PLEASE HELP THEM! BZBZBZZZT!
 
-
+### Cutscene 9
 
 Partner Normal: Oh, there they are! Let's get them out safely.
+
+* * *
+
 Magnemite Happy: OUR BODIES SEPARATED. BZBZBZZ. REJOICE! BZBZBZZT!
 Magnemite Happy: YAY! BZBZBZZT!
 Magnemite Happy: YAY! BZBZBZZT!
 Magnemite Happy: BE THANKFUL, YOU TWO.
-Magnemite: YOU ARE OUR HERO. THANK YOU. BZBZBZZ!
-HERO's team received the reward 500 Poke.
+Magnemite: YOU ARE OUR `Hero Name`. THANK YOU. BZBZBZZ!
+`Hero Name`'s team received the reward 500 Poke.
 The team also received the item Reviver Seed.
 The team also received the item Rawst Berry.
 
-
+* * *
 
 Partner Happy: I'm glad our rescue mission went well today.
 Partner Normal: Actually, since this was our first job as a proper rescue team...
@@ -282,7 +295,7 @@ Partner Normal: I was really tense and nervous.
 Partner Normal: I'm exhausted now. I've got to go get some sleep.
 Partner Normal: Let's keep up our good work tomorrow. See you.
 
-
+### Cutscene 10
 
 Hero Normal: ......
 Hero Normal: ............
@@ -293,15 +306,18 @@ Hero Normal: Who is it...? Someone I know...?
 Hero Worried: ......Hmm... I can't remember.
 Hero Worried: ............
 
-
+* * *
 
 Hero Normal: I think I dreamt something...
 Hero Normal: But I can't quite remember what that dream was about...
 Hero Happy: Oh, well. Today's another day of rescues!
 Hero Normal: I wonder if I have any mail? Better check the Mailbox.
-HERO checked the Mailbox.
+
+### Cutscene 11
+
+`Hero Name` checked the Mailbox.
 But there was no mail seeking help from the rescue team.
-Partner Happy: Good morning, HERO! Aren't you up early?
+Partner Happy: Good morning, `Hero Name`! Aren't you up early?
 Partner Inspired: Oh! So, you checked the Mailbox.
 Partner Inspired: ...So, was there anything? Were there any rescue requests?
 Partner Surprised: Huh? Empty?!
@@ -310,7 +326,7 @@ Partner Normal: Well, too bad. Want to go to Pokemon Square?
 Partner Normal: I think if we go to the Pelipper Post Office, there'll be jobs posted.
 Partner Normal: Pokemon Square's over this way. Let's go.
 
-
+### Cutscene 12
 
 Partner Normal: This is Pokemon Square.
 Partner Normal: That's the Kecleon Shop. You can buy and sell items there.
@@ -326,7 +342,7 @@ Partner Normal: Oh, and there's also the Pelipper Post Office. That's up past he
 Partner Normal: I think we can get some information on rescue jobs.
 Partner Normal: Let's first go to the Pelipper Post Office.
 
-
+### Cutscene 13
 
 Partner Normal: That building is the Pelipper Post Office.
 Partner Normal: This is where information is gathered from Pokemon needing rescue in various locations.
@@ -343,12 +359,12 @@ Partner Normal: I think that will bring job offers to our Mailbox.
 Partner Normal: And if you want to go on a rescue mission...
 Partner Normal: Choose the job on the Job List... Then, select Take Job. Try to always do that before you leave!
 
-
+### Cutscene 14
 
 Partner Normal: Didn't we do good today? Let's call it a night and get some rest.
 Partner Normal: Ok, see you tomorrow!
 
-
+### Cutscene 15
 
 Hero Normal: ......
 Hero Normal: ............
@@ -361,25 +377,28 @@ Hero Surprised: Whoa! It's getting worse.
 Hero Normal: For a dream, this feels strangely real, but...
 Hero Normal: ............
 
-
+### Cutscene 16
 
 The next morning...
 💬: Uhh... Hello?
-💬: Hello? Uhh... You are HERO... Aren't you?
+💬: Hello? Uhh... You are `Hero Name`... Aren't you?
 💬: ...Oh! You can't see us, of course! How very rude of us!
 Dugtrio: We're pleased to meet you. We are Dugtrio.
 Dugtrio: Last night, during the earthquake...
 Dugtrio: Our child Diglett was attacked...
 Dugtrio: He was whisked away to the peak of a tall mountain.
 Dugtrio: We couldn't possibly climb somewhere so high up...
-Dugtrio: That is why we must call upon you for your help, HERO.
+Dugtrio: That is why we must call upon you for your help, `Hero Name`.
 Dugtrio: Diglett was abducted by a Pokemon named Skarmory.
 Dugtrio: It's a vilely vicious ruffian! Please do be careful.
 Dugtrio: Please, we need your help! We must go!
 Hero Normal: ............
 Hero Normal: ...That was so sudden, there was no time to even say no...
 Hero Normal: It's too bad. I'd better go.
-Partner Normal: Good morning, HERO!
+
+### Cutscene 17
+
+Partner Normal: Good morning, `Hero Name`!
 Partner Normal: ............Huh?!
 Partner Inspired: You were just asked to go on a rescue mission?
 💬: Yes!
@@ -388,7 +407,7 @@ Dugtrio: He was taken to Mt. Steel's summit!
 Dugtrio: Please, we need your help! Bye-bye!
 Partner Normal: ...Uh, OK... Let's go...
 
-
+### Cutscene 18
 
 Partner Normal: Here we are... Mt. Steel...
 Partner Normal: So, Diglett was whisked to its peak...
@@ -396,9 +415,9 @@ Partner Normal: So, Diglett was whisked to its peak...
 Dugtrio: The peak is 9F! Thank you for helping! Farewell!
 Partner Worried: ...... Uh... Let's go.
 
+### Cutscene 19
 
-
-Partner Surprised: Look, HERO! Diglett's over there!
+Partner Surprised: Look, `Hero Name`! Diglett's over there!
 Partner Worried: Hey! Are you all right? We've come to rescue you!
 Diglett: ...I... I'm scared.
 Skarmory: You! What do you think you're doing here?!
@@ -415,7 +434,7 @@ Skarmory: We'll fight if you keep that up!
 Partner Worried: It's no good. Skarmory is too agitated to listen to reason.
 Partner Worried: We'll have to fight it out!
 
-
+### Cutscene 20
 
 Skarmory: Grr... I can't keep up! I'll flee for now!
 Partner Normal: Hey there! We chased Skarmory off!
@@ -424,14 +443,14 @@ Diglett: I can't... I'm too scared to move...
 Partner Normal: OK, no problem. We'll come to you. Just wait.
 Partner Normal: ...Whoa.
 Partner Surprised: Sheesh! Look at this cliff... I can't see the bottom.
-Partner Worried: HERO, what'll we do? We can't get across this.
+Partner Worried: `Hero Name`, what'll we do? We can't get across this.
 💬: BZBZBZZ!
 Partner Normal: Oh, hi! You're the magnemite we saved!
 Magnemite: WE GOT WORD OF THIS. WE CAN RESCUE DIGLETT FROM THE SKY. BZBZBZZ!
 Magnemite: HOLD ON TO US TIGHT. BZBZBZZZ!
 Magnemite: DON'T BE SCARED. WE WON'T MAKE THE MISTAKE OF ZAPPING YOU. BZBZBZZT!
 
-
+* * *
 
 Diglett: Ohhh... I was very scared.
 Diglett: Maybe because I was somewhere up so high...
@@ -446,7 +465,7 @@ Partner Worried: Huh? What was that? Am I hearing voices?
 Dugtrio: Hello. Dugtrio here.
 Diglett: Oh! Papa!
 Dugtrio: Diglett! You had us worried! You're not hurt?
-Diglett: Nope! It was scary, but I'm all right. It's all thanks to HERO's team.
+Diglett: Nope! It was scary, but I'm all right. It's all thanks to `Hero Name`'s team.
 Dugtrio: Thank you for everything. You're heroes.
 Partner Normal: You should be thanking our Magnemite friends.
 Partner Normal: This rescue was impossible for us to do on our own.
@@ -455,28 +474,25 @@ Magnemite: NO, NO. IT WAS THE ONLY THING TO DO. AND...
 Magnemite: HOW BOTH OUR EVOLVED FORMS ARE JOINED TRIOS... I FELT A CERTAIN KINSHIP.
 Magnemite: AFTER ALL, POKEMON MUST HELP EACH OTHER.
 Dugtrio: I'm impressed. Sincerely, thank you.
-Dugtrio: We must be going. HERO.
-Diglett: PARTNER.
+Dugtrio: We must be going. `Hero Name`.
+Diglett: `Partner Name`.
 Dugtrio: Thank you.
 Dugtrio: Farewell!
-HERO's team received the reward 500 Poke.
+`Hero Name`'s team received the reward 500 Poke.
 The team also received the item Pecha Scarf.
 The team also received the item Ginseng.
 Magnemite: WE'LL BE ON OUR WAY TOO...
 Partner Surprised: Oh, wait! Don't go away!
 Magnemite: WHAT IS IT?
 Partner Normal: Uh... Would you like to join our team?
-Magnemite: JOIN YOUR TEAM?
+Magnemite: JOIN YOUR `Team Name`?
 Partner Normal: Yes. We couldn't have done the last job if you weren't around, Magnemite.
 Partner Normal: I thought we would need more help for doing rescues in the future.
-Partner Normal: HERO, don't you think so too?
-
-
-
-(If HERO says "Yes! More members needed!")
+Partner Normal: `Hero Name`, don't you think so too?
+*If `Hero Name` says "Yes! More members needed!"*
 Partner Happy: So, how about it?
 Partner Happy: Will you join us as members of our rescue team?
-Magnemite: RESCUE TEAM... THAT SOUNDS FUN! BZZ BZZ BZZ!
+Magnemite: RESCUE `Team Name`... THAT SOUNDS FUN! BZZ BZZ BZZ!
 Magnemite: ....BUT ...IF YOU NEED US TO RUSH OVER TO RESCUES...
 Magnemite: WE NEED SOMEWHERE TO LIVE CLOSE BY.
 Magnemite: IS THERE ANYWHERE WE CAN LIVE IN THIS AREA?
@@ -492,7 +508,7 @@ Partner Normal: It's next door to Felicity Bank. Wigglytuff is usually there eve
 Partner Normal: We may be able to get some information.
 Partner Normal: OK, that's what we'll do tomorrow. We'll go to Pokemon Square.
 
-
+### Cutscene 21
 
 Hero Normal: ......
 Hero Normal: ............
@@ -505,30 +521,30 @@ Hero Shouting: ...... I can't... Drifting off...
 Hero Shouting: ............
 Hero Shouting: ........................
 
+### Cutscene 22
 
-
-Partner Happy: Morning, HERO!
+Partner Happy: Morning, `Hero Name`!
 Partner Joyous: Ahaha! What's the matter? You haven't woken up yet?
 Partner Normal: ...Oh? You've been having strange dreams?
 Partner Normal: What was strange about them?
-HERO told PARTNER about the dreams.
+`Hero Name` told `Partner Name` about the dreams.
 Partner Worried: Hmmm, OK...
-Partner Worried: HERO, you said you're actually a human, right?
+Partner Worried: `Hero Name`, you said you're actually a human, right?
 Partner Worried: So maybe...
-Partner Worried: Those dreams have some connection to how you became a Pokemon, HERO.
-Partner Normal: By the way, HERO. What do you want to do?
+Partner Worried: Those dreams have some connection to how you became a Pokemon, `Hero Name`.
+Partner Normal: By the way, `Hero Name`. What do you want to do?
 Partner Normal: Do you want to turn back into a human?
 Hero Worried: (...It's true...)
 Hero Worried: (I haven't thought about it much, but...)
 Hero Worried: (Do I want to become a human again?)
-(If HERO chooses "I'm not sure...")
+*If `Hero Name` chooses "I'm not sure..."*
 Partner Normal: Huh? What's wrong? Is this a dilemma for you?
 Partner Happy: Well, I hope so! It sure must be more fun to be here with me!
 Partner Normal: Anyway, we were supposed to go to Pokemon Square today.
 Partner Normal: Do you remember? We need to get information on how we can add members to the rescue team.
 Partner Normal: Let's get going.
 
-
+### Cutscene 23
 
 Wigglytuff: Friends are my treasure! Welcome to Wigglytuff Club -- a circle of friends!
 Wigglytuff: ...Oh? Is this your first visit here?
@@ -542,25 +558,22 @@ Wigglytuff: Now you can recruit Pokemon that live in these two Friend Areas.
 Wigglytuff: How do you recruit new members? Well, if you're fighting Pokemon that live i a Friend Area...
 Wigglytuff: Sometimes, they will come to admire you as a friend.
 Wigglytuff: In that case, they may ask to join your team. Just keep trying!
-
-
-
 Magnemite: BZBZBZZT! IF YOU'RE GIVING FRIEND AREAS AWAY...
 Magnemite: CAN YOU ALSO GIVE MY FRIENDS ACCESS TO THE POWER PLANT FRIEND AREA?
-Magnemite: I ALSO WANT TO JOIN THEIR RESCUE TEAM.
+Magnemite: I ALSO WANT TO JOIN THEIR RESCUE `Team Name`.
 Wigglytuff: OK! Gotcha!
 Wigglytuff: I'm giving it away today! Wigglytuff~🎵 Wigglytuff~🎵 Let's be friends... Taaaaaaah!
 Wigglytuff: Congratulations! You can go to the Power Plant now.
-Magnemite Joyous: YES! NOW I CAN JOIN THEIR TEAM!
+Magnemite Joyous: YES! NOW I CAN JOIN THEIR `Team Name`!
 Magnemite Joyous: YAY! BZBZBZZT!
-Magnemite: SORRY. I KNOW MY FRIEND TURNED DOWN YOUR OFFER TO JOIN YOUR TEAM YESTERDAY...
+Magnemite: SORRY. I KNOW MY FRIEND TURNED DOWN YOUR OFFER TO JOIN YOUR `Team Name` YESTERDAY...
 Magnemite: BUT AFTER MULLING IT OVER ALL LAST NIGHT...
-Magnemite: MY FRIEND DEVELOPED AN OVERWHELMING DESIRE TO BECOME YOUR TEAM MEMBER.
-Magnemite: I APOLOGIZE, BUT COULD YOU ALLOW MY FRIEND TO JOIN YOUR RESCUE TEAM?
+Magnemite: MY FRIEND DEVELOPED AN OVERWHELMING DESIRE TO BECOME YOUR `Team Name` MEMBER.
+Magnemite: I APOLOGIZE, BUT COULD YOU ALLOW MY FRIEND TO JOIN YOUR RESCUE `Team Name`?
 Partner Normal: Oh, wow! Don't forget, we were the ones that asked your friend to join us.
 Partner Happy: So, yes, that'd be awesome! Glad to have your friend on board!
 Magnemite Joyous: ALL RIGHT! GOOD ON YOU! BZBZBZZ!
-Magnemite Joyous: DO YOUR BEST, AND TRY NOT TO HINDER YOUR RESCUE TEAMMATES! BZBZBZZT!
+Magnemite Joyous: DO YOUR BEST, AND TRY NOT TO HINDER YOUR RESCUE `Team Name`MATES! BZBZBZZT!
 Magnemite Joyous: YEAH! I'LL DO MY BEST!
 Magnemite Joyous: YAY, BZBZBZZ!
 Magnemite became a team member!
@@ -571,7 +584,7 @@ Wigglytuff: You can go to your Friend Areas by taking the left path from your re
 Wigglytuff: There's a sign on the path to the left of your rescue team base, so you shouldn't have any trouble.
 Wigglytuff: That's all the giveaways today! If you want more Friend Areas, you'll have to buy them now.
 
-
+### Cutscene 24
 
 Partner Worried: Huh? What's going on over there? There seems to be a commotion.
 Jumpluff Sad: Please help my friend! Please, I need help!
@@ -606,9 +619,6 @@ Lombre: Alakazam doesn't like physical attacks. He fights with his psychic power
 Lombre: He's endowed with an amazing brain and an IQ of 5,000.
 Lombre: Apparently, he's memorized everything that's happened in the world.
 Lombre: Alakazam does all the commanding in the team. He's clearly in charge.
-
-
-
 Jumpluff: Th-thank you.
 Alakazam: No need for thanks. It is only natural that you get help.
 Alakazam: If anyone turns you down again, come see me. Take care.
@@ -621,19 +631,19 @@ Alakazam: ...... It's fine. Nothing.
 Alakazam: Let's go.
 Lombre: Whew! That was scary! Sheesh!
 Partner Inspired: ...C-cool...
-Partner Normal: Whew, HERO! We need to become like them!
+Partner Normal: Whew, `Hero Name`! We need to become like them!
 Partner Normal: Let's recruit more members and make our rescue team first-class!
 💬: Not if I can help it! Kekeh!
 
-
+### Cutscene 25
 
 Partner Normal: Didn't we do good today? Let's call it a night and get some rest.
 Partner Normal: OK, see you tomorrow!
 
-
+### Cutscene 26
 
 Partner Happy: Good morning! Let's do good again today!
-💬: Is this the place? Where that team named TEAM is based?
+💬: Is this the place? Where that team named `Team Name` is based?
 Ekans: There's nothing here.
 Medicham: Depressing, isn't it.
 Gengar: Keh! Who'd run a rescue team from a dump like this? Unbelievable.
@@ -667,10 +677,10 @@ Partner Happy: We're in luck! Pelipper delivered some mail!
 Partner Happy: We can go on rescue missions again with this.
 Partner Angry: But those guys... They'd better not try anything if we see them again.
 
+### Cutscene 27
 
-
-Partner Happy: Good morning, HERO! Let's do good again today!
-💬: HERO! PARTNER!
+Partner Happy: Good morning, `Hero Name`! Let's do good again today!
+💬: `Hero Name`! `Partner Name`!
 Partner Normal: Huh? Who was that?
 Partner Happy: Oh, Caterpie? How have you been?
 Caterpie: Please! Please help my friend!
@@ -692,19 +702,19 @@ Gengar: Oh, don't you worry about that, my little friend!
 Gengar: I'm sure we can persuade your parents to reward us with interest afterward, kekeh!
 Gengar Inspired: Oh, yeah. You can even join our team. There's an offer you can't refuse.
 Gengar Inspired: When you join us, Caterpie, we'll let you be a big wheel in Team Meanies, kekekeke!
-Gengar: That's the deal, PARTNER. The first to rescue wins!
+Gengar: That's the deal, `Partner Name`. The first to rescue wins!
 Gengar: Come on, move! Let's get this done, already!
 Caterpie: ...
 Partner Normal: Don't worry. We'll save your friend first.
-Partner Normal: HERO! Let's get going!
+Partner Normal: `Hero Name`! Let's get going!
 
-
+### Cutscene 28
 
 Partner Normal: This must be it. Metapod is lost somewhere in these woods.
 Partner Normal: Gengar's gang should be in there already.
 Partner Normal: We need to hurry.
 
-
+### Cutscene 29
 
 Partner Normal: Wow, we came quite a ways into this forest.
 Partner Normal: I wonder if Metapod is ahead...
@@ -718,9 +728,9 @@ Ekans Special1: Caterpie's mama will give us a generous reward...
 Ekans Special1: And Caterpie will join us too... That brings us closer to our goal.
 Gengar: Keke! And for that, your lot is in the way!
 Gengar: So sorry to say, but your party's over right here and now!
-Gengar: Say good-bye, PARTNER!
+Gengar: Say good-bye, `Partner Name`!
 
-
+### Cutscene 30
 
 Gengar Pain: Owowowow... You'll pay for this! Don't you forget it!
 Partner Happy: No one should hold us back now. Let's find Metapod.
@@ -732,11 +742,11 @@ Metapod: Yay!
 Metapod: I was scared, so I kept my shell hardened... and waited and waited.
 Metapod: Thank you!
 
-
+* * *
 
 Caterpie TearyEyed: This is great! Welcome back, Metapod!
 Metapod: Thank you, Caterpie!
-Caterpie Inspired: And thank you, PARTNER and HERO!
+Caterpie Inspired: And thank you, `Partner Name` and `Hero Name`!
 Caterpie: But I don't have any money...
 Partner Happy: Oh, no, no. We don't need a reward.
 Partner Normal: We're happy to see that Metapod is back safe and sound.
@@ -745,30 +755,34 @@ Caterpie Inspired: You're even more cool than I thought!
 Caterpie Inspired: I want to go on rescues when I grow up!
 Partner Happy: Hahaha! That would be great! Chase that dream!
 Partner Normal: I have an idea!
-Partner Normal: HERO, we should do something with this place.
+Partner Normal: `Hero Name`, we should do something with this place.
 Partner Normal: We should make a proper rescue team base here. Something impressive.
 Caterpie Inspired: That's cool! A rescue team base is cool!
 Caterpie Inspired: I want to work here when I grow up!
 Metapod: Me too! Me too!
 Partner Happy: Haha! That's what we'll do!
 Partner Normal: Let's work hard and build our own rescue team base!
-Metapod: HERO and PARTNER, thank you again!
+Metapod: `Hero Name` and `Partner Name`, thank you again!
 Partner Happy: OK, bye! Be careful going home.
 Partner Sad: Sigh.. Well, we ended up working for free, but that was the right thing to do.
 Partner Happy: And we got to show Gengar's team a thing or two, so it's all good!
 Partner Normal: That was a tiring day. Let's do some more good tomorrow! See you!
 
+### Cutscene 32
 
-
-Partner Happy: HERO, good morning! Let's do good again today!
+Partner Happy: `Hero Name`, good morning! Let's do good again today!
 💬: Umm... Hello?
 Partner Normal: Huh? Who could that be?
-Jumpluff: Umm... is rescue team TEAM here?
+Jumpluff: Umm... is rescue team `Team Name` here?
 Partner Normal: That's right... Huh? Wait, aren't you...
 
--# Jumpluff: Please help my friend! Please, I need help!
--# Shiftry: Forget it. We're not about to work for that.
--# But my friend needs a gust of wind! Please!
+* * *
+
+Jumpluff Sad: Please help my friend! Please, I need help!
+Shiftry: Forget it. We're not about to work for that.
+Jumpluff Sad: But my friend needs a gust of wind! Please!
+
+* * *
 
 Partner Normal: I remember now! Jumpluff, we saw you in Pokemon Square.
 Partner Normal: We watched Shiftry agreeing to take on your rescue job.
@@ -783,19 +797,19 @@ Jumpluff Sad: Shiftry's leafy fans can whip up powerful winds.
 Jumpluff Sad: We thought Shiftry's wind would be able to dislodge our friend, but...
 Partner Worried: But Shiftry hasn't returned...?
 Partner Worried: It doesn't sound like all that challenging of a rescue mission... It is strange...
-Partner Inspired: Oh? That's the spirit, HERO. Your expression tells me you're ready.
+Partner Inspired: Oh? That's the spirit, `Hero Name`. Your expression tells me you're ready.
 Partner Normal: OK, then! We'll go look for them!
 Jumpluff: R-really? Thank you!
 Partner Happy: No problem! You can count on us!
-Partner Normal: Let's go, HERO!
+Partner Normal: Let's go, `Hero Name`!
 
-
+### Cutscene 33
 
 Partner Surprised: Wow! This cliff is steep!
 Partner Normal: Your friend Jumpluff is lost deep in this canyon?
 Jumpluff: Yes... I'm sorry to ask, but please help.
 Partner Normal: It'll be fine.
-Partner Normal: Let's go, HERO!
+Partner Normal: Let's go, `Hero Name`!
 Jumpluff: ...Wait!
 Partner Normal: Yes? What is it?
 Jumpluff Sad: There's something I forgot to mention...
@@ -809,16 +823,13 @@ Partner Crying: Owowow! My stomach It hurts...
 Jumpluff Sad: Oh! What's wrong?!
 Partner Pain: It's my stomach! It suddenly cramped up! Owowow...
 Partner Pain: I think my breakfast was spoiled or something...
-Partner Worried: Say, HERO, you're feeling sick too, aren't you?
-Partner Worried HERO, your stomach hurts too, doesn't it?
-
-
-
-(If HERO chooses "Huh? I'm perfectly fine.")
+Partner Worried: Say, `Hero Name`, you're feeling sick too, aren't you?
+Partner Worried `Hero Name`, your stomach hurts too, doesn't it?
+*If `Hero Name` chooses "Huh? I'm perfectly fine."*
 Partner Worried: Huh...?
-Partner Angry: What's the matter, HERO?! I need you to back me!
+Partner Angry: What's the matter, `Hero Name`?! I need you to back me!
 Partner Angry: If you're my partner, you need to read my cues better!
-Jumpluff Sad: Wh-why this sudden outburst, PARTNER?
+Jumpluff Sad: Wh-why this sudden outburst, `Partner Name`?
 Jumpluff Sad: Don't you have a stomachache?
 Partner Worried: Huh?
 Partner Worried: Uh, yes...
@@ -831,9 +842,9 @@ Partner Normal: OK... Well, it can't be helped.
 Partner Normal: Let's just hope that monster doesn't exist.
 Jumpluff: My friend Jumpluff should be around B10F. Please take care!
 Partner Normal: OK! Gotcha!
-Partner Normal: Let's get going, HERO!
+Partner Normal: Let's get going, `Hero Name`!
 
-
+### Cutscene 34
 
 Partner Normal: Isn't this the place? Where Jumpluff's friend is supposed to be?
 Partner Surprised: Oh, hey!
@@ -861,7 +872,7 @@ Gyaoooooooh!
 Partner Surprised: Zapdos...
 Partner Surprised: So that's the legendary monster...
 
-
+### Cutscene 35
 
 Jumpluff: Yay! Saved! I'm so happy!
 Jumpluff Sad: But even though I'm safe, Shiftry is in trouble...
@@ -889,17 +900,14 @@ Partner Normal: We'll go too! We'll go help Shiftry!
 Alakazam: What?! That is dangerous!
 Alakazam: Zapdos is powerful. It will be too much for your skill level.
 Partner Angry: Hey! We're not that weak!
-
-
-
-Partner Normal: Besides, Zapdos doesn't scare us. Right, HERO?
-(If HERO chooses "Yup! I'm not scared!")
+Partner Normal: Besides, Zapdos doesn't scare us. Right, `Hero Name`?
+*If `Hero Name` chooses "Yup! I'm not scared!"*
 Charizard: Have you ever been hit with an electric blast?
 Charizard: It'll leave you stunned and shaking!
-(If HERO chooses "No problem!")
+*If `Hero Name` chooses "No problem!"*
 Tyranitar: Zapdos is wickedly tough!
 Tyranitar: It might gobble you up for a snack! Can you face that?
-(If HERO chooses "I'm not scared!")
+*If `Hero Name` chooses "I'm not scared!"*
 Partner Normal: We're a rescue team too! We want to help Shiftry!
 Alakazam: ......
 Alakazam: Fine. I see that you have courage.
@@ -910,17 +918,17 @@ Alakazam: Knowing how strong our opponent is, we have no choice but to be cautio
 Alakazam: You should make way for Mt. Thunder only when you are fully prepared.
 Alakazam: Our objective is to rescue Shiftry! Let us find success!
 Partner Normal: Yes! I'm getting excited over this!
-Partner Normal: HERO! Let's do our best!
+Partner Normal: `Hero Name`! Let's do our best!
 
+### Cutscene 36
 
-
-Partner Happy: Good morning, HERO! Did you sleep well?
+Partner Happy: Good morning, `Hero Name`! Did you sleep well?
 Partner Normal: OK... We should be heading to Mt. Thunder to do the Shiftry rescue, right?
 Partner Normal: But Alakazam said that we should be properly prepared before we try...
 Partner Normal: What should we do? We can go to Mt. Thunder right now or later. It's up to you.
 Partner Normal: But anyway, let's do our best like always!
 
-
+### Cutscene 37
 
 Partner Normal: This is the foot of Mt. Thunder.
 Partner Normal: I wonder... Is Alakazam's team already on their way?
@@ -928,9 +936,9 @@ Partner Normal: Zapdos... It sounds very tough...
 Partner Sad: Brr... I'm shaking...
 Partner Normal: I can't be scared now.
 Partner Normal: Our objective is simple. We're rescuing Shiftry.
-Partner Normal: HERO, let's try out best!
+Partner Normal: `Hero Name`, let's try out best!
 
-
+### Cutscene 38
 
 Partner Normal: This is the summit...
 Partner Angry: Hey! Zapdos! Where are you?!
@@ -945,7 +953,7 @@ Zapdos: You must be determined, to utter such words.
 Zapdos: Then you shall answer...
 Zapdos: To my great and righteous fury!
 
-
+### Cutscene 39
 
 Zapdos: Gyaoooh!
 Alakazam: Wh-what is going on...
@@ -964,25 +972,22 @@ Partner Happy: I'm glad you're safe!
 Tyranitar: But that was an eye-opener.
 Tyranitar: Driving off that Zapdos...
 Charizard: I agree.
-Charizard: You're awfully strong for a plain HERO_SPECIES.
+Charizard: You're awfully strong for a plain `Hero Species`.
 Alakazam: ......
 Alakazam: I sensed it when we first met...
 Alakazam: Perhaps... You aren't a Pokemon, are you?
 Partner Surprised: Wow! How can you tell that?!
-Partner Surprised: But you're right. HERO isn't a Pokemon.
-Partner Surprised: HERO is a human.
+Partner Surprised: But you're right. `Hero Name` isn't a Pokemon.
+Partner Surprised: `Hero Name` is a human.
 Shiftry Surprised: What?!
 Charizard Surprised: A human?!
 Tyranitar Surprised: Is that possible? Can something like that happen?
-Partner Normal: HERO doesn't understand very much either.
-Partner Normal: HERO woke up one morning here as a Pokemon...
+Partner Normal: `Hero Name` doesn't understand very much either.
+Partner Normal: `Hero Name` woke up one morning here as a Pokemon...
 Partner Normal: ...And doesn't remember anything about being a human.
-
-
-
 Partner Normal: Oh, wait! Lombre said something in the square!
 Partner Normal: He said Alakazam knows everything!
-Partner Normal: Alakazam, could you figure out why HERO became a Pokemon?
+Partner Normal: Alakazam, could you figure out why `Hero Name` became a Pokemon?
 Alakazam: ......
 Alakazam: No... I can't determine that.
 Partner Sad: Oh... I thought you would know...
@@ -993,11 +998,11 @@ Alakazam: There, you will find a Pokemon that stares into the sun all day...
 Alakazam: A Pokemon who is said to see into the future.
 Alakazam: Xatu is his name. He should shed light on your puzzling friend.
 Partner Normal: OK! So we should go see Xatu.
-Partner Normal: HERO, let's go! Off to the Hill of the Ancients!
+Partner Normal: `Hero Name`, let's go! Off to the Hill of the Ancients!
 Partner Normal: We can't waste any time! Let's go back quick!
 Partner Normal: Shiftry, you too. Let's hurry back.
 Shiftry: Uh... Yeah... I guess we should...
-Partner Normal: HERO!
+Partner Normal: `Hero Name`!
 Partner Normal: Don't just stand there. Let's go home.
 Charizard: Alakazam. I know you.
 Charizard: I don't think you're completely ignorant about this.
@@ -1005,37 +1010,37 @@ Charizard: ...... You know something, don't you?
 Alakazam: There is something that concerns me. But it should go unspoken for now.
 Alakazam: ...For their sake...
 
+### Cutscene 40
 
-
-Partner Normal: HERO, good morning!
+Partner Normal: `Hero Name`, good morning!
 Partner Normal: Yesterday, I did some checking around.
 Partner Normal: It turns out that the Hill of the Ancients is apparently in the Great Canyon.
 Partner Normal: We should go there right away! Off to the Great Canyon!
 Partner Worried: Huh? What's the matter?
-(If HERO chooses "Listen, PARTNER...")
+*If `Hero Name` chooses "Listen, `Partner Name`..."*
 Partner Normal: Huh?
 Partner Normal: Huh?
-(If HERO chooses "Why do you try so hard?")
+*If `Hero Name` chooses "Why do you try so hard?"*
 Partner Normal: Why...? What, you need to ask?
-(If Hero chooses "It's for someone else...")
+*If Hero chooses "It's for someone else..."*
 Partner Happy: Someone else? Come on, what do you think I am?
-Partner Happy: We're friends, aren't we, HERO?
-Partner Happy: I want to do my best because it's for you, HERO.
+Partner Happy: We're friends, aren't we, `Hero Name`?
+Partner Happy: I want to do my best because it's for you, `Hero Name`.
 Partner Happy: That's what this is about. So, as always, let's try our best to do well!
 
-
+### Cutscene 41
 
 Partner Normal: This is the Great Canyon...
 Partner Normal: The peak is called the Hill of the Ancients.
 Partner Normal: According to Alakazam, the Hill of the Ancients is on 13F.
-Partner Normal: Xatu should be there. HERO, let's do our best!
+Partner Normal: Xatu should be there. `Hero Name`, let's do our best!
 
+### Cutscene 42
 
-
-Partner Normal: Yes! We've finally made it to the top, HERO!
+Partner Normal: Yes! We've finally made it to the top, `Hero Name`!
 Partner Normal: This is the Hill of the Ancients...
 Partner Surprised: Look! Over there!
-Partner Normal: HERO! Is that Xatu over there?
+Partner Normal: `Hero Name`! Is that Xatu over there?
 Partner Normal: Excuse me? Are you maybe Xatu?
 💬: ......
 Partner Worried: Hello?
@@ -1046,8 +1051,8 @@ Partner Worried: Hellooooooooooooooo?!
 💬: ........................
 Partner Worried: It's useless. He's not responding at all.
 Partner Worried: Maybe he's sleeping while on his feet?
-Partner Worried: HERO, what should we do?
-(If HERO chooses "Attack him.")
+Partner Worried: `Hero Name`, what should we do?
+(If `Hero Name` chooses "Attack him.")
 Partner Surprised: Huh? We're going to attack?!
 Partner Shouting: Uh, no! No way!
 Partner Shouting: I mean, he's kind of creepy!
@@ -1055,9 +1060,6 @@ Partner Shouting: It'd be scary for sure!
 Partner Pain: ...Fine then. I'll do it, OK?
 Partner Worried: If anything happens to me, you have to help me. I'm counting on you.
 Partner Angry: OK. Counting down. Three... Two... One... Now...!
-
-
-
 Kwaaaaaaaaah!
 Partner Surprised: Yikes!
 💬: Witness it...
@@ -1075,7 +1077,7 @@ Xatu: All day... I stare at the sun unblinking.
 Xatu: It gives me sight for all things.
 Xatu: The past and the future, too.
 Partner Normal: If you know, please tell us, Xatu!
-Partner Normal: Next to me is my friend HERO...
+Partner Normal: Next to me is my friend `Hero Name`...
 Partner Normal: My friend woke up one morning as a Pokemon.
 Partner Normal: And, without any memory as a human.
 Partner Normal: Xatu, you can tell, can't you? Please tell us.
@@ -1084,9 +1086,9 @@ Xatu: The calamities of nature. There have been many in recent times.
 Xatu: They occur because the world's balance is upset.
 Xatu: And your becoming a Pokemon...
 Xatu: They are tied together. Inseparably so.
-Partner Worried: Wait. HERO becoming a Pokemon and... the natural disasters... are related?!
+Partner Worried: Wait. `Hero Name` becoming a Pokemon and... the natural disasters... are related?!
 Partner Surprised: What do you mean?!
-Partner Surprised: What does HERO have to do with the natural disasters we've been seeing?
+Partner Surprised: What does `Hero Name` have to do with the natural disasters we've been seeing?
 Xatu: ........................
 Partner Angry: What is it?!
 Partner Angry: Why did you clam up?! Please, tell us! Please!
@@ -1101,18 +1103,18 @@ Partner Sad: Xa-Xatu...
 Xatu: I fear it... The world's destruction.
 Partner Sad: The world's destruction...?
 Gengar: Kekeh! Isn't that a surprise!
-Gengar Sad: That HERO... was human...
+Gengar Sad: That `Hero Name`... was human...
 Gengar Inspired: That's going to be useful! This should be interesting! Kekeh!
 
+### Cutscene 43
 
-
-Partner Normal: Good morning, HERO!
+Partner Normal: Good morning, `Hero Name`!
 Partner Normal: Let's keep on doing good... Actually, I want to ask you something.
 Partner Worried: What do you think about what Xatu said yesterday? Does it bother you?
 
-# MISSING DIALOGUE
+***MISSING DIALOGUE***
 
-
+### Cutscene 44
 
 Partner Normal: Huh? What are they chatting about?
 Lombre: Yeah, I'm kind of shocked.
@@ -1134,17 +1136,17 @@ Lombre: You should go see a Pokemon named Whiscash. He knows the story well.
 Lombre: Whiscash is uh... You know, in his pond.
 Lombre: You should visit him if you want to know more.
 
-
+### Cutscene 45
 
 Whiscash: Hohoho. You wish to hear me tell old folklore?
 Whiscash: What was that? You wish to hear the Ninetales legend?
-(If HERO chooses No.)
+*If `Hero Name` chooses No.*
 Whiscash: I see.
 Whiscash: If you feel the urge to hear my tale, come see me anytime. Hohoho.
-(If HERO chooses Yes.)
+*If `Hero Name` chooses Yes.*
 Whiscash: Hohoho. Fine, then. Let me recount the tale.
 
-
+### Cutscene 46
 
 Whiscash: There once lived a Pokemon by the name of Ninetales.
 Whiscash: Now, Ninetales had many tails, all of them imbued with psychic power...
@@ -1180,25 +1182,24 @@ Whiscash: Certainly some rumors say that the legend may actually be true...
 Whiscash: But it is only ancient folklore, nothing more.
 Whiscash: If you feel the urge to hear my tale again, come see me. Hohoho.
 
+### Cutscene 47
 
-
-Partner Worried: ...Say, HERO.
+Partner Worried: ...Say, `Hero Name`.
 Partner Sad: Want to call it a day now? I can't seem to get motivated today...
 Partner Sad: I'm sorry. For wanting to go home before we're done.
 Partner Sad: But I just can't seem to get motivated.
 Partner Sad: I guess it's because I heard that story. Ahahaha...
 Partner Sad: I'll go home and try to get some sleep.
 Partner Sad: I'll see you tomorrow.
-
-Partner Shouting: HERO! Sorry!
-Partner Worried: I started doubting you a little, HERO...
+Partner Shouting: `Hero Name`! Sorry!
+Partner Worried: I started doubting you a little, `Hero Name`...
 Partner Normal: But I'm not going to worry anymore.
-Partner Normal: I believe in you, HERO.
-Partner Normal: Because you're a friend like no other, HERO.
+Partner Normal: I believe in you, `Hero Name`.
+Partner Normal: Because you're a friend like no other, `Hero Name`.
 Partner Normal: You're a friend... Like i'd never get again...
-Partner Happy: OK, HERO! Let's do our best tomorrow like always!
+Partner Happy: OK, `Hero Name`! Let's do our best tomorrow like always!
 
-
+### Cutscene 48
 
 Hero Normal: ......
 Hero Normal: ............
@@ -1225,7 +1226,7 @@ Hero Sad: No... It's fading...
 Hero Sad: ............
 Hero Sad: ........................
 
-
+### Cutscene 49
 
 The next morning...
 Hero Normal: ............ What a strange dream...
@@ -1235,14 +1236,18 @@ Hero Normal: That's it! Gardevoir!
 Hero Normal: It was Gardevoir!
 Yesterday, Whiscash said...
 
--# Whiscash: Yes, a human.
--# Whiscash: As one might expect, the human that grabbed the tail was subjected to a curse of a thousand years.
--# Whiscash: However, just when the curse was cast, a Pokemon named Gardevoir shielded the human...
--# Whiscash: And sacrificed herself to absorb the curse.
--# Partner Worried: What?
--# Partner Worried: Why would that Pokemon, Gardevoir, take the human's place?
--# Whiscash: To Gardevoir, that human was her partner.
--# Whiscash: There exist strong bonds between humans and Pokemon.
+* * *
+
+Whiscash: Yes, a human.
+Whiscash: As one might expect, the human that grabbed the tail was subjected to a curse of a thousand years.
+Whiscash: However, just when the curse was cast, a Pokemon named Gardevoir shielded the human...
+Whiscash: And sacrificed herself to absorb the curse.
+Partner Worried: What?
+Partner Worried: Why would that Pokemon, Gardevoir, take the human's place?
+Whiscash: To Gardevoir, that human was her partner.
+Whiscash: There exist strong bonds between humans and Pokemon.
+
+* * *
 
 Hero Normal: ............
 Hero Normal: Maybe... Maybe, I...
@@ -1250,23 +1255,23 @@ Hero Normal: Maybe I was the human who was Gardevoir's partner...
 Hero Normal: Maybe I was the one that abandoned Gardevoir when she was cursed...
 Hero Normal: Maybe that's why I turned into a Pokemon...
 
+### Cutscene 50
 
-
-Partner Happy: Morning HERO!
+Partner Happy: Morning `Hero Name`!
 Partner Worried: ...Oh? You look pale. Is something the matter?
 Partner Happy: Well, anyway. As always, let's try to do our best!
 Partner Normal: Oh, yeah!
 Partner Worried: When I was on the way here, I think there was a commotion at Pokemon Square.
 Partner Worried: I wonder if something happened...
 
-
+### Cutscene 51
 
 Partner Worried: Huh?
 Partner Worried: The town's atmosphere feels different somehow...
 Partner Normal: Maybe something's happened.
-Partner Normal: HERO, let's check it out!
+Partner Normal: `Hero Name`, let's check it out!
 
-
+* * *
 
 Partner Normal: Look! Why is everyone gathered together?
 Partner Normal: Hi, what's going on?
@@ -1274,7 +1279,7 @@ Bellsprout Pain: Let me tell you, I was amazed! It really was true!
 Partner Normal: What was true?
 Bellsprout: The Ninetales legend!
 Bellsprout: I never believed the rumors, so you can bet I was shocked to learn the truth!
-Caterpie: HERO, PARTNER.
+Caterpie: `Hero Name`, `Partner Name`.
 Partner Normal: Oh, hi, Caterpie!
 Partner Happy: Even you came out, Caterpie?
 Caterpie: Yes.
@@ -1283,7 +1288,7 @@ Snubbull: That guy there's telling us. Keep it down.
 Partner Normal: Huh? Who's talking?
 Caterpie: I-it's...
 
-
+* * *
 
 Partner Surprised: Ge-Gengar?!
 Gengar: ...So I went up to the Hill of the Ancients.
@@ -1316,55 +1321,50 @@ Lombre: Th-that's true!
 Snubbull: When you put it that way... maybe you're right.
 Gengar: Kekeh! And that human is the rotten coward that abandoned Gardevoir, correct?
 Gengar Sad: I don't think the human can complain about anything if we get rid of it.
-Gengar: Isn't that right, HERO?
+Gengar: Isn't that right, `Hero Name`?
 Lombre: Wha... What?! It... It can't be!
 Bellsprout Pain: Y-you... You were that human?!
 Snubbull: Is that true? Hey!
-
-
-
 Partner Surprised: W-w-wait... This is, like... There's a good explanation for...
-Snubbull: We're not asking you. We're asking HERO!
-Snubbull: Hey! HERO! So what is it?!
+Snubbull: We're not asking you. We're asking `Hero Name`!
+Snubbull: Hey! `Hero Name`! So what is it?!
 Snubbull: Are you really the human that was in the legend?
-............
-Partner Sad: HERO...
-Caterpie: HERO...
-Gengar Inspired: Kekekekekekeh! Looks like you have nothing to say in your defense, HERO!
+*Hero has to choose "............"*
+Partner Sad: `Hero Name`...
+Caterpie: `Hero Name`...
+Gengar Inspired: Kekekekekekeh! Looks like you have nothing to say in your defense, `Hero Name`!
 Gengar: That's how it is, fellow Pokemon.
-Gengar Inspired: Let's get rid of HERO and regain peace. Kekekekekeh!
+Gengar Inspired: Let's get rid of `Hero Name` and regain peace. Kekekekekeh!
 Partner Surprised: ...Wh-what?
 Partner Surprised: E-everyone, what's gotten into you? What are you going to do?
-Lombre: HERO, forgive me!
+Lombre: `Hero Name`, forgive me!
 Partner Surprised: Wah! What are you doing?!
-Partner Surprised: Waaaaah! HERO, run!
+Partner Surprised: Waaaaah! `Hero Name`, run!
 Gengar: Serves them right! Kekekekeh!
 
-
+* * *
 
 Partner Surprised: Gasp, gasp... Wow, that was a real shock!
 Partner Sad: I never expected everyone to attack us like that.
-Partner Worried: But listen, HERO.
+Partner Worried: But listen, `Hero Name`.
 Partner Angry: Why didn't you say anything?
 Partner Angry: Why didn't you argue that it's not you?!
 Partner Angry: You should have said you're not the human that appears in the legend of Ninetales!
-(If HERO chooses "Listen, HERO...")
+*If `Hero Name` chooses "Listen, `Hero Name`..."*
 Partner Worried: Huh? What is it?
-(If HERO chooses "I'm tired of this...")
+*If `Hero Name` chooses "I'm tired of this..."*
 Partner Worried: Hah? You're tired? What are you saying?
-
 Partner Surprised: ...Huh?! You don't think you deserve to be on our rescue team?!
 Partner Surprised: What's wrong?! What makes you say that?!
-Partner Surprised: That doesn't sound like you at all, HERO. Tell me, what's the matter?
-
+Partner Surprised: That doesn't sound like you at all, `Hero Name`. Tell me, what's the matter?
 Partner Surprised: ............Huh? You had a dream?
 Partner Surprised: And Gardevoir appeared in it?
-Partner Worried: ...And that made you think that maybe you were that human after all...
+Partner Sad: ...And that made you think that maybe you were that human after all...
 Partner Sad: ...So that's what it is. That's what happened...
-Partner Angry: Listen, HERO.
+Partner Angry: Listen, `Hero Name`.
 Partner Angry: Did your dream make you remember what you were like as a human being?
 Partner Angry: Since it didn't, you don't know what really happened.
-Partner Sad: I... I have faith in you, HERO. You know that?
+Partner Sad: I... I have faith in you, `Hero Name`. You know that?
 Partner Sad: So...
 Partner Surprised: Oh!
 Alakazam: After that scene in Pokemon Square... We held a town meeting...
@@ -1375,16 +1375,13 @@ Alakazam: I was incredulous too...
 Alakazam: I had hoped it would not come to this, but... It is unfortunate.
 Alakazam: We will... Defeat you with all our might!
 Partner Surprised: (W-we're fighting here...?)
-
-
-
 Alakazam: We will give you tonight.
 Partner Worried: Huh?
 Alakazam: Pack your supplies and get out of here.
 Alakazam: Come tomorrow, rescue teams of all sorts will take up the chase...
 Alakazam: And attack you without hesitation.
 Alakazam: And not just you.
-Alakazam: Anyone that goes with HERO will be considered an enemy.
+Alakazam: Anyone that goes with `Hero Name` will be considered an enemy.
 Alakazam: The trackers will attack without mercy.
 Alakazam: That goes for us too. We will join the hunt to be rid of you.
 Alakazam: Against all odds, you must run.
@@ -1392,41 +1389,41 @@ Alakazam: Run, run... And survive.
 Alakazam: You must run till you uncover the truth.
 Partner Teary Eyed: Alakazam...
 Alakazam: There will be no mercy the next time we meet. Farewell.
-
-Partner Normal: HERO...
+Partner Normal: `Hero Name`...
 Partner Normal: In their own way, Alakazam's team has faith in you too.
 Partner Normal: Didn't I say this before?
 Partner Normal: I'm not going to worry anymore.
-Partner Normal: Whatever happens, I'll always have faith in you, HERO.
+Partner Normal: Whatever happens, I'll always have faith in you, `Hero Name`.
 Partner Normal: Even if we're attacked by other rescue teams, I won't be scared.
-Partner Sad: What good will it do if you don't believe in yourself, HERO?
-
-Caterpie: HERO.
+Partner Sad: What good will it do if you don't believe in yourself, `Hero Name`?
+Caterpie: `Hero Name`.
 Partner Sad: Caterpie...
-Caterpie: HERO... I made a promise, remember?
+Caterpie: `Hero Name`... I made a promise, remember?
 Caterpie: That we would make a rescue team base here.
 Caterpie: That I would join your rescue team when I grew up.
-Caterpie: HERO... Don't give up.
-Caterpie: You're a hero to me, HERO.
-Caterpie: I believe in you too, HERO.
-Partner Normal: So, what do you say, HERO?
-(If HERO chooses "I'm over it! No giving up!")
+Caterpie: `Hero Name`... Don't give up.
+Caterpie: You're a hero to me, `Hero Name`.
+Caterpie: I believe in you too, `Hero Name`.
+Partner Normal: So, what do you say, `Hero Name`?
+*If `Hero Name` chooses "I'm over it! No giving up!"*
 Partner Inspired: Yeah! That's right! That's more like it!
-Partner Inspired: That's what we expect from our HERO!
+Partner Inspired: That's what we expect from our `Hero Name`!
 Partner Normal: We'll have to leave for the time being...
 Partner Normal: But let's be sure to come back!
 Partner Normal: And we'll bring the truth back with us!
 
-
+### Cutscene 52
 
 The next dawn...
 
-Partner Happy: Morning, HERO! It's early, but of course you'd be up by now!
+* * *
+
+Partner Happy: Morning, `Hero Name`! It's early, but of course you'd be up by now!
 Partner Normal: Are you ready to leave?
-(If HERO chooses "Not yet.")
+(If `Hero Name` chooses "Not yet.")
 Partner Normal: Oh, OK. I'll wait while you get ready.
 Partner Normal: Tell me when you're ready. Let's leave then.
-(If HERO chooses "All set.")
+(If `Hero Name` chooses "All set.")
 Partner Normal: Yup. Looks like we're ready.
 Partner Normal: From now on, we're fugitives.
 Partner Normal: This is going to be a dangerous trip...
@@ -1437,60 +1434,60 @@ Partner Normal: We have to get away at all cost.
 Hero Normal: (...Yes. We have to escape.)
 Hero Normal: (Like Alakazam said that time...)
 
+* * *
 
+Alakazam: Against all odds, you must run.
+Alakazam: Run, run... And survive.
+Alakazam: You must run till you uncover the truth.
 
--# Alakazam: Against all odds, you must run.
--# Alakazam: Run, run... And survive.
--# Alakazam: You must run till you uncover the truth.
-
-
+* * *
 
 Hero Normal: (Yes... Who am I?)
 Hero Normal: (Until I discover that truth, I have to run and survive.)
 Hero Normal: (Even if it means going to the edge of this world...)
 Partner Normal: OK! Let's get going!
-💬: HERO!
+💬: `Hero Name`!
 Partner Inspired: Caterpie! And Metapod too!
 Partner Inspired: Oh, and even Jumpluff!
 Caterpie: Wow, I'm glad! We made it!
-Jumpluff: We wanted to see you off, HERO.
+Jumpluff: We wanted to see you off, `Hero Name`.
 💬: M-me too!
 Diglett: Good morning. It's me, Diglett.
 Diglett: I wanted to send you off too.
 Partner Teary Eyed: Everyone....
 Flap! Flap!
 Clunk!
-Partner Normal: It's a letter. HERO, can you read it?
-HERO began reading the letter.
+Partner Normal: It's a letter. `Hero Name`, can you read it?
+`Hero Name` began reading the letter.
 "Take care! It's farewell, but only for now.
 Until the day I can deliver mail to you again...
 I'll always be waiting.
-- The wandering postal carrier, Pelipper -"
+    The wandering postal carrier, Pelipper"
 Partner Inspired: Even Pelipper...
 Partner Teary Eyed: Sniff... Everyone, thank you!
 Diglett: The other Pokemon will be waking up soon.
 Diglett: You have to go! Hurry!
 Partner Normal: Yup.
-Partner Normal: HERO! Let's go! Hit the road!
+Partner Normal: `Hero Name`! Let's go! Hit the road!
 Caterpie: Take care!
 Jumpluff: We'll be waiting for both of you to return!
 Partner Normal: Yup! Thank you!
 Partner Normal: We'll be back! That's for sure!
 Partner Normal: Take care until then!
 
+* * *
 
-
-Thus began HERO's....
+Thus began `Hero Name`'s....
 cruel and arduous journey as a fugitive.
 Over forbidding mountains...
 Partner Surprised: Wow! Aren't these fissures amazing?!
 Across fields of fire....
 Partner Sad: The environment is out of control here too...
 Partner Sad: The forest fire is still raging...
-But throughout it all, HERO's team kept their heads held high.
+But throughout it all, `Hero Name`'s team kept their heads held high.
 Without a complaint, they marched on.
 
-
+### Cutscene 53
 
 Partner Normal: Whew. We've sure traveled a long way.
 Partner Normal: But while we were moving, I couldn't help thinking...
@@ -1501,39 +1498,49 @@ Partner Pain: Sorry, I shouldn't complain. We have to get away now, period.
 Partner Normal: Huh? I hear voices...
 💬: I think they went this way.
 💬: They can't get away. Not from all of us.
-💬: We have to get rid of HERO quickly...
+💬: We have to get rid of `Hero Name` quickly...
 Partner Surprised: Aww, no! Are they catching up to us?
-Partner Surprised: HERO, we'd better go.
+Partner Surprised: `Hero Name`, we'd better go.
 
-
+### Cutscene 54
 
 Partner Normal: Whew! Finally, we made it through that cave.
 Partner Normal: Where's the Pokemon mob that's after us?
 💬: Hey, look! There they are! Over there!
-💬: Catch HERO!
+💬: Catch `Hero Name`!
 Partner Surprised: Whoa! Here they come! Run!
+
+* * *
+
 💬: Stop right there! Don't let them get away!
 Partner Surprised: They expect us to stop and wait for them?
 
+* * *
+
 Partner Pain: Gasp... Gasp...
 Partner Surprised: Oh, no! Look!
+
+* * *
 
 Partner Surprised: It... It's a mountain of fire!
 Partner Sad: Look at all that lava pouring from the crater...
 Partner Sad: Can we even make it through there?
 Partner Sad: But they're catching up to us....
-Partner Sad: What'll we do, HERO?
+Partner Sad: What'll we do, `Hero Name`?
 💬: Look! There they are!
 💬: Get them!
 Partner Pain: There's no choice now!
-Partner Pain: Let's go, HERO!
+Partner Pain: Let's go, `Hero Name`!
+
+* * *
+
 💬: Look at them go! They're running for Mt. Blaze!
 💬: Are they insane? Mt. Blaze is doomed desolation!
 💬: No one's ever come this far before!
 💬: I don't wanna go anywhere like that.
 💬: It can't be helped. Only those brave enough will give chase!
 
-
+### Cutscene 55
 
 💬: Darn it! Where'd they go?
 💬: They had to go this way! Keep your eyes open!
@@ -1544,12 +1551,14 @@ Partner Normal: ............
 Partner Normal: ........................
 Partner Normal: ...I think... They're gone.
 
+* * *
+
 Partner Normal: Whew. I think we managed to evade them.
 Partner Normal: But... There isn't any point hiding here.
 Partner Normal: We have to get over this mountain to get away.
-Partner Normal: Let's go as soon as we're ready, HERO.
+Partner Normal: Let's go as soon as we're ready, `Hero Name`.
 
-
+### Cutscene 56
 
 Partner Normal: Is this it? Is this Mt. Blaze's summit?
 Partner Pain: Wow. This is incredible. I know it's a volcano, but the lava flow is much higher than normal.
@@ -1571,7 +1580,7 @@ Gyaaaaaaaaaaaa!
 Moltres: I am Moltres! The warrior of fire am I!
 Moltres: There is no forgiving those who befoul the mountain! En garde!
 
-
+### Cutscene 57
 
 Moltres: Urggggh!
 Moltres: I'm not done! I'm not finished yet!
@@ -1610,9 +1619,6 @@ Partner Pain: We'll investigate what's behind the natural calamities. I promise.
 Moltres: ............ I will hold you to that promise.
 Moltres: You've made me believe that you will honor that promise.
 Moltres: If you do not forget... The courage you showed in facing me.
-
-
-
 Gyaaaaaaaaaah!
 Partner Surprised: Waaaah! Is... is there anything else?
 Moltres: No.
@@ -1625,23 +1631,21 @@ Partner Shouting: Ewwwwwww, that was scary!
 Partner Normal: But I'm glad Moltres understood us. That was key.
 Partner Normal: Anyway... Let's get off Mt. Blaze ourselves.
 
-
+* * *
 
 Partner Pain: Pant, pant... We sure walked a lot.
 Partner Pain: I'm bushed. Let's rest up.
 Partner Normal: Mmm... The view's fantastic.
-Partner Normal: Oh, look! HERO, look over there!
+Partner Normal: Oh, look! `Hero Name`, look over there!
 Partner Normal: See how small Mt. Blaze looks from here?
 Partner Normal: We've come a really long way, haven't we?
-Partner Normal: ............HERO.
+Partner Normal: ............`Hero Name`.
 Partner Normal: Do you remember how hard it was to get across Mt. Blaze?
 Partner Normal: I don't think too many Pokemon can get through there.
 Partner Normal: And then we gave it our all to get out here.
 Partner Normal: Do you know what I'm thinking?
 Partner Normal: We've come so far, maybe there aren't any more Pokemon that can get to us.
-
-# MISSING DIALOGUE
-
+*If `Hero Name` chooses "No, there's someone else."*
 Partner Surprised: Oh? There's someone else?
 Partner Surprised: Well, who do you mean?
 Partner Sad: ... Oh, I get it. There's Alakazam.
@@ -1649,23 +1653,26 @@ Partner Sad: You're right. Alakazam's team should be able to get here.
 Partner Normal: Yup! We don't have a choice. We have to keep going.
 Partner Normal: I think we need to go somewhere no one else can get to.
 Partner Happy: Let's be positive and keep moving.
-Partner Normal: Huh? What's the matter? Aren't you coming, HERO?
+Partner Normal: Huh? What's the matter? Aren't you coming, `Hero Name`?
 Partner Normal: ...Huh? Am I tired?
 Partner Normal: They're chasing us down. We can't afford to rest.
 Partner Normal: And... I told you already.
-Partner Normal: I said I would go with you, HERO.
+Partner Normal: I said I would go with you, `Hero Name`.
 Partner Happy: ...Oh, come on. No need for that long face. I'm fine.
-Partner Happy: Let's go, HERO! I'll go wherever you go!
-And so, HERO's harrowing journey continued.
+Partner Happy: Let's go, `Hero Name`! I'll go wherever you go!
+
+* * *
+
+And so, `Hero Name`'s harrowing journey continued.
 Seeking refuge in even harsher places...
 They fled north.
 They crossed row upon row of mountains...
 Forded fetid swamps...
 Scaled frozen cliffs...
-Till finally, HERO's tiny team arrived in a world of snow...
+Until finally, `Hero Name`'s tiny team arrived in a world of snow...
 A frigid wasteland of driving blizzards.
 
-
+### Cutscene 58
 
 Partner Pain: ...Brr... It's cold!
 Partner Shouting: Hachoo!
@@ -1682,17 +1689,23 @@ Partner Worried: ...What was that? It looked like a Pokemon, but...
 Partner Worried: Did I imagine that? No, I don't think so. I'm sure there was somebody there.
 Partner Worried: I wonder what they were doing in this lonely place?
 Partner Normal: I guess thinking about it won't help us. We should keep moving.
+
+* * *
+
 Partner Inspired: Oh!
-Partner Inspired: HERO! Look!
+Partner Inspired: `Hero Name`! Look!
 Partner Inspired: See that? Those trees are frozen!
+
+* * *
+
 Partner Inspired: Wow! The snow is like frozen powder!
 Partner Sad: It looks pretty, but... It must be harsh there...
 Partner Worried: OK. We don't have a choice--we have to get through this place.
 Partner Worried: It will be horribly cold. I'd rather not go if I didn't have to...
 Partner Worried: But hiding out in this area isn't the answer either...
-Partner Worried: We can only go forward. We'll just have to keep our spirits up and keep going, HERO!
+Partner Worried: We can only go forward. We'll just have to keep our spirits up and keep going, `Hero Name`!
 
-
+### Cutscene 59
 
 ............
 Someone has intruded upon the forest...
@@ -1700,12 +1713,12 @@ The enfeebled flow of icy winds... Is the intrusion to blame?
 It must be stopped.
 For it is to protect the forest...
 
-
+### Cutscene 60
 
 Partner Normal: We sure have traveled far into this forest.
 Partner Normal: I think we'll be out if we can get through this part. It shouldn't be far. Let's keep going.
 💬: ............
-Partner Worried: ...Huh? HERO, did you just say something?
+Partner Worried: ...Huh? `Hero Name`, did you just say something?
 Partner Normal: ...I didn't think so...
 Partner Normal: I thought I heard a voice... I must have imagined it.
 💬: ..................
@@ -1723,7 +1736,7 @@ Gyaaaaaaaaah!
 Articuno: Those that enter the forest I shall destroy with all my might!
 Articuno: Let us begin!
 
-
+### Cutscene 61
 
 Partner Pain: Please, Articuno!
 Partner Pain: We have to get through. No matter what it takes.
@@ -1764,9 +1777,6 @@ Articuno: You must try to prevent the calamities from spreading.
 Articuno: I'm counting on you!
 Partner Normal: Yup! We promise, Articuno!
 Partner Pain: Whew... That was too close...
-
-
-
 Partner Happy: Thank you. You saved us.
 Absol: ..................
 Absol: Rather than saying thanks, focus on stopping the calamities before they worsen.
@@ -1783,56 +1793,61 @@ Absol: Let me lend you my powers.
 Partner Happy: Sniffle... Thank you, Absol.
 Absol joined the team!
 
+### Cutscene 62
+
 And so...
-After getting through the Frosty Forest, HERO's team...
+After getting through the Frosty Forest, `Hero Name`'s team...
 Headed further north...
 The more they advanced...
 The harsher the conditions became...
 
-
+* * *
 
 Hero Normal: (This icy mountain path seems to go on forever...)
 Hero Normal: (We've walked a long way here...)
-Hero Sad: (PARTNER looks exhausted, too...)
+Hero Sad: (`Partner Name` looks exhausted, too...)
 Hero Sad: (We've been running all this time out of desperation...)
 Hero Sad: (What's in store for us ahead?)
 Hero Sad: (Are we really doing the right thing?)
 Partner Pain: Brr... This is too cold! There's nothing but snow now.
 Partner Pain: The scenery's been the same for a while...
 Partner Pain: I wonder if we're really making progress...
-Partner Pain: ...Hey, HERO? I was thinking...
+Partner Pain: ...Hey, `Hero Name`? I was thinking...
 Partner Pain: I have this feeling there's nothing ahead of here, even if we keep moving...
 Partner Pain: And I'm getting exhausted...
 Partner Sad: We two... What's going to happen to us?
-(If HERO chooses "Don't worry, we'll be fine!")
+*If `Hero Name` chooses "Don't worry, we'll be fine!"*
 Partner Normal: ............ Sure, that's right.
 Partner Normal: There isn't any point in wondering about what might happen. Not after coming this far.
-Partner Normal: Sorry, HERO. I was just feeling sorry for myself.
-Partner Normal: I have faith in you, HERO. That's what brought me here.
-Partner Normal: And that's not changing. I still have faith in you, HERO...
+Partner Normal: Sorry, `Hero Name`. I was just feeling sorry for myself.
+Partner Normal: I have faith in you, `Hero Name`. That's what brought me here.
+Partner Normal: And that's not changing. I still have faith in you, `Hero Name`...
 Partner Happy: I'll keep going wherever you go.
 Hero Normal: (Yes...)
-Hero Normal: (PARTNER trusts me without any doubt.)
+Hero Normal: (`Partner Name` trusts me without any doubt.)
 Hero Normal: (I can't afford to be indecisive.)
 Hero Normal: (I have to believe in myself more.)
 Hero Pain: (...Wh-what? What was that?)
 Hero Pain: (...D-dizzy? Or what?)
-Partner Normal: Huh? Is something wrong? HERO?
+Partner Normal: Huh? Is something wrong? `Hero Name`?
 💬: ...Finally.
 💬: ...Finally, you have arrived...
 Hero Pain: (Someone... Someone is talking to me...)
-Hero Pain: (PARTNER...? No. This voice isn't PARTNER...)
+Hero Pain: (`Partner Name`...? No. This voice isn't `Partner Name`...)
 Hero Pain: (This voice... I've heard it somewhere...)
 💬: Finally...
 💬: You have arrived...
 💬: I've been waiting for you.
 
-
+* * *
 
 Hero Surprised: (Ga... Gardevoir!)
+
+* * *
+
 Gardevoir: I am so glad. Finally, we get to meet.
 Hero Normal: ...You're... What...
-Partner Worried: HERO, is something the matter?
+Partner Worried: `Hero Name`, is something the matter?
 Partner Worried: Why are you talking to yourself?
 Gardevoir: I cannot be seen by others.
 Gardevoir: I am visible only to you.
@@ -1844,45 +1859,45 @@ Gardevoir: Ninetales awaits your arrival.
 Gardevoir: Beware...
 Hero Surprised: Oh! W-wait...!
 Hero Sad: ........................
-Partner Worried: Hey, HERO! HERO!
+Partner Worried: Hey, `Hero Name`! `Hero Name`!
 Partner Worried: What's the matter? What happened...?
+
+### Cutscene 63
+
 Partner Normal: ...Oh. So something like that happened.
 Partner Normal: Gardevoir appeared to you...
 Partner Normal: That's why you were looking so stunned earlier.
 Partner Normal: I'm amazed, though... Ninetales isn't just a legend. It really exists...
-
-
-
 Partner Normal: And that Ninetales is up at the peak...
-Partner Tearyeyed: Sniffle... HERO!
+Partner Tearyeyed: Sniffle... `Hero Name`!
 Partner Tearyeyed: All the effort we put into getting here... It's finally going to bear fruit!
 Partner Tearyeyed: We'll meet Ninetales and get the truth!
-Partner Happy: We'll finally get rid of the suspicions others have about you, HERO!
-(If HERO chooses "........................")
-Partner Normal: Listen, HERO...
+Partner Happy: We'll finally get rid of the suspicions others have about you, `Hero Name`!
+*If `Hero Name` chooses "........................"*
+Partner Normal: Listen, `Hero Name`...
 Partner Normal: ...Don't be so worried. It will be all right.
-Partner Normal: It's only natural that you would be scared of meeting Ninetales, HERO.
+Partner Normal: It's only natural that you would be scared of meeting Ninetales, `Hero Name`.
 Partner Normal: The heartless human who abandoned Gardevoir... It may be you...
 Partner Normal: I can understand how you could think that.
 Partner Normal: But that's impossible. You're not that human--I'm sure.
-(If HERO chooses "How can you say that?")
+*If `Hero Name` chooses "How can you say that?"*
 Partner Normal: Hmm...? Well, there was a time when I had some doubts... But now...
 Partner Worried: ...I wonder why? I really don't know why.
-Partner Normal: But it's all right. HERO, you're a really good sort.
+Partner Normal: But it's all right. `Hero Name`, you're a really good sort.
 Partner Normal: You know, before...
 Partner Normal: When I first got the idea to start a rescue team...
-Partner Normal: I met you in the Tiny Woods, HERO.
+Partner Normal: I met you in the Tiny Woods, `Hero Name`.
 Partner Normal: Now that I think about it, there was something different about you.
-Partner Happy: It is strange, isn't it? But, HERO, I believe in you.
+Partner Happy: It is strange, isn't it? But, `Hero Name`, I believe in you.
 Partner Normal: Anyway, we'll know the truth when we get to the peak.
-Partner Normal: HERO, let's do our best!
+Partner Normal: `Hero Name`, let's do our best!
 
-
+### Cutscene 64
 
 Partner Normal: We've finally arrived.
 Partner Normal: This is the summit. ...Isn't it?
 Partner Normal: I wonder where Ninetales is?
-💬: There they are! I've spotted HERO!
+💬: There they are! I've spotted `Hero Name`!
 💬: All right! I see them!
 Partner Surprised: A-Alakazam!
 Tyranitar: It's about time. We finally caught up to you.
@@ -1890,15 +1905,15 @@ Tyranitar: Your fugitive act dragged us all the way out here...
 Charizard: Pipe down, Tyranitar.
 Charizard: We can finally settle things here.
 Charizard: I can barely contain myself. I'm itching for a fight.
-Charizard: PARTNER. Don't think badly of me.
+Charizard: `Partner Name`. Don't think badly of me.
 Charizard: I don't know how to show mercy.
-Alakazam: HERO... I didn't wish for this conclusion...
+Alakazam: `Hero Name`... I didn't wish for this conclusion...
 Alakazam: But this, too, is fate.
 Alakazam: The role of a rescue team is to help bring peace.
 Alakazam: We will... crush you with every shred of our power!
 Alakazam: Get them!
 
-
+* * *
 
 💬: Cease this at once!
 Alakazam Surprised: Wuh!
@@ -1924,10 +1939,10 @@ Ninetales: The human eventually became a Pokemon.
 Ninetales: Transformed into a Pokemon, the human... The human lives on.
 Alakazam: ...And that human would be?
 Alakazam: Who is the human that you speak of?
-Ninetales: HERO...
+Ninetales: `Hero Name`...
 Ninetales: You may relax. It is not you.
 Partner Inspired: ............Just now... ...Whad did you just say?
-Ninetales: HERO is not the human that appears in the legend. That is what I said.
+Ninetales: `Hero Name` is not the human that appears in the legend. That is what I said.
 Alakazam: ...Wh-what...
 Partner Tearyeyed: ............ What's happening to me...? I'm too tensed up to move...
 Partner Tearyeyed: Oo-oof...
@@ -1935,34 +1950,28 @@ Partner Tearyeyed: ...Oof...
 Partner Normal: Deep breaths... In... Out... In... Out... In... Out...
 Partner Normal: ..................Whew...
 Partner Joyous: Oh, wow, fantastic!
-
-
-
-Partner Joyous: That's great! I knew that HERO wasn't involved!
-Partner Joyous: I knew it! There's no way that HERO would do those terrible things!
+Partner Joyous: That's great! I knew that `Hero Name` wasn't involved!
+Partner Joyous: I knew it! There's no way that `Hero Name` would do those terrible things!
 Ninetales: I have another thing to say.
 Ninetales: It is true that I foretold of the world's balance becoming unstable...
 Ninetales: However, that human becoming a Pokemon and the world's balance are not linked in any way.
 Ninetales: The cause of the natural calamities... It exists elsewhere.
 Partner Angry: Hey, you! You were wrong!
-Partner Angry: You were wrong to hound and harass HERO!
+Partner Angry: You were wrong to hound and harass `Hero Name`!
 Alakazam: ...Uh...er... We...uh...apologize.
 Tyranitar: ...We're sorry. We got worked up by that Gengar.
 Charizard Happy: No. I suspected Gengar right from the start.
-Charizard Happy: HERO just doesn't look like the treacherous type! Hahahahaha...
+Charizard Happy: `Hero Name` just doesn't look like the treacherous type! Hahahahaha...
 Partner Angry: If only that were true...
 Alakazam: But I must say...
 Alakazam: You are to be commended for prevailing through this cruel journey and discovering the truth.
-Alakazam: Impressive, HERO.
+Alakazam: Impressive, `Hero Name`.
 Partner Happy: Hahaha! Excellent! I knew I was right!
 Partner Worried: ...Huh? Oh, but wait...
-Partner Worried: Then why did HERO turn into a Pokemon?
-Partner Worried: I understand that HERO isn't the human from that legend...
-Partner Worried: Then, how do you explain HERO becoming a Pokemon?
-Partner Worried: HERO... Who are you?
-
-
-
+Partner Worried: Then why did `Hero Name` turn into a Pokemon?
+Partner Worried: I understand that `Hero Name` isn't the human from that legend...
+Partner Worried: Then, how do you explain `Hero Name` becoming a Pokemon?
+Partner Worried: `Hero Name`... Who are you?
 Partner Surprised: Waah! The ground's heaving!
 Charizard Surprised: ...Qu...quake?!
 Ninetales: The world's crust is shifting.
@@ -1988,28 +1997,28 @@ Tyranitar: Don't worry about us. We didn't get our Gold Rank the easy way.
 Tyranitar: We'll get the job done, and we'll be back before you know it.
 Alakazam: Fine. We're off to quell that Groudon!
 
-
+### Cutscene 65
 
 And thus...
 Alakazam's team made their way underground to quell the awakened Groudon.
-Meanwhile, cleared of all suspicion, HERO's team...
+Meanwhile, cleared of all suspicion, `Hero Name`'s team...
 Put an end to their long and arduous journey...
 And returned to their welcoming rescue team base.
 
-
+### Cutscene 66
 
 Meanwhile, back in Pokemon Square...
 Gengar: Kekeh! You lot!
-Gengar: Why aren't you out there hunting down HERO's team?
+Gengar: Why aren't you out there hunting down `Hero Name`'s team?
 Lombre: That's easy for you to say...
 Lombre: It's too much for us...
-Snubbull: They say HERO's team has gone way far out there.
+Snubbull: They say `Hero Name`'s team has gone way far out there.
 Snubbull: If we went, the best we could hope for is maybe the Lapis Cave.
 Shiftry: I joined the chase...
 Shiftry: But they fled into Mt. Blaze.
 Shiftry: For the life of me, I can't go in there. And that's where I lost their trail.
 Shiftry: I'm a Grass type, see. Fire doesn't agree with me at all.
-Shiftry: I don't know what became of HERO's team after that.
+Shiftry: I don't know what became of `Hero Name`'s team after that.
 Shiftry: ...But those fugitives... To think they would risk Mt. Blaze...
 Shiftry: They've grown up tough! I can't keep up!
 Shiftry Happy: Hahaha!
@@ -2018,36 +2027,36 @@ Lombre Angry: You're so full of big talk! What about your team, Gengar?
 Lombre Angry: You just hang around in the square and don't do a thing.
 Lombre Angry: Walk the talk. You guys go.
 Gengar: We're out of that picture. Kekeh!
-Gengar: Our role is to receive word about HERO's demise. Kekekekekeh!
+Gengar: Our role is to receive word about `Hero Name`'s demise. Kekekekekeh!
 Lombre: Tch! Just appointed yourself that...
 💬: Oh, my gosh! Oh, my goodness!
 Gengar: Medicham, what's the word?
-Medicham Surprised: HERO... HERO is...
-Gengar Inspired: Oh! Finally! We're finally rid of HERO! Kekeh!
+Medicham Surprised: `Hero Name`... `Hero Name` is...
+Gengar Inspired: Oh! Finally! We're finally rid of `Hero Name`! Kekeh!
 Medicham Angry: No! It's the opposite!
-Medicham Angry: HERO is back!
+Medicham Angry: `Hero Name` is back!
 Gengar Surprised: Kekeh?! What did you say?!
 Shiftry Happy: H-hey! Over there...
 
+* * *
 
-
-Caterpie Tearyeyed: ...HERO!
+Caterpie Tearyeyed: ...`Hero Name`!
 Snubbull: Th-they're back...
 Partner Happy: Hi, everyone! We're back!
 Partner Normal: Whew! We finally made it back. We've been gone for so long...
-Partner Normal: It feels kind of nostalgic to be back in the square, HERO.
-Gengar: Hey, PARTNER!
+Partner Normal: It feels kind of nostalgic to be back in the square, `Hero Name`.
+Gengar: Hey, `Partner Name`!
 Partner Angry: Hm! Oh, it's you, Gengar. It's been a while.
 Gengar Sad: (Kekeh! What's with that smug confidence?)
 Gengar Sad: (Kekeh! Maybe...)
 Partner Angry: Gengar! Everything you said was completely wrong!
-Partner Angry: HERO had nothing to do with it!
-Partner Angry: HERO was innocent!
+Partner Angry: `Hero Name` had nothing to do with it!
+Partner Angry: `Hero Name` was innocent!
 Gengar Surprised: Ugege?!
 Lombre: Wh-what?!
 Shiftry Happy: Is that true?!
 Partner Normal: Yup. We met Ninetales and asked.
-Partner Normal: HERO isn't the human from the legend.
+Partner Normal: `Hero Name` isn't the human from the legend.
 Partner Normal: We're back because we discovered the truth.
 Gengar Surprised: Ugegegegegegegegeh!
 Gengar: Kekeh! W-wait a second! You can't be trusted yet.
@@ -2058,20 +2067,17 @@ Gengar Inspired: Let's see some proof! Come on, out with it!
 Partner Sad: Proof... We don't have any proof...
 Gengar Inspired: Kekekekekekeh! It's too bad you don't have proof!
 Gengar Inspired: You came back for us so we could get rid of you easier! How conveniently foolish! Kekekeh!
-Gengar: Now, fellow Pokemon. Here's your chance to get rid of HERO! Kekekekekeh!
-
-
-
-Gengar Sad: ............Kekeh?! What's wrong, everyone? Don't you want to be rid of HERO?
-Caterpie: I... I always believed in HERO!
+Gengar: Now, fellow Pokemon. Here's your chance to get rid of `Hero Name`! Kekekekekeh!
+Gengar Sad: ............Kekeh?! What's wrong, everyone? Don't you want to be rid of `Hero Name`?
+Caterpie: I... I always believed in `Hero Name`!
 Caterpie: You don't fool me!
 Gengar Surprised: Ugeh!
 Shiftry: ...I... I'm out.
-Shiftry: I was saved by HERO's team before.
+Shiftry: I was saved by `Hero Name`'s team before.
 Shiftry: I joined the chase with a heavy heart because of your urging...
-Shiftry: But I simply can't think of HERO being bad in any way.
+Shiftry: But I simply can't think of `Hero Name` being bad in any way.
 Gengar Surprised: Ugegegeh!
-Lombre Angry: I've heard enough too! I believe HERO!
+Lombre Angry: I've heard enough too! I believe `Hero Name`!
 Snubbull: Yeah, that's right! Who needs proof?
 Gengar Surprised: Ugegegegegegege!
 Partner Tearyeyed: E-everyone...
@@ -2079,10 +2085,10 @@ Pelipper: Extra! Extra! Read all about it!
 Ekans: What? What is this?
 Medicham: ...... It looks like a newspaper... Doesn't it?
 Lombre: OK, I'll read it aloud. Let's see...
-<Pokemon News>
+-Pokemon News-
 = EXTRA =
-HERO Innocent!
-HERO met with Ninetales under the watchful eye of Alakazam...
+`Hero Name` Innocent!
+`Hero Name` met with Ninetales under the watchful eye of Alakazam...
 ...And proved that it had nothing to do with the human in the legend.
 As a result, Gengar's claims were found to be malicious lies.
 -End-
@@ -2093,23 +2099,23 @@ Shiftry: Stop, you liar! You conned us!
 Caterpie: Welcome back!
 Partner Happy: Yup! It's good to be back! We're back like we promised.
 Caterpie Tearyeyed: ...Sniffle....
-Caterpie Tearyeyed: I'm so glad... HERO isn't suspected anymore...
+Caterpie Tearyeyed: I'm so glad... `Hero Name` isn't suspected anymore...
 Partner Happy: Yup, I'm glad too.
 Partner Happy: We won't have to keep running from everyone anymore.
-Partner Normal: HERO.
+Partner Normal: `Hero Name`.
 Partner Normal: We're both exhausted. I'm going to get some sleep.
 Partner Normal: Our rescue team gets revived tomorrow! Let's try to do our best!
 
-
+### Cutscene 67
 
 The next morning...
-Partner Happy: Good morning, HERO. Did you sleep well?
+Partner Happy: Good morning, `Hero Name`. Did you sleep well?
 Partner Normal: All right! We'll get right back into doing rescues.
 Flap! Flap!
 Partner Normal: And look, Pelipper is bringing us mail already.
-Partner Happy: Let's try to do our best like we always did, HERO!
+Partner Happy: Let's try to do our best like we always did, `Hero Name`!
 
-
+### Cutscene 68
 
 Hero Normal: ......
 Hero Normal: ............
@@ -2144,9 +2150,6 @@ Gardevoir: It is our duty to protect the Trainer with our lives... We Gardevoir 
 Gardevoir: I kept my Trainer safe... That alone was enough to make me happy.
 Hero Normal: (...Protect the Trainer even at the risk of your own life...)
 Hero Normal: (...It's amazing what Gardevoir did.)
-
-
-
 Gardevoir: Oh, I must mention, I don't mind the form I have taken.
 Gardevoir: I live on this way with pride in the role I have been given.
 Hero Normal: ...Role?
@@ -2160,6 +2163,8 @@ Hero Normal: What...? What are you saying?
 Hero Surprised: Wah! E-earthquake?!
 Hero Surprised: No! Wait! I need to know more...
 
+### Cutscene 69
+
 The next morning...
 
 Hero Normal: ............ There was an earthquake... Wasn't there...?
@@ -2167,18 +2172,22 @@ Hero Normal: I think I had that dream again...
 Hero Normal: I think I spoke with Gardevoir... She said something important...
 Hero Normal: That's it! She did say something!
 
--# Gardevoir: You have... come here to perform a certain role...
--# Gardevoir And, for that role... you became a Pokemon.
+* * *
+
+Gardevoir: You have... come here to perform a certain role...
+Gardevoir And, for that role... you became a Pokemon.
+
+* * *
 
 Hero Normal: Gardevoir knows! She knows why I became a Pokemon.
 Hero Worried: She also said something about a role... What did she mean by that?
 
+### Cutscene 70
 
-
-Partner Happy: Good morning, HERO!
+Partner Happy: Good morning, `Hero Name`!
 Partner Sad: ...Huh? What's the matter? Is something wrong?
 Partner Normal: Oh, I get it! That earthquake earlier!
-Partner Normal: HERO, you're worried about the same thing I am. I should've guessed, HERO.
+Partner Normal: `Hero Name`, you're worried about the same thing I am. I should've guessed, `Hero Name`.
 Partner Normal: Alakazam's team hasn't come back yet...
 Partner Normal: They say that Groudon is powerful. That has me a little worried.
 Partner Normal: But Alakazam's team is tough too. They should be fine.
@@ -2186,7 +2195,6 @@ Partner Normal: Anyway, we agreed to let Alakazam deal with Groudon.
 Partner Normal: We don't have any choice. We have to wait for them to come back.
 Partner Happy: We have to do what we can for our part.
 Partner Happy: So let's do our best with the rescue team!
-
 💬: Uh... Um...
 Wynaut: Um.... I'm Wynaut, and this is...
 Wobbuffet Happy: Wobbuffet!
@@ -2196,7 +2204,6 @@ Wynaut: Please look at it for me. Please, please.
 Wobbuffet Happy: Wobbuffet!!!
 Wynaut: Please help me. I have to go now.
 Wobbuffet Happy: Wobbuffet!
-
 Partner Worried: What was that? What was that all about?
 Partner Worried: That little Pokemon... Did the boy say he was Wynaut?
 Partner Worried: I think he wanted us to look at the Bulletin Board at the Pelipper Post Office.
@@ -2204,7 +2211,7 @@ Partner Worried: Maybe Wynaut and his friend have a problem on their hands...
 Partner Worried: So they may have a help-wanted notice on the Bulletin Board.
 Partner Worried: Only one thing to do. Let's go check the Pelipper Post Office's Bulletin Board.
 
-
+### Cutscene 71
 
 Partner Normal: There was a job posted on the Bulletin Board which said, "Punish bad Mankey."
 Partner Normal: Did you two put up that job?
@@ -2216,13 +2223,13 @@ Wynaut: We don't know why they rampage around...
 Wynaut: But they are always angry and attack anyone they see!
 Wobbuffet Happy: Wobbuffet!
 Partner Worried: Oh, no... That is a problem.
-Partner Normal: HERO, we should go.
+Partner Normal: `Hero Name`, we should go.
 Wynaut: Thank you! We're counting on you!
 Wobbuffet Happy: Wobbuffet!
 The place where the Mankey gang is wreaking havoc on others...
 The Uproar Forest is now open for exploration!
 
-
+### Cutscene 72
 
 Mankey: Hunh? What is it, you?
 Mankey: We don't like to brag or nothing, but...
@@ -2232,7 +2239,7 @@ Mankey: ............ Wroooooooar! That vacant expression...
 Mankey: Gwooooh! It's ticking me off! I'm seeing red!
 Mankey: Mukkkeeeeeh! Get' em! It's frenzy time!
 
-
+### Cutscene 73
 
 Partner Happy: Like we promised, we showed the Mankey gang they shouldn't monkey around.
 Partner Happy: That should teach them not to be so wild.
@@ -2240,7 +2247,7 @@ Wynaut: Everyone, thank you for everything, really.
 Wobbuffet Happy: Wobbuffet!
 Wynaut: Yes, we're filled with gratitude!
 Wynaut: This is our thanks.
-HERO's team received a peeled Chestnut as their reward.
+`Hero Name`'s team received a peeled Chestnut as their reward.
 Partner Worried: .................. This... A peeled Chestnut?
 Wynaut: Yes. It's a peeled Chestnut. You see, we...
 Wynaut: Don't have any money.
@@ -2250,9 +2257,6 @@ Partner Worried: Um... No. No... We're fine with this.
 Partner Worried: Peeled Chestnuts are delicious...
 Partner Happy: I think they're great! Hahahaha! (A little money would have been nice...)
 💬: Hey, you!
-
-
-
 Partner Surprised: Aww, no, the Mankey gang!
 Wobbuffet: Wobbuffet?
 Partner Worried: That Mankey gang...
@@ -2279,12 +2283,9 @@ Partner Normal: Can't you just get Chesnuts by yourselves?
 Mankey: You know how Chestnuts have that spiky shell?
 Mankey: Trying to peel that spiky shell It hurts. And we end up losing our tempers!
 Mankey: That's why we're asking. Give us that peeled Chestnut. We'll do whatever you want.
-Partner Worried: Hmmm... HERO, what do you think?
+Partner Worried: Hmmm... `Hero Name`, what do you think?
 Partner Worried: Should we give our peeled Chestnut to the Mankey gang?
-
-
-
-(If HERO chooses "Yes.")
+*If `Hero Name` chooses "Yes."*
 Partner Inspired: I know! Listen, Mankey gang, how are you with physical labor?
 Mankey: Physical labor? You mean muscle work?
 Mankey: We have muscles... But we don't like work.
@@ -2313,11 +2314,11 @@ Mankey: OK! Let's get a move on!
 Mankey: OK!
 Mankey: OK!
 
-
+### Cutscene 74
 
 And so...
 Construction work began on the rescue team base of
-HERO's team TEAM.
+`Hero Name`'s team `Team Name`.
 Several days later...
 Partner Happy: Whew... Our base is coming along quickly.
 Wobbuffet Happy: Wobbuffet!
@@ -2337,17 +2338,17 @@ Mankey: Yeah, that's right. I don't wanna do this anymore.
 Mankey: We might change our minds if you get us more peeled Chestnuts.
 Partner Worried: ...What is this about?
 Mankey: We just can't be bothered. We need peeled Chestnuts to motivate us.
-Partner Worried: We have a problem, HERO.
+Partner Worried: We have a problem, `Hero Name`.
 Partner Worried: I don't think the Mankey gang will work unless we get them another peeled Chestnut.
 Partner Worried: I guess we'll have to give the Mankey gang any peeled Chestnuts that we find.
 
-
+### Cutscene 75
 
 Mankey: Huh? Did you bring us a peeled Chestnut?
 Mankey: Oh! A Chestnut! We want a peeled Chestnut!
 Mankey: Come on, give it to us! We'll work hard for it.
-(If HERO chooses "Give.")
-HERO peeled the spiny shell and handed the peeled Chestnut over.
+*If `Hero Name` chooses "Give."*
+`Hero Name` peeled the spiny shell and handed the peeled Chestnut over.
 Mankey Happy: Yes! A peeled Chestnut!
 Mankey: All right, you layabouts! Get it together! Chop, chop!
 Mankey: Why don't you quit lounging around yourself?! Keep moving!
@@ -2358,23 +2359,23 @@ Supplied with another peeled Chestnut, the Mankey gang got motivated...
 And returned to work on the rescue team base's renovation.
 As a result...
 The rescue team base's completion moved a little closer.
-(If HERO chooses "Don't give.")
+*If `Hero Name` chooses "Don't give."*
 Mankey: What?! You won't give it up for us?!
 Mankey: Who do you think you are?!
 Mankey: Mukkeeeeeh! Get them!
-HERO was suddenly attacked by the Mankey gang!
+`Hero Name` was suddenly attacked by the Mankey gang!
 However...
 The Mankey gang was weak.
 Mankey: Ow, ow, ow...
 Mankey: ...W-we lost...
 
-
+### Cutscene 76
 
 Partner Inspired: Sniff... Finally... This day has finally arrived...
-Partner Inspired: HERO! It's ready! Finally!
-Partner Inspired: Our... TEAM's rescue team base!
+Partner Inspired: `Hero Name`! It's ready! Finally!
+Partner Inspired: Our... `Team Name`'s rescue team base!
 Partner Inspired: Sniff... It's so cool. Every time I take a look at our rescue team base, I only see coolness.
-Partner Inspired: Its resemblance to you is a nice touch, HERO!
+Partner Inspired: Its resemblance to you is a nice touch, `Hero Name`!
 Caterpie: We all worked very hard!
 Wynaut: It was very hard, but it was worth it!
 Wobbuffet Happy: Wobbuffet!
@@ -2399,15 +2400,15 @@ And that is how...
 The chaotic renovation of the rescue team base came to an end.
 The next morning...
 
-
+### Cutscene 77
 
 Hero Surprised: Oh, wow, another earthquake...
 Hero Normal: ............ I guess it settled down...
 Hero Normal: .......There've been a lot of earthquakes lately...
 
+### Cutscene 78
 
-
-Partner Normal: Oh, hi! You're up early, HERO.
+Partner Normal: Oh, hi! You're up early, `Hero Name`.
 Partner Normal: Did you notice the earthquake earlier?
 Partner Normal: It's hard to get decent sleep when there are so many earthquakes.
 💬: Hey!
@@ -2416,9 +2417,9 @@ Lombre: We need you at the square! Everyone's gathering there.
 Partner Normal: Is there something wrong?
 Lombre: I'm not really sure... Shiftry's calling everyone out.
 Lombre: He's getting the other rescue teams to come.
-Partner Normal: HERO, let's go!
+Partner Normal: `Hero Name`, let's go!
 
-
+### Cutscene 79
 
 Partner Normal: Wow! Look at all the Pokemon!
 Lombre: Looks like they sent out to a lot of rescue teams for help.
@@ -2449,10 +2450,7 @@ Shiftry: That's why I asked so many rescue teams to gather today.
 Shiftry: I propose that a special team be formed by choosing the best of the best.
 Shiftry: Who will step forward?!
 Shiftry: Who among us will be the heroes to take on the challenges underground?!
-Partner Normal: Say, HERO. This is a great opportunity. Let's go.
-
-
-
+Partner Normal: Say, `Hero Name`. This is a great opportunity. Let's go.
 Lombre: Don't bother, you guys.
 Partner Surprised: What's with you? Can you step aside?
 Lombre: You guys have gotten a lot tougher, that's for sure, but...
@@ -2488,34 +2486,34 @@ Blastoise: Let's go!
 💬: Save Alakazam's team!
 Lombre: See? They look pretty tough, eh?
 Lombre: Let them handle things.
-Partner Worried: Hmmm... It can't be helped, HERO.
+Partner Worried: Hmmm... It can't be helped, `Hero Name`.
 
-
+### Cutscene 80
 
 Partner Normal: I wish we could have gone too, but there's nothing we can do about that.
 Partner Normal: Blastoise's team can take care of things underground.
 Partner Normal: We'll keep doing the best we can in our rescue work.
 
-
+### Cutscene 81
 
 The next morning...
 Hero Surprised: Oh? Another earthquake...
 Hero Normal: There've been so many quakes lately...
 Hero Normal: I wonder when they'll settle down...
-Partner Surprised: HERO! There's a commotion down at the square!
+Partner Surprised: `Hero Name`! There's a commotion down at the square!
 Partner Surprised: A lot of Pokemon have already gathered there.
 Partner Surprised: Let's go to the square right now!
+
+* * *
+
 Partner Normal: Oh! Lombre!
 Partner Normal: What's going on here?
-Lombre: Hey, PARTNER. W-well...
+Lombre: Hey, `Partner Name`. W-well...
 Lombre: ...You should just go see for yourself...
 Partner Surprised: Look! It's Blastoise!
 Partner Surprised: Shiftry! What happened here?!
 Shiftry: ............ They were wiped out... In the underground dungeon...
 Partner Surprised: You're kidding!
-
-
-
 Blastoise: Groan... That place... It's rough, seriously...
 Octillery: ...We couldn't get far enough to even see Groudon...
 Golem: I don't want to ever go back to a place that bad...
@@ -2540,18 +2538,15 @@ Gengar: Kekeh! Get over it! Don't expect to be rewarded just because you tried!
 Gengar: Sometimes, it's better to wise up and give up!
 Gengar Inspired: ............Huh? Did I say something profound? Kekekekekekekeh!
 Partner Sad: Urf...
-Partner Sad: HERO... I don't know anymore...
+Partner Sad: `Hero Name`... I don't know anymore...
 Partner Sad: What should we do?
 Partner Sad: Even if it's the impossible...
 Partner Sad: Should we still try to rescue Alakazam?
-
-
-
-(If HERO chooses "Let's not!")
+*If `Hero Name` chooses "Let's not!"*
 Partner Sad: ...Really...? You honestly think we shouldn't go?
-(If HERO chooses "Let's go!")
+*If `Hero Name` chooses "Let's go!"*
 Partner Inspired: ...Yes... I think so too.
-Partner Inspired: OK, HERO!
+Partner Inspired: OK, `Hero Name`!
 Partner Normal: Everyone, listen!
 Partner Normal: We're going! To rescue Alakazam's team!
 💬: Wha-what?!
@@ -2559,8 +2554,8 @@ Partner Normal: We're going! To rescue Alakazam's team!
 Gengar Surprised: Ugegege?!
 💬: Hey, who are they?
 💬: Can't say I know them...
-💬: It's Team TEAM. They're well known around these parts.
-💬: Team TEAM...? You mean the lot that were suspected of involvement in the Ninetales legend?
+💬: It's Team `Team Name`. They're well known around these parts.
+💬: Team `Team Name`...? You mean the lot that were suspected of involvement in the Ninetales legend?
 💬: I heard about that! Weren't they living like fugitives until recently?
 💬: Can they handle it? They don't look very tough.
 Partner Worried: It's true--the rescue might be too much for us to handle.
@@ -2568,10 +2563,10 @@ Partner Sad: But... We're still a rescue team.
 Partner Sad: To help Pokemon suffering from the natural disasters...
 Partner Sad: That's why we started up our rescue team!
 Partner Normal: That's why I want to rescue Alakazam's team more than anything.
-Partner Normal: Never giving up... That's where Team TEAM stakes its pride!
+Partner Normal: Never giving up... That's where Team `Team Name` stakes its pride!
 Gengar Pain: ............Keh. Kekekeh! You really aren't very bright, are you?
 Gengar: Why don't you do like everyone else and wise up?
-Shiftry: ...No. PARTNER is right.
+Shiftry: ...No. `Partner Name` is right.
 Gengar Pain: ...Ugeh?
 💬: ...That's right. I wasn't thinking straight... out of fear.
 Gengar Surprised: ...Ugegegeh?
@@ -2589,9 +2584,6 @@ Gengar Surprised: Ugegeh!
 Octillery: Yes, no more wallowing in woe-is-me self-pity.
 Golem: If we give up, that's how it ends. Not for me.
 Partner Inspired: Octillery! And Golem too!
-
-
-
 Gengar Pain: Ugegegeh! You lot, that wasn't the tune you were whistling just a little...
 💬: Aye, that's right!
 💬: There've got to be ways we can get through!
@@ -2600,14 +2592,14 @@ Gengar Pain: Ugegegeh! You lot, that wasn't the tune you were whistling just a l
 💬: Wrooooooooaaaar!
 Gengar Pain: Ugegegegegegegegeh! Are you dreaming?!
 Gengar Pain: Don't say I didn't warn you when you get into a world of pain!
-Blastoise: Thank you, PARTNER.
+Blastoise: Thank you, `Partner Name`.
 Blastoise: You stopped us from throwing away the most important thing we have--pride.
 Blastoise: My thanks from all of us.
 Blastoise: Everyone! It's time to get to work!
 Blastoise: Let's show them what we rescue teams are really about!
 💬: Wrooooooaaaaar!
 
-
+* * *
 
 Partner Normal: We were held up by that trouble with Gengar...
 Partner Normal: But now, we're getting the change to go to the underground dungeon.
@@ -2615,7 +2607,7 @@ Partner Normal: We're not leaving until tomorrow, but I'm jumpy with anticipatio
 Partner Normal: Let's spend today getting ready for the dungeon.
 Partner Normal: Let me know when you're all ready to go.
 
-
+### Cutscene 82
 
 Hero Normal: ......
 Hero Normal: ............
@@ -2625,7 +2617,7 @@ Gardevoir: It's tomorrow, isn't it? That you take to the underground dungeon.
 Hero Normal: Yes. They make it sound like one terrible place...
 Hero Normal: I wonder if we'll be OK...
 Gardevoir Happy: You will be fine.
-Gardevoir Happy: I am certain that you will succeed, HERO.
+Gardevoir Happy: I am certain that you will succeed, `Hero Name`.
 Gardevoir Happy: You have my support. Please, go with strength.
 Hero Happy: I will. Thank you.
 Hero Happy: I'm feeling a little braver now. I will go for it.
@@ -2652,10 +2644,10 @@ Gardevoir: When the time comes...
 Gardevoir: I think I can tell you when this adventure is finished.
 Gardevoir: Au revoir...
 
-
+### Cutscene 83
 
 The next morning...
-Partner Happy: Good morning, HERO! Did you sleep well?
+Partner Happy: Good morning, `Hero Name`! Did you sleep well?
 Partner Normal: OK, this is it! Let's do our best and save Alakazam's team!
 Hero Normal: (Gardevoir said...)
 Hero Normal: (She will tell me everything when this adventure is over...)
@@ -2664,7 +2656,7 @@ Hero Normal: (Will she tell me if we rescue Alakazam's team...?)
 Partner Normal: Hello!
 Partner Normal: Are you asleep still? Let's get going!
 
-
+### Cutscene 84
 
 Partner Normal: This must be it... Groudon is in this underground cavern.
 Partner Normal: Whew... Look at the streams of lava.
@@ -2672,13 +2664,13 @@ Partner Normal: It's going to be scorching hot in the dungeon, I think.
 Partner Normal: There should be other rescue teams making their way through even now.
 Partner Normal: Let's try our best like always!
 
-
+### Cutscene 85
 
 Partner Worried: Let's see... ...I wonder where we are?
 Partner Normal: I'm certain we've come quite far already...
 Partner Surprised: Waaah! Qu-quake!
 Partner Normal: ...Whew! It's over.
-Partner Surprised: Hey! HERO! Over there!
+Partner Surprised: Hey! `Hero Name`! Over there!
 Partner Surprised: Hey! Are you OK?!
 Charizard Pain: Urrrrgh...
 Partner Sad: What happened to you?
@@ -2687,7 +2679,7 @@ Partner Surprised: G-Groudon?!
 Tyranitar: Grrgh... We... It crushed us...
 Partner Surprised: That's right. What happened to Alakazam? Where is Alakazam?
 Tyranitar: Alakazam is... Still battling Groudon...
-Partner Surprised: HERO! We've got to hurry!
+Partner Surprised: `Hero Name`! We've got to hurry!
 Charizard Pain: ...Be careful!
 Partner Surprised: It's Alakazam! Are you OK?!
 Alakazam: Hm! So it's you!
@@ -2703,9 +2695,9 @@ Partner Surprised: Maybe... Was he defeated?!
 Partner Pain: Urgh... It's our turn next.
 Partner Pain: But I'm not going down without a fight!
 Grgaaaaaaaah!
-Partner Angry: HERO! Let's do our best!
+Partner Angry: `Hero Name`! Let's do our best!
 
-
+### Cutscene 86
 
 Grgaaaaaah!
 Partner Surprised: Look! It's Alakazam! Charizard and Tyranitar too!
@@ -2720,20 +2712,20 @@ Alakazam: It had lost control only because it was enraged from having its sleep 
 Alakazam: It should calm down.
 Partner Surprised: Waah... Another quake!
 Alakazam: Out! Quickly!
-Having calmed Groudon, HERO's team left the dungeon...
+Having calmed Groudon, `Hero Name`'s team left the dungeon...
 And returned to Pokemon Square together with Alakazam's team.
 
-
+### Cutscene 87
 
 And in the square...
-Lombre: Is HERO's team almost here?
+Lombre: Is `Hero Name`'s team almost here?
 Caterpie: Look! Here they come!
 Octillery: It's true, darlings!
 Lombre: Let's go!
 
+* * *
 
-
-Shiftry Happy: Great work! Great work, HERO!
+Shiftry Happy: Great work! Great work, `Hero Name`!
 Golem: You really took down that Groudon?!
 Octillery: Darlings, it's fantastic! You have won me over!
 Partner Surprised: Whoa! W-wait a second!
@@ -2743,9 +2735,9 @@ Shiftry Happy: You bunch became stronger than I expected!
 Golem: You can be proud of it!
 Blastoise: You lot did great! Why don't we team up sometime? Gahahahaha!
 Alakazam: You've earned everyone's respect now.
-Alakazam: Your Team TEAM is a first-class rescue team.
-Alakazam: Take pride in that. PARTNER, HERO.
-Partner Tearyeyed: Sniff... Sniffle... HERO! This is great!
+Alakazam: Your Team `Team Name` is a first-class rescue team.
+Alakazam: Take pride in that. `Partner Name`, `Hero Name`.
+Partner Tearyeyed: Sniff... Sniffle... `Hero Name`! This is great!
 Partner Tearyeyed: Every bit of our effort... It was all worthwhile!
 Blastoise: Would you look at that? I didn't think someone that could take down Groudon'd be such a crybaby! Gahahahaha!
 Lombre: Huh? What was that?
@@ -2758,12 +2750,18 @@ Partner Normal: This voice... I'm sure... That's it! It's Xatu!
 Alakazam: Xatu? Ah, that's it! Telepathy!
 Alakazam: Xatu is calling out to us using telepathy!
 
-
+* * *
 
 Xatu: ...To all Pokemon! Calling all Pokemon!
 Xatu: Terrible, it is! From the sky... Falls a star...
+
+* * *
+
 Xatu: From the sky! Comes a star!
 Xatu: ...It is huge... A giant of a star!
+
+* * *
+
 Xatu: The star, it falls. It falls straight to us.
 Xatu: Disasters in nature... There were many...
 Xatu: The balance of the world, it has been upset...
@@ -2789,22 +2787,24 @@ Alakazam: I also... I thought there could be none but you...
 Alakazam: But... Are you sure? There's no telling what you would find in that world above the clouds.
 Partner Normal: We expect danger!
 Partner Normal: It's my wish that all Pokemon can live in peace.
-Xatu: PARTNER, HERO. Do you hear? This is Xatu.
+Xatu: `Partner Name`, `Hero Name`. Do you hear? This is Xatu.
 Xatu: Discuss we will, Alakazam and I, about how our Teleport can be amplified.
 Xatu: Departure, it is tomorrow. Rest you should until then.
 Xatu: Last word. Dangerous will be your adventure... But fail, you must not. Surpass yourselves.
 Partner Normal: No problem! We'll be fine!
-Partner Normal: Right, HERO? Let's get it done!
+Partner Normal: Right, `Hero Name`? Let's get it done!
 
+### Cutscene 88
 
-
-Partner Normal: HERO.
+Partner Normal: `Hero Name`.
 Partner Normal: Are you all ready for the sky?
-(If HERO chooses "All Set!")
+*If `Hero Name` chooses "All Set!"*
 Partner Normal: Yup! Looks like we're ready to go!
 Partner Normal: We leave tomorrow.
 Partner Normal: So let's get plenty of rest for tomorrow.
-Partner Normal: Tomorrow! Let's give it everything we can, HERO!
+Partner Normal: Tomorrow! Let's give it everything we can, `Hero Name`!
+
+### Cutscene 89
 
 Hero Pain: ......
 Hero Pain: ............
@@ -2823,7 +2823,7 @@ Hero Normal: ..................
 Hero Normal: ......The pain......
 Hero Normal: ......It's going away............
 
-
+* * *
 
 Hero Normal: ............Gardevoir...?
 Hero Normal: Gardevoir... Will you tell me now?
@@ -2832,14 +2832,14 @@ Gardevoir: Yes.
 Gardevoir: The time has arrived.
 Gardevoir: Why you have come here?
 Gardevoir: I will tell you all there is to tell.
-Gardevoir: HERO, you have...
+Gardevoir: `Hero Name`, you have...
 Gardevoir: Come to save this world.
 Hero Normal: ............ Came to save the world of Pokemon? I did...?
 Gardevoir: Yes. We learned that this world faced extinction.
 Gardevoir: And so we sought a hero.
 Gardevoir: But though we searched, nowhere could we find our hero. We were becoming discouraged...
 Gardevoir: When we came across a human.
-Gardevoir: HERO... You were that human.
+Gardevoir: `Hero Name`... You were that human.
 Hero Surprised: Wa... Wait a second! Hero? Me? That's too much!
 Hero Surprised: I'm not anything special like that?!
 Gardevoir Happy: Yes. That is also what you said the first time we met.
@@ -2860,18 +2860,15 @@ Hero Normal: I... I did that?
 Gardevoir: Your courage has been proven.
 Gardevoir: Without question, you bear the role of saving the world.
 Gardevoir: And that role... It is soon coming to its end.
-
-
-
 Hero Normal: ...Stopping the meteor from crashing into this world...? That's my role?
 Gardevoir: Yes. And when that is accomplished...
 Gardevoir: You can return to your human world.
 Hero Normal: Oh... So I can go back to being a human...
 Hero Surprised: Wait! But that means...
-Gardevoir: Yes. It means... Parting ways with PARTNER.
-Hero Sad: PARTNER...... I have to leave?
-Gardevoir: PARTNER feels great kinship with you, HERO.
-Gardevoir: So, HERO, if you were to leave...
+Gardevoir: Yes. It means... Parting ways with `Partner Name`.
+Hero Sad: `Partner Name`...... I have to leave?
+Gardevoir: `Partner Name` feels great kinship with you, `Hero Name`.
+Gardevoir: So, `Hero Name`, if you were to leave...
 Gardevoir: Your friend would be heartbroken.
 Gardevoir: ...But there can be nothing done.
 Gardevoir: Because there are encounters, there are also farewells...
@@ -2886,11 +2883,17 @@ Gardevoir: But it is fine now. Whoever it was ran off.
 Gardevoir: ...All that remains in this dream is a feeling of sadness.
 Gardevoir: ...That Pokemon... I think ran off crying...
 Gardevoir: ............ It will be morning soon. Au revoir.
+
+* * *
+
 The next morning...
+
+* * *
+
 Partner Normal: Good morning! Did you sleep well?
-Partner Normal: This is it! Let's go, HERO! We're off to the sky!
+Partner Normal: This is it! Let's go, `Hero Name`! We're off to the sky!
 
-
+### Cutscene 90
 
 Alakazam: Ah, good of you to come.
 Xatu: Kwaaaaaaaaaah!
@@ -2901,8 +2904,8 @@ Xatu: Kwaaaaaaaaaah!
 Xatu: .........It is made.
 Xatu: This... This is the Teleport Gem.
 Xatu: This will deliver you to the world of the sky.
-Xatu: Now, HERO. Accept!
-HERO's team received the Teleport Gem.
+Xatu: Now, `Hero Name`. Accept!
+`Hero Name`'s team received the Teleport Gem.
 Xatu: That was made using the powers of psychics.
 Xatu: By me, Alakazam, and... Oh?
 Xatu: A Ghost-type Pokemon. We received help from it.
@@ -2919,23 +2922,25 @@ Hero Normal: (...Yes... And when that wish comes true...)
 Hero Normal: (Gardevoir said...)
 -# Gardevoir: You can return to your human world.
 Hero Normal: (............)
-Hero Normal: (This will be my last adventure... With PARTNER...)
-Partner Normal: HERO! Let's get this done!
-Alakazam: We're counting on you! PARTNER! HERO!
+Hero Normal: (This will be my last adventure... With `Partner Name`...)
+Partner Normal: `Hero Name`! Let's get this done!
+Alakazam: We're counting on you! `Partner Name`! `Hero Name`!
 
-
+### Cutscene 91
 
 Partner Pain: Owowow.... Where are we?
-Partner Surprised: Wah! HERO, this is cool! We're on clouds!
+Partner Surprised: Wah! `Hero Name`, this is cool! We're on clouds!
 Partner Surprised: Oh, wow!
-Partner Surprised: HERO, look up there!
+Partner Surprised: `Hero Name`, look up there!
+
+* * *
 
 Partner Normal: It's a huge tower of clouds...
 Partner Normal: It's at the top of this tower...
 Partner Normal: That's where Rayquaza is...
-Partner Normal: HERO! Let's do our best on the climb!
+Partner Normal: `Hero Name`! Let's do our best on the climb!
 
-
+### Cutscene 92
 
 Partner Normal: Is this... The top floor?
 💬: Who goes there?! Who dares to trespass upon my airspace?!
@@ -2953,7 +2958,7 @@ Rayquaza: And the opposite shall also hjold true!
 Rayquaza: Let there be no mercy for those that defy the laws of nature!
 Rayquaza: Prepare for the end!
 
-
+### Cutscene 93
 
 Gyaaaaaaaaaaaaaaaah!
 ...Gwaargh!
@@ -2977,7 +2982,7 @@ Rayquaza: Well said!
 Rayquaza: Take charge of your destiny!
 Partner Surprised: Waaaaaaaaaaaaaaaaaah!
 
-
+### Cutscene 94
 
 Hero Normal: ......
 Hero Normal: ............
@@ -2991,7 +2996,7 @@ Hero Normal: ..................
 Hero Normal: What's going to happen...?
 Hero Normal: (............)
 Hero Normal: (...This shadow... Gengar...)
-Gengar: Keke! HERO! Didn't take much to put you down! Serves you right!
+Gengar: Keke! `Hero Name`! Didn't take much to put you down! Serves you right!
 Gengar: Kekeke! Now, what to do with you?
 Gengar Inspired: I know!
 Gengar Inspired: I'll drag you into the dark world. That'll do it.
@@ -3010,7 +3015,7 @@ Gengar Sad: This isn't like me... I can't tell which way is which...
 Gengar Sad: Keh! To heck with this. I'll just ditch you here...
 Gengar: That's it. Good-bye to you.
 
-
+### Cutscene 95
 
 💬: .........Hey.
 💬: ...Hey, can you hear...
@@ -3021,7 +3026,7 @@ Alakazam: ...Regained consciousness!
 💬: Oooooooohhhhh!
 Hero Normal: (...I'm sure of it...)
 Hero Normal: (I'm sure... Back there... Gengar saved me...)
-Partner Normal: ...Maybe... Did Gengar save HERO too?
+Partner Normal: ...Maybe... Did Gengar save `Hero Name` too?
 Lombre Inspired: Awesome, you're alive! You really had all of us worried!
 Octillery: You were incredible!
 Caterpie Tearyeyed: Snivel... I'm so glad you're safe! It's fantastic!
@@ -3031,11 +3036,8 @@ Kwaaaaaaaaah!
 Xatu: Fear not! The star is no more.
 Xatu: Though it will not be right away... The disasters shall soon be calmed.
 Partner Inspired: Really!
-Partner Joyous: We did it, HERO! Everything worked!
+Partner Joyous: We did it, `Hero Name`! Everything worked!
 Partner Joyous: We've won peace!
-
-
-
 Snubbull: Yippee! This is the greatest!
 Charizard: This calls for a celebration!
 Blastoise: Let me shoot my Hydro Pump to kick it off!
@@ -3046,22 +3048,19 @@ Octillery: I'll secure him so he can't get away.
 Charizard: Oh? Not bad!
 Lombre: What, you're serious?! Nooooo! Don't!
 💬: Ahahahahaha!
-💬: HERO...
+💬: `Hero Name`...
 Hero Normal: (............ Gardevoir...)
-Gardevoir: We owe everything to you, HERO, and your friends.
+Gardevoir: We owe everything to you, `Hero Name`, and your friends.
 Gardevoir: Peace has returned to our world.
 Gardevoir: Thank you for everything.
-Gardevoir: And now... HERO, your role here has ended.
+Gardevoir: And now... `Hero Name`, your role here has ended.
 Gardevoir: Soon, you must return to your own world.
 Gardevoir: It is time to bid farewell.
 Hero Normal: (It's finally come... This time has finally arrived...)
-Gardevoir: HERO... I am so sorry for this... To everyone... Please bid farewell...
-
-
-
-Caterpie: Oh? HERO?
-Partner Surprised: ...! HERO...! Your body... What's happening to you?
-Hero Normal: PARTNER...
+Gardevoir: `Hero Name`... I am so sorry for this... To everyone... Please bid farewell...
+Caterpie: Oh? `Hero Name`?
+Partner Surprised: ...! `Hero Name`...! Your body... What's happening to you?
+Hero Normal: `Partner Name`...
 Hero Normal: And, everyone... I'm sorry. But I have to leave.
 Snubbull Surprised: What?!
 Bellsprout Pain: Wh-what are you saying?!
@@ -3075,46 +3074,46 @@ Tyranitar Surprised: Go back... To the human world?!
 Partner Surprised: Huh? W-why...? Why?!
 Partner Surprised: I don't understand! Why do you have to leave?!
 Partner Pain: Didn't we... Aren't we friends?
-Hero Normal: Yes. You will always be my friend, PARTNER.
+Hero Normal: Yes. You will always be my friend, `Partner Name`.
 Hero Normal: I will never forget you.
-Partner Tearyeyed: Don't go, HERO......
+Partner Tearyeyed: Don't go, `Hero Name`......
 Hero Normal: I'm blessed to have met you.
-Partner Tearyeyed: I... What am I going to do when you're gone, HERO?
+Partner Tearyeyed: I... What am I going to do when you're gone, `Hero Name`?
 Hero Normal: I'm so very sorry. This is good-bye...
-Jumpluff Sad: HERO!
-Charizard Surprised: HERO!
-Bellsprout: HERO!
-Caterpie Tearyeyed: HERO...
-Partner Crying: HERO!!! Nooooo!!!
+Jumpluff Sad: `Hero Name`!
+Charizard Surprised: `Hero Name`!
+Bellsprout: `Hero Name`!
+Caterpie Tearyeyed: `Hero Name`...
+Partner Crying: `Hero Name`!!! Nooooo!!!
 
+Cutscene 96
 
-
-Caterpie Tearyeyed: Snivel... HERO... Why... I don't understand...
+Caterpie Tearyeyed: Snivel... `Hero Name`... Why... I don't understand...
 Charizard Tearyeyed: Why? Why was it necessary to leave us...?
-Shiftry Tearyeyed: HERO saved my life...
+Shiftry Tearyeyed: `Hero Name` saved my life...
 Shiftry Tearyeyed: But I hadn't done anything to show my thanks...
 Shiftry Tearyeyed: Left... Before I could even say thanks...
 Lombre Tearyeyed: You're right...
 Lombre Tearyeyed: Just upped and went like that...
 Lombre Tearyeyed: Why now? Why when the world's been saved?
 Lombre Tearyeyed: Just when things were going to get better... Sob...
-Xatu: This was coming... Our world, it was saved by HERO.
-Xatu: I look back now... When bound for the sky, HERO seemed...
+Xatu: This was coming... Our world, it was saved by `Hero Name`.
+Xatu: I look back now... When bound for the sky, `Hero Name` seemed...
 Xatu: As if resigned. Resigned to accept what was to come.
 Partner Sad: ............ I think I know...
-Partner Sad: HERO must have...
-Partner Sad: HERO must have become a Pokemon to save us.
+Partner Sad: `Hero Name` must have...
+Partner Sad: `Hero Name` must have become a Pokemon to save us.
 Partner Sad: And when... When the star was destroyed...
-Partner Sad: HERO knew that would be the time to leave...
-Partner Tearyeyed: Why... Why didn't HERO tell me earlier...?
-Partner Tearyeyed: If this was coming... Why didn't HERO tell me?
+Partner Sad: `Hero Name` knew that would be the time to leave...
+Partner Tearyeyed: Why... Why didn't `Hero Name` tell me earlier...?
+Partner Tearyeyed: If this was coming... Why didn't `Hero Name` tell me?
 Alakazam: Those words couldn't be spoken.
 Alakazam: As much as you are heart-broken now...
-Alakazam: HERO must have felt the same pain of leaving.
-Alakazam: Try to understand, PARTNER.
-Partner Tearyeyed: Sob... HERO...
+Alakazam: `Hero Name` must have felt the same pain of leaving.
+Alakazam: Try to understand, `Partner Name`.
+Partner Tearyeyed: Sob... `Hero Name`...
 
-
+### Cutscene 97
 
 Hero Normal: (........................)
 Hero Normal: (What is this...?)
@@ -3124,53 +3123,59 @@ Hero Normal: (I wonder where I'm going?)
 Hero Normal: (......!)
 Hero Normal: (Voices... I hear voices...)
 
+* * *
+
 Your friend is heartbroken...
 A true friend... A friend for life...
 You finally realize it now...
 If you wish... And wish very strongly...
 Perhaps you will meet again.
 
-
+### Cutscene 98
 
 I don't want to leave...
 I want to stay longer...
 With my invaluable...
 Irreplaceable friend...
 
+`Blue Rescue Team End Card`
 
+### Cutscene 99
 
-# END
-
-
-The story of HERO and PARTNER ends here.
-But TEAM isn't done yet! There are many rescues to be done!
+The story of `Hero Name` and `Partner Name` ends here.
+But `Team Name` isn't done yet! There are many rescues to be done!
 A new adventure begins!
 The legendary Pokemon are set to make their appearance!
 Don't go away!
 
+## Chapter Post-Game 1: Unlocking Evolution and Leader Shift
 
+### Cutscene 100
 
-Due to HERO and PARTNER's heroic actions...
+Due to `Hero Name` and `Partner Name`'s heroic actions...
 the falling star was destroyed...
 and peace returned to the world of Pokemon.
 But that did not put an end to the natural calamities.
 Natural disasters still occurred, but much less often.
-Needless to say, TEAM's rescue activities
+Needless to say, `Team Name`'s rescue activities
 continued as if nothing had changed.
 Several mornings later...
-Partner Normal: Good morning, HERO! Did you just wake up?
+
+* * *
+
+Partner Normal: Good morning, `Hero Name`! Did you just wake up?
 Partner Normal: I went by the Pelipper Post Office earlier.
 Partner Normal: The Bulletin Board was still covered with rescue jobs.
 Partner Normal: Even though it's peaceful again, many Pokemon still need our help.
-Partner Normal: HERO! Let's keep on doing our best as always!
-Caterpie: HERO!
+Partner Normal: `Hero Name`! Let's keep on doing our best as always!
+Caterpie: `Hero Name`!
 Partner Normal: Oh, hi, Caterpie and Metapod. What's the matter?
 Caterpie: It's Snubbull! There's something weird going on!
 Partner Worried: Snubbull is weird...? Weird, how?
 Metapod: He looks completely different...
-Partner Normal: HERO! Let's go to the square!
+Partner Normal: `Hero Name`! Let's go to the square!
 
-
+### Cutscene 101
 
 Partner Normal: Hi, Alakazam!
 Partner Normal: Hi, Alakazam. Have you seen Snubbull?
@@ -3184,9 +3189,6 @@ Granbull: I went into the cave there, and all of a sudden...
 Partner Worried: What cave?
 Whiscash: It appeared without me noticing.
 Whiscash: See? Right there.
-
-
-
 Partner Normal: So you went in there...
 Granbull: Yup... And I came out looking like this...
 Alakazam: Snubbull underwent "evolution." He evolved.
@@ -3212,13 +3214,13 @@ Metapod: I wish I could be Butterfree soon...
 Caterpie Inspired: M-me too!
 Partner Normal: Can we evolve if we go to that cave?
 Alakazam: Yes. But it would depend on the conditions.
-Partner Normal: HERO. Let's go to the cave if we're ready to evolve.
+Partner Normal: `Hero Name`. Let's go to the cave if we're ready to evolve.
 
+### Cutscene 102
 
-
-Partner Normal: Oh, yeah, HERO! Wait a second!
+Partner Normal: Oh, yeah, `Hero Name`! Wait a second!
 Partner Normal: There's something I wanted to talk over with you before we go to a dungeon.
-Partner Normal: You know how we always go to dungeons together, HERO?
+Partner Normal: You know how we always go to dungeons together, `Hero Name`?
 Partner Normal: But I think we'll be seeing all sorts of different dungeons from now on...
 Partner Normal: I think some of them will be tough even for us.
 Partner Normal: So, I have an idea.
@@ -3226,9 +3228,9 @@ Partner Normal: Instead of us running things all the time, we should let the tea
 Partner Normal: How about we change things so we can pick the leader and members to go into dungeons?
 Partner Normal: That might mean we won't be going on rescues to certain dungeons...
 Partner Normal: But that will let us handle rescues better by having more Pokemon types available.
-Partner Normal: Do you like the idea? HERO, do you think it'd be good to be able to freely choose leaders?
-(If HERO chooses "Yes.")
-Partner Happy: Yup, that's right! I thought you'd agree, HERO!
+Partner Normal: Do you like the idea? `Hero Name`, do you think it'd be good to be able to freely choose leaders?
+*If `Hero Name` chooses "Yes."*
+Partner Happy: Yup, that's right! I thought you'd agree, `Hero Name`!
 Partner Happy: OK! New rule! We can now freely pick the Pokemon that are going into dungeons.
 Partner Normal: I think this is how we should pick the leader of a team going into a dungeon.
 Partner Normal: In its Friend Area, face the team member you want as the leader, then select Make Leader on the menu.
@@ -3238,7 +3240,9 @@ Partner Normal: We should make it so a team leader can go into a dungeon alone i
 Partner Normal: Anyway... To choose the leader of a dungeon-bound team... In a Friend Area, use... Make Leader.
 Partner Normal: We should always choose the team leader in its Friend Area before sending the team to any dungeon.
 
+## Chapter Post-Game 2: Recruiting Legendary Birds
 
+### Cutscene 103
 
 Gyaooooooooooooooooh!
 Zapdos: So, you're back!
@@ -3246,7 +3250,7 @@ Zapdos: Since we lastr met, how much more have you furthered your team?
 Zapdos: How much stronger?
 Zapdos: Your power... Demonstrate it for me!
 
-
+### Cutscene 104
 
 Moltres: Halt!
 Moltres: This is Mt. Blaze!
@@ -3256,7 +3260,7 @@ Moltres: I am the warrior of fire, Moltres!
 Moltres: Have you what it takes to defeat me when I am holding back nothing?
 Moltres: Show me!
 
-
+### Cutscene 105
 
 Gyaaaaaah!
 Articuno: Your arrival in this frozen forest means only one thing...
@@ -3265,7 +3269,9 @@ Articuno: I am Articuno! The warder of ice!
 Articuno: Those that enter the forest... I shall destroy with all my might!
 Articuno: No matter who it may be!
 
+## Chapter Post-Game 3: Spinda and the Mirage Pokemon
 
+### Cutscene 106
 
 Bellsprout: Oh?
 Bellsprout: Who is that? Over there.
@@ -3273,8 +3279,11 @@ Lombre: Never seen it before. It's not from around these parts.
 💬: No more... I can't walk anymore...
 💬: I'm falling down...
 Bellsprout: Goodness! It needs help!
+
+* * *
+
 💬: Wh-where...?
-Partner Normal: It's HERO's house.
+Partner Normal: It's `Hero Name`'s house.
 Partner Normal: It's also our rescue team's base.
 💬: Oh! ...Did you maybe rescue me?
 💬: Th-thank you...
@@ -3295,10 +3304,7 @@ Partner Surprised: Wait a second! Are you sure you won't regret giving up that e
 Spinda Sad: But I... I've reached my physical limit...
 Spinda Sad: If I push myself any further, I will collapse again. It's not good for my health...
 Spinda: ...Please, I want you to have this.
-
-
-
-PARTNER received something from Spinda.
+`Partner Name` received something from Spinda.
 Partner Worried: What is this?
 Spinda: It's a... Clear Wing...
 Partner Worried: Clear Wing?
@@ -3317,7 +3323,7 @@ Partner Normal: I think Xatu is the one to ask for something like this.
 Partner Normal: Xatu should be at the peak of the Great Canyon.
 Partner Normal: We should go! To the Great Canyon!
 
-
+### Cutscene 107
 
 Xatu: ............ What is it? Have you reason to see me?
 Xatu: Hm! This... This is a Clear Wing...
@@ -3342,14 +3348,14 @@ Xatu: Go. You must go to the Fiery Field.
 Xatu: The answers you seek... Perhaps they await you there.
 Gained access to the Fiery Field!
 
-
+### Cutscene 108
 
 💬: What compelled you to come?
 💬: The likes of you have no business being here!
 Entei: I am Entei! I live surrounded by the fiery lava of volcanoes!
 Entei: If you refuse to leave... I shall forcefully expel you!
 
-
+### Cutscene 109
 
 Entei: Gwooooooh!
 Entei: Urghgh... I... I lost...
@@ -3363,11 +3369,11 @@ Entei: Take this and go west!
 Entei: There, you will find the Lightning Field.
 Entei: You will know your path there!
 Entei: Now go! To the Lightning Field!
-HERO received the Red Wing.
+`Hero Name` received the Red Wing.
 And...
 Gained access to the Lightning Field!
 
-
+### Cutscene 110
 
 💬: Why... Why have you come...?
 💬: This is Lightning Field. It is my...domain!
@@ -3378,7 +3384,7 @@ Raikou: Many have trespassed upon my domain...
 Raikou: But what became of them? Let me demonstrate...
 Raikou: And you, too, shall experience the pain they suffered!
 
-
+### Cutscene 111
 
 Raikou: Gwooooooooooh! ...H-how dare you!
 Raikou: How... How did this happen...?
@@ -3393,11 +3399,11 @@ Raikou: To a place called the Northwind Field.
 Raikou: You will find a Pokemon there named Suicune.
 Raikou: If you are lucky enough to meet Suicune...
 Raikou: Perhaps your wish will come true!
-HERO received the Sunset Wing.
+`Hero Name` received the Sunset Wing.
 And...
 Gained access to the Northwind Field!
 
-
+### Cutscene 112
 
 💬: Halt!
 💬: Why are you here?!
@@ -3408,7 +3414,7 @@ Suicune: Intruders foul the air with their outside ills.
 Suicune: There is but one solution for invaders: expulsion by force!
 Suicune: Here I come!
 
-
+### Cutscene 113
 
 Suicune: Gwoooooooh!
 Suicune: I have lost...
@@ -3426,11 +3432,11 @@ Suicune: Take this wing...
 Suicune: Take it to the mountain so high that its peak is obscured by clouds.
 Suicune: Yes... Take it to Mt. Faraway!
 Suicune: The mirage Pokemon is at its peak!
-HERO received the Rainbow Wing.
+`Hero Name` received the Rainbow Wing.
 And...
 Gained access to Mt. Faraway!
 
-
+### Cutscene 114
 
 💬: Excellent!
 💬: You have done well to come this far.
@@ -3445,7 +3451,9 @@ Ho-Oh: Only when you overcome me in battle... That is when this mountain is conq
 Ho-Oh: This is the final challenge!
 Ho-Oh: Here I come!
 
+## Chapter Post-Game 4: Recruit Three Superancient Pokemon
 
+### Cutscene 115
 
 Medicham Happy: Pshehehehehe!
 Medicham Happy: That Lombre... He amuses me so! Pshehehehehe!
@@ -3453,6 +3461,8 @@ Medicham: Oh, long time no see. You are well?
 Medicham: You see, I have heard about Lombre's tale. It is too funny.
 Medicham: I have heard that Lombre almost drowned at sea!
 Medicham Happy: But that Lombre--he lives in water How very pathetic! Pshehehehehe!
+
+### Cutscene 116
 
 Lombre: Huh? What's that? ...Oh, you mean what happened at sea?
 Lombre Angry: I wasn't drowning! Sheesh, they're making up stories about me!
@@ -3470,7 +3480,7 @@ Lombre: I vamoosed it out of there, so I can't tell you much...
 Lombre: I know! Maybe Whiscash would know something.
 Lombre: Yeah, that'd be best. Go talk to Whiscash.
 
-
+### Cutscene 117
 
 Whiscash: Ah, so you wish to know about the dungeon in the sea?
 Whiscash I, too, have heard of it.
@@ -3484,7 +3494,7 @@ Whiscash: However... To go beneath the sea, a Hidden Machine named Dive is neede
 Whiscash: Without Dive, you cannot go to the Stormy Sea.
 Whiscash: Hohoho! Your face tells me you are desperate to go.
 Whiscash: So be it. You may have this.
-HERO's team received the promised Dive.
+`Hero Name`'s team received the promised Dive.
 Whiscash: I understand that it is a very rare item that was found in a place called the Solar Cave.
 Whiscash: If you were to carry that Hidden Machine as an item....
 Whiscash: Or if any team member wishing to enter the dungeon used that Hidden Machine to learn Dive...
@@ -3492,7 +3502,7 @@ Whiscash: You would be able to enter the Stormy Sea.
 Gained access to the Stormy Sea!
 Beware--you must take the HM Dive, or a team member must learn Dive as a move for the team to enter!
 
-
+### Cutscene 118
 
 Gwoooooooooooh..................
 💬: ...My power... is bursting...
@@ -3505,10 +3515,14 @@ Kyogre: I am Kyogre! The lord of the sea!
 Kyogre: Witness the destructive force of my waves!
 Kyogre: Marvel at my awesome power!
 
+### Cutscene 119
+
 Groudon: Why have you returned?! How dare you disturb me in my sleep?!
 Groudon: I let rage run wild before... But I won't allow that again!
 Groudon: Those that disturb my sleep... Shall be crushed!
 Groudon: No matter who it may be!
+
+### Cutscene 120
 
 Gyaaaaaaaaaaaah!
 Rayquaza: So it is you who dares to trespass upon my airspace!
@@ -3521,11 +3535,16 @@ Rayquaza: I am now... Unleashing every bit of my might!
 Rayquaza: My power shall overwhelm... But you dare to stand up to it?
 Rayquaza: I commend your courage!
 
+## Chapter Post-Game 5: Nyooooom
 
+### Cutscene 121
 
 The next morning...
 No... Morning, but only by time...
 A time so early in the morning that everyone is still in bed...
+
+* * *
+
 ......
 ............
 ........................
@@ -3533,7 +3552,7 @@ Gggwwooooooooooooaahhhhh!
 Hero Surprised: Wha... What is it?!
 Hero Surprised: What... What's happening outside?!
 
-
+* * *
 
 Whooooooosh!
 Hero Worried: ...This sound...
@@ -3544,17 +3563,23 @@ Hero Surprised: Something huge flew by at an incredible speed...
 Hero Normal: It seemed to be going... Toward the mountain range in the north?
 Hero Sad: ............ Yawwwwwn... Still sleepy...
 Hero Sad: It's still early. I'll catch a little more sleep...
+
+* * *
+
 Several hours later...
 Partner Normal: ............ Hey...
-Partner Normal: Hey, HERO.
-Partner Normal: HERO, wake up! Come on, wake up!
-Partner Normal: HERO, are you awake?
+Partner Normal: Hey, `Hero Name`.
+Partner Normal: `Hero Name`, wake up! Come on, wake up!
+
+* * *
+
+Partner Normal: `Hero Name`, are you awake?
 Partner Normal: There's some sort of a commotion down at the square.
 Partner Normal: Let's take a look!
 
+### Cutscene 122
 
-
-Partner Normal: Look, HERO. Everyone's gathered around.
+Partner Normal: Look, `Hero Name`. Everyone's gathered around.
 Purple Kecleon Angry: Aiyiyi... I do not deserve this! I am outraged!
 Partner Normal: What's up, everyone?
 Purple Kecleon: Up? Up? Up?! How could it be up, I ask you!
@@ -3577,12 +3602,12 @@ Alakazam: The yonder direction... That would be the Northern Range...
 Alakazam: It's impossible to determine what the thief is...
 Alakazam: So we'll need to investigate this matter properly.
 Purple Kecleon: Yes. I beg for justice. My business faces ruination.
-Partner Normal: HERO. Want to look into this?
-HERO's team took on the case of pursuing the burglar that struck Kecleon's shop.
+Partner Normal: `Hero Name`. Want to look into this?
+`Hero Name`'s team took on the case of pursuing the burglar that struck Kecleon's shop.
 The burglar's alleged getaway spot...
 The Northern Range is now open for investigation!
 
-
+### Cutscene 123
 
 💬: Oh! Who are you?!
 💬: ............ I see. You're trying to get your TMs back.
@@ -3592,14 +3617,14 @@ Latios: I'm the Eon Pokemon Latios!
 Latios: If you really want your TMs back...
 Latios: You'll have to take them from me!
 
-
+### Cutscene 124
 
 Latios: Urghgh...
 Latios: ............Please... Please let me go...
 Latios: I have to go... There's somewhere that I have to go...
 Latios: If... I don't hurry... M-my little sister...
 
-
+### Cutscene 125
 
 Partner Normal: Look! He's waking up!
 Latios: ...Wh-where...?
@@ -3623,15 +3648,12 @@ Latios: Latias and I were flying over the Northern Range.
 Latios: When suddenly, what appeared to be a meteorite struck Latias on the wing....
 Latios: Her wing shattered by the blow, Latias tumbled down into the depths of the Pitfall Valley...
 Partner Surprised: A meteorite?!
-Partner Surprised: HERO! Do you think maybe that it's a chunk of the blown-up meteor?
+Partner Surprised: `Hero Name`! Do you think maybe that it's a chunk of the blown-up meteor?
 Latios: I went to the Pitfall Valley in hopes of rescuing my sister, but...
 Latios: I made little headway... I wasn't up to the task...
 Alakazam: So that drove you to steal Technical Machines...
 Latios: I intended to make amends after I saved my sister...
 Latios: But that doesn't mean I can get away with thievery. It was wrong, and I'm sorry.
-
-
-
 Purple Kecleon: Oh... Oh, my! It is not a problem! Not a problem at all!
 Purple Kecleon: For a reason so compelling, it can't be helped. Hahaha.
 Alakazam: However... Even if you were to plumb the depths of Pitfall Valley...
@@ -3654,11 +3676,11 @@ Partner Worried: But it got broken in the falling star's explosion.
 Alakazam: While it is unlikely to carry you to the sky again, it should be able to carry you a shorter distance.
 Alakazam: If you were to use the Teleport Gem from deep within the Pitfall Valley...
 Partner Happy: That's it! If we did that, we could escape with Latias!
-Partner Normal: HERO! This is a rescue that only we can do!
+Partner Normal: `Hero Name`! This is a rescue that only we can do!
 Partner Normal: Let's go rescue Latias!
-HERO gained access to the Pitfall Valley!
+`Hero Name` gained access to the Pitfall Valley!
 
-
+### Cutscene 126
 
 💬: ............
 💬: ...Y-you are...?
@@ -3666,7 +3688,7 @@ HERO gained access to the Pitfall Valley!
 Latias: ........... Yes, I'll be fine.
 Latias: My wing is still damaged a little, but... I can go.
 
-
+### Cutscene 127
 
 Latios: Latias!
 Latias: Latios!
@@ -3681,19 +3703,21 @@ Partner Happy: It's OK, really. When you put it that way, it's even a little emb
 Latios: However... We have no money or any other way of repaying your kindness.
 Latios: So, and it's the least we can do... May we join your rescue team?
 Partner Surprised: Huh...?
-Latias: We would like to join TEAM and help with your rescue work.
+Latias: We would like to join `Team Name` and help with your rescue work.
 Latios: Would that work? Would you be willing to accept us on your rescue team?
-Partner Worried: HERO, what should we do? Do we let Latios and Latias join?
-(If HERO chooses "Yes.")
+Partner Worried: `Hero Name`, what should we do? Do we let Latios and Latias join?
+(If `Hero Name` chooses "Yes.")
 Partner Happy: Done!
 Partner Happy: You're our fellow members from now on. Great to have you!
 Latios: Thanks for having us!
 Latias: Delighted to join!
 And thus...
-TEAM was joined by Latios and Latias!
+`Team Name` was joined by Latios and Latias!
 Latios and Latias became team members!
 
+## Chapter Post-Game 6: The Guardian Of The Sea
 
+### Cutscene 128
 
 Alakazam: I have heard of a weather anomaly afflicting a certain area.
 Alakazam: They say a whirlpool stretches from sea to sky in a colossal tornado.
@@ -3701,11 +3725,11 @@ Alakazam: It is said to be near the Legendary Island Friend Area.
 Alakazam: It hasn't caused any damage so far as I know... But it does concern me.
 Alakazam: The Legendary Island belongs to your team.
 Alakazam: Will you travel to the Legendary Island and observe what is taking place?
-(If HERO chooses "Yes.")
+(If `Hero Name` chooses "Yes.")
 Alakazam: Ah, good. You accept the job.
 Alakazam: I hope for the best from you.
 
-
+### Cutscene 129
 
 Moltres: Fire, Ice, and Electricity...
 Articuno: When the three powers merge as one...
@@ -3722,7 +3746,7 @@ Obtained the Vortex Stone.
 And...
 Gained access to the Silver Trench!
 
-
+### Cutscene 130
 
 💬: Why... Why have you come here...?
 💬: This is... the Silver Trench. This is my territory!
@@ -3734,7 +3758,9 @@ Lugia: Cast aside all thoughts! Unleash every bit of your power!
 With your life at stake...
 Bring it on!
 
+## Chapter Post-Game 7: The Meteor Cave
 
+### Cutscene 131
 
 The next morning...
 Partner Normal: Hi, Xatu, long time! You're here to visit us?
@@ -3766,10 +3792,7 @@ Blastoise Pain: But the place was crawling with these weird things...
 Blastoise Pain: It freaked me out. I couldn't stay there long...
 Partner Joyous: Hahaha! Surprise, surprise! Blastoise's kind of cowardly!
 Blastoise Angry: What's that?!
-
-
-
-Blastoise Angry: Hey, you, PARTNER. If you were to see that dungeon, you'd be intimidated too!
+Blastoise Angry: Hey, you, `Partner Name`. If you were to see that dungeon, you'd be intimidated too!
 Blastoise Pain: I've never seen anything like it before...
 Blastoise Pain: There were downright bizarre things in there that I'm not sure were even Pokemon.
 Blastoise: Xatu, do you have any idea what are in that place?
@@ -3779,10 +3802,10 @@ Xatu: If there were things that survived the crash...
 Xatu: Perhaps... Of this world they may not be.
 Blastoise: You mean... They came from that falling star?
 Xatu: Perhaps that is so...
-Partner Normal: HERO. Want to go investigate? The Meteor Cave.
+Partner Normal: `Hero Name`. Want to go investigate? The Meteor Cave.
 The rescue team gained access to the Meteor Cave!
 
-
+### Cutscene 132
 
 💬: ............
 💬: Where... Where am I?
@@ -3792,9 +3815,12 @@ Deoxys: I am Deoxys. I came from space.
 Deoxys: If you know, tell me.
 Deoxys: I must know... what happened here!
 
+## Chapter Post-Game 8: The Buried Relic
 
+### Cutscene 133
 
-<Pokemon News> = Extra! =
+-Pokemon News-
+= Extra! =
 Buried Relic Discovered!
 Mystery ruin found underground!
 Its side had been hidden by the crater of a meteor strike in ancient times.
@@ -3803,7 +3829,7 @@ There are rumors of treasures...
 And perhaps even Pokemon that lived in ancient times.
 The Buried Relic is the main topic in Pokemon Square.
 
-
+### Cutscene 134
 
 Lombre: Hey, have you heard? About the Buried Relic.
 Lombre: They're rumoring that there are treasures in there.
@@ -3817,42 +3843,48 @@ Shiftry: The Buried Relic is deep in the jungle to the southeast.
 Shiftry: Are you dreaming about the treasures too?
 Shiftry: Kukukuh... Me too! Best of luck, compadre!
 Leaving aside the disturbing fact that Shiftry made them compadres...
-HERO's team gained access to Buried Relic!
+`Hero Name`'s team gained access to Buried Relic!
 
-
+### Cutscene 135
 
 INTRUDER ALERT!
 EXTERMINATE!
 INTRUDER ALERT!
 EXTERMINATE!
+
+### Cutscene 136
 
 Something fell from Regirock's body.
 Regirock was apparently guarding this item.
-HERO obtained the Rock Part...
+`Hero Name` obtained the Rock Part...
 that Regirock was guarding!
 
-
+### Cutscene 137
 
 INTRUDER ALERT!
 EXTERMINATE!
 INTRUDER ALERT!
 EXTERMINATE!
+
+### Cutscene 138
 
 Something fell from Regice's body.
 Regice was apparently guarding this item.
-HERO obtained the Ice Part...
+`Hero Name` obtained the Ice Part...
 that Regice was guarding!
 
-
+### Cutscene 139
 
 INTRUDER ALERT!
 EXTERMINATE!
 INTRUDER ALERT!
 EXTERMINATE!
+
+### Cutscene 140
 
 Something fell from Registeel's body.
 Registeel was apparently guarding this item.
-HERO obtained the Steel Part...
+`Hero Name` obtained the Steel Part...
 that Registeel was guarding!
 That means...
 By finding the Rock Part, Ice Part, and Steel Part...
@@ -3860,10 +3892,12 @@ All three parts are yours!
 Oh? The three parts... They're reacting to each other?
 The three parts fit together...
 and became a Music Box!
-HERO obtained the Music Box!
+`Hero Name` obtained the Music Box!
 The Music Box only needs to be in the Toolbox for it to attract a special something!
 
+## Chapter Post-Game 9: Wish Cave
 
+### Cutscene 141
 
 Medicham: ........................
 Ekans: ........................
@@ -3880,7 +3914,7 @@ Medicham: I... I don't know anything!
 Ekans: Me too! I don't know a thing!
 Ekans: I don't know anything about making wishes come true! I know nothing!
 
-
+### Cutscene 142
 
 Medicham: Ekans, listen. I'm thinking it is best if only we go into the dungeon.
 Medicham: If either one of us falls before the end...
@@ -3897,7 +3931,7 @@ Medicham: I... I don't know anything!
 Ekans: Me too! I don't know a thing!
 Ekans: I don't know anything about a dungeon that makes wishes come true! I know nothing!
 
-
+### Cutscene 143
 
 Ekans: ...I got KO'd in that dungeon, but what about Medicham? Hope she's OK...
 Ekans: I hope she gets to the end and gets my wish to come true...
@@ -3908,9 +3942,9 @@ Ekans: ...Hunh? Wait a second... Maybe I shouldn't be wishing for a bigger lower
 Ekans: I wonder if it'd be better if I could coil myself tighter...
 Ekans: ...Hmm... Mutter...
 
+### Cutscene 144
 
-
-HERO read the SOS Mail apparently sent by Medicham.
+`Hero Name` read the SOS Mail apparently sent by Medicham.
 "My name is Medicham.
 We had no trouble entering this dungeon... But it's horrible here! It is much too difficult!
 Ekans, he was defeated right away. It makes me want to scream!
@@ -3920,7 +3954,7 @@ The reward is a secret~🎵 But it' really very nice--you can be sure of that~�
 The place in which Medicham is thought to have gone missing...
 The Wish Cave is now open for exploration!
 
-
+### Cutscene 145
 
 Medicham Pain: Oh, my, my... I can't seem to find a way out...
 Medicham Pain: What am I to do...?
@@ -3929,7 +3963,7 @@ Medicham Surprised: ............ Perhaps...|
 Medicham Surprised: You have come to rescue me?
 Medicham Happy: Yes, yes! I am so lucky!
 
-
+* * *
 
 Ekans Special0: Medicham! You're safe! Yesssss!
 Medicham Sad: I'm so sorry, Ekans. That dungeon--it was too much for me.
@@ -3941,17 +3975,14 @@ Medicham Angry: But it was very hard in there--most terribly so!
 Medicham Angry: Kiiih! I never want to go again! Such a terrible place!
 Medicham: At first, I made an SOS Call because I did not want to lose this...
 Medicham Happy: But I will give it to you. Here! Your reward for my rescue~🎵
-HERO's team received the promised Wish Stone.
-
-
-
+`Hero Name`'s team received the promised Wish Stone.
 Medicham Happy: They say if you take that stone to the Wish Cave... To its very depths...
 Medicham Special0: Wonder of wonders! A wish--it comes true!
 Medicham Happy: You see~🎵 A rich reward, won't you agree?
 Medicham: However... If you lose that Wish Stone on the way, the wish cannot come true.
 Medicham Happy: For me, it was impossible. But you must try~🎵
 
-
+### Cutscene 146
 
 💬: ........................
 💬: ......Fwaaaaaaaahhh......
@@ -3961,7 +3992,7 @@ Medicham Happy: For me, it was impossible. But you must try~🎵
 Jirachi Sleep: I'm Jirachi. Who are you?
 Jirachi Sleep: ......Fwaaaaahhhh...... I'm still... sleepy...
 
-
+### Cutscene 147
 
 Jirachi Sleep: ...Oh, oh?! I hear singing...
 Jirachi Sleep: A song of purity...
@@ -3971,7 +4002,7 @@ Jirachi: I'm Jirachi.
 Jirachi: When I awaken, I grant a wish. I have to.
 Jirachi: Er-hem... Then... I ask you this.
 Jirachi: What is your wish?
-(If HERO chooses "Something good!")
+*If `Hero Name` chooses "Something good!"*
 Jirachi: Something good? That's not very easy...
 Jirachi: But I'll do my best!
 Jirachi: Nnnnnnnnnn!
@@ -3982,11 +4013,11 @@ Jirachi: ...Fwaaaaaaaahhh...
 Jirachi: Using that power.... Made me sleepy... Good night...
 Jirachi fell back into a deep sleep...
 
-
+### Cutscene 148
 
 The next morning...
-Partner Inspired: Listen, HERO! I've got great news!
-Partner Inspired: Team TEAM's rescue rank went up!
+Partner Inspired: Listen, `Hero Name`! I've got great news!
+Partner Inspired: Team `Team Name`'s rescue rank went up!
 Partner Normal: I saw Pelipper outside looking stunned, so I chatted with him.
 Partner Normal: Pelipper says he was blown here by a sudden gust of wind!
 Partner Normal: He doesn't seem to know why he would end up here.
@@ -3995,9 +4026,11 @@ Partner Normal: He was supposed to take them their new crest showing that they'd
 Partner Normal: But since he ended up here, he thinks it must be for a good reason. We're getting that new rescue rank crest!
 Partner Happy: It's awesome! I guess it's kind of unfair, but... Well, anyway!
 Partner Happy: If it's a gift, we have to accept!
-Team TEAM's rescue rank went up!
+Team `Team Name`'s rescue rank went up!
 
+## Chapter Post-Game 10: The Most Powerful Of All Pokemon
 
+### Cutscene 149
 
 One day...
 In a small cave in the distant west...
@@ -4030,11 +4063,17 @@ Charizard: Who are you?! Show yourself!
 💬: Me...?
 💬: I was... Engineered...
 Created only to fight...
+
+* * *
+
 The most powerful of all Pokemon!
+
+* * *
+
 Charizard Pain: Gwaaaaaaaaaaaah!
 Blastoise Pain: Gyaaaaaaaah!
 
-
+### Cutscene 150
 
 Bellsprout: ...I've always wondered...
 Bellsprout: Who would be the most powerful Pokemon of all?
@@ -4052,12 +4091,10 @@ Bellsprout: Legend has it that Groudon shaped continents. It's an incredible Pok
 Wobbuffet Happy: Wobbuffet!
 Lombre: Hey, you came along at the right time.
 Lombre: We're having a little argument about who the most powerful Pokemon happens to be.
-Lombre: HERO, what do you think?
+Lombre: `Hero Name`, what do you think?
 Lombre: Who do you think is the most powerful Pokemon?
 
-[MIISSING DIALOGUE]
-
-
+***MISSING DIALOGUE***
 
 Wynaut: Um...
 Wynaut I heard this story...
@@ -4094,7 +4131,7 @@ Wobbufett Happy: Wobbuffet!
 The cave shunned by all out of fear...
 The Western Cave is now open for exploration!
 
-
+### Cutscene 151
 
 💬: ............ Was it you...?
 💬: ...Who...disturbed...me...in my... sleep...? Was it you?
@@ -4104,17 +4141,19 @@ Mewtwo: Would you like to know why? It's quite simple...
 Mewtwo: If anyone--such as you--were to come along...
 Mewtwo: I could defeat them at full power! Come on!
 
-
+### Cutscene 152
 
 Mewtwo: I... have secluded myself here in suspended animation.
 Mewtwo: Lying in wait... For someone like you to come.
 Mewtwo: I am Mewtwo. A Pokemon created only to fight... And...
 Mewtwo: The most powerful Pokemon of all!
 
+## Chapter Post-Game 11: The Selfish Human
 
+### Cutscene 153
 
 Medicham: Say, sweetie. Have you seen Gengar around?
-(If HERO chooses "No.")
+*If `Hero Name` chooses "No."*
 Medicham Sad: ...Oh, OK.
 Ekans: Something seems to be wrong with Gengar lately.
 Medicham: He won't do anything wicked with us anymore...
@@ -4128,22 +4167,22 @@ Medicham: ...Hmm... Perhaps that is so.
 Medicham: Anyway, without Gengar around, Team Meanies can't operate.
 Medicham: Such a vexing problem!
 
-
+### Cutscene 154
 
 Medicham: I think Gengar headed off to Mt. Freeze.
 Medicham Pain: I have heart it is a place that is very difficult. Will he be OK?
 Ekans: Gengar wants to meet with Ninetales. That's what I think.
 Ekans: What he means to do when he does meet... I don't know.
 
-
+### Cutscene 155
 
 The mountain's summit... But there is no one here.
 It's time to go back.
 
-
+### Cutscene 156
 
 Gengar: Kekeh! Late riser!
-Gengar: Like always, slow to rise, aren't you, Team TEAM! Kekeke!
+Gengar: Like always, slow to rise, aren't you, Team `Team Name`! Kekeke!
 Gengar Sad: ...Tchah! But that's not what I came here to say. Not today.
 Gengar Sad: It irks me to say this, but... I need your help.
 Gengar Sad: Can you take me up Mt. Freeze?
@@ -4151,17 +4190,20 @@ Gengar Sad: I tried going up over and over, but...Keh... It's steep and harsh...
 Gengar Sad: Ninetales is up on Mt. Freeze.
 Gengar Sad: I've got to see Ninetales. I'm prepared to do whatever it takes.
 Gengar Sad: That's why I'm asking you. Take me up Mt. Freeze.
-(If HERO chooses "Yes.")
+*If `Hero Name` chooses "Yes."*
 Gengar: Keke! That's settled! You have my trust!
-Gengar: can now tag along with the rescue team!
+Gengar can now tag along with the rescue team!
 Gengar: The only place I want to go is Mt. Freeze.
 Gengar: I'm not about to tag along if you're going to other dungeons.
 Gengar: I'll only tag along when you go off to Mt. Freeze. Keke!
 
-
+### Cutscene 157
 
 Gengar: You're going to Mt. Freeze?
 Gengar: Don't forget to take me, kekeh!
+
+### Cutscene 158
+
 Gengar Inspired: Kekeh! Here at last! We're at the peak!
 Gengar: Hey, NInetales! Where are you?! Come out!
 Gengar: Kekeh! Long time, Ninetales!
@@ -4194,9 +4236,6 @@ Ninetales: I became enraged at your treacherous heart... And on it, I laid my cu
 Ninetales: For that reason, depending on your heart now, the curse may be lifted.
 Ninetales: Take this with you.
 Gengar received the 9-Tail Crest from Ninetales.
-
-
-
 Ninetales: Gardevoir's physical form is sealed within the Murky Cave.
 Ninetales: The seal can be broken by that stone. The 9-Tail Crest.
 Gengar: Gotcha!
@@ -4209,11 +4248,13 @@ Ninetales: That oaf... He has changed in many ways...
 Ninetales: But he is wavering... His old and new emotions are clashing within his heart...
 Ninetales: If he would only realize that upon reaching the Murky Cave... If he does not....
 
-
+### Cutscene 159
 
 Gengar: Keke! You did good today.
 Gengar: Next, we go to that Murky Cave place...
 Gengar: That sounds like another challenging place, so I'll need your help still! Keke!
+
+### Cutscene 160
 
 Gengar: Kekeh! Late riser!
 Gengar: It's the Murky Cave next. I'll need your help for that.
@@ -4227,10 +4268,12 @@ Gengar: The only place I want to go is the Murky Cave.
 Gengar: I'm not about to tag along if you're going to other dungeons.
 Gengar: I'll only tag along when you go off to the Murky Cave. Keke!
 
+### Cutscene 161
+
 Gengar: You're going to the Murky Cave?
 Gengar: Don't forget to take me, kekeh!
 
-
+### Cutscene 162
 
 Gengar: Kekeh! We're here at last!
 Gengar: This is it? This is the deepest floor of the Murky Cave?
@@ -4265,47 +4308,47 @@ All that I need is for some questions to be answered.
 However...
 Gengar Surprised: Gegeh?! What the...?! I can't move!
 Gengar, you will not be doing the answering...
-HERO.
-HERO. You will answer.
+`Hero Name`.
+`Hero Name`. You will answer.
 Gengar Surprised: Gegegeh! What are you saying?!
 Gengar Surprised: Why is someone else speaking for me?!
 Gengar Surprised: Let me do it!
 Gengar. Your heart is interwoven with conflicting emotions.
 You will probably never show the truth within your heart.
 Gengar Surprised: Kekeh?! What?!
-HERO will enter Gengar's heart.
+`Hero Name` will enter Gengar's heart.
 Please navigate carefully through Gengar's emotions.
 
-
+* * *
 
 If you fail to draw out Gengar's true feelings...
 The curse will never be broken.
-Gengar Surprised: Gegege! Hey, HERO!
+Gengar Surprised: Gegege! Hey, `Hero Name`!
 Gengar Surprised: Don't you dare fool around! I'll make you pay for it!
-You have but one chance. HERO, do your best.
+You have but one chance. `Hero Name`, do your best.
 Fine... It is time.
 First of all...
 Why does Gengar wish to break this curse?
-(If HERO chooses "To save Gardevoir.")
+*If `Hero Name` chooses "To save Gardevoir."*
 That's a lie, isn't it?
 Didn't Gengar abandon Gardevoir long ago?
 Why would Gengar want to save Gardevoir now?
-(If HERO chooses "Came to understand Gardevoir.")
+*If `Hero Name` chooses "Came to understand Gardevoir."*
 Came to understand Gardevoir's feelings?
 What is it you claim to understand?
 What do you claim to be Gardevoir's feelings?
-(If HERO chooses "Hatred for Gengar.")
+*If `Hero Name` chooses "Hatred for Gengar."*
 Hatred for Gengar...
 Gardevoir felt hatred toward Gengar for abandonment... That is what you claim?
 In spite of that, Gengar is trying to help Gardevoir...
 Why should that be so?
-(If HERO chooses "To clear up misunderstandings.")
+(If `Hero Name` chooses "To clear up misunderstandings.")
 I see. To clear up misunderstandings.
 Gengar hopes to help Gardevoir and clear up misunderstandings....
 That is what you claim?
 I understand now... My questions are finished.
 
-
+* * *
 
 Gengar. Whether you have the right to break the curse or not...
 I will now render my judgement.
@@ -4320,17 +4363,17 @@ Gengar Pain: I had to get away, no matter what... That's what I thought.
 Gengar Pain: It didn't take long for me to forget about the curse and about Gardevoir.
 Gengar Sad: Many long years passed...
 Gengar Sad: But Gardevoir... She never forgot about me.
-Gengar Sad: One night... In HERO's dream, Gardevoir said this...
+Gengar Sad: One night... In `Hero Name`'s dream, Gardevoir said this...
 Gengar Sad: That she considered me an irreplaceable friend, and that she still believed we would meet again...
 Gengar Sad: Gardevoir kept thinking about someone like me.
 Gengar Crying: But I... How selfish I was.
 Gengar Crying: I lived carefree all this time... I realize now how selfish I was.
 Gengar Crying: It's not just Gardevoir.
-Gengar Crying: Team TEAM put up with my selfishness and brought me here.
+Gengar Crying: Team `Team Name` put up with my selfishness and brought me here.
 Gengar Crying: I finally know what I was missing.
 Gengar Crying: What I lacked... It was something for the others... A sense of gratitude.
 
-
+* * *
 
 The lock bearing the curse... It has opened.
 Gengar Surprised: Ga-Gardevoir!
@@ -4348,16 +4391,16 @@ Ninetales: Gardevoir will have no recollection of that.
 Gengar Sad: ............That doesn't matter.
 Gengar Sad: Gardevoir is back. That's enough for me...
 
-
+### Cutscene 163
 
 Gardevoir: Thank you so much.... My curse has been lifted.
 Gardevoir: You did this for me, even though I had never met you before... I have no idea how to thank you...
 Gardevoir: From the bottom of my heart...
 Gardevoir: Thank you so very much for saving me.
 Gengar Sad: ............ Good for you, Gardevoir.
-Gengar Sad: Hey, HERO. Thanks for getting me through this.
+Gengar Sad: Hey, `Hero Name`. Thanks for getting me through this.
 Gengar Sad: This is my thanks.
-HERO received the promised Mobile Scarf.
+`Hero Name` received the promised Mobile Scarf.
 Gengar Sad: Adios.
 Gardevoir: Oh, wait, please!
 Gengar Sad: What is it now?
@@ -4366,16 +4409,18 @@ Gengar Sad: Keh!
 Gengar: The name's Gengar. Glad to meet you.
 Gardevoir Happy: My name is Gardevoir. I am also glad to meet you.
 
-
+### Cutscene 164
 
 Gardevoir: I have done a lot of thinking...
-Gardevoir: I would like to join Team TEAM and help on rescues.
+Gardevoir: I would like to join Team `Team Name` and help on rescues.
 Gardevoir: Please, may I become a member?
-(If HERO chooses "Yes.")
+(If `Hero Name` chooses "Yes.")
 Gardevoir Happy: Thank you! I promise to do my best for the team!
 Gardevoir became the rescue team's newest member!
 
+## Chapter Post-Game ?: Purity Forest Final Reward
 
+### Cutscene ???
 
 Oh? There's someone there.
 It's... The Time Travel Pokemon Celebi!
