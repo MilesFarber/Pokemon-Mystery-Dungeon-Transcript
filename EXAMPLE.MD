@@ -139,12 +139,12 @@ Please follow these guidelines when editing the .md file.
 
 **Bold** is used for colored text. Unfortunately, Github's markdown preview does not support text color, so bold will have to do for now.
 
-> This is used for the narrator, or other dialogue that appears at the center of the screen. If multiple dialogues fade in and out, put them in the same blockquote like this:
+>This is used for the narrator, or other dialogue that appears at the center of the screen. If multiple dialogues fade in and out, put them in the same blockquote like this:
 
 ```md
-> This is a blockquote.
+>This is a blockquote.
 >
-> This is the same blockquote.
+>This is the same blockquote.
 ```
 
 This will ensure the end user knows it's from the same person, and avoid Markdown Lint errors.
