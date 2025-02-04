@@ -711,7 +711,7 @@ But there was no mail seeking help from the rescue team.
 
 ### Cutscene 16
 
-The next morning...
+>The next morning...
 
 💬: Uhh... Hello?
 
@@ -2930,7 +2930,7 @@ Kwaaaaaaaaah!
 
 ### Cutscene 49
 
-The next morning...
+>The next morning...
 
 `Hero Normal`
 `Hero Name`: ............ What a strange dream...
@@ -5176,7 +5176,7 @@ As a result, Gengar's claims were found to be malicious lies.
 
 ### Cutscene 67
 
-The next morning...
+>The next morning...
 
 `Partner Happy`
 `Partner Name`: Good morning, `Hero Name`. Did you sleep well?
@@ -5331,7 +5331,7 @@ Flap! Flap!
 
 ### Cutscene 69
 
-The next morning...
+>The next morning...
 
 `Hero Normal`
 `Hero Name`: ............ There was an earthquake... Wasn't there...?
@@ -6162,7 +6162,7 @@ The Uproar Forest is now open for exploration!
 
 ### Cutscene 81
 
-The next morning...
+>The next morning...
 
 `Hero Surprised`
 `Hero Name`: Oh? Another earthquake...
@@ -6556,7 +6556,7 @@ The next morning...
 
 ### Cutscene 83
 
-The next morning...
+>The next morning...
 
 `Partner Happy`
 `Partner Name`: Good morning, `Hero Name`! Did you sleep well?
@@ -7184,7 +7184,7 @@ And in the square...
 
 * * *
 
-The next morning...
+>The next morning...
 
 * * *
 
@@ -9310,7 +9310,7 @@ Gained access to the Silver Trench!
 
 ### Cutscene 131
 
-The next morning...
+>The next morning...
 
 `Partner Normal`
 `Partner Name`: Hi, Xatu, long time! You're here to visit us?
@@ -9866,7 +9866,7 @@ Jirachi fell back into a deep sleep...
 
 ### Cutscene 148
 
-The next morning...
+>The next morning...
 
 `Partner Inspired`
 `Partner Name`: Listen, `Hero Name`! I've got great news!
