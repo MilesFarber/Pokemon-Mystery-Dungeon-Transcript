@@ -5485,16 +5485,28 @@ The Uproar Forest is now open for exploration!
 
 ### Cutscene 72
 
-Mankey: Hunh? What is it, you?
-Mankey: We don't like to brag or nothing, but...
-Mankey: We get furious real easy. You know that?!
-Mankey: What really irritates us is when we see some dim-witted face...
-Mankey: ............ Wroooooooar! That vacant expression...
-Mankey: Gwooooh! It's ticking me off! I'm seeing red!
-Mankey: Mukkkeeeeeh! Get' em! It's frenzy time!
+`Mankey Normal`
+`Mankey Name`: Hunh? What is it, you?
+
+`Mankey Normal`
+`Mankey Name`: We don't like to brag or nothing, but...
+
+`Mankey Normal`
+`Mankey Name`: We get furious real easy. You know that?!
+
+`Mankey Normal`
+`Mankey Name`: What really irritates us is when we see some dim-witted face...
+
+`Mankey Normal`
+`Mankey Name`: ............ Wroooooooar! That vacant expression...
+
+`Mankey Normal`
+`Mankey Name`: Gwooooh! It's ticking me off! I'm seeing red!
+
+`Mankey Normal`
+`Mankey Name`: Mukkkeeeeeh! Get' em! It's frenzy time!
 
 ### Cutscene 73
-
 
 `Partner Happy`
 `Partner Name`: Like we promised, we showed the Mankey gang they shouldn't monkey around.
@@ -5542,65 +5554,110 @@ Mankey: Mukkkeeeeeh! Get' em! It's frenzy time!
 
 `Partner Surprised`
 `Partner Name`: Aww, no, the Mankey gang!
-Wobbuffet: Wobbuffet?
+
+`Wobbuffet Normal`
+`Wobbuffet Name`: Wobbuffet?
 
 `Partner Worried`
 `Partner Name`: That Mankey gang...
 
 `Partner Worried`
 `Partner Name`: Did they chase us here to get us back?
-Mankey: That's right, you!
-Mankey: You got lucky! You don't mess with us!
-Mankey: We're not gonna lose this time! We'll pulverize you!
-Mankey: Mukkeeeeh! Crush them!
-Mankey: Whoa! L-look at that!
-Mankey: Ch-Chestnut!
-Mankey: It is! It's a peeled Chestnut!
+
+`Mankey Normal`
+`Mankey Name`: That's right, you!
+
+`Mankey Normal`
+`Mankey Name`: You got lucky! You don't mess with us!
+
+`Mankey Normal`
+`Mankey Name`: We're not gonna lose this time! We'll pulverize you!
+
+`Mankey Normal`
+`Mankey Name`: Mukkeeeeh! Crush them!
+
+`Mankey Normal`
+`Mankey Name`: Whoa! L-look at that!
+
+`Mankey Normal`
+`Mankey Name`: Ch-Chestnut!
+
+`Mankey Normal`
+`Mankey Name`: It is! It's a peeled Chestnut!
 
 `Partner Worried`
 `Partner Name`: Wh-what?
-Mankey: Whisper, whisper...
-Mankey: Mutter, mutter...
+
+`Mankey Normal`
+`Mankey Name`: Whisper, whisper...
+
+`Mankey Normal`
+`Mankey Name`: Mutter, mutter...
 
 `Partner Worried`
 `Partner Name`: What are they doing?
 
 `Wynaut Normal`
 `Wynaut Name`: They look like... They're having a discussion.
-Wobbuffet: Wobbuffet!
+
+`Wobbuffet Normal`
+`Wobbuffet Name`: Wobbuffet!
 
 `Partner Worried`
 `Partner Name`: What's going on?
-Mankey: ...Uh, listen. You got something we want...
-Mankey: That peeled Chestnut you have... Can we have it?
-Mankey: We, uh... Love peeled Chestnuts!
-Mankey: Like, we love them so much, we can't think of a life without Chesnuts!
+
+`Mankey Normal`
+`Mankey Name`: ...Uh, listen. You got something we want...
+
+`Mankey Normal`
+`Mankey Name`: That peeled Chestnut you have... Can we have it?
+
+`Mankey Normal`
+`Mankey Name`: We, uh... Love peeled Chestnuts!
+
+`Mankey Normal`
+`Mankey Name`: Like, we love them so much, we can't think of a life without Chesnuts!
 
 `Partner Normal`
 `Partner Name`: Can't you just get Chesnuts by yourselves?
-Mankey: You know how Chestnuts have that spiky shell?
-Mankey: Trying to peel that spiky shell It hurts. And we end up losing our tempers!
-Mankey: That's why we're asking. Give us that peeled Chestnut. We'll do whatever you want.
+
+`Mankey Normal`
+`Mankey Name`: You know how Chestnuts have that spiky shell?
+
+`Mankey Normal`
+`Mankey Name`: Trying to peel that spiky shell It hurts. And we end up losing our tempers!
+
+`Mankey Normal`
+`Mankey Name`: That's why we're asking. Give us that peeled Chestnut. We'll do whatever you want.
 
 `Partner Worried`
 `Partner Name`: Hmmm... `Hero Name`, what do you think?
 
 `Partner Worried`
 `Partner Name`: Should we give our peeled Chestnut to the Mankey gang?
+
 *If `Hero Name` chooses "Yes."*
 
 `Partner Inspired`
 `Partner Name`: I know! Listen, Mankey gang, how are you with physical labor?
-Mankey: Physical labor? You mean muscle work?
-Mankey: We have muscles... But we don't like work.
-Mankey: But if it's for that peeled Chestnut...
+
+`Mankey Normal`
+`Mankey Name`: Physical labor? You mean muscle work?
+
+`Mankey Normal`
+`Mankey Name`: We have muscles... But we don't like work.
+
+`Mankey Normal`
+`Mankey Name`: But if it's for that peeled Chestnut...
 
 `Partner Normal`
 `Partner Name`: OK! This is what we'll do!
 
 `Partner Normal`
 `Partner Name`: We were going to make our rescue team base something more impressive than this.
-Mankey: Rescue team base?
+
+`Mankey Normal`
+`Mankey Name`: Rescue team base?
 
 `Partner Normal`
 `Partner Name`: That's right! Our rescue team base!
@@ -5610,15 +5667,27 @@ Mankey: Rescue team base?
 
 `Partner Normal`
 `Partner Name`: How does that sound?
-Mankey: Whisper, whisper...
-Mankey: Mutter, mutter...
-Mankey: OK. We'll help!
+
+`Mankey Normal`
+`Mankey Name`: Whisper, whisper...
+
+`Mankey Normal`
+`Mankey Name`: Mutter, mutter...
+
+`Mankey Normal`
+`Mankey Name`: OK. We'll help!
 
 `Partner Happy`
 `Partner Name`: Really? You'll help us?
-Mankey: Yeah. Leave it to us!
-Mankey: We'll carry in the materials and get the place built. Double-quick!
-Mankey: ...In return... Hand over that peeled Chestnut.
+
+`Mankey Normal`
+`Mankey Name`: Yeah. Leave it to us!
+
+`Mankey Normal`
+`Mankey Name`: We'll carry in the materials and get the place built. Double-quick!
+
+`Mankey Normal`
+`Mankey Name`: ...In return... Hand over that peeled Chestnut.
 
 `Caterpie Inspired`
 `Caterpie Name`: Me too! I'll help too!
@@ -5640,16 +5709,25 @@ Mankey: ...In return... Hand over that peeled Chestnut.
 
 `Partner Inspired`
 `Partner Name`: Sniff... Thanks, everyone!
-Mankey: OK! Let's get a move on!
-Mankey: OK!
-Mankey: OK!
+
+`Mankey Normal`
+`Mankey Name`: OK! Let's get a move on!
+
+`Mankey Normal`
+`Mankey Name`: OK!
+
+`Mankey Normal`
+`Mankey Name`: OK!
 
 ### Cutscene 74
 
-And so...
-Construction work began on the rescue team base of
-`Hero Name`'s team `Team Name`.
-Several days later...
+>And so...
+>
+>Construction work began on the rescue team base of
+>
+>`Hero Name`'s team `Team Name`.
+>
+>Several days later...
 
 `Partner Happy`
 `Partner Name`: Whew... Our base is coming along quickly.
@@ -5683,17 +5761,27 @@ Several days later...
 
 `Caterpie Normal`
 `Caterpie Name`: We need to keep working.
-Mankey: Don't wanna.
+
+`Mankey Normal`
+`Mankey Name`: Don't wanna.
 
 `Partner Surprised`
 `Partner Name`: What?!
-Mankey: This work's too boring! How do you expect us to keep going?
-Mankey: Yeah, that's right. I don't wanna do this anymore.
-Mankey: We might change our minds if you get us more peeled Chestnuts.
+
+`Mankey Normal`
+`Mankey Name`: This work's too boring! How do you expect us to keep going?
+
+`Mankey Normal`
+`Mankey Name`: Yeah, that's right. I don't wanna do this anymore.
+
+`Mankey Normal`
+`Mankey Name`: We might change our minds if you get us more peeled Chestnuts.
 
 `Partner Worried`
 `Partner Name`: ...What is this about?
-Mankey: We just can't be bothered. We need peeled Chestnuts to motivate us.
+
+`Mankey Normal`
+`Mankey Name`: We just can't be bothered. We need peeled Chestnuts to motivate us.
 
 `Partner Worried`
 `Partner Name`: We have a problem, `Hero Name`.
@@ -5706,33 +5794,68 @@ Mankey: We just can't be bothered. We need peeled Chestnuts to motivate us.
 
 ### Cutscene 75
 
-Mankey: Huh? Did you bring us a peeled Chestnut?
-Mankey: Oh! A Chestnut! We want a peeled Chestnut!
-Mankey: Come on, give it to us! We'll work hard for it.
+`Mankey Normal`
+`Mankey Name`: Huh? Did you bring us a peeled Chestnut?
+
+`Mankey Normal`
+`Mankey Name`: Oh! A Chestnut! We want a peeled Chestnut!
+
+`Mankey Normal`
+`Mankey Name`: Come on, give it to us! We'll work hard for it.
+
 *If `Hero Name` chooses "Give."*
+
 `Hero Name` peeled the spiny shell and handed the peeled Chestnut over.
-Mankey Happy: Yes! A peeled Chestnut!
-Mankey: All right, you layabouts! Get it together! Chop, chop!
-Mankey: Why don't you quit lounging around yourself?! Keep moving!
-Mankey: We'll get hustling on renovating your rescue team base!
-Mankey: We'll carry in the materials and get the place built. Double-quick! You just wait!
-And so...
-Supplied with another peeled Chestnut, the Mankey gang got motivated...
-And returned to work on the rescue team base's renovation.
-As a result...
-The rescue team base's completion moved a little closer.
+
+`Mankey Happy`
+`Mankey Name`: Yes! A peeled Chestnut!
+
+`Mankey Normal`
+`Mankey Name`: All right, you layabouts! Get it together! Chop, chop!
+
+`Mankey Normal`
+`Mankey Name`: Why don't you quit lounging around yourself?! Keep moving!
+
+`Mankey Normal`
+`Mankey Name`: We'll get hustling on renovating your rescue team base!
+
+`Mankey Normal`
+`Mankey Name`: We'll carry in the materials and get the place built. Double-quick! You just wait!
+
+>And so...
+>
+>Supplied with another peeled Chestnut, the Mankey gang got motivated...
+>
+>And returned to work on the rescue team base's renovation.
+>
+>As a result...
+>
+>The rescue team base's completion moved a little closer.
+
 *If `Hero Name` chooses "Don't give."*
-Mankey: What?! You won't give it up for us?!
-Mankey: Who do you think you are?!
-Mankey: Mukkeeeeeh! Get them!
-`Hero Name` was suddenly attacked by the Mankey gang!
-However...
-The Mankey gang was weak.
-Mankey: Ow, ow, ow...
-Mankey: ...W-we lost...
+
+`Mankey Normal`
+`Mankey Name`: What?! You won't give it up for us?!
+
+`Mankey Normal`
+`Mankey Name`: Who do you think you are?!
+
+`Mankey Normal`
+`Mankey Name`: Mukkeeeeeh! Get them!
+
+>`Hero Name` was suddenly attacked by the Mankey gang!
+>
+>However...
+>
+>The Mankey gang was weak.
+
+`Mankey Normal`
+`Mankey Name`: Ow, ow, ow...
+
+`Mankey Normal`
+`Mankey Name`: ...W-we lost...
 
 ### Cutscene 76
-
 
 `Partner Inspired`
 `Partner Name`: Sniff... Finally... This day has finally arrived...
@@ -5760,9 +5883,15 @@ Mankey: ...W-we lost...
 
 `Partner Joyous`
 `Partner Name`: Sniff... Everyone... Thank you!
-Mankey: Say, there. There's something I want to ask...
-Mankey: If this rescue team base is finished...
-Mankey: Does that maybe mean... You won't bring us peeled Chestnuts anymore?
+
+`Mankey Normal`
+`Mankey Name`: Say, there. There's something I want to ask...
+
+`Mankey Normal`
+`Mankey Name`: If this rescue team base is finished...
+
+`Mankey Normal`
+`Mankey Name`: Does that maybe mean... You won't bring us peeled Chestnuts anymore?
 
 `Partner Happy`
 `Partner Name`: Hahaha! Of course!
@@ -5772,26 +5901,40 @@ Mankey: Does that maybe mean... You won't bring us peeled Chestnuts anymore?
 
 `Partner Happy`
 `Partner Name`: To our Mankey gang! Sincerely, thank you for everything!
-Mankey: ............
-Mankey: ........................
-Mankey: ....................................
-Mankey: Ukkeeeeeeeeh!
+
+`Mankey Normal`
+`Mankey Name`: ............
+
+`Mankey Normal`
+`Mankey Name`: ........................
+
+`Mankey Normal`
+`Mankey Name`: ....................................
+
+`Mankey Normal`
+`Mankey Name`: Ukkeeeeeeeeh!
 
 `Partner Worried`
 `Partner Name`: Wh-what?!
 
 `Partner Surprised`
 `Partner Name`: Waah!  What are you doing?! Stop that!
-As a result of everyone's desperate effors to stop the Mankey gang...
-The rescue team base was saved.
-As for the Mankey gang, they promised to keep from rampaging...
-In return for more peeled Chestnuts, they returned to their forest.
-And that is how...
-The chaotic renovation of the rescue team base came to an end.
-The next morning...
+
+>As a result of everyone's desperate effors to stop the Mankey gang...
+>
+>The rescue team base was saved.
+>
+>As for the Mankey gang, they promised to keep from rampaging...
+>
+>In return for more peeled Chestnuts, they returned to their forest.
+>
+>And that is how...
+>
+>The chaotic renovation of the rescue team base came to an end.
 
 ### Cutscene 77
 
+>The next morning...
 
 `Hero Surprised`
 `Hero Name`: Oh, wow, another earthquake...
@@ -5804,7 +5947,6 @@ The next morning...
 
 ### Cutscene 78
 
-
 `Partner Normal`
 `Partner Name`: Oh, hi! You're up early, `Hero Name`.
 
@@ -5813,6 +5955,7 @@ The next morning...
 
 `Partner Normal`
 `Partner Name`: It's hard to get decent sleep when there are so many earthquakes.
+
 💬: Hey!
 
 `Partner Normal`
@@ -5834,7 +5977,6 @@ The next morning...
 `Partner Name`: `Hero Name`, let's go!
 
 ### Cutscene 79
-
 
 `Partner Normal`
 `Partner Name`: Wow! Look at all the Pokemon!
@@ -5862,7 +6004,9 @@ The next morning...
 
 `Shiftry Surprised`
 `Shiftry Name`: But they haven't returned!
+
 💬: Wh-what?!
+
 💬: Is that true?
 
 `Shiftry Normal`
@@ -5876,12 +6020,19 @@ The next morning...
 
 `Shiftry Normal`
 `Shiftry Name`: To be honest... We have no idea what became of them.
+
 💬: No idea? How is that possible?! This is Alakazam you're talking about?
+
 💬: But they haven't come back. That's for real!
+
 💬: That's right... And it sounds as if Groudon is out of our league...
+
 💬: What? It's that tough? This Pokemon named Groudon?
+
 💬: Why don't you go underground and see for yourself?
+
 💬: Hunh?! You've gotta be kidding me!
+
 💬: There's magma flowing everywhere underground. I'd burn up if I went anywhere like that!
 
 `Shiftry Normal`
@@ -5922,26 +6073,52 @@ The next morning...
 
 `Shiftry Normal`
 `Shiftry Name`: Will no one step forward?!
+
 💬: I'll go.
+
 💬: Whoa!
+
 💬: It's B-Blastoise!
+
 💬: You mean... Team Hydro's roughneck Blastoise?!
+
 💬: Those waterspouts on his back can rocket water so fast that it punches through thick iron plates!
-Blastoise: It's rumored Groudon is a Ground type.
-Blastoise: I am a Water type. Strong against the Ground type.
-Blastoise: My Hydro Pump will put Groudon down in one shot.
+
+`Blastoise Normal`
+`Blastoise Name`: It's rumored Groudon is a Ground type.
+
+`Blastoise Normal`
+`Blastoise Name`: I am a Water type. Strong against the Ground type.
+
+`Blastoise Normal`
+`Blastoise Name`: My Hydro Pump will put Groudon down in one shot.
+
 💬: I'll join the party too.
+
 💬: Woohoo! It's Octillery!
+
 💬: She's Team Constrictor's Leader.
+
 💬: She's known for persistent and clingy attacks. She ensnares foes with her tentacles, then head-butts them!
+
 💬: She'd be nasty to face in any battle of endurance.
-Octillery: Darlings, when I see a tough Pokemon, I want to tangle with them.
+
+`Octillery Normal`
+`Octillery Name`: Darlings, when I see a tough Pokemon, I want to tangle with them.
+
 💬: Say, how about not forgetting about me?
+
 💬: Wow! Golem!
+
 💬: He's the most brutal out of Team Rumblerock!
+
 💬: His body is rock hard. He's supposed to be able to withstand huge explosions without taking damage.
-Golem: If Groudon's awakened underground, that suits me fine.
-Golem: I'll use my Rock Throw to keep it buried underground.
+
+`Golem Normal`
+`Golem Name`: If Groudon's awakened underground, that suits me fine.
+
+`Golem Normal`
+`Golem Name`: I'll use my Rock Throw to keep it buried underground.
 
 `Shiftry Normal`
 `Shiftry Name`: Oh, Blastoise! Octillery! And Golem!
@@ -5951,10 +6128,16 @@ Golem: I'll use my Rock Throw to keep it buried underground.
 
 `Shiftry Normal`
 `Shiftry Name`: We will have these three rescuers head underground!
+
 💬: Yeah! Good choice!
+
 💬: You're representing us! Make us proud!
-Blastoise: Let's go!
+
+`Blastoise Normal`
+`Blastoise Name`: Let's go!
+
 💬: Win it for us!
+
 💬: Save Alakazam's team!
 
 `Lombre Normal`
@@ -5967,7 +6150,6 @@ Blastoise: Let's go!
 `Partner Name`: Hmmm... It can't be helped, `Hero Name`.
 
 ### Cutscene 80
-
 
 `Partner Normal`
 `Partner Name`: I wish we could have gone too, but there's nothing we can do about that.
@@ -6002,7 +6184,6 @@ The next morning...
 
 * * *
 
-
 `Partner Normal`
 `Partner Name`: Oh! Lombre!
 
@@ -6026,12 +6207,19 @@ The next morning...
 
 `Partner Surprised`
 `Partner Name`: You're kidding!
-Blastoise: Groan... That place... It's rough, seriously...
-Octillery: ...We couldn't get far enough to even see Groudon...
-Golem: I don't want to ever go back to a place that bad...
+
+`Blastoise Normal`
+`Blastoise Name`: Groan... That place... It's rough, seriously...
+
+`Octillery Normal`
+`Octillery Name`: ...We couldn't get far enough to even see Groudon...
+
+`Golem Normal`
+`Golem Name`: I don't want to ever go back to a place that bad...
 
 `Shiftry Normal`
 `Shiftry Name`: ...It appears the dungeon underground... Is faw worse than we'd imagined...
+
 💬: Kekekekekeh!
 
 `Gengar Normal`
@@ -6048,11 +6236,17 @@ Golem: I don't want to ever go back to a place that bad...
 
 `Gengar Normal`
 `Gengar Name`: Even they look smart compared to you.
+
 💬: It's too much... Even Blastoise went down...
+
 💬: It's gonna be awful tough.
+
 💬: Who'd want to go into a dungeon that dangerous?
+
 💬: There's no way. I can't go. I burn too easily.
+
 💬: I can't take earthquakes.
+
 💬: It'd be like going and knowing full well we'd get wiped...
 
 `Partner Sad`
@@ -6090,10 +6284,12 @@ Golem: I don't want to ever go back to a place that bad...
 
 `Partner Sad`
 `Partner Name`: Should we still try to rescue Alakazam?
+
 *If `Hero Name` chooses "Let's not!"*
 
 `Partner Sad`
 `Partner Name`: ...Really...? You honestly think we shouldn't go?
+
 *If `Hero Name` chooses "Let's go!"*
 
 `Partner Inspired`
@@ -6107,16 +6303,24 @@ Golem: I don't want to ever go back to a place that bad...
 
 `Partner Normal`
 `Partner Name`: We're going! To rescue Alakazam's team!
+
 💬: Wha-what?!
+
 💬: What did they say?!
 
 `Gengar Surprised`
 `Gengar Name`: Ugegege?!
+
 💬: Hey, who are they?
+
 💬: Can't say I know them...
+
 💬: It's Team `Team Name`. They're well known around these parts.
+
 💬: Team `Team Name`...? You mean the lot that were suspected of involvement in the Ninetales legend?
+
 💬: I heard about that! Weren't they living like fugitives until recently?
+
 💬: Can they handle it? They don't look very tough.
 
 `Partner Worried`
@@ -6148,12 +6352,16 @@ Golem: I don't want to ever go back to a place that bad...
 
 `Gengar Pain`
 `Gengar Name`: ...Ugeh?
+
 💬: ...That's right. I wasn't thinking straight... out of fear.
 
 `Gengar Surprised`
 `Gengar Name`: ...Ugegegeh?
+
 💬: We all forgot the most important thing. We are rescue teams.
+
 💬: ...Pride...
+
 💬: We have it too! Pride as rescuers!
 
 `Gengar Surprised`
@@ -6164,27 +6372,42 @@ Golem: I don't want to ever go back to a place that bad...
 
 `Gengar Pain`
 `Gengar Name`: Why go if you're facing certain defeat?!
-Blastoise: Is that so...?
-Blastoise: ...We've only failed once.
+
+`Blastoise Normal`
+`Blastoise Name`: Is that so...?
+
+`Blastoise Normal`
+`Blastoise Name`: ...We've only failed once.
 
 `Partner Inspired`
 `Partner Name`: Blastoise!
-Blastoise: ...This is no time to be lying around!
+
+`Blastoise Normal`
+`Blastoise Name`: ...This is no time to be lying around!
 
 `Gengar Surprised`
 `Gengar Name`: Ugegeh!
-Octillery: Yes, no more wallowing in woe-is-me self-pity.
-Golem: If we give up, that's how it ends. Not for me.
+
+`Octillery Normal`
+`Octillery Name`: Yes, no more wallowing in woe-is-me self-pity.
+
+`Golem Normal`
+`Golem Name`: If we give up, that's how it ends. Not for me.
 
 `Partner Inspired`
 `Partner Name`: Octillery! And Golem too!
 
 `Gengar Pain`
 `Gengar Name`: Ugegegeh! You lot, that wasn't the tune you were whistling just a little...
+
 💬: Aye, that's right!
+
 💬: There've got to be ways we can get through!
+
 💬: If we all pull together, we'll be sure to find a way!
+
 💬: We'll conquer the dungeon by having all the rescue teams cooperate!
+
 💬: Wrooooooooaaaar!
 
 `Gengar Pain`
@@ -6192,15 +6415,25 @@ Golem: If we give up, that's how it ends. Not for me.
 
 `Gengar Pain`
 `Gengar Name`: Don't say I didn't warn you when you get into a world of pain!
-Blastoise: Thank you, `Partner Name`.
-Blastoise: You stopped us from throwing away the most important thing we have--pride.
-Blastoise: My thanks from all of us.
-Blastoise: Everyone! It's time to get to work!
-Blastoise: Let's show them what we rescue teams are really about!
+
+`Blastoise Normal`
+`Blastoise Name`: Thank you, `Partner Name`.
+
+`Blastoise Normal`
+`Blastoise Name`: You stopped us from throwing away the most important thing we have--pride.
+
+`Blastoise Normal`
+`Blastoise Name`: My thanks from all of us.
+
+`Blastoise Normal`
+`Blastoise Name`: Everyone! It's time to get to work!
+
+`Blastoise Normal`
+`Blastoise Name`: Let's show them what we rescue teams are really about!
+
 💬: Wrooooooaaaaar!
 
 * * *
-
 
 `Partner Normal`
 `Partner Name`: We were held up by that trouble with Gengar...
@@ -6218,7 +6451,6 @@ Blastoise: Let's show them what we rescue teams are really about!
 `Partner Name`: Let me know when you're all ready to go.
 
 ### Cutscene 82
-
 
 `Hero Normal`
 `Hero Name`: ......
@@ -6261,15 +6493,21 @@ Blastoise: Let's show them what we rescue teams are really about!
 
 `Hero Normal`
 `Hero Name`: What it's like underground? Or what Groudon is like?
-Gardevoir Worried: No... I'm sorry to say... I can't envision it...
+
+`Gardevoir Normal`
+`Gardevoir Name`: No... I'm sorry to say... I can't envision it...
 
 `Hero Normal`
 `Hero Name`: ...OK.
 
 `Hero Normal`
 `Hero Name`: I thought maybe you knew something, the way you said it.
-Gardevoir Worried: No. I only wanted to give you encouragement...
-Gardevoir Worried: I'm sorry...
+
+`Gardevoir Normal`
+`Gardevoir Name`: No. I only wanted to give you encouragement...
+
+`Gardevoir Normal`
+`Gardevoir Name`: I'm sorry...
 
 `Hero Happy`
 `Hero Name`: No, no. That's fine, too.
@@ -6346,7 +6584,6 @@ The next morning...
 
 ### Cutscene 84
 
-
 `Partner Normal`
 `Partner Name`: This must be it... Groudon is in this underground cavern.
 
@@ -6363,7 +6600,6 @@ The next morning...
 `Partner Name`: Let's try our best like always!
 
 ### Cutscene 85
-
 
 `Partner Worried`
 `Partner Name`: Let's see... ...I wonder where we are?
@@ -6382,11 +6618,15 @@ The next morning...
 
 `Partner Surprised`
 `Partner Name`: Hey! Are you OK?!
-Charizard Pain: Urrrrgh...
+
+`Charizard Pain`
+`Charizard Name`: Urrrrgh...
 
 `Partner Sad`
 `Partner Name`: What happened to you?
-Charizard Pain: We challenged... Groudon... And wiped out...
+
+`Charizard Pain`
+`Charizard Name`: We challenged... Groudon... And wiped out...
 
 `Partner Surprised`
 `Partner Name`: G-Groudon?!
@@ -6402,7 +6642,9 @@ Charizard Pain: We challenged... Groudon... And wiped out...
 
 `Partner Surprised`
 `Partner Name`: `Hero Name`! We've got to hurry!
-Charizard Pain: ...Be careful!
+
+`Charizard Pain`
+`Charizard Name`: ...Be careful!
 
 `Partner Surprised`
 `Partner Name`: It's Alakazam! Are you OK?!
@@ -6415,6 +6657,7 @@ Charizard Pain: ...Be careful!
 
 `Alakazam Normal`
 `Alakazam Name`: This opponent... is no laughing matter!
+
 Grgaaaaaaaaaah!
 
 `Alakazam Normal`
@@ -6440,6 +6683,7 @@ Grgaaaaaaaaaah!
 
 `Partner Pain`
 `Partner Name`: But I'm not going down without a fight!
+
 Grgaaaaaaaah!
 
 `Partner Angry`
@@ -6454,7 +6698,9 @@ Grgaaaaaah!
 
 `Tyranitar Normal`
 `Tyranitar Name`: Urrgggh!
-Charizard Pain: Did you do it? Groudon?
+
+`Charizard Pain`
+`Charizard Name`: Did you do it? Groudon?
 
 `Partner Surprised`
 `Partner Name`: Are you OK?
@@ -6482,8 +6728,10 @@ Charizard Pain: Did you do it? Groudon?
 
 `Alakazam Normal`
 `Alakazam Name`: Out! Quickly!
-Having calmed Groudon, `Hero Name`'s team left the dungeon...
-And returned to Pokemon Square together with Alakazam's team.
+
+>Having calmed Groudon, `Hero Name`'s team left the dungeon...
+>
+>And returned to Pokemon Square together with Alakazam's team.
 
 ### Cutscene 87
 
@@ -6494,18 +6742,23 @@ And in the square...
 
 `Caterpie Normal`
 `Caterpie Name`: Look! Here they come!
-Octillery: It's true, darlings!
+
+`Octillery Normal`
+`Octillery Name`: It's true, darlings!
 
 `Lombre Normal`
 `Lombre Name`: Let's go!
 
 * * *
 
-
 `Shiftry Happy`
 `Shiftry Name`: Great work! Great work, `Hero Name`!
-Golem: You really took down that Groudon?!
-Octillery: Darlings, it's fantastic! You have won me over!
+
+`Golem Normal`
+`Golem Name`: You really took down that Groudon?!
+
+`Octillery Normal`
+`Octillery Name`: Darlings, it's fantastic! You have won me over!
 
 `Partner Surprised`
 `Partner Name`: Whoa! W-wait a second!
@@ -6518,8 +6771,12 @@ Octillery: Darlings, it's fantastic! You have won me over!
 
 `Shiftry Happy`
 `Shiftry Name`: You bunch became stronger than I expected!
-Golem: You can be proud of it!
-Blastoise: You lot did great! Why don't we team up sometime? Gahahahaha!
+
+`Golem Normal`
+`Golem Name`: You can be proud of it!
+
+`Blastoise Normal`
+`Blastoise Name`: You lot did great! Why don't we team up sometime? Gahahahaha!
 
 `Alakazam Normal`
 `Alakazam Name`: You've earned everyone's respect now.
@@ -6535,7 +6792,9 @@ Blastoise: You lot did great! Why don't we team up sometime? Gahahahaha!
 
 `Partner Tearyeyed`
 `Partner Name`: Every bit of our effort... It was all worthwhile!
-Blastoise: Would you look at that? I didn't think someone that could take down Groudon'd be such a crybaby! Gahahahaha!
+
+`Blastoise Normal`
+`Blastoise Name`: Would you look at that? I didn't think someone that could take down Groudon'd be such a crybaby! Gahahahaha!
 
 `Lombre Normal`
 `Lombre Name`: Huh? What was that?
@@ -6545,8 +6804,12 @@ Blastoise: Would you look at that? I didn't think someone that could take down G
 
 `Caterpie Normal`
 `Caterpie Name`: No. I heard it too.
-Octillery: Me too. Even now, I hear it...
-Golem: Someone talking? ...Not sure.
+
+`Octillery Normal`
+`Octillery Name`: Me too. Even now, I hear it...
+
+`Golem Normal`
+`Golem Name`: Someone talking? ...Not sure.
 
 `Partner Normal`
 `Partner Name`: Th-this voice... I've heard it before.
@@ -6562,7 +6825,6 @@ Golem: Someone talking? ...Not sure.
 
 * * *
 
-
 `Xatu Normal`
 `Xatu Name`: ...To all Pokemon! Calling all Pokemon!
 
@@ -6571,7 +6833,6 @@ Golem: Someone talking? ...Not sure.
 
 * * *
 
-
 `Xatu Normal`
 `Xatu Name`: From the sky! Comes a star!
 
@@ -6579,7 +6840,6 @@ Golem: Someone talking? ...Not sure.
 `Xatu Name`: ...It is huge... A giant of a star!
 
 * * *
-
 
 `Xatu Normal`
 `Xatu Name`: The star, it falls. It falls straight to us.
@@ -6613,7 +6873,9 @@ Golem: Someone talking? ...Not sure.
 
 `Xatu Normal`
 `Xatu Name`: You must ask Rayquaza.
-Blastoise: Rayquaza? What might that be?
+
+`Blastoise Normal`
+`Blastoise Name`: Rayquaza? What might that be?
 
 `Xatu Normal`
 `Xatu Name`: A Pokemon, living far above us in the sky. Legendary, it is.
@@ -6674,12 +6936,12 @@ Blastoise: Rayquaza? What might that be?
 
 ### Cutscene 88
 
-
 `Partner Normal`
 `Partner Name`: `Hero Name`.
 
 `Partner Normal`
 `Partner Name`: Are you all ready for the sky?
+
 *If `Hero Name` chooses "All Set!"*
 
 `Partner Normal`
@@ -6695,7 +6957,6 @@ Blastoise: Rayquaza? What might that be?
 `Partner Name`: Tomorrow! Let's give it everything we can, `Hero Name`!
 
 ### Cutscene 89
-
 
 `Hero Pain`
 `Hero Name`: ......
@@ -6746,7 +7007,6 @@ Blastoise: Rayquaza? What might that be?
 `Hero Name`: ......It's going away............
 
 * * *
-
 
 `Hero Normal`
 `Hero Name`: ............Gardevoir...?
@@ -6928,7 +7188,6 @@ The next morning...
 
 * * *
 
-
 `Partner Normal`
 `Partner Name`: Good morning! Did you sleep well?
 
@@ -6936,7 +7195,6 @@ The next morning...
 `Partner Name`: This is it! Let's go, `Hero Name`! We're off to the sky!
 
 ### Cutscene 90
-
 
 `Alakazam Normal`
 `Alakazam Name`: Ah, good of you to come.
@@ -6983,7 +7241,9 @@ The next morning...
 
 `Partner Worried`
 `Partner Name`: Who could it be?
-Alakazam Happy: Hahaha! It must be bashful. Let it be.
+
+`Charizard Happy`
+`Charizard Name`: Hahaha! It must be bashful. Let it be.
 
 `Alakazam Normal`
 `Alakazam Name`: Now... I must ask you this one last time.
@@ -7008,15 +7268,19 @@ Alakazam Happy: Hahaha! It must be bashful. Let it be.
 
 `Hero Normal`
 `Hero Name`: (Gardevoir said...)
--# 
+
 `Gardevoir Normal`
 `Gardevoir Name`: You can return to your human world.
+
+* * *
 
 `Hero Normal`
 `Hero Name`: (............)
 
 `Hero Normal`
 `Hero Name`: (This will be my last adventure... With `Partner Name`...)
+
+* * *
 
 `Partner Normal`
 `Partner Name`: `Hero Name`! Let's get this done!
@@ -7025,7 +7289,6 @@ Alakazam Happy: Hahaha! It must be bashful. Let it be.
 `Alakazam Name`: We're counting on you! `Partner Name`! `Hero Name`!
 
 ### Cutscene 91
-
 
 `Partner Pain`
 `Partner Name`: Owowow.... Where are we?
@@ -7041,7 +7304,6 @@ Alakazam Happy: Hahaha! It must be bashful. Let it be.
 
 * * *
 
-
 `Partner Normal`
 `Partner Name`: It's a huge tower of clouds...
 
@@ -7056,34 +7318,55 @@ Alakazam Happy: Hahaha! It must be bashful. Let it be.
 
 ### Cutscene 92
 
-
 `Partner Normal`
 `Partner Name`: Is this... The top floor?
+
 💬: Who goes there?! Who dares to trespass upon my airspace?!
 
 `Partner Normal`
 `Partner Name`: That voice... Could it be Rayquaza?
-Rayquaza: Indeed I am. The sky is my domain.
-Rayquaza: Depart at once!
+
+`Rayquaza Normal`
+`Rayquaza Name`: Indeed I am. The sky is my domain.
+
+`Rayquaza Normal`
+`Rayquaza Name`: Depart at once!
 
 `Partner Worried`
 `Partner Name`: But... We don't have the time to argue.
 
 `Partner Worried`
 `Partner Name`: We came here because we need your help...
-Rayquaza: Never!
+
+`Rayquaza Normal`
+`Rayquaza Name`: Never!
+
 Gyaaaaaaaaaaaaaaaah!
-Rayquaza: I am a being of the sky, and you are but denizens of the ground.
-Rayquaza: To each, there is a world destined as their own!
-Rayquaza: For hundreds of millions of years, never once have I descended to the ground!
-Rayquaza: And the opposite shall also hjold true!
-Rayquaza: Let there be no mercy for those that defy the laws of nature!
-Rayquaza: Prepare for the end!
+
+`Rayquaza Normal`
+`Rayquaza Name`: I am a being of the sky, and you are but denizens of the ground.
+
+`Rayquaza Normal`
+`Rayquaza Name`: To each, there is a world destined as their own!
+
+`Rayquaza Normal`
+`Rayquaza Name`: For hundreds of millions of years, never once have I descended to the ground!
+
+`Rayquaza Normal`
+`Rayquaza Name`: And the opposite shall also hjold true!
+
+`Rayquaza Normal`
+`Rayquaza Name`: Let there be no mercy for those that defy the laws of nature!
+
+`Rayquaza Normal`
+`Rayquaza Name`: Prepare for the end!
 
 ### Cutscene 93
 
 Gyaaaaaaaaaaaaaaaah!
+
 ...Gwaargh!
+
 Gyaaaaaaaaaaaaaaaah!
 
 `Partner Surprised`
@@ -7091,11 +7374,15 @@ Gyaaaaaaaaaaaaaaaah!
 
 `Partner Surprised`
 `Partner Name`: We're on top of clouds...
-Rayquaza: These are shock waves! And they're huge!
+
+`Rayquaza Normal`
+`Rayquaza Name`: These are shock waves! And they're huge!
 
 `Partner Surprised`
 `Partner Name`: That's it! I got it! Look straight up, Rayquaza!
-Rayquaza: What is that?!
+
+`Rayquaza Normal`
+`Rayquaza Name`: What is that?!
 
 `Partner Surprised`
 `Partner Name`: It's a shooting star! And it's enormous!
@@ -7105,25 +7392,38 @@ Rayquaza: What is that?!
 
 `Partner Surprised`
 `Partner Name`: That's why we came, Rayquaza. Please, destroy the falling star!
-Rayquaza: ...So, that is why...
+
+`Rayquaza Normal`
+`Rayquaza Name`: ...So, that is why...
 
 `Partner Surprised`
 `Partner Name`: Yes! Please hurry and destroy it!
-Rayquaza: ............Before I try... I need to know your resolve.
-Rayquaza: The star has come too close.
-Rayquaza: If I were to loose my Hyper Beam here...
-Rayquaza: You would not escape unscathed!
+
+`Rayquaza Normal`
+`Rayquaza Name`: ............Before I try... I need to know your resolve.
+
+`Rayquaza Normal`
+`Rayquaza Name`: The star has come too close.
+
+`Rayquaza Normal`
+`Rayquaza Name`: If I were to loose my Hyper Beam here...
+
+`Rayquaza Normal`
+`Rayquaza Name`: You would not escape unscathed!
 
 `Partner Surprised`
 `Partner Name`: So?! We accepted that from the start!
-Rayquaza: Well said!
-Rayquaza: Take charge of your destiny!
+
+`Rayquaza Normal`
+`Rayquaza Name`: Well said!
+
+`Rayquaza Normal`
+`Rayquaza Name`: Take charge of your destiny!
 
 `Partner Surprised`
 `Partner Name`: Waaaaaaaaaaaaaaaaaah!
 
 ### Cutscene 94
-
 
 `Hero Normal`
 `Hero Name`: ......
@@ -7218,6 +7518,7 @@ Rayquaza: Take charge of your destiny!
 ### Cutscene 95
 
 💬: .........Hey.
+
 💬: ...Hey, can you hear...
 
 `Alakazam Normal`
@@ -7231,6 +7532,7 @@ Rayquaza: Take charge of your destiny!
 
 `Alakazam Normal`
 `Alakazam Name`: ...Regained consciousness!
+
 💬: Oooooooohhhhh!
 
 `Hero Normal`
@@ -7241,8 +7543,12 @@ Rayquaza: Take charge of your destiny!
 
 `Partner Normal`
 `Partner Name`: ...Maybe... Did Gengar save `Hero Name` too?
-Lombre Inspired: Awesome, you're alive! You really had all of us worried!
-Octillery: You were incredible!
+
+`Lombre Inspired`
+`Lombre Name`: Awesome, you're alive! You really had all of us worried!
+
+`Octillery Normal`
+`Octillery Name`: You were incredible!
 
 `Caterpie Tearyeyed`
 `Caterpie Name`: Snivel... I'm so glad you're safe! It's fantastic!
@@ -7252,6 +7558,7 @@ Octillery: You were incredible!
 
 `Partner Surprised`
 `Partner Name`: What about the star?! What happened to it?!
+
 Kwaaaaaaaaah!
 
 `Xatu Normal`
@@ -7274,7 +7581,9 @@ Kwaaaaaaaaah!
 
 `Charizard Normal`
 `Charizard Name`: This calls for a celebration!
-Blastoise: Let me shoot my Hydro Pump to kick it off!
+
+`Blastoise Normal`
+`Blastoise Name`: Let me shoot my Hydro Pump to kick it off!
 
 `Lombre Normal`
 `Lombre Name`: Whoa, hold on there! Don't you point those things at me! Face the other way! The other way!
@@ -7284,14 +7593,18 @@ Blastoise: Let me shoot my Hydro Pump to kick it off!
 
 `Lombre Normal`
 `Lombre Name`: Y-you've gotta be kidding me!
-Octillery: I'll secure him so he can't get away.
+
+`Octillery Normal`
+`Octillery Name`: I'll secure him so he can't get away.
 
 `Charizard Normal`
 `Charizard Name`: Oh? Not bad!
 
 `Lombre Normal`
 `Lombre Name`: What, you're serious?! Nooooo! Don't!
+
 💬: Ahahahahaha!
+
 💬: `Hero Name`...
 
 `Hero Normal`
@@ -7332,7 +7645,9 @@ Octillery: I'll secure him so he can't get away.
 
 `Hero Normal`
 `Hero Name`: And, everyone... I'm sorry. But I have to leave.
-Snubbull Surprised: What?!
+
+`Snubbull Surprised`
+`Snubbull Name`: What?!
 
 `Bellsprout Pain`
 `Bellsprout Name`: Wh-what are you saying?!
@@ -7402,10 +7717,11 @@ Snubbull Surprised: What?!
 
 Cutscene 96
 
-
 `Caterpie Tearyeyed`
 `Caterpie Name`: Snivel... `Hero Name`... Why... I don't understand...
-Charizard Tearyeyed: Why? Why was it necessary to leave us...?
+
+`Charizard Tearyeyed`
+`Charizard Name`: Why? Why was it necessary to leave us...?
 
 `Shiftry Tearyeyed`
 `Shiftry Name`: `Hero Name` saved my life...
@@ -7415,10 +7731,18 @@ Charizard Tearyeyed: Why? Why was it necessary to leave us...?
 
 `Shiftry Tearyeyed`
 `Shiftry Name`: Left... Before I could even say thanks...
-Lombre Tearyeyed: You're right...
-Lombre Tearyeyed: Just upped and went like that...
-Lombre Tearyeyed: Why now? Why when the world's been saved?
-Lombre Tearyeyed: Just when things were going to get better... Sob...
+
+`Lombre Tearyeyed`
+`Lombre Name`: You're right...
+
+`Lombre Tearyeyed`
+`Lombre Name`: Just upped and went like that...
+
+`Lombre Tearyeyed`
+`Lombre Name`: Why now? Why when the world's been saved?
+
+`Lombre Tearyeyed`
+`Lombre Name`: Just when things were going to get better... Sob...
 
 `Xatu Normal`
 `Xatu Name`: This was coming... Our world, it was saved by `Hero Name`.
@@ -7467,7 +7791,6 @@ Lombre Tearyeyed: Just when things were going to get better... Sob...
 
 ### Cutscene 97
 
-
 `Hero Normal`
 `Hero Name`: (........................)
 
@@ -7491,44 +7814,61 @@ Lombre Tearyeyed: Just when things were going to get better... Sob...
 
 * * *
 
-Your friend is heartbroken...
-A true friend... A friend for life...
-You finally realize it now...
-If you wish... And wish very strongly...
-Perhaps you will meet again.
+>Your friend is heartbroken...
+>
+>A true friend... A friend for life...
+>
+>You finally realize it now...
+>
+>If you wish... And wish very strongly...
+>
+>Perhaps you will meet again.
 
 ### Cutscene 98
 
-I don't want to leave...
-I want to stay longer...
-With my invaluable...
-Irreplaceable friend...
+>I don't want to leave...
+>
+>I want to stay longer...
+>
+>With my invaluable...
+>
+>Irreplaceable friend...
 
 `Blue Rescue Team End Card`
 
 ### Cutscene 99
 
-The story of `Hero Name` and `Partner Name` ends here.
-But `Team Name` isn't done yet! There are many rescues to be done!
-A new adventure begins!
-The legendary Pokemon are set to make their appearance!
-Don't go away!
+>The story of `Hero Name` and `Partner Name` ends here.
+>
+>But `Team Name` isn't done yet! There are many rescues to be done!
+>
+>A new adventure begins!
+>
+>The legendary Pokemon are set to make their appearance!
+>
+>Don't go away!
 
 ## Chapter Post-Game 1: Unlocking Evolution and Leader Shift
 
 ### Cutscene 100
 
-Due to `Hero Name` and `Partner Name`'s heroic actions...
-the falling star was destroyed...
-and peace returned to the world of Pokemon.
-But that did not put an end to the natural calamities.
-Natural disasters still occurred, but much less often.
-Needless to say, `Team Name`'s rescue activities
-continued as if nothing had changed.
-Several mornings later...
+>Due to `Hero Name` and `Partner Name`'s heroic actions...
+>
+>the falling star was destroyed...
+>
+>and peace returned to the world of Pokemon.
+>
+>But that did not put an end to the natural calamities.
+>
+>Natural disasters still occurred, but much less often.
+>
+>Needless to say, `Team Name`'s rescue activities
+>
+>continued as if nothing had changed.
+>
+>Several mornings later...
 
 * * *
-
 
 `Partner Normal`
 `Partner Name`: Good morning, `Hero Name`! Did you just wake up?
@@ -7565,7 +7905,6 @@ Several mornings later...
 
 ### Cutscene 101
 
-
 `Partner Normal`
 `Partner Name`: Hi, Alakazam!
 
@@ -7574,7 +7913,9 @@ Several mornings later...
 
 `Partner Normal`
 `Partner Name`: I heard something strange happened to him.
-Granbull: I'm Snubbull.
+
+`Granbull Normal`
+`Granbull Name`: I'm Snubbull.
 
 `Partner Surprised`
 `Partner Name`: Whaaaat?!
@@ -7584,8 +7925,12 @@ Granbull: I'm Snubbull.
 
 `Partner Surprised`
 `Partner Name`: But you don't look anything like the way you did before!
-Granbull: I don't really understand, either.
-Granbull: I went into the cave there, and all of a sudden...
+
+`Granbull Normal`
+`Granbull Name`: I don't really understand, either.
+
+`Granbull Normal`
+`Granbull Name`: I went into the cave there, and all of a sudden...
 
 `Partner Worried`
 `Partner Name`: What cave?
@@ -7598,7 +7943,9 @@ Granbull: I went into the cave there, and all of a sudden...
 
 `Partner Normal`
 `Partner Name`: So you went in there...
-Granbull: Yup... And I came out looking like this...
+
+`Granbull Normal`
+`Granbull Name`: Yup... And I came out looking like this...
 
 `Alakazam Normal`
 `Alakazam Name`: Snubbull underwent "evolution." He evolved.
@@ -7635,8 +7982,12 @@ Granbull: Yup... And I came out looking like this...
 
 `Metapod Normal`
 `Metapod Name`: I wish... I want to be Butterfree quickly...
-Granbull: W-wait a second. I don't know if I like this or not...
-Granbull: My cute little face turned all craggy...
+
+`Granbull Normal`
+`Granbull Name`: W-wait a second. I don't know if I like this or not...
+
+`Granbull Normal`
+`Granbull Name`: My cute little face turned all craggy...
 
 `Alakazam Normal`
 `Alakazam Name`: Evolution is not a bad thing.
@@ -7646,7 +7997,9 @@ Granbull: My cute little face turned all craggy...
 
 `Alakazam Normal`
 `Alakazam Name`: One's power and abilities may be enhanced, for example.
-Granbull: Oh! Really?! I... I might be stronger?!
+
+`Granbull Normal`
+`Granbull Name`: Oh! Really?! I... I might be stronger?!
 
 `Metapod Normal`
 `Metapod Name`: That makes me want to evolve even more!
@@ -7667,7 +8020,6 @@ Granbull: Oh! Really?! I... I might be stronger?!
 `Partner Name`: `Hero Name`. Let's go to the cave if we're ready to evolve.
 
 ### Cutscene 102
-
 
 `Partner Normal`
 `Partner Name`: Oh, yeah, `Hero Name`! Wait a second!
@@ -7701,6 +8053,7 @@ Granbull: Oh! Really?! I... I might be stronger?!
 
 `Partner Normal`
 `Partner Name`: Do you like the idea? `Hero Name`, do you think it'd be good to be able to freely choose leaders?
+
 *If `Hero Name` chooses "Yes."*
 
 `Partner Happy`
@@ -7750,7 +8103,6 @@ Gyaooooooooooooooooh!
 
 ### Cutscene 104
 
-
 `Moltres Normal`
 `Moltres Name`: Halt!
 
@@ -7795,7 +8147,6 @@ Gyaaaaaah!
 
 ### Cutscene 106
 
-
 `Bellsprout Normal`
 `Bellsprout Name`: Oh?
 
@@ -7804,7 +8155,9 @@ Gyaaaaaah!
 
 `Lombre Normal`
 `Lombre Name`: Never seen it before. It's not from around these parts.
+
 💬: No more... I can't walk anymore...
+
 💬: I'm falling down...
 
 `Bellsprout Normal`
@@ -7812,6 +8165,7 @@ Gyaaaaaah!
 
 * * *
 
+`Spinda Normal`
 💬: Wh-where...?
 
 `Partner Normal`
@@ -7819,7 +8173,11 @@ Gyaaaaaah!
 
 `Partner Normal`
 `Partner Name`: It's also our rescue team's base.
+
+`Spinda Normal`
 💬: Oh! ...Did you maybe rescue me?
+
+`Spinda Normal`
 💬: Th-thank you...
 
 `Partner Happy`
@@ -7827,44 +8185,88 @@ Gyaaaaaah!
 
 `Partner Happy`
 `Partner Name`: Rather than that... What happened?
+
+`Spinda Normal`
 💬: Y-yes...
-Spinda: I'm named Spinda.
-Spinda: I like to travel.
-Spinda: I've been traveling all over seeing the sights and other Pokemon.
-Spinda: It was on my travels that I heard rumors of a mirage Pokemon...
+
+`Spinda Normal`
+`Spinda Name`: I'm named Spinda.
+
+`Spinda Normal`
+`Spinda Name`: I like to travel.
+
+`Spinda Normal`
+`Spinda Name`: I've been traveling all over seeing the sights and other Pokemon.
+
+`Spinda Normal`
+`Spinda Name`: It was on my travels that I heard rumors of a mirage Pokemon...
 
 `Partner Worried`
 `Partner Name`: A mirage Pokemon?
-Spinda: Yes! That! Isn't it exciting?
-Spinda: Ever since then, I've been traveling all over in hopes of seeing the mirage Pokemon...
-Spinda: But I've had no luck... Finally, I became dizzy from fatigue... And I must have passed out.
-Spinda Sad: I... I'm giving up on my quest...
-Spinda Sad: I'm simply worn out...
+
+`Spinda Normal`
+`Spinda Name`: Yes! That! Isn't it exciting?
+
+`Spinda Normal`
+`Spinda Name`: Ever since then, I've been traveling all over in hopes of seeing the mirage Pokemon...
+
+`Spinda Normal`
+`Spinda Name`: But I've had no luck... Finally, I became dizzy from fatigue... And I must have passed out.
+
+`Spinda Sad`
+`Spinda Name`: I... I'm giving up on my quest...
+
+`Spinda Sad`
+`Spinda Name`: I'm simply worn out...
 
 `Partner Surprised`
 `Partner Name`: Wait a second! Are you sure you won't regret giving up that easily?
-Spinda Sad: But I... I've reached my physical limit...
-Spinda Sad: If I push myself any further, I will collapse again. It's not good for my health...
-Spinda: ...Please, I want you to have this.
+
+`Spinda Sad`
+`Spinda Name`: But I... I've reached my physical limit...
+
+`Spinda Sad`
+`Spinda Name`: If I push myself any further, I will collapse again. It's not good for my health...
+
+`Spinda Normal`
+`Spinda Name`: ...Please, I want you to have this.
 `Partner Name` received something from Spinda.
 
 `Partner Worried`
 `Partner Name`: What is this?
-Spinda: It's a... Clear Wing...
+
+`Spinda Normal`
+`Spinda Name`: It's a... Clear Wing...
 
 `Partner Worried`
 `Partner Name`: Clear Wing?
-Spinda: Yes. I found it on my travels.
-Spinda: It's a wing of some sort. It's transparent, but... If you hold it up like this...
-Spinda: See? Depending on the light, it takes on many different colors.
-Spinda: At first I thought it was just pretty to look at...
-Spinda: But after checking around, it appears to be related to the mirage Pokemon somehow.
-Spinda: But I couldn't learn anything beyond that.
-Spinda: ...Sniff... It's very disappointing, but I'm giving up...
+
+`Spinda Normal`
+`Spinda Name`: Yes. I found it on my travels.
+
+`Spinda Normal`
+`Spinda Name`: It's a wing of some sort. It's transparent, but... If you hold it up like this...
+
+`Spinda Normal`
+`Spinda Name`: See? Depending on the light, it takes on many different colors.
+
+`Spinda Normal`
+`Spinda Name`: At first I thought it was just pretty to look at...
+
+`Spinda Normal`
+`Spinda Name`: But after checking around, it appears to be related to the mirage Pokemon somehow.
+
+`Spinda Normal`
+`Spinda Name`: But I couldn't learn anything beyond that.
+
+`Spinda Normal`
+`Spinda Name`: ...Sniff... It's very disappointing, but I'm giving up...
 
 `Partner Surprised`
 `Partner Name`: Wait, are you OK? You're still unsteady on your feet.
-Spinda: Oh, no. When I walk, I always totter. Bye.
+
+`Spinda Normal`
+`Spinda Name`: Oh, no. When I walk, I always totter. Bye.
 
 `Partner Worried`
 `Partner Name`: Clear Wing, huh... I don't have a clue what this is all about...
@@ -7883,7 +8285,6 @@ Spinda: Oh, no. When I walk, I always totter. Bye.
 
 ### Cutscene 107
 
-
 `Xatu Normal`
 `Xatu Name`: ............ What is it? Have you reason to see me?
 
@@ -7892,6 +8293,7 @@ Spinda: Oh, no. When I walk, I always totter. Bye.
 
 `Xatu Normal`
 `Xatu Name`: ...I see. About the mirage Pokemon... That is what you wish to know?
+
 Kwaaaaah!
 
 `Xatu Normal`
@@ -7944,115 +8346,239 @@ Kwaaaaah!
 
 `Xatu Normal`
 `Xatu Name`: The answers you seek... Perhaps they await you there.
+
 Gained access to the Fiery Field!
 
 ### Cutscene 108
 
 💬: What compelled you to come?
+
 💬: The likes of you have no business being here!
-Entei: I am Entei! I live surrounded by the fiery lava of volcanoes!
-Entei: If you refuse to leave... I shall forcefully expel you!
+
+`Entei Normal`
+`Entei Name`: I am Entei! I live surrounded by the fiery lava of volcanoes!
+
+`Entei Normal`
+`Entei Name`: If you refuse to leave... I shall forcefully expel you!
 
 ### Cutscene 109
 
-Entei: Gwooooooh!
-Entei: Urghgh... I... I lost...
-Entei: You... What do you wish?
-Entei: ...Wh-what?! This is... the Clear Wing...
-Entei: ...I understand now. To meet that Pokemon...
-Entei: ...............Stand aside.
+`Entei Normal`
+`Entei Name`: Gwooooooh!
+
+`Entei Normal`
+`Entei Name`: Urghgh... I... I lost...
+
+`Entei Normal`
+`Entei Name`: You... What do you wish?
+
+`Entei Normal`
+`Entei Name`: ...Wh-what?! This is... the Clear Wing...
+
+`Entei Normal`
+`Entei Name`: ...I understand now. To meet that Pokemon...
+
+`Entei Normal`
+`Entei Name`: ...............Stand aside.
+
 Entei's fiery blast made the Clear Wing flare!
+
 The Clear Wing... transformed into the Red Wing!
-Entei: Take this and go west!
-Entei: There, you will find the Lightning Field.
-Entei: You will know your path there!
-Entei: Now go! To the Lightning Field!
+
+`Entei Normal`
+`Entei Name`: Take this and go west!
+
+`Entei Normal`
+`Entei Name`: There, you will find the Lightning Field.
+
+`Entei Normal`
+`Entei Name`: You will know your path there!
+
+`Entei Normal`
+`Entei Name`: Now go! To the Lightning Field!
+
 `Hero Name` received the Red Wing.
+
 And...
+
 Gained access to the Lightning Field!
 
 ### Cutscene 110
 
 💬: Why... Why have you come...?
+
 💬: This is Lightning Field. It is my...domain!
-Raikou: I am Raikou! One who races with lightning!
-Raikou: A body like rolling rain clouds!
-Raikou: A roar that echoes thunder!
-Raikou: Many have trespassed upon my domain...
-Raikou: But what became of them? Let me demonstrate...
-Raikou: And you, too, shall experience the pain they suffered!
+
+`Raikou Normal`
+`Raikou Name`: I am Raikou! One who races with lightning!
+
+`Raikou Normal`
+`Raikou Name`: A body like rolling rain clouds!
+
+`Raikou Normal`
+`Raikou Name`: A roar that echoes thunder!
+
+`Raikou Normal`
+`Raikou Name`: Many have trespassed upon my domain...
+
+`Raikou Normal`
+`Raikou Name`: But what became of them? Let me demonstrate...
+
+`Raikou Normal`
+`Raikou Name`: And you, too, shall experience the pain they suffered!
 
 ### Cutscene 111
 
-Raikou: Gwooooooooooh! ...H-how dare you!
-Raikou: How... How did this happen...?
-Raikou: But regardless, you have won. Let me hear your wish.
-Raikou: ...Hm?! This... This is the Red Wing...
-Raikou: ............You... Stand back!
+`Raikou Normal`
+`Raikou Name`: Gwooooooooooh! ...H-how dare you!
+
+`Raikou Normal`
+`Raikou Name`: How... How did this happen...?
+
+`Raikou Normal`
+`Raikou Name`: But regardless, you have won. Let me hear your wish.
+
+`Raikou Normal`
+`Raikou Name`: ...Hm?! This... This is the Red Wing...
+
+`Raikou Normal`
+`Raikou Name`: ............You... Stand back!
+
 Raikou's thunderbolt electrified the Red Wing!
+
 The Red Wing... transformed into the Sunset Wing!
+
 Its subtle gradation of yellow to red is a truly beauteous sight!
-Raikou: Go northeast!
-Raikou: To a place called the Northwind Field.
-Raikou: You will find a Pokemon there named Suicune.
-Raikou: If you are lucky enough to meet Suicune...
-Raikou: Perhaps your wish will come true!
+
+`Raikou Normal`
+`Raikou Name`: Go northeast!
+
+`Raikou Normal`
+`Raikou Name`: To a place called the Northwind Field.
+
+`Raikou Normal`
+`Raikou Name`: You will find a Pokemon there named Suicune.
+
+`Raikou Normal`
+`Raikou Name`: If you are lucky enough to meet Suicune...
+
+`Raikou Normal`
+`Raikou Name`: Perhaps your wish will come true!
+
 `Hero Name` received the Sunset Wing.
+
 And...
+
 Gained access to the Northwind Field!
 
 ### Cutscene 112
 
 💬: Halt!
+
 💬: Why are you here?!
+
 💬: Clear and bracing air... Crystalline, pure water...
+
 💬: To stand guard over this beautiful and untainted land... This is why I am here.
-Suicune: I am Suicune! One who runs with the north wind!
-Suicune: Intruders foul the air with their outside ills.
-Suicune: There is but one solution for invaders: expulsion by force!
-Suicune: Here I come!
+
+`Suicune Normal`
+`Suicune Name`: I am Suicune! One who runs with the north wind!
+
+`Suicune Normal`
+`Suicune Name`: Intruders foul the air with their outside ills.
+
+`Suicune Normal`
+`Suicune Name`: There is but one solution for invaders: expulsion by force!
+
+`Suicune Normal`
+`Suicune Name`: Here I come!
 
 ### Cutscene 113
 
-Suicune: Gwoooooooh!
-Suicune: I have lost...
-Suicune: I admit it. You are strong.
-Suicune: This! The Sunset Wing!
-Suicune: ...I see. You came seeking the mirage Pokemon...
-Suicune: ...Step back.
-Suicune: Kyuuuuuuuuhn!
+`Suicune Normal`
+`Suicune Name`: Gwoooooooh!
+
+`Suicune Normal`
+`Suicune Name`: I have lost...
+
+`Suicune Normal`
+`Suicune Name`: I admit it. You are strong.
+
+`Suicune Normal`
+`Suicune Name`: This! The Sunset Wing!
+
+`Suicune Normal`
+`Suicune Name`: ...I see. You came seeking the mirage Pokemon...
+
+`Suicune Normal`
+`Suicune Name`: ...Step back.
+
+`Suicune Normal`
+`Suicune Name`: Kyuuuuuuuuhn!
+
 The north wind swirled around the Sunset Wing!
+
 The Sunset Wing... Transformed into the Rainbow Wing!
+
 Glittering in the seven colors of the rainbow, this wing is beautiful beyond description!
-Suicune: This Rainbow Wing...
-Suicune: It is the key to meeting the mirage Pokemon.
-Suicune: Take this wing...
-Suicune: Take it to the mountain so high that its peak is obscured by clouds.
-Suicune: Yes... Take it to Mt. Faraway!
-Suicune: The mirage Pokemon is at its peak!
+
+`Suicune Normal`
+`Suicune Name`: This Rainbow Wing...
+
+`Suicune Normal`
+`Suicune Name`: It is the key to meeting the mirage Pokemon.
+
+`Suicune Normal`
+`Suicune Name`: Take this wing...
+
+`Suicune Normal`
+`Suicune Name`: Take it to the mountain so high that its peak is obscured by clouds.
+
+`Suicune Normal`
+`Suicune Name`: Yes... Take it to Mt. Faraway!
+
+`Suicune Normal`
+`Suicune Name`: The mirage Pokemon is at its peak!
+
 `Hero Name` received the Rainbow Wing.
+
 And...
+
 Gained access to Mt. Faraway!
 
 ### Cutscene 114
 
 💬: Excellent!
+
 💬: You have done well to come this far.
+
 💬: You have overcome countless challenges...
+
 💬: Fought through many dangerous situations...
+
 💬: and finally ascended to the very peak of Mt. Faraway!
+
 💬: Truly, only the chosen have reached the summit.
+
 💬: However!
+
 💬: This is not the end!
-Ho-Oh: I am Ho-Oh! The builder of rainbows across the sky!
-Ho-Oh: Only when you overcome me in battle... That is when this mountain is conquered!
-Ho-Oh: This is the final challenge!
-Ho-Oh: Here I come!
+
+`Ho-Oh Normal`
+`Ho-Oh Name`: I am Ho-Oh! The builder of rainbows across the sky!
+
+`Ho-Oh Normal`
+`Ho-Oh Name`: Only when you overcome me in battle... That is when this mountain is conquered!
+
+`Ho-Oh Normal`
+`Ho-Oh Name`: This is the final challenge!
+
+`Ho-Oh Normal`
+`Ho-Oh Name`: Here I come!
 
 ## Chapter Post-Game 4: Recruit Three Superancient Pokemon
 
 ### Cutscene 115
-
 
 `Medicham Happy`
 `Medicham Name`: Pshehehehehe!
@@ -8074,7 +8600,6 @@ Ho-Oh: Here I come!
 
 ### Cutscene 116
 
-
 `Lombre Normal`
 `Lombre Name`: Huh? What's that? ...Oh, you mean what happened at sea?
 
@@ -8089,9 +8614,15 @@ Ho-Oh: Here I come!
 
 `Lombre Normal`
 `Lombre Name`: You know? I was trying that Dive thing.
-Lombre Tearyeyed: So, I was having fun going underwater... And I got washed out to sea a bit.
-Lombre Tearyeyed: All of a sudden, these wicked clouds rolled in...
-Lombre Tearyeyed: And before I knew it, there was a full-blown storm raging!
+
+`Lombre Tearyeyed`
+`Lombre Name`: So, I was having fun going underwater... And I got washed out to sea a bit.
+
+`Lombre Tearyeyed`
+`Lombre Name`: All of a sudden, these wicked clouds rolled in...
+
+`Lombre Tearyeyed`
+`Lombre Name`: And before I knew it, there was a full-blown storm raging!
 
 `Lombre Normal`
 `Lombre Name`: There's more! A dungeon appeared in the sea!
@@ -8116,10 +8647,11 @@ Lombre Tearyeyed: And before I knew it, there was a full-blown storm raging!
 
 ### Cutscene 117
 
-
 `Whiscash Normal`
 `Whiscash Name`: Ah, so you wish to know about the dungeon in the sea?
-Whiscash I, too, have heard of it.
+
+`Whiscash Normal`
+`Whiscash Name`: too, have heard of it.
 
 `Whiscash Normal`
 `Whiscash Name`: I have heard of a place that is far off our coast...
@@ -8150,6 +8682,7 @@ Whiscash I, too, have heard of it.
 
 `Whiscash Normal`
 `Whiscash Name`: So be it. You may have this.
+
 `Hero Name`'s team received the promised Dive.
 
 `Whiscash Normal`
@@ -8163,49 +8696,90 @@ Whiscash I, too, have heard of it.
 
 `Whiscash Normal`
 `Whiscash Name`: You would be able to enter the Stormy Sea.
+
 Gained access to the Stormy Sea!
+
 Beware--you must take the HM Dive, or a team member must learn Dive as a move for the team to enter!
 
 ### Cutscene 118
 
 Gwoooooooooooh..................
+
 💬: ...My power... is bursting...
+
 💬: My infinite... power!
+
 Gwwwwwoooooooooooh!
+
 💬: My duels against Groudon left us both exhausted... I took to a long and deep sleep...
+
 💬: All the time, I waited. Waited for my power to recover.
+
 💬: And now! I am on the verge of regaining my power!
-Kyogre: I am Kyogre! The lord of the sea!
-Kyogre: Witness the destructive force of my waves!
-Kyogre: Marvel at my awesome power!
+
+`Kyogre Normal`
+`Kyogre Name`: I am Kyogre! The lord of the sea!
+
+`Kyogre Normal`
+`Kyogre Name`: Witness the destructive force of my waves!
+
+`Kyogre Normal`
+`Kyogre Name`: Marvel at my awesome power!
 
 ### Cutscene 119
 
-Groudon: Why have you returned?! How dare you disturb me in my sleep?!
-Groudon: I let rage run wild before... But I won't allow that again!
-Groudon: Those that disturb my sleep... Shall be crushed!
-Groudon: No matter who it may be!
+`Groudon Normal`
+`Groudon Name`: Why have you returned?! How dare you disturb me in my sleep?!
+
+`Groudon Normal`
+`Groudon Name`: I let rage run wild before... But I won't allow that again!
+
+`Groudon Normal`
+`Groudon Name`: Those that disturb my sleep... Shall be crushed!
+
+`Groudon Normal`
+`Groudon Name`: No matter who it may be!
 
 ### Cutscene 120
 
 Gyaaaaaaaaaaaah!
-Rayquaza: So it is you who dares to trespass upon my airspace!
-Rayquaza: You scaled the Sky Tower...
-Rayquaza: Now, you wish to challenge me to a battle?!
-Rayquaza: ............ In destroying the falling star, I sustained injuries upon my body and my pride...
-Rayquaza: To better protect my domain, I have made myself stronger.
-Rayquaza: And so that I may draw out my newly gained power...
-Rayquaza: I am now... Unleashing every bit of my might!
-Rayquaza: My power shall overwhelm... But you dare to stand up to it?
-Rayquaza: I commend your courage!
+
+`Rayquaza Normal`
+`Rayquaza Name`: So it is you who dares to trespass upon my airspace!
+
+`Rayquaza Normal`
+`Rayquaza Name`: You scaled the Sky Tower...
+
+`Rayquaza Normal`
+`Rayquaza Name`: Now, you wish to challenge me to a battle?!
+
+`Rayquaza Normal`
+`Rayquaza Name`: ............ In destroying the falling star, I sustained injuries upon my body and my pride...
+
+`Rayquaza Normal`
+`Rayquaza Name`: To better protect my domain, I have made myself stronger.
+
+`Rayquaza Normal`
+`Rayquaza Name`: And so that I may draw out my newly gained power...
+
+`Rayquaza Normal`
+`Rayquaza Name`: I am now... Unleashing every bit of my might!
+
+`Rayquaza Normal`
+`Rayquaza Name`: My power shall overwhelm... But you dare to stand up to it?
+
+`Rayquaza Normal`
+`Rayquaza Name`: I commend your courage!
 
 ## Chapter Post-Game 5: Nyooooom
 
 ### Cutscene 121
 
-The next morning...
-No... Morning, but only by time...
-A time so early in the morning that everyone is still in bed...
+>The next morning...
+>
+>No... Morning, but only by time...
+>
+>A time so early in the morning that everyone is still in bed...
 
 * * *
 
@@ -8229,6 +8803,7 @@ Whooooooosh!
 
 `Hero Worried`
 `Hero Name`: ...Something's coming closer?!
+
 Whooooooooooooooooooooooshhh!
 
 `Hero Surprised`
@@ -8248,7 +8823,7 @@ Whooooooooooooooooooooooshhh!
 
 * * *
 
-Several hours later...
+>Several hours later...
 
 `Partner Normal`
 `Partner Name`: ............ Hey...
@@ -8261,7 +8836,6 @@ Several hours later...
 
 * * *
 
-
 `Partner Normal`
 `Partner Name`: `Hero Name`, are you awake?
 
@@ -8273,37 +8847,62 @@ Several hours later...
 
 ### Cutscene 122
 
-
 `Partner Normal`
 `Partner Name`: Look, `Hero Name`. Everyone's gathered around.
-Purple Kecleon Angry: Aiyiyi... I do not deserve this! I am outraged!
+
+`Purple Kecleon Angry`
+`Purple Kecleon Name`: Aiyiyi... I do not deserve this! I am outraged!
 
 `Partner Normal`
 `Partner Name`: What's up, everyone?
-Purple Kecleon: Up? Up? Up?! How could it be up, I ask you!
-Purple Kecleon: My beautiful shop... My fine wares were stolen from me!
-Purple Kecleon: Many, many TMs are simply gone! Spirited away! Dark clouds fill my heart!
-Persian: My bank wasn't hit, but... these are frightening times.
+
+`Purple Kecleon Angry`
+`Purple Kecleon Name`: Up? Up? Up?! How could it be up, I ask you!
+
+`Purple Kecleon Angry`
+`Purple Kecleon Name`: My beautiful shop... My fine wares were stolen from me!
+
+`Purple Kecleon Angry`
+`Purple Kecleon Name`: Many, many TMs are simply gone! Spirited away! Dark clouds fill my heart!
+
+`Persian Normal`
+`Persian Name`: My bank wasn't hit, but... these are frightening times.
 
 `Partner Normal`
 `Partner Name`: Is the storage OK?
-Kangaskhan: No problem. Nothing gets stolen from under my eye.
-Kangaskhan Happy: This mama's not about to make a stupid mistake like that! Kakakah!
-Purple Kecleon Angry: You're insinuating... that we were robbed for being careless?!
+
+`Kangaskhan Normal`
+`Kangaskhan Name`: No problem. Nothing gets stolen from under my eye.
+
+`Kangaskhan Happy`
+`Kangaskhan Name`: This mama's not about to make a stupid mistake like that! Kakakah!
+
+`Purple Kecleon Angry`
+`Purple Kecleon Name`: You're insinuating... that we were robbed for being careless?!
 
 `Alakazam Normal`
 `Alakazam Name`: Now wait.
 
 `Alakazam Normal`
 `Alakazam Name`: Tell me Kecleon. You saw... this thief?
-Purple Kecleon: Hmm...? No, not very clearly, I didn't.
-Purple Kecleon: When I saw it, it had already taken off...
+
+`Purple Kecleon Normal`
+`Purple Kecleon Name`: Hmm...? No, not very clearly, I didn't.
+
+`Purple Kecleon Normal`
+`Purple Kecleon Name`: When I saw it, it had already taken off...
 
 `Alakazam Normal`
 `Alakazam Name`: Taken off? You mean it flew away?
-Purple Kecleon: Yes.
-Purple Kecleon: It flew off in yonder direction, yes.
-Purple Kecleon: At tremendous speed too.
+
+`Purple Kecleon Normal`
+`Purple Kecleon Name`: Yes.
+
+`Purple Kecleon Normal`
+`Purple Kecleon Name`: It flew off in yonder direction, yes.
+
+`Purple Kecleon Normal`
+`Purple Kecleon Name`: At tremendous speed too.
 
 `Alakazam Normal`
 `Alakazam Name`: The yonder direction... That would be the Northern Range...
@@ -8313,87 +8912,147 @@ Purple Kecleon: At tremendous speed too.
 
 `Alakazam Normal`
 `Alakazam Name`: So we'll need to investigate this matter properly.
-Purple Kecleon: Yes. I beg for justice. My business faces ruination.
+
+`Purple Kecleon Normal`
+`Purple Kecleon Name`: Yes. I beg for justice. My business faces ruination.
 
 `Partner Normal`
 `Partner Name`: `Hero Name`. Want to look into this?
+
 `Hero Name`'s team took on the case of pursuing the burglar that struck Kecleon's shop.
+
 The burglar's alleged getaway spot...
+
 The Northern Range is now open for investigation!
 
 ### Cutscene 123
 
+`Latios Normal`
 💬: Oh! Who are you?!
+
+`Latios Normal`
 💬: ............ I see. You're trying to get your TMs back.
+
+`Latios Normal`
 💬: But!
+
+`Latios Normal`
 💬: Nobody can stop me!
-Latios: I'm the Eon Pokemon Latios!
-Latios: If you really want your TMs back...
-Latios: You'll have to take them from me!
+
+`Latios Normal`
+`Latios Name`: I'm the Eon Pokemon Latios!
+
+`Latios Normal`
+`Latios Name`: If you really want your TMs back...
+
+`Latios Normal`
+`Latios Name`: You'll have to take them from me!
 
 ### Cutscene 124
 
-Latios: Urghgh...
-Latios: ............Please... Please let me go...
-Latios: I have to go... There's somewhere that I have to go...
-Latios: If... I don't hurry... M-my little sister...
+`Latios Normal`
+`Latios Name`: Urghgh...
+
+`Latios Normal`
+`Latios Name`: ............Please... Please let me go...
+
+`Latios Normal`
+`Latios Name`: I have to go... There's somewhere that I have to go...
+
+`Latios Normal`
+`Latios Name`: If... I don't hurry... M-my little sister...
 
 ### Cutscene 125
 
-
 `Partner Normal`
 `Partner Name`: Look! He's waking up!
-Latios: ...Wh-where...?
+
+`Latios Normal`
+`Latios Name`: ...Wh-where...?
 
 `Partner Normal`
 `Partner Name`: This is Pokemon Square.
 
 `Partner Normal`
 `Partner Name`: You fainted in the Northern Range, so we brought you back here.
-Purple Kecleon Angry: You! How DARE you steal my fine selection of quality merchandise!
-Purple Kecleon Angry: You had better be prepared for harsh justice!
+
+`Purple Kecleon Angry`
+`Purple Kecleon Name`: You! How DARE you steal my fine selection of quality merchandise!
+
+`Purple Kecleon Angry`
+`Purple Kecleon Name`: You had better be prepared for harsh justice!
 
 `Alakazam Normal`
 `Alakazam Name`: Now wait. There must be a good reason for this.
 
 `Alakazam Normal`
 `Alakazam Name`: We should at least hear that.
-Latios: ...! That's right! I have to get my sister...
-Latios: Ggh! This wound!
+
+`Latios Normal`
+`Latios Name`: ...! That's right! I have to get my sister...
+
+`Latios Normal`
+`Latios Name`: Ggh! This wound!
 
 `Alakazam Normal`
 `Alakazam Name`: You're injured. You can't fly for now.
 
 `Alakazam Normal`
 `Alakazam Name`: Tell me, how do you justify what you've done?
-Latios: I have a younger sister. Her name is Latias.
-Latios: Latias... Crashed somewhere in the Pitfall Valley...
+
+`Latios Normal`
+`Latios Name`: I have a younger sister. Her name is Latias.
+
+`Latios Normal`
+`Latios Name`: Latias... Crashed somewhere in the Pitfall Valley...
 
 `Alakazam Normal`
 `Alakazam Name`: What?! The Pitfall Valley?!
 
 `Partner Worried`
 `Partner Name`: ...What is that? What is the Pitfall Valley?
-Purple Kecleon: It is near the Northern Range.
-Purple Kecleon: They say that anyone so unlucky to fall into the Pitfall Valley... will never again emerge.
-Latios: Latias and I were flying over the Northern Range.
-Latios: When suddenly, what appeared to be a meteorite struck Latias on the wing....
-Latios: Her wing shattered by the blow, Latias tumbled down into the depths of the Pitfall Valley...
+
+`Purple Kecleon Normal`
+`Purple Kecleon Name`: It is near the Northern Range.
+
+`Purple Kecleon Normal`
+`Purple Kecleon Name`: They say that anyone so unlucky to fall into the Pitfall Valley... will never again emerge.
+
+`Latios Normal`
+`Latios Name`: Latias and I were flying over the Northern Range.
+
+`Latios Normal`
+`Latios Name`: When suddenly, what appeared to be a meteorite struck Latias on the wing....
+
+`Latios Normal`
+`Latios Name`: Her wing shattered by the blow, Latias tumbled down into the depths of the Pitfall Valley...
 
 `Partner Surprised`
 `Partner Name`: A meteorite?!
 
 `Partner Surprised`
 `Partner Name`: `Hero Name`! Do you think maybe that it's a chunk of the blown-up meteor?
-Latios: I went to the Pitfall Valley in hopes of rescuing my sister, but...
-Latios: I made little headway... I wasn't up to the task...
+
+`Latios Normal`
+`Latios Name`: I went to the Pitfall Valley in hopes of rescuing my sister, but...
+
+`Latios Normal`
+`Latios Name`: I made little headway... I wasn't up to the task...
 
 `Alakazam Normal`
 `Alakazam Name`: So that drove you to steal Technical Machines...
-Latios: I intended to make amends after I saved my sister...
-Latios: But that doesn't mean I can get away with thievery. It was wrong, and I'm sorry.
-Purple Kecleon: Oh... Oh, my! It is not a problem! Not a problem at all!
-Purple Kecleon: For a reason so compelling, it can't be helped. Hahaha.
+
+`Latios Normal`
+`Latios Name`: I intended to make amends after I saved my sister...
+
+`Latios Normal`
+`Latios Name`: But that doesn't mean I can get away with thievery. It was wrong, and I'm sorry.
+
+`Purple Kecleon Normal`
+`Purple Kecleon Name`: Oh... Oh, my! It is not a problem! Not a problem at all!
+
+`Purple Kecleon Normal`
+`Purple Kecleon Name`: For a reason so compelling, it can't be helped. Hahaha.
 
 `Alakazam Normal`
 `Alakazam Name`: However... Even if you were to plumb the depths of Pitfall Valley...
@@ -8406,10 +9065,18 @@ Purple Kecleon: For a reason so compelling, it can't be helped. Hahaha.
 
 `Alakazam Normal`
 `Alakazam Name`: You will wander forever, neither falling...nor living... What then?
-Latios: ............ So much time has passed since my sister crashed.
-Latios: Latias hasn't been able to climb out of the depths. She is all alone down there.
-Latios: Even if I end up like her, unable to escape... Two would be better than one.
-Latios: Latias wouldn't have to be so alone...
+
+`Latios Normal`
+`Latios Name`: ............ So much time has passed since my sister crashed.
+
+`Latios Normal`
+`Latios Name`: Latias hasn't been able to climb out of the depths. She is all alone down there.
+
+`Latios Normal`
+`Latios Name`: Even if I end up like her, unable to escape... Two would be better than one.
+
+`Latios Normal`
+`Latios Name`: Latias wouldn't have to be so alone...
 
 `Alakazam Normal`
 `Alakazam Name`: How foolish... Do you think Latias wishes for that?
@@ -8456,53 +9123,94 @@ Latios: Latias wouldn't have to be so alone...
 
 ### Cutscene 126
 
+`Latias Normal`
 💬: ............
+
+`Latias Normal`
 💬: ...Y-you are...?
+
+`Latias Normal`
 💬: ...Did you maybe... come to save me?
-Latias: ........... Yes, I'll be fine.
-Latias: My wing is still damaged a little, but... I can go.
+
+`Latias Normal`
+`Latias Name`: ........... Yes, I'll be fine.
+
+`Latias Normal`
+`Latias Name`: My wing is still damaged a little, but... I can go.
 
 ### Cutscene 127
 
-Latios: Latias!
-Latias: Latios!
-Latios Happy: You're safe! This is incredible...
-Latias: I'm sorry... I caused you so much worry...
-Kecleon: Oh, this is great... It's so touching... Sniffle...
-Latios: My sister is safe, all thanks to you.
-Latios: To be honest, I came close to giving up...
-Latios: But we're back together again... It's happiness beyond words...
-Latios: We owe you so much gratitude! Thank you!
+`Latios Normal`
+`Latios Name`: Latias!
+
+`Latias Normal`
+`Latias Name`: Latios!
+
+`Latios Happy`
+`Latias Name`: You're safe! This is incredible...
+
+`Latias Normal`
+`Latias Name`: I'm sorry... I caused you so much worry...
+
+`Purple Kecleon Normal`
+`Purple Kecleon`: Oh, this is great... It's so touching... Sniffle...
+
+`Latios Normal`
+`Latios Name`: My sister is safe, all thanks to you.
+
+`Latios Normal`
+`Latios Name`: To be honest, I came close to giving up...
+
+`Latios Normal`
+`Latios Name`: But we're back together again... It's happiness beyond words...
+
+`Latios Normal`
+`Latios Name`: We owe you so much gratitude! Thank you!
 
 `Partner Happy`
 `Partner Name`: It's OK, really. When you put it that way, it's even a little embarrassing. Hahaha.
-Latios: However... We have no money or any other way of repaying your kindness.
-Latios: So, and it's the least we can do... May we join your rescue team?
+
+`Latios Normal`
+`Latios Name`: However... We have no money or any other way of repaying your kindness.
+
+`Latios Normal`
+`Latios Name`: So, and it's the least we can do... May we join your rescue team?
 
 `Partner Surprised`
 `Partner Name`: Huh...?
-Latias: We would like to join `Team Name` and help with your rescue work.
-Latios: Would that work? Would you be willing to accept us on your rescue team?
+
+`Latias Normal`
+`Latias Name`: We would like to join `Team Name` and help with your rescue work.
+
+`Latios Normal`
+`Latios Name`: Would that work? Would you be willing to accept us on your rescue team?
 
 `Partner Worried`
 `Partner Name`: `Hero Name`, what should we do? Do we let Latios and Latias join?
-(If `Hero Name` chooses "Yes.")
+
+*If `Hero Name` chooses "Yes."*
 
 `Partner Happy`
 `Partner Name`: Done!
 
 `Partner Happy`
 `Partner Name`: You're our fellow members from now on. Great to have you!
-Latios: Thanks for having us!
-Latias: Delighted to join!
+
+`Latios Happy`
+`Latios Name`: Thanks for having us!
+
+`Latias Happy`
+`Latias Name`: Delighted to join!
+
 And thus...
+
 `Team Name` was joined by Latios and Latias!
+
 Latios and Latias became team members!
 
 ## Chapter Post-Game 6: The Guardian Of The Sea
 
 ### Cutscene 128
-
 
 `Alakazam Normal`
 `Alakazam Name`: I have heard of a weather anomaly afflicting a certain area.
@@ -8521,7 +9229,8 @@ Latios and Latias became team members!
 
 `Alakazam Normal`
 `Alakazam Name`: Will you travel to the Legendary Island and observe what is taking place?
-(If `Hero Name` chooses "Yes.")
+
+*If `Hero Name` chooses "Yes."*
 
 `Alakazam Normal`
 `Alakazam Name`: Ah, good. You accept the job.
@@ -8530,7 +9239,6 @@ Latios and Latias became team members!
 `Alakazam Name`: I hope for the best from you.
 
 ### Cutscene 129
-
 
 `Moltres Normal`
 `Moltres Name`: Fire, Ice, and Electricity...
@@ -8564,21 +9272,39 @@ Latios and Latias became team members!
 
 `Moltres Normal`
 `Moltres Name`: Now go. The guardian of the sea awaits you.
+
 Obtained the Vortex Stone.
+
 And...
+
 Gained access to the Silver Trench!
 
 ### Cutscene 130
 
 💬: Why... Why have you come here...?
+
 💬: This is... the Silver Trench. This is my territory!
-Lugia: My name is Lugia! I am the guardian of the seas!
-Lugia: To protect this sea, I have settled here...
-Lugia: If you dare to challenge me...
-Lugia: So be it! I will rise to your challenge!
-Lugia: Cast aside all thoughts! Unleash every bit of your power!
-With your life at stake...
-Bring it on!
+
+`Lugia Normal`
+`Lugia Name`: My name is Lugia! I am the guardian of the seas!
+
+`Lugia Normal`
+`Lugia Name`: To protect this sea, I have settled here...
+
+`Lugia Normal`
+`Lugia Name`: If you dare to challenge me...
+
+`Lugia Normal`
+`Lugia Name`: So be it! I will rise to your challenge!
+
+`Lugia Normal`
+`Lugia Name`: Cast aside all thoughts! Unleash every bit of your power!
+
+`Lugia Normal`
+`Lugia Name`: With your life at stake...
+
+`Lugia Normal`
+`Lugia Name`: Bring it on!
 
 ## Chapter Post-Game 7: The Meteor Cave
 
@@ -8608,17 +9334,30 @@ The next morning...
 `Xatu Name`: I come here only because it is on the way... This is not very important.
 
 `Partner Sad`
-`Partner Name`: Oh... Is that all..
+`Partner Name`: Oh... Is that all...
+
 💬: Hey, Xatu!
-Blastoise: Oh, hey! There you are!
-Blastoise: DIdn't know you'd be here. You had me looking, Xatu.
+
+`Blastoise Normal`
+`Blastoise Name`: Oh, hey! There you are!
+
+`Blastoise Normal`
+`Blastoise Name`: DIdn't know you'd be here. You had me looking, Xatu.
 
 `Xatu Normal`
 `Xatu Name`: What is it?
-Blastoise: Well, to the northeast of Mt. Thunder...
-Blastoise: There's a gigantic cave!
-Blastoise: There wasn't anything like that there before, hey?
-Blastoise: So, I figured Xatu would know something...
+
+`Blastoise Normal`
+`Blastoise Name`: Well, to the northeast of Mt. Thunder...
+
+`Blastoise Normal`
+`Blastoise Name`: There's a gigantic cave!
+
+`Blastoise Normal`
+`Blastoise Name`: There wasn't anything like that there before, hey?
+
+`Blastoise Normal`
+`Blastoise Name`: So, I figured Xatu would know something...
 
 `Xatu Normal`
 `Xatu Name`: Kwaaaah!
@@ -8643,17 +9382,33 @@ Blastoise: So, I figured Xatu would know something...
 
 `Partner Normal`
 `Partner Name`: Did you explore inside the Meteor Cave?
-Blastoise: Uh, yeah... Just a little...
-Blastoise Pain: But the place was crawling with these weird things...
-Blastoise Pain: It freaked me out. I couldn't stay there long...
+
+`Blastoise Normal`
+`Blastoise Name`: Uh, yeah... Just a little...
+
+`Blastoise Pain`
+`Blastoise Name`: But the place was crawling with these weird things...
+
+`Blastoise Pain`
+`Blastoise Name`: It freaked me out. I couldn't stay there long...
 
 `Partner Joyous`
 `Partner Name`: Hahaha! Surprise, surprise! Blastoise's kind of cowardly!
-Blastoise Angry: What's that?!
-Blastoise Angry: Hey, you, `Partner Name`. If you were to see that dungeon, you'd be intimidated too!
-Blastoise Pain: I've never seen anything like it before...
-Blastoise Pain: There were downright bizarre things in there that I'm not sure were even Pokemon.
-Blastoise: Xatu, do you have any idea what are in that place?
+
+`Blastoise Angry`
+`Blastoise Name`: What's that?!
+
+`Blastoise Angry`
+`Blastoise Name`: Hey, you, `Partner Name`. If you were to see that dungeon, you'd be intimidated too!
+
+`Blastoise Pain`
+`Blastoise Name`: I've never seen anything like it before...
+
+`Blastoise Pain`
+`Blastoise Name`: There were downright bizarre things in there that I'm not sure were even Pokemon.
+
+`Blastoise Normal`
+`Blastoise Name`: Xatu, do you have any idea what are in that place?
 
 `Xatu Normal`
 `Xatu Name`: ...I draw a blank. I do not know...
@@ -8666,41 +9421,58 @@ Blastoise: Xatu, do you have any idea what are in that place?
 
 `Xatu Normal`
 `Xatu Name`: Perhaps... Of this world they may not be.
-Blastoise: You mean... They came from that falling star?
+
+`Blastoise Normal`
+`Blastoise Name`: You mean... They came from that falling star?
 
 `Xatu Normal`
 `Xatu Name`: Perhaps that is so...
 
 `Partner Normal`
 `Partner Name`: `Hero Name`. Want to go investigate? The Meteor Cave.
+
 The rescue team gained access to the Meteor Cave!
 
 ### Cutscene 132
 
 💬: ............
+
 💬: Where... Where am I?
+
 💬: There was a sudden explosion... And I awakened to this...
+
 💬: What is this place?
-Deoxys: I am Deoxys. I came from space.
-Deoxys: If you know, tell me.
-Deoxys: I must know... what happened here!
+
+`Deoxys Normal`
+`Deoxys Name`: I am Deoxys. I came from space.
+
+`Deoxys Normal`
+`Deoxys Name`: If you know, tell me.
+
+`Deoxys Normal`
+`Deoxys Name`: I must know... what happened here!
 
 ## Chapter Post-Game 8: The Buried Relic
 
 ### Cutscene 133
 
--Pokemon News-
-= Extra! =
+-Pokemon News- = Extra! =
+
 Buried Relic Discovered!
+
 Mystery ruin found underground!
+
 Its side had been hidden by the crater of a meteor strike in ancient times.
+
 The Buried Relic is thought to date back beyond recorded history.
+
 There are rumors of treasures...
+
 And perhaps even Pokemon that lived in ancient times.
+
 The Buried Relic is the main topic in Pokemon Square.
 
 ### Cutscene 134
-
 
 `Lombre Normal`
 `Lombre Name`: Hey, have you heard? About the Buried Relic.
@@ -8734,63 +9506,90 @@ The Buried Relic is the main topic in Pokemon Square.
 
 `Shiftry Normal`
 `Shiftry Name`: Kukukuh... Me too! Best of luck, compadre!
+
 Leaving aside the disturbing fact that Shiftry made them compadres...
+
 `Hero Name`'s team gained access to Buried Relic!
 
 ### Cutscene 135
 
 INTRUDER ALERT!
+
 EXTERMINATE!
+
 INTRUDER ALERT!
+
 EXTERMINATE!
 
 ### Cutscene 136
 
 Something fell from Regirock's body.
+
 Regirock was apparently guarding this item.
+
 `Hero Name` obtained the Rock Part...
+
 that Regirock was guarding!
 
 ### Cutscene 137
 
 INTRUDER ALERT!
+
 EXTERMINATE!
+
 INTRUDER ALERT!
+
 EXTERMINATE!
 
 ### Cutscene 138
 
 Something fell from Regice's body.
+
 Regice was apparently guarding this item.
+
 `Hero Name` obtained the Ice Part...
+
 that Regice was guarding!
 
 ### Cutscene 139
 
 INTRUDER ALERT!
+
 EXTERMINATE!
+
 INTRUDER ALERT!
+
 EXTERMINATE!
 
 ### Cutscene 140
 
 Something fell from Registeel's body.
+
 Registeel was apparently guarding this item.
+
 `Hero Name` obtained the Steel Part...
+
 that Registeel was guarding!
+
 That means...
+
 By finding the Rock Part, Ice Part, and Steel Part...
+
 All three parts are yours!
+
 Oh? The three parts... They're reacting to each other?
+
 The three parts fit together...
+
 and became a Music Box!
+
 `Hero Name` obtained the Music Box!
+
 The Music Box only needs to be in the Toolbox for it to attract a special something!
 
 ## Chapter Post-Game 9: Wish Cave
 
 ### Cutscene 141
-
 
 `Medicham Normal`
 `Medicham Name`: ........................
@@ -8806,7 +9605,9 @@ The Music Box only needs to be in the Toolbox for it to attract a special someth
 
 `Medicham Happy`
 `Medicham Name`: My wish... It will finally come true! Pshehehe!
-Ekans Special 0: Hey, now, don't forget about my wish!
+
+`Ekans Special1`
+`Ekans Name`: Hey, now, don't forget about my wish!
 
 `Medicham Normal`
 `Medicham Name`: Listen, Ekans. We must keep this a secret just between the two of us.
@@ -8834,7 +9635,6 @@ Ekans Special 0: Hey, now, don't forget about my wish!
 
 ### Cutscene 142
 
-
 `Medicham Normal`
 `Medicham Name`: Ekans, listen. I'm thinking it is best if only we go into the dungeon.
 
@@ -8849,11 +9649,21 @@ Ekans Special 0: Hey, now, don't forget about my wish!
 
 `Medicham Happy`
 `Medicham Name`: But of course. I can't wait until our wishes come true~🎵
-Ekans Special0: My wish is for a broader lower jaw.
-Ekans Special0: I want bigger jaws so I can swallow bigger things whole.
-Medicham Special0: My wish is for a place where I can meditate in peace~🎵
-Medicham Special0: With no one to bother me...
-Medicham Special0: It would be magnificent if I could meditate for a year without food~🎵
+
+`Ekans Special1`
+`Ekans Name`: My wish is for a broader lower jaw.
+
+`Ekans Special1`
+`Ekans Name`: I want bigger jaws so I can swallow bigger things whole.
+
+`Medicham Special1`
+`Medicham Name`: My wish is for a place where I can meditate in peace~🎵
+
+`Medicham Special1`
+`Medicham Name`: With no one to bother me...
+
+`Medicham Special1`
+`Medicham Name`: It would be magnificent if I could meditate for a year without food~🎵
 
 `Medicham Surprised`
 `Medicham Name`: Giyaaaaaaaaaaaaaaaaaah!
@@ -8868,7 +9678,6 @@ Medicham Special0: It would be magnificent if I could meditate for a year withou
 `Ekans Name`: I don't know anything about a dungeon that makes wishes come true! I know nothing!
 
 ### Cutscene 143
-
 
 `Ekans Normal`
 `Ekans Name`: ...I got KO'd in that dungeon, but what about Medicham? Hope she's OK...
@@ -8897,19 +9706,30 @@ Medicham Special0: It would be magnificent if I could meditate for a year withou
 ### Cutscene 144
 
 `Hero Name` read the SOS Mail apparently sent by Medicham.
+
 "My name is Medicham.
+
 We had no trouble entering this dungeon... But it's horrible here! It is much too difficult!
+
 Ekans, he was defeated right away. It makes me want to scream!
+
 Somebody! Please help me!
+
 The place is the Wish Cave.
+
 The reward is a secret~🎵 But it' really very nice--you can be sure of that~🎵"
+
 The place in which Medicham is thought to have gone missing...
+
 The Wish Cave is now open for exploration!
 
 ### Cutscene 145
 
-Medicham Pain: Oh, my, my... I can't seem to find a way out...
-Medicham Pain: What am I to do...?
+`Medicham Pain`
+`Medicham Name`: Oh, my, my... I can't seem to find a way out...
+
+`Medicham Pain`
+`Medicham Name`: What am I to do...?
 
 `Medicham Surprised`
 `Medicham Name`: Oh! You?!
@@ -8925,13 +9745,20 @@ Medicham Pain: What am I to do...?
 
 * * *
 
-Ekans Special0: Medicham! You're safe! Yesssss!
-Medicham Sad: I'm so sorry, Ekans. That dungeon--it was too much for me.
+`Ekans Special1`
+`Ekans Name`: Medicham! You're safe! Yesssss!
+
+`Medicham Sad`
+`Medicham Name`: I'm so sorry, Ekans. That dungeon--it was too much for me.
 
 `Medicham Happy`
 `Medicham Name`: Thank you for saving me. I appreciate it~🎵
-Medicham Sad: Ow, ow, ow... My body--it hurts all over even now...
-Medicham Pain: ...But that dungeon... What is it about it?
+
+`Medicham Sad`
+`Medicham Name`: Ow, ow, ow... My body--it hurts all over even now...
+
+`Medicham Pain`
+`Medicham Name`: ...But that dungeon... What is it about it?
 
 `Medicham Angry`
 `Medicham Name`: They say it makes a wish come true. So, I went...
@@ -8947,11 +9774,14 @@ Medicham Pain: ...But that dungeon... What is it about it?
 
 `Medicham Happy`
 `Medicham Name`: But I will give it to you. Here! Your reward for my rescue~🎵
+
 `Hero Name`'s team received the promised Wish Stone.
 
 `Medicham Happy`
 `Medicham Name`: They say if you take that stone to the Wish Cave... To its very depths...
-Medicham Special0: Wonder of wonders! A wish--it comes true!
+
+`Medicham Special1`
+`Medicham Name`: Wonder of wonders! A wish--it comes true!
 
 `Medicham Happy`
 `Medicham Name`: You see~🎵 A rich reward, won't you agree?
@@ -8965,32 +9795,73 @@ Medicham Special0: Wonder of wonders! A wish--it comes true!
 ### Cutscene 146
 
 💬: ........................
+
 💬: ......Fwaaaaaaaahhh......
+
 💬: I'm still sleepy... Fnyumnyum....
+
 💬: ...Who is it?
+
 💬: Who is that over there? Fnyumnyum...
-Jirachi Sleep: I'm Jirachi. Who are you?
-Jirachi Sleep: ......Fwaaaaahhhh...... I'm still... sleepy...
+
+`Jirachi Special1`
+`Jirachi Name`: I'm Jirachi. Who are you?
+
+`Jirachi Special1`
+`Jirachi Name`: ......Fwaaaaahhhh...... I'm still... sleepy...
 
 ### Cutscene 147
 
-Jirachi Sleep: ...Oh, oh?! I hear singing...
-Jirachi Sleep: A song of purity...
-Jirachi: Ha! Eyes wide open!
-Jirachi: I don't know why, but I'm wide awake!
-Jirachi: I'm Jirachi.
-Jirachi: When I awaken, I grant a wish. I have to.
-Jirachi: Er-hem... Then... I ask you this.
-Jirachi: What is your wish?
+`Jirachi Special1`
+`Jirachi Name`: ...Oh, oh?! I hear singing...
+
+`Jirachi Special1`
+`Jirachi Name`: A song of purity...
+
+`Jirachi Normal`
+`Jirachi Name`: Ha! Eyes wide open!
+
+`Jirachi Normal`
+`Jirachi Name`: I don't know why, but I'm wide awake!
+
+`Jirachi Normal`
+`Jirachi Name`: I'm Jirachi.
+
+`Jirachi Normal`
+`Jirachi Name`: When I awaken, I grant a wish. I have to.
+
+`Jirachi Normal`
+`Jirachi Name`: Er-hem... Then... I ask you this.
+
+`Jirachi Normal`
+`Jirachi Name`: What is your wish?
+
 *If `Hero Name` chooses "Something good!"*
-Jirachi: Something good? That's not very easy...
-Jirachi: But I'll do my best!
-Jirachi: Nnnnnnnnnn!
-Jirachi: Taaaaaaaah!
-Jirachi: It's done...
-Jirachi: If you can get home safely, I think there will be something good waiting for you. Maybe. Definitely.
-Jirachi: ...Fwaaaaaaaahhh...
-Jirachi: Using that power.... Made me sleepy... Good night...
+
+`Jirachi Normal`
+`Jirachi Name`: Something good? That's not very easy...
+
+`Jirachi Normal`
+`Jirachi Name`: But I'll do my best!
+
+`Jirachi Normal`
+`Jirachi Name`: Nnnnnnnnnn!
+
+`Jirachi Normal`
+`Jirachi Name`: Taaaaaaaah!
+
+`Jirachi Normal`
+`Jirachi Name`: It's done...
+
+`Jirachi Normal`
+`Jirachi Name`: If you can get home safely, I think there will be something good waiting for you. Maybe. Definitely.
+
+`Jirachi Normal`
+`Jirachi Name`: ...Fwaaaaaaaahhh...
+
+`Jirachi Normal`
+`Jirachi Name`: Using that power.... Made me sleepy... Good night...
+
 Jirachi fell back into a deep sleep...
 
 ### Cutscene 148
@@ -9026,6 +9897,7 @@ The next morning...
 
 `Partner Happy`
 `Partner Name`: If it's a gift, we have to accept!
+
 Team `Team Name`'s rescue rank went up!
 
 ## Chapter Post-Game 10: The Most Powerful Of All Pokemon
@@ -9037,7 +9909,9 @@ In a small cave in the distant west...
 
 `Charizard Normal`
 `Charizard Name`: Hey! Get a move on!
-Blastoise Pain: Gasp, gasp... This is rough going...
+
+`Blastoise Pain`
+`Blastoise Name`: Gasp, gasp... This is rough going...
 
 `Charizard Normal`
 `Charizard Name`: Heh! What's with you? You're gonna whine about it now?
@@ -9047,38 +9921,60 @@ Blastoise Pain: Gasp, gasp... This is rough going...
 
 `Charizard Normal`
 `Charizard Name`: Saying you'd found a new cave and all!
-Blastoise Pain: Yeah.... I just happened to be swimming by in the sea when I spotted this cave...
-Blastoise Pain: I didn't expect it to be a dungeon this rough... Gasp, gasp...
+
+`Blastoise Pain`
+`Blastoise Name`: Yeah.... I just happened to be swimming by in the sea when I spotted this cave...
+
+`Blastoise Pain`
+`Blastoise Name`: I didn't expect it to be a dungeon this rough... Gasp, gasp...
 
 `Charizard Normal`
 `Charizard Name`: Heh! I thought a different combo would be a good change of pace...
 
 `Charizard Normal`
 `Charizard Name`: But you're pathetic! So much for Mr. Big Shot Blastoise!
-Blastoise Angry: Wh-what! Call me pathetic, will you?!
-Blastoise Pain: What you've seen of me so far is nothing!
-Blastoise Angry: Never... underestimate Blastoise!
-Blastoise Angry: Wroooooooaaaaar!
+
+`Blastoise Angry`
+`Blastoise Name`: Wh-what! Call me pathetic, will you?!
+
+`Blastoise Pain`
+`Blastoise Name`: What you've seen of me so far is nothing!
+
+`Blastoise Angry`
+`Blastoise Name`: Never... underestimate Blastoise!
+
+`Blastoise Angry`
+`Blastoise Name`: Wroooooooaaaaar!
 
 `Charizard Happy`
 `Charizard Name`: Hahaha! There! You're still feeling frisky!
 
 `Charizard Happy`
 `Charizard Name`: That's the spirit! I think we're getting close. Let's keep it going!
-Blastoise: ...! So you did that to motivate me... ...Thanks.
+
+`Blastoise Normal`
+`Blastoise Name`: ...! So you did that to motivate me... ...Thanks.
 
 `Charizard Normal`
 `Charizard Name`: Hey, no problem. Let's move!
 
 `Charizard Normal`
 `Charizard Name`: Hm? What's wrong? Are you still wiped out?
-Blastoise: ...No. That's not it.
-Blastoise: ...Just now. Did you hear something?
-Blastoise: I thought I heard a voice...
+
+`Blastoise Normal`
+`Blastoise Name`: ...No. That's not it.
+
+`Blastoise Normal`
+`Blastoise Name`: ...Just now. Did you hear something?
+
+`Blastoise Normal`
+`Blastoise Name`: I thought I heard a voice...
 
 `Charizard Normal`
 `Charizard Name`: ...No? I don't hear anything.
+
 💬: ............Is it you...?
+
 💬: ......Who...disturbs...my sleep... Is it you?!
 
 `Charizard Normal`
@@ -9086,21 +9982,26 @@ Blastoise: I thought I heard a voice...
 
 `Charizard Normal`
 `Charizard Name`: Who are you?! Show yourself!
+
 💬: Me...?
+
 💬: I was... Engineered...
-Created only to fight...
 
 * * *
+
+Created only to fight...
 
 The most powerful of all Pokemon!
 
 * * *
 
-Charizard Pain: Gwaaaaaaaaaaaah!
-Blastoise Pain: Gyaaaaaaaah!
+`Charizard Pain`
+`Charizard Name`: Gwaaaaaaaaaaaah!
+
+`Blastoise Pain`
+`Blastoise Name`: Gyaaaaaaaah!
 
 ### Cutscene 150
-
 
 `Bellsprout Normal`
 `Bellsprout Name`: ...I've always wondered...
@@ -9112,10 +10013,10 @@ Blastoise Pain: Gyaaaaaaaah!
 `Lombre Name`: What, there's someone besides Rayquaza?
 
 `Wynaut Normal`
-`Wynaut Name`: Is that it?9
+`Wynaut Name`: Is that it?
 
 `Lombre Normal`
-`Lombre Name`: Well, sheesh, Rayquaza destroyed a star!9
+`Lombre Name`: Well, sheesh, Rayquaza destroyed a star!
 
 `Wobbuffet Happy`
 `Wobbuffet Name`: Wobbuffet!
@@ -9158,10 +10059,11 @@ Blastoise Pain: Gyaaaaaaaah!
 
 ***MISSING DIALOGUE***
 
-
 `Wynaut Normal`
 `Wynaut Name`: Um...
-Wynaut I heard this story...
+
+`Wynaut Normal`
+`Wynaut Name`: I heard this story...
 
 `Wynaut Normal`
 `Wynaut Name`: Somewhere in the world is a Pokemon that was made for fighting.
@@ -9189,6 +10091,7 @@ Wynaut I heard this story...
 
 `Wynaut Normal`
 `Wynaut Name`: They say it is sleeping in a dungeon somewhere...
+
 💬: That rumor... It's true...
 
 `Lombre Normal`
@@ -9199,19 +10102,33 @@ Wynaut I heard this story...
 
 `Lombre Normal`
 `Lombre Name`: They're hurt bad... What exactly happened?!
-Blastoise Pain: Urgh... It's what that Wynaut was saying...
-Blastoise Pain: ...We were wiped out by that Pokemon...
+
+`Blastoise Pain`
+`Blastoise Name`: Urgh... It's what that Wynaut was saying...
+
+`Blastoise Pain`
+`Blastoise Name`: ...We were wiped out by that Pokemon...
 
 `Lombre Normal`
 `Lombre Name`: Wh-what did you say?!
-Charizard Pain: Grgh... There's no mistake... It said it was born to fight...
-Charizard Pain: ...But that Pokemon's power... There was nothing fake about it...
-Charizard Pain: ...It really was the most powerful... Gfah!
+
+`Charizard Pain`
+`Charizard Name`: Grgh... There's no mistake... It said it was born to fight...
+
+`Charizard Pain`
+`Charizard Name`: ...But that Pokemon's power... There was nothing fake about it...
+
+`Charizard Pain`
+`Charizard Name`: ...It really was the most powerful... Gfah!
 
 `Lombre Normal`
 `Lombre Name`: Ch-Charizard! Are you OK?!
-Blastoise Pain: There is a cave... far in the west... It's there...
-Blastoise Pain: I never want... to go back again... Gfwoh!
+
+`Blastoise Pain`
+`Blastoise Name`: There is a cave... far in the west... It's there...
+
+`Blastoise Pain`
+`Blastoise Name`: I never want... to go back again... Gfwoh!
 
 `Bellsprout Pain`
 `Bellsprout Name`: Oh, my gosh! Blastoise went down, too! They need help now!
@@ -9233,36 +10150,60 @@ Blastoise Pain: I never want... to go back again... Gfwoh!
 
 `Wynaut Normal`
 `Wynaut Name`: I'm scared too...
-Wobbufett Happy: Wobbuffet!
+
+`Wobbuffet Happy`
+`Wobbuffet Name`: Wobbufett!
+
 The cave shunned by all out of fear...
+
 The Western Cave is now open for exploration!
 
 ### Cutscene 151
 
 💬: ............ Was it you...?
+
 💬: ...Who...disturbed...me...in my... sleep...? Was it you?
-Mewtwo: My name is Mewtwo. I came into being only to fight.
-Mewtwo: I... have secluded myself here in suspended animation.
-Mewtwo: Would you like to know why? It's quite simple...
-Mewtwo: If anyone--such as you--were to come along...
-Mewtwo: I could defeat them at full power! Come on!
+
+`Mewtwo Normal`
+`Mewtwo Name`: My name is Mewtwo. I came into being only to fight.
+
+`Mewtwo Normal`
+`Mewtwo Name`: I... have secluded myself here in suspended animation.
+
+`Mewtwo Normal`
+`Mewtwo Name`: Would you like to know why? It's quite simple...
+
+`Mewtwo Normal`
+`Mewtwo Name`: If anyone--such as you--were to come along...
+
+`Mewtwo Normal`
+`Mewtwo Name`: I could defeat them at full power! Come on!
 
 ### Cutscene 152
 
-Mewtwo: I... have secluded myself here in suspended animation.
-Mewtwo: Lying in wait... For someone like you to come.
-Mewtwo: I am Mewtwo. A Pokemon created only to fight... And...
-Mewtwo: The most powerful Pokemon of all!
+`Mewtwo Normal`
+`Mewtwo Name`: I... have secluded myself here in suspended animation.
+
+`Mewtwo Normal`
+`Mewtwo Name`: Lying in wait... For someone like you to come.
+
+`Mewtwo Normal`
+`Mewtwo Name`: I am Mewtwo. A Pokemon created only to fight... And...
+
+`Mewtwo Normal`
+`Mewtwo Name`: The most powerful Pokemon of all!
 
 ## Chapter Post-Game 11: The Selfish Human
 
 ### Cutscene 153
 
-
 `Medicham Normal`
 `Medicham Name`: Say, sweetie. Have you seen Gengar around?
+
 *If `Hero Name` chooses "No."*
-Medicham Sad: ...Oh, OK.
+
+`Medicham Sad`
+`Medicham Name`: ...Oh, OK.
 
 `Ekans Normal`
 `Ekans Name`: Something seems to be wrong with Gengar lately.
@@ -9299,10 +10240,11 @@ Medicham Sad: ...Oh, OK.
 
 ### Cutscene 154
 
-
 `Medicham Normal`
 `Medicham Name`: I think Gengar headed off to Mt. Freeze.
-Medicham Pain: I have heart it is a place that is very difficult. Will he be OK?
+
+`Medicham Pain`
+`Medicham Name`: I have heart it is a place that is very difficult. Will he be OK?
 
 `Ekans Normal`
 `Ekans Name`: Gengar wants to meet with Ninetales. That's what I think.
@@ -9313,10 +10255,10 @@ Medicham Pain: I have heart it is a place that is very difficult. Will he be OK?
 ### Cutscene 155
 
 The mountain's summit... But there is no one here.
+
 It's time to go back.
 
 ### Cutscene 156
-
 
 `Gengar Normal`
 `Gengar Name`: Kekeh! Late riser!
@@ -9344,10 +10286,12 @@ It's time to go back.
 
 `Gengar Sad`
 `Gengar Name`: That's why I'm asking you. Take me up Mt. Freeze.
+
 *If `Hero Name` chooses "Yes."*
 
 `Gengar Normal`
 `Gengar Name`: Keke! That's settled! You have my trust!
+
 Gengar can now tag along with the rescue team!
 
 `Gengar Normal`
@@ -9361,7 +10305,6 @@ Gengar can now tag along with the rescue team!
 
 ### Cutscene 157
 
-
 `Gengar Normal`
 `Gengar Name`: You're going to Mt. Freeze?
 
@@ -9369,7 +10312,6 @@ Gengar can now tag along with the rescue team!
 `Gengar Name`: Don't forget to take me, kekeh!
 
 ### Cutscene 158
-
 
 `Gengar Inspired`
 `Gengar Name`: Kekeh! Here at last! We're at the peak!
@@ -9385,9 +10327,15 @@ Gengar can now tag along with the rescue team!
 
 `Ninetales Normal`
 `Ninetales Name`: .............What do you want?
-Gengar Angry: Kekeh! You want to know what I want?!
-Gengar Angry: Look at me! Isn't it your fault that I look like this?!
-Gengar Angry: What, you can't even begin by apologizing?
+
+`Gengar Angry`
+`Gengar Name`: Kekeh! You want to know what I want?!
+
+`Gengar Angry`
+`Gengar Name`: Look at me! Isn't it your fault that I look like this?!
+
+`Gengar Angry`
+`Gengar Name`: What, you can't even begin by apologizing?
 
 `Ninetales Normal`
 `Ninetales Name`: It is not my fault.
@@ -9457,6 +10405,7 @@ Gengar Angry: What, you can't even begin by apologizing?
 
 `Ninetales Normal`
 `Ninetales Name`: Take this with you.
+
 Gengar received the 9-Tail Crest from Ninetales.
 
 `Ninetales Normal`
@@ -9494,7 +10443,6 @@ Gengar received the 9-Tail Crest from Ninetales.
 
 ### Cutscene 159
 
-
 `Gengar Normal`
 `Gengar Name`: Keke! You did good today.
 
@@ -9505,7 +10453,6 @@ Gengar received the 9-Tail Crest from Ninetales.
 `Gengar Name`: That sounds like another challenging place, so I'll need your help still! Keke!
 
 ### Cutscene 160
-
 
 `Gengar Normal`
 `Gengar Name`: Kekeh! Late riser!
@@ -9527,6 +10474,7 @@ Gengar received the 9-Tail Crest from Ninetales.
 
 `Gengar Normal`
 `Gengar Name`: ...OK, go there for me! To the Murky Cave!
+
 Gengar can now tag along with the rescue team!
 
 `Gengar Normal`
@@ -9540,7 +10488,6 @@ Gengar can now tag along with the rescue team!
 
 ### Cutscene 161
 
-
 `Gengar Normal`
 `Gengar Name`: You're going to the Murky Cave?
 
@@ -9548,7 +10495,6 @@ Gengar can now tag along with the rescue team!
 `Gengar Name`: Don't forget to take me, kekeh!
 
 ### Cutscene 162
-
 
 `Gengar Normal`
 `Gengar Name`: Kekeh! We're here at last!
@@ -9561,6 +10507,7 @@ Gengar can now tag along with the rescue team!
 
 `Gengar Normal`
 `Gengar Name`: There's a hollow spot. I guess that stone goes in there.
+
 Gengar placed the 9-Tail Crest in the hollow spot.
 
 `Gengar Sad`
@@ -9583,8 +10530,11 @@ Gengar placed the 9-Tail Crest in the hollow spot.
 
 `Gengar Sad`
 `Gengar Name`: That's odd... I could've sworn I heard something...
+
 ...Wel...co...
+
 ...W...e...lc...ome...
+
 Welcome to the Murky Cave!
 
 `Gengar Sad`
@@ -9592,16 +10542,24 @@ Welcome to the Murky Cave!
 
 `Gengar Sad`
 `Gengar Name`: Who are you?
+
 I am the judge of darkness.
+
 You have nothing to fear from me. I mean you no harm.
+
 Just now, a key was inserted to break a curse.
+
 The curse... It is the one on Gardevoir?
 
 `Gengar Normal`
 `Gengar Name`: Kekeh! Exactly! Please lift the curse now!
+
 I cannot allow that right away.
+
 I must first know if you have earned the right.
+
 I must evaluate you.
+
 You must bare your true feelings to me.
 
 `Gengar Normal`
@@ -9609,14 +10567,18 @@ You must bare your true feelings to me.
 
 `Gengar Normal`
 `Gengar Name`: What, I have to fight some boss creature?
+
 Oh, no. Nothing so barbaric.
+
 All that I need is for some questions to be answered.
+
 However...
 
 `Gengar Surprised`
 `Gengar Name`: Gegeh?! What the...?! I can't move!
+
 Gengar, you will not be doing the answering...
-`Hero Name`.
+
 `Hero Name`. You will answer.
 
 `Gengar Surprised`
@@ -9627,17 +10589,22 @@ Gengar, you will not be doing the answering...
 
 `Gengar Surprised`
 `Gengar Name`: Let me do it!
+
 Gengar. Your heart is interwoven with conflicting emotions.
+
 You will probably never show the truth within your heart.
 
 `Gengar Surprised`
 `Gengar Name`: Kekeh?! What?!
+
 `Hero Name` will enter Gengar's heart.
+
 Please navigate carefully through Gengar's emotions.
 
 * * *
 
 If you fail to draw out Gengar's true feelings...
+
 The curse will never be broken.
 
 `Gengar Surprised`
@@ -9645,37 +10612,62 @@ The curse will never be broken.
 
 `Gengar Surprised`
 `Gengar Name`: Don't you dare fool around! I'll make you pay for it!
+
 You have but one chance. `Hero Name`, do your best.
+
 Fine... It is time.
+
 First of all...
+
 Why does Gengar wish to break this curse?
+
 *If `Hero Name` chooses "To save Gardevoir."*
+
 That's a lie, isn't it?
+
 Didn't Gengar abandon Gardevoir long ago?
+
 Why would Gengar want to save Gardevoir now?
+
 *If `Hero Name` chooses "Came to understand Gardevoir."*
+
 Came to understand Gardevoir's feelings?
+
 What is it you claim to understand?
+
 What do you claim to be Gardevoir's feelings?
+
 *If `Hero Name` chooses "Hatred for Gengar."*
+
 Hatred for Gengar...
+
 Gardevoir felt hatred toward Gengar for abandonment... That is what you claim?
+
 In spite of that, Gengar is trying to help Gardevoir...
+
 Why should that be so?
-(If `Hero Name` chooses "To clear up misunderstandings.")
+
+*If `Hero Name` chooses "To clear up misunderstandings."*
+
 I see. To clear up misunderstandings.
+
 Gengar hopes to help Gardevoir and clear up misunderstandings....
+
 That is what you claim?
+
 I understand now... My questions are finished.
 
 * * *
 
 Gengar. Whether you have the right to break the curse or not...
+
 I will now render my judgement.
+
 The curse... could not be lifted.
 
 `Gengar Pain`
 `Gengar Name`: W-wait...
+
 It is most regrettable, but the curse on Gardevoir will last all eternity...
 
 `Gengar Pain`
@@ -9710,12 +10702,24 @@ It is most regrettable, but the curse on Gardevoir will last all eternity...
 
 `Gengar Sad`
 `Gengar Name`: Gardevoir kept thinking about someone like me.
-Gengar Crying: But I... How selfish I was.
-Gengar Crying: I lived carefree all this time... I realize now how selfish I was.
-Gengar Crying: It's not just Gardevoir.
-Gengar Crying: Team `Team Name` put up with my selfishness and brought me here.
-Gengar Crying: I finally know what I was missing.
-Gengar Crying: What I lacked... It was something for the others... A sense of gratitude.
+
+`Gengar Crying`
+`Gengar Name`: But I... How selfish I was.
+
+`Gengar Crying`
+`Gengar Name`: I lived carefree all this time... I realize now how selfish I was.
+
+`Gengar Crying`
+`Gengar Name`: It's not just Gardevoir.
+
+`Gengar Crying`
+`Gengar Name`: Team `Team Name` put up with my selfishness and brought me here.
+
+`Gengar Crying`
+`Gengar Name`: I finally know what I was missing.
+
+`Gengar Crying`
+`Gengar Name`: What I lacked... It was something for the others... A sense of gratitude.
 
 * * *
 
@@ -9765,7 +10769,6 @@ The lock bearing the curse... It has opened.
 
 ### Cutscene 163
 
-
 `Gardevoir Normal`
 `Gardevoir Name`: Thank you so much.... My curse has been lifted.
 
@@ -9786,6 +10789,7 @@ The lock bearing the curse... It has opened.
 
 `Gengar Sad`
 `Gengar Name`: This is my thanks.
+
 `Hero Name` received the promised Mobile Scarf.
 
 `Gengar Sad`
@@ -9811,7 +10815,6 @@ The lock bearing the curse... It has opened.
 
 ### Cutscene 164
 
-
 `Gardevoir Normal`
 `Gardevoir Name`: I have done a lot of thinking...
 
@@ -9820,20 +10823,28 @@ The lock bearing the curse... It has opened.
 
 `Gardevoir Normal`
 `Gardevoir Name`: Please, may I become a member?
-(If `Hero Name` chooses "Yes.")
+
+*If `Hero Name` chooses "Yes."*
 
 `Gardevoir Happy`
 `Gardevoir Name`: Thank you! I promise to do my best for the team!
+
 Gardevoir became the rescue team's newest member!
 
-## Chapter Post-Game ?: Purity Forest Final Reward
+## Chapter Post-Game ?: Purity Forest Secret Reward
 
 ### Cutscene ???
 
 Oh? There's someone there.
+
 It's... The Time Travel Pokemon Celebi!
+
 Celebi wants to join the team.
+
 Allow Celebi to join the team?
+
 Celebi joined the team!
+
 Celebi appears to be very happy!
+
 It's delighted to have joined the rescue team!
