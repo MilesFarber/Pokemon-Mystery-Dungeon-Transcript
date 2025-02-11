@@ -30,7 +30,7 @@
 💬: You're finally awake! Great!
 
 `Hero Normal`
-💬: (Wh-where is this...?)
+(Wh-where is this...?)
 
 `Partner Normal`
 💬: You were passed out here. I'm glad to see you awake!
