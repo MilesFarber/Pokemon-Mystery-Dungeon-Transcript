@@ -3152,7 +3152,7 @@ this kind of thing, OK?
 
 `Timburr2 Sad`
 
-`Timburr2 Name`: We don't wanna do this anymore. 
+`Timburr2 Name`: We don't wanna do this anymore.
 We never work. All we do is bad stuff.
 
 `Timburr2 Sad`
@@ -3215,7 +3215,7 @@ than anyone...
 `Gurdurr Name`: GURDUUURRRRRR!!!
 
 >Thump!
-
+>
 >Fwump!
 
 💦
@@ -4984,7 +4984,9 @@ you say?
 `Partner Name`: Let's go ask!
 
 💦
+
 💦
+
 💦
 
 `Dunsparce Special2`
@@ -5491,7 +5493,7 @@ or treasure!
 `Rufflet Special1`
 
 `Rufflet Name`: That's right! That's gotta be
-what happened! 
+what happened!
 
 ❤
 
@@ -5734,7 +5736,7 @@ I'd find out that they had returned.
 
 `Virizion Think`
 
-`Virizion Name`: But it looks like it's no use. 
+`Virizion Name`: But it looks like it's no use.
 I won't be able to see them after all...
 
 `Partner Sad`
@@ -5848,7 +5850,7 @@ accept it.
 
 `Virizion Think`
 
-`Virizion Name`: I'm sorry, but with the world we live in... 
+`Virizion Name`: I'm sorry, but with the world we live in...
 I just don't believe in things like friends.
 
 `Virizion Think`
@@ -6135,7 +6137,6 @@ about Dunsparce.
 
 `Partner Name`: Let's go find him.
 
-
 ### Cutscene 36
 
 …
@@ -6415,115 +6416,177 @@ right on his own, either...
 ### Cutscene 40
 
 `Pawniard1 Normal`
+
 `Pawniard1 Name`: Huh? What's the problem?
 
 💦
+
 `Dunsparce Pain`
+
 `Dunsparce Name`: I-I think...
+
+`Dunsparce Pain`
+
 `Dunsparce Name`: I think I'd better go home after all...
 
 `Pawniard2 Normal`
-	KOMATANA_2: Go home? Why?
+
+`Pawniard2 Name`: Go home? Why?
 
 `Dunsparce Pain`
+
 `Dunsparce Name`: I...I was really upset back in town...
+
+`Dunsparce Pain`
 
 `Dunsparce Name`: When I heard what you two were saying, I
 thought, "I want to be strong right away!"
+
+`Dunsparce Pain`
+
 `Dunsparce Name`: And that's why I came this far, but...
+
+`Dunsparce Pain`
+
 `Dunsparce Name`: But...
-`Dunsparce Name`: I'm not sure just getting stronger... 
+
+`Dunsparce Pain`
+
+`Dunsparce Name`: I'm not sure just getting stronger...
 is what I really want...
 
 `Pawniard1 Normal`
+
 `Pawniard1 Name`: ...
 
 💦
+
 `Dunsparce Pain`
+
 `Dunsparce Name`: A-and besides...
+
+`Dunsparce Pain`
+
 `Dunsparce Name`: When I really think about it... no one can
 become strong just like that, right?
 
 `Pawniard2 Normal`
-	KOMATANA_2: ... ...
+
+`Pawniard2 Name`: ... ...
 
 `Dunsparce Pain`
+
 `Dunsparce Name`: So I-I... I'm going home.
+
+`Dunsparce Pain`
+
 `Dunsparce Name`: Good-bye!
 
-	KOMATANA_2: Stop right there, runt!
+`Pawniard2 Name`: Stop right there, runt!
 
 `Dunsparce Surprised`
+
 `Dunsparce Name`: Eek!!!
 
 `Pawniard1 Special1`
+
 `Pawniard1 Name`: Heheheh! So you figured it out.
 Clever little runt.
+
+`Pawniard1 Special1`
+
 `Pawniard1 Name`: But don't you think it's a bit too late
 for that?
 
 `Pawniard2 Special1`
-	KOMATANA_2: That's right.
-	KOMATANA_2: It's just like you said. There's no simple
+
+`Pawniard2 Name`: That's right.
+
+`Pawniard2 Special1`
+
+`Pawniard2 Name`: It's just like you said. There's no simple
 way to get strong! Kahahaha!
 
 `Pawniard1 Special1`
+
 `Pawniard1 Name`: What we're after is ₽.
+
+`Pawniard1 Special1`
+
 `Pawniard1 Name`: So out with it! Hand over the cash!
 And all your stuff, too!
+
+`Pawniard1 Special1`
+
 `Pawniard1 Name`: If you hand it all over without a fight,
 we'll let you off easy this time!
 
 💦
+
 `Dunsparce Pain`
+
 `Dunsparce Name`: Ugh...
 
 `Emolga Name`: Don't you touch Dunsparce!
 
 ❗
+
 `Dunsparce Inspired`
+
 `Dunsparce Name`: Emolga!
 
 `Emolga Angry`
+
 `Emolga Name`: Freeze, you two! Don't you move a muscle!
+
+`Emolga Angry`
+
 `Emolga Name`: Dunsparce is my best friend, you hear!
 
 `Pawniard1 Normal`
+
 `Pawniard1 Name`: Kahahaha! Hmph! Friends, huh?
 
 `Pawniard2 Normal`
-	KOMATANA_2: I don't care either way, but—
+
+`Pawniard2 Name`: I don't care either way, but—
 you planning to fight us?
-	KOMATANA_2: You think you can win? Against us?
+
+`Pawniard2 Normal`
+
+`Pawniard2 Name`: You think you can win? Against us?
 
 `Pawniard1 Normal`
+
 `Pawniard1 Name`: Hey, sounds good to me. We'll just take
 this guy's stuff, too!
 
-
 `Partner Name`: Heeey! Dunspaaarce!
-	KOMATANA_2: *Sprite ❗
-`Pawniard1 Name`: *Sprite 〽
-MP_NOTICE_R*
-MP_NOTICE_R*
 
+❗
+
+〽
+
+⚟
+
+⚟
 
 `Partner Normal`
 
 `Partner Name`: He's here!
 
 `Dunsparce Inspired`
+
 `Dunsparce Name`: `Partner Name`!
 
 `Emolga Surprised`
-`Emolga Name`: `Hero Name`!
 
+`Emolga Name`: `Hero Name`!
 
 `Partner Normal`
 
 `Partner Name`: Thank goodness! Looks like we're still
 in time!
-
 
 💦
 
@@ -6535,23 +6598,35 @@ in town...
 `Partner Name`: I...
 
 `Dunsparce Sad`
+
 `Dunsparce Name`: `Partner Name`...
 
 `Emolga Special1`
+
 `Emolga Name`: Hmph! How about it, bullies?
+
+`Emolga Special1`
+
 `Emolga Name`: Whatcha gonna do now? Your chances
 don't look so good now, do they?
 
 `Pawniard2 Special1`
-	KOMATANA_2: Hehehehe!
+
+`Pawniard2 Name`: Hehehehe!
 
 `Pawniard1 Normal`
+
 `Pawniard1 Name`: Kahahaha! So, Emolga or whatever your
 name is...
+
+`Pawniard1 Normal`
+
 `Pawniard1 Name`: ...you've got us surrounded, huh?
+
+`Pawniard1 Normal`
+
 `Pawniard1 Name`: You think this is a battle that'll just
 come down to sheer numbers, do you?
-
 
 ❗
 
@@ -6560,258 +6635,320 @@ come down to sheer numbers, do you?
 `Hero Name`: (...Uh-oh! Don't tell me—!)
 
 `Pawniard2 Normal`
-	KOMATANA_2: Hehehe! If that's true, then...
-	KOMATANA_2: How about this?!
 
-	KOMATANA_2: It's your turn, lads!
+`Pawniard2 Name`: Hehehe! If that's true, then...
+
+`Pawniard2 Normal`
+
+`Pawniard2 Name`: How about this?!
+
+`Pawniard2 Normal`
+
+`Pawniard2 Name`: It's your turn, lads!
 
 💬: Aye-aye!
-
 
 `Partner Surprised`
 
 `Partner Name`: Wha—!
 
 `Emolga Surprised`
+
 `Emolga Name`: Whoaaa!
 
 `Pawniard1 Normal`
+
 `Pawniard1 Name`: So, Emolga. Now it's YOUR chances that
 don't look so good, yeah? Kahahaha!
 
 `Pawniard2 Normal`
-	KOMATANA_2: The side with bigger numbers wins, isn't
+
+`Pawniard2 Name`: The side with bigger numbers wins, isn't
 that what you thought? Hehehehe!
 
+⚔
 
 ⚔
-`Dunsparce Name`: *BATTLE*
 
 ⚔
-`Emolga Name`: *BATTLE*
+
+⚔
+
 `Emolga Angry`
+
 `Emolga Name`: Urgh!
 
 `Dunsparce Decide`
-`Dunsparce Name`: Emolga! Everybody!
 
+`Dunsparce Name`: Emolga! Everybody!
 
 ⚟
 
 ❗
+
 ❗
+
 `Dunsparce Decide`
+
 `Dunsparce Name`: I'm going to fight!
+
+`Dunsparce Decide`
+
 `Dunsparce Name`: You don't need to protect me! I will fight
 and I won't be afraid! I promise!
+
+`Dunsparce Decide`
+
 `Dunsparce Name`: So you should all—!
 
-`Dunsparce Name`: *BATTLE*
+⚔
 `Emolga Special1`
-`Emolga Name`: Dunsparce...
 
+`Emolga Name`: Dunsparce...
 
 `Partner Decide`
 
 `Partner Name`: That's the spirit, Dunsparce!
-
 
 `Hero Decide`
 
 `Hero Name`: (Dunsparce! Well said!)
 
 `Pawniard1 Normal`
+
 `Pawniard1 Name`: Dear me. You seem to be completely
 surrounded now, don't you?
 
 `Pawniard2 Normal`
-	KOMATANA_2: Well then. I guess it's about time to wrap
+
+`Pawniard2 Name`: Well then. I guess it's about time to wrap
 things up here.
 
-	KOMATANA_2: Come on, lads! All together now!
+`Pawniard2 Normal`
+
+`Pawniard2 Name`: Come on, lads! All together now!
 YAAAAAAAAAAAARRRRRRHHHH!!!
 
-`Pawniard1 Name`: *BATTLE*
-	DENCHURA_2: *BATTLE*
-	FUSHIDE_1: *BATTLE*
-	KOMATANA_2: *BATTLE*
-	DENCHURA_1: *BATTLE*
-	FUSHIDE_2: *BATTLE*
+⚔
+
+⚔
+
 💬: Hold it right there!
 
 ❗
-	FUSHIDE_2: *Sprite ❗
-	KOMATANA_2: *Sprite ❗
-	DENCHURA_2: *Sprite 〽
-`Pawniard1 Name`: *Sprite 〽
-	FUSHIDE_2: *Sprite 〽
 
-`Pawniard1 Name`: *Idle*
-	DENCHURA_2: *Idle*
-	FUSHIDE_1: *Idle*
-	KOMATANA_2: *Idle*
-	DENCHURA_1: *Idle*
-	FUSHIDE_2: *Idle*
+❗
+
+〽
 
 …
 
+…
 
 …
-`Emolga Name`: *Idle*
+
 `Pawniard1 Surprised`
+
 `Pawniard1 Name`: Wh- who's there?!
 
 `Pawniard2 Surprised`
-	KOMATANA_2: Who are you?!
 
+`Pawniard2 Name`: Who are you?!
 
 `Partner Surprised`
 
 `Partner Name`: Virizion!
 
-	KOMATANA_2: *Sprite ❗
-`Pawniard1 Name`: *Sprite 〽
+❗
+
+〽
+
 `Dunsparce Surprised`
+
 `Dunsparce Name`: You...
 
 `Virizion Special3`
+
 `Virizion Name`: Pawniard!
+
+`Virizion Special3`
+
 `Virizion Name`: You told Emolga and these other Pokémon
 that they were surrounded, didn't you?
+
+`Virizion Special3`
+
 `Virizion Name`: And yet...
+
 `Virizion Normal`
+
 `Virizion Name`: Who's surrounded now?
 
 `Gurdurr Name`: GURDUUURRRRRR!!!
 
 ❗
-	FUSHIDE_2: *Sprite ❗
-	KOMATANA_2: *Sprite ❗
-	DENCHURA_2: *Sprite 〽
-`Pawniard1 Name`: *Sprite 〽
-	FUSHIDE_2: *Sprite 〽
 
+❗
+
+❗
+
+〽
+
+〽
+
+〽
 
 `Hero Surprised`
 
 `Hero Name`: It's Gurdurr!
 
-`Timburr1 Name`: *BATTLE*
-`Timburr2 Name`: *BATTLE*
+⚔
+
+⚔
 
 `Partner Emotion`
 
 `Partner Name`: And the Timburr!
 
 `Gurdurr Normal`
+
 `Gurdurr Name`: Hey, Pawniard Brothers!
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: `Partner Name` and `Hero Name` are my
 precious customers, y'hear?
 
 💢
+
 `Timburr1 Special4`
+
 `Timburr1 Name`: If anything happens to our customers...
 
 💢
+
 `Timburr2 Special4`
+
 `Timburr2 Name`: ...you won't be getting off easy!
 
 `Virizion Special2`
+
 `Virizion Name`: Taking advantage of the weakness in
 Dunsparce's heart with this dirty plot...
+
+`Virizion Special2`
+
 `Virizion Name`: You two... really are pathetic, aren't you?
 
+💦
 
-`Pawniard1 Name`: *Sprite 💦
-`Pawniard1 Name`: *Sprite 💢
+💢
+
 `Pawniard1 Angry`
+
 `Pawniard1 Name`: Urk! Like we'll lose to you fools!
 
-`Pawniard1 Name`: *BATTLE*
-	DENCHURA_2: *BATTLE*
-	FUSHIDE_1: *BATTLE*
-	KOMATANA_2: *BATTLE*
-	DENCHURA_1: *BATTLE*
-	FUSHIDE_2: *BATTLE*
+⚔
+
+⚔
 
 ⚔
 
 ⚔
-`Dunsparce Name`: *BATTLE*
-`Emolga Name`: *BATTLE*
+
 ⚔
-`Virizion Name`: *BATTLE*
+
+⚔
+
+⚔
+
+⚔
+
+⚔
+
+⚔
+
+⚔
+
+⚔
 
 `Partner Decide`
 
 `Partner Name`: Watch out, everyone! Here they come!
 
-	KOMATANA_2: Let's get 'em, lads!
+`Pawniard2 Name`: Let's get 'em, lads!
 
-	Baddies: WHOOOOOOAAA!
+**Baddies**: WHOOOOOOAAA!
 
-
-
-main03\150_arehatedanibossyarareta\arehatedanibossyarareta.lua.txt
+### Cutscene 41
 
 `Partner Pain`
 
 `Partner Name`: Ugh... That didn't go so good...
 
-
-
-
-
-
-
-
-
-
-
 `Partner Decide`
 
 `Partner Name`: But we can't just hang back here.
 
+`Partner Decide`
+
 `Partner Name`: Everyone's probably still taking on those
 Pawniard right now!
+
+`Partner Decide`
 
 `Partner Name`: I don't know why Virizion and Gurdurr and
 the others suddenly showed up...
 
+`Partner Decide`
+
 `Partner Name`: But we've got to hurry back and help them!
+
+`Partner Decide`
 
 `Partner Name`: `Hero Name`! Let's go!
 
-
-
-main03\160_arehatedaniboss2nd\arehatedaniboss2nd.lua.txt
+### Cutscene 42
 
 `Partner Decide`
 
 `Partner Name`: Hey, everybody!
 
 `Gurdurr Normal`
+
 `Gurdurr Name`: `Partner Name`!
 
 `Dunsparce Decide`
+
 `Dunsparce Name`: `Hero Name`!
 
-`Pawniard1 Name`: *BATTLE*
-	DENCHURA_2: *BATTLE*
-	FUSHIDE_1: *BATTLE*
-	KOMATANA_2: *BATTLE*
-	DENCHURA_1: *BATTLE*
-	FUSHIDE_2: *BATTLE*
+⚔
+
+⚔
 
 ⚔
 
 ⚔
-`Dunsparce Name`: *BATTLE*
-`Emolga Name`: *BATTLE*
+
 ⚔
-`Timburr1 Name`: *BATTLE*
-`Timburr2 Name`: *BATTLE*
-`Virizion Name`: *BATTLE*
+
+⚔
+
+⚔
+
+⚔
+
+⚔
+
+⚔
+
+⚔
+
+⚔
+
+⚔
+
+⚔
 
 `Partner Decide`
 
@@ -6823,81 +6960,89 @@ main03\160_arehatedaniboss2nd\arehatedaniboss2nd.lua.txt
 expect from experienced fighters.
 
 `Emolga Special1`
-`Emolga Name`: But we sure aren't gonna lose, either!
 
+`Emolga Name`: But we sure aren't gonna lose, either!
 
 `Partner Decide`
 
 `Partner Name`: Yeah, sorry for the delay! We'll join you!
 
-	KOMATANA_2: *Sprite 💢
+💢
+
 `Pawniard2 Angry`
-	KOMATANA_2: Hmph! Showing up now isn't gonna
+
+`Pawniard2 Name`: Hmph! Showing up now isn't gonna
 change nothin'!
 
-	KOMATANA_2: Come on, you lot!
+`Pawniard2 Angry`
 
-	Baddies: YEAAAAAAHHH!
+`Pawniard2 Name`: Come on, you lot!
 
+**Baddies**: YEAAAAAAHHH!
 
+### Cutscene 43
 
-main03\170_arehatedaniclear1st\arehatedaniclear1st.lua.txt
-`Pawniard1 Name`: *ENDURE*
-	FUSHIDE_2: *ENDURE*
-	DENCHURA_1: *ENDURE*
-	KOMATANA_2: *ENDURE*
-	FUSHIDE_1: *ENDURE*
-	DENCHURA_2: *ENDURE*
 `Pawniard1 Pain`
+
 `Pawniard1 Name`: Ngh... Ugh!
 
 `Pawniard2 Pain`
-	KOMATANA_2: Aughhh...
 
-`Pawniard1 Name`: *FALL*
-	KOMATANA_2: *FALL*
+`Pawniard2 Name`: Aughhh...
+
 `Pawniard2 Special2`
-	KOMATANA_2: Gahhhhhh!
 
-	FUSHIDE_1: *Sprite 💦
-	FUSHIDE_2: *Sprite 💦
-	DENCHURA_1: *Sprite 💦
-	DENCHURA_2: *Sprite 💦
-	Baddies: L—
-	Baddies: Let's get outta here!!!
+`Pawniard2 Name`: Gahhhhhh!
 
-	KOMATANA_2: *PAIN*
+💦
+
+💦
+
+💦
+
+💦
+
+**Baddies**: L—
+
+**Baddies**: Let's get outta here!!!
+
 `Pawniard2 Pain`
-	KOMATANA_2: W- wait, you spineless little...
 
-`Pawniard1 Name`: *PAIN*
+`Pawniard2 Name`: W- wait, you spineless little...
+
 `Pawniard1 Pain`
+
 `Pawniard1 Name`: We...
 
 `Pawniard2 Surprised`
-	KOMATANA_2: We're coming, too!!!
 
-`Pawniard1 Name`: *Sprite 💦
+`Pawniard2 Name`: We're coming, too!!!
+
+💦
+
 `Pawniard1 Surprised`
+
 `Pawniard1 Name`: Waaauuugh!!!
 
 `Emolga Inspired`
+
 `Emolga Name`: We... We beat 'em!
+
+`Emolga Inspired`
+
 `Emolga Name`: We really chased away the bad guys!
 
 ✨
-`Emolga GLADNESS*
-`Emolga Name`: We did it!!!
+`Emolga Gladness`
 
+`Emolga Name`: We did it!!!
 
 ✨
 
 …
-✨
-`Dunsparce Name`: *WALK*
-`Emolga Name`: *WAIT00*
 
-`Hero Name`: *WAIT00*
+✨
+
 🎉
 
 🔆
@@ -6906,152 +7051,218 @@ main03\170_arehatedaniclear1st\arehatedaniclear1st.lua.txt
 
 …
 
-`Emolga Name`: *Idle*
+…
 
 `Partner Normal`
 
 `Partner Name`: But...
-
 
 `Partner Normal`
 
 `Partner Name`: How did you all end up here?
 
 `Gurdurr Normal`
+
 `Gurdurr Name`: Our lovely Virizion told us.
 
 `Gurdurr Name`: She said Dunsparce was in trouble.
-
 
 `Partner Normal`
 
 `Partner Name`: Virizion did?
 
 `Virizion Normal`
+
 `Virizion Name`: Well, I did see you.
+
+`Virizion Normal`
+
 `Virizion Name`: I happened to see you talking
 with Quagsire.
+
+`Virizion Normal`
+
 `Virizion Name`: I didn't hear everything, but... it was enough
 to put the pieces together.
-
 
 `Partner Normal`
 
 `Partner Name`: So that's what happened...
 
-`Dunsparce Name`: *FALL*
 💦
+
 ❗
 
 ⚟
 
 ❗
+
 `Dunsparce Think`
+
 `Dunsparce Name`: It's... it's finally over!
 
 💦
+
 `Emolga Surprised`
+
 `Emolga Name`: Dunsparce! You OK?
 
+`Dunsparce Tearyeyed`
+
+`Dunsparce Name`: Yeah... I guess I got rescued again, huh?
 
 `Dunsparce Tearyeyed`
-`Dunsparce Name`: Yeah... I guess I got rescued again, huh?
+
 `Dunsparce Name`: But I... was actually gullible enough
 to believe I could be strong just like that...
+
+`Dunsparce Tearyeyed`
+
 `Dunsparce Name`: It was all because of me that you all...
+
 `Dunsparce Sad`
+
 `Dunsparce Name`: Ahh, I really am useless...aren't I...
 
 💦
+
 `Emolga Special2`
+
 `Emolga Name`: That's not true!
+
+`Emolga Special2`
+
 `Emolga Name`: You realized it before it went too far,
 didn't you?
 That it's not that easy to get strong.
+
+`Emolga Special2`
+
 `Emolga Name`: If you hadn't, we would've been
-way worse off!
-We might've had to fight those bullies on
+way worse off! We might've had to fight those bullies on
 their own turf instead of here in the open!
+
+`Emolga Special2`
+
 `Emolga Name`: I'm glad they didn't take you all the way
 to their hideout.
+
+`Emolga Special2`
+
 `Emolga Name`: And besides...
+
+`Emolga Special2`
+
 `Emolga Name`: You fought bravely to the end, without
 giving in to fear, right?
+
+`Emolga Special2`
+
 `Emolga Name`: You did good, Dunsparce.
 I for one think you gave it your all.
 
 `Dunsparce Tearyeyed`
+
 `Dunsparce Name`: Emolga...
 
 `Virizion Sad`
+
 `Virizion Name`: I have to apologize.
+
+`Virizion Sad`
+
 `Virizion Name`: It was my fault that you felt like you had
 to get stronger.
+
+`Virizion Sad`
+
 `Virizion Name`: I am sorry about that. But...
+
+`Virizion Sad`
+
 `Virizion Name`: Bad Pokémon are always looking to take
 advantage of gullible Pokémon like you.
+
+`Virizion Sad`
+
 `Virizion Name`: You trust others way too easily.
+
+`Virizion Sad`
+
 `Virizion Name`: You can't live like that these days.
+
+`Virizion Sad`
+
 `Virizion Name`: You know? You just can't trust other
 Pokémon, not in the world we live in now.
-
 
 `Partner Special2`
 
 `Partner Name`: I wonder if you're right about that...
-
 
 `Partner Special2`
 
 `Partner Name`: It's true that you probably shouldn't just
 trust anyone you meet right away, but...
 
+`Partner Special2`
+
 `Partner Name`: But... is trusting one another really such
 a terrible thing?
 
+`Partner Special2`
+
 `Partner Name`: Is it so wrong to believe in someone?
+
+`Partner Special2`
 
 `Partner Name`: I know there are a lot of dishonest
 Pokémon out there these days.
 
+`Partner Special2`
+
 `Partner Name`: But if you don't take that first step...
+
+`Partner Special2`
 
 `Partner Name`: ...then no one else is ever going to open up
 and trust you either, are they?
 
 `Virizion Sad`
-`Virizion Name`: ... ...
 
+`Virizion Name`: ... ...
 
 `Partner Normal`
 
 `Partner Name`: You were right when you said that
 Dunsparce isn't strong. He's not.
 
-
 `Partner Normal`
 
 `Partner Name`: But... at least he can trust.
 
+`Partner Normal`
+
 `Partner Name`: That trust will make us a real force to be
 reckoned with!
+
+`Partner Normal`
 
 `Partner Name`: I think... I think that trusting one another
 shows real strength.
 
-`Partner Name`: I think it's the realest strength we have.
+`Partner Normal`
 
+`Partner Name`: I think it's the realest strength we have.
 
 `Hero Normal`
 
 `Hero Name`: (`Partner Name`...)
 
-
 `Partner Normal`
 
-`Partner Name`: That's why I have to ask... 
+`Partner Name`: That's why I have to ask...
 Dunsparce? And you, too, Emolga...
-
 
 `Partner Normal`
 
@@ -7059,13 +7270,16 @@ Dunsparce? And you, too, Emolga...
 our Paradise?
 
 ⚟
+
 ❗
+
 `Dunsparce Surprised`
+
 `Dunsparce Name`: Wha—?
 
 `Emolga Surprised`
-`Emolga Name`: Y-you want us?!
 
+`Emolga Name`: Y-you want us?!
 
 `Partner Normal`
 
@@ -7073,110 +7287,126 @@ our Paradise?
 Paradise, you see.
 
 `Virizion Think`
-`Virizion Name`: (A Pokémon Paradise?)
 
+`Virizion Name`: (A Pokémon Paradise?)
 
 `Partner Emotion`
 
 `Partner Name`: We're gonna go on all kinds of adventures
 and find lots of treasures.
 
+`Partner Emotion`
+
 `Partner Name`: We'll enjoy every day full of excitement
 and fun together!
 
+`Partner Emotion`
 
 `Partner Name`: My dream is to make a real paradise!
 
 `Dunsparce Inspired`
-`Dunsparce Name`: Wow!
 
+`Dunsparce Name`: Wow!
 
 `Partner Normal`
 
 `Partner Name`: I'm going to need good friends to help me
 along the way.
 
-`Partner Name`: No—I'm going to need GREAT friends... 
-just like you two. // No—I'm going to need great friends... 
-just like you two.
+`Partner Normal`
 
+`Partner Name`: No—I'm going to need GREAT friends...
+just like you two.
 
 `Partner Normal`
 
 `Partner Name`: Don't you agree, `Hero Name`?
-
 
 `Hero Normal`
 
 `Hero Name`: Of course!
 
 `Dunsparce Normal`
-`Dunsparce Name`: A-are you sure? I mean, I'm not...
 
+`Dunsparce Name`: A-are you sure? I mean, I'm not...
 
 `Partner Normal`
 
 `Partner Name`: We're sure.
 
 `Dunsparce Inspired`
+
 `Dunsparce Name`: Then I... I definitely want to join you!
 
 `Emolga Think`
+
 `Emolga Name`: I... Well, I don't really mind, if that's what
 Dunsparce wants to do.
 
-
-`Partner GLADNESS*
+`Partner Gladness`
 
 `Partner Name`: All right! Thanks, you two!
-
 
 `Partner Emotion`
 
 `Partner Name`: We did it, `Hero Name`!
 
+`Partner Emotion`
+
 `Partner Name`: We're finally on our way... to making
 our Paradise!
 
 `Dunsparce Inspired`
+
 `Dunsparce Name`: `Hero Name`! `Partner Name`!
+
+`Dunsparce Inspired`
+
 `Dunsparce Name`: I'm going to do my best! Let's make a
 real paradise together!
 
 `Emolga Normal`
-`Emolga Name`: Guess I don't have much choice then...
-`Emolga Happy`
-`Emolga Name`: I'll give it my all, too! Let's do this!
 
+`Emolga Name`: Guess I don't have much choice then...
+
+`Emolga Happy`
+
+`Emolga Name`: I'll give it my all, too! Let's do this!
 
 ✨
 
 …
 
-`Hero Name`: *WAIT00*
-`Dunsparce Name`: *WALK*
 🔆
-`Emolga Name`: *WAIT00*
+
 `Virizion Normal`
+
 `Virizion Name`: Er... Do you mind if I interrupt?
 
+…
 
 …
 
-
 …
-`Emolga Name`: *Idle*
+
 `Virizion Normal`
+
 `Virizion Name`: I have a request for you all. Will you...
+
+`Virizion Normal`
+
 `Virizion Name`: Will you let me join your Paradise as well?
 
-
 ❗
+
 〽
 
 ❗
+
 💦
+
 〽
+
 💦
 
 `Partner Surprised`
@@ -7184,113 +7414,150 @@ real paradise together!
 `Partner Name`: What??
 
 💦
+
 `Timburr2 Surprised`
+
 `Timburr2 Name`: The lovely Virizion is—
 
 `Timburr1 Surprised`
+
 `Timburr1 Name`: —going to join `Hero Name` and `Partner Name`?!
 
 💢
+
 `Emolga Angry`
+
 `Emolga Name`: You—! What do you think you're trying
-to pull now, huh?!
-What happened to all your big talk about
+to pull now, huh?! What happened to all your big talk about
 not making friends? Not trusting anyone?
+
+`Emolga Angry`
+
 `Emolga Name`: You just say whatever comes into your
 head, don't you? You're messing with us!
-If you're just toying with us, then we don't
-need you in our Paradise!
+If you're just toying with us, then we don't need you in our Paradise!
 
 `Virizion Think`
+
 `Virizion Name`: Toying with you... Yes, I can see how you
 would think that.
+
+`Virizion Think`
+
 `Virizion Name`: I won't make any excuses for my behavior...
+
 `Virizion Normal`
+
 `Virizion Name`: But... even saying that...
+
+`Virizion Normal`
+
 `Virizion Name`: Is there no way you can let me be a part of
 your Paradise?
 
 💢
+
 `Emolga Angry`
+
 `Emolga Name`: I... I do NOT approve! No way!
 
 `Emolga Angry`
-`Emolga Name`: Come on, `Partner Name`! 
-Tell her to hit the road!
 
+`Emolga Name`: Come on, `Partner Name`!
+Tell her to hit the road!
 
 `Partner Normal`
 
 `Partner Name`: ... OK. You can be a part of Paradise, too.
 
 〽
+
+
 💦
+
 ❗
+
 〽
+
 `Emolga Surprised`
+
 `Emolga Name`: WHAAAAAAAAAAAAT?!
 
 💦
+
 `Emolga Angry`
+
 `Emolga Name`: Why should I have to be friends with
 someone like her?!
+
+`Emolga Angry`
+
 `Emolga Name`: I'll never accept you, you hear that?
 
 `Emolga Angry`
+
 `Emolga Name`: Right, Dunsparce? You've gotta feel the
 same, don't you?
 
 `Dunsparce Normal`
+
 `Dunsparce Name`: I... I...
 
 ❤
+
 `Dunsparce Special1`
+
 `Dunsparce Name`: Hoho...
 
 〽
-`Emolga Surprised`
-`Emolga Name`: Whaaaaaat?!
 
+`Emolga Surprised`
+
+`Emolga Name`: Whaaaaaat?!
 
 `Partner Normal`
 
 `Partner Name`: But if you're going to be one of us... then
 that means you'll have to trust us.
 
+`Partner Normal`
+
 `Partner Name`: You'll have to believe in all of us.  Can you
 do that?
 
 `Virizion Happy`
-`Virizion Name`: Hehe. I'll just have to try.
 
+`Virizion Name`: Hehe. I'll just have to try.
 
 `Partner Normal`
 
 `Partner Name`: Then I guess it's decided!
-
 
 `Partner Happy`
 
 `Partner Name`: As of today, Virizion is also one of us!
 
 🔆
+
 `Virizion Happy`
+
 `Virizion Name`: Thanks.
 
 💢
+
 `Emolga Angry`
+
 `Emolga Name`: I'm not OK with this, `Partner Name`.
 Seriously not OK. Just so you know.
-
 
 `Partner Normal`
 
 `Partner Name`: Aww, don't be like that...
 
 `Emolga Angry`
+
 `Emolga Name`: Why would you even want someone like
 that in your Paradise?!
-
 
 💦
 
@@ -7298,48 +7565,66 @@ that in your Paradise?!
 
 `Partner Name`: S-sorry...
 
+`Partner Normal`
+
 `Partner Name`: It was the first time that someone actually
 asked to join...
+
+`Partner Normal`
 
 `Partner Name`: I got so excited that I honestly didn't even
 think before saying yes...
 
 〽
-`Emolga Surprised`
-`Emolga Name`: Wha- what kind of reason is that?!
 
+`Emolga Surprised`
+
+`Emolga Name`: Wha- what kind of reason is that?!
 
 ✨
 
-`Partner Name`: *SPEAK*
+🗨
 
 …
-`Emolga Name`: *SPEAK*
-`Emolga Name`: *Idle*
+
+🗨
+
+…
+
 💢
+
 🔆
-`Dunsparce Name`: *WALK*
 
 💦
+
 `Virizion Think`
+
 `Virizion Name`: Well... It looks like I've caused a bit of a
 fight, but...
+
 `Virizion Normal`
+
 `Virizion Name`: I'm looking forward to working together
 with you all.
+
+`Virizion Normal`
+
 `Virizion Name`: I guess I'll be heading back first, then.
 
 `Virizion Special3`
+
 `Virizion Name`: Gurdurr.
 
 ❤
+
 `Gurdurr Special1`
+
 `Gurdurr Name`: Yes, my lovely Virizion?
 
 `Virizion Special3`
+
 `Virizion Name`: What you said... back there...
 
->
 >It turns out that when
 >Virizion went to Gurdurr...
 >
@@ -7347,64 +7632,111 @@ with you all.
 >to save Dunsparce...
 
 ❗
+
 `Gurdurr Normal`
+
 `Gurdurr Name`: What! Dunsparce is—?!
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: Got it! Then I'm going, too!
 
 `Timburr2 Special4`
+
 `Timburr2 Name`: Boss! We'll go with you!
 
 `Virizion Think`
+
 `Virizion Name`: What a fool... This only happened because
 he believes any old Pokémon he meets.
 
 `Virizion Normal`
+
 `Virizion Name`: They should be headed for Desolate
 Canyon. Come at once, would you?
 
 `Gurdurr Normal`
+
 `Gurdurr Name`: Hold on.
-MP_NOTICE_R*
+
+⚟
 
 `Gurdurr Normal`
+
 `Gurdurr Name`: You know, my lovely Virizion...
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: You may act like you don't trust anyone or
 anything in this rotten world...
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: But `Hero Name` and `Partner Name` alone are...
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: Well, don't you underestimate them.
 
-`Virizion SPECIAL05*
+`Virizion Special5`
+
 `Virizion Name`: ... ... ...
 
 `Gurdurr Normal`
+
 `Gurdurr Name`: I used to be the same as you once... 
 I didn't have any faith left in the world.
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: But unlike you, my lovely, I...
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: ...I crossed the line and did bad things
 to other Pokémon.
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: Until quite recently, in fact.
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: But...
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: Meeting `Hero Name` and `Partner Name`... It
 changed the way I thought about things.
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: Every time I see those two, I think...
+
+`Gurdurr Normal`
+
 `Gurdurr Name`: This world... isn't worth giving up on yet.
 
-`Virizion SPECIAL05*
-`Virizion Name`: ... ... ...
+`Virizion Special5`
 
+`Virizion Name`: ... ... ...
 
 ✨
 
-`Partner Name`: *SPEAK*
+🗨
 
 …
-`Emolga Name`: *SPEAK*
-`Emolga Name`: *Idle*
+
+🗨
+
+…
+
 💢
+
 🔆
-`Dunsparce Name`: *WALK*
 
 `Virizion Normal`
+
 `Virizion Name`: I think... I might understand now what you
 were trying to tell me.
 
@@ -7413,55 +7745,62 @@ were trying to tell me.
 `Gurdurr Name`: H-hmph! Did I say something like that?
 
 `Virizion Special1`
+
 `Virizion Name`: Hehe, no need to act so bashful. 
 Oh, never mind.
+
 `Virizion Normal`
+
 `Virizion Name`: (But...)
 
 `Virizion Normal`
+
 `Virizion Name`: (I had been thinking it was about time
 to leave Post Town...)
+
+`Virizion Normal`
+
 `Virizion Name`: (Perhaps sticking around isn't a bad idea
 either, though.)
 
 `Virizion Normal`
+
 `Virizion Name`: (If I stay here...)
+
+`Virizion Normal`
+
 `Virizion Name`: (I feel like I might finally find it.)
-`Virizion Name`: (That one precious thing... 
+
+`Virizion Normal`
+
+`Virizion Name`: (That one precious thing...
 I've been searching for...)
 
+### Cutscene 44
 
-
-main04\010_tsuginoasa\m04010tsuginoasa01.lua.txt
->
 >The next morning...
-
-
-
-
-
-
-
-
-
 
 `Partner Happy`
 
 `Partner Name`: Morning, `Hero Name`!
 
+`Partner Happy`
+
 `Partner Name`: I still can't believe we got more Pokémon
 to join our Paradise yesterday!
-
 
 `Partner Emotion`
 
 `Partner Name`: And three at once!
 
+`Partner Emotion`
+
 `Partner Name`: Now there are five of us altogether!
+
+`Partner Emotion`
 
 `Partner Name`: And once you have four or more
 Pokémon... you can register as a team!
-
 
 ❓
 
@@ -7469,35 +7808,42 @@ Pokémon... you can register as a team!
 
 `Hero Name`: A team?
 
-
 `Partner Normal`
 
 `Partner Name`: Yeah!
 
+`Partner Normal`
+
 `Partner Name`: It's pretty rough working as an adventurer,
 after all. So to support Pokémon like us...
 
+`Partner Normal`
+
 `Partner Name`: ...the group known as Helping Adventurous
 Pokémon Prosper Institute was formed.
-
 
 ❓
 
 `Hero Think`
 
-`Hero Name`: H-Helping Adventurous... what?
-
+`Hero Name`: H-Helping Adventurous... w-what?
 
 `Partner Normal`
 
 `Partner Name`: I know. It's a real mouthful, so everyone
 just calls it HAPPI.
 
+`Partner Normal`
+
 `Partner Name`: HAPPI's around to help make
 adventuring safer for everyone...
 
+`Partner Normal`
+
 `Partner Name`: So when you get at least four Pokémon
 together, they'll recognize you as a team!
+
+`Partner Normal`
 
 `Partner Name`: And they'll give you all kinds of support
 and useful items for your adventures.
@@ -7508,26 +7854,22 @@ and useful items for your adventures.
 
 ❗
 
-
 `Partner Normal`
 
 `Partner Name`: Oh! Isn't that Dunsparce?
-
 
 `Partner Happy`
 
 `Partner Name`: Everyone must be here already!
 
-
-
-main04\020_teamnonamae\teamnonamae.lua.txt
-	Pelipper: *EV004_STAND*
+### Cutscene 45
 
 `Partner Happy`
 
 `Partner Name`: Morning, everyone!
 
 `Virizion Normal`
+
 `Virizion Name`: Hehe. And a good morning to you.
 
 `Dunsparce Happy`
@@ -7716,8 +8058,8 @@ became a team!
 ⚟
 
 ❗
-MP_NOTICE_R*
-MP_NOTICE_R*
+⚟
+⚟
 ❗
 
 `Partner Surprised`
@@ -8162,7 +8504,7 @@ close to the lovely Virizion.
 `Gurdurr Name`: Y-you little—! Why'd you hafta go and
 blab something like that?!
 
-`Timburr1 SPECIAL05*
+`Timburr1 Special5`
 `Timburr1 Name`: Eeeeeek!
 
 >Thump! Pow! Whack! Fwump!
@@ -8757,7 +9099,7 @@ main05\020_vwavetourai\vwavetourai.lua.txt
 ⚟
 
 ❗
-MP_NOTICE_R*
+⚟
 
 💦
 
@@ -8838,7 +9180,7 @@ disadvantage—or at an advantage.
 ⚟
 
 ⚟
-MP_NOTICE_R*
+⚟
 ⚟
 `Dunsparce Normal`
 `Dunsparce Name`: Ah! Emolga! Where did you run off to?
@@ -8949,14 +9291,14 @@ sums it up, hmm?
 just like that.
 
 ❗
-MP_NOTICE_R*
+⚟
 💦
 
 ⚟
 
 ❗
 💦
-MP_NOTICE_R*
+⚟
 ❗
 
 `Partner Surprised`
@@ -9184,7 +9526,7 @@ main05\030_yumenonakade\yumenonakade.lua.txt
 
 `Hero Name`: *JUMP*
 
-`Hero Name`: *WAIT00*
+
 
 💦
 
@@ -9427,7 +9769,7 @@ see it, too!
 `Partner Name`: Whoa. Look how many Pokémon
 are here already...
 
-MP_NOTICE_R*
+⚟
 `Emolga Normal`
 `Emolga Name`: Oh! You guys made it.
 
@@ -9830,7 +10172,7 @@ everyone's doing in Post Town right now.
 
 
 main06\040_nuonotanomigoto\nuonotanomigoto.lua.txt
-MP_NOTICE_R*
+⚟
 `Quagsire Normal`
 `Quagsire Name`: Hmm, hello there. Good timing.
 
@@ -9969,7 +10311,7 @@ main06\070_tsunorufuan\tsunorufuan.lua.txt
 >`Hero Name` gave Swanna
 >the ₽ from Quagsire.
 
-`Swanna Name`: *Sprite MP_NOTICE_R*
+`Swanna Name`: *Sprite ⚟
 `Swanna Normal`
 `Swanna Name`: Oh! To settle his bill from yesterday?
 `Swanna Name`: Ah, I figured he'd get around to it.
@@ -10010,7 +10352,7 @@ Hope dinnae appear these days...
 
 
 ⚟
-`Swanna Name`: *Sprite MP_NOTICE_R*
+`Swanna Name`: *Sprite ⚟
 `Herdier Sad`
 `Herdier Name`: Och, I'll be first tae admit that I—and all
 the good folk here in Post Town—
@@ -10849,7 +11191,7 @@ main08\010_hakobikomaretahoumonsha\hakobikomaretahoumonsha.lua.txt
 
 …
 
-MP_NOTICE_R*
+⚟
 
 `Partner Normal`
 
@@ -10913,7 +11255,7 @@ So we don't know for sure...
 
 
 ❗
-MP_NOTICE_R*
+⚟
 
 ⚟
 〽
@@ -11341,7 +11683,7 @@ to summon a usable Magnagate.
 
 	MAGNAGATE_CIRCLE1: *VANISH*
 	MAGNAGATE: *VANISH*
-`Virizion SPECIAL05*
+`Virizion Special5`
 `Virizion Name`: I see... I think I get it now.
 `Virizion Name`: And the other cards you need... are with
 Espeon, are they?
@@ -11370,7 +11712,7 @@ drawing attention to themselves.
 `Gurdurr Name`: They could just want you to think that.
 Then they strike! Outta the blue!
 
-`Virizion SPECIAL05*
+`Virizion Special5`
 `Virizion Name`: At any rate, we can all protect Umbreon
 together as long as he's here...
 `Virizion Name`: Which just leaves Espeon.
@@ -12108,7 +12450,7 @@ have preferred it if they had been...
 	Espeon: The truth is that I... I've done something
 I truly regret, Umbreon.
 
-MP_NOTICE_R*
+⚟
 ⚟
 
 ⚟
@@ -12643,7 +12985,7 @@ main09\040_aratananakama\aratananakama.lua.txt
 
 `Partner Name`: Ah! There they are! Umbreon and Espeon!
 
-MP_NOTICE_R*
+⚟
 
 `Partner Normal`
 
@@ -12680,8 +13022,8 @@ talking it over last night.
 `Partner Name`: And we... Well, we both want to help
 you two out with your work.
 
-	Umbreon: *Sprite MP_NOTICE_R*
-	Espeon: *Sprite MP_NOTICE_R*
+	Umbreon: *Sprite ⚟
+	Espeon: *Sprite ⚟
 	Umbreon: *Face Normal`
 	Umbreon: Wha...
 
@@ -12730,7 +13072,7 @@ Join the <U_D000>, that is.
 
 
 ❗
-MP_NOTICE_R*
+⚟
 
 ❗
 
@@ -13247,7 +13589,7 @@ you've ever seen!
 
 🔆
 ✨
-`Dunsparce Name`: *WALK*
+
 
 💦
 `Emolga Special2`
@@ -13825,9 +14167,9 @@ Not at all! But still...
 this Keldeo guy is seriously awful!
 
 💢
-`Emolga Name`: *SPEAK*
-`Emolga Name`: *Idle*
-`Emolga Name`: *Idle*
+🗨
+…
+…
 `Dunsparce Name`: (So Virizion really wanted to go
 to the Great Glacier as well...)
 `Dunsparce Name`: (But she went and insisted on staying
@@ -13867,12 +14209,12 @@ you've ever seen!
 
 🔆
 ✨
-`Dunsparce Name`: *WALK*
+
 
 💢
-`Emolga Name`: *SPEAK*
-`Emolga Name`: *Idle*
-`Emolga Name`: *Idle*
+🗨
+…
+…
 `Dunsparce Name`: (If only I hadn't... said that...)
 `Dunsparce Name`: (Virizion probably volunteered to stay...)
 `Dunsparce Name`: (...just so I'd get to go.)
@@ -14344,7 +14686,7 @@ and Espeon's research is coming along...
 
 
 main09\120_entercardkansei\entercardkansei.lua.txt
-	Espeon: *Sprite MP_NOTICE_R*
+	Espeon: *Sprite ⚟
 	Espeon: *Face Normal`
 	Espeon: `Hero Name`! `Partner Name`!
 	Espeon: We've been waiting for you!
@@ -14554,7 +14896,7 @@ with a smile...so why am I...
 〽
 `Dunsparce Name`: *EV009_ROLLING*
 
-`Emolga Name`: *Idle*
+…
 
 ❗
 
@@ -14662,7 +15004,7 @@ ley lines with the Entercards?
 
 `Partner Name`: It's so dark... I can't really see a thing...
 
-`Virizion SPECIAL05*
+`Virizion Special5`
 `Virizion Name`: ...Oh! I hear voices that way!
 `Virizion Name`: Doesn't that sound like Umbreon?
 
@@ -14734,7 +15076,7 @@ good adventure...from back in Paradise.
 `Dunsparce Name`: We have to respect that wish of his... 
 And look forward now, not back.
 
-`Virizion SPECIAL05*
+`Virizion Special5`
 `Virizion Name`: ... I suppose you're right.
 `Virizion Name`: I'm sure Emolga would be mad if he saw
 us all just moping around here.
@@ -14988,7 +15330,7 @@ things float is right there in that glacier!
 convinced you it must be here, huh?
 
 	Espeon: *Sprite 🔆
-	Espeon: *Face GLADNESS*
+	Espeon: *Face Gladness`
 	Espeon: Hehe! If only that were true...
 	Espeon: But I'm afraid not.
 
@@ -14997,7 +15339,7 @@ convinced you it must be here, huh?
 	Umbreon: Hey, Espeon! It's not funny!
 
 	Espeon: *Sprite 🔆
-	Espeon: *Face GLADNESS*
+	Espeon: *Face Gladness`
 	Espeon: Ahahah! I'm sorry, I'm sorry!
 
 	Espeon: *Face Normal`
@@ -15680,7 +16022,7 @@ main11\070_furizumu\furizumu.lua.txt
 `Dunsparce Pain`
 `Dunsparce Name`: Hah...hah... Hah...hah...
 
-`Virizion SPECIAL05*
+`Virizion Special5`
 `Virizion Name`: You OK, Dunsparce?
 
 
@@ -15956,14 +16298,14 @@ of us to take them all...
 	Espeon: Well then, let's each collect one.
 
 🔆
-`Dunsparce Name`: *WALK*
 
 
 
-✨
 
 ✨
-MP_NOTICE_R*
+
+✨
+⚟
 ❓
 `Virizion Think`
 `Virizion Name`: Huh? This Frism...
@@ -15993,7 +16335,7 @@ Go ahead, Dunsparce.
 `Dunsparce Happy`
 `Dunsparce Name`: Thanks!
 
-`Dunsparce Name`: *BATTLE*
+⚔
 >Dunsparce warmed the Frism.
 
 
@@ -16010,7 +16352,7 @@ Go ahead, Dunsparce.
 ❗
 
 ❗
-	Umbreon: *Sprite MP_NOTICE_R*
+	Umbreon: *Sprite ⚟
 	Espeon: *Face Surprised`
 	Espeon: This is... a Pokémon's voice!
 
@@ -16047,7 +16389,7 @@ before us, doesn't it?
 
 ⚟
 ⚟
-	Espeon: *Sprite MP_NOTICE_R*
+	Espeon: *Sprite ⚟
 	Umbreon: *Sprite 〽
 	Umbreon: *Face Surprised`
 	Umbreon: ... Virizion!
@@ -16197,10 +16539,10 @@ may just discover the truth.
 `Virizion Special3`
 `Virizion Name`: Yes. Thank you, Espeon. I'll be fine.
 
-`Virizion SPECIAL05*
+`Virizion Special5`
 `Virizion Name`: I'm sorry for making you all worry.
 
-`Virizion SPECIAL05*
+`Virizion Special5`
 `Virizion Name`: Let's go ahead.
 
 
@@ -16239,7 +16581,7 @@ main11\080_palaceboss1st\palaceboss1st.lua.txt
 	Umbreon: *Face Normal`
 	Umbreon: Yeah, we're fine.
 
-`Virizion SPECIAL05*
+`Virizion Special5`
 `Virizion Name`: I'm all right, too. But...
 
 >Grrrrrn grrrrrrn...
@@ -16267,7 +16609,7 @@ being dragged along...
 ❗
 
 〽
-	Espeon: *Sprite MP_NOTICE_R*
+	Espeon: *Sprite ⚟
 `Dunsparce Surprised`
 `Dunsparce Name`: Waaaaaaaaah!
 
@@ -16291,10 +16633,10 @@ thing's feet dragging along the ice!)
 ⚔
 
 ⚔
-`Virizion Name`: *BATTLE*
+⚔
 	Umbreon: *BATTLE*
 	Espeon: *BATTLE*
-`Dunsparce Name`: *BATTLE*
+⚔
 
 `Partner Decide`
 
@@ -16337,10 +16679,10 @@ main11\100_palaceboss2nd\palaceboss2nd.lua.txt
 ⚔
 
 ⚔
-`Virizion Name`: *BATTLE*
+⚔
 	Umbreon: *BATTLE*
 	Espeon: *BATTLE*
-`Dunsparce Name`: *BATTLE*
+⚔
 	Umbreon: *Face Decide`
 	Umbreon: Listen up, everybody! This time
 we're definitely gonna do it!
@@ -16364,13 +16706,13 @@ main11\110_palacebosswin\palacebosswin.lua.txt
 to scare them off.
 
 ❗
-	Umbreon: *Sprite MP_NOTICE_R*
+	Umbreon: *Sprite ⚟
 
 ⚟
-MP_NOTICE_R*
+⚟
 
 ❗
-	Espeon: *Sprite MP_NOTICE_R*
+	Espeon: *Sprite ⚟
 	Espeon: *Face Think`
 	Espeon: Was that... wind?
 
@@ -16432,7 +16774,7 @@ main11\120_kyuremu\m11kyuremu.lua.txt
 ⚟
 
 ❗
-MP_NOTICE_R*
+⚟
 	Umbreon: *Sprite ❗
 	Espeon: *Sprite ❗
 
@@ -16478,7 +16820,7 @@ suddenly out of breath?)
 …
 `Dunsparce Name`: *WAIT00*
 
-`Hero Name`: *WAIT00*
+
 
 ❗
 
@@ -16852,7 +17194,7 @@ call this adventure a great success, I'd say!
 
 	Espeon: *Face Happy`
 	Espeon: I agree.
-	Espeon: *Face GLADNESS*
+	Espeon: *Face Gladness`
 	Espeon: Plus, we made it through the Great Glacier!
 And we learned some fascinating things
 about its insides!
@@ -17121,21 +17463,21 @@ here, if you know what I mean!
 `Emolga Normal`
 `Emolga Name`: How about this?
 
-`Emolga GLADNESS*
+`Emolga Gladness`
 `Emolga Name`: Hahahahahahaha!!!
 
 ❗
 
 ❗
 
-`Emolga GLADNESS*
+`Emolga Gladness`
 `Emolga Name`: Hehehehehehehe!!!
 
 ❗
 
 ❗
 
-`Emolga GLADNESS*
+`Emolga Gladness`
 `Emolga Name`: Hohohohohohoho!!!
 
 ❗
@@ -17167,7 +17509,7 @@ move, huh?
 `Partner Name`: Were you doing some kind of special
 training while we were away at the glacier?
 
-`Emolga GLADNESS*
+`Emolga Gladness`
 `Emolga Name`: Bwahahahaha! 
 Bwaaahahahahaha!
 
@@ -17224,7 +17566,7 @@ my awesomeness?
 even begin to guess how it's done, right?
 
 ✨
-`Emolga GLADNESS*
+`Emolga Gladness`
 `Emolga Name`: Bwahahahahahahahaha!!!
 
 
@@ -17257,7 +17599,7 @@ could use 'em... and needed a little test...
 `Emolga Name`: B-but the important thing is...
 
 ✨
-`Emolga GLADNESS*
+`Emolga Gladness`
 `Emolga Name`: It was all made possible by you guys
 conquering the Great Glacier!
 
@@ -18254,7 +18596,7 @@ in this adventure!
 
 	Espeon: *Idle*
 
-`Emolga Name`: *Idle*
+…
 `Quagsire Name`: *Idle*
 	Umbreon: *Idle*
 `Virizion Name`: *Idle*
@@ -19786,7 +20128,7 @@ What happened?)
 
 
 
-	Hydreigon: *Sprite MP_NOTICE_R*
+	Hydreigon: *Sprite ⚟
 	Hydreigon: *Face Normal`
 	Hydreigon: Oh! You're awake at last!
 
@@ -19876,7 +20218,7 @@ place like this!
 	Hydreigon: You just wouldn't wake up, you know?
 I was very worried.
 
-	Hydreigon: *Face GLADNESS*
+	Hydreigon: *Face Gladness`
 	Hydreigon: But now you're awake at last!
 	Hydreigon: *Sprite MP_SPREE_AL_LP*
 
@@ -19944,7 +20286,7 @@ to meet you for such a long time!
 	Hydreigon: You did hear my voice, didn't you? 
 Back in the human world?
 
-	Hydreigon: *Face GLADNESS*
+	Hydreigon: *Face Gladness`
 	Hydreigon: Oh, come now! You can't tell me
 you've forgotten already, right? 🎵
 	Hydreigon: *Sprite MP_LAUGH_AL_LP*
@@ -21351,7 +21693,7 @@ Hydreigon anywhere!
 `Hero Name`: (Perfect! Now I can see what's in
 that hole!)
 
-	Munna: *Sprite MP_NOTICE_R*
+	Munna: *Sprite ⚟
 	Munna: *Sprite ❗
 	Munna: N-no!
 
@@ -21508,7 +21850,7 @@ into harm's way just because I got caught.
 `Hero Name`: (`Partner Name`...)
 
 	Hydreigon: *Sprite MP_LAUGH_AL_LP*
-	Hydreigon: *Face GLADNESS*
+	Hydreigon: *Face Gladness`
 	Hydreigon: Oh, but...that was nothing at all, sir!
 
 
@@ -22588,7 +22930,7 @@ its destruction.
 `Emolga Surprised`
 `Emolga Name`: Espeon!
 
-`Virizion SPECIAL05*
+`Virizion Special5`
 `Virizion Name`: I don't want to give up.
 `Virizion Name`: I don't want to, but... I also can't deny that
 there is something wrong with the world.
@@ -23178,7 +23520,7 @@ know what's good for you.
 
 `Partner Name`: Everybody! Listen up!
 
-MP_NOTICE_R*
+⚟
 `Rufflet Normal`
 `Rufflet Name`: Huh?
 
@@ -23759,7 +24101,7 @@ Pokémon to stand by us...
 
 
 ❗
-	Umbreon: *Sprite MP_NOTICE_R*
+	Umbreon: *Sprite ⚟
 
 ⚟
 ⚟
@@ -23895,7 +24237,7 @@ I'll do everything I can.
 ✨
 ✨
 	Umbreon: *Sprite 🔆
-`Dunsparce Name`: *WALK*
+
 `Emolga Inspired`
 `Emolga Name`: Looks like it was a bit early to give up on
 the world!
@@ -24564,8 +24906,8 @@ something else, too?
 `Hero Name`: *EV000_CSWAIT*
 
 `Partner Name`: *EV000_CSWAIT*
-`Emolga Name`: *BATTLE*
-`Virizion Name`: *BATTLE*
+⚔
+⚔
 	Salamence: *Idle*
 
 `Hero Surprised`
@@ -24595,12 +24937,12 @@ something else, too?
 
 
 ❗
-`Emolga Name`: *BATTLE*
+⚔
 〽
 ⚟
 
 ❗
-`Virizion Name`: *BATTLE*
+⚔
 
 `Partner Surprised`
 
@@ -24684,8 +25026,8 @@ main16\130_chimyakuairoboss2nd\chimyakuairoboss2nd.lua.txt
 ⚔
 
 ⚔
-`Emolga Name`: *BATTLE*
-`Virizion Name`: *BATTLE*
+⚔
+⚔
 	Salamence: *EV013_ROARING02*
 	Salamence: *EV013_ROARING03*
 	Narration: ROOOWWWRRRRRR!!!
@@ -24800,7 +25142,7 @@ He's just up ahead.
 
 
 ⚟
-MP_NOTICE_R*
+⚟
 
 `Partner Think`
 
@@ -24872,7 +25214,7 @@ made by the two of us.
 	Umbreon: The cards we're about to use are ones we
 picked up.
 
-MP_NOTICE_R*
+⚟
 
 ❗
 ❗
@@ -25090,7 +25432,7 @@ to help Kyurem with his goals.
 `Virizion Normal`
 `Virizion Name`: Keldeo is...
 
-`Virizion SPECIAL05*
+`Virizion Special5`
 `Virizion Name`: Keldeo is... up there...
 `Virizion Name`: In that Glacier Palace... Keldeo is there!
 
@@ -25596,7 +25938,7 @@ main17\060_birijiontoemonga\birijiontoemonga.lua.txt
 `Virizion Normal`
 `Virizion Name`: We've come pretty far, haven't we?
 
-MP_NOTICE_R*
+⚟
 `Virizion Normal`
 `Virizion Name`: What? Something on your mind?
 
@@ -25670,7 +26012,7 @@ tough guy even though you're adorable.
 `Emolga Surprised`
 `Emolga Name`: You... WHAAAT?!
 
-MP_NOTICE_R*
+⚟
 ❓
 `Virizion Normal`
 `Virizion Name`: Something the matter? And shouldn't we
@@ -25786,11 +26128,11 @@ do something about it!
 	DORYUUZU_6: *EV014_APPEAR*
 	DORYUUZU_6: *BATTLE*
 〽
-`Virizion Name`: *BATTLE*
+⚔
 	DORYUUZU_1: Drrriiillllll!
 
 ❗
-`Emolga Name`: *BATTLE*
+⚔
 	DORYUUZU_1: Drrriiillllll!
 
 `Emolga Angry`
@@ -25817,7 +26159,7 @@ going to find it so easy!
 	DORYUUZU_6: *Sprite ❗
 	DORYUUZU_2: *Sprite ❗
 	DORYUUZU_4: *Sprite 〽
-MP_NOTICE_R*
+⚟
 	DORYUUZU_3: *Sprite 〽
 	DORYUUZU_5: *Sprite ❗
 
@@ -25843,8 +26185,8 @@ surrounded like this!
 ⚔
 
 ⚔
-`Virizion Name`: *BATTLE*
-`Emolga Name`: *BATTLE*
+⚔
+⚔
 	Purugly: *BATTLE*
 	DORYUUZU_1: *BATTLE*
 	DORYUUZU_2: *BATTLE*
@@ -25931,8 +26273,8 @@ main17\100_grepalaceeastboss2nd\grepalaceeastboss2nd.lua.txt
 	DORYUUZU_4: *BATTLE*
 	DORYUUZU_5: *BATTLE*
 	DORYUUZU_6: *BATTLE*
-`Virizion Name`: *BATTLE*
-`Emolga Name`: *BATTLE*
+⚔
+⚔
 
 ❗
 
@@ -25985,8 +26327,8 @@ main17\110_grepalaceeastbosswin\grepalaceeastbosswin.lua.txt
 ⚔
 
 ⚔
-`Emolga Name`: *BATTLE*
-`Virizion Name`: *BATTLE*
+⚔
+⚔
 	Purugly: Ughhh...
 
 	DORYUUZU_1: Driiillllll...
@@ -25996,7 +26338,7 @@ main17\110_grepalaceeastbosswin\grepalaceeastbosswin.lua.txt
 
 …
 `Virizion Name`: *Idle*
-`Emolga Name`: *Idle*
+…
 
 `Partner Normal`
 
@@ -26556,8 +26898,8 @@ A world where evil flourishes unchecked!
 ⚔
 
 ⚔
-`Emolga Name`: *BATTLE*
-`Virizion Name`: *BATTLE*
+⚔
+⚔
 
 `Partner Decide`
 
@@ -26620,8 +26962,8 @@ No matter what comes!
 ⚔
 
 ⚔
-`Emolga Name`: *BATTLE*
-`Virizion Name`: *BATTLE*
+⚔
+⚔
 
 `Partner Decide`
 
@@ -28597,7 +28939,7 @@ Bittercold shattered...)
 
 🔆
 
-`Partner GLADNESS*
+`Partner Gladness`
 
 `Partner Name`: Thank goodness!
 
@@ -28854,7 +29196,7 @@ the two of you?
 you, Emolga?
 
 	Espeon: *Sprite 🔆
-	Espeon: *Face GLADNESS*
+	Espeon: *Face Gladness`
 	Espeon: Hahahahaha!
 
 
@@ -29042,7 +29384,7 @@ the Voice of Life will not simply disappear.
 whole world had been destroyed!
 
 	Hydreigon: *Sprite MP_LAUGH_AL_LP*
-	Hydreigon: *Face GLADNESS*
+	Hydreigon: *Face Gladness`
 	Hydreigon: Hahahahahahahahaha!
 
 💦
@@ -29173,7 +29515,7 @@ Waaaaaahhh!
 …
 🔆
 
-`Partner Name`: *SPEAK*
+🗨
 
 …
 
@@ -29294,7 +29636,7 @@ house tonight!
 here before.
 Faces, I guess I should say...
 	Hydreigon: *Idle*
-	Hydreigon: *Sprite MP_NOTICE_R*
+	Hydreigon: *Sprite ⚟
 
 	Hydreigon: *Face Normal`
 	Hydreigon: That's right. This is probably the first time
@@ -29304,12 +29646,12 @@ I've imposed on you here in Post Town.
 `Timburr2 Name`: Meh, I don't care who ya are.
 
 🔆
-`Timburr2 GLADNESS*
+`Timburr2 Gladness`
 `Timburr2 Name`: This is a day to party! 
 Don't hold back or nothin'!
 
 ✨
-`Timburr1 GLADNESS*
+`Timburr1 Gladness`
 `Timburr1 Name`: Please eat as much as you'd like!
 
 	Hydreigon: *Face Happy`
@@ -29500,10 +29842,10 @@ many wondrous things happening in time.
 	Espeon: Everyone here is a star in this tale.
 
 	Espeon: *Sprite 🔆
-	Espeon: *Face GLADNESS*
+	Espeon: *Face Gladness`
 	Espeon: Everyone here was a hero or heroine!
 
-`Virizion GLADNESS*
+`Virizion Gladness`
 `Virizion Name`: That's what we're here
 to celebrate tonight!
 
@@ -30730,7 +31072,7 @@ and I love the signora's cooking.
 for a while yet.
 
 	Hydreigon: *Sprite MP_LAUGH_AL_LP*
-	Hydreigon: *Face GLADNESS*
+	Hydreigon: *Face Gladness`
 	Hydreigon: So I hope you'll let me join you! 🎵
 
 MP_SWEAT_R_AL*
@@ -30779,7 +31121,7 @@ ought to make us stronger, anyway.
 `Emolga Normal`
 `Emolga Name`: So, <Partner_NAME>, what do you think?
 
-MP_NOTICE_R*
+⚟
 `Emolga Think`
 `Emolga Name`: Hm? What is it, <Partner_NAME>?
 
@@ -30811,11 +31153,11 @@ officially part of the team!
 `Partner Name`: Welcome, and remember to do your best!
 
 	Keldeo: *Sprite 🔆
-	Keldeo: *Face GLADNESS*
+	Keldeo: *Face Gladness`
 	Keldeo: Yeah! We will!
 
 	Hydreigon: *Sprite MP_LAUGH_AL_LP*
-	Hydreigon: *Face GLADNESS*
+	Hydreigon: *Face Gladness`
 	Hydreigon: We won't let you down! Shehehehe!
 
 	Espeon: *Sprite 🔆
@@ -30874,11 +31216,11 @@ sub01\020_shukubamachinoyoru\shukubamachinoyoru.lua.txt
 	Hydreigon: *SPEAK*
 	Hydreigon: *VICTORY*
 	Hydreigon: *Sprite MP_SPREE_AL_LP*
-	Hydreigon: *Face GLADNESS*
+	Hydreigon: *Face Gladness`
 	Hydreigon: Deeeeeeeeelicious!
 
 	Hydreigon: *WAIT02*
-	Hydreigon: *Face GLADNESS*
+	Hydreigon: *Face Gladness`
 	Hydreigon: The food here really is
 the best, you know! 🎵
 
@@ -30950,7 +31292,7 @@ blah blah blah blah blah blah blah blah...
 
 `Virizion Name`: Here you are.
 
-	Keldeo: *Sprite MP_NOTICE_R*
+	Keldeo: *Sprite ⚟
 	Keldeo: *Face Normal`
 	Keldeo: Virizion?
 
@@ -31171,17 +31513,17 @@ change.
 	Keldeo: Th-that's right! Thanks, Virizion!
 
 🔆
-`Virizion GLADNESS*
+`Virizion Gladness`
 `Virizion Name`: No, I'm the one to thank you, Keldeo. I'm
 glad I have you around for the long haul.
 `Virizion Name`: Let's do our best to build up Paradise!
 
-	Keldeo: *Face GLADNESS*
+	Keldeo: *Face Gladness`
 	Keldeo: Yeah! I'm gonna give it my all!
 
 	Keldeo: *VICTORY*
 	Keldeo: *WAIT00*
-	Keldeo: *Face GLADNESS*
+	Keldeo: *Face Gladness`
 	Keldeo: Woo-hoo! I got to see Virizion smile!
 
 🔆
@@ -31207,7 +31549,7 @@ the sun sets...
 	Hydreigon: This is such a tranquil place... 
 Ahhhh...
 
-	Hydreigon: *Sprite MP_NOTICE_R*
+	Hydreigon: *Sprite ⚟
 	Hydreigon: *Face Normal`
 	Hydreigon: Hm? Hmn?
 
@@ -31232,7 +31574,7 @@ just now?
 `Dunsparce Name`: Aha! Found you! So this is where you were!
 `Dunsparce Name`: Hello, Hydreigon!
 
-	Hydreigon: *Sprite MP_NOTICE_R*
+	Hydreigon: *Sprite ⚟
 	Hydreigon: *WALK*
 	Hydreigon: *WAIT02*
 `Dunsparce Normal`
@@ -31658,7 +32000,7 @@ anyone but you.
 to `Hero Name`.
 	Espeon: Surely, that has to be you, <Partner_NAME>.
 
-MP_NOTICE_R*
+⚟
 `Virizion Think`
 `Virizion Name`: ... What is it?
 <Partner_NAME>...
