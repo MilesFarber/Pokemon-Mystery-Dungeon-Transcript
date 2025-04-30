@@ -1,0 +1,794 @@
+def 0:
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: back_SetGround
+		Argument: LEVEL_T01P02A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_StationCommon
+		Argument: 99
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: supervision_LoadStation
+		Argument: LEVEL_T01P02A
+		Argument: UM03
+	Identifier: supervision_Station
+		Argument: 10
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON1
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON1
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON2
+		Argument: 2
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 5
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8973
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.7969
+		Argument: 8
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_L_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (What was that?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (What was that?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I'm sure I heard a shout for help just now...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I'm sure I heard a shout for help just now...)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionTurn
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 2
+		Argument: 4
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2DirectionTurn
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 1
+		Argument: 5
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2DirectionTurn
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 2
+		Argument: 4
+	Identifier: Wait
+		Argument: 60
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Did that shout come from you?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Did that shout come from you?)
+		Argument: message_Close
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_HEARTWARMING
+		Argument: 0
+		Argument: 256
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RURIRI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RURIRI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Is something the matter?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetActor
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hey, [CS:N]Azurill[CR]![K] What's going on? Hurry home!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 4
+		Argument: 1
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RURIRI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RURIRI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yup! I'm coming! Wait up!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 4
+		Argument: 2
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 23
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON2
+		Argument: 8
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 53
+			Identifier: 24.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 52.5
+			Identifier: 24.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 56
+			Identifier: 24.5
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Are you all right?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RURIRI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yup!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We're done with our shopping... Now we gotta look for an item we've lost!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Let's get going.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RURIRI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RURIRI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yup! I'm coming!
+	Identifier: message_Close
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 72
+			Identifier: 24.5
+	Identifier: Wait
+		Argument: 15
+	Identifier: ResetHitAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 31
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m4
+			Identifier: 72
+			Identifier: 24.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RURIRI
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionLives
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ha! Those little guys are cute.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ha! Those little guys are cute.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ha! Those little guys are cute.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 30
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 20
+	Identifier: se_Play
+		Argument: 8978
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON2
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh?[K] What's wrong, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh?[K] What's the matter, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Huh?[K] What's the matter, [hero]?
+		Argument: message_Close
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 30
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_EXPLANATION_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh? Did I hear a shout for help just then?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Huh? Did I hear a shout for help just then?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Pardon? Did I hear a shout for help just then?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Uh, no... I didn't hear anything like that!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Uh, no... I didn't hear anything like that!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Uh, no... I didn't hear anything like that!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KAKUREON1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey, [CS:N]Kecleon[CR] brothers.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hey, [CS:N]Kecleon[CR] brothers.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Say, [CS:N]Kecleon[CR] brothers.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Did you hear anything strange just a moment ago?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Did you hear anything strange just a moment ago?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Did you hear anything strange just a moment ago?
+		Argument: message_Close
+	Identifier: se_Play
+		Argument: 8963
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 10
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON2
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON2
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KAKUREON2
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KAKUREON1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: No, nothing out of the ordinary.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KAKUREON2
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I didn't hear anything odd either.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: See? The [CS:N]Kecleon[CR] brothers didn't hear anything like that either.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It sounds like the [CS:N]Kecleon[CR] brothers didn't hear anything odd either.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The [CS:N]Kecleon[CR] brothers didn't hear anything strange either.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You probably just imagined it, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You must have imagined it, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You must have just imagined it, [hero].
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (No, I'm positive that I didn't imagine it.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (No, I'm positive that I didn't imagine it.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I definitely heard it!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I definitely heard it!)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (That shout that I heard...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (That shout that I heard...)
+		Argument: message_Close
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 15
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_EmptyActor
+	Identifier: message_Explanation
+		Argument: english
+		Dialogue: [CN]H-h-h...HELP!
+	Identifier: message_Close
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 15
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (There's no mistaking it...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (There's no mistaking it...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (That was [CS:N]Azurill[CR]'s scream!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (That was [CS:N]Azurill[CR]'s scream!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Uh, are you daydreaming?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Uh, are you daydreaming?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Uh, are you daydreaming?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's go already, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's move it, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's hustle, [hero]!
+		Argument: message_Close
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KAKUREON2
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KAKUREON2
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TREASURE_TOWN
+		Argument: 0
+		Argument: 256
+	Command: end

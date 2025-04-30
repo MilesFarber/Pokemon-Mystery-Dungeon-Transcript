@@ -1,0 +1,110 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_ON_THE_BEACH_AT_DUSK_SHORTENED
+		Argument: 0
+		Argument: 200
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 0
+		Argument: 160
+	Identifier: back_SetGround
+		Argument: LEVEL_D01P11B
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: supervision_SpecialActing
+		Argument: 21
+		Argument: 0
+		Argument: 0
+	Identifier: supervision2_SpecialActing
+		Argument: 21
+		Argument: 0
+		Argument: 0
+	Identifier: SetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 60
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.6992
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 66.5
+			Identifier: 24.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 10
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 20
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 66.5
+			Identifier: 21.5
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Wow! This is beautiful!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh, wow... This is beautiful!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh, wow... This is so pretty!
+		Argument: message_Close
+	Identifier: Wait
+		Argument: 60
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: screen2_FadeOut
+		Argument: 0
+		Argument: 30
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: supervision_SpecialActing
+		Argument: 3
+		Argument: 0
+		Argument: 0
+	Identifier: supervision2_SpecialActing
+		Argument: 3
+		Argument: 0
+		Argument: 0
+	Command: end

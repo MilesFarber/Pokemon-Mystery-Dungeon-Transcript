@@ -1,0 +1,190 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_H01P99A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So, basically...[K] [CS:N]Lapras[CR] didn't know much about the distortion of space.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So, basically...[K] [CS:N]Lapras[CR] didn't know much about the distortion of space.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So, basically...[K] [CS:N]Lapras[CR] didn't know much about the distortion of space.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But he did tell us that [CS:N]Palkia[CR] controls space itself...[K] And that this being dwells in [CS:P]Spacial Rift[CR].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But he did tell us that [CS:N]Palkia[CR] controls space itself...[K] And that this being dwells in [CS:P]Spacial Rift[CR].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But he did tell us that [CS:N]Palkia[CR] controls space itself...[K] And that this being dwells in [CS:P]Spacial Rift[CR].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Palkia[CR], huh...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Palkia[CR], huh...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Palkia[CR], huh...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: If we can meet with [CS:N]Palkia[CR], we'd be able to ask about the distortion of space.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: If we can meet with [CS:N]Palkia[CR], we'd be able to ask about the distortion of space.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: If we can meet with [CS:N]Palkia[CR], we'd be able to ask about the distortion of space.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But we don't know where [CS:P]Spacial Rift[CR] is...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But we don't have a clue as to where [CS:P]Spacial Rift[CR] is...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But we don't know where [CS:P]Spacial Rift[CR] is...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hmm...[K] I guess there isn't any point in worrying about it right now.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hmm...[K] I guess there isn't any point in worrying about it right now.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hmm...[K] I guess there isn't any point in worrying about it right now.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's continue to look into this tomorrow.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's continue to investigate this tomorrow.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's continue to look into this tomorrow.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: There's no giving up now, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There's no giving up now, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: There's no giving up now, [hero]!
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: WaitBgm
+		Argument: BGM_OCEAN1
+	Command: end

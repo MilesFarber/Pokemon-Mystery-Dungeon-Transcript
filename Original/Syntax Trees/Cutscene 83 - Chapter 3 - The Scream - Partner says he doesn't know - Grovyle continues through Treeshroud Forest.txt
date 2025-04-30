@@ -1,0 +1,94 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_GEAR_REMIX
+		Argument: 0
+		Argument: 256
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_STORM
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_V03P11A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 42
+	Identifier: SetEffect
+		Template
+			Type: performer
+			Identifier: 3
+		Argument: EFFECT_VERY_HEAVY_RAIN
+		Argument: 3
+	Identifier: back_SetBackScrollSpeed
+		Argument: 12.0
+		Argument: 0
+	Identifier: bgm2_ChangeVolume
+		Argument: 30
+		Argument: 190
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 15
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetActor
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I don't really know the answer to that question.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I don't really know the answer to that question.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I don't really know the answer to that question.
+		Argument: message_Close
+	Identifier: se_Play
+		Argument: 6420
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 1024
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 5
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 18
+			Identifier: 29.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 7
+		Argument: 100
+		Argument: 0
+	Identifier: se_Stop
+		Argument: 6420
+	Identifier: se_Play
+		Argument: 6421
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: Wait
+		Argument: 10
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 5
+	Command: end

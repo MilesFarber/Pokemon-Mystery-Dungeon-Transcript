@@ -1,0 +1,54 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_IN_THE_FUTURE
+		Argument: 0
+		Argument: 256
+	Identifier: SCENARIO_MAIN
+		Argument: scn
+		Argument: 18
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN][hero] tested the doors.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]The doors failed to open.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It's no good.[K] Like [partner] said, these doors won't open.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It's no good.[K] Like [partner] said, these doors won't open.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It sure looks like we've been locked up!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It sure looks like we've been locked up!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Command: end

@@ -1,0 +1,64 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That's settled.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's it, then.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's settled.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That's where we'll go![K] To [CS:P]Treeshroud Forest[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's where we're going![K] Onward to [CS:P]Treeshroud Forest[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's where we'll go![K] We're off to [CS:P]Treeshroud Forest[CR]!
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 30
+	Identifier: WaitBgm
+		Argument: BGM_OCEAN1
+	Identifier: dungeon_mode
+		Argument: 34
+		Argument: DMODE_OPEN
+	Command: end

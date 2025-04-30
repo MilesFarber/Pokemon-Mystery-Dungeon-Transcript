@@ -1,0 +1,419 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P03A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_JOB_CLEAR
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I've gotten the bounty from Officer [CS:N]Magnezone[CR] for the captured outlaw! ♪
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Well done, you two! ♪
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Here's your share for the job.[K] It's yours to keep! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: me_Play
+		Argument: 4
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN][hero]'s team received [CN]the [CS:G]3[MP]000[CR][M:S0] bounty that was on [CN]the head of the captured outlaw!
+	Identifier: WaitMe
+		Argument: 4
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]However...
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]Because [CS:G]2[MP]700[CR][M:S0] of that [CN]is the guild's share...
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]That portion was withheld...
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]As a result, [CN][hero]'s team...
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]Received only the [CN]remaining [CS:G]300[CR][M:S0]!
+	Identifier: message_Close
+	Identifier: CARRY_GOLD
+		Argument: 300
+	Identifier: bgm_Stop
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitSe
+		Argument: 8968
+	Identifier: Wait
+		Argument: 15
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GUILDMASTER_WIGGLYTUFF
+		Argument: 0
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh?! We get only this much?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What?! This is all we get?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: No way! This is all we get?!
+		Argument: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_KeyWait
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: After all that hard work...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: After all that hard work...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: After all our effort...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ...[K]But of course![K] It's all part of the training!
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: And we expect just as much effort tomorrow![K] Hee-heeee! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 16
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 16
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 45.5
+			Identifier: 25.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 45.5
+			Identifier: 22.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: Wait
+		Argument: 60
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_BOTTOM_L_FACEOUTW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Urf...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Urf...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Urf...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 1
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 2
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You know, it would make me happy if our share was just a little bigger.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I'd be happy if our share of the reward was just a little bigger.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It would be nice if they'd give us a slightly bigger share of the reward.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 30
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But that's OK.[K] We managed to rescue [CS:N]Azurill[CR].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But that's all right.[K] We managed to rescue [CS:N]Azurill[CR].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But that's all right.[K] We managed to rescue [CS:N]Azurill[CR].
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 190
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: And it's all thanks to you, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: And it's all thanks to you, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And it's all thanks to you, [hero]!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Because you had that dream, [hero]...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Because you had that dream, [hero]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Because you had that dream, [hero]...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We knew about [CS:N]Azurill[CR]'s trouble in advance.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We learned about [CS:N]Azurill[CR]'s trouble in advance.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We learned about [CS:N]Azurill[CR]'s trouble in advance.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8978
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It's true!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It's true!)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I can't explain it, but...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I can't explain it, but...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (That first shout I heard from [CS:N]Azurill[CR]...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (That first shout I heard from [CS:N]Azurill[CR]...)
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: Wait
+		Argument: 20
+	Identifier: message_Explanation
+		Argument: english
+		Dialogue: [CN]H-h-h...HELP!
+	Identifier: message_Close
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 15
+	Identifier: Wait
+		Argument: 20
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (And that dream I had...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (And that dream I had...)
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 15
+	Command: end

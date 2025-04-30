@@ -1,0 +1,121 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_HIDDEN_HIGHLAND
+		Argument: 0
+		Argument: 256
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 2
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: message_ResetActor
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]Would you like to go on?
+	Identifier: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Argument: english
+		Dialogue: Yes
+		Argument: default
+		Argument: label_0
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 28.5
+			Identifier: 2.5
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 28.5
+			Identifier: 2.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 28.5
+			Identifier: 2.5
+	Identifier: Wait
+		Argument: 20
+	Identifier: if
+		Argument: scn
+		Argument: SCENARIO_MAIN
+		Argument: 25
+		Argument: 3
+		Argument: label_2
+	Identifier: main_EnterDungeon
+		Argument: 39
+		Argument: 30
+	Identifier: main_EnterDungeon
+		Argument: 1
+		Argument: 30
+	Identifier: hold
+	Command: end
+	Identifier: else
+		Argument: SCENARIO_MAIN
+		Argument: scn
+		Argument: 25
+		Argument: 3
+	Identifier: jump
+		Argument: label_2
+	Identifier: break
+	Identifier: case
+		Argument: menu
+		Argument: english
+		Dialogue: No
+		Argument: message_Close
+	Command: end

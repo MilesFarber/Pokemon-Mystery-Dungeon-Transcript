@@ -1,0 +1,86 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_DO_YOUR_BEST_AS_ALWAYS
+		Argument: 0
+		Argument: 256
+	Identifier: SCENARIO_MAIN
+		Argument: scn
+		Argument: 29
+		Argument: 98
+	Identifier: dungeon_mode
+		Argument: 72
+		Argument: DMODE_OPEN_AND_REQUEST
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: message_ResetActor
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Oh! [hero]! [partner]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Good morning! Are you awake?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hm? Who's out there?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hm? Who could that be?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hm? Who's our visitor?
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

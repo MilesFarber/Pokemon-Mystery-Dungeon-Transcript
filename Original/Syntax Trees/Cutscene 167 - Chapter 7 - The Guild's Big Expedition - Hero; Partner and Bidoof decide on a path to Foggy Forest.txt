@@ -1,0 +1,108 @@
+def 0:
+	Identifier: worldmap_SetMode
+		Argument: 4
+	Identifier: worldmap_SetLevel
+		Argument: 1
+	Identifier: back2_SetMode
+		Argument: 3
+	Identifier: WaitSubScreen
+	Identifier: worldmap_SetCamera
+		Argument: 9
+	Identifier: worldmap_SetMark
+		Argument: 9
+	Identifier: worldmap_SetArrow
+		Argument: 9
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This is where we are now.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Our present location is here.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This is where we are now.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: worldmap_DeleteArrow
+	Identifier: worldmap_MoveCamera
+		Argument: 13
+	Identifier: WaitSubScreen
+	Identifier: worldmap_SetArrow
+		Argument: 13
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The base camp is way over here. That's where we have to meet up with everyone.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We're supposed to link up with everyone at the base camp. That's way over here.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We're supposed to join up with everyone at the base camp. That's way over here.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: worldmap_DeleteArrow
+	Identifier: worldmap_MoveCamera
+		Argument: 11
+	Identifier: WaitSubScreen
+	Identifier: worldmap_SetArrow
+		Argument: 11
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So, as a first step, we could try reaching this spot.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So, as a first step, we could try reaching this spot.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So, as a first step, we could try reaching this spot.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Want to try reaching here as our first objective?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Want to try reaching here as our first objective?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Want to try reaching here as our first objective?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_BIPPA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yup yup! I agree with that.
+	Identifier: message_Close
+	Identifier: se_Play
+		Argument: 6667
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: back2_SetMode
+		Argument: 0
+	Command: end

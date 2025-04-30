@@ -1,0 +1,209 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_GEAR
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_P04P01C
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Unbelievable!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's incredible!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's so very incredible!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Such a big lake! Who'd ever expect it way up here on this plateau!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Who'd expect to see such a big lake on a plateau so high up?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Who would have guessed that a big lake could be high up on this plateau!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: And look! Those [CS:N]Volbeat[CR] and [CS:N]Illumise[CR] flying around...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: And those floating [CS:N]Volbeat[CR] and [CS:N]Illumise[CR]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And just look at those fluttering [CS:N]Volbeat[CR] and [CS:N]Illumise[CR]...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Amazing!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So beautiful!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This couldn't be more dazzling!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YUKUSHII
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Water constantly wells up from far below this place.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It flows up so heavily that it has long formed this enormous lake.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YUKUSHII
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_YUKUSHII
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Now cast your eyes to the glowing area at the lake's center.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yep, I see it!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes, I see it!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Sure, I can see it!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's coming from below!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's radiating from below!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's shining up from beneath the waves!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That sorta blue, sorta green light, right?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That blue green radiance, right?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The bluish green radiance, right?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YUKUSHII
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Step forward for a closer look.
+	Identifier: message_Close
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YUKUSHII
+		Argument: 8
+		Argument: 2
+		Argument: DIR_UP
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.7969
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 17
+			Identifier: 46
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.7969
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 22
+			Identifier: 46
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 30
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

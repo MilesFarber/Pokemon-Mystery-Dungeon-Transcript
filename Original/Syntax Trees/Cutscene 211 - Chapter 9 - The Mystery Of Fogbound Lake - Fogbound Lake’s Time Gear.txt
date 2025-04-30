@@ -1,0 +1,185 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_GEAR
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_V03P09A
+	Identifier: back_SetBackScrollSpeed
+		Argument: 3
+		Argument: 3
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: back_SetEffect
+		Argument: 7
+		Argument: 0
+	Identifier: back_SetBackEffect
+		Argument: 2
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (............)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (............)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (What could that be?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (What could that be?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I can't figure it out...[K]but it's making my heart race!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I can't figure it out...[K]but it's making my heart race!)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (But why? Why should it stir me up so much?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (But why? Why should it stir me up so much?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Why is my pulse speeding all of a sudden?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Why is my pulse speeding all of a sudden?)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That's fantastic![K] But...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's fantastic![K] But...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's fantastic![K] But...
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What is that?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What is that?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What is that?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It has such a mysterious quality!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It has such a mystical quality!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oooh...[K]it seems so mystical!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YUKUSHII
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That is...[K]a Time Gear.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What?![K] Really?![K] A Time Gear?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What?![K] That's a Time Gear?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What?![K] Really and truly?![K] That's a Time Gear?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YUKUSHII
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yes.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I guard the Time Gear.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It's the sole reason I'm here.
+	Identifier: message_Close
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 60
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Command: end

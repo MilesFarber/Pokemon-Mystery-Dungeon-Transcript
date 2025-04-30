@@ -1,0 +1,94 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_GEAR_REMIX
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_V03P09A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 19.5
+			Identifier: 17.5
+	Identifier: back_SetEffect
+		Argument: 5
+		Argument: 0
+	Identifier: back_SetBackEffect
+		Argument: 2
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetActor
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: At the center of such places...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: At the center of such places...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: At the center of such places...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: is what's known as a Time Gear.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: is what's known as a Time Gear.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: is what's known as a Time Gear.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Time Gears serve a very important function.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Time Gears serve a very important function.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Time Gears serve a very important function.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Each one protects time and keeps time flowing properly in its region.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Each one protects time and keeps time flowing properly in its region.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Each one protects time and keeps time flowing properly in its region.
+		Argument: message_Close
+	Identifier: Wait
+		Argument: 30
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 30
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Command: end

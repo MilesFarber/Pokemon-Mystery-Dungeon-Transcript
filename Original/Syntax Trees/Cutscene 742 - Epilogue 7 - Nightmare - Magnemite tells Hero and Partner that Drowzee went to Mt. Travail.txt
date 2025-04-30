@@ -1,0 +1,1421 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P07A
+	Identifier: supervision_LoadStation
+		Argument: LEVEL_G01P07A
+		Argument: US20
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Station
+		Argument: 11
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 45
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 15
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_I_SAW_SOMETHING_AGAIN
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 3
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yeah, that's him all right!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yeah, that's him!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yes, that's him all right!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Drowzee[CR] is the first outlaw that we ever caught!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Drowzee[CR]...[K] He's that outlaw! The first one we ever caught!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Drowzee[CR]...[K] He's that outlaw! The first one we ever caught!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 10
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 3
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But...[K]why [CS:N]Drowzee[CR]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But...[K]why [CS:N]Drowzee[CR]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But...[K]why [CS:N]Drowzee[CR]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: This is just rumor, mind you...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But they say that [CS:N]Drowzee[CR] has the amazing ability to enter others' dreams.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_CHIRIIN
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 3
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Really?! He can go into dreams?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Really?! He can enter dreams?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Really?! He can go into dreams?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It's strictly rumor. I couldn't vouch for its truth.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: However, the possibility exists.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 3
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Gotcha.[K] So if we were to ask [CS:N]Drowzee[CR]...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK, I get it.[K] So if we were to ask [CS:N]Drowzee[CR]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I get it.[K] So if we were to ask [CS:N]Drowzee[CR]...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Maybe he'll be able to get into [CS:N]Azurill[CR]'s nightmare!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Maybe he'll be able to get into [CS:N]Azurill[CR]'s nightmare!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Maybe he'll be able to get into [CS:N]Azurill[CR]'s nightmare!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey, [CS:N]Magnemite[CR].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hey, [CS:N]Magnemite[CR].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Say, [CS:N]Magnemite[CR].
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_CHIRIIN
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What happened to [CS:N]Drowzee[CR] after you guys arrested him?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What became of [CS:N]Drowzee[CR] after you guys arrested him?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What became of [CS:N]Drowzee[CR] after his arrest?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KOIRU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Zzzt! [CS:N]Drowzee[CR] was subjected to intense grilling by Officer [CS:N]Magnezone[CR]. Zzzt!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Zzzt! He expressed remorse. He vowed never to break the law again. Zzzt!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Zzzt! So we released him. Zzzt!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8971
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HEIGANI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HEIGANI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hey, hey! But did he really straighten out?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Sounds really sketchy, hey, hey?!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_CHIRIIN
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KIMAWARI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:N]Corphish[CR].[K] Now is no time to be quibbling over that.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: So...[K]where is [CS:N]Drowzee[CR] now?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_KOIRU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_CHIRIIN
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KOIRU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Zzzt! He has gone away to cleanse his mind and spirit. Zzzt!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Zzzt! He stated that he would study self-discipline on [CS:P]Mt. Travail[CR]. Zzzt!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_CHIRIIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:P]Mt. Travail[CR]?[K] That would be in the mountainous region.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: All right. So that's where [CS:N]Drowzee[CR] is now.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK. So that's where [CS:N]Drowzee[CR] is now.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK. So that's where [CS:N]Drowzee[CR] is now.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_CHIRIIN
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 3
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We have to go, [hero]! Off to [CS:P]Mt. Travail[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We have to go, [hero]! Off to [CS:P]Mt. Travail[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We have to go, [hero]! Off to [CS:P]Mt. Travail[CR]!
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_TEARY_EYED
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Oh, [partner]...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 3
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Wait for us, [CS:N]Marill[CR].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Wait for us, [CS:N]Marill[CR].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Just give us a little time, [CS:N]Marill[CR].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Have no fear, we'll be back with [CS:N]Drowzee[CR].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We promise we'll come back with [CS:N]Drowzee[CR].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We'll be sure to come back with [CS:N]Drowzee[CR].
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_TEARY_EYED
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Urf... [partner]...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You always, always help us...[K] Thank you so much.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 0.5
+		Argument: 4
+		Argument: 4
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It's decided, then! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_CHIRIIN
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We'll leave this matter to Team [team:]! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 8
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Wait
+		Argument: 45
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Wait
+		Argument: 45
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Everyone is worried about [CS:N]Azurill[CR]. But let's have Team [team:] handle it.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Everyone else should go on as usual! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 5122
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 26
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: All right, everyone! Time for work! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_CHIRIIN
+	Identifier: Wait
+		Argument: 15
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WIGGLYTUFFS_GUILD
+		Argument: 0
+		Argument: 256
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: Wait
+		Argument: 2
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: Wait
+		Argument: 2
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: message_EmptyActor
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:N]Apprentices[CR]: HOORAY!
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You're in charge of finding [CS:N]Drowzee[CR].[K] Don't fail us! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 10
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 3
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: All right! Let's move!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK! Let's move it!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK! Let's go!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We're heading for [CS:P]Mt. Travail[CR] to find [CS:N]Drowzee[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We're off to [CS:P]Mt. Travail[CR]! Let's find that [CS:N]Drowzee[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We're heading for [CS:P]Mt. Travail[CR] to find [CS:N]Drowzee[CR]!
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: supervision_RemoveActing
+		Argument: 1
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 22
+			Identifier: 23.5
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 19
+			Identifier: 23.5
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 21
+			Identifier: 26.5
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 18
+			Identifier: 20.5
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: Position
+		Template
+			Type: m4
+			Identifier: 21
+			Identifier: 19.5
+	Identifier: camera_SetDefault
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOIRU
+		Argument: DIR_UP
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: DIR_DOWN
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: DIR_DOWNRIGHT
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: DIR_DOWNRIGHT
+	Identifier: Wait
+		Argument: 45
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: dungeon_mode
+		Argument: 62
+		Argument: DMODE_OPEN
+	Command: end

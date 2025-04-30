@@ -1,0 +1,720 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_GEAR_REMIX
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_V03P06B
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_V03P06A2_200
+		Argument: 64
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_V03P06A2_200
+		Argument: 8
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_V03P06A2_200
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_V03P06A1_196
+		Argument: 3
+	Identifier: back_SetEffect
+		Argument: 11
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 25
+			Identifier: 22.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 23
+			Identifier: 26.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 27
+			Identifier: 26.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But what's this?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But what's this?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But what's this?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It's a Time Gear.[K] There's no mistaking it.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Time here seems to be stopped.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Time here seems to be stopped.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Time here seems to be stopped.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: There's no wind...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: No wind is blowing...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: There isn't even a breeze...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.7969
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 18.5
+			Identifier: 23.5
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: Wait
+		Argument: 10
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 20
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEOUTW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: See? Those leaves are fixed in place.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: See? Those leaves are fixed in place.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: See? Those leaves are fixed in place.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: se_Play
+		Argument: 8971
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Time really is stopped here!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Time is stopped here!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Time has really stopped here!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But the Time Gear is back where it should be...[K] Why is this happening?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But the Time Gear has been returned to its rightful place...[K] Why is this happening?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But the Time Gear is back where it should be...[K] Why is this happening?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ........................
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 0.5
+		Argument: 0
+		Argument: 20
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 8
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 3
+	Identifier: MoveHeight
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 2
+		Argument: 15
+	Identifier: Wait
+		Argument: 1
+	Identifier: Destroy
+		Template
+			Type: object
+			Identifier: OBJECT_V03P06A1_196
+	Identifier: MoveHeight
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 2
+		Argument: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 2
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN][CS:N]Grovyle[CR] took [CN]the Time Gear!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 0.5
+		Argument: 0
+		Argument: 24
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 2
+	Identifier: se_Play
+		Argument: 7440
+	Identifier: back_SetEffect
+		Argument: 12
+		Argument: 60
+	Identifier: WaitBackEffect
+	Identifier: Destroy
+		Template
+			Type: object
+			Identifier: OBJECT_V03P06A2_200
+	Identifier: screen_FadeChange
+		Argument: 1
+		Argument: 120
+		Argument: 255
+		Argument: 192
+	Identifier: Wait
+		Argument: 10
+	Identifier: WaitSe
+		Argument: 7440
+	Identifier: se_Play
+		Argument: 8973
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey! What are you doing?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hey! What are you doing?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hey! What are you doing?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Time has already stopped here.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It won't make any difference if I take the Time Gear now.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There's also...[K]something that's more worrying.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: M-more worrying?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: M-more worrying?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: M-more worrying?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Forget it.[K] Let's leave.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Also, [partner]...[K] There's something I'd like you to do.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What is it?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What is it?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What is it?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Before you go back to Sharpedo Bluff...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I'd like you to gather some information in Treasure Town.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: In Treasure Town?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: In Treasure Town?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: In Treasure Town?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yes, here's what I want you to find out.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Learn everything you can about what's happening in this world right now.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Gotcha. I'll go find out.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK. I'll go find out.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Sure thing. I'll go find out.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Everyone thinks that you've gone to the future.[K] Therefore...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yup, I know.[K] If they found out I'm back, there would be an uproar. I'll keep low and get some news.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes, I understand.[K] If they found out I'm back, there would be an uproar. I'll keep low and get some news.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I know.[K] If they found out I'm back, there would be an uproar. I'll keep low and get some news.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I'm counting on you.
+	Identifier: message_Close
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 1
+		Argument: 0
+		Argument: 160
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: 0
+		Argument: 160
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 36
+		Argument: 160
+	Identifier: Wait
+		Argument: 30
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 90
+	Identifier: switch
+		Argument: message_Menu
+		Argument: MENU_DUNGEON_TEAM_RETURNS_FROM_MAP
+		Command: end

@@ -1,0 +1,891 @@
+def 0:
+	Identifier: back_SetGround
+		Argument: LEVEL_D04P11A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 5
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8973
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_I_SAW_SOMETHING_AGAIN
+		Argument: 0
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It happened again!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It happened again!)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I saw something...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I saw something...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (But what did I just see?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (But what did I just see?)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh? What's up, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Huh? What's the matter, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh? What's the matter, [hero]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_EXPLANATION_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What?! You had another vision?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What?! You had another vision?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What?! You had another vision?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But this time, you saw a lone Pokémon leap into this waterfall?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This time, you saw a lone Pokémon leap into this waterfall?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This time, a Pokémon leaped into this waterfall?! You saw that?!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: And not only that...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: And not only that...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And not only that...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: There's a hidden cave behind the waterfall?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There's a hidden cave behind the waterfall?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: There's a hidden cave behind the waterfall?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hmm...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hmm...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hmm...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But it looks like that water is coming down really hard.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But it looks like that water is coming down really heavily.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But it looks like that water is crashing down really hard.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Imagine if there was actually a solid cliff wall behind that waterfall!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Imagine if there was actually a solid cliff wall behind that waterfall!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Imagine if there was actually a solid cliff wall behind that waterfall!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ouch!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ouch!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yeesh...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: If we tried to jump through...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: If we tried to jump through...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: If we tried to jump through...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We'd be pounded badly!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We'd be pounded badly!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We'd be pounded badly!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: WaitBgm
+		Argument: BGM_I_SAW_SOMETHING_AGAIN
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_RAIN2
+		Argument: 160
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So [hero]...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So [hero]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So [hero]...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What do you think, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What do you think, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What do you think, [hero]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Is there really something behind this waterfall?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Is there really something behind this waterfall?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Is there really something behind this waterfall?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Do you really think there's a cave there?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Are you really convinced that there is a cave there?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You're sure that there really is a cave there?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 90
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Well... All right.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Well... OK.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Well... OK.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I'm going to believe you, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I'm putting my faith in you, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I'm going to believe you, [hero]!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yes! I totally believe in you, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes! I totally believe in you, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yes! I totally believe in you, [hero]!
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionOffset
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: 0
+		Argument: 40
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.7969
+		Argument: 0
+		Argument: 40
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 2
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.7969
+		Argument: 0
+		Argument: 40
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 2
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 2
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 2
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 2
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 2
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 2
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 2
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yikes!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yikes!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Eek!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_HEAD_SHAKE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: OK, I gotta be brave now!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK, I gotta be brave now!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK, I gotta be brave now!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: If I get scared and fail to leap through at full speed...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: If I get scared and fail to leap through at full speed...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: If I get scared and fail to leap through at full speed...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I'll be smooshed no matter what I do!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I'll be smooshed no matter what I do!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I'll be smooshed no matter what I do!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: If I'm going for it, I have to go for it without any hesitation.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: If I'm doing it, I have to do it without hesitating.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: If I'm going for it, it has to be without any hesitation.
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I need to...[K]summon my courage!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Be brave...[K] Be the bravest ever!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Be brave...[K] Use all your courage!
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ready! Let's go, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ready! Let's go, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ready! Let's go, [hero]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 2
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 1
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 30
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Three...[K] Two...[K] One...[K] Now!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Three...[K] Two...[K] One...[K] Now!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Three...[K] Two...[K] One...[K] Now!
+		Argument: message_Close
+	Identifier: Move2PositionOffset
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 2.5
+		Argument: 0
+		Argument: 64
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2.5
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 33.5
+			Identifier: 24.5
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2.5
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 29.5
+			Identifier: 24.5
+	Identifier: ResetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 256
+	Identifier: ResetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 256
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 17
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 17
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2.5
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 33.5
+			Identifier: 20.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2.5
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 29.5
+			Identifier: 20.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: se_Play
+		Argument: 6675
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_D04P11A1_18
+		Argument: 4
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SHOUTING
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Waaaah!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Waaaah!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Waaaah!
+		Argument: Wait
+		Argument: 30
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_WhiteOutAll
+		Argument: 1
+		Argument: 60
+	Identifier: message_CloseEnforce
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 0
+	Identifier: Wait
+		Argument: 90
+	Command: end

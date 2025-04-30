@@ -1,0 +1,139 @@
+def 0:
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: back_SetGround
+		Argument: LEVEL_P03P01A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 15
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8973
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Wh-what was that?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Wh-what was that?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Whose voice was that?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Whose voice was that?)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5133
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 4
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 8
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 8
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 12
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_PAIN
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Wh-what, again?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Wh-what, again?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (So soon after the first one...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (So soon after the first one...)
+		Argument: message_Close
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 5
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Command: end
+	Identifier: def
+		Argument: 1
+		Argument: for
+		Argument: object
+		Argument: OBJECT_P03P01A1_127
+		Argument: SetOutputAttribute
+		Argument: 1024
+	Identifier: hold
+def 1:
+	Target: object OBJECT_P03P01A1_127
+	Identifier: SetOutputAttribute
+		Argument: 1024
+	Identifier: hold

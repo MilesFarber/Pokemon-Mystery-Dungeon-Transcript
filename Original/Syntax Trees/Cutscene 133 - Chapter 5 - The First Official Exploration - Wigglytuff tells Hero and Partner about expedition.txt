@@ -1,0 +1,596 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P05C
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_FIRE_CRACKLING3
+		Argument: 60
+		Argument: 256
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Guildmaster, I've brought you Team [team:].
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 60
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Guildmaster...[K]Guildmaster?
+	Identifier: message_Close
+	Identifier: bgm2_FadeOut
+		Argument: 120
+	Identifier: Wait
+		Argument: 60
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 1
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: se_Play
+		Argument: 8974
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GUILDMASTER_WIGGLYTUFF
+		Argument: 0
+		Argument: 256
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hiya!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Your team went through a lot today! Yes, a lot-lot!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But don't worry! I'm keeping watch on your activities!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I should tell you why I called you here.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We're planning to mount a full expedition soon! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8963
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: An expedition?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: An expedition?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: An expedition?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yes! The guild will go explore someplace far away!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It's much harder than exploring our nearby area.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That's why we need to prepare for the big trip properly.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We carefully choose which guild members go on the expedition.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Really?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Really?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Really?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Usually, we would never, ever consider rookies to be expedition members.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But you two are working so very hard!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That's why we're making a special exception this time!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We decided to include you in the list of candidates for the expedition!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: se_Play
+		Argument: 8974
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: R-really?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: R-really?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: R-really?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8971
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Now, now!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You haven't been chosen as expedition members yet.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There is still time before we set out on the expedition.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: If you fail to do good work before then, you cannot expect to be selected for the expedition.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I'm sure you two can do it!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Try hard!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yup!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yep!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: An expedition! Isn't it amazing, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: An expedition! Isn't it fantastic, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: An expedition! Isn't it fantastic, [hero]?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: My heart is pounding all of a sudden!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: My heart is pounding all of a sudden!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: My pulse is racing all of a sudden!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's do our best and make sure we get picked for the expedition!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's try our best and make sure we get picked for the expedition!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's try our best and make sure we get picked for the expedition!
+		Argument: message_Close
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 20
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 66
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 66
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 80
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 90
+	Identifier: Wait
+		Argument: 60
+	Identifier: SCENARIO_MAIN
+		Argument: scn
+		Argument: 7
+		Argument: 0
+	Command: end

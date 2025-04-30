@@ -1,0 +1,2933 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetDungeonBanner
+		Argument: 7
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 16
+	Identifier: Wait
+		Argument: 60
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 16
+	Identifier: Wait
+		Argument: 15
+	Identifier: SCENARIO_MAIN
+		Argument: scn
+		Argument: 8
+		Argument: 3
+	Identifier: back_SetGround
+		Argument: LEVEL_D05P31A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_D05P31A1_20
+		Argument: 1024
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+		Argument: 0
+		Argument: 256
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 32
+			Identifier: 47.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 37
+			Identifier: 47.5
+	Identifier: Wait
+		Argument: 15
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 34.5
+			Identifier: 52.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 38.5
+			Identifier: 52.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This is the deepest point in [CS:P]Apple Woods[CR], right?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This is the farthest you can go in [CS:P]Apple Woods[CR], isn't it?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This is the deepest point in [CS:P]Apple Woods[CR], isn't it?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 12
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_DOWN_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: According to [CS:N]Chatot[CR], the Perfect Apples should be around here somewhere...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: According to [CS:N]Chatot[CR], the Perfect Apples should be around here somewhere...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: According to [CS:N]Chatot[CR], the Perfect Apples should be around here...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 8978
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey! [hero], over there!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh! [hero], look there!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh! [hero], look there!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 2
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hanging on that humongous tree...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hanging on that huge tree...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hanging on that humongous tree...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Those must be Perfect Apples.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Those must be Perfect Apples.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Those must be Perfect Apples.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m4
+			Identifier: 34.5
+			Identifier: 17.5
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: Wait
+		Argument: 90
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m5
+			Identifier: 34.5
+			Identifier: 32.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m6
+			Identifier: 32
+			Identifier: 33.5
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m7
+			Identifier: 37
+			Identifier: 33.5
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m8
+			Identifier: 34.5
+			Identifier: 40.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m9
+			Identifier: 38.5
+			Identifier: 40.5
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: All right, then... How should we get those Perfect Apples?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: All right, then... How should we get those Perfect Apples?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: All right, then... How should we get those Perfect Apples?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: message_ResetActor
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Chaw-haw-haw! Easily done!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Who said that?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Who said that?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Who said that?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 12
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_ResetActor
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Chaw-haw-haw!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m10
+			Identifier: 34.5
+			Identifier: 22.5
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: Wait
+		Argument: 10
+	Identifier: se_Play
+		Argument: 6662
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_D05P31A1_20
+		Argument: 18
+	Identifier: WaitAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_D05P31A1_20
+	Identifier: WaitExecuteObject
+		Argument: OBJECT_D05P31A1_20
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_D05P31A1_20
+		Argument: 9
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Stop
+		Argument: 6662
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: supervision_Acting
+		Argument: 2
+	Identifier: Wait
+		Argument: 1
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_D05P31A1_20
+		Argument: 2
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 45
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 3
+		Argument: Position
+		Template
+			Type: m11
+			Identifier: 34.5
+			Identifier: 35.5
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 43
+	Identifier: SlidePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 3
+		Argument: Position
+		Template
+			Type: m12
+			Identifier: 34.5
+			Identifier: 32.5
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 3
+		Argument: Position
+		Template
+			Type: m13
+			Identifier: 35.5
+			Identifier: 28.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 3
+		Argument: Position
+		Template
+			Type: m14
+			Identifier: 30.5
+			Identifier: 29.5
+	Identifier: Wait
+		Argument: 10
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 2
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 5
+	Identifier: SlidePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2.5
+		Argument: Position
+		Template
+			Type: m15
+			Identifier: 37
+			Identifier: 37
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 5
+	Identifier: SlidePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2.5
+		Argument: Position
+		Template
+			Type: m16
+			Identifier: 32
+			Identifier: 37
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 2.5
+		Argument: 0
+		Argument: 8
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 2.5
+		Argument: 0
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 2
+	Identifier: se_Play
+		Argument: 5124
+	Identifier: Wait
+		Argument: 30
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 0.7969
+		Argument: Position
+		Template
+			Type: m17
+			Identifier: 38
+			Identifier: 30.5
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 0.7969
+		Argument: Position
+		Template
+			Type: m18
+			Identifier: 31
+			Identifier: 30.5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DOGAASU
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What?! You!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What?! You!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What?! You!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TEAM_SKULL
+		Argument: 0
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SUKATANKU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Chaw-haw-haw! Team [CS:X]Skull[CR] at your service!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_ZUBATTO
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Heh-heh. Hey, it's wimpy and company. What took you so long?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DOGAASU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We've been having us a picnic of Perfect Apples while waiting for you to show.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: What took you so long?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Whaaaat?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Whaaaat?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Whaaaat?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DOGAASU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Whoa-ho-ho! You took so long, I stuffed myself![K] Buuurp!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: They're saying they ate the Perfect Apples, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: They're saying they ate the Perfect Apples, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: They're saying they ate the Perfect Apples, [hero].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But there are still a few left up on the tree.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But there are still several left on the tree.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But there are still a few left on the tree.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's knock those creeps out and take home some Perfect Apples.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's knock those creeps out and take home some Perfect Apples.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's knock those creeps out and take home some Perfect Apples.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SUKATANKU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Chaw-haw-haw. Knock us out? That's very rude of you!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Why, I was even going to offer my help for your mission.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Huh?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Pardon?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SUKATANKU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You were wondering how you could get the Perfect Apples?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Nothing could be easier. Watch.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 1
+		Argument: 64
+		Argument: 0
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m19
+			Identifier: 26.5
+			Identifier: 23.5
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m20
+			Identifier: 34.5
+			Identifier: 29.5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: Wait
+		Argument: 60
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 1
+		Argument: 24
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 2
+	Identifier: Wait
+		Argument: 60
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 2.5
+		Argument: 56
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: se_Play
+		Argument: 6663
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 2
+		Argument: 1
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: camera_SetEffect
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_D05P31A1_20
+		Argument: 2
+	Identifier: Wait
+		Argument: 45
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_D05P31A1_20
+		Argument: 9
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 1
+		Argument: 56
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 2
+	Identifier: Wait
+		Argument: 60
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 2.5
+		Argument: 56
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: se_Play
+		Argument: 6663
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 2
+		Argument: 1
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: camera_SetEffect
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_D05P31A1_20
+		Argument: 2
+	Identifier: Wait
+		Argument: 45
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_D05P31A1_20
+		Argument: 9
+	Identifier: supervision_Acting
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_128
+		Argument: 9
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_129
+		Argument: 9
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_130
+		Argument: 9
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_131
+		Argument: 9
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_132
+		Argument: 9
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_128
+		Argument: 2
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_129
+		Argument: 2
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_130
+		Argument: 2
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_131
+		Argument: 2
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_132
+		Argument: 2
+	Identifier: MovePositionOffset
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_131
+		Argument: 3
+		Argument: 0
+		Argument: 144
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionOffset
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_128
+		Argument: 3
+		Argument: 0
+		Argument: 144
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionOffset
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_132
+		Argument: 3
+		Argument: 0
+		Argument: 144
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionOffset
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_130
+		Argument: 3
+		Argument: 0
+		Argument: 144
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionOffset
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_129
+		Argument: 3
+		Argument: 0
+		Argument: 144
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m21
+			Identifier: 34.5
+			Identifier: 35.5
+	Identifier: se_Play
+		Argument: 6664
+	Identifier: MoveHeight
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_131
+		Argument: 3
+		Argument: 8
+	Identifier: MoveHeight
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_128
+		Argument: 3
+		Argument: 8
+	Identifier: MoveHeight
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_131
+		Argument: 3
+		Argument: 8
+	Identifier: MoveHeight
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_128
+		Argument: 3
+		Argument: 8
+	Identifier: MoveHeight
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_132
+		Argument: 3
+		Argument: 8
+	Identifier: MoveHeight
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_132
+		Argument: 3
+		Argument: 8
+	Identifier: MoveHeight
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_130
+		Argument: 3
+		Argument: 8
+	Identifier: MoveHeight
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_130
+		Argument: 3
+		Argument: 8
+	Identifier: MoveHeight
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_129
+		Argument: 3
+		Argument: 8
+	Identifier: MoveHeight
+		Template
+			Type: object
+			Identifier: OBJECT_P03P02A1_129
+		Argument: 3
+		Argument: 8
+	Identifier: WaitSe
+		Argument: 6664
+	Identifier: se_Play
+		Argument: 8978
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Oh! Some Perfect Apples!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh! Some Perfect Apples!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh! Some Perfect Apples!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m22
+			Identifier: 26.5
+			Identifier: 23.5
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 1.1992
+		Argument: 0
+		Argument: 56
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m23
+			Identifier: 34.5
+			Identifier: 32.5
+	Identifier: Wait
+		Argument: 20
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Wait
+		Argument: 20
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SUKATANKU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SUKATANKU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: See? What'd I tell you?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Go on, now. Scoop up those Perfect Apples and scuttle back to the guild. Chaw-haw-haw.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DOGAASU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Whoa-ho-ho.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_ZUBATTO
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Heh-heh.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SUKATANKU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hm? What's the matter? Aren't you going to pick them up?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: And after I was so nice and helped you out! Chaw-haw-haw.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You're going to pull another dirty trick, aren't you!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You're going to pull another dirty trick, aren't you!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You're going to pull another dirty trick, aren't you!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I won't be fooled again!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You can't fool me again!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You won't fool me again!
+		Argument: se_Play
+		Argument: 8971
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_ZUBATTO
+	Identifier: WaitSe
+		Argument: 8968
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GROWING_ANXIETY
+		Argument: 0
+		Argument: 256
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DOGAASU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_ZUBATTO
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Color me surprised! They didn't fall for it at all!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DOGAASU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Aww. How boring is that.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8971
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_ANGRY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I knew it!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I was right!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I knew it!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 4
+		Argument: 2
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DOGAASU
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SUKATANKU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Chaw-haw-haw. It's a little disappointing you didn't fall for our act...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But so what? What are you gonna do about it?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The only thing we can!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The only thing we can!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The only thing we can!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We'll knock out your team and take the Perfect Apples back to the guild!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We're going to knock out your team. Then we're taking the Perfect Apples back to the guild!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We'll knock out your team. Then we're taking the Perfect Apples back to our guild!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SUKATANKU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Well now. Aren't we feeling peppy today!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: When we first met, you were shaking like a leaf too. Chaw-haw-haw.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's true... That time, I did back down...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's true... That time, I did back down...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's true... That time, I did back down...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Even now I'm a little scared...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Even now I'm a little scared...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Even now I'm a little scared...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But I won't lose again!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But I won't lose again!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But I won't lose again!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I won't ever back down again!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I won't ever back down again!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I won't ever back down again!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SUKATANKU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: So be it.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: In recognition of your courage...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We'll be honored to take you on fair and square. Chaw-haw-haw!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 0.7969
+		Argument: 12
+		Argument: 0
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 0.7969
+		Argument: 12
+		Argument: 16
+	Identifier: Wait
+		Argument: 15
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 0.7969
+		Argument: 16
+		Argument: 16
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DOGAASU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 0
+		Argument: 4
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: 0
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 1
+		Argument: 0
+		Argument: 8
+	Identifier: Wait
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 1
+		Argument: 0
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_UNIT_NPC1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 2
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_UNIT_NPC2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 2
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: W-watch out, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: W-watch out, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: W-watch out, [hero]!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: They're going to try something!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: They're going to try something!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: They're going to try something!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SUKATANKU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Chaw-haw-haw!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Let's see if you can withstand this attack.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:N]Koffing[CR] and I will use our...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: noxious gas combo!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 6913
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 18
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 12
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SUKATANKU
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGAASU
+	Identifier: Wait
+		Argument: 10
+	Identifier: SetEffect
+		Template
+			Type: performer
+			Identifier: 3
+		Argument: 639
+		Argument: 3
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: DIR_RIGHT
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 68
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_LEFT
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 68
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 11
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 11
+	Identifier: Wait
+		Argument: 15
+	Identifier: screen_WhiteOut
+		Argument: 0
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SHOUTING
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Waaaah! WAAAAH!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Waaaah! WAAAAH!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Waaaah! WAAAAH!
+		Argument: screen_WhiteOutAll
+		Argument: 1
+		Argument: 60
+	Identifier: message_CloseEnforce
+	Identifier: supervision_RemoveActing
+		Argument: 1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 24
+	Identifier: SetEffect
+		Template
+			Type: performer
+			Identifier: 3
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: supervision_RemoveActing
+		Argument: 3
+	Identifier: se_FadeOut
+		Argument: 6913
+		Argument: 90
+	Identifier: Wait
+		Argument: 90
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 0
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 90
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 63
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 2
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: CORO_HEAD_SHAKE_FUNC_SERIES
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ugh... That was awful...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ugh... That was disgusting...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ugh... That was awful...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 2
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_HEAD_SHAKE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 30
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: CORO_HEAD_SHAKE_FUNC_SERIES
+		Argument: 0
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Oh, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh, [hero]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 63
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_HEAD_SHAKE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 8
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Are you all right, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Are you OK, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Are you OK, [hero]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Whew!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I'm glad!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Thank goodness!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_ZUBATTO
+	Identifier: Wait
+		Argument: 2
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: Wait
+		Argument: 2
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_ZUBATTO
+	Identifier: Wait
+		Argument: 2
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 1
+		Argument: 1
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_ZUBATTO
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Urrgh...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 2
+	Identifier: Wait
+		Argument: 60
+	Identifier: se_Play
+		Argument: 8963
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_ZUBATTO
+	Identifier: Wait
+		Argument: 20
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_ZUBATTO
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_ZUBATTO
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Aaaaah!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Waaah! They left without me!
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_ZUBATTO
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 7430
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 1024
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 2
+		Argument: 0
+		Argument: 200
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 1.5
+		Argument: 48
+		Argument: 0
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_ZUBATTO
+	Identifier: supervision_RemoveActing
+		Argument: 2
+	Identifier: Wait
+		Argument: 60
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+		Argument: 0
+		Argument: 256
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Urf... We both got knocked out...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Urf... We both got knocked out...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Urf... We both got knocked out...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But, wow, that was an incredible stench.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But what an overpowering stench.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But what a horrible stench.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It still reeks a little...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The stench is still lingering...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It still reeks a little... Ewww...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey! What about the Perfect Apples?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh! What happened to the Perfect Apples?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh! Where are the Perfect Apples?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 12
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 2
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 5
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: CORO_LOOK_AROUND_RIGHT_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Aw! They're gone!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Aw! They're gone!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Aw! They're gone!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Did those bullies eat them all?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Did those bullies eat them all?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Did those bullies eat them all?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: If they're all gone, there's nothing we can do.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: If they're all gone, there's nothing we can do.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: If they're all gone, there's nothing we can do.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We're out of luck. Let's head back to the guild.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There's nothing we can do. Let's go back to the guild.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We can't do anything else. Let's go back to our guild.
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 90
+	Identifier: Wait
+		Argument: 60
+	Identifier: switch
+		Argument: message_Menu
+		Argument: MENU_DUNGEON_TEAM_RETURNS_FROM_MAP
+	Array accessor
+		Array: $SCENARIO_MAIN_BIT_FLAG
+		Index: 8
+		Value: 1
+	Identifier: COMPULSORY_SAVE_POINT
+		Argument: 4
+	Identifier: CallCommon
+		Argument: CORO_HANYOU_SAVE_FUNC
+	Command: end

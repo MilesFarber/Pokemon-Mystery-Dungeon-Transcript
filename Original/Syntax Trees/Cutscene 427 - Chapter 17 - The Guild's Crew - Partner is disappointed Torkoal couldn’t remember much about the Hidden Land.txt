@@ -1,0 +1,224 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V02P06A
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 19.5
+			Identifier: 15.5
+	Identifier: screen2_FadeIn
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 150
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P07C
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 60
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GOODNIGHT
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Sigh... Things aren't going as well as we'd hoped.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Sigh... We're not making as much progress as we'd hoped.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Sigh... Things aren't going as well as we'd hoped.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: When we talked with [CS:N]Torkoal[CR], I thought there was hope!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: When we talked with [CS:N]Torkoal[CR], I started thinking we had a hope!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: When we talked with [CS:N]Torkoal[CR], I thought we had a hope!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 30
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ..................
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ..................
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ..................
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I wonder how [CS:N]Grovyle[CR] is doing?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I wonder how [CS:N]Grovyle[CR] is doing?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I wonder how [CS:N]Grovyle[CR] is doing?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Has he gathered the Time Gears?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Has he gathered the Time Gears?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Has he gathered the Time Gears?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We have to hurry too!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We need to hurry too!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We have to hurry too!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But there's no point in getting all flustered.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But there's no point in getting all flustered.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But there's no point in getting all worked up.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Especially since everyone is helping out.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Especially since everyone is helping out.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Especially since everyone is helping out.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We should get some sleep...[K] then start with fresh resolve tomorrow!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We should get some sleep...[K] then start with fresh resolve tomorrow!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We should get some sleep...[K] then start a fresh effort tomorrow!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: All right, [hero]. Good night.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK, [hero]. Good night.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK, [hero]. Good night.
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 90
+	Identifier: Wait
+		Argument: 60
+	Identifier: SCENARIO_MAIN
+		Argument: scn
+		Argument: 23
+		Argument: 0
+	Command: end

@@ -1,0 +1,79 @@
+def 0:
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_ON_THE_BEACH_AT_DUSK
+		Argument: 0
+		Argument: 256
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V21P02B
+	Identifier: back_SetGround
+		Argument: LEVEL_H01P99E
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 20
+			Identifier: 18.5
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen2_FadeIn
+		Argument: 0
+		Argument: 30
+	Identifier: bgm_ChangeVolume
+		Argument: 140
+		Argument: 190
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yes, [hero] was always there to cheer me up...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes, [hero] was always there to cheer me up...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yes, [hero] was always there to cheer me up...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: And...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: And...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And...
+		Argument: message_Close
+	Identifier: screen2_FadeOut
+		Argument: 0
+		Argument: 30
+	Identifier: bgm_ChangeVolume
+		Argument: 140
+		Argument: 0
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: back2_SetMode
+		Argument: 0
+	Command: end

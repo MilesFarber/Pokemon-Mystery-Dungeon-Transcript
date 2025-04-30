@@ -1,0 +1,255 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TREASURE_TOWN
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_P01P02A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: Wait
+		Argument: 1
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KURABU
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 24
+			Identifier: 24.5
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 29.5
+			Identifier: 17.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 24.5
+			Identifier: 17.5
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KURABU
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 27
+			Identifier: 21.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KURABU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KURABU
+		Argument: 3
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KURABU
+		Argument: DIR_RIGHT
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KURABU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KURABU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KURABU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KURABU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Ahoy![K] Are you headed to the beach?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Well...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Would you keep an eye out for something, if you could?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Recently...[K]there have been Bottles washing up on the beach...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It looks as though there's something inside those Bottles...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: If that sounds interesting, you might want to look for Bottles on the beach.
+	Identifier: message_Close
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KURABU
+		Argument: 5
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KURABU
+		Argument: 1
+		Argument: 0
+		Argument: 200
+	Identifier: Wait
+		Argument: 20
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 16
+		Argument: 2
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 16
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KURABU
+	Identifier: supervision_RemoveActing
+		Argument: 1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Bottles washing up on the beach...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Bottles washing up on the beach...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Bottles washing up on the beach...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Bottles with something in them...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Bottles with something in them...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Bottles with something in them...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I'm sold. Let's check it out.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I'm interested...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Sounds interesting...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Sounds like they're only washing up now and then...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Sounds like they're only washing up now and then...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Sounds like they're only washing up now and then...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Whenever we head to the beach, we can look for a Bottle!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Whenever we head to the beach, we can look for a Bottle!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Whenever we head to the beach, we can look for a Bottle!
+		Argument: message_Close
+	Array accessor
+		Array: $SCENARIO_MAIN_BIT_FLAG
+		Index: 92
+		Value: 1
+	Command: end

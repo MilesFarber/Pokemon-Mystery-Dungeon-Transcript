@@ -1,0 +1,71 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WIGGLYTUFFS_GUILD
+		Argument: 0
+		Argument: 256
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_BIPPA
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_BIPPA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Huh?[K] Are you folks all set and ready for some exploring?
+	Identifier: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Argument: english
+		Dialogue: Yes
+		Argument: label_0
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: supervision_ExecuteCommon
+		Argument: CORO_EVENT_M03_05_06
+	Identifier: label_2
+	Identifier: CallCommon
+		Argument: CORO_EVENT_END_FREE
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+	Command: end
+	Identifier: case
+		Argument: menu
+		Argument: english
+		Dialogue: No
+		Argument: default
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Not yet, huh?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Just give me a holler when you're all ready to go.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Then we'll all have a gander at the Outlaw Notice Board and pick out a suitable outlaw for you.
+	Identifier: message_Close
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_BIPPA
+	Identifier: jump
+		Argument: label_2

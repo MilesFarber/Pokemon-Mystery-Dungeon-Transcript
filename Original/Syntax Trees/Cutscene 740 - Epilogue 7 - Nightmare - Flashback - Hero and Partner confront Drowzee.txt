@@ -1,0 +1,71 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_D03P41A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We won't let you do that![K] [CS:N]Drowzee[CR], you bully!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We won't let you do that![K] [CS:N]Drowzee[CR], you bully!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We won't let you do that![K] [CS:N]Drowzee[CR], you bully!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SURIIPU
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SURIIPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SURIIPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: H-how did you find this place?!
+	Identifier: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Command: end

@@ -1,0 +1,42 @@
+def 0:
+	Identifier: if
+		Argument: scn
+		Argument: SCENARIO_SIDE
+		Argument: 40
+		Argument: 2
+		Argument: label_0
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER_BIPPA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I don't have time to be looking at job requests! Yup yup!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: label_1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER_BIPPA
+	Command: end
+	Identifier: else
+		Argument: message_SetFace
+		Argument: ACTOR_PLAYER_BIPPA
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Sniff...[K] Golly, I really want to be assigned to do a job...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But I'll just have to wait.[K] So, off to [CS:K]Kecleon[CR] Market.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: jump
+		Argument: label_1

@@ -1,0 +1,217 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_S04P01A
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ugh...[K] That ended badly.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ugh...[K] We didn't make it...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ugh...[K] We didn't get through...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hmm... This is tough...[K] Let's stop for now and try again tomorrow.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hmm... This is tough...[K] Let's stop for now and try again tomorrow.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hmm... This is tough...[K] Let's stop for now and try again tomorrow.
+		Argument: message_KeyWait
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 60
+	Identifier: message_CloseEnforce
+	Identifier: Wait
+		Argument: 60
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Identifier: message_Narration
+		Argument: 30
+		Argument: english
+		Dialogue: [CN]The next morning...
+	Identifier: message_Close
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V24P08A
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 19
+			Identifier: 15.5
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_LEFT
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 76
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 76
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: screen2_FadeIn
+		Argument: 0
+		Argument: 30
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 63
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 63
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Good morning, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Good morning, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Good morning, [hero]!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's put an end to [CS:N]Darkrai[CR]'s scheme this time!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's put an end to [CS:N]Darkrai[CR]'s scheme this time!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's put an end to [CS:N]Darkrai[CR]'s scheme this time!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: There's no giving up now, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There's no giving up now, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We can't give up now, [hero]!
+		Argument: message_Close
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: back2_SetMode
+		Argument: 0
+	Command: end

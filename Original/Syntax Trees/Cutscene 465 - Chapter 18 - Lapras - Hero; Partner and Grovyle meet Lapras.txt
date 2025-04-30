@@ -1,0 +1,395 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_P11P01A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: Wait
+		Argument: 1
+	Identifier: ResetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RAPURASU
+		Argument: 256
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RAPURASU
+		Argument: 664
+		Argument: 4
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RAPURASU
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 23.5
+			Identifier: 34
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RAPURASU
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RAPURASU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 0
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [partner]... [hero]...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: and [CS:N]Grovyle[CR]...correct?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You know our names?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You know our names?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You know our names?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RAPURASU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 0
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yes.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I was informed by [CS:N]Wigglytuff[CR].
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]W-Wigglytuff[CR] told you?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]W-Wigglytuff[CR] told you?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]W-Wigglytuff[CR] told you?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEOUTW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That pattern on the wall shot a beam of light across the sea.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That pattern on the wall shot a beam of light across the sea.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That pattern on the wall shot a beam of light across the sea.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You appeared right after that.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You appeared right after that.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And then you appeared.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Can you tell me who you are?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Can you tell me who you are?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Can you tell me who you are?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RAPURASU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 0
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I'm [CS:N]Lapras[CR].[K] I am the guide to the [CS:P]Hidden Land[CR].
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You're serious?![K] You can take us to the [CS:P]Hidden Land[CR]?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You're what?![K] You can take us to the [CS:P]Hidden Land[CR]?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You're what?![K] You can take us to the [CS:P]Hidden Land[CR]?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RAPURASU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 0
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You unleashed the beam of light from the pattern on the wall.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That is the signal for gaining entry to the [CS:P]Hidden Land[CR].
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It is beyond the sea.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Step onto my back.[K] I will carry you across the sea.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Don't be afraid.[K] I'm exceptional. I can carry you all and more on my back.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's beyond the sea...[K] The [CS:P]Hidden Land[CR].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's beyond the sea...[K] The [CS:P]Hidden Land[CR].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's beyond the sea...[K] The [CS:P]Hidden Land[CR].
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [hero]! [partner]!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Let's go![K] Beyond the sea!
+	Identifier: message_Close
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Wait
+		Argument: 45
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 60
+	Identifier: switch
+		Argument: message_Menu
+		Argument: MENU_DUNGEON_TEAM_RETURNS_FROM_MAP
+		Argument: SCENARIO_MAIN
+		Argument: scn
+		Argument: 25
+		Argument: 0
+	Identifier: CallCommon
+		Argument: CORO_HANYOU_SAVE_FUNC
+	Command: end

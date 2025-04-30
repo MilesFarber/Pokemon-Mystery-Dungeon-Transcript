@@ -1,0 +1,239 @@
+def 0:
+	Identifier: switch
+		Argument: sector
+		Argument: case
+		Argument: 0
+		Argument: default
+		Argument: label_0
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_ON_THE_BEACH_AT_DUSK
+		Argument: 0
+		Argument: 256
+	Identifier: label_2
+	Identifier: back_SetGround
+		Argument: LEVEL_D10P41A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GURAADON
+		Argument: 0.2969
+		Argument: 0
+		Argument: 12
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 2
+		Argument: 3.0
+	Identifier: Wait
+		Argument: 15
+	Identifier: camera_SetEffect
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: Wait
+		Argument: 15
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 2
+		Argument: 3.0
+	Identifier: Wait
+		Argument: 15
+	Identifier: camera_SetEffect
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_GURAADON
+	Identifier: Wait
+		Argument: 45
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 1
+		Argument: 1.0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GURAADON
+		Argument: 9
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_GURAADON
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: GRR...GRR...OOOOOOOOOH!
+	Identifier: Wait
+		Argument: 90
+	Identifier: message_CloseEnforce
+	Identifier: camera_SetEffect
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GURAADON
+		Argument: 2
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_STUNNED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Urk... Scary stuff!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Urk... This is scary...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Urk... I'm scared!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 20
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But we gotta be brave!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But we need to be brave!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But it's time to be brave!
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: And I gotta face up to this!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: And I need to face up to this!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And I need to stand up to this!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: No stopping now, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There's no giving up now, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We can't just run away now, [hero]!
+		Argument: message_Close
+	Identifier: switch
+		Argument: sector
+		Argument: case
+		Argument: 0
+		Argument: default
+		Argument: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: label_5
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Command: end
+	Identifier: case
+		Argument: 1
+		Argument: screen_WhiteOut
+		Argument: 1
+		Argument: 30
+	Identifier: jump
+		Argument: label_5
+	Identifier: break
+	Identifier: case
+		Argument: 1
+		Argument: bgm_PlayFadeIn
+		Argument: BGM_MEMORIES_RETURNED
+		Argument: 0
+		Argument: 256
+	Identifier: jump
+		Argument: label_2

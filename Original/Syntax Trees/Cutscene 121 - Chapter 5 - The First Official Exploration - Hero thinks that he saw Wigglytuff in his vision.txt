@@ -1,0 +1,121 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_THAT_SHAPE
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_S02P01A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: Wait
+		Argument: 1
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 6
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 23
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetActor
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (That shape...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (That shape...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I've seen that shape before...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I've seen that shape before...)
+		Argument: message_SetActor
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (That shape...[K] There's no mistaking it!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (That shape...[K] There's no mistaking it!)
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: Wait
+		Argument: 20
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: se_Play
+		Argument: 8966
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: DIR_RIGHT
+	Identifier: WaitSe
+		Argument: 8966
+	Identifier: message_SetActor
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (That was...[K][CS:N]Wigglytuff[CR]!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (That was...[K][CS:N]Wigglytuff[CR]!)
+		Argument: message_Close
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 30
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Command: end

@@ -1,0 +1,552 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: 46
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WATERFALL_CAVE
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Oh no...[K] Why is this happening?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh no...[K] What should we do?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh no...[K] How could this happen?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: Wait
+		Argument: 1
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 0.7969
+		Argument: 0
+		Argument: 8
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: !!![K] You've found [CS:N]Manaphy[CR]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Chatot[CR]![K] [CS:N]Manaphy[CR] is...[K] [CS:N]Manaphy[CR] is...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Chatot[CR]![K] [CS:N]Manaphy[CR] is...[K] [CS:N]Manaphy[CR] is...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Chatot[CR]![K] [CS:N]Manaphy[CR] is...[K] [CS:N]Manaphy[CR] is...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 35.5
+			Identifier: 22.5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:N]Ma-[CR][K][CS:N]Manaphy[CR]!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: My goodness! He's running a frightful fever!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We know...[K] We found him standing on the beach. Then he flopped over...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We know...[K] We found him standing on the beach. Then he toppled over.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yes, we know.[K] We found him standing on the beach. Then he flopped over.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_PAIN
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ..................
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: His illness must be caused by being in the wrong environment.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_STUNNED
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Just as I'd thought, [CS:N]Manaphy[CR] is a Pokémon that needs to grow in the sea.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Our environment is entirely unlike being in the sea.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That's why this infant is ill.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Urk![K] So it's our fault that [CS:N]Manaphy[CR] is...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Urk![K] So it's our fault that [CS:N]Manaphy[CR] is...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Urk![K] So it's our fault that [CS:N]Manaphy[CR] is...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_STUNNED
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hmm...[K] Well, as things stand, remorse and regret won't help now.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We need to focus solely on curing [CS:N]Manaphy[CR]'s illness.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But how are we supposed to cure him?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: How do we go about curing him?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: How do we go about curing him?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Here's something I've heard...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: According to the Pokémon living in the sea, it seems that there is a cure-all item known as Phione Dew.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That may be what it takes to cure [CS:N]Manaphy[CR]'s illness.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Phione Dew...[K] So that's what we need.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Phione Dew...[K] So that's what we need.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Phione Dew...[K] So that's what we need.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey, [CS:N]Chatot[CR].[K] Where do we find this Phione Dew stuff?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hey, [CS:N]Chatot[CR].[K] Can you tell us where we can find Phione Dew?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Say, [CS:N]Chatot[CR].[K] Where can we find Phione Dew?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There are Pokémon called [CS:N]Phione[CR] that drift along the sea. They are said to produce Phione Dew.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I believe the [CS:N]Phione[CR] live in an area to the west called the [CS:P]Miracle Sea[CR].
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Gotcha. The [CS:P]Miracle Sea[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK. The [CS:P]Miracle Sea[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK. The [CS:P]Miracle Sea[CR] it is!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We have to find the [CS:N]Phione[CR], no matter what, [hero]! It's the only way we can save [CS:N]Manaphy[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We have to find the [CS:N]Phione[CR], no matter what, [hero]! It's the only way we can save [CS:N]Manaphy[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We have to find the [CS:N]Phione[CR], no matter what, [hero]! It's the only way we can save [CS:N]Manaphy[CR]!
+		Argument: message_Close
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: worldmap_SetMode
+		Argument: 4
+	Identifier: worldmap_SetLevel
+		Argument: 8
+	Identifier: back2_SetMode
+		Argument: 3
+	Identifier: WaitSubScreen
+	Identifier: worldmap_SetCamera
+		Argument: 52
+	Identifier: worldmap_BlinkMark
+		Argument: 52
+	Identifier: worldmap_SetArrow
+		Argument: 52
+	Identifier: me_Play
+		Argument: 6
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]You can now go to [CN]the [CS:P]Miracle Sea[CR]!
+	Identifier: WaitMe
+		Argument: 6
+	Identifier: message_Close
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: dungeon_mode
+		Argument: 51
+		Argument: DMODE_OPEN
+	Identifier: supervision_LoadStation
+		Argument: LEVEL_H02P99A
+		Argument: US03
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Station
+		Argument: 16
+	Identifier: supervision_Station
+		Argument: 20
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Command: end

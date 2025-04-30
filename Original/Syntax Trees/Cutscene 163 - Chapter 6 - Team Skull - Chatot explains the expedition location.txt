@@ -1,0 +1,243 @@
+def 0:
+	Identifier: switch
+		Argument: ProcessSpecial
+		Argument: PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY
+		Argument: 0
+		Argument: 0
+	Array accessor
+		Array: $PERFORMANCE_PROGRESS_LIST
+		Index: 5
+		Value: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WIGGLYTUFFS_GUILD
+		Argument: 0
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Good. ♪ You appear to be in full readiness. ♪
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: When the other apprentices assemble, I shall commence the briefing. Until then, just wait. ♪
+	Identifier: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P04A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: Wait
+		Argument: 30
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WIGGLYTUFFS_GUILD_REMIX
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: All accounted for, it appears.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Well then. Let me explain about this expedition. ♪
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: First, the objective: exploration of [CS:P]Fogbound Lake[CR].
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 0
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:P]Fogbound Lake[CR]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:P]Fogbound Lake[CR]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:P]Fogbound Lake[CR]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_RC_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Correct. It is a lake that is said to be located far to the east.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: However, it is perpetually enshrouded by a dense fog. As such, its actual existence has never been confirmed...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It is merely the foggy mirage of a spot that lives to this day on rumor alone.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It is also rumored...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: A treasure of exquisite beauty is hidden there! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 0
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Wow! Treasure?! We're going on a treasure hunt!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Wow! Treasure?! We're going on a treasure hunt!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Wow! Treasure?! We're going on a treasure hunt!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This is so exciting!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This is so exciting!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This is so exciting!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yup! It will be fun, fun, fun! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SUKATANKU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 0
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: (Chaw-haw-haw.)
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Everyone, open your Wonder Maps, please.
+	Identifier: message_Close
+	Identifier: se_Play
+		Argument: 6667
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 15
+	Command: end

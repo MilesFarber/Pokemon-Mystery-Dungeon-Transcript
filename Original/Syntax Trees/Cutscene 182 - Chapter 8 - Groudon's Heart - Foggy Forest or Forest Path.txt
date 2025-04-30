@@ -1,0 +1,257 @@
+def 0:
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Are you ready, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Are you ready, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Are you ready, [hero]?
+		Argument: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Argument: english
+		Dialogue: Yes
+		Argument: default
+		Argument: label_0
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Which way should we go?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Which way should we go?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Which way should we go?
+		Argument: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Argument: english
+		Dialogue: [CS:P]Foggy Forest[CR]
+		Argument: default
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: All right. [CS:P]Foggy Forest[CR] it is.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: All right. [CS:P]Foggy Forest[CR] it is.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: All right. [CS:P]Foggy Forest[CR] it is.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: All right! Let's go!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: All right! Let's go!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: All right! Let's go!
+		Argument: message_Close
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 37.5
+			Identifier: 10.5
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 37.5
+			Identifier: 10.5
+	Identifier: Wait
+		Argument: 20
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 30
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Identifier: main_EnterDungeon
+		Argument: 12
+		Argument: 0
+	Identifier: switch
+		Argument: message_Menu
+		Argument: MENU_DUNGEON_INITIALIZE_TEAM
+		Argument: main_EnterDungeon
+		Argument: 1
+		Argument: 0
+	Identifier: hold
+	Identifier: case
+		Argument: menu
+		Argument: english
+		Dialogue: [CS:P]Forest Path[CR]
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: OK, [CS:P]Forest Path[CR] it is.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK, [CS:P]Forest Path[CR] it is.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK, [CS:P]Forest Path[CR] it is.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: OK! Let's go!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK! Let's go!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK! Let's go!
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 37.5
+			Identifier: 10.5
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 37.5
+			Identifier: 10.5
+	Identifier: Wait
+		Argument: 20
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 30
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Identifier: main_EnterDungeon
+		Argument: 13
+		Argument: 0
+	Identifier: switch
+		Argument: message_Menu
+		Argument: MENU_DUNGEON_INITIALIZE_TEAM
+		Argument: main_EnterDungeon
+		Argument: 1
+		Argument: 0
+	Identifier: hold
+	Identifier: break
+	Identifier: case
+		Argument: menu
+		Argument: english
+		Dialogue: Not yet
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: All right. We'll get moving when you're ready.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: All right. We'll get moving when you're ready.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: All right. We'll get moving when you're ready.
+		Argument: message_Close
+	Command: end

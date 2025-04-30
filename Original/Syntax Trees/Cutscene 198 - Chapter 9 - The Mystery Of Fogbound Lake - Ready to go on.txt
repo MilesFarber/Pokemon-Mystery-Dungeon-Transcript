@@ -1,0 +1,84 @@
+def 0:
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]Would you like to go on?
+	Identifier: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Argument: english
+		Dialogue: Yes
+		Argument: default
+		Argument: label_0
+	Identifier: message_Close
+	Identifier: if
+		Argument: scn
+		Argument: SCENARIO_MAIN
+		Argument: 11
+		Argument: 3
+		Argument: bgm_FadeOut
+		Argument: 60
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: WaitBgm
+		Argument: BGM_UPPER_STEAM_CAVE
+	Identifier: supervision_ExecuteCommon
+		Argument: CORO_EVENT_M10_07
+	Identifier: hold
+	Identifier: else
+		Argument: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 28.5
+			Identifier: 2.5
+	Identifier: Wait
+		Argument: 15
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 28.5
+			Identifier: 2.5
+	Identifier: Wait
+		Argument: 20
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: main_EnterDungeon
+		Argument: 15
+		Argument: 0
+	Identifier: main_EnterDungeon
+		Argument: 1
+		Argument: 0
+	Identifier: hold
+	Identifier: break
+	Identifier: case
+		Argument: menu
+		Argument: english
+		Dialogue: No
+		Argument: message_Close
+	Command: end

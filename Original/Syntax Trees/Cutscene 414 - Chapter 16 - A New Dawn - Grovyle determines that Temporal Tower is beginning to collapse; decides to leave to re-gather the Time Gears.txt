@@ -1,0 +1,820 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 34.5
+			Identifier: 21
+	Identifier: se_Play
+		Argument: 8978
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I'm back.[K] I got some news like you wanted.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I'm back.[K] I've got some news like you wanted.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I'm back.[K] I've got some news like you wanted.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: What's the word?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The word is...[K]not very good.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The word is...[K]not very good.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The word is...[K]not very good.
+		Argument: message_KeyWait
+	Identifier: bgm2_ChangeVolume
+		Argument: 120
+		Argument: 128
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_I_SAW_SOMETHING_AGAIN
+		Argument: 0
+		Argument: 256
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: After we went to the future...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: After we went to the future...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: After we went to the future...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Uxie[CR] and his friends put back the Time Gears in their original places.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Uxie[CR] and his friends returned the Time Gears to their rightful places.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Uxie[CR] and his friends put back the Time Gears in their original places.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Everyone was happy because they thought time would return to normal.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Everyone was happy because they thought time would return to normal.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Everyone was happy because they thought time would return to normal.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But time remained stuck in those places.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But the time remained stopped in those places.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But time stayed stopped in those places.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Even worse, it's spreading. Time is stopping in more and more places.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Even worse, it's spreading. Time is stopping in more places.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Even worse, it's spreading. Time is stopping in more and more places.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Is that true?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yup.[K] Everyone's up in arms because no one can figure out what's going on.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes.[K] Everyone's upset and concerned because no one can figure out what the problem is.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yep.[K] Everyone's upset because no one can tell what's going on.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Grovyle[CR], do you know what's going on?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Grovyle[CR], do you know what this means?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Grovyle[CR], do you know what this means?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ..................
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: If time is stopping in a spreading area...[K]it can only mean one thing.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:P]Temporal Tower[CR] is starting to collapse.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:P]Temporal Tower[CR] is...[K]collapsing?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:P]Temporal Tower[CR] is...[K]collapsing?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:P]Temporal Tower[CR] is...[K]collapsing?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Correct.[K] [CS:P]Temporal Tower[CR] gives structure to time. So if it is starting to collapse...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: time itself will collapse in ever-widening areas.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: This is bad. The problem is accelerating.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The planet's paralysis is coming on fast.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What?! But...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What?! But...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What?! But...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We have to hurry, then!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We have to hurry, then!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We have to hurry, then!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That's right. If we don't hurry, the planet will become fully paralyzed.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There's only one way to stop the destruction of time now.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We need to gather Time Gears...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Then the Time Gears must be put in place in [CS:P]Temporal Tower[CR] where [CS:N]Dialga[CR] lives.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But there is a problem.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:P]Temporal Tower[CR] is located in a place called the [CS:P]Hidden Land[CR].
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: As the name suggests...[K]no one knows where the [CS:P]Hidden Land[CR] is.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But...[K]there isn't any time!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But...[K]there isn't any time!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But...[K]there isn't any time!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: bgm2_ChangeVolume
+		Argument: 120
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That's right.[K] That's why I think we need to split up for now.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I'll go collect the Time Gears.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: In the meantime, I want you two to search for the [CS:P]Hidden Land[CR].
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Gotcha.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Understood.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Are you OK with that, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Is that OK, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Is that OK, [hero]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: OK then. You're in charge.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The [CS:P]Hidden Land[CR] is supposedly somewhere in this world.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Unfortunately, there are no clues as to where it is exactly.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Considering that no one has discovered it yet...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We should probably assume that it is quite far away.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We must even consider crossing the sea. And discover the means to do so!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Cross the sea...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Cross the sea...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Cross the sea...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I'm sorry I don't have knowledge about how to do that.[K] I'm counting on you.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Well, I'll be off to gather the Time Gears.[K] Good luck.
+	Identifier: message_Close
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 0.7969
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 34.5
+			Identifier: 17.5
+	Identifier: Wait
+		Argument: 10
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 8
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Wait
+		Argument: 15
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+	Identifier: Wait
+		Argument: 90
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 2
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Now...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Now...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Now...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We should go searching too.[K] Let's find the [CS:P]Hidden Land[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We should go searching too.[K] Let's find the [CS:P]Hidden Land[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We should go searching too.[K] Let's find the [CS:P]Hidden Land[CR]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 60
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: .....................
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: .....................
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: .....................
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8961
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROP
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So...[K]where should we begin looking?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So...[K]where shall we begin looking?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So...[K]where should we begin looking?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Umm...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Umm...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Umm...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: As a start, why don't we think about how we can cross the sea?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: For the time being, why don't we consider how we can cross the sea?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: As a start, why don't we think about how we can cross the sea?
+		Argument: message_Close
+	Identifier: bgm2_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 60
+	Identifier: WaitBgm2
+		Argument: BGM_OCEAN1
+	Command: end

@@ -1,0 +1,118 @@
+def 0:
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Why are you daydreaming?[K] It's not like you, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Why are you daydreaming?[K] It's not like you, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Why are you daydreaming?[K] It's not like you, [hero].
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Come on, let's see some energy, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Come on, let's see some energy, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Come on, let's see some energy, [hero]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: ([partner]'s even peppier than usual.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ([partner]'s even peppier than usual.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (But...[K][partner] could be right.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (But...[K][partner] could be right.)
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Command: end

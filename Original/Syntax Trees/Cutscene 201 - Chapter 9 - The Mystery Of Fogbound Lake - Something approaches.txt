@@ -1,0 +1,471 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetDungeonBanner
+		Argument: 16
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 16
+	Identifier: Wait
+		Argument: 60
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 16
+	Identifier: Wait
+		Argument: 15
+	Identifier: back_SetGround
+		Argument: LEVEL_D10P41A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 38
+			Identifier: 28.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 43
+			Identifier: 28.5
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We've climbed way up!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We've climbed far up!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We've climbed far up!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This place...[K] It feels...[K] It feels strange somehow...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This place...[K] It feels...[K] It feels strange somehow...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This place...[K] It feels...[K] It feels strange somehow...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The air is full of tension!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The very air is charged with tension!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The very air is charged with tension!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's making my skin crawl...[K] all over...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's making my skin crawl...[K] all over...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's making my skin crawl...[K] all over...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I feel like I'm being crushed...[K] by a terrible sense of danger...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I feel like I'm being crushed...[K] by a terrible sense of danger...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I feel like I'm being crushed...[K] by a terrible sense of danger...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 10
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 6930
+	Identifier: message_ImitationSound
+		Argument: english
+		Dialogue: GRROOOOOOH...GRROOOOOOH...!
+	Identifier: WaitSe
+		Argument: 6930
+	Identifier: message_CloseEnforce
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Eep!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Eep!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Eep!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's that sound we heard earlier, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's that sound we heard earlier, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's that sound we heard earlier, [hero]!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I knew it![K] It was roaring!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Just as I thought![K] It was the sound of roaring!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I thought it might...[K]be roaring! And it is!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 10
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 6930
+	Identifier: message_ImitationSound
+		Argument: english
+		Dialogue: GRROOOOOOH...!
+	Identifier: WaitSe
+		Argument: 6930
+	Identifier: message_CloseEnforce
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 6915
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 2
+		Argument: 2.0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 3
+	Identifier: MoveHeight
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+		Argument: 5
+	Identifier: MoveHeight
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+		Argument: 5
+	Identifier: Wait
+		Argument: 1
+	Identifier: MoveHeight
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+		Argument: 0
+	Identifier: MoveHeight
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+		Argument: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Wait
+		Argument: 15
+	Identifier: camera_SetEffect
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: Wait
+		Argument: 60
+	Identifier: se_Play
+		Argument: 6915
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 2
+		Argument: 2.0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 3
+	Identifier: MoveHeight
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+		Argument: 5
+	Identifier: MoveHeight
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+		Argument: 5
+	Identifier: Wait
+		Argument: 1
+	Identifier: MoveHeight
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+		Argument: 0
+	Identifier: MoveHeight
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+		Argument: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Wait
+		Argument: 15
+	Identifier: camera_SetEffect
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_STUNNED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: S-s-something is...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: S-s-something is...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: S-s-something is...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...is...[K]coming!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...is...[K]coming!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...is...[K]coming!
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 15
+	Command: end

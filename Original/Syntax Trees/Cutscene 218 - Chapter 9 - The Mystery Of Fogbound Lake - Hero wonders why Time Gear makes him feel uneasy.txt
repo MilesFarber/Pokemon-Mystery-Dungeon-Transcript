@@ -1,0 +1,73 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_RESTORED
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_V03P09A
+	Identifier: back_SetBackScrollSpeed
+		Argument: 3
+		Argument: 3
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: back_SetEffect
+		Argument: 7
+		Argument: 0
+	Identifier: back_SetBackEffect
+		Argument: 2
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (When I see that Time Gear...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (When I see that Time Gear...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Why does my pulse race when I see it?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Why does my pulse race when I see it?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (And this unease I feel...[K] What does it mean?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (And this unease I feel...[K] What does it mean?)
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 180
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 90
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Identifier: Wait
+		Argument: 30
+	Command: end

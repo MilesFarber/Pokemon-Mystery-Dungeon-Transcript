@@ -1,0 +1,243 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ugh! We blew that attempt.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ugh! We couldn't break through.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ugh! That wasn't so good.
+		Argument: message_KeyWait
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 60
+	Identifier: message_CloseEnforce
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Identifier: back_SetGround
+		Argument: LEVEL_D25P11A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_LoadStation
+		Argument: LEVEL_D25P11A
+		Argument: UM23
+	Identifier: supervision_Station
+		Argument: 5
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: Wait
+		Argument: 1
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 2
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DAGUTORIO
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_BRINE_CAVE
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: WaitLockLives
+		Argument: 5
+		Argument: ACTOR_PLAYER
+	Identifier: Unlock
+		Argument: 5
+	Identifier: Wait
+		Argument: 15
+	Identifier: Unlock
+		Argument: 7
+	Identifier: Lock
+		Argument: 3
+	Identifier: Wait
+		Argument: 15
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ugh! This is pretty rough going.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ugh! This is pretty difficult.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ugh! This is kind of rough.
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But I'm worried about [CS:N]Chatot[CR].[K] We can't waste any time.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But I'm worried about [CS:N]Chatot[CR].[K] We have to hurry.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But I'm worried about [CS:N]Chatot[CR].[K] We've got to hurry.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: There's no giving up!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There's no giving up!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: There's no giving up!
+		Argument: message_Close
+	Command: end
+	Identifier: def
+		Argument: 1
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_PLAYER
+		Argument: SetPositionInitial
+	Identifier: SetDirection
+		Argument: DIR_RIGHT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 5
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_DOWN_FUNC
+	Identifier: Lock
+		Argument: 6
+	Identifier: hold
+	Identifier: def
+		Argument: 2
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_ATTENDANT1
+		Argument: SetPositionInitial
+	Identifier: SetDirection
+		Argument: DIR_LEFT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 7
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_FUNC
+	Identifier: Unlock
+		Argument: 3
+	Identifier: Lock
+		Argument: 8
+	Identifier: hold
+def 1:
+	Target: actor ACTOR_PLAYER
+	Identifier: SetPositionInitial
+	Identifier: SetDirection
+		Argument: DIR_RIGHT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 5
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_DOWN_FUNC
+	Identifier: Lock
+		Argument: 6
+	Identifier: hold
+	Identifier: def
+		Argument: 2
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_ATTENDANT1
+		Argument: SetPositionInitial
+	Identifier: SetDirection
+		Argument: DIR_LEFT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 7
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_FUNC
+	Identifier: Unlock
+		Argument: 3
+	Identifier: Lock
+		Argument: 8
+	Identifier: hold

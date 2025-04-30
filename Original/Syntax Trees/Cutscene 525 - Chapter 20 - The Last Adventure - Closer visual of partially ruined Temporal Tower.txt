@@ -1,0 +1,83 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_RESTORED
+		Argument: 0
+		Argument: 200
+	Identifier: back_SetGround
+		Argument: LEVEL_V26P03A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 60
+	Identifier: message_SetActor
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's [CS:P]Temporal Tower[CR].[K] It looks pretty beaten up...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's [CS:P]Temporal Tower[CR].[K] It seems to be badly damaged...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's [CS:P]Temporal Tower[CR].[K] It's wrecked all over...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But...[K]it's still standing!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But...[K]it's still standing!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But...[K]it's still standing!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:P]Temporal Tower[CR] didn't fall apart...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:P]Temporal Tower[CR] didn't collapse...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:P]Temporal Tower[CR] didn't break apart...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It survived!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It survived!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It survived!
+		Argument: message_Close
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 30
+	Command: end

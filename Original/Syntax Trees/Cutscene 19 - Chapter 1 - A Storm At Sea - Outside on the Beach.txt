@@ -1,0 +1,1533 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V01P03B
+	Identifier: back_SetGround
+		Argument: LEVEL_D01P11B
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 33
+			Identifier: 9.5
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 160
+		Argument: 256
+	Identifier: screen2_FadeIn
+		Argument: 0
+		Argument: 30
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 45
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Really, thank you!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Thank you! Seriously!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Thank you very much!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (............)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (............)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I only helped because I happened to be there... Was that the right thing to do?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I only helped because I happened to be there... Was that the right thing to do?)
+		Argument: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I guess so.[K] This Pokémon is clearly grateful.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I guess so.[K] This Pokémon is clearly grateful.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It's nice to be appreciated.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It's nice to be appreciated.)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 12
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 6410
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 12
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Here's what they stole.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Here's what they stole.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Here's what they stole.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This is a Relic Fragment.[K] ...Well, at least, that's what I started calling it...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This is a Relic Fragment.[K] ...Well, at least, that's what I started calling it...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This is a Relic Fragment.[K] ...Well, at least, that's what I started calling it...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But this Relic Fragment...[K] It's my precious treasure.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But this Relic Fragment...[K] It's my precious treasure.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But this Relic Fragment...[K] It's my precious treasure.
+		Argument: message_KeyWait
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_ON_THE_BEACH_AT_DUSK
+		Argument: 0
+		Argument: 256
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You see, I've always liked legends and lore...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You see, I've always liked legends and lore...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You see, I've always liked legends and lore...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I always get so excited when I hear tales from the past!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I always get so excited when I hear tales from the past!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I always get so excited when I hear tales from the past!
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_KeyWait
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Don't you feel the same way?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Don't you feel the same way?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Don't you feel the same way?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hidden troves full of treasure and strange relics...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hidden troves full of treasure and strange relics...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hidden troves full of treasure and strange relics...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 10
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...uncharted territories veiled in darkness...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...uncharted territories veiled in darkness...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...uncharted territories veiled in darkness...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...and new lands just waiting to be discovered!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...and new lands just waiting to be discovered!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...and new lands just waiting to be discovered!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Such places must be full of gold and treasure!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Such places must be full of unimaginable gold and treasure!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Such places must be full of gold and treasure!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: And history! Wouldn't it be amazing to make historic discoveries?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: And history! Wouldn't it be amazing to make historic discoveries?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And history! Wouldn't it be dramatic to make historic discoveries?
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I always dream about that. It's all exciting to me.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's what I always dream of. It's all exciting to me.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's what I always dream of. It's all so exciting to me.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 20
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So one day...[K]I happened to find something... My Relic Fragment.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So one day...[K]I happened to come across my Relic Fragment.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And it just so happened...[K]that I found this Relic Fragment.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Sure, it looks like junk, but take a closer look...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I admit that it looks like junk, but take a closer look.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Sure, it does look like junk, but take a closer look.
+		Argument: message_Close
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 4
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.5
+		Argument: 4
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: back2_SetGround
+		Argument: LEVEL_V01P06B
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 21
+			Identifier: 15
+	Identifier: screen2_FadeIn
+		Argument: 1
+		Argument: 15
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: See?[K] See that strange pattern inscribed on it?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: See?[K] That inscription forms a strange pattern, doesn't it?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Look there.[K] See that strange pattern inscribed on it?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It's true. There is a strange inscription.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It's true. There is a strange inscription.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I've never seen a pattern like this.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I've never seen a pattern like this.)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This pattern must have some meaning to it. I'm sure of it.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There must be some significance to this pattern.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: There must be some meaning to this pattern.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This Relic Fragment must be the key to legendary places! To areas where precious treasure lies!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This Relic Fragment must be the key to legendary places! To areas where precious treasure lies!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This Relic Fragment must be the key to legendary places! To areas where precious treasure lies!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: At least that's the feeling I get.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: At least that's the feeling I get.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: At least that's the feeling I get.
+		Argument: message_Close
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: back2_SetGround
+		Argument: LEVEL_V01P03B
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 33
+			Identifier: 9.5
+	Identifier: screen2_FadeIn
+		Argument: 1
+		Argument: 15
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That's why I want to join an exploration team.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's why I want to join an exploration team.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's why I want to join an exploration team.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This fragment must fit into something...somewhere! I want to discover where that is.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This fragment must fit into something...somewhere! I want to discover where that is.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This fragment must fit into something...somewhere! I want to discover where that is.
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_KeyWait
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I want to solve the mystery of my Relic Fragment!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I want to solve the mystery of my Relic Fragment!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I want to solve the mystery of my Relic Fragment!
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_KeyWait
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So earlier, I tried joining an exploration team as an apprentice...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So earlier, I tried joining an exploration team as an apprentice...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So earlier, I tried joining an exploration team as an apprentice...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionTurn
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 1
+		Argument: 3
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But...[K]I chickened out.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But...[K]I chickened out.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But...[K]I was too cowardly...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 60
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What about you, [hero]? What are you going to do now?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What about you, [hero]? What are you going to do now?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What about you, [hero]? What are you going to do now?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You lost your memory. And you somehow transformed into a Pokémon...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You lost your memory. And you somehow transformed into a Pokémon...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You lost your memory. And you somehow transformed into a Pokémon...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Do you have anywhere to go and stay after this?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Do you have anywhere to go and stay after this?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Do you have anyplace where you can stay?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (............)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (............)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: If not, can I ask a big favor?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: If not, can I ask a big favor?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: If not, can I ask a big favor?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Would you join me to make an exploration team?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Would you be willing to form an exploration team with me?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Would you form an exploration team with me?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I think you and I would make a good exploration team, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I'm convinced that I can form an effective exploration team with you, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I think we could make a good exploration team together, [hero].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So, how about it?[K] Come on, please?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So will you?[K] Please?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So will you do that with me?[K] Please?
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Whoa! What should I do?[K] I'm getting recruited out of the blue!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Wah! What should I do?[K] I'm getting recruited out of the blue!)
+		Argument: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_KeyWait
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I don't know what an exploration team is...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I don't know what an exploration team is...)
+		Argument: message_SetActor
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (What should I do?[K] Should I join this Pokémon and form an exploration team?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (What should I do?[K] Should I join this Pokémon and form an exploration team?)
+		Argument: label_3
+	Command: forever
+	Identifier: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Argument: english
+		Dialogue: Form a team
+		Argument: break_loop
+	Identifier: break
+	Identifier: case
+		Argument: menu
+		Argument: english
+		Dialogue: Say no
+		Argument: default
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh? Oh, come on!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What?! Oh, but...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What?! Oh, please!
+		Argument: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_KeyWait
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But I'm braver when I'm with you, [hero]...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But I'm braver when I'm with you, [hero]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But I'm braver when I'm with you, [hero]...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: And you were awesome when we beat [CS:N]Koffing[CR] and his buddy.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You were so fantastic when we confronted [CS:N]Koffing[CR] and his sidekick.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And you were fantastic when we faced [CS:N]Koffing[CR] and his sidekick.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: When I saw that, I realized you're no ordinary Pokémon, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: When I saw that, I realized you're no ordinary Pokémon, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: When I saw that, I realized you're no ordinary Pokémon, [hero]!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I thought that you'd make a first-class explorer, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I became convinced that you'd make a first-class explorer, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I thought that you could be a first-class explorer, [hero].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So come on now.[K] Let's form an exploration team together.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So, please?[K] Will you please form an exploration team with me?
+		Command: continue
+	Identifier: may
+		Argument: be
+		Argument: redundant
+		Argument: case
+		Argument: menu
+		Argument: english
+		Dialogue: Are you...?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh? [K]Am I what?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Huh? [K]Am I what?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Huh? [K]Am I what?
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What do you mean, [K]\"Are you...?\
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What do you mean, [K]\"Are you...?\
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What do you mean, [K]\"Are you...?\
+		Argument: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Argument: english
+		Dialogue: You're trying to talk me into it?
+		Argument: default
+		Argument: break
+	Identifier: label_4
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What?! [K]Talk you into it?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What?! [K]Talk you into it?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What?! [K]Talk you into it?!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I wasn't trying to do anything!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I didn't even think of it!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The thought never crossed my mind!
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Well, I'm a complete coward...[K] Honestly...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Well, I'm a complete coward...[K] Honestly...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Well, I'm a complete coward...[K] Honestly...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I mean, yes, I thought I could depend on you, [hero]...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I mean, yes, I thought I could depend on you, [hero]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I mean, yes, I thought I could depend on you, [hero]...
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But during that fight with [CS:N]Koffing[CR] earlier...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But during that fight with [CS:N]Koffing[CR] earlier...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But during that fight with [CS:N]Koffing[CR] earlier...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Having you there with me, I felt really brave.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Having you there with me, I felt really brave.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Having you there with me, I felt really brave.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I think I could do anything as long as you're helping me, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I think I could do anything as long as you're helping me, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I think I could do anything as long as you're helping me, [hero].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
+		Command: continue
+	Identifier: may
+		Argument: be
+		Argument: redundant
+		Argument: label_0
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It's true, I do have nowhere to go...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It's true, I do have nowhere to go...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I don't have any clue what I should do next.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I don't have any clue what I should do next.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I guess it wouldn't hurt to team up with [partner] for now.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I guess it wouldn't hurt to team up with [partner] for now.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Maybe I'll eventually discover who or what I am by hanging out with this Pokémon.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Maybe I'll eventually discover who or what I am by hanging out with this Pokémon.)
+		Argument: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (OK! That's settled!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (OK! That's settled!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_EXPLANATION_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yeah?[K] Really?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes?[K] Really?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh?[K] Really?!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You'll form an exploration team with me?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You'll form an exploration team with me?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You'll really form an exploration team with me?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_JOYOUS
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yahoo! Thanks!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes! Thank you!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yay! Thank you!
+		Argument: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_KeyWait
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We're going to make a great combination! Let's make this work!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We're going to be a great combination! Let's make this work!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We're going to be a great combination! Let's make this work!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: First, let's go to [CS:N]Wigglytuff[CR]'s place and sign up as apprentices.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: First, we should go to [CS:N]Wigglytuff[CR]'s place and sign up as apprentices.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: First, we need to go to [CS:N]Wigglytuff[CR]'s place and sign up as apprentices.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That's where we can train to become a proper exploration team.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's where we need to train to become a first-rate exploration team.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's where we can get the training to become a proper exploration team.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I think the training will be really tough...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I'm sure the training will be very tough...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I think the training will be very tough...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But let's give it our best, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But let's give it our best, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So let's give it our best, [hero]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 20
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 66
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 66
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 80
+	Identifier: bgm_FadeOut
+		Argument: 180
+	Identifier: screen2_FadeOut
+		Argument: 0
+		Argument: 90
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 90
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: bgm2_FadeOut
+		Argument: 180
+	Identifier: Wait
+		Argument: 100
+	Identifier: message_Narration
+		Argument: 30
+		Argument: english
+		Dialogue: [CN]And so...
+	Identifier: message_Narration
+		Argument: 30
+		Argument: english
+		Dialogue: [CN][partner] and [hero]...
+	Identifier: message_Narration
+		Argument: 30
+		Argument: english
+		Dialogue: [CN]formed an exploration team.
+	Identifier: message_Narration
+		Argument: 30
+		Argument: english
+		Dialogue: [CN]This turned out to be...
+	Identifier: message_Narration
+		Argument: 30
+		Argument: english
+		Dialogue: [CN]their very first step into...
+	Identifier: message_Narration
+		Argument: 30
+		Argument: english
+		Dialogue: [CN]many fantastic realms of adventure [CN]that awaited their arrival.
+	Identifier: message_Close
+	Identifier: Wait
+		Argument: 60
+	Identifier: switch
+		Argument: message_Menu
+		Argument: MENU_DUNGEON_TEAM_RETURNS_FROM_MAP
+		Command: end

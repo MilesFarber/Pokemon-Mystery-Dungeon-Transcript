@@ -1,0 +1,147 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_IN_THE_HANDS_OF_FATE
+		Argument: 0
+		Argument: 256
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V21P02B
+	Identifier: back_SetGround
+		Argument: LEVEL_H01P99E
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 20
+			Identifier: 18.5
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm2_ChangeVolume
+		Argument: 140
+		Argument: 190
+	Identifier: screen2_FadeIn
+		Argument: 0
+		Argument: 30
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That was it...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That was it...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That was it...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I could be brave because you were always with me, [hero]...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I managed to be brave because you were always with me, [hero]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I managed to be brave because you were always with me, [hero]...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That was when I finally understood that.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That was when I finally realized that.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That was when I finally realized that.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: And that's what I told [CS:N]Grovyle[CR].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: And that's what I told [CS:N]Grovyle[CR].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And that's what I told [CS:N]Grovyle[CR].
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 22
+			Identifier: 16.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 45
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_TOP_LC_FACEOUTW
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Just before we lost [CS:N]Grovyle[CR] in the [CS:P]Hidden Land[CR]...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Just before we lost [CS:N]Grovyle[CR] in the [CS:P]Hidden Land[CR]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Just before we lost [CS:N]Grovyle[CR] in the [CS:P]Hidden Land[CR]...
+		Argument: message_Close
+	Identifier: bgm2_ChangeVolume
+		Argument: 140
+		Argument: 0
+	Identifier: screen2_FadeOut
+		Argument: 0
+		Argument: 30
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: back2_SetMode
+		Argument: 0
+	Command: end

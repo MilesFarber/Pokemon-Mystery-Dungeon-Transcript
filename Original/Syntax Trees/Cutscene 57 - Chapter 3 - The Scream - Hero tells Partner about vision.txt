@@ -1,0 +1,556 @@
+def 0:
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: back_SetGround
+		Argument: LEVEL_T01P01A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_StationCommon
+		Argument: 99
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: supervision_LoadStation
+		Argument: LEVEL_T01P01A
+		Argument: UM03
+	Identifier: supervision_Station
+		Argument: 10
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 5
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 8973
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: WaitSe
+		Argument: 8973
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GROWING_ANXIETY
+		Argument: 0
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEOUTW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (What was that?!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (What was that?!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I sure hope those kids find their item soon.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It would be nice if those little guys found their item soon.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It would be nice if those cute little guys found their item soon.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 20
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_RIGHT
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh? What's up, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Huh? What's the matter, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Huh? Is anything the matter, [hero]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 1
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What's with that grim look?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You're looking awfully grim...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Why are you looking so grim?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_EXPLANATION_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...Hmm?[K] You want to tell me something?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...Hmm?[K] You want to tell me something?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...Hmm?[K] You want to tell me something?
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 60
+	Identifier: SetPositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 65
+			Identifier: 27.5
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 67
+			Identifier: 27.5
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 63
+			Identifier: 27.5
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: DIR_LEFT
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_RIGHT
+	Identifier: Wait
+		Argument: 60
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What? You had a dizzy spell?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What? You had a dizzy spell?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What? You had a dizzy spell?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Then you saw [CS:N]Azurill[CR] being threatened by [CS:N]Drowzee[CR]?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Then you saw [CS:N]Azurill[CR] being threatened by [CS:N]Drowzee[CR]?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Then you saw [CS:N]Azurill[CR] being threatened by [CS:N]Drowzee[CR]?!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So you want to go rescue [CS:N]Azurill[CR] right away?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So you want to go rescue [CS:N]Azurill[CR] right away?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So you want to go rescue [CS:N]Azurill[CR] right away?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's an...emergency?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's an...emergency?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's an...emergency?!
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Well, what you describe does sound like an emergency, but...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Well, what you describe does sound like an emergency, but...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Well, what you describe does sound like an emergency, but...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Well, it's not like I don't trust you, [hero], but...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Well, it's not like I don't trust you, [hero], but...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Well, it's not like I don't trust you, [hero], but...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I just can't believe it!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I just can't believe it!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I just can't believe it!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I mean, [CS:N]Drowzee[CR] looked like an honestly nice Pokémon, didn't he?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: After all, [CS:N]Drowzee[CR] seemed to be a sincerely nice Pokémon, didn't he?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: After all, [CS:N]Drowzee[CR] seemed to be a sincerely nice Pokémon, didn't he?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I watched the three of them go off earlier...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I watched the three of them go off earlier...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I saw the three of them go off together earlier...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: They looked like they were having a good time, didn't they?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: They looked like they were having a good time, didn't they?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: They looked like they were having a good time, didn't they?
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You're probably just tired, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You're probably just tired, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You're probably just tired, [hero].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Maybe that's why you just had that bad daydream.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Maybe that's why you just had that bad daydream.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Maybe that's why you just had that bad daydream.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Was that it...?[K] Just a bad daydream?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Was that it...?[K] Just a bad daydream?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (But come to think of it...[K] That [CS:N]Drowzee[CR] didn't seem like a bad Pokémon.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (But come to think of it...[K] That [CS:N]Drowzee[CR] didn't seem like a bad Pokémon.)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Anyway, we're only apprentices. We can't just go running off on our own.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Anyway, we're only apprentices. We can't just go do whatever we want.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Anyway, we're only apprentices. We can't just go off on our own.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Sure, it's worrying, but...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Sure, it's worrying, but...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Sure, it's a little odd, but...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We have to focus on our guild work for now.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We have to concentrate on our guild work for now.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We have to focus on our guild work for now.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's get ready to explore, then meet up with [CS:N]Bidoof[CR].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's get ourselves ready to explore. Then we should find [CS:N]Bidoof[CR].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's get all set for exploring, then go meet up with [CS:N]Bidoof[CR].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Bidoof[CR] said he'd be waiting for us on the guild's upper underground floor.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Bidoof[CR]'s supposed to be waiting for us on the guild's upper underground floor.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Bidoof[CR] should be waiting for us on the guild's upper underground floor.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's get to it, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's go, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's go, [hero]!
+		Argument: message_Close
+	Identifier: MovePositionLives
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TREASURE_TOWN
+		Argument: 0
+		Argument: 256
+	Command: end

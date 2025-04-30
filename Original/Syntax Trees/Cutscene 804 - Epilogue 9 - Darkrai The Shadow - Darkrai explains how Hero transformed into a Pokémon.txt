@@ -1,0 +1,76 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_HIDDEN_HIGHLAND
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_D41P41A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DAAKURAI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: However, [CS:N]Grovyle[CR] and [hero] decided to meddle.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I learned of their impending arrival from the future...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: And I attacked [CS:N]Grovyle[CR] and [hero] as they traveled in time...[K] So that I would be rid of them.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But...[K]an unforeseen event made it impossible to be rid of either of them.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It should have been enough.[K] Especially for [CS:N]Grovyle[CR].[K] However...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Do you know how you came to be a Pokémon, [hero]?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: During the accident...[K]you shielded [CS:N]Grovyle[CR] from my attack.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I shielded [CS:N]Grovyle[CR]...?!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I shielded [CS:N]Grovyle[CR]...?!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DAAKURAI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yes, you absorbed the brunt of the attack I'd intended for [CS:N]Grovyle[CR]...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It appears your fierce will to protect your partner became entangled with the many dimensions during your time travel.
+	Identifier: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

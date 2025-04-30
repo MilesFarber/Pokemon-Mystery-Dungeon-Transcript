@@ -1,0 +1,414 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_P02P01A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: Wait
+		Argument: 1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 69
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 69
+	Identifier: ResetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 256
+	Identifier: ResetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 256
+	Identifier: ResetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 256
+	Identifier: ResetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 256
+	Identifier: ResetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YARUKIMONO
+		Argument: 256
+	Identifier: ResetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANKII
+		Argument: 256
+	Identifier: ResetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_OKORIZARU
+		Argument: 256
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_STUCK_IN_YELLOW_WATER
+		Argument: 4
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_STUCK_IN_YELLOW_WATER
+		Argument: 4
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: EFFECT_STUCK_IN_YELLOW_WATER
+		Argument: 4
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA
+		Argument: EFFECT_STUCK_IN_YELLOW_WATER_DEEP
+		Argument: 4
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YARUKIMONO
+		Argument: EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM
+		Argument: 4
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANKII
+		Argument: EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM2
+		Argument: 4
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_OKORIZARU
+		Argument: EFFECT_STUCK_IN_YELLOW_WATER_DEEP2
+		Argument: 4
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 60
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 32.5
+			Identifier: 27
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh? What...? Where are we?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Huh? What...? Where are we?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Huh? What...? Where are we?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 27.5
+			Identifier: 23.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HIMEGUMA
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HIMEGUMA
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HIMEGUMA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hi, hi! Are you two OK?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You plopped down from nowhere!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Oh, you startled everyone!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 63
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 63
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 60
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: se_Play
+		Argument: 8963
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 10
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_HIMEGUMA
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Where are we?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Where are we?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Where are we?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_HIMEGUMA
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HIMEGUMA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: This is the Hot Spring.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: H-Hot Spring?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: H-Hot Spring?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: H-Hot Spring?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_HEARTWARMING
+		Argument: 0
+		Argument: 256
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOOTASU
+		Argument: 0.5
+		Argument: 56
+		Argument: 0
+	Identifier: Wait
+		Argument: 20
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANKII
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Wait
+		Argument: 10
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Wait
+		Argument: 15
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOOTASU
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 32.5
+			Identifier: 18.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KOOTASU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOOTASU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KOOTASU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Indeed! This is the Hot Spring.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The Hot Spring works wonders on tired muscles and creaky joints. Many Pokémon visit here.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Tell me, youngster, have you a map?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Map?[K] Oh, if you mean our Wonder Map, sure we do.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Map?[K] Oh, if you mean our Wonder Map, yes, we have one.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Map?[K] Oh, our Wonder Map, you mean? We have one.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KOOTASU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Unfold it for me.
+	Identifier: message_Close
+	Identifier: se_Play
+		Argument: 6667
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

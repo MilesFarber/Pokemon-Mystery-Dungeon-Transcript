@@ -1,0 +1,346 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_S04P01A
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ugh! We blew that attempt!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ugh! We didn't make it.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ugh! That ended badly.
+		Argument: message_KeyWait
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 60
+	Identifier: message_CloseEnforce
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Identifier: back_SetGround
+		Argument: LEVEL_D24P11A
+	Identifier: supervision_LoadStation
+		Argument: LEVEL_D24P11A
+		Argument: UM20
+	Identifier: supervision_Station
+		Argument: 2
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: Wait
+		Argument: 1
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TREESHROUD_FOREST
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: WaitLockLives
+		Argument: 5
+		Argument: ACTOR_PLAYER
+	Identifier: Unlock
+		Argument: 5
+	Identifier: Wait
+		Argument: 15
+	Identifier: Unlock
+		Argument: 7
+	Identifier: Wait
+		Argument: 15
+	Identifier: Unlock
+		Argument: 9
+	Identifier: Lock
+		Argument: 3
+	Identifier: Wait
+		Argument: 15
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ugh...we were careless.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ugh...we were caught being careless.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ugh...we should have been more careful.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This is pretty rough going...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This isn't quite so easy...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's harder than I thought...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I thought so.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: This place does feel different compared to my last time through.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The Pokémon here weren't so savage before.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There may be something taking place here...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ...somewhere in its depths.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ugh! We should pick up the pace then.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ugh! We'd better hurry up then.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ugh! We'd better hurry then.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: When you're ready, we have to go back into the forest, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: When you're ready, let's go back into the forest, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: When you're ready, let's go back into the forest, [hero].
+		Argument: message_Close
+	Command: end
+	Identifier: def
+		Argument: 1
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_PLAYER
+		Argument: SetDirection
+		Argument: DIR_RIGHT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 5
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_DOWN_FUNC
+	Identifier: Lock
+		Argument: 6
+	Identifier: hold
+	Identifier: def
+		Argument: 2
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_ATTENDANT1
+		Argument: SetDirection
+		Argument: DIR_LEFT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 7
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_FUNC
+	Identifier: Unlock
+		Argument: 3
+	Identifier: Lock
+		Argument: 8
+	Identifier: hold
+	Identifier: def
+		Argument: 3
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: SetAnimation
+		Argument: 29
+	Identifier: Lock
+		Argument: 9
+	Identifier: SetAnimation
+		Argument: 31
+	Identifier: WaitAnimation
+	Identifier: SetAnimation
+		Argument: 2
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC
+	Identifier: Lock
+		Argument: 10
+	Identifier: hold
+def 1:
+	Target: actor ACTOR_PLAYER
+	Identifier: SetDirection
+		Argument: DIR_RIGHT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 5
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_DOWN_FUNC
+	Identifier: Lock
+		Argument: 6
+	Identifier: hold
+	Identifier: def
+		Argument: 2
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_ATTENDANT1
+		Argument: SetDirection
+		Argument: DIR_LEFT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 7
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_FUNC
+	Identifier: Unlock
+		Argument: 3
+	Identifier: Lock
+		Argument: 8
+	Identifier: hold
+	Identifier: def
+		Argument: 3
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: SetAnimation
+		Argument: 29
+	Identifier: Lock
+		Argument: 9
+	Identifier: SetAnimation
+		Argument: 31
+	Identifier: WaitAnimation
+	Identifier: SetAnimation
+		Argument: 2
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC
+	Identifier: Lock
+		Argument: 10
+	Identifier: hold

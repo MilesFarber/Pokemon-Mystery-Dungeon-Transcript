@@ -1,0 +1,255 @@
+def 0:
+	Identifier: back_SetGround
+		Argument: LEVEL_D15P41A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 1
+		Argument: 1.0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_EARTHQUAKE3
+		Argument: 30
+		Argument: 256
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Waah! What's going on?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Waah! What's happening?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Waah! What's happening?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_EMURITTO
+		Argument: FACE_PAIN
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It's happening because the thief took the Time Gear!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: So time in this whole area...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Time will stop all around the [CS:P]Underground Lake[CR]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Excuse me?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_EMURITTO
+		Argument: FACE_PAIN
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: If we don't hurry, we'll be trapped in time!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hurry! Run with all your might!
+	Identifier: message_Close
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_EMURITTO
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.5
+		Argument: 0
+		Argument: 160
+	Identifier: Wait
+		Argument: 15
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 0
+		Argument: 160
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_EMURITTO
+		Argument: 0.5
+		Argument: 0
+		Argument: 160
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 0.5
+		Argument: 0
+		Argument: 160
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 0.5
+		Argument: 0
+		Argument: 160
+	Identifier: Wait
+		Argument: 45
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: WaitBgm
+		Argument: BGM_EARTHQUAKE3
+	Identifier: camera_SetEffect
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: worldmap_SetMode
+		Argument: 3
+	Identifier: worldmap_SetLevel
+		Argument: 3
+	Identifier: back2_SetMode
+		Argument: 3
+	Identifier: WaitSubScreen
+	Identifier: worldmap_ChangeLevel
+		Argument: 4
+	Identifier: worldmap_SetCamera
+		Argument: 22
+	Identifier: WaitSubScreen
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]The clouds lifted over [CN][CS:P]Quicksand Cave[CR] and the [CN]vicinities of the [CS:P]Arid Area[CR]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: switch
+		Argument: message_Menu
+		Argument: MENU_DUNGEON_TEAM_RETURNS_FROM_MAP
+	Array accessor
+		Array: $SCENARIO_MAIN_BIT_FLAG
+		Index: 8
+		Value: 1
+	Identifier: COMPULSORY_SAVE_POINT
+		Argument: 12
+	Identifier: CallCommon
+		Argument: CORO_HANYOU_SAVE_FUNC
+	Command: end

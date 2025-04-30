@@ -1,0 +1,416 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V02P06A
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 19.5
+			Identifier: 16.5
+	Identifier: screen2_FadeIn
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 150
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99C
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Urk![K] When we were back at the guild...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Urk![K] When we were back at the guild...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Urk![K] When we were back at the guild...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Drowzee[CR] asked us if we knew how the distortion of space could be stopped...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Drowzee[CR] asked us if we knew how the distortion of space could be stopped...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Drowzee[CR] asked us if we knew how the distortion of space could be stopped...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I lied! I didn't even think twice about it!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I lied! I didn't even think twice about it!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I lied! I didn't even think twice about it!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: As we know, there is a way to stop the distortion!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: As we know, there is a way to stop the distortion!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: As we know, there is a way to stop the distortion!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: And that way is for us to disappear from this world.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The only solution is for us to disappear from this world.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We have to disappear from the world to do it.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: How am I supposed to say something like that?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I just couldn't bring myself to say it.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: How could I say that about us?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 20
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_BOTTOM_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...[K]But...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...[K]But...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...[K]But...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Is this a secret that I won't be able to hide from everyone?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Is this something I really must tell everyone about?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Should I have told everyone? Is that the right thing to do?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SAD
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (...............)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (...............)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 60
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 60
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...[K]Hey, [hero]...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...[K]Hey, [hero]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...[K]Hey, [hero]...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What are we supposed to do now?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What should we do now?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What are we supposed to do now?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: If we were to disappear...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: If we were to disappear...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: If we were to disappear...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Would the world be saved?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Would the world be saved?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Would the world be saved?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 30
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...[K]In that case...[K]maybe that's the best thing to do...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...[K]In that case...[K]maybe that's the best thing to do...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...[K]In that case...[K]maybe that's the best thing to do...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8973
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Oh, [partner]!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Oh, [partner]!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Arrgh! I can't take this!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Arrgh! I can't take this!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Arrgh! I've had enough!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I'm tired from all this worrying...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: All this worrying's made me tired...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I feel drained from all this worrying...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's get some sleep, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's get some sleep, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's get some sleep, [hero].
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 180
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 90
+	Identifier: WaitBgm
+		Argument: BGM_OCEAN1
+	Command: end

@@ -1,0 +1,213 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_HEARTWARMING
+		Argument: 0
+		Argument: 256
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 2
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 31.5
+			Identifier: 35.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER_PUPURIN
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 2
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER_PUPURIN
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER_PUPURIN
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: OK, I'm off! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetPositionLives
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 6
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 31.5
+			Identifier: 35.5
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 31.5
+			Identifier: 28
+	Identifier: Wait
+		Argument: 15
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Wait
+		Argument: 4
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PUKURIN_MAMA
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN_PAPA
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: See you later!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN_MAMA
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 3
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Take care!
+	Identifier: message_Close
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 1
+		Argument: 0
+		Argument: 48
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: if
+		Argument: scn
+		Argument: SCENARIO_SIDE
+		Argument: 41
+		Argument: 3
+		Argument: label_0
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 30
+	Identifier: label_3
+	Command: end
+	Identifier: elseif
+		Argument: scn
+		Argument: SCENARIO_SIDE
+		Argument: 42
+		Argument: 0
+		Argument: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: jump
+		Argument: label_3
+	Identifier: else
+		Argument: label_2
+	Identifier: bgm_FadeOut
+		Argument: 30
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: jump
+		Argument: label_3

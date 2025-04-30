@@ -1,0 +1,890 @@
+def 0:
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P03A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WIGGLYTUFFS_GUILD_REMIX
+		Argument: 0
+		Argument: 256
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 34
+			Identifier: 26.5
+	Identifier: Wait
+		Argument: 30
+	Identifier: supervision_Acting
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 29.5
+			Identifier: 30.5
+	Identifier: Wait
+		Argument: 30
+	Identifier: supervision_Acting
+		Argument: 3
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 33.5
+			Identifier: 30.5
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 31.5
+			Identifier: 28.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You're just beginners.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We'll have you start off with this assignment. ♪
+	Identifier: message_Close
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 1
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: This is the Job Bulletin Board. Pokémon from various regions post job requests here.
+	Identifier: message_Close
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 2
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You're aware that bad Pokémon are cropping up in greater numbers, right?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yup.[K] Because the flow of time is getting messed up. It's wreaking havoc, right?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yup.[K] Because the flow of time is getting messed up. It's wreaking havoc, right?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yup.[K] Because the flow of time is getting messed up. It's wreaking havoc, right?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Which is why lots of bad Pokémon are appearing!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Which is why lots of bad Pokémon are appearing!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Which is why lots of bad Pokémon are appearing!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (The flow of time is getting messed up?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (The flow of time is getting messed up?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Time? As in hours and minutes?[K] Do they mean something has gone wrong with time here?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Time? As in hours and minutes?[K] Do they mean something has gone wrong with time here?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (And, because of that, more and more bad Pokémon are popping up?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (And, because of that, more and more bad Pokémon are popping up?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (What's going on here?!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (What's going on here?!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Precisely.[K] Time getting out of whack has caused an outbreak of bad Pokémon. Perhaps because of all that...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We have noticed an increase in the number of jobs.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: In addition...and it's unknown if this is because of time's influence...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There has also been a mass outbreak of...[K]mystery dungeons.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Mystery dungeons?!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Mystery dungeons?!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 1
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So, [hero]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 2
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You know how we got my Relic Fragment back yesterday?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You know how we got my Relic Fragment back yesterday?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You know how we got my Relic Fragment back yesterday?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The place where we found it was a mystery dungeon.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The place where we found it was a mystery dungeon.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The place where we found it was a mystery dungeon.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: A mystery dungeon changes each time you go into it. There's a different layout and different items every time you enter!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: A mystery dungeon changes each time you go into it. There's a different layout and different items every time you enter!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: A mystery dungeon changes each time you go into it. There's a different layout and different items every time you enter!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: If you faint in the middle of a dungeon, you lose half of your money...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: If you faint in the middle of a dungeon, you lose half of your money...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: If you faint in the middle of a dungeon, you lose half of your money...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You can even lose half your items or more...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You can even lose half your items or more...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You can even lose half your items or more...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Finally, you get kicked right out. They're very strange places.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Finally, you get kicked right out. They're very strange places.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Finally, you get kicked right out. They're very strange places.
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But every time you go inside one, there are always new things to discover!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But every time you go inside one, there are always new things to discover!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But every time you go inside one, there are always new things to discover!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: They're really awesome places to explore!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: They really are fantastic places to go exploring!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: They really are fantastic places to go explore!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5122
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 18
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Well! You're quite informed, aren't you! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That makes things much easier for me to explain! ♪
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Jobs all take place in mystery dungeons.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 1
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: So...[K]let's look for a job that you should perform! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 2
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Ah, yes. ♪ Maybe this will do?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: if
+		Argument: variation
+		Argument: label_0
+	Identifier: Move2PositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
+		Argument: 16
+		Argument: 16
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: se_Play
+		Argument: 5124
+	Identifier: Wait
+		Argument: 45
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
+		Argument: 16
+		Argument: 16
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Wait
+		Argument: 20
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Oh, yeah? Let's read it!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh, really? Let's read it!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh, really? Let's read it!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: \"Hello! My name is [CS:N]Spoink[CR]!\
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: An outlaw has run off with my most prized possession. My precious pearl!
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: \"That pearl is life itself...to me!\
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: I just can't seem to settle down if that pearl isn't in its proper place atop my head!
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: \"But I've heard my pearl has been sighted!\
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: It's said to be on a rocky bluff. But this bluff is reported to be extremely unsafe.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: \"I could never go somewhere so frightening!\
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: Oh, friendly readers! Would you be so kind as to go to the bluff and get my pearl?
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: I beg your help, exploration team members!"  From [CS:N]Spoink[CR]
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hold on a second!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Wait a second...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Wait a second...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8971
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_ANGRY_MIRRORED
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_ANGRY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We're only going to fetch an item that someone dropped?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We're going to fetch an item that someone dropped?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We're going to fetch an item that someone dropped?
+		Argument: message_KeyWait
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That's hardly an adventure at all!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I would rather do something that's more of an adventure.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I'd rather go on a bigger adventure than that.
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I'd rather look for treasure or explore unknown places. Things like that!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I'd rather look for treasure or explore unknown places. Things like that!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I'd rather look for treasure or explore unknown places. Things like that!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5122
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 18
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_ANGRY
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hush!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8974
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yikes!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yikes!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yikes!
+		Argument: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_ANGRY
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It's important that you rookies pay your dues!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Now pay attention![K] I'll repeat the warnings again to make sure they stick!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You'll be forced out of a dungeon and sent back here if either of you faints.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You'll lose half your money![K] And you could lose half your items or more. You'd best be careful!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5122
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 18
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: If you've understood all that, I suggest you get on with the job! ♪
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8961
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROP
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hmm...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hmm...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hmm...
+		Argument: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 30
+	Identifier: dungeon_mode
+		Argument: 3
+		Argument: DMODE_OPEN
+	Command: end

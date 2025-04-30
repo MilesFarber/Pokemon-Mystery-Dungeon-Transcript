@@ -1,0 +1,78 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_H01P99A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I'm beat! It was a long day!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We put in a full day today. I'm exhausted.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We worked hard all day long. I'm tired!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We should get some rest now.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We should get some sleep now.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We should get some sleep now.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That way, we can put in another good effort tomorrow.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We can be rested up for another good day tomorrow.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We'll need it for another full day tomorrow.
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: WaitBgm
+		Argument: BGM_OCEAN1
+	Identifier: Wait
+		Argument: 30
+	Command: end

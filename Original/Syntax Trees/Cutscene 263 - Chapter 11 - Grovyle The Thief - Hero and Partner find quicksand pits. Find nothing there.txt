@@ -1,0 +1,640 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: SCENARIO_MAIN
+		Argument: scn
+		Argument: 14
+		Argument: 5
+	Identifier: back_SetGround
+		Argument: LEVEL_D14P11A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+		Argument: 0
+		Argument: 256
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 27
+			Identifier: 35.5
+	Identifier: Wait
+		Argument: 15
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 31
+			Identifier: 35.5
+	Identifier: Wait
+		Argument: 15
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 29
+			Identifier: 40.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 25.5
+			Identifier: 40.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Is this the deepest part of the desert?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Is this the deepest part of the desert?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Is this the deepest part of the desert?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: se_Play
+		Argument: 8974
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Oh no! It's quicksand!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Watch out! It's quicksand!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Waah! There's quicksand!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m4
+			Identifier: 29
+			Identifier: 27.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m5
+			Identifier: 27
+			Identifier: 28.5
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m6
+			Identifier: 31
+			Identifier: 28.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m7
+			Identifier: 24.5
+			Identifier: 33.5
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m8
+			Identifier: 28
+			Identifier: 34.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The sand's getting sucked down there, and there, and there!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The sand's getting sucked down here and there!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The sand's getting sucked down here and there!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: They're like sand whirlpools, and we'll be sucked down if we get close!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: They're like sand whirlpools, and we'll be pulled in if we get close!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: They're like sand whirlpools, and we'll be pulled under if we get close!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's dangerous here!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's dangerous here!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's dangerous here!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I don't see anything around here that looks like a Time Gear!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I don't see anything around here that remotely looks like a Time Gear!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I don't see anything around here that even remotely looks like a Time Gear!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I guess there's nothing here.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Maybe there's nothing here.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I guess there's nothing here.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh?[K] What's up, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh?[K] What's the matter, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh?[K] What's wrong, [hero]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (...............)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (...............)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (This feeling...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (This feeling...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It's like the one I got at [CS:P]Fogbound Lake[CR]...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It's like the one I got at [CS:P]Fogbound Lake[CR]...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I...[K]I know this place!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I...[K]I know this place!)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Maybe I have only heard of this place...[K]but it seems like I've been here before...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Maybe I have only heard of this place...[K]but it seems like I've been here before...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I can't tell which...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I can't tell which...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Either way, I do know this place...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Either way, I do know this place...)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8971
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Listen, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Say, [hero]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 30
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You were daydreaming! What's up?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What's the matter? You were off in your own thoughts there.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What's wrong? You seemed to be in a daze there.
+		Argument: message_KeyWait
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I hate to say it, but there seems to be nothing here.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Well, there seems to be nothing here. How disappointing!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Well, there seems to be nothing here. How disappointing!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's report our findings to the guild. Let's go home.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's report our findings to the guild. Let's go home.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's report our findings to the guild. Let's go home.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 16
+		Argument: 16
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 32
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m9
+			Identifier: 31
+			Identifier: 27
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 0
+		Argument: 180
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.5
+		Argument: 0
+		Argument: 180
+	Identifier: Wait
+		Argument: 45
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 60
+	Identifier: worldmap_SetMode
+		Argument: 3
+	Identifier: worldmap_SetLevel
+		Argument: 2
+	Identifier: back2_SetMode
+		Argument: 3
+	Identifier: WaitSubScreen
+	Identifier: worldmap_ChangeLevel
+		Argument: 3
+	Identifier: worldmap_SetCamera
+		Argument: 21
+	Identifier: WaitSubScreen
+	Identifier: me_Play
+		Argument: 6
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]The clouds parted over the [CS:P]Northern Desert[CR]!
+	Identifier: WaitMe
+		Argument: 6
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: back2_SetMode
+		Argument: 0
+	Command: end

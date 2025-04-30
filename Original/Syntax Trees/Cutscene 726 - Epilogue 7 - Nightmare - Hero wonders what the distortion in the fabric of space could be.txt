@@ -1,0 +1,226 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99C
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: screen_FadeChange
+		Argument: 1
+		Argument: 30
+		Argument: 0
+		Argument: 192
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (We were told why [partner] and I can't evolve yet.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (We were told why [partner] and I can't evolve yet.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (We were told that there was distortion in the fabric of space that prevented our evolution.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (We were told that there was distortion in the fabric of space that prevented our evolution.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (But what does "a distortion in the fabric of space" mean?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (But what does "a distortion in the fabric of space" mean?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Time is back to normal...[K]but maybe some things are still out of whack.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Time is back to normal...[K]but maybe some things are still out of whack.)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: screen_WhiteChange
+		Argument: 1
+		Argument: 2
+		Argument: 256
+		Argument: 128
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_WhiteChange
+		Argument: 1
+		Argument: 2
+		Argument: 128
+		Argument: 256
+	Identifier: screen_WhiteChange
+		Argument: 1
+		Argument: 2
+		Argument: 256
+		Argument: 128
+	Identifier: Wait
+		Argument: 5
+	Identifier: screen_FadeChange
+		Argument: 1
+		Argument: 2
+		Argument: 0
+		Argument: 192
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 10
+	Identifier: se_Play
+		Argument: 6425
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_L_FACEOUTW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Whoa! Lightning!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Waah! Lightning!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Waah! Lightning!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The storm looks like it's getting closer.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I think the storm's getting closer.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I think the storm's getting closer.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I'm going to sleep now.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We should get some sleep now.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We should get some sleep now.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Good night, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Good night, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Good night, [hero].
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: WaitBgm
+		Argument: BGM_OCEAN1
+	Identifier: Wait
+		Argument: 30
+	Command: end

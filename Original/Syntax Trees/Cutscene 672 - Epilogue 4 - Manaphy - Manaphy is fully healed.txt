@@ -1,0 +1,288 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_AT_THE_END_OF_THE_DAY
+		Argument: 0
+		Argument: 256
+	Identifier: message_Narration
+		Argument: 30
+		Argument: english
+		Dialogue: [CN]Several days later...
+	Identifier: message_Close
+	Identifier: back_SetGround
+		Argument: LEVEL_H01P99A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: 1
+		Argument: 48
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MANAFI
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: 1
+		Argument: 48
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MANAFI
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MANAFI
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ha! The little guy's as good as ever!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ha! The little guy's as good as ever!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ha! The little cutie's as good as ever!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MANAFI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MANAFI
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Good! Ever!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Am I glad to see this!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Am I glad to see this!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Am I glad to see this!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Wait
+		Argument: 30
+	Identifier: bgm_FadeOut
+		Argument: 180
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ...[hero]...[partner].
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Wait
+		Argument: 45
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yup.[K] We know...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes.[K] We know...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yes.[K] We know...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Manaphy[CR] needs to develop the ability to survive in the sea...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Manaphy[CR] needs to develop the ability to survive in the sea...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Manaphy[CR] needs to develop the ability to survive in the sea...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 30
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Well, [hero]...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Well, [hero]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Well, [hero]...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's take [CS:N]Manaphy[CR] to the sea.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's take [CS:N]Manaphy[CR] to the sea.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's take [CS:N]Manaphy[CR] to the sea.
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Command: end

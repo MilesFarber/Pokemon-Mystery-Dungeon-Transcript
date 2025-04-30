@@ -1,0 +1,1106 @@
+def 0:
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P04A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: supervision_Acting
+		Argument: 2
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 5
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (That was...!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (That was...!)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: ([CS:N]Grovyle[CR] was trying to steal a Time Gear!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ([CS:N]Grovyle[CR] was trying to steal a Time Gear!)
+		Argument: message_KeyWait
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_I_SAW_SOMETHING_AGAIN
+		Argument: 0
+		Argument: 256
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (There was also another Pokémon...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (There was also another Pokémon...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Was it [CS:N]Azelf[CR]?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Was it [CS:N]Azelf[CR]?)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Anyway...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Anyway...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (The crystal did trigger a vision...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (The crystal did trigger a vision...)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_C_FACER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 4
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: See anything, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Did you see anything, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Did you see anything, [hero]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Wait
+		Argument: 45
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Wait
+		Argument: 45
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: Wait
+		Argument: 45
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_EXPLANATION_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN][hero] described the vision [CN]revealed by the Dimensional Scream.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DOGOOMU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: WHAT?!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You saw [CS:N]Grovyle[CR] knock out a Pokémon?[K] One that you'd never seen before?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: And then he tried to steal a Time Gear?!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KIMAWARI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Oh my gosh! Your ability is thrilling!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_BIPPA
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_BIPPA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_RC_FACEOUTW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: How did you get to see all that, by golly?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It's mighty hard for me to grasp!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HEIGANI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HEIGANI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hey, hey, [hero]!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: So that Pokémon you couldn't recognize...do you think it might be [CS:N]Azelf[CR]?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_CHIRIIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I...I have a question for [hero] too.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Did you see the past, [hero]?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Or was that in the future?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Come to think of it...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Come to think of it...)
+		Argument: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_TOP_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Visions in the past...visions in the future...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Visions in the past...visions in the future...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It's never clear when my visions take place!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It's never clear when my visions take place!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_CHIRIIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: So you're not sure if it's in the past or the future...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DAGUTORIO
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Well then...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Since it is impossible to tell if the vision is of the future or the past...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Then [hero]'s vision may well be of a past event.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: In that case...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The Time Gear may have already been stolen from there...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 30
+	Identifier: se_Play
+		Argument: 5122
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 18
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Squawk?![K] You're saying we may already be too late?!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8963
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 2
+		Argument: DIR_LEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 2
+		Argument: DIR_LEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER_HERO
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YONOWAARU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 3
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Everyone, please hold on!
+	Identifier: se_Play
+		Argument: 8978
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 2
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 0.7969
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 50
+			Identifier: 28.5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Wait
+		Argument: 45
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YONOWAARU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 4
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yes, it is true that it may have been a vision of the past.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But it could have been a vision of the future.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: If you would be so kind, could you remind us what [CS:N]Mesprit[CR] said, [partner]?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DAGUTORIO
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Who informed [CS:N]Mesprit[CR] via telepathy that a Time Gear was stolen?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: If I recall correctly, did you say that it was [CS:N]Uxie[CR]?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hmm...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hmm...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hmm...
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

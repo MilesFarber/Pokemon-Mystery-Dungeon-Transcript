@@ -1,0 +1,172 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_MEMORIES_RETURNED
+		Argument: 0
+		Argument: 256
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V17P01A
+	Identifier: back_SetGround
+		Argument: LEVEL_P07P01A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: Wait
+		Argument: 1
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 21
+			Identifier: 21.5
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetPositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 22.5
+			Identifier: 47.5
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 26
+			Identifier: 49.5
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: DIR_LEFT
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_RIGHT
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 15
+			Identifier: 49.5
+	Identifier: SetPositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 28
+		Argument: 0
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen2_FadeIn
+		Argument: 0
+		Argument: 30
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.7969
+		Argument: 24
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [hero].
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We have to...[K] We have to get back!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We have to...[K] We have to get back!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We have to...[K] We have to get back!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Back to our own world!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Back to our own world!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Back to our own world!
+		Argument: message_Close
+	Identifier: screen2_WhiteOut
+		Argument: 0
+		Argument: 30
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 30
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Command: end

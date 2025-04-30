@@ -1,0 +1,2429 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P04A
+	Identifier: supervision_LoadStation
+		Argument: LEVEL_G01P04A
+		Argument: UM14
+	Identifier: supervision_Station
+		Argument: 5
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: supervision_Acting
+		Argument: 2
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yep, that's right. No mistake.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes, there's no mistake.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yes, you're not mistaken.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YONOWAARU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 4
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But the name [CS:N]Azelf[CR]...?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I've never heard it before.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I've never heard it before.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I've never heard it before.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I mean, I only know the name [CS:N]Azelf[CR] because you just said it, [CS:N]Dusknoir[CR], sir.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The name [CS:N]Azelf[CR] is new to me. I only heard it today from you, [CS:N]Dusknoir[CR], sir.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I mean, I only know the name [CS:N]Azelf[CR] because you just said it, [CS:N]Dusknoir[CR], sir.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8965
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YONOWAARU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 4
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Then there's still a chance!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DAGUTORIO
+	Identifier: Wait
+		Argument: 20
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: If [CS:N]Mesprit[CR] claimed that [CS:N]Azelf[CR] had alerted her about the stolen Time Gear...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Then [hero]'s Dimensional Scream would surely be from the past...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But that was not the case.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:N]Mesprit[CR] did not mention [CS:N]Azelf[CR]...[K] Therefore...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It's possible that the event happens in the future!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I see...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YONOWAARU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 4
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: One more point.[K] And this is a sure thing.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Upon touching the crystal, [hero] experienced the Dimensional Scream.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The vision indicated the presence of a Time Gear, which means...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Maybe what we seek is in [CS:P]Crystal Cave[CR]!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Perhaps there is a passage there that leads to a Time Gear.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DOGOOMU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DOGOOMU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yeah! Maybe it IS there!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WIGGLYTUFFS_GUILD
+		Argument: 0
+		Argument: 256
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Wait
+		Argument: 15
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DAGUTORIO
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YONOWAARU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 4
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Of course, we may already be too late.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Or we may still have time!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: As long as a chance remains, we must never give up! It's our only option!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DAGUTORIO
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+	Identifier: Wait
+		Argument: 30
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HEIGANI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HEIGANI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hey, hey! Absolutely!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DAGUTORIO
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There's no other choice. We have to pin our hopes on this!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_BIPPA
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_BIPPA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Good thinking, [CS:N]Dusknoir[CR], sir! Yup yup!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KIMAWARI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Oh my gosh! I'm all fired up with excitement!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8971
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DOGOOMU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DOGOOMU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Let's GO, everyone! Let's search [CS:P]Crystal Cave[CR]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:N]Dusknoir[CR], sir!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There's only one thing to do! And that's explore [CS:P]Crystal Cave[CR]! ♪
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Let's go! ♪[K] The whole guild will be involved!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Onward to [CS:P]Crystal Cave[CR]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Wait
+		Argument: 15
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Guildmaster![K] Please issue the call to duty!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 1
+		Argument: 20
+		Argument: 0
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 2
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 52.5
+			Identifier: 31
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: Wait
+		Argument: 60
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Guildmaster![K] Hmm...?[K] Guildmaster?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 0.7969
+		Argument: 16
+		Argument: 0
+	Identifier: Wait
+		Argument: 60
+	Identifier: Move2PositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 0.7969
+		Argument: 16
+		Argument: 20
+	Identifier: Move2PositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 0.7969
+		Argument: 12
+		Argument: 0
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Wait
+		Argument: 30
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Guildmaster![K] Are you with us?!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 0
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ...[K]Zzzz...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8978
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Huh?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 0
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ...Zzzz...zzzz...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HEIGANI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: (H-hey, you gotta be kidding!)
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DAGUTORIO
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: (No! It looks like...!)
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8961
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_SWEAT_DROP
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_KIMAWARI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KIMAWARI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: (He's fully asleep![K] With his eyes wide open too! Ewww!)
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_CHIRIIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: (Eeep! The Guildmaster is so very charming...[K]sigh...)
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_BIPPA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: (When do you all suppose he took to snoozing?)
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DOGOOMU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: (You think that maybe he's been asleep from the get-go?)
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8969
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: (Oh no! This just won't do!)
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: (Everyone might notice that the Guildmaster is sleeping...)
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: (I must rouse him somehow...)
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 5122
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 438
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 42
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Guildmaster![K] Guildmaster!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 0
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ...[K]Huh...?
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: GUILDMASTER!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 0
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:N]Chatot[CR]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: Wait
+		Argument: 5
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: YES, GUILDMASTER?
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 56
+			Identifier: 26.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Er, I mean...yes, Guildmaster...?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Er, to take it from the top... there was...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WIGGLYTUFFS_GUILD
+		Argument: 0
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_SPECIAL2
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 0
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Everyone! We're going after [CS:N]Grovyle[CR]!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: YOOM...TAH!
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 17
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 5
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PUKURIN
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: 2
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 33
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+		Argument: 16
+		Argument: 0
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 23
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 23
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 23
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 23
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 24
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 23
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 23
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 25
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 66
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 66
+	Identifier: message_EmptyActor
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:N]Everyone[CR]: HOORAY!
+	Identifier: message_Close
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 2
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 2
+		Argument: DIR_LEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KIMAWARI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_C_FACER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Let's go to [CS:P]Crystal Cave[CR]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HEIGANI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HEIGANI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 5
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hey, hey! There has to be a secret there somewhere!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DOGOOMU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_DOGOOMU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Let's get down to business and start our SEARCH!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YONOWAARU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 4
+		Argument: 3
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I will accompany you to [CS:P]Crystal Cave[CR].
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 2
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_YONOWAARU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_DAGUTORIO
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Let's do our best, everyone.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_JOYOUS
+		Argument: 3
+	Identifier: Wait
+		Argument: 1
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 23
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 23
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 23
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 23
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 24
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 23
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 23
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 25
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 66
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_UP
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 66
+	Identifier: message_EmptyActor
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:N]Everyone[CR]: HOORAY!
+	Identifier: message_Close
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 59.5
+			Identifier: 32
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: DIR_DOWN
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+		Argument: 25
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DAGUTORIO
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: DIR_DOWN
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 24
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DIGUDA
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 8
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 1
+		Argument: 24
+		Argument: 0
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 40.5
+			Identifier: 23.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m4
+			Identifier: 28
+			Identifier: 31.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m5
+			Identifier: 40.5
+			Identifier: 23.5
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m6
+			Identifier: 40.5
+			Identifier: 23.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m7
+			Identifier: 30
+			Identifier: 34
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m8
+			Identifier: 40.5
+			Identifier: 23.5
+	Identifier: Move2PositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 1.1992
+		Argument: 32
+		Argument: 0
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m9
+			Identifier: 40.5
+			Identifier: 23.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m10
+			Identifier: 40.5
+			Identifier: 16.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m11
+			Identifier: 40.5
+			Identifier: 16.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m12
+			Identifier: 40.5
+			Identifier: 16.5
+	Identifier: Wait
+		Argument: 60
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ........................
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's get going too, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's get going too, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's head out too, [hero]!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: On to [CS:P]Crystal Cave[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: On to [CS:P]Crystal Cave[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: On to [CS:P]Crystal Cave[CR]!
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: Position
+		Template
+			Type: m13
+			Identifier: 54.5
+			Identifier: 33.5
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: Position
+		Template
+			Type: m14
+			Identifier: 51
+			Identifier: 33.5
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: Position
+		Template
+			Type: m15
+			Identifier: 48.5
+			Identifier: 24.5
+	Identifier: SetPositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: Position
+		Template
+			Type: m16
+			Identifier: 57
+			Identifier: 27.5
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: DIR_UP
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_UP
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PUKURIN
+		Argument: DIR_DOWN
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: DIR_DOWN
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHIRIIN
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_DOGOOMU
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KIMAWARI
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_BIPPA
+	Identifier: camera_SetDefault
+	Identifier: Wait
+		Argument: 30
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: SCENARIO_MAIN
+		Argument: scn
+		Argument: 15
+		Argument: 4
+	Identifier: dungeon_mode
+		Argument: 24
+		Argument: DMODE_OPEN
+	Command: end

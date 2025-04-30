@@ -1,0 +1,83 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WELCOME_TO_THE_WORLD_OF_POKEMON
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_D37P41A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_KURESERIA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I cannot fathom how you've come here, but...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I find your visit ever so convenient!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I've longed to meet both of you!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_EmptyActor
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (That time I wasn't dreaming, so I guess it never occurred to me...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (That time I wasn't dreaming, so I guess it never occurred to me...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (But I realize that was in [CS:N]Azurill[CR]'s nightmare.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (But I realize that was in [CS:N]Azurill[CR]'s nightmare.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (In other words, it was still in a dream.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (In other words, it was still in a dream.)
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Command: end

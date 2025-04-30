@@ -1,0 +1,193 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_P04P01C
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_GEAR
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YUKUSHII
+		Argument: 0.7969
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 19.5
+			Identifier: 46.5
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 17
+			Identifier: 49.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 22
+			Identifier: 49.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Wow, it's so dark outside now!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Wow, it's become dark outside!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Wow, it's become dark outside!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YUKUSHII
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 19.5
+			Identifier: 43.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_YUKUSHII
+	Identifier: Wait
+		Argument: 15
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YUKUSHII
+		Argument: 8
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_YUKUSHII
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_YUKUSHII
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It may be a little difficult to see at night, but...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YUKUSHII
+		Argument: 8
+		Argument: 2
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_YUKUSHII
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Behold![K] [CS:P]Fogbound Lake[CR]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m4
+			Identifier: 17
+			Identifier: 47.5
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m5
+			Identifier: 22
+			Identifier: 47.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_INSPIRED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Wow!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Wow!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Wow!
+		Argument: message_Close
+	Identifier: MovePositionOffset
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: 0
+		Argument: 180
+	Identifier: Wait
+		Argument: 60
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Command: end

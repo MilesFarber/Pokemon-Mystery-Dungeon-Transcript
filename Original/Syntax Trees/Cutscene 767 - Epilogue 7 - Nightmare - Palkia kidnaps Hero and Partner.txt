@@ -1,0 +1,590 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V02P06A
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 19.5
+			Identifier: 16.5
+	Identifier: screen2_FadeIn
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 150
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99C
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_LEFT
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 62
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 62
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 190
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 150
+	Identifier: bgm_Stop
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_EARTHQUAKE2
+		Argument: 0
+		Argument: 256
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 1
+		Argument: 1
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_RIGHT_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 12
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_DOWN_FUNC_SERIES
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Whoa![K] Earthquake?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Wa-wah![K] Tremors?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Wa-wah![K] Tremors?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8195
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 30
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: Wait
+		Argument: 80
+	Identifier: ResetFunctionAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PARUKIA
+		Argument: 256
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PARUKIA
+		Argument: 6
+		Argument: 0
+		Argument: 56
+	Identifier: se_Play
+		Argument: 5128
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 2
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 15
+	Identifier: Destroy
+		Template
+			Type: object
+			Identifier: OBJECT_H02P99C4_119
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PARUKIA
+	Identifier: SetFunctionAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PARUKIA
+		Argument: 256
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 10
+		Argument: ACTOR_NPC_PARUKIA
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: 10
+		Argument: ACTOR_NPC_PARUKIA
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: camera_SetEffect
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_DOWN_A_DARK_PATH
+		Argument: 0
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Waaaah!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Waaaah!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Waaaah!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFaceOnly
+		Argument: ACTOR_NPC_PARUKIA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I HAVE FOUND YOU AT LAST!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: THE DEFILERS WHO ARE CAUSING...[K] THE DISTORTION OF SPACE!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 10
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Who are you...?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Who are you...?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Who are you...?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFaceOnly
+		Argument: ACTOR_NPC_PARUKIA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I AM [CS:N]PALKIA[CR]![K] I HOLD SWAY OVER SPACE! I HAVE DOMINION OVER DIMENSION!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 10
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: ([CS:N]P-Palkia[CR]?!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ([CS:N]P-Palkia[CR]?!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Y-you're [CS:N]Palkia[CR]?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Y-you're [CS:N]Palkia[CR]?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Y-you're [CS:N]Palkia[CR]?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PARUKIA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: YOU CANNOT ESCAPE NOW! THIS IS THE END OF YOU!
+	Identifier: message_KeyWait
+	Identifier: camera_SetEffect
+		Argument: 2
+		Argument: 2
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PARUKIA
+		Argument: 25
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PARUKIA
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: se_Play
+		Argument: 8196
+	Identifier: supervision_Acting
+		Argument: 3
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_H02P99C5_120
+		Argument: 1
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_H02P99C5_120
+		Argument: 17
+	Identifier: WaitAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_H02P99C5_120
+	Identifier: Wait
+		Argument: 10
+	Identifier: message_SetActor
+		Argument: ACTOR_NPC_PARUKIA
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: GRRR-OOOOOO!
+	Identifier: Wait
+		Argument: 20
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 30
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 12
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+		Argument: 0
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 12
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 50
+	Identifier: screen_WhiteOutAll
+		Argument: 1
+		Argument: 15
+	Identifier: message_CloseEnforce
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 0
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 0
+	Identifier: camera_SetEffect
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: Wait
+		Argument: 10
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SHOUTING
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Waaaaaah!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Waaaaaah!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Waaaaaah!
+		Argument: Wait
+		Argument: 90
+	Identifier: message_CloseEnforce
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: Destroy
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PARUKIA
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_H02P99C5_120
+		Argument: 4
+	Identifier: SetPositionOffset
+		Template
+			Type: object
+			Identifier: OBJECT_H02P99C5_120
+		Argument: 0
+		Argument: 32
+	Identifier: se_Play
+		Argument: 8197
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 45
+	Identifier: Wait
+		Argument: 60
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 30
+			Identifier: 27.5
+	Identifier: MovePositionMark
+		Template
+			Type: object
+			Identifier: OBJECT_H02P99C5_120
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 30
+			Identifier: 27.5
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: Wait
+		Argument: 60
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_H02P99C5_120
+		Argument: 22
+	Identifier: WaitAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_H02P99C5_120
+	Identifier: WaitExecuteObject
+		Argument: OBJECT_H02P99C5_120
+	Identifier: Destroy
+		Template
+			Type: object
+			Identifier: OBJECT_H02P99C5_120
+	Identifier: Wait
+		Argument: 90
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: switch
+		Argument: ProcessSpecial
+		Argument: PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY
+		Argument: 0
+		Argument: 0
+	Array accessor
+		Array: $PERFORMANCE_PROGRESS_LIST
+		Index: 5
+		Value: 0
+	Command: end

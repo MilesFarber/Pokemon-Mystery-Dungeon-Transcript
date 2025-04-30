@@ -1,0 +1,193 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GOODNIGHT
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P07C
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I'm the biggest chicken around, and even I managed to work up the courage!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I'm the biggest chicken around, and even I managed to work up the courage!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I'm the biggest chicken around, and even I managed to work up the courage!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: And it was all because you were with me, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: And it was all because you were with me, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And it was all because you were with me, [hero].
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Seriously, [hero], thanks!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Seriously, [hero], thanks!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Seriously, [hero], thanks!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: Wait
+		Argument: 60
+	Identifier: se_Play
+		Argument: 8965
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...Oh yeah!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...Oh yeah!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...Oh yeah!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You know, I was thinking...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You know, I was thinking...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You know, I was thinking...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I noticed something about your dizzy spells, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I noticed something about your dizzy spells, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I noticed something about your dizzy spells, [hero].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You always seem to be touching something when they happen.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You always seem to be touching something when they happen.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: They always seem to happen when you're touching something.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8978
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Come to think of it, [partner]'s right!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Come to think of it, [partner]'s right!)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (When I heard [CS:N]Azurill[CR]'s scream...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (When I heard [CS:N]Azurill[CR]'s scream...)
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

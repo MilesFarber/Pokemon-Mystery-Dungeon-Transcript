@@ -1,0 +1,585 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_P14P01A2
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+		Argument: 0
+		Argument: 256
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 35.5
+			Identifier: 54
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 39.5
+			Identifier: 54
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey! [CS:N]Teddiursa[CR] and [CS:N]Ursaring[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hey! [CS:N]Teddiursa[CR] and [CS:N]Ursaring[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hi! [CS:N]Teddiursa[CR] and [CS:N]Ursaring[CR]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RINGUMA
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RINGUMA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Oh, it's you!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: What happened to you two?[K] I thought you two were tagging along right behind us...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Uh... Er, something came up.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Uh... Something held us up.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Uh... There was just...um... something came up.
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Anyway...[K]what's up?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Anyway...[K]what's going on?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Anyway...[K]what are you doing?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RINGUMA
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RINGUMA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Well, see, there's a treasure box here.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HIMEGUMA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There wasn't a treasure box here before.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I want to open it, but I'm also getting a creepy feeling from it.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RINGUMA
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RINGUMA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You know, it'd be nasty if it's a booby trap or something.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: So we've been debating whether we should open it or leave it be.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 10
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Well then![K] We'll open it!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Well then![K] We'll open it!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Well then![K] We'll open it!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You see, we got sent here for the guild's graduation exam.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You see, we got sent here for the guild's graduation exam.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You see, we were told to come here for the guild's graduation exam.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: They told us to bring back the treasure from here.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We were told to bring back the treasure from here.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: They said to bring back the treasure from here.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RINGUMA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_FacePositionOffset
+		Argument: 2
+		Argument: 0
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That's it![K] That box must have something to do with your exam.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You guys should open it.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Can you check this, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Can I get you to do this, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Can you check this, [hero]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 37.5
+			Identifier: 51.5
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 8
+		Argument: 0
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: bgm_FadeOut
+		Argument: 160
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I think it probably would be OK...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I think it probably would be OK...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (But you never know. It could be a trap.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (But you never know. It could be a trap.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (If I can get the Dimensional Scream to activate...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (If I can get the Dimensional Scream to activate...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (That may give me a better idea if this treasure box is safe or not.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (That may give me a better idea if this treasure box is safe or not.)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.5
+		Argument: 0
+		Argument: 4
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN][hero] touched the [CN]treasure box.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5133
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 4
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 8
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 8
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 12
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_PAIN
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (The dizziness...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (The dizziness...)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5133
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 4
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 8
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 8
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 12
+		Argument: 4
+		Argument: 128
+		Argument: 96
+		Argument: 64
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: Wait
+		Argument: 30
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (The dizziness is starting...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (The dizziness is starting...)
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 5
+	Command: end

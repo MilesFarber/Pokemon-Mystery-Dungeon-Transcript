@@ -1,0 +1,159 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V02P06A
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 19.5
+			Identifier: 15.5
+	Identifier: screen2_FadeIn
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 150
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P07C
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 60
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GOODNIGHT
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Just before dinner, [CS:N]Chatot[CR] said another Time Gear was stolen.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Just before dinner, [CS:N]Chatot[CR] said another Time Gear was stolen.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Just before dinner, [CS:N]Chatot[CR] said another Time Gear was stolen.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That makes two now! Who'd go around stealing them?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's two now! I can't imagine who'd be stealing them!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's two now! I can't imagine who'd be stealing them!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: What would anyone want with the Time Gears anyway?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What would anyone want with the Time Gears anyway?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What would anyone want with the Time Gears anyway?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I just don't know...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I just don't understand...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I just can't figure it out...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (..................)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (..................)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I don't know either...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I don't know either...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (But when I was at [CS:P]Fogbound Lake[CR] and saw a Time Gear for the first time...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (But when I was at [CS:P]Fogbound Lake[CR] and saw a Time Gear for the first time...)
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

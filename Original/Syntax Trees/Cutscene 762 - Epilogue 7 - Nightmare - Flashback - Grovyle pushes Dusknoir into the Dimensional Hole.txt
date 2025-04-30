@@ -1,0 +1,176 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_IN_THE_HANDS_OF_FATE
+		Argument: 0
+		Argument: 256
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: back_SetGround
+		Argument: LEVEL_D28P44A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YONOWAARU
+		Argument: 55
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 33
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_D28P34A2_75
+		Argument: 10
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_D28P34A2_77
+		Argument: 10
+	Identifier: SetEffect
+		Template
+			Type: performer
+			Identifier: 3
+		Argument: 653
+		Argument: 3
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_LC_FACEOUTW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [partner]![K] This is it for me!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I'm taking [CS:N]Dusknoir[CR]...[K]back to the future!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh?![K] Wh-what?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Huh?![K] Wh-what?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Huh?![K] Wh-what?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_LC_FACEOUTW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I can never come back here again.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Watch [hero]'s back...[K] Promise me!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_TEARY_EYED
+		Argument: FACE_POS_TOP_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: B-but...!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: B-but...!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: B-but...!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Take your place, [CS:N]Grovyle[CR]...?[K] I can't!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Take your place, [CS:N]Grovyle[CR]...?[K] I can't!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Take your place, [CS:N]Grovyle[CR]...?[K] I can't!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_LC_FACEOUTW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You must and you will.[K] Because you can, [partner].
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You two are...[K]the greatest of combinations.
+	Identifier: message_Close
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 30
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Command: end

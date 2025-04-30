@@ -1,0 +1,227 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_S04P01A
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 0
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ugh...[K] We couldn't get through...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ouch...[K] We couldn't break through...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ouch...[K] We couldn't break through...
+		Argument: message_KeyWait
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 60
+	Identifier: message_CloseEnforce
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Identifier: back_SetGround
+		Argument: LEVEL_D19P11A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_DARK_HILL
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: WaitLockLives
+		Argument: 5
+		Argument: ACTOR_PLAYER
+	Identifier: Unlock
+		Argument: 5
+	Identifier: Wait
+		Argument: 15
+	Identifier: Unlock
+		Argument: 7
+	Identifier: Lock
+		Argument: 3
+	Identifier: Wait
+		Argument: 15
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hmmm... We got a little too careless, maybe.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hmmm... I think we got a little too careless.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hmmm... I think we were a bit too careless.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 3
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We have to hurry and go.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We need to get away from them.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We have to hurry.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We'll go when you're ready.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's go when you're ready.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's go when you're ready.
+		Argument: message_Close
+	Command: end
+	Identifier: def
+		Argument: 1
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_PLAYER
+		Argument: SetDirection
+		Argument: DIR_RIGHT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 5
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_DOWN_FUNC
+	Identifier: Lock
+		Argument: 6
+	Identifier: hold
+	Identifier: def
+		Argument: 2
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_ATTENDANT1
+		Argument: SetDirection
+		Argument: DIR_LEFT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 7
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_FUNC
+	Identifier: Unlock
+		Argument: 3
+	Identifier: Lock
+		Argument: 8
+	Identifier: hold
+def 1:
+	Target: actor ACTOR_PLAYER
+	Identifier: SetDirection
+		Argument: DIR_RIGHT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 5
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_DOWN_FUNC
+	Identifier: Lock
+		Argument: 6
+	Identifier: hold
+	Identifier: def
+		Argument: 2
+		Argument: for
+		Argument: actor
+		Argument: ACTOR_ATTENDANT1
+		Argument: SetDirection
+		Argument: DIR_LEFT
+	Identifier: SetAnimation
+		Argument: 76
+	Identifier: Lock
+		Argument: 7
+	Identifier: CallCommon
+		Argument: CORO_WAKEUP_FUNC
+	Identifier: CallCommon
+		Argument: CORO_LOOK_AROUND_FUNC
+	Identifier: Unlock
+		Argument: 3
+	Identifier: Lock
+		Argument: 8
+	Identifier: hold

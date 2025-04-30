@@ -1,0 +1,245 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99C
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: screen_FadeChange
+		Argument: 1
+		Argument: 60
+		Argument: 0
+		Argument: 192
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEOUTW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It sounds like a storm is coming.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It sounds like a storm is coming.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It sounds like a storm is coming.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: There hasn't been a storm in a long time.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's been a long time since the last storm.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: There hasn't been a storm in a long time.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's been quiet for a good while now.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's been quiet for a good while now.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's been quiet for a good while now.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So, in a way, a storm would be refreshing.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So, in a way, a storm would be refreshing.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: So, in a way, a storm would be refreshing.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You know, our big adventure... when we stopped the destruction of time...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You know, our big adventure... when we stopped the destruction of time...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You know, our big adventure... when we stopped the destruction of time...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It seems like it happened long ago.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It already feels like it happened a long time ago.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It already feels like it happened long ago.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Yes, it does feel that way.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Yes, it does feel that way.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Going to the future with [partner]...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Going to the future with [partner]...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Fighting [CS:N]Dialga[CR] at [CS:P]Temporal Tower[CR]...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Fighting [CS:N]Dialga[CR] at [CS:P]Temporal Tower[CR]...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Now that I think about it, it does feel like all those things were a long time ago.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Now that I think about it, it does feel like all those things were a long time ago.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Now that time has returned to normal...[K] and peace has come to the world...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Now that time has returned to normal...[K] and peace has come to the world...)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It reminds me that...[K]because time returned to normal...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It reminds me that...[K]because time returned to normal...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It became possible for everyone to evolve at [CS:P]Luminous Spring[CR] again...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It became possible for everyone to evolve at [CS:P]Luminous Spring[CR] again...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Everyone but us, that is. We were told that we can't evolve at [CS:P]Luminous Spring[CR]...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Everyone but us, that is. We were told that we can't evolve at [CS:P]Luminous Spring[CR]...)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I remember it clearly...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I remember it clearly...)
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 180
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

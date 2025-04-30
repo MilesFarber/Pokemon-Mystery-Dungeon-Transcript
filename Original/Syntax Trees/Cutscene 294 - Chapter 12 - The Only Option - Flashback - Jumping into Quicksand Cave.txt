@@ -1,0 +1,129 @@
+def 0:
+	Identifier: back_SetGround
+		Argument: LEVEL_D14P11A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ready?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Are you ready?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Are you ready?!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: One...[K]two...[K]three![K] Go!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: One...[K]two...[K]three![K] Go!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: One...[K]two...[K]three![K] Go!
+		Argument: message_Close
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 31
+			Identifier: 22.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 27
+			Identifier: 22.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 3
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 31
+			Identifier: 18.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 3
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 27
+			Identifier: 18.5
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 74
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 74
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Command: end

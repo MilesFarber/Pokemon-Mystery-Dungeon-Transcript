@@ -1,0 +1,85 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_CRYSTAL_CAVE
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P04A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_FacePositionOffset
+		Argument: 1
+		Argument: 0
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:P]Luminous Spring[CR]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:P]Luminous Spring[CR]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:P]Luminous Spring[CR]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PUKURIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yup! ♪[K] It was where Pokémon once went to evolve.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But maybe because of the time troubles we had...[K]no sunlight shines on the spring now.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Now nothing can evolve there.
+	Identifier: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Command: end

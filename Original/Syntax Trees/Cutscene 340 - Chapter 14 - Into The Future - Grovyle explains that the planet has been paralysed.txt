@@ -1,0 +1,782 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: Wait
+		Argument: 60
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...Huff-huff.[K] Huff-huff...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...Huff-huff.[K] Huff-huff...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...Huff-huff.[K] Huff-huff...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey, [CS:N]Grovyle[CR]. I'm beat.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Listen, [CS:N]Grovyle[CR]. I'm exhausted.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Say, [CS:N]Grovyle[CR]. I'm dead tired.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There's no time to rest!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: If they catch us, we're done![K] Tough it out and run!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That's easy for you to say... Huff-huff...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's easy for you to say... Huff-huff...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's easy for you to say... Huff-huff...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I can't.[K] I have to rest.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I can't.[K] I have to rest.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I can't.[K] I have to rest.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: All right.
+	Identifier: message_Close
+	Identifier: back_SetGround
+		Argument: LEVEL_D18P11A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: Wait
+		Argument: 1
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_IN_THE_FUTURE
+		Argument: 0
+		Argument: 256
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 39
+			Identifier: 24.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 35
+			Identifier: 26.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 33
+			Identifier: 24.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 42
+			Identifier: 22
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m4
+			Identifier: 39
+			Identifier: 19.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1.1992
+		Argument: Position
+		Template
+			Type: m5
+			Identifier: 35
+			Identifier: 22.5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_PAIN
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huff-huff...[K] Huff-huff...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Huff-huff...[K] Huff-huff...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Huff-huff...[K] Huff-huff...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: This forms a natural alcove.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: This should shield us from view.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: After a quick rest, we'll have to get moving again.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8971
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: W-wait a minute.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: W-wait a minute.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: W-wait a minute.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: When we escaped from the stockade, we cooperated with you because we had to...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: When we escaped from the stockade, we cooperated with you because we had no other choice...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: When we escaped from the stockade, we cooperated with you because we had to...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But we never promised we'd go with you afterward!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But we didn't promise we'd go with you afterward!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But we never promised we'd go with you afterward!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: A bad Pokémon like you...[K] I'm not about to trust you with anything.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: A bad Pokémon like you...[K] You're not worth trusting.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: A bad Pokémon like you...[K] I can't trust you.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: ([partner]...)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ([partner]...)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Humph!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: So I'm the bad guy...[K] And that [CS:N]Dusknoir[CR] is the good guy?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Then how about explaining [CS:N]Dusknoir[CR]'s actions earlier?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It wasn't just me...[K] They wanted you gone too!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Urk...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Urk...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Urk...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But...[K] That doesn't mean I should be trusting you, [CS:N]Grovyle[CR]...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But...[K] That doesn't mean I should put my faith in you, [CS:N]Grovyle[CR]...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But...[K] That doesn't mean I can trust you, [CS:N]Grovyle[CR]...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Earning your trust isn't an easy task, it seems.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I thought that having allies would help, but...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There's no point continuing together without trust.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We'll go our separate ways.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I'm staying on the move.[K] You two should get moving as soon as possible.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEOUTW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Good luck.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m6
+			Identifier: 46
+			Identifier: 22
+	Identifier: Wait
+		Argument: 15
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Wait a second!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Wait a second!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Wait a second!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: Wait
+		Argument: 20
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You say to leave soon, but...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You tell us to leave soon, but...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You say to leave soon, but...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's dark out now. It's tough to see where we're going.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's dark out now. It's hard to see where we're going.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's dark out now. It's hard seeing where we're going.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Instead of staying on the move right now, why not wait for morning?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Instead of setting off again right away, shouldn't we wait for morning?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Instead of staying on the move right now, shouldn't we wait for morning?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Can't we wait to leave until it gets light out?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Wouldn't it be better to leave when it gets light out?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Wouldn't it be better to leave when it gets light out?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_RC_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That isn't possible.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I hate to say it, but...[K]morning never comes.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Pardon?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 2
+		Argument: DIR_LEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: This world... Your future... It's a world of perpetual darkness.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The sun never rises.[K] So morning never comes.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The darkness persists forever.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Wh-why?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Wh-why?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Wh-why?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Because...[K]the planet has been paralyzed.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The planet is...[K]paralyzed?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The planet is...[K]paralyzed?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The planet is...[K]paralyzed?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The planet's paralysis...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The planet's paralysis...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The planet's paralysis...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...The planet's paralysis![K] That's right! I remember now!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...The planet's paralysis![K] That's right! I remember now!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...The planet's paralysis![K] That's right! I remember now!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Dusknoir[CR] described the planet's paralysis before...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Dusknoir[CR] described the planet's paralysis before...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Dusknoir[CR] described the planet's paralysis before...
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

@@ -1,0 +1,127 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetDungeonBanner
+		Argument: 23
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 16
+	Identifier: Wait
+		Argument: 60
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 16
+	Identifier: Wait
+		Argument: 15
+	Identifier: back_SetGround
+		Argument: LEVEL_D15P41A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_EMURITTO
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You're back?!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You can come back all you like, but you'll never get the Time Gear from me!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You're wrong! We didn't come here to steal the Time Gear!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You're wrong! We didn't come here to steal the Time Gear!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You're mistaken! We didn't come here to steal the Time Gear!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_EMURITTO
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You say that...[K] But you can't be trusted!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Get ready!
+	Identifier: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 30
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 10
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: WaitSe
+		Argument: 5143
+	Identifier: CallCommon
+		Argument: CORO_BOSS_WIPE_FUNC
+	Identifier: main_EnterDungeon
+		Argument: 23
+		Argument: 30
+	Identifier: main_EnterDungeon
+		Argument: 1
+		Argument: 30
+	Identifier: hold
+	Command: end

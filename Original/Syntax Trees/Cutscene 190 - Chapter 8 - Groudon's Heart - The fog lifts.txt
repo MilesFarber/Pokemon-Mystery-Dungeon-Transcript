@@ -1,0 +1,406 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V24P08A
+	Identifier: back_SetGround
+		Argument: LEVEL_P03P02A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 19
+			Identifier: 15.5
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_RAIN2
+		Argument: 120
+		Argument: 190
+	Identifier: screen2_FadeIn
+		Argument: 0
+		Argument: 60
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 30
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 12
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_RIGHT_FUNC_SERIES
+		Argument: 0
+	Identifier: Wait
+		Argument: 7
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HEIGANI
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HEIGANI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEOUTW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hey, hey! The fog is gone!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The sky cleared...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The sky cleared...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The sky cleared...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The sunlight's harsh!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The sunlight's harsh!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The sunlight's harsh!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 73
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 45
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey! Look!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hey! Look!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hey! Look!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: Wait
+		Argument: 30
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: B-both of you![K] Up! Look up!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: B-both of you![K] Up! Look up!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: B-both of you![K] Up! Look up!
+		Argument: message_Close
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Wait
+		Argument: 5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HEIGANI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HEIGANI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hey, hey! What is that?!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_GEAR_REMIX
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That's what the fog was hiding.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's what the fog was hiding.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's what the fog was hiding.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: No wonder no one could ever find [CS:P]Fogbound Lake[CR].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's no wonder [CS:P]Fogbound Lake[CR] evaded discovery for all this time.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's no wonder that no one ever discovered [CS:P]Fogbound Lake[CR].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We were just wandering around in circles ourselves.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We were just wandering around in circles too.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We were just wandering around in circles ourselves.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HEIGANI
+	Identifier: Wait
+		Argument: 10
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HEIGANI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_HEIGANI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Hey, hey! So you're saying...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_HEIGANI
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You're saying [CS:P]Fogbound Lake[CR] is up there? Hey, hey, hey?!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yes, that's what I think.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes. That's what I think.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yes. That's what I think.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:P]Fogbound Lake[CR] has to be up there!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:P]Fogbound Lake[CR] has to be up there!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:P]Fogbound Lake[CR] has to be up there!
+		Argument: message_Close
+	Identifier: MovePositionOffset
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 3.5
+		Argument: 0
+		Argument: 180
+	Identifier: Wait
+		Argument: 20
+	Identifier: screen2_FadeOut
+		Argument: 0
+		Argument: 30
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: back2_SetMode
+		Argument: 0
+	Command: end
+	Identifier: def
+		Argument: 1
+		Argument: for
+		Argument: object
+		Argument: OBJECT_P03P01A1_127
+		Argument: SetOutputAttribute
+		Argument: 1024
+	Identifier: hold
+def 1:
+	Target: object OBJECT_P03P01A1_127
+	Identifier: SetOutputAttribute
+		Argument: 1024
+	Identifier: hold

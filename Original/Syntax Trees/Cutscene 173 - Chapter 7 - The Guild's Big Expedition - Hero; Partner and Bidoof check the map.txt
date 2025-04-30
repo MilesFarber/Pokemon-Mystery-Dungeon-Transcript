@@ -1,0 +1,76 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_MT_HORN
+		Argument: 0
+		Argument: 256
+	Identifier: worldmap_SetMode
+		Argument: 4
+	Identifier: worldmap_SetLevel
+		Argument: 1
+	Identifier: back2_SetMode
+		Argument: 3
+	Identifier: WaitSubScreen
+	Identifier: worldmap_SetCamera
+		Argument: 11
+	Identifier: worldmap_SetArrow
+		Argument: 11
+	Identifier: worldmap_SetMark
+		Argument: 11
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This is where we are now.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Our present location is here.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This must be where we are.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: worldmap_DeleteArrow
+	Identifier: worldmap_MoveCamera
+		Argument: 13
+	Identifier: WaitSubScreen
+	Identifier: worldmap_SetArrow
+		Argument: 13
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The base camp is there.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The base camp is there.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The base camp is there.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_BIPPA
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I reckon we've gotten ourselves a lot closer.
+	Identifier: message_Close
+	Identifier: se_Play
+		Argument: 6667
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: back2_SetMode
+		Argument: 0
+	Command: end

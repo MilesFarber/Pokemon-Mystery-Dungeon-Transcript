@@ -1,0 +1,244 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: 46
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 90
+		Argument: 256
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_PERAPPU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Ah! You obtained a Phione Dew!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Quick! Give it to [CS:N]Manaphy[CR]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: OK!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK!
+		Argument: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Here you go, [CS:N]Manaphy[CR].[K] It's a Phione Dew.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Here, take this, [CS:N]Manaphy[CR].[K] It's a Phione Dew.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Here, take this, [CS:N]Manaphy[CR].[K] It's a Phione Dew.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 8
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 30
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 8
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Wait
+		Argument: 60
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MANAFI
+		Argument: FACE_SPECIAL2
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ...[K]Urf...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Argument: 27
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MANAFI
+	Identifier: Wait
+		Argument: 60
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MANAFI
+		Argument: FACE_STUNNED
+		Argument: FACE_POS_TOP_C_FACER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: ...[K]Thanks...[K] [hero]...[K] [partner]...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_AT_THE_END_OF_THE_DAY
+		Argument: 0
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SIGH
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Whew, am I glad!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Whew, am I glad!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Whew, thank goodness!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_TOP_L_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It seems to be working.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: He should be fine, given two or three days of rest.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_TEARY_EYED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That's great...[K] Am I ever glad...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's great...[K] Am I ever glad...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's great...[K] Am I ever glad...
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 90
+	Identifier: Wait
+		Argument: 30
+	Command: end

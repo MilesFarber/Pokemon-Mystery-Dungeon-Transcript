@@ -1,0 +1,71 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WIGGLYTUFFS_GUILD_REMIX
+		Argument: 0
+		Argument: 256
+	Identifier: worldmap_SetMode
+		Argument: 4
+	Identifier: worldmap_SetLevel
+		Argument: 2
+	Identifier: back2_SetMode
+		Argument: 3
+	Identifier: WaitSubScreen
+	Identifier: worldmap_SetCamera
+		Argument: 21
+	Identifier: Wait
+		Argument: 30
+	Identifier: worldmap_SetMark
+		Argument: 21
+	Identifier: worldmap_SetArrow
+		Argument: 21
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_PERAPPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: See? This area.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The area on the map is obscured by clouds...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But the dry terrain starts in this area here.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That's why it's rumored that a vast desert extends from that point onward.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We suspect that a Time Gear is hidden in the depths of the desert.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: That is where we're sending you to investigate.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yep! Gotcha!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK! We understand!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK! We understand!
+		Argument: message_Close
+	Identifier: se_Play
+		Argument: 6667
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: back2_SetMode
+		Argument: 0
+	Command: end

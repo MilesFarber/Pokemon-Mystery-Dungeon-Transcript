@@ -1,0 +1,282 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Since we can't use our old room at the guild anymore...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Since we can't use our old room at the guild anymore...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Since we can't use our old room at the guild anymore...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's live here from now on.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's live here from now on.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's live here from now on.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I don't get this whole idea of graduating much yet...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This whole idea of graduating hasn't sunk in much yet...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I don't get this whole idea of graduating much yet...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But let's keep working as an exploration team like we've always done.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But let's keep going on as an exploration team like we always have.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But let's keep going on as an exploration team like we always have.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: From now on...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: From now on...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: From now on...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This is Team [team:]'s new exploration base!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This is Team [team:]'s new exploration base!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This is Team [team:]'s new exploration base!
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 10
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's head to the guild and check out the Job Bulletin Board and the Outlaw Notice Board for jobs!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's head to the guild and check out the Job Bulletin Board and the Outlaw Notice Board for jobs!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's head to the guild and check out the Job Bulletin Board and the Outlaw Notice Board for jobs!
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's a new beginning for us, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's a new beginning for us, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's a new beginning for us, [hero]!
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: me_Play
+		Argument: 7
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]Exploration Team [CN]Quick Advice[W:30]
+	Identifier: WaitMe
+		Argument: 7
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]Because you've graduated from the guild, [CN]you may from now on save a record of [CN]your progress using your bed here.
+	Identifier: message_Close
+	Identifier: MovePositionLives
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_DO_YOUR_BEST_AS_ALWAYS
+		Argument: 0
+		Argument: 256
+	Identifier: dungeon_mode
+		Argument: 177
+		Argument: DMODE_OPEN_AND_REQUEST
+	Identifier: dungeon_mode
+		Argument: 178
+		Argument: DMODE_OPEN_AND_REQUEST
+	Identifier: dungeon_mode
+		Argument: 99
+		Argument: DMODE_OPEN_AND_REQUEST
+	Identifier: dungeon_mode
+		Argument: 100
+		Argument: DMODE_OPEN_AND_REQUEST
+	Identifier: dungeon_mode
+		Argument: 101
+		Argument: DMODE_OPEN_AND_REQUEST
+	Identifier: dungeon_mode
+		Argument: 102
+		Argument: DMODE_OPEN_AND_REQUEST
+	Array accessor
+		Array: $PERFORMANCE_PROGRESS_LIST
+		Index: 6
+		Value: 1
+	Array accessor
+		Array: $PERFORMANCE_PROGRESS_LIST
+		Index: 7
+		Value: 1
+	Array accessor
+		Array: $PERFORMANCE_PROGRESS_LIST
+		Index: 20
+		Value: 1
+	Identifier: SCENARIO_BALANCE_FLAG
+		Argument: 6
+	Array accessor
+		Array: $SPECIAL_EPISODE_OPEN
+		Index: 4
+		Value: 1
+	Command: end

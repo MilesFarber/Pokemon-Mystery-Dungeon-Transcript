@@ -1,0 +1,136 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_CHASM_CAVE
+		Argument: 0
+		Argument: 256
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Are you all ready, [hero]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Are you ready, [hero]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Are you ready, [hero]?
+		Argument: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Argument: english
+		Dialogue: All set!
+		Argument: default
+		Argument: label_0
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: All right! Let's roll!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK! Let's go, quick!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yep! Let's get going!
+		Argument: message_Close
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: main_EnterDungeon
+		Argument: 27
+		Argument: 30
+	Identifier: switch
+		Argument: message_Menu
+		Argument: MENU_DUNGEON_INITIALIZE_TEAM
+		Argument: main_EnterDungeon
+		Argument: 1
+		Argument: 30
+	Identifier: hold
+	Identifier: case
+		Argument: menu
+		Argument: english
+		Dialogue: Not yet...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We'll go when you're ready.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's go when you're ready.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's go when you're ready.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's get moving before those [CS:N]Sableye[CR] come.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's go before those [CS:N]Sableye[CR] get here.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We should get going before those [CS:N]Sableye[CR] come.
+		Argument: message_Close
+	Command: end

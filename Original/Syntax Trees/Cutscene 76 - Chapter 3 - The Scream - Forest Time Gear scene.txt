@@ -1,0 +1,51 @@
+def 0:
+	Identifier: back_SetGround
+		Argument: LEVEL_V03P06A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 25.5
+			Identifier: 19.5
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_V03P06A2_200
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_V03P06A1_196
+		Argument: 3
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_GEAR_REMIX
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetActor
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Like in a forest...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Like in a forest...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Like in a forest...
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

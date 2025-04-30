@@ -1,0 +1,190 @@
+def 0:
+	Identifier: back_SetGround
+		Argument: LEVEL_P14P01A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetAnimation
+		Template
+			Type: object
+			Identifier: OBJECT_P14P01A1_153
+		Argument: 2
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Why can't I evolve?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Why can't I evolve?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Why can't I evolve?
+		Argument: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_EmptyActor
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CN]Why can you not evolve...?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CN]It may be influenced by a distortion [CN]in the fabric of space...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Distortion?[K] The fabric of space?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Distortion?[K] The fabric of space?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Distortion?[K] The fabric of space?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_EmptyActor
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CN]Why that should be, I do not know...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CN]But your presence...[K]is somehow related [CN]to the distortion of space itself.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CN]And as a result of that, [CN]you cannot evolve...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CN]No.[K] It is not only you...[K] [CN]There is yet another...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CN]The one behind you...[K]is also [CN]forbidden its evolution.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA2
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA2
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RINGUMA2
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA2
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RINGUMA2
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh?! [hero] too?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: What?! [hero] too?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: What?! [hero] too?!
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Command: end

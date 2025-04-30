@@ -1,0 +1,137 @@
+def 0:
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]Climb [CS:P]Sky Peak[CR]?
+	Identifier: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Argument: english
+		Dialogue: Yes
+		Argument: label_0
+	Identifier: if
+		Argument: scn
+		Argument: SCENARIO_MAIN
+		Argument: 29
+		Argument: 31
+		Argument: label_2
+	Identifier: CallCommon
+		Argument: CORO_SORANOITADAKI_FLAGSET
+	Identifier: if
+		Argument: scn
+		Argument: SCENARIO_MAIN
+		Argument: 29
+		Argument: 11
+		Argument: label_4
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: main_EnterDungeon
+		Argument: 111
+		Argument: 30
+	Identifier: switch
+		Argument: message_Menu
+		Argument: MENU_DUNGEON_INITIALIZE_TEAM
+		Argument: main_EnterDungeon
+		Argument: 1
+		Argument: 30
+	Identifier: hold
+	Command: end
+	Identifier: else
+		Argument: SCENARIO_MAIN
+		Argument: scn
+		Argument: 29
+		Argument: 11
+	Identifier: jump
+		Argument: label_4
+	Identifier: else
+		Argument: switch
+		Argument: ProcessSpecial
+		Argument: PROCESS_SPECIAL_RECURITABLE_CAN_ADD
+		Argument: 21
+		Argument: 0
+		Argument: case
+		Argument: 1
+		Argument: message_Close
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SHEIMI
+		Argument: 2
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_SHEIMI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_SHEIMI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_SHEIMI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_SHEIMI
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_SHEIMI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You're all ready?
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: All right, let's do our best to make it to the summit!
+	Identifier: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 60
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: jump
+		Argument: label_2
+	Identifier: default
+		Argument: message_Mail
+		Argument: english
+		Dialogue: [CN]You have too many team members. [CN][CS:N]Shaymin[CR] cannot join your team.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN]Head to the [CS:K]Chimecho[CR] Assembly Post [CN]near the entrance to reduce the number of [CN]members in your team.
+	Identifier: message_Close
+	Command: end
+	Identifier: break
+	Identifier: case
+		Argument: menu
+		Argument: english
+		Dialogue: No
+		Argument: default
+		Argument: message_Close
+	Command: end

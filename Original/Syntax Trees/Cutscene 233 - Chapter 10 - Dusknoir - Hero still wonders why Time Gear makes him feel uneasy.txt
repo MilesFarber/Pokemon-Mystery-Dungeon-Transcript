@@ -1,0 +1,46 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GOODNIGHT
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_V03P09A
+	Identifier: back_SetBackScrollSpeed
+		Argument: 3
+		Argument: 3
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: back_SetEffect
+		Argument: 7
+		Argument: 0
+	Identifier: back_SetBackEffect
+		Argument: 2
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_EmptyActor
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (When I saw the Time Gear...[K] Why did my heart start pounding so wildly...?)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (When I saw the Time Gear...[K] Why did my heart start pounding so wildly...?)
+		Argument: message_Close
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 60
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Command: end

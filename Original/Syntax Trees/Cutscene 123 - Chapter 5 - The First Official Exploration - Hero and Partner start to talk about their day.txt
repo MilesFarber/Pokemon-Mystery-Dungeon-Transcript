@@ -1,0 +1,446 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V02P06A
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 19.5
+			Identifier: 15.5
+	Identifier: screen2_FadeIn
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 150
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P07C
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GOODNIGHT
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_SAD
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (Today was exhausting.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (Today was exhausting.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I should get to sleep early.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I should get to sleep early.)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Sigh...[K] We went through a lot today, didn't we?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Sigh...[K] We went through a lot today.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Sigh...[K] We went through a lot today, didn't we?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But you know what? It was incredibly fun for me!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But you know what? It was incredibly fun for me!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But you know what? It was incredibly fun for me!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Sure, there was that huge letdown...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Sure, there was that huge letdown...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Sure, there was that huge letdown...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Wait
+		Argument: 20
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But it was our first exploration! I thought I was going to explode from excitement and anticipation the whole time.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But it was our first exploration! I thought I was going to explode from excitement and anticipation the whole time.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But it was our first exploration! I was ready to burst with excitement and anticipation the whole time.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It made me feel glad I became an exploration team member.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It made me realize I made the right decision in joining an exploration team.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I realized I did the right thing in becoming an exploration team member.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetOutputAttribute
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 8
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 6410
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 8
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Wait
+		Argument: 20
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: One day I'm sure I'll solve the secret of my Relic Fragment.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: One day I'm sure I'll solve the secret of my Relic Fragment.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: One day I'm sure I'll solve the secret of my Relic Fragment.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: That's my dream.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: That's the dream I have.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: That's my dream.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: If it ever came true, I'd surely faint from happiness!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: If it ever came true, I'd surely faint from sheer happiness!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: If it ever came true, I'd surely faint from sheer happiness!
+		Argument: message_KeyWait
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_JOYOUS
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Ha ha ha ha!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Ha ha ha ha!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Ha ha ha ha!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: Wait
+		Argument: 90
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 8
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 8710
+	Identifier: supervision_RemoveActing
+		Argument: 1
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 8
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Wait
+		Argument: 20
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But seriously, thanks...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But seriously, thanks...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But seriously, thanks...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (...!)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (...!)
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: I can explore because of you, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I can explore because of you, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I can explore because of you, [hero].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yup...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yes...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yep...
+		Argument: message_Close
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Command: end

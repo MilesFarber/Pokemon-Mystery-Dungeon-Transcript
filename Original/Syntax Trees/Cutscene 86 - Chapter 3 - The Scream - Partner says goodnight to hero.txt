@@ -1,0 +1,74 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P07C
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GOODNIGHT
+		Argument: 0
+		Argument: 256
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We should get some sleep too.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We should get some sleep too.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We should get some sleep too.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's make tomorrow another good day, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's make tomorrow another good day, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's make tomorrow another good day, [hero]!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: All right, good night.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK, good night.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK, good night.
+		Argument: message_Close
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: WaitBgm
+		Argument: BGM_GOODNIGHT
+	Command: end

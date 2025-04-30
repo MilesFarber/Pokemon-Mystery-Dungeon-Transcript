@@ -1,0 +1,76 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_RESTORED
+		Argument: 0
+		Argument: 200
+	Identifier: back_SetGround
+		Argument: LEVEL_T01P02A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_StationCommon
+		Argument: 99
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: MovePositionOffset
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 0.5
+		Argument: 0
+		Argument: 200
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_NYOROTONO
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_REDIBA
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_TOGEPII
+		Argument: 4
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_NEITYIO
+		Argument: 4
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_BEFORE
+	Identifier: screen_FadeInAll
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 60
+	Identifier: message_SetActor
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Everyone looks happy!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Everyone looks happy!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Everyone looks cheerful!
+		Argument: Wait
+		Argument: 240
+	Identifier: message_CloseEnforce
+	Identifier: screen_FadeOutAll
+		Argument: 1
+		Argument: 60
+	Identifier: CallCommon
+		Argument: CORO_FADE_OUT_ALL_AFTER
+	Command: end

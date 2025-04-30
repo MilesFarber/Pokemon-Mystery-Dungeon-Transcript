@@ -1,0 +1,998 @@
+def 0:
+	Identifier: sound_Stop
+	Identifier: back_SetGround
+		Argument: LEVEL_G01P01A
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_LoadStation
+		Argument: LEVEL_G01P01A
+		Argument: UM12
+	Identifier: supervision_Station
+		Argument: 2
+	Identifier: supervision_Acting
+		Argument: 2
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+	Identifier: SetPositionInitial
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 2
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_OCEAN3
+		Argument: 60
+		Argument: 190
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8978
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: Wait
+		Argument: 5
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: 0
+		Argument: 12
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 32
+			Identifier: 22
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: Wait
+		Argument: 1
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 0
+		Argument: 12
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: Move2PositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 28
+			Identifier: 22
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RURIRI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [partner] and [hero]! Hi there!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Huh? It's you little guys...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh! It's you little guys...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Hey! It's you little guys...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We heard we have visitors. Are you our visitors?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We heard we have visitors. Are you our visitors?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We heard we have visitors. Are you maybe those visitors?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yep![K] We wanted to ask Team [team:] for help.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Help?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Help?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Help?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yep!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RURIRI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RURIRI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We need your help finding a [CS:Z]Water Float[CR].
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_RURIRI
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: A [CS:Z]Water Float[CR]?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: A [CS:Z]Water Float[CR]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: A [CS:Z]Water Float[CR]?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You've been searching for your [CS:Z]Water Float[CR], right?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Weren't you looking for that earlier?[K] A [CS:Z]Water Float[CR]?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Isn't that what you were looking for earlier?[K] A [CS:Z]Water Float[CR]?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_SIGH
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Yep! Someone said one was lying on the beach. We went there looking for it!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We didn't find it. Instead, this is what we found.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 0.5
+		Argument: 8
+		Argument: 8
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 5124
+	Identifier: supervision_Acting
+		Argument: 3
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 0.5
+		Argument: 8
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 2
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 8962
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This scrap of paper?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This scrap of paper?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This scrap of paper?
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: There's writing on it.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There's writing on it.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: There's writing on it.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetOutputAttribute
+		Template
+			Type: object
+			Identifier: OBJECT_G01P01A2_94
+		Argument: 2
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 8
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 5124
+	Identifier: supervision_RemoveActing
+		Argument: 3
+	Identifier: Wait
+		Argument: 15
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 5
+	Identifier: SlidePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 8
+		Argument: 8
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Wait
+		Argument: 30
+	Identifier: bgm2_FadeOut
+		Argument: 60
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN][partner] read the message [CN]on the scrap of paper.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's see. What does it say?[K] "The [CS:Z]Water Float[CR] from the beach...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's see. What does it say?[K] "The [CS:Z]Water Float[CR] from the beach...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's see. What does it say?[K] "The [CS:Z]Water Float[CR] from the beach...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: \"...is now in our possession.\
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: \"...is now in our possession.\
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: \"...is now in our possession.\
+		Argument: message_KeyWait
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_GROWING_ANXIETY
+		Argument: 0
+		Argument: 256
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Just try to take it from us! We'll wait in the deepest part of [CS:P]Amp Plains[CR].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Just try to take it from us! We'll wait in the deepest part of [CS:P]Amp Plains[CR].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Just try to take it from us! We'll wait in the deepest part of [CS:P]Amp Plains[CR].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: But knowing how weak and puny you are...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: But knowing how weak and puny you are...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: But knowing how weak and puny you are...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...I bet you can't even reach us! Chaw-haw-haw!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...I bet you can't even reach us! Chaw-haw-haw!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...I bet you can't even reach us! Chaw-haw-haw!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Can't handle it? Go cry to your big-shot friends! Chaw-haw-haw!"[K] Hey! This note! It's a...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Can't handle it? Go cry to your big-shot friends! Chaw-haw-haw!"[K] Hey! This note! It's a...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Can't handle it? Go cry to your big-shot friends! Chaw-haw-haw!"[K] Hey! This note! It's a...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's a ransom note! Isn't it?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It's a ransom note! Isn't it?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's a ransom note! Isn't it?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You little guys shouldn't even think about going!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You little guys! Promise me you won't go yourself.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You little guys! Please don't even think about going.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It could be a trap.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I suspect a trap.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It's probably a trap!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_SIGH
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But the [CS:Z]Water Float[CR] is very important to us.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: We really want to get it back.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But I can't take [CS:N]Azurill[CR] to a dangerous place.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_OCEAN3
+		Argument: 90
+		Argument: 190
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RURIRI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RURIRI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I said I would go too!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_RURIRI
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_SIGH
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: It's too much for you. I don't want you getting into any scary scrapes.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I went to [CS:P]Amp Plains[CR] by myself.
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: But many Electric-type Pokémon live there!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I'm no match for them.
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_TEARY_EYED
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I tried going many times. But I get knocked out right away...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I just c-c-can't stand how weak I am...
+	Identifier: se_Play
+		Argument: 8972
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm2_FadeOut
+		Argument: 60
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: No problem! I know what to do!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: No problem! I know what to do!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: No problem! I know what to do!
+		Argument: message_KeyWait
+	Identifier: WaitBgm
+		Argument: BGM_GROWING_ANXIETY
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_WIGGLYTUFFS_GUILD
+		Argument: 0
+		Argument: 256
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We'll go and get the [CS:Z]Water Float[CR] back for you.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We'll go get the [CS:Z]Water Float[CR] back for you.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We'll go get the [CS:Z]Water Float[CR] back for you.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_RURIRI
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_RURIRI
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Really?!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You will?!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Yup![K] So no more crying!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Yep![K] So no more tears!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Yep![K] So no more tears!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_MARIRU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_MARIRU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: OK![K] W-we're sorry to bother you about this. Thank you!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_LAUGHING
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_HAPPY
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You should see your faces! All that crying and laughing... C'mon!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You should see your faces! All that crying and laughing... C'mon!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You should see your faces! All that crying and laughing... C'mon!
+		Argument: message_KeyWait
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Argument: 3
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_L_CENTER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Don't worry, though.[K] We'll get it back for you. Sure thing!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Don't worry, though.[K] We'll get it back for you. It's a promise!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Don't worry, though.[K] We'll get it back for you. We promise!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's go, [hero]! Onward to [CS:P]Amp Plains[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's go, [hero]! We're off to [CS:P]Amp Plains[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's go, [hero]! Let's get to [CS:P]Amp Plains[CR]!
+		Argument: message_Close
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 71
+	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: Wait
+		Argument: 15
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MARIRU
+		Argument: 4
+		Argument: 10
+		Argument: DIR_LEFT
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 32
+			Identifier: 28
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RURIRI
+		Argument: 4
+		Argument: 2
+		Argument: DIR_LEFT
+	Identifier: Wait
+		Argument: 15
+	Identifier: dungeon_mode
+		Argument: 17
+		Argument: DMODE_OPEN
+	Command: end

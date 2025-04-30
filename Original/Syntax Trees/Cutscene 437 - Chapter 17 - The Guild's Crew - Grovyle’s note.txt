@@ -1,0 +1,700 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_OCEAN1
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_H02P99A
+	Identifier: supervision_LoadStation
+		Argument: LEVEL_H02P99A
+		Argument: UM22
+	Identifier: supervision_Station
+		Argument: 4
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 2
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 60
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 34.5
+			Identifier: 24.5
+	Identifier: Wait
+		Argument: 30
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 34.5
+			Identifier: 25.5
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecutePerformer
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 1
+	Identifier: Wait
+		Argument: 10
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 34.5
+			Identifier: 20.5
+	Identifier: Wait
+		Argument: 15
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 20
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Grovyle[CR]'s not here...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Grovyle[CR] isn't here...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Grovyle[CR] isn't here...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNRIGHT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_RIGHT
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey! Over there!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hey! Over there!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh! Over there!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: MovePositionMark
+		Template
+			Type: performer
+			Identifier: 0
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 43.5
+			Identifier: 24.5
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 16
+		Argument: 16
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m4
+			Identifier: 40.5
+			Identifier: 25.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: Position
+		Template
+			Type: m5
+			Identifier: 43.5
+			Identifier: 22.5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: There's a sheet of paper!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There's a sheet of paper!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: There's a sheet of paper here!
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: There's something written on it in footprint runes.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There's something written on it in footprint runes.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: There's something written on it in footprint runes.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8978
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: This is a letter from [CS:N]Grovyle[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: This is a letter from [CS:N]Grovyle[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: This is a letter from [CS:N]Grovyle[CR]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It must be a message for us.[K] I'll read it.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: It must be a message for us.[K] I'll read it.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: It must be a message for us.[K] I'll read it.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm_ChangeVolume
+		Argument: 120
+		Argument: 0
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CN][partner] began reading [CN]the letter from [CS:N]Grovyle[CR].
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm2_PlayFadeIn
+		Argument: BGM_TIME_GEAR_REMIX
+		Argument: 0
+		Argument: 256
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: To [hero] and [partner]:[K] How are you doing?
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: \"How goes your search for the [CS:P]Hidden Land[CR]?\
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: Things are going well on my end. I've already collected three Time Gears.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: \"I have to find only two more Time Gears.\
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: \"I plan to join you when I've collected all five.\
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: Plans have proceeded smoothly. [CS:N]Azelf[CR] and his friends understood the situation. And they have fully cooperated.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CS:N]Azelf[CR] told me that members of your guild let them know I was coming. Thank you.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: It's heartening to know that more and more Pokémon are coming to trust us.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: However, I will continue to stay away from Treasure Town and the guild.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: First, I'm not certain if the Pokémon in this world trust me entirely or not.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: But there's something more troubling than that.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: [CS:N]Dusknoir[CR] is liable to return from the future at any time.
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: Wait
+		Argument: 5
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SURPRISED
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Dusknoir[CR]?!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Dusknoir[CR]?!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Dusknoir[CR]?!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_WORRIED
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Come to think of it...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Come to think of it...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Come to think of it...
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: [CS:N]Dusknoir[CR] failed to get rid of us in the future.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: [CS:N]Dusknoir[CR] failed to get rid of us in the future.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: [CS:N]Dusknoir[CR] failed to get rid of us in the future.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It makes sense that he'd come back to our world after us.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I wouldn't put it past him to chase us here. He still wants us gone.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: I wouldn't put it past him to chase us here. He still wants us gone.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: All right, let me keep reading.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: OK, I'll keep reading.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: OK, I'll finish reading.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: Since [CS:N]Dusknoir[CR] will be coming, we should keep a low profile.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: This is another reason I should stay away from Treasure Town and the guild.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: I may instead come back to Sharpedo Bluff or the beach.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: If we should meet, we can then exchange information.
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: \"Good luck on your end.\
+	Identifier: message_Mail
+		Argument: english
+		Dialogue: Together, we shall stop the planet's paralysis." - From [CS:N]Grovyle[CR]
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: bgm2_FadeOut
+		Argument: 120
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: ...[K]OK, it sounds like [CS:N]Grovyle[CR] is hard at work.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: ...[K]OK, it sounds like [CS:N]Grovyle[CR] is hard at work.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: ...[K]OK, it sounds like [CS:N]Grovyle[CR] is hard at work.
+		Argument: bgm_ChangeVolume
+		Argument: 60
+		Argument: 256
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: We'd better hold up our end too.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We'd better not fail on our end.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We can't fail on our end.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWN
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: According to this letter...[K][CS:N]Grovyle[CR] will show up either here or at the beach.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: According to this letter...[K][CS:N]Grovyle[CR] will show up either here or at the beach.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: According to this letter...[K][CS:N]Grovyle[CR] will show up either here or at the beach.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_DOWNLEFT
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UPRIGHT
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACEL
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Maybe we will see [CS:N]Grovyle[CR] if we go down to the beach.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: If we go down to the beach, maybe we will see [CS:N]Grovyle[CR] there.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: If we go down to the beach, maybe we will see [CS:N]Grovyle[CR] there.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's go down to the beach before we go back to the guild.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We should go down to the beach before we go back to the guild.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's go to the beach before we go back to the guild.
+		Argument: message_Close
+	Command: end

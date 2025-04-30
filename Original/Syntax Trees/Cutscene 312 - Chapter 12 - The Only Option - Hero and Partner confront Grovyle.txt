@@ -1,0 +1,337 @@
+def 0:
+	Identifier: back_SetGround
+		Argument: LEVEL_D17P45A
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetDirection
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_AGUNOMU
+		Argument: DIR_DOWNRIGHT
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_AGUNOMU
+		Argument: 42
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: se_Play
+		Argument: 8968
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: EFFECT_SHOCKED
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Th-this...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The lake is covered by crystals...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: There's no way of getting at the Time Gear!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_AGUNOMU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: [CS:N]Grovyle[CR]...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: The Time Gear...[K] You'll never get it now...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Even in exchange for my life...[K] You'll never...
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_NPC_AGUNOMU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Y-you!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I mean to have it, and I will get it![K] I need the Time Gear!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Even if it means eliminating you, [CS:N]Azelf[CR]!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetActor
+		Argument: ACTOR_ATTENDANT1
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hold it!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Stop!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Stop!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_AGUNOMU
+		Argument: 22
+	Identifier: se_Play
+		Argument: 8967
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_AGUNOMU
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_NPC_JUPUTORU
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 39.5
+			Identifier: 25.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 47.5
+			Identifier: 25.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC1
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m2
+			Identifier: 38.5
+			Identifier: 26.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_UNIT_NPC2
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m3
+			Identifier: 48
+			Identifier: 26.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m4
+			Identifier: 41.5
+			Identifier: 23.5
+	Identifier: MovePositionMark
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1.5
+		Argument: Position
+		Template
+			Type: m5
+			Identifier: 45.5
+			Identifier: 23.5
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: Turn2Direction
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: DIR_UP
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_RISING_FEAR
+		Argument: 0
+		Argument: 256
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: You're not taking the Time Gear, [CS:N]Grovyle[CR]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: You're not stealing another Time Gear, [CS:N]Grovyle[CR]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: You're not taking the Time Gear, [CS:N]Grovyle[CR]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I have no quarrel with you.[K] Out of the way!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Never! You can't make me!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: No! I won't move!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: No way! You can't make me!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_NPC_JUPUTORU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_R_CENTER
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Are you serious?!
+	Identifier: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: se_Play
+		Argument: 5124
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 25
+	Identifier: Wait
+		Argument: 15
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Then if you won't stand aside...
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: You leave me with no choice!
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: I'll knock you out first!
+	Identifier: bgm_FadeOut
+		Argument: 30
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 10
+	Identifier: se_Play
+		Argument: 5143
+	Identifier: screen_WhiteOut
+		Argument: 1
+		Argument: 2
+	Identifier: Wait
+		Argument: 2
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 2
+	Identifier: WaitSe
+		Argument: 5143
+	Identifier: message_Talk
+		Argument: english
+		Dialogue: Just try to stop me!
+	Identifier: message_Close
+	Identifier: CallCommon
+		Argument: CORO_BOSS_WIPE_FUNC
+	Identifier: main_EnterDungeon
+		Argument: 26
+		Argument: 30
+	Identifier: main_EnterDungeon
+		Argument: 1
+		Argument: 30
+	Identifier: hold
+	Command: end

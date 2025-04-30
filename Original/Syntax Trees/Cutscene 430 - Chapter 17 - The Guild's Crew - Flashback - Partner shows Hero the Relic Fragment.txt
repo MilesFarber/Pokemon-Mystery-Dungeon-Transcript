@@ -1,0 +1,174 @@
+def 0:
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V01P03B
+	Identifier: back_SetGround
+		Argument: LEVEL_D01P11B
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 33
+			Identifier: 9.5
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: screen2_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen_FlushOut
+		Argument: 1
+		Argument: 0
+		Argument: 8
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen2_FadeIn
+		Argument: 0
+		Argument: 30
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: So one day...[K]I happened to find something... My Relic Fragment.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: So one day...[K]I happened to come across my Relic Fragment.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: And it just so happened...[K]that I found this Relic Fragment.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Sure, it looks like junk, but take a closer look...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: I admit that it looks like junk, but take a closer look.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Sure, it does look like junk, but take a closer look.
+		Argument: message_Close
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 0.5
+		Argument: 4
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: MovePositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 0.5
+		Argument: 4
+		Argument: 0
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: back2_SetGround
+		Argument: LEVEL_V01P06B
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m1
+			Identifier: 21
+			Identifier: 15
+	Identifier: screen2_FadeIn
+		Argument: 1
+		Argument: 15
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: See?[K] See that strange pattern inscribed on it?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: See?[K] That inscription forms a strange pattern, doesn't it?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Look there.[K] See that strange pattern inscribed on it?
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: message_SetFace
+		Argument: ACTOR_PLAYER
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_R_FACEINW
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (It's true. There is a strange inscription.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (It's true. There is a strange inscription.)
+	Switch:
+		Variable: $HERO_TALK_KIND
+		Case:
+			Value: 4
+			Identifier: english
+				Dialogue: (I've never seen a pattern like this.)
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: (I've never seen a pattern like this.)
+		Argument: message_Close
+	Identifier: screen2_FadeOut
+		Argument: 0
+		Argument: 30
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 30
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: screen2_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Identifier: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+	Command: end

@@ -1,0 +1,211 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TIME_GEAR_REMIX
+		Argument: 0
+		Argument: 256
+	Identifier: back_SetGround
+		Argument: LEVEL_P13P01A
+	Identifier: back_SetBackScrollSpeed
+		Argument: 5.0
+		Argument: 0.0
+	Identifier: supervision_StationCommon
+		Argument: 0
+	Identifier: supervision_Acting
+		Argument: 0
+	Identifier: camera_SetMyself
+		Template
+			Type: performer
+			Identifier: 0
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 5
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 5
+	Identifier: screen_FadeIn
+		Argument: 1
+		Argument: 30
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEOUTW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: It's not far now, [hero].
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We're nearly there, [hero].
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We're getting close, [hero].
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: There's no turning back now.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: There's no turning back now.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: There's no turning back now.
+		Argument: message_Close
+	Identifier: Wait
+		Argument: 90
+	Identifier: back_SetBackScrollSpeed
+		Argument: 0.0
+		Argument: 0.0
+	Identifier: se_Play
+		Argument: 8964
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: Wait
+		Argument: 10
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
+		Argument: 3
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEOUTW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Hey! Up there...
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Hey! Up there...
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh! Up there...
+		Argument: message_Close
+	Identifier: back2_SetMode
+		Argument: 4
+	Identifier: back2_SetGround
+		Argument: LEVEL_V25P02A
+	Identifier: camera2_SetPositionMark
+		Argument: Position
+		Template
+			Type: m0
+			Identifier: 20
+			Identifier: 12.5
+	Identifier: screen2_FadeIn
+		Argument: 1
+		Argument: 15
+	Identifier: Wait
+		Argument: 30
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_BOTTOM_L_FACEOUTW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: The top of [CS:P]Temporal Tower[CR] is glowing red...[K] What's that about?
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: The top of [CS:P]Temporal Tower[CR] is glowing red...[K] What could that be?
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: The top of [CS:P]Temporal Tower[CR] is glowing red...[K] Why is that?
+		Argument: message_Close
+	Identifier: screen2_FadeOut
+		Argument: 1
+		Argument: 15
+	Identifier: back2_SetMode
+		Argument: 0
+	Identifier: Wait
+		Argument: 30
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Argument: 1
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_DETERMINED
+		Argument: FACE_POS_BOTTOM_L_FACEINW
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's move it!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's hustle!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's hurry!
+		Argument: message_Close
+	Identifier: Move2PositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 1.5
+		Argument: 120
+		Argument: 20
+	Identifier: Move2PositionOffset
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 1.5
+		Argument: 120
+		Argument: 20
+	Identifier: Wait
+		Argument: 30
+	Identifier: bgm_FadeOut
+		Argument: 120
+	Identifier: screen_FadeOut
+		Argument: 1
+		Argument: 60
+	Identifier: Wait
+		Argument: 30
+	Identifier: WaitBgm
+		Argument: BGM_TIME_GEAR_REMIX
+	Command: end

@@ -1,0 +1,119 @@
+def 0:
+	Identifier: bgm_PlayFadeIn
+		Argument: BGM_TREASURE_TOWN
+		Argument: 0
+		Argument: 256
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+	Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
+	Identifier: se_Play
+		Argument: 8965
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
+		Argument: 3
+	Identifier: WaitEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: Wait
+		Argument: 15
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+	Identifier: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Oh, right, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Oh, right, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Oh, right, [hero]!
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Argument: 10
+		Argument: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's check out Sharpedo Bluff before we go back to the guild.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: We should go over to Sharpedo Bluff before we go back to the guild.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: We should go over to Sharpedo Bluff before we go back to the guild.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Maybe [CS:N]Grovyle[CR] has come back.
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Just in case [CS:N]Grovyle[CR] has come back.
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Just in case [CS:N]Grovyle[CR] has come back.
+	Switch:
+		Variable: $PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: english
+				Dialogue: Let's go check out Sharpedo Bluff, [hero]!
+		Case:
+			Value: 2
+			Identifier: english
+				Dialogue: Let's go check out Sharpedo Bluff, [hero]!
+		Case:
+			Value: default
+			Identifier: english
+				Dialogue: Let's go check out Sharpedo Bluff, [hero]!
+		Argument: message_Close
+	Array accessor
+		Array: $SCENARIO_TALK_BIT_FLAG
+		Index: 121
+		Value: 1
+	Identifier: supervision_RemoveCommon
+		Argument: 15
+	Command: end
