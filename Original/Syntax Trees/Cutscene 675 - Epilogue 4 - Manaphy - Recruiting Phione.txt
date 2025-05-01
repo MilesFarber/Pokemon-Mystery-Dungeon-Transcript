@@ -190,7 +190,7 @@ def 0:
 		Variable: ProcessSpecial(PROCESS_SPECIAL_PREPARE_MENU_ACCEPT_TEAM_MEMBER, 17, 0)
 
 	Switch:
-		Variable: message_Menu(MENU_ACCEPT_TEAM_MEMBER) ) { case 1: @label_0; CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); bgm_Stop(); me_Play(5); message_Mail({ english="[CN][c_name:NPC_NEW_FRIEND] joined the team!", }); WaitMe(5); CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); bgm_FadeOut(120); screen_FadeOut(1, 60); Wait(30); WaitBgm(BGM_MYSTIFYING_FOREST); message_Explanation({ english=""" [CN][player] cleared the [CS:P]Miracle Sea[CR] [CN]in admirable fashion! """, }); message_Close(); end; case 2: default: CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_Mail({ english=""" [CN]Are you sure?[K] [CN]You're sure you won't accept [CN]this potential new member? """, }); switch ( message_SwitchMenu(0, 1) ) { case menu({ english="Reconsider", }): jump @label_2; case menu({ english="Refuse", }): default: CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_Mail({ english=""" [CN][player] turned down [CN][CS:N]Phione[CR]'s offer to join. """, }); message_Close(); bgm_FadeOut(120); screen_FadeOut(1, 60); Wait(30); WaitBgm(BGM_MYSTIFYING_FOREST
+		Variable: message_Menu(MENU_ACCEPT_TEAM_MEMBER)
 		Case:
 			Value: default
 
