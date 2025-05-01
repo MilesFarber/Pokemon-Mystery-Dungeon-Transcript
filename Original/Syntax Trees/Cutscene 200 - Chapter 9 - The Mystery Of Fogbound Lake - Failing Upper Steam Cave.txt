@@ -13,17 +13,14 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Ugh...[K] We blew it!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Urk...[K] That didn't go well!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Ack...[K] We didn't make it!
-		Argument: message_KeyWait
+	Identifier: message_KeyWait
 	Identifier: screen_FadeOutAll
 		Argument: 1
 		Argument: 60
@@ -36,7 +33,6 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -62,29 +58,22 @@ def 0:
 		Argument: 3
 	Identifier: Wait
 		Argument: 15
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 15
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -96,17 +85,14 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: The going's really rough here.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: It's really tough.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Wow, that was really tough!
-		Argument: message_SetFace
+	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_STANDARD
@@ -114,56 +100,15 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: But we're not far now![K] We can't give up. Let's keep going!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: But we don't have far to go.[K] We can't give up. We have to keep trying!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: But we're so close![K] We just can't give up now! Let's keep trying!
-		Argument: message_Close
-	Command: end
-	Identifier: def
-		Argument: 1
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_PLAYER
-		Argument: SetDirection
-		Argument: DIR_RIGHT
-	Identifier: SetAnimation
-		Argument: 76
-	Identifier: Lock
-		Argument: 5
-	Identifier: CallCommon
-		Argument: CORO_WAKEUP_FUNC
-	Identifier: CallCommon
-		Argument: CORO_LOOK_AROUND_DOWN_FUNC
-	Identifier: Lock
-		Argument: 6
-	Identifier: hold
-	Identifier: def
-		Argument: 2
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_ATTENDANT1
-		Argument: SetDirection
-		Argument: DIR_LEFT
-	Identifier: SetAnimation
-		Argument: 76
-	Identifier: Lock
-		Argument: 7
-	Identifier: CallCommon
-		Argument: CORO_WAKEUP_FUNC
-	Identifier: CallCommon
-		Argument: CORO_LOOK_AROUND_FUNC
-	Identifier: Unlock
-		Argument: 3
-	Identifier: Lock
-		Argument: 8
-	Identifier: hold
+	Identifier: message_Close
+	Identifier: end
 def 1:
 	Target: actor ACTOR_PLAYER
 	Identifier: SetDirection
@@ -179,12 +124,9 @@ def 1:
 	Identifier: Lock
 		Argument: 6
 	Identifier: hold
-	Identifier: def
-		Argument: 2
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_ATTENDANT1
-		Argument: SetDirection
+def 2:
+	Target: actor ACTOR_ATTENDANT1
+	Identifier: SetDirection
 		Argument: DIR_LEFT
 	Identifier: SetAnimation
 		Argument: 76

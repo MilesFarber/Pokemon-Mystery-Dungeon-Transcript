@@ -3,48 +3,34 @@ def 0:
 		Argument: BGM_DO_YOUR_BEST_AS_ALWAYS
 		Argument: 0
 		Argument: 256
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MANAFI
-		Argument: 2
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_MANAFI
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_MANAFI
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MANAFI
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MANAFI
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_MANAFI
 	Identifier: message_SetFace
@@ -52,987 +38,1270 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_STANDARD
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Goomi! Goomi!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN]Would you like to give a [CN][CS:I]Blue Gummi[CR] to [CS:N]Manaphy[CR]?
-	Identifier: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: Yes
-		Argument: label_0
-	Identifier: message_Close
-	Identifier: switch
-		Argument: ProcessSpecial
-		Argument: PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG
-		Argument: 121
-		Argument: 0
-		Argument: case
-		Argument: 1
-		Argument: switch
-		Argument: ProcessSpecial
-		Argument: PROCESS_SPECIAL_REMOVE_ITEMS_TYPE_IN_BAG
-		Argument: 121
-		Argument: 0
-		Argument: bgm_FadeOut
-		Argument: 120
-	Identifier: screen_FadeOut
-		Argument: 1
-		Argument: 30
-	Identifier: supervision_Acting
-		Argument: 0
-	Identifier: SetPositionMark
+	Switch:
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="Yes", }): @label_0; message_Close(); switch ( ProcessSpecial(PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG, 121, 0) ) { case >= 1: switch ( ProcessSpecial(PROCESS_SPECIAL_REMOVE_ITEMS_TYPE_IN_BAG, 121, 0) ) { } bgm_FadeOut(120); screen_FadeOut(1, 30); supervision_Acting(0
+
 		Template
 			Type: performer
 			Identifier: 0
-		Argument: Position
+			Identifier: SetPositionMark
+			Identifier: actor
+			Identifier: ACTOR_PLAYER
 		Template
-			Type: m0
-			Identifier: 38.5
-			Identifier: 25.5
-	Identifier: camera_SetMyself
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
 		Template
-			Type: performer
+			Type: actor
+			Identifier: ACTOR_NPC_MANAFI
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+			Identifier: DIR_UPLEFT
+			Identifier: SetDirection
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: DIR_UPRIGHT
+			Identifier: SetDirection
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: DIR_DOWN
+			Identifier: Wait
+			Identifier: 30
+			Identifier: WaitBgm
+			Identifier: BGM_DO_YOUR_BEST_AS_ALWAYS
+			Identifier: bgm_PlayFadeIn
+			Identifier: BGM_OCEAN1
+			Identifier: 90
+			Identifier: 190
+			Identifier: bgm_ChangeVolume
 			Identifier: 0
-	Identifier: SetPositionMark
-		Template
-			Type: actor
+			Identifier: 190
+			Identifier: screen_FadeIn
+			Identifier: 1
+			Identifier: 30
+			Identifier: Wait
+			Identifier: 30
+			Identifier: message_Mail
+			Identifier: english
+			Identifier: CN
+			Identifier: hero
+			Identifier: gave
+			Identifier: a
+			Identifier: CN
+			Identifier: CS
+			Identifier: I
+			Identifier: Blue
+			Identifier: Gummi
+			Identifier: CR
+			Identifier: to
+			Identifier: CS
+			Identifier: N
+			Identifier: Manaphy
+			Identifier: CR
+			Identifier: .
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SCENARIO_MAIN
+			Identifier: scn
+			Identifier: 29
+			Identifier: 46
+			Identifier: se_Play
+			Identifier: 8978
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: EFFECT_EXCLAMATION_MARK
+			Identifier: 3
+			Identifier: WaitEffect
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: ExecuteCommon
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: CORO_JUMP_ANGRY_FUNC_SERIES
+			Identifier: 0
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: message_SetFace
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: FACE_JOYOUS
+			Identifier: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: Goomi
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Wait
+			Identifier: 15
+			Identifier: message_SetFace
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: FACE_NORMAL
+			Identifier: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: Chew
+			Identifier: chew...
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_NORMAL
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Is
+			Identifier: it
+			Identifier: tasty
+			Identifier: Er...
+			Identifier: K
+			Identifier: Goomi
+			Identifier: tasty
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Is
+			Identifier: it
+			Identifier: tasty
+			Identifier: Er...
+			Identifier: K
+			Identifier: Goomi
+			Identifier: tasty
+			Identifier: default
+			Identifier: english
+			Identifier: Is
+			Identifier: it
+			Identifier: tasty
+			Identifier: Er...
+			Identifier: K
+			Identifier: Goomi
+			Identifier: tasty
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2Direction
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: 4
+			Identifier: 10
+			Identifier: DIR_DOWNLEFT
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: se_Play
+			Identifier: 8962
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: EFFECT_QUESTION_MARK
+			Identifier: 3
+			Identifier: WaitEffect
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: message_SetFace
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: FACE_NORMAL
+			Identifier: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: Tasty
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_NORMAL
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Yup.
+			Identifier: Tasty
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: That
+			Identifier: s
+			Identifier: right.
+			Identifier: Tasty
+			Identifier: default
+			Identifier: english
+			Identifier: Yes.
+			Identifier: Tasty
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: EFFECT_LAUGHING
+			Identifier: 3
+			Identifier: ExecuteCommon
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: CORO_JUMP_HAPPY_FUNC_SERIES
+			Identifier: 0
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: message_SetFace
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: FACE_HAPPY
+			Identifier: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: Tasty
+			Identifier: Goomi
+			Identifier: tasty
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: EFFECT_NONE
+			Identifier: 3
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_HAPPY
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Ha
+			Identifier: K
+			Identifier: The
+			Identifier: little
+			Identifier: guy
+			Identifier: s
+			Identifier: going
+			Identifier: to
+			Identifier: grow
+			Identifier: up
+			Identifier: in
+			Identifier: no
+			Identifier: time
+			Identifier: at
+			Identifier: this
+			Identifier: pace
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Ha
+			Identifier: K
+			Identifier: The
+			Identifier: little
+			Identifier: guy
+			Identifier: s
+			Identifier: going
+			Identifier: to
+			Identifier: grow
+			Identifier: up
+			Identifier: in
+			Identifier: no
+			Identifier: time
+			Identifier: at
+			Identifier: this
+			Identifier: pace
+			Identifier: default
+			Identifier: english
+			Identifier: Ha
+			Identifier: K
+			Identifier: The
+			Identifier: little
+			Identifier: cutie
+			Identifier: s
+			Identifier: going
+			Identifier: to
+			Identifier: grow
+			Identifier: up
+			Identifier: in
+			Identifier: no
+			Identifier: time
+			Identifier: at
+			Identifier: this
+			Identifier: rate
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: bgm_FadeOut
+			Identifier: 180
+			Identifier: message_SetFace
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: FACE_STUNNED
+			Identifier: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: .....................
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+			Identifier: 8962
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: EFFECT_QUESTION_MARK
+			Identifier: 3
+			Identifier: WaitEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_NORMAL
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Huh
+			Identifier: Is
+			Identifier: something
+			Identifier: the
+			Identifier: matter
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: What
+			Identifier: Is
+			Identifier: something
+			Identifier: wrong
+			Identifier: default
+			Identifier: english
+			Identifier: Oh
+			Identifier: Is
+			Identifier: something
+			Identifier: the
+			Identifier: matter
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: FACE_SIGH
+			Identifier: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: ...Yawn...
+			Identifier: K
+			Identifier: Snuffle...
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetAnimation
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: 25
+			Identifier: WaitAnimation
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: Wait
+			Identifier: 15
+			Identifier: se_Play
+			Identifier: 8978
+			Identifier: SetEffect
+			Identifier: actor
 			Identifier: ACTOR_PLAYER
-		Argument: Position
-		Template
-			Type: m1
-			Identifier: 40.5
-			Identifier: 25.5
-	Identifier: SetPositionMark
-		Template
-			Type: actor
+			Identifier: EFFECT_EXCLAMATION_MARK
+			Identifier: 3
+			Identifier: SetEffect
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: Position
-		Template
-			Type: m2
-			Identifier: 36.5
-			Identifier: 25.5
-	Identifier: SetPositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-		Argument: Position
-		Template
-			Type: m3
-			Identifier: 38.5
-			Identifier: 22.5
-	Identifier: SetDirection
-		Template
-			Type: actor
+			Identifier: EFFECT_EXCLAMATION_MARK
+			Identifier: 3
+			Identifier: WaitEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: Wait
+			Identifier: 45
+			Identifier: bgm_PlayFadeIn
+			Identifier: BGM_GOODNIGHT
+			Identifier: 0
+			Identifier: 256
+			Identifier: Wait
+			Identifier: 15
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_HAPPY
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Ha
+			Identifier: I
+			Identifier: guess
+			Identifier: the
+			Identifier: little
+			Identifier: guy
+			Identifier: got
+			Identifier: full
+			Identifier: and
+			Identifier: now
+			Identifier: he
+			Identifier: s
+			Identifier: sleepy.
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Ha
+			Identifier: The
+			Identifier: little
+			Identifier: guy
+			Identifier: ate
+			Identifier: his
+			Identifier: fill.
+			Identifier: Now
+			Identifier: he
+			Identifier: needs
+			Identifier: to
+			Identifier: sleep
+			Identifier: it
+			Identifier: off.
+			Identifier: default
+			Identifier: english
+			Identifier: Ha
+			Identifier: The
+			Identifier: little
+			Identifier: cutie
+			Identifier: must
+			Identifier: be
+			Identifier: full.
+			Identifier: He
+			Identifier: s
+			Identifier: gone
+			Identifier: to
+			Identifier: sleep
+			Identifier: now.
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2DirectionLives
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: 4
+			Identifier: 10
 			Identifier: ACTOR_PLAYER
-		Argument: DIR_UPLEFT
-	Identifier: SetDirection
-		Template
-			Type: actor
+			Identifier: WaitExecuteLives
 			Identifier: ACTOR_ATTENDANT1
-		Argument: DIR_UPRIGHT
-	Identifier: SetDirection
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-		Argument: DIR_DOWN
-	Identifier: Wait
-		Argument: 30
-	Identifier: WaitBgm
-		Argument: BGM_DO_YOUR_BEST_AS_ALWAYS
-	Identifier: bgm_PlayFadeIn
-		Argument: BGM_OCEAN1
-		Argument: 90
-		Argument: 190
-	Identifier: bgm_ChangeVolume
-		Argument: 0
-		Argument: 190
-	Identifier: screen_FadeIn
-		Argument: 1
-		Argument: 30
-	Identifier: Wait
-		Argument: 30
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN][hero] gave a [CN][CS:I]Blue Gummi[CR] to [CS:N]Manaphy[CR].
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SCENARIO_MAIN
-		Argument: scn
-		Argument: 29
-		Argument: 46
-	Identifier: se_Play
-		Argument: 8978
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_MANAFI
-	Identifier: ExecuteCommon
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_MANAFI
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_JOYOUS
-		Argument: FACE_POS_TOP_C_FACEL
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Goomi! ♪
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Wait
-		Argument: 15
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_TOP_C_FACEL
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Chew, chew...
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Is it tasty? Er...[K] Goomi tasty?
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Is it tasty? Er...[K] Goomi tasty?
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Is it tasty? Er...[K] Goomi tasty?
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWNLEFT
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_MANAFI
-	Identifier: se_Play
-		Argument: 8962
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-		Argument: EFFECT_QUESTION_MARK
-		Argument: 3
-	Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_MANAFI
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_TOP_C_FACEL
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Tasty?
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Yup. Tasty?
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: That's right. Tasty?
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Yes. Tasty?
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-		Argument: EFFECT_LAUGHING
-		Argument: 3
-	Identifier: ExecuteCommon
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_MANAFI
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_HAPPY
-		Argument: FACE_POS_TOP_C_FACEL
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Tasty! ♪ Goomi tasty! ♪
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-		Argument: EFFECT_NONE
-		Argument: 3
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_HAPPY
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Ha![K] The little guy's going to grow up in no time at this pace!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Ha![K] The little guy's going to grow up in no time at this pace!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Ha![K] The little cutie's going to grow up in no time at this rate!
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: bgm_FadeOut
-		Argument: 180
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_STUNNED
-		Argument: FACE_POS_TOP_C_FACEL
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: .....................
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: se_Play
-		Argument: 8962
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_QUESTION_MARK
-		Argument: 3
-	Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Huh? Is something the matter?
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: What? Is something wrong?
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Oh? Is something the matter?
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_SIGH
-		Argument: FACE_POS_TOP_C_FACEL
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: ...Yawn...[K] Snuffle...
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-		Argument: 25
-	Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANAFI
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_MANAFI
-	Identifier: Wait
-		Argument: 15
-	Identifier: se_Play
-		Argument: 8978
-	Identifier: SetEffect
-		Template
-			Type: actor
+			Identifier: Turn2DirectionLives
+			Identifier: actor
 			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: SetEffect
-		Template
-			Type: actor
+			Identifier: 4
+			Identifier: 10
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
-		Template
-			Type: actor
+			Identifier: message_SetFace
 			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Wait
-		Argument: 45
-	Identifier: bgm_PlayFadeIn
-		Argument: BGM_GOODNIGHT
-		Argument: 0
-		Argument: 256
-	Identifier: Wait
-		Argument: 15
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_HAPPY
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
+			Identifier: FACE_NORMAL
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
 			Identifier: english
-				Dialogue: Ha! I guess the little guy got full, and now he's sleepy.
-		Case:
-			Value: 2
+			Identifier: Let
+			Identifier: s
+			Identifier: let
+			Identifier: him
+			Identifier: sleep.
+			Identifier: case
+			Identifier: 2
 			Identifier: english
-				Dialogue: Ha! The little guy ate his fill. Now he needs to sleep it off.
-		Case:
-			Value: default
+			Identifier: Let
+			Identifier: s
+			Identifier: be
+			Identifier: quiet
+			Identifier: and
+			Identifier: let
+			Identifier: him
+			Identifier: sleep.
+			Identifier: default
 			Identifier: english
-				Dialogue: Ha! The little cutie must be full. He's gone to sleep now.
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
+			Identifier: We
+			Identifier: should
+			Identifier: let
+			Identifier: him
+			Identifier: sleep.
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2DirectionLives
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT1
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Let's let him sleep.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Let's be quiet and let him sleep.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: We should let him sleep.
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_NPC_MANAFI
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_NPC_MANAFI
-	Identifier: Wait
-		Argument: 30
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Sleep tight, [CS:N]Manaphy[CR].
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Sleep tight, [CS:N]Manaphy[CR].
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Sleep tight, [CS:N]Manaphy[CR].
-		Argument: message_Close
-	Identifier: bgm_FadeOut
-		Argument: 120
-	Identifier: screen_FadeOut
-		Argument: 1
-		Argument: 90
-	Identifier: Wait
-		Argument: 60
-	Identifier: switch
-		Argument: ProcessSpecial
-		Argument: PROCESS_SPECIAL_NEXT_DAY
-		Argument: 0
-		Argument: 0
-		Argument: message_Narration
-		Argument: 30
-		Argument: english
-		Dialogue: [CN]The next morning...
-	Identifier: message_Close
-	Identifier: back2_SetMode
-		Argument: 4
-	Identifier: back2_SetGround
-		Argument: LEVEL_V24P08A
-	Identifier: ATTENDANT2_KIND
-		Argument: 10
-	Identifier: Destroy
-		Template
-			Type: actor
+			Identifier: 4
+			Identifier: 10
 			Identifier: ACTOR_NPC_MANAFI
-	Identifier: supervision_Acting
-		Argument: 1
-	Identifier: supervision_StationCommon
-		Argument: 1
-	Identifier: camera2_SetPositionMark
-		Argument: Position
-		Template
-			Type: m4
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: Turn2DirectionLives
+			Identifier: actor
+			Identifier: ACTOR_PLAYER
+			Identifier: 4
+			Identifier: 10
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: Wait
+			Identifier: 30
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Sleep
+			Identifier: tight
+			Identifier: CS
+			Identifier: N
+			Identifier: Manaphy
+			Identifier: CR
+			Identifier: .
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Sleep
+			Identifier: tight
+			Identifier: CS
+			Identifier: N
+			Identifier: Manaphy
+			Identifier: CR
+			Identifier: .
+			Identifier: default
+			Identifier: english
+			Identifier: Sleep
+			Identifier: tight
+			Identifier: CS
+			Identifier: N
+			Identifier: Manaphy
+			Identifier: CR
+			Identifier: .
+			Identifier: message_Close
+			Identifier: bgm_FadeOut
+			Identifier: 120
+			Identifier: screen_FadeOut
+			Identifier: 1
+			Identifier: 90
+			Identifier: Wait
+			Identifier: 60
+			Identifier: switch
+			Identifier: ProcessSpecial
+			Identifier: PROCESS_SPECIAL_NEXT_DAY
+			Identifier: 0
+			Identifier: 0
+			Identifier: message_Narration
+			Identifier: 30
+			Identifier: english
+			Identifier: CN
+			Identifier: The
+			Identifier: next
+			Identifier: morning...
+			Identifier: message_Close
+			Identifier: back2_SetMode
+			Identifier: 4
+			Identifier: back2_SetGround
+			Identifier: LEVEL_V24P08A
+			Identifier: ATTENDANT2_KIND
+			Identifier: 10
+			Identifier: Destroy
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: supervision_Acting
+			Identifier: 1
+			Identifier: supervision_StationCommon
+			Identifier: 1
+			Identifier: camera2_SetPositionMark
+			Identifier: Position
+			Identifier: m4
 			Identifier: 19
 			Identifier: 15.5
-	Identifier: SetPositionMark
-		Template
-			Type: performer
+			Identifier: SetPositionMark
+			Identifier: performer
 			Identifier: 0
-		Argument: Position
-		Template
-			Type: m5
-			Identifier: 36
-			Identifier: 27.5
-	Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: Position
-		Template
-			Type: m6
-			Identifier: 38.5
-			Identifier: 27.5
-	Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: Position
-		Template
-			Type: m7
-			Identifier: 32.5
-			Identifier: 27.5
-	Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: DIR_RIGHT
-	Identifier: SetDirection
-		Template
-			Type: actor
+			Identifier: DIR_RIGHT
+			Identifier: SetDirection
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: DIR_LEFT
-	Identifier: SetAnimation
-		Template
-			Type: actor
+			Identifier: DIR_LEFT
+			Identifier: SetAnimation
+			Identifier: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 76
-	Identifier: SetAnimation
-		Template
-			Type: actor
+			Identifier: 76
+			Identifier: SetAnimation
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 76
-	Identifier: screen2_FadeIn
-		Argument: 0
-		Argument: 30
-	Identifier: screen_FadeIn
-		Argument: 1
-		Argument: 30
-	Identifier: bgm_PlayFadeIn
-		Argument: BGM_DO_YOUR_BEST_AS_ALWAYS
-		Argument: 0
-		Argument: 256
-	Identifier: Wait
-		Argument: 30
-	Identifier: SetEffect
-		Template
-			Type: actor
+			Identifier: 76
+			Identifier: screen2_FadeIn
+			Identifier: 0
+			Identifier: 30
+			Identifier: screen_FadeIn
+			Identifier: 1
+			Identifier: 30
+			Identifier: bgm_PlayFadeIn
+			Identifier: BGM_DO_YOUR_BEST_AS_ALWAYS
+			Identifier: 0
+			Identifier: 256
+			Identifier: Wait
+			Identifier: 30
+			Identifier: SetEffect
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT2
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: SetAnimation
-		Template
-			Type: actor
+			Identifier: EFFECT_EXCLAMATION_MARK
+			Identifier: 3
+			Identifier: SetAnimation
+			Identifier: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 63
-	Identifier: Wait
-		Argument: 5
-	Identifier: SetAnimation
-		Template
-			Type: actor
+			Identifier: 63
+			Identifier: Wait
+			Identifier: 5
+			Identifier: SetAnimation
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 63
-	Identifier: WaitAnimation
-		Template
-			Type: actor
+			Identifier: 63
+			Identifier: WaitAnimation
+			Identifier: actor
 			Identifier: ACTOR_PLAYER
-	Identifier: WaitAnimation
-		Template
-			Type: actor
+			Identifier: WaitAnimation
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: SetAnimation
-		Template
-			Type: actor
+			Identifier: WaitExecuteLives
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: Turn2Direction
-		Template
-			Type: actor
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: SetAnimation
+			Identifier: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWN
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-	Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWN
-	Identifier: Wait
-		Argument: 30
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
+			Identifier: 2
+			Identifier: Turn2Direction
+			Identifier: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT1
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
+			Identifier: 4
+			Identifier: 10
+			Identifier: DIR_DOWN
+			Identifier: SetAnimation
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: 2
+			Identifier: Turn2Direction
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: 4
+			Identifier: 10
+			Identifier: DIR_DOWN
+			Identifier: Wait
+			Identifier: 30
+			Identifier: Turn2DirectionLives
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: 4
+			Identifier: 10
+			Identifier: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: Turn2DirectionLives
+			Identifier: actor
+			Identifier: ACTOR_PLAYER
+			Identifier: 4
+			Identifier: 10
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_NORMAL
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
 			Identifier: english
-				Dialogue: Good morning, [hero]!
-		Case:
-			Value: 2
+			Identifier: Good
+			Identifier: morning
+			Identifier: hero
+			Identifier: case
+			Identifier: 2
 			Identifier: english
-				Dialogue: Good morning, [hero]!
-		Case:
-			Value: default
+			Identifier: Good
+			Identifier: morning
+			Identifier: hero
+			Identifier: default
 			Identifier: english
-				Dialogue: Good morning, [hero]!
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
-		Template
-			Type: actor
+			Identifier: Good
+			Identifier: morning
+			Identifier: hero
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: ExecuteCommon
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT2
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT2
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_HAPPY
-		Argument: FACE_POS_TOP_R_CENTER
-	Identifier: message_FacePositionOffset
-		Argument: 1
-		Argument: 0
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Hi!
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT2
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT2
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_HAPPY
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Good morning, [CS:N]Manaphy[CR].
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Good morning, [CS:N]Manaphy[CR].
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Good morning, [CS:N]Manaphy[CR].
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_HAPPY
-		Argument: FACE_POS_TOP_R_CENTER
-	Identifier: message_FacePositionOffset
-		Argument: 1
-		Argument: 0
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Morning! [hero]! [partner]!
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: se_Play
-		Argument: 8967
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SHOCKED_MIRRORED
-		Argument: 3
-	Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_SURPRISED
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Whoa! The little guy called us by name!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Wow! The little guy called us by name!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Wow! The little cutie greeted us by name!
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: That's awesome, [CS:N]Manaphy[CR]!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: That's awesome, [CS:N]Manaphy[CR]!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: That's awesome, [CS:N]Manaphy[CR]!
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: se_Play
-		Argument: 8974
-	Identifier: ExecuteCommon
-		Template
-			Type: actor
+			Identifier: CORO_JUMP_ANGRY_FUNC_SERIES
+			Identifier: 0
+			Identifier: WaitExecuteLives
 			Identifier: ACTOR_ATTENDANT2
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT2
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_JOYOUS
-		Argument: FACE_POS_TOP_R_CENTER
-	Identifier: message_FacePositionOffset
-		Argument: 1
-		Argument: 0
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Awesome!
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT1
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Well, [hero].[K] What should we do with him today?
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Well, [hero].[K] What should we do with him today?
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Well, [hero].[K] What should we do with him today?
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Eating and sleeping all the time doesn't seem healthy enough...
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Eating and sleeping all the time doesn't seem healthy enough...
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Eating and sleeping all the time doesn't seem healthy enough...
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: se_Play
-		Argument: 8965
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: I know![K] Let's take the little guy for a walk at the beach!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: I know![K] Let's take the little guy for a walk at the beach!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: I know![K] Let's take the little cutie for a walk at the beach!
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT2
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT2
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_HAPPY
-		Argument: FACE_POS_TOP_R_CENTER
-	Identifier: message_FacePositionOffset
-		Argument: 1
-		Argument: 0
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Walk! ♪
-	Identifier: message_Close
-	Identifier: screen2_FadeOut
-		Argument: 1
-		Argument: 30
-	Identifier: back2_SetMode
-		Argument: 0
-	Command: end
-	Identifier: default
-		Argument: label_3
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN][hero] doesn't have a [CS:I]Blue Gummi[CR]...
-	Identifier: message_Close
-	Command: end
-	Identifier: break
-	Identifier: case
-		Argument: menu
-		Argument: english
-		Dialogue: No
-		Argument: default
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetAnimation
-		Template
-			Type: actor
+			Identifier: message_SetFace
 			Identifier: ACTOR_NPC_MANAFI
-		Argument: 42
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_MANAFI
-		Argument: FACE_CRYING
-		Argument: FACE_POS_STANDARD
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Weh...[K] Weh...[K] Waaaah!
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: se_Play
-		Argument: 8972
-	Identifier: SetEffect
-		Template
-			Type: actor
+			Identifier: FACE_HAPPY
+			Identifier: FACE_POS_TOP_R_CENTER
+			Identifier: message_FacePositionOffset
+			Identifier: 1
+			Identifier: 0
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: Hi
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2DirectionLives
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: WaitEffect
-		Template
-			Type: actor
+			Identifier: 4
+			Identifier: 10
+			Identifier: ACTOR_ATTENDANT2
+			Identifier: WaitExecuteLives
 			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_SURPRISED
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
+			Identifier: Turn2DirectionLives
+			Identifier: actor
+			Identifier: ACTOR_PLAYER
+			Identifier: 4
+			Identifier: 10
+			Identifier: ACTOR_ATTENDANT2
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_HAPPY
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
 			Identifier: english
-				Dialogue: Whoa, whoa... Please don't cry!
-		Case:
-			Value: 2
+			Identifier: Good
+			Identifier: morning
+			Identifier: CS
+			Identifier: N
+			Identifier: Manaphy
+			Identifier: CR
+			Identifier: .
+			Identifier: case
+			Identifier: 2
 			Identifier: english
-				Dialogue: Oh no... Please don't cry!
-		Case:
-			Value: default
+			Identifier: Good
+			Identifier: morning
+			Identifier: CS
+			Identifier: N
+			Identifier: Manaphy
+			Identifier: CR
+			Identifier: .
+			Identifier: default
 			Identifier: english
-				Dialogue: Oh, no no... Please don't cry!
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Don't worry, little guy.[K] We'll be back soon with a tasty [CS:I]Blue Gummi[CR] for you.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Don't you cry, little guy.[K] We'll be back soon with a tasty [CS:I]Blue Gummi[CR] for you.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Don't you cry, cutie.[K] We'll be back soon with a tasty [CS:I]Blue Gummi[CR] for you.
-		Argument: message_Close
-	Identifier: SetAnimation
-		Template
-			Type: actor
+			Identifier: Good
+			Identifier: morning
+			Identifier: CS
+			Identifier: N
+			Identifier: Manaphy
+			Identifier: CR
+			Identifier: .
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
 			Identifier: ACTOR_NPC_MANAFI
-		Argument: 2
-	Command: end
+			Identifier: FACE_HAPPY
+			Identifier: FACE_POS_TOP_R_CENTER
+			Identifier: message_FacePositionOffset
+			Identifier: 1
+			Identifier: 0
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: Morning
+			Identifier: hero
+			Identifier: partner
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+			Identifier: 8967
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_PLAYER
+			Identifier: EFFECT_EXCLAMATION_MARK
+			Identifier: 3
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: EFFECT_SHOCKED_MIRRORED
+			Identifier: 3
+			Identifier: WaitEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_SURPRISED
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Whoa
+			Identifier: The
+			Identifier: little
+			Identifier: guy
+			Identifier: called
+			Identifier: us
+			Identifier: by
+			Identifier: name
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Wow
+			Identifier: The
+			Identifier: little
+			Identifier: guy
+			Identifier: called
+			Identifier: us
+			Identifier: by
+			Identifier: name
+			Identifier: default
+			Identifier: english
+			Identifier: Wow
+			Identifier: The
+			Identifier: little
+			Identifier: cutie
+			Identifier: greeted
+			Identifier: us
+			Identifier: by
+			Identifier: name
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: That
+			Identifier: s
+			Identifier: awesome
+			Identifier: CS
+			Identifier: N
+			Identifier: Manaphy
+			Identifier: CR
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: That
+			Identifier: s
+			Identifier: awesome
+			Identifier: CS
+			Identifier: N
+			Identifier: Manaphy
+			Identifier: CR
+			Identifier: default
+			Identifier: english
+			Identifier: That
+			Identifier: s
+			Identifier: awesome
+			Identifier: CS
+			Identifier: N
+			Identifier: Manaphy
+			Identifier: CR
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+			Identifier: 8974
+			Identifier: ExecuteCommon
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT2
+			Identifier: CORO_JUMP_ANGRY_FUNC_SERIES
+			Identifier: 0
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT2
+			Identifier: message_SetFace
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: FACE_JOYOUS
+			Identifier: FACE_POS_TOP_R_CENTER
+			Identifier: message_FacePositionOffset
+			Identifier: 1
+			Identifier: 0
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: Awesome
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2DirectionLives
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: 4
+			Identifier: 10
+			Identifier: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: Turn2DirectionLives
+			Identifier: actor
+			Identifier: ACTOR_PLAYER
+			Identifier: 4
+			Identifier: 10
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_NORMAL
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Well
+			Identifier: hero
+			Identifier: .
+			Identifier: K
+			Identifier: What
+			Identifier: should
+			Identifier: we
+			Identifier: do
+			Identifier: with
+			Identifier: him
+			Identifier: today
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Well
+			Identifier: hero
+			Identifier: .
+			Identifier: K
+			Identifier: What
+			Identifier: should
+			Identifier: we
+			Identifier: do
+			Identifier: with
+			Identifier: him
+			Identifier: today
+			Identifier: default
+			Identifier: english
+			Identifier: Well
+			Identifier: hero
+			Identifier: .
+			Identifier: K
+			Identifier: What
+			Identifier: should
+			Identifier: we
+			Identifier: do
+			Identifier: with
+			Identifier: him
+			Identifier: today
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Eating
+			Identifier: and
+			Identifier: sleeping
+			Identifier: all
+			Identifier: the
+			Identifier: time
+			Identifier: doesn
+			Identifier: t
+			Identifier: seem
+			Identifier: healthy
+			Identifier: enough...
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Eating
+			Identifier: and
+			Identifier: sleeping
+			Identifier: all
+			Identifier: the
+			Identifier: time
+			Identifier: doesn
+			Identifier: t
+			Identifier: seem
+			Identifier: healthy
+			Identifier: enough...
+			Identifier: default
+			Identifier: english
+			Identifier: Eating
+			Identifier: and
+			Identifier: sleeping
+			Identifier: all
+			Identifier: the
+			Identifier: time
+			Identifier: doesn
+			Identifier: t
+			Identifier: seem
+			Identifier: healthy
+			Identifier: enough...
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+			Identifier: 8965
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: EFFECT_EXCLAMATION_MARK
+			Identifier: 3
+			Identifier: WaitEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: I
+			Identifier: know
+			Identifier: K
+			Identifier: Let
+			Identifier: s
+			Identifier: take
+			Identifier: the
+			Identifier: little
+			Identifier: guy
+			Identifier: for
+			Identifier: a
+			Identifier: walk
+			Identifier: at
+			Identifier: the
+			Identifier: beach
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: I
+			Identifier: know
+			Identifier: K
+			Identifier: Let
+			Identifier: s
+			Identifier: take
+			Identifier: the
+			Identifier: little
+			Identifier: guy
+			Identifier: for
+			Identifier: a
+			Identifier: walk
+			Identifier: at
+			Identifier: the
+			Identifier: beach
+			Identifier: default
+			Identifier: english
+			Identifier: I
+			Identifier: know
+			Identifier: K
+			Identifier: Let
+			Identifier: s
+			Identifier: take
+			Identifier: the
+			Identifier: little
+			Identifier: cutie
+			Identifier: for
+			Identifier: a
+			Identifier: walk
+			Identifier: at
+			Identifier: the
+			Identifier: beach
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: ExecuteCommon
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT2
+			Identifier: CORO_JUMP_HAPPY_FUNC_SERIES
+			Identifier: 0
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT2
+			Identifier: message_SetFace
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: FACE_HAPPY
+			Identifier: FACE_POS_TOP_R_CENTER
+			Identifier: message_FacePositionOffset
+			Identifier: 1
+			Identifier: 0
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: Walk
+			Identifier: message_Close
+			Identifier: screen2_FadeOut
+			Identifier: 1
+			Identifier: 30
+			Identifier: back2_SetMode
+			Identifier: 0
+			Identifier: end
+			Identifier: default
+			Identifier: label_3
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_Mail
+			Identifier: english
+			Identifier: CN
+			Identifier: hero
+			Identifier: doesn
+			Identifier: t
+			Identifier: have
+			Identifier: a
+			Identifier: CS
+			Identifier: I
+			Identifier: Blue
+			Identifier: Gummi
+			Identifier: CR
+			Identifier: ...
+			Identifier: message_Close
+			Identifier: end
+			Identifier: break
+			Identifier: case
+			Identifier: menu
+			Identifier: english
+			Identifier: No
+			Identifier: default
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetAnimation
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: 42
+			Identifier: message_SetFace
+			Identifier: ACTOR_NPC_MANAFI
+			Identifier: FACE_CRYING
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_Talk
+			Identifier: english
+			Identifier: Weh...
+			Identifier: K
+			Identifier: Weh...
+			Identifier: K
+			Identifier: Waaaah
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+			Identifier: 8972
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+			Identifier: 3
+			Identifier: WaitEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_SURPRISED
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Whoa
+			Identifier: whoa...
+			Identifier: Please
+			Identifier: don
+			Identifier: t
+			Identifier: cry
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Oh
+			Identifier: no...
+			Identifier: Please
+			Identifier: don
+			Identifier: t
+			Identifier: cry
+			Identifier: default
+			Identifier: english
+			Identifier: Oh
+			Identifier: no
+			Identifier: no...
+			Identifier: Please
+			Identifier: don
+			Identifier: t
+			Identifier: cry
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Don
+			Identifier: t
+			Identifier: worry
+			Identifier: little
+			Identifier: guy.
+			Identifier: K
+			Identifier: We
+			Identifier: ll
+			Identifier: be
+			Identifier: back
+			Identifier: soon
+			Identifier: with
+			Identifier: a
+			Identifier: tasty
+			Identifier: CS
+			Identifier: I
+			Identifier: Blue
+			Identifier: Gummi
+			Identifier: CR
+			Identifier: for
+			Identifier: you.
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Don
+			Identifier: t
+			Identifier: you
+			Identifier: cry
+			Identifier: little
+			Identifier: guy.
+			Identifier: K
+			Identifier: We
+			Identifier: ll
+			Identifier: be
+			Identifier: back
+			Identifier: soon
+			Identifier: with
+			Identifier: a
+			Identifier: tasty
+			Identifier: CS
+			Identifier: I
+			Identifier: Blue
+			Identifier: Gummi
+			Identifier: CR
+			Identifier: for
+			Identifier: you.
+			Identifier: default
+			Identifier: english
+			Identifier: Don
+			Identifier: t
+			Identifier: you
+			Identifier: cry
+			Identifier: cutie.
+			Identifier: K
+			Identifier: We
+			Identifier: ll
+			Identifier: be
+			Identifier: back
+			Identifier: soon
+			Identifier: with
+			Identifier: a
+			Identifier: tasty
+			Identifier: CS
+			Identifier: I
+			Identifier: Blue
+			Identifier: Gummi
+			Identifier: CR
+			Identifier: for
+			Identifier: you.
+			Identifier: message_Close
+			Identifier: SetAnimation
+			Identifier: actor
+			Identifier: ACTOR_NPC_MANAFI

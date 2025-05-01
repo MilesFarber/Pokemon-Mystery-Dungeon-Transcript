@@ -4,8 +4,6 @@ def 0:
 		Argument: 4
 	Identifier: back2_SetGround
 		Argument: LEVEL_V02P06A
-	Identifier: camera2_SetPositionMark
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 19.5
@@ -24,7 +22,6 @@ def 0:
 		Argument: LEVEL_H02P99C
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -42,10 +39,8 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: But [hero]...
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I never expected you to be that very same [hero]...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -54,16 +49,14 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_C_FACER
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(..................)", } default: { english="(..................
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (..................)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (..................)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -73,24 +66,19 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: [CS:N]Grovyle[CR], can you tell us more about that?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: [CS:N]Grovyle[CR], can you tell us more about that?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: [CS:N]Grovyle[CR], can you tell us more about that?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_JUPUTORU
@@ -99,10 +87,8 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Yes, [hero] and I...
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: We were jointly investigating the planet's paralysis.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -114,33 +100,26 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: A Pokémon and a human...[K] paired together?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: A Pokémon and a human...[K] paired together?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: A Pokémon and a human...[K] paired together?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_JUPUTORU
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Yeah.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: And [hero] had...or has... a special ability like no other.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: We relied on that special ability to investigate the planet's paralysis.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: It played a vital part.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -152,33 +131,26 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: By special ability...[K]you mean the Dimensional Scream, don't you?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: By special ability...[K]you mean the Dimensional Scream, don't you?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: By special ability...[K]you mean the Dimensional Scream, don't you?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_JUPUTORU
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Exactly.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: But the Dimensional Scream has a drawback.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: The Dimensional Scream requires the presence of a trusted Pokémon partner.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Without that partner, the ability cannot be triggered.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -190,56 +162,44 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: A trusted...[K]partner...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: A trusted...[K]partner...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: A trusted...[K]partner...
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_JUPUTORU
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: That's why we worked together.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: The Dimensional Scream is set off by triggers tied to places where the Time Gears are hidden.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: We needed to find out where the Time Gears were in the past.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: We needed the Dimensional Scream to accomplish that.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8972
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
 		Argument: FACE_WORRIED
@@ -248,65 +208,51 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: W-wait! Hold on a second!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: W-wait a second!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: W-wait! Wait a second!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: You said that the Dimensional Scream needs a trusted partner nearby.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: You said that there has to be a trusted partner nearby for the Dimensional Scream to work.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: You said that the Dimensional Scream needs a trusted partner nearby.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: But the Dimensional Scream was going off not long after we met!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: But the Dimensional Scream was being triggered not long after we met!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: But the Dimensional Scream was being triggered not long after we met!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_JUPUTORU
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Your point?
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Doesn't that show you how much you two trusted each other from the start?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -320,43 +266,33 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Urk![K] When you put it like that...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Urk![K] When you put it like that...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Urk![K] When you put it like that...
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPRIGHT
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: Wait
 		Argument: 20
 	Identifier: se_Play
 		Argument: 8961
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROP
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -368,17 +304,14 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I mean...it's a bit embarrassing.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: It's a little embarrassing!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I mean...it's a bit embarrassing.
-		Argument: WaitExecuteLives
+	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -387,43 +320,33 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: In addition, [hero] developed amnesia...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_JUPUTORU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Upon meeting you, [partner], your partner had someone to turn to.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Perhaps [hero] grew to trust you very quickly because of that.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8964
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_TWO_ARROWS_AT_SIDE_RIGHT
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -437,38 +360,31 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Oh![K] There's one other thing that I don't understand.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Oh![K] There's another thing I don't understand.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Oh![K] There's another thing I don't understand.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Does the Dimensional Scream go off in relation to only Time Gears?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Is the Dimensional Scream triggered in response to only Time Gears?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Does the Dimensional Scream go off in response to only Time Gears?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_JUPUTORU
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Right.[K] The opposite is also true. The Dimensional Scream is not triggered in places that aren't connected to Time Gears.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -480,47 +396,37 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Hmm...[K]really?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Hmm...[K]really?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Hmm...[K]really?
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I don't remember it that way...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: That's not how I remember it...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: That's not how I remember it...
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -530,128 +436,98 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Hey, [hero].
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Listen, [hero].
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Say, [hero].
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Do you remember that time it went off near [CS:N]Drowzee[CR]?[K] And during our first exploration?[K] And there were other times too!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Do you remember that time it went off near [CS:N]Drowzee[CR]?[K] And during our first exploration?[K] And there were other times too!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Do you remember that time it went off near [CS:N]Drowzee[CR]?[K] And during our first exploration?[K] And there were other times too!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: We went to places that seem to have nothing to do with Time Gears.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: We went to places that seem to have nothing to do with Time Gears.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: We went to places that seem to have nothing to do with Time Gears.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: But even in places like that, the Dimensional Scream went off, right?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: But even in places like that, the Dimensional Scream was triggered sometimes, wasn't it?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: But even in places like that, the Dimensional Scream went off sometimes, didn't it?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
-		Argument: 1
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPLEFT
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
 	Identifier: Wait
 		Argument: 30
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: Wait
 		Argument: 5
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_JUPUTORU
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_JUPUTORU
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Are you sure?[K] But that never happened in the future.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: The Dimensional Scream was never triggered by places that had no tie to Time Gears whatsoever.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: ...[K]Well, if that's true, I don't know why it would work differently here.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Perhaps things are just different in this world.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Perhaps the nature of the Dimensional Scream is altered in the past.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -660,46 +536,38 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_C_FACER
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (So in the future, the Dimensional Scream doesn't work in places that have no connection to Time Gears?) """, } default: { english=""" (So in the future, the Dimensional Scream doesn't work in places that have no connection to Time Gears?
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (So in the future, the Dimensional Scream doesn't work in places that have no connection to Time Gears?)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (So in the future, the Dimensional Scream doesn't work in places that have no connection to Time Gears?)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(Oh![K] That explains it!)", } default: { english="(Oh![K] That explains it!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Oh![K] That explains it!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Oh![K] That explains it!)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(Maybe that's why...that time...)", } default: { english="(Maybe that's why...that time...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Maybe that's why...that time...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Maybe that's why...that time...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(when we were in the future...)", } default: { english="(when we were in the future...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (when we were in the future...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (when we were in the future...)
-		Argument: message_Close
+	Identifier: message_Close
 	Identifier: bgm_FadeOut
 		Argument: 30
 	Identifier: screen_FadeOut
@@ -707,4 +575,4 @@ def 0:
 		Argument: 30
 	Identifier: WaitBgm
 		Argument: BGM_FIRE_CRACKLING
-	Command: end
+	Identifier: end

@@ -8,7 +8,6 @@ def 0:
 		Argument: LEVEL_D13P11A
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -19,22 +18,16 @@ def 0:
 		Argument: BGM_NORTHERN_DESERT
 		Argument: 0
 		Argument: 256
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 31
 			Identifier: 33.5
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 27
@@ -51,33 +44,26 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: The [CS:P]Northern Desert[CR] is through here...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: The [CS:P]Northern Desert[CR] is through here...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: The [CS:P]Northern Desert[CR] is through here...
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -87,94 +73,69 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: If a Time Gear really is here...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: If a Time Gear really is here...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: If a Time Gear really is here...
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: [CS:N]Grovyle[CR] will show up here for sure.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: [CS:N]Grovyle[CR] should show up here for sure.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: [CS:N]Grovyle[CR] should show up here for sure.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Let's go for it and find that Time Gear!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Let's do our best and find that Time Gear!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's do our best and find that Time Gear!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 71
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
 	Identifier: Wait
 		Argument: 30
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m2
 			Identifier: 28.5
 			Identifier: 20.5
 	Identifier: Wait
 		Argument: 20
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m3
 			Identifier: 28.5
@@ -187,11 +148,11 @@ def 0:
 	Identifier: main_EnterDungeon
 		Argument: 20
 		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_DUNGEON_INITIALIZE_TEAM
-		Argument: main_EnterDungeon
+	Switch:
+		Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+
+	Identifier: main_EnterDungeon
 		Argument: 1
 		Argument: 0
 	Identifier: hold
-	Command: end
+	Identifier: end

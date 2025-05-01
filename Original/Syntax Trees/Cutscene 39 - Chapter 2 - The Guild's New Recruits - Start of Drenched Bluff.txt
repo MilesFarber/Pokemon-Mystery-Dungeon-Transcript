@@ -3,7 +3,6 @@ def 0:
 		Argument: LEVEL_D02P11A
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -14,22 +13,16 @@ def 0:
 		Argument: BGM_DRENCHED_BLUFF
 		Argument: 0
 		Argument: 256
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 34.5
 			Identifier: 19.5
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 31
@@ -46,68 +39,52 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: [CS:N]Spoink[CR]'s pearl should be down on the B7F level.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: [CS:N]Spoink[CR]'s pearl should be down on the B7F level.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: [CS:N]Spoink[CR]'s pearl should be down on the B7F level.
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Come on! This time, let's get this job done, [hero]!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: OK, let's hang in and finish the job this time, [hero]!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's hang in there and finish the job this time, [hero]!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m2
 			Identifier: 33
 			Identifier: 11.5
 	Identifier: Wait
 		Argument: 20
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m3
 			Identifier: 33
@@ -117,37 +94,10 @@ def 0:
 	Identifier: screen_FadeOut
 		Argument: 1
 		Argument: 30
-	Identifier: switch
-		Argument: scn
-		Argument: SCENARIO_MAIN
-		Argument: 1
-		Argument: case
-		Argument: 3
-		Argument: label_0
-	Identifier: SCENARIO_MAIN
-		Argument: scn
-		Argument: 3
-		Argument: 4
-	Identifier: label_2
-	Identifier: main_EnterDungeon
-		Argument: 3
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_DUNGEON_INITIALIZE_TEAM
-		Argument: main_EnterDungeon
-		Argument: 1
-		Argument: 0
-	Identifier: hold
-	Command: end
-	Identifier: case
-		Argument: 4
-		Argument: SCENARIO_MAIN
-		Argument: scn
-		Argument: 3
-		Argument: 5
-	Identifier: jump
-		Argument: label_2
-	Identifier: default
-		Argument: jump
-		Argument: label_2
+	Switch:
+		Variable: scn($SCENARIO_MAIN)[1] ) { case 3: @label_0; $SCENARIO_MAIN = scn[3, 4]; @label_2; main_EnterDungeon(3, 0); switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM) ) { } main_EnterDungeon(-1, 0
+		Case:
+			Value: default
+
+		Case:
+			Value: default

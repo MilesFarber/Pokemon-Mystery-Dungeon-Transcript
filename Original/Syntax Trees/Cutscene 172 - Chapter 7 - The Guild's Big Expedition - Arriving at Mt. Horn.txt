@@ -13,7 +13,6 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -24,36 +23,27 @@ def 0:
 		Argument: BGM_MT_HORN
 		Argument: 0
 		Argument: 256
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 22
 			Identifier: 25.5
 	Identifier: Wait
 		Argument: 50
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 18
 			Identifier: 26.5
 	Identifier: Wait
 		Argument: 20
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m2
 			Identifier: 18
@@ -69,23 +59,18 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEOUTW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Whew... By golly, I reckon we're finally through.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_BIPPA
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_BIPPA
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -97,54 +82,42 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Yeah, but we're still pretty far from the base camp.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Yes, but we still have a long ways to go for the base camp.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Yes, but we're still quite far from the base camp.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Let's check the Wonder Map.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Let's check the Wonder Map.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's look at the Wonder Map.
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNRIGHT
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_BIPPA
@@ -153,4 +126,4 @@ def 0:
 	Identifier: screen_FadeOut
 		Argument: 1
 		Argument: 15
-	Command: end
+	Identifier: end

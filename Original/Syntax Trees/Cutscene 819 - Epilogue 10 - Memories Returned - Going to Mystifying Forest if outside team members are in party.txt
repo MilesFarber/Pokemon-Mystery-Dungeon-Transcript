@@ -1,29 +1,21 @@
 def 0:
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -33,89 +25,55 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Hey, [hero].[K] This is our graduation exam, right?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Listen, [hero].[K] Since this is our graduation exam...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Say, [hero].[K] Since this is our graduation exam...
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I think that just we two should go. You and me, [hero].
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: I was thinking that just the two of us should go, [hero].
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I started thinking that just the two of us should go, [hero].
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: So how about leaving behind the other team members...[K]and just we two go?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: What do you think about leaving behind the other team members?[K] So just we two can go.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: So how about leaving behind the other team members...[K] That way, we can go as a pair.
-		Argument: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: Go as a pair
-		Argument: default
-		Argument: label_0
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Switch:
-		Variable: $PARTNER_TALK_KIND
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="Go as a pair", }): default: @label_0; CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); switch ( ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0) ) { } message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=""" OK![K] Let's get moving to [CS:P]Mystifying Forest[CR]! """, } case 2: { english=""" That's that![K] Let's get moving to [CS:P]Mystifying Forest[CR]! """, } default: { english=""" OK![K] Let's go to [CS:P]Mystifying Forest[CR]! """, } } message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=""" Let's give it our best, [hero]! """, } case 2: { english=" Let's do our best, [hero]!", } default: { english=" Let's do our best, [hero]!", } } message_Close(); end; case menu({ english="Don't go to [CS:P]Mystifying Forest[CR]", }): message_Close(
+		Case:
+			Value: default
+
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: OK![K] Let's get moving to [CS:P]Mystifying Forest[CR]!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: That's that![K] Let's get moving to [CS:P]Mystifying Forest[CR]!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: OK![K] Let's go to [CS:P]Mystifying Forest[CR]!
-	Switch:
-		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Let's give it our best, [hero]!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Let's do our best, [hero]!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's do our best, [hero]!
-		Argument: message_Close
-	Command: end
-	Identifier: case
-		Argument: menu
-		Argument: english
-		Dialogue: Don't go to [CS:P]Mystifying Forest[CR]
-		Argument: message_Close
-	Command: end

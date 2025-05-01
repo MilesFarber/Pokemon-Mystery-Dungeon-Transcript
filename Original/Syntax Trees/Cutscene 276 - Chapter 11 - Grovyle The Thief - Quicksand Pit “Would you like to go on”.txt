@@ -3,84 +3,56 @@ def 0:
 		Argument: BGM_QUICKSAND_PIT
 		Argument: 0
 		Argument: 256
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN]Would you like to go on?
-	Identifier: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: Yes
-		Argument: default
-		Argument: label_0
-	Identifier: message_Close
-	Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
+	Switch:
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="Yes", }): default: @label_0; message_Close(
+
 		Template
 			Type: m0
 			Identifier: 28.5
 			Identifier: 3.5
-	Identifier: Wait
-		Argument: 15
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 28.5
 			Identifier: 3.5
 	Identifier: Wait
 		Argument: 20
-	Identifier: screen_FadeOut
+		Argument: screen_FadeOut
 		Argument: 1
 		Argument: 30
-	Identifier: if
+		Argument: if
 		Argument: scn
 		Argument: SCENARIO_MAIN
 		Argument: 15
 		Argument: 2
 		Argument: label_2
-	Identifier: main_EnterDungeon
+		Argument: main_EnterDungeon
 		Argument: 22
 		Argument: 0
-	Identifier: main_EnterDungeon
+		Argument: main_EnterDungeon
 		Argument: 1
 		Argument: 0
-	Identifier: hold
-	Identifier: else
+		Argument: hold
+		Argument: else
 		Argument: SCENARIO_MAIN
 		Argument: scn
 		Argument: 15
 		Argument: 2
-	Identifier: jump
+		Argument: jump
 		Argument: label_2
-	Identifier: break
-	Identifier: case
+		Argument: break
+		Argument: case
 		Argument: menu
-		Argument: english
 		Dialogue: No
-		Argument: message_Close
-	Identifier: label_3
-	Command: end

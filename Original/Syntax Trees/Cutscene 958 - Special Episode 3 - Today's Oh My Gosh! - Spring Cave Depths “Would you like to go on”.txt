@@ -1,80 +1,14 @@
 def 0:
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_KIMAWARI
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_KIMAWARI
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN]Would you like to go on?
-	Identifier: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: Yes
-		Argument: default
-		Argument: label_0
-	Identifier: message_Close
-	Identifier: SCENARIO_SIDE
-		Argument: scn
-		Argument: 43
-		Argument: 8
-	Identifier: bgm_FadeOut
-		Argument: 60
-	Identifier: screen_FadeOut
-		Argument: 1
-		Argument: 60
-	Identifier: Wait
-		Argument: 80
-	Identifier: message_SetActor
-		Argument: ACTOR_NPC_GOOSUTO
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: ...[K]She...
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: That [CS:Y]Sunflora[CR]... I think she's still pursuing me.
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: So persistent...[K] Good grief.
-	Identifier: message_KeyWait
-	Identifier: se_Play
-		Argument: 8978
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: ...[K]That's right!
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: She's a Grass-type Pokémon.
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: So if I run away over there...[K] Heh heh heh heh!
-	Identifier: message_KeyWait
-	Identifier: screen_FadeOutAll
-		Argument: 1
-		Argument: 60
-	Identifier: message_CloseEnforce
-	Identifier: Wait
-		Argument: 60
-	Identifier: CallCommon
-		Argument: CORO_FADE_OUT_ALL_AFTER
-	Identifier: main_EnterDungeon
-		Argument: 163
-		Argument: 30
-	Identifier: main_EnterDungeon
-		Argument: 1
-		Argument: 30
-	Identifier: hold
-	Identifier: case
-		Argument: menu
-		Argument: english
-		Dialogue: No
-		Argument: message_Close
-	Command: end
+	Switch:
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="Yes", }): default: @label_0; message_Close(); $SCENARIO_SIDE = scn[43, 8]; bgm_FadeOut(60); screen_FadeOut(1, 60); Wait(80); message_SetActor(ACTOR_NPC_GOOSUTO); message_Talk({ english=" ...[K]She...", }); message_Talk({ english=""" That [CS:Y]Sunflora[CR]... I think she's still pursuing me. """, }); message_Talk({ english=" So persistent...[K] Good grief.", }); message_KeyWait(); se_Play(8978); message_Talk({ english=" ...[K]That's right!", }); message_Talk({ english=" She's a Grass-type Pokémon.", }); message_Talk({ english=""" So if I run away over there...[K] Heh heh heh heh! """, }); message_KeyWait(); screen_FadeOutAll(1, 60); message_CloseEnforce(); Wait(60); CallCommon(CORO_FADE_OUT_ALL_AFTER); main_EnterDungeon(163, 30); main_EnterDungeon(-1, 30); hold; case menu({ english="No", }): message_Close(
+		Case:
+			Value: default

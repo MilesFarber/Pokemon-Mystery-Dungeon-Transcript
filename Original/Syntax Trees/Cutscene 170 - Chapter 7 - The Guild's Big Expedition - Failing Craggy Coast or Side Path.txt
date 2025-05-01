@@ -5,7 +5,6 @@ def 0:
 		Argument: FACE_SAD
 		Argument: FACE_POS_STANDARD
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Oof... By gosh, we couldn't get through there...
 	Identifier: message_KeyWait
 	Identifier: screen_FadeOutAll
@@ -25,7 +24,6 @@ def 0:
 		Argument: 3
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -55,36 +53,27 @@ def 0:
 		Argument: 3
 	Identifier: Wait
 		Argument: 15
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: Wait
 		Argument: 15
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -98,43 +87,33 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I think we got cocky and careless.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: I guess we got a little careless.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Maybe we got a little careless.
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_BIPPA
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_BIPPA
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: se_Play
 		Argument: 8972
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
@@ -148,23 +127,18 @@ def 0:
 		Argument: 1
 		Argument: 0
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: It's because I'm not pulling my own weight here, isn't it...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_BIPPA
@@ -176,97 +150,37 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: No, [CS:N]Bidoof[CR], it's not your fault. We're a team, and that's what's important.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: No, [CS:N]Bidoof[CR], it's not your fault. We're a team, and that's what's important.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: No, [CS:N]Bidoof[CR], it's not your fault. We're a team, and that's what's important.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: We need to hurry so we can meet up with the others at the base camp.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: We should hurry so we can link up with the others at the base camp.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's hurry so we can join the others at the base camp.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Let's get it done!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Let's get it done!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's get it done!
-		Argument: message_Close
-	Command: end
-	Identifier: def
-		Argument: 1
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_PLAYER
-		Argument: SetDirection
-		Argument: DIR_RIGHT
-	Identifier: SetAnimation
-		Argument: 76
-	Identifier: Lock
-		Argument: 5
-	Identifier: CallCommon
-		Argument: CORO_WAKEUP_FUNC
-	Identifier: CallCommon
-		Argument: CORO_LOOK_AROUND_FUNC
-	Identifier: Lock
-		Argument: 6
-	Identifier: hold
-	Identifier: def
-		Argument: 2
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_ATTENDANT1
-		Argument: SetDirection
-		Argument: DIR_LEFT
-	Identifier: SetAnimation
-		Argument: 76
-	Identifier: Lock
-		Argument: 7
-	Identifier: CallCommon
-		Argument: CORO_WAKEUP_FUNC
-	Identifier: CallCommon
-		Argument: CORO_LOOK_AROUND_FUNC
-	Identifier: Unlock
-		Argument: 3
-	Identifier: Lock
-		Argument: 8
-	Identifier: hold
-	Identifier: def
-		Argument: 3
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_NPC_BIPPA
-		Argument: SetPositionInitial
-	Identifier: SetAnimation
-		Argument: 2
-	Identifier: Lock
-		Argument: 9
-	Identifier: Lock
-		Argument: 10
-	Identifier: hold
+	Identifier: message_Close
+	Identifier: end
 def 1:
 	Target: actor ACTOR_PLAYER
 	Identifier: SetDirection
@@ -282,12 +196,9 @@ def 1:
 	Identifier: Lock
 		Argument: 6
 	Identifier: hold
-	Identifier: def
-		Argument: 2
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_ATTENDANT1
-		Argument: SetDirection
+def 2:
+	Target: actor ACTOR_ATTENDANT1
+	Identifier: SetDirection
 		Argument: DIR_LEFT
 	Identifier: SetAnimation
 		Argument: 76
@@ -302,12 +213,9 @@ def 1:
 	Identifier: Lock
 		Argument: 8
 	Identifier: hold
-	Identifier: def
-		Argument: 3
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_NPC_BIPPA
-		Argument: SetPositionInitial
+def 3:
+	Target: actor ACTOR_NPC_BIPPA
+	Identifier: SetPositionInitial
 	Identifier: SetAnimation
 		Argument: 2
 	Identifier: Lock

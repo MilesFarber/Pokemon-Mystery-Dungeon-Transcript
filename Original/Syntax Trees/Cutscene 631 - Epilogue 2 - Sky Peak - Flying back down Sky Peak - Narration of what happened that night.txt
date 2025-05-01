@@ -5,7 +5,6 @@ def 0:
 		Argument: LEVEL_V37P03A
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -22,26 +21,19 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_STANDARD
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: That's right. Flying is so much fun!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: It's not much, but this is a gift from me to you!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: All right, let's soar down to the base of the mountain!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Hold on tight!
 	Identifier: message_Close
 	Identifier: se_Play
 		Argument: 11019
-	Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
-		Argument: 10
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 16
@@ -69,19 +61,15 @@ def 0:
 		Argument: 60
 	Identifier: message_Narration
 		Argument: 30
-		Argument: english
 		Dialogue: [CN]And so Team [team:], [CN]which had successfully climbed to the [CN][CS:P]Sky Peak[CR] Summit...
 	Identifier: message_Narration
 		Argument: 30
-		Argument: english
 		Dialogue: [CN]Thanked [CS:N]Shaymin[CR] [CN]graciously and returned to Treasure Town.
 	Identifier: message_Narration
 		Argument: 30
-		Argument: english
 		Dialogue: [CN]And on the evening of the day they returned, [CN]there was a huge party at [CS:K]Spinda[CR]'s Café...
 	Identifier: message_Narration
 		Argument: 30
-		Argument: english
 		Dialogue: [CN]Everyone stayed up until dawn, [CN]discussing the exploration...
 	Identifier: message_Close
 	Identifier: screen2_FadeOut
@@ -94,7 +82,7 @@ def 0:
 		Argument: 0
 	Identifier: Wait
 		Argument: 60
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_DUNGEON_TEAM_RETURNS_FROM_MAP
-		Command: end
+	Switch:
+		Variable: message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP)
+
+	Identifier: end

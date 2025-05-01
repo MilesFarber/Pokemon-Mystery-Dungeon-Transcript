@@ -1,29 +1,21 @@
 def 0:
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -33,108 +25,45 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Hey, [hero]. Are you all ready?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Hey, [hero]. Are you ready?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Hey, [hero]. Are you ready?
-		Argument: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: I'm ready!
-		Argument: default
-		Argument: label_0
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Switch:
-		Variable: $PARTNER_TALK_KIND
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="I'm ready!", }): default: @label_0; CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=" All right![K] Let's roll on out!", } case 2: { english=" OK![K] Let's go!", } default: { english=" OK![K] Let's go!", } } message_Close(
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: All right![K] Let's roll on out!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: OK![K] Let's go!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: OK![K] Let's go!
-		Argument: message_Close
-	Identifier: MovePositionOffset
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 80
-		Argument: 0
-	Identifier: Wait
-		Argument: 10
-	Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: 80
+	Identifier: 80
 		Argument: 0
-	Identifier: Wait
+		Argument: Wait
 		Argument: 15
-	Identifier: screen_FadeOut
+		Argument: screen_FadeOut
 		Argument: 1
 		Argument: 30
-	Identifier: main_EnterDungeon
+		Argument: main_EnterDungeon
 		Argument: 28
 		Argument: 0
-	Identifier: switch
+		Argument: switch
 		Argument: message_Menu
 		Argument: MENU_DUNGEON_INITIALIZE_TEAM
 		Argument: main_EnterDungeon
 		Argument: 1
 		Argument: 0
-	Identifier: hold
-	Command: end
-	Identifier: case
+		Argument: hold
+		Argument: end
+		Argument: case
 		Argument: menu
-		Argument: english
 		Dialogue: Not yet...
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: We'll go when you're ready.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Let's go when you're ready.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Let's go when you're ready.
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Let's go before those [CS:N]Sableye[CR] catch up.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: We need to go before those [CS:N]Sableye[CR] catch up.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Let's go before those [CS:N]Sableye[CR] catch up.
-		Argument: message_Close
-	Command: end

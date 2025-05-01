@@ -11,13 +11,10 @@ def 0:
 		Argument: LEVEL_H01P99E
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera2_SetPositionMark
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 20
 			Identifier: 18.5
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -43,55 +40,42 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: [CS:N]Grovyle[CR] entrusted me with his last wish...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: [CS:N]Grovyle[CR] entrusted me with his last wish...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: [CS:N]Grovyle[CR] entrusted me with his last wish...
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: ...[K]I'm...[K]ashamed.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: ...[K]I'm...[K]ashamed.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: ...[K]I'm...[K]ashamed.
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 0.7969
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 22
 			Identifier: 18.5
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -108,50 +92,39 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Oh, [hero]...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Oh, [hero]...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Oh, [hero]...
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: If you're not giving up, [hero]...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: If you're not giving up, [hero]...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: If you're not giving up, [hero]...
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I won't give up, either!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: I won't give up, either!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I won't give up, either!
-		Argument: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: CallCommon
@@ -161,16 +134,14 @@ def 0:
 		Argument: FACE_INSPIRED
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="([partner]!)", } default: { english="([partner]!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: ([partner]!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: ([partner]!)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -183,66 +154,54 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: There must be something that we can still do about this!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: There must be something that we can still do about this!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: There must be something that we can still do about this!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: There has to be a way of fixing things without us having to disappear!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: There has to be a way of fixing things. A way that doesn't involve having to disappear!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: There has to be a way of fixing things without us having to disappear!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_PLAYER
 		Argument: FACE_INSPIRED
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(That's right!)", } default: { english="(That's right!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (That's right!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (That's right!)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(That's the [partner] I know!)", } default: { english="(That's the [partner] I know!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (That's the [partner] I know!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (That's the [partner] I know!)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8964
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -256,58 +215,44 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: We have to keep going, [hero]!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: We have to keep going, [hero]!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: We have to keep going, [hero]!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Let's find a way out of this!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Let's find a way out of this!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's find a way out of this!
-		Argument: message_Close
-	Identifier: SetAnimation
+	Identifier: message_Close
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 45
 	Identifier: bgm_FadeOut
@@ -326,4 +271,4 @@ def 0:
 		Argument: BGM_IN_THE_HANDS_OF_FATE
 	Identifier: WaitBgm2
 		Argument: BGM_OCEAN1
-	Command: end
+	Identifier: end

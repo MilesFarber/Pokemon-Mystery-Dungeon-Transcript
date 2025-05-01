@@ -17,7 +17,6 @@ def 0:
 		Argument: LEVEL_D70P41A
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -28,48 +27,36 @@ def 0:
 		Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
 		Argument: 0
 		Argument: 256
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_APPOINT
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 49.5
 			Identifier: 42.5
 	Identifier: Wait
 		Argument: 10
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ADVENTURE_NPC1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 52.5
 			Identifier: 44.5
 	Identifier: Wait
 		Argument: 10
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ADVENTURE_NPC2
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m2
 			Identifier: 46.5
 			Identifier: 44.5
 	Identifier: Wait
 		Argument: 10
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ADVENTURE_NPC3
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m3
 			Identifier: 49.5
@@ -86,13 +73,10 @@ def 0:
 		Argument: 60
 	Identifier: se_Play
 		Argument: 8194
-	Identifier: SetEffect
 		Template
 			Type: performer
 			Identifier: 3
-		Argument: EFFECT_LIGHT_ENGULFING2
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: performer
 			Identifier: 3
@@ -100,45 +84,34 @@ def 0:
 		Argument: 3
 	Identifier: supervision_Acting
 		Argument: 1
-	Identifier: SetEffect
 		Template
 			Type: performer
 			Identifier: 3
-		Argument: EFFECT_NONE
-		Argument: 3
+	Identifier: 3
 	Identifier: Wait
 		Argument: 30
 	Identifier: WaitSe
 		Argument: 8194
 	Identifier: se_Play
 		Argument: 8967
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_APPOINT
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
+	Identifier: 3
 	Identifier: Wait
 		Argument: 5
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ADVENTURE_NPC1
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: SetEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ADVENTURE_NPC2
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: SetEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ADVENTURE_NPC3
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_APPOINT
@@ -146,12 +119,10 @@ def 0:
 		Argument: ACTOR_PLAYER_APPOINT
 	Identifier: Wait
 		Argument: 45
-	Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_APPOINT
-		Argument: 1
-		Argument: 0
+	Identifier: 0
 		Argument: 40
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_APPOINT
@@ -162,7 +133,6 @@ def 0:
 	Identifier: Wait
 		Argument: 30
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN]The treasure box contained...[K] [CN]a [CS:I]Grass Cornet[CR]!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -170,28 +140,7 @@ def 0:
 		Argument: 0
 		Argument: 64
 		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: case
-		Argument: 2
-		Argument: label_1
-	Identifier: screen_FadeOut
-		Argument: 1
-		Argument: 60
-	Identifier: Wait
-		Argument: 30
-	Command: end
-	Identifier: default
-		Argument: Wait
-		Argument: 10
-	Identifier: me_Play
-		Argument: 9
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN][player] obtained [CN]a [CS:I]Grass Cornet[CR], one of [CN]the seven treasures!
-	Identifier: WaitMe
-		Argument: 9
-	Identifier: message_Close
-	Identifier: jump
-		Argument: label_1
+	Switch:
+		Variable: message_Menu(MENU_GIVE_ITEM) ) { case 2: @label_1; screen_FadeOut(1, 60); Wait(30); end; default: Wait(10); me_Play(9); message_Mail({ english=""" [CN][player] obtained [CN]a [CS:I]Grass Cornet[CR], one of [CN]the seven treasures! """, }); WaitMe(9); message_Close(
+		Case:
+			Value: default

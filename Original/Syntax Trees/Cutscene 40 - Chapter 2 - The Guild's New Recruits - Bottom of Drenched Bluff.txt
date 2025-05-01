@@ -1,259 +1,91 @@
 def 0:
 	Identifier: sound_Stop
-	Identifier: if
-		Argument: variation
-		Argument: label_0
-	Identifier: switch
-		Argument: ProcessSpecial
-		Argument: 53
-		Argument: 1
-		Argument: 0
-		Argument: message_SetWaitMode
-		Argument: 300
-		Argument: 300
-	Identifier: message_Explanation
-		Argument: english
-		Dialogue: [CN]Thanks for playing! [CN]We hope you enjoyed [CN]the demo!
-	Identifier: message_KeyWait
-	Identifier: switch
-		Argument: ProcessSpecial
-		Argument: PROCESS_SPECIAL_JUMP_TO_TITLE_SCREEN
-		Argument: 0
-		Argument: 0
-		Command: end
-	Identifier: else
-		Argument: back_SetDungeonBanner
-		Argument: 3
-		Argument: 0
-	Identifier: screen_FadeIn
-		Argument: 1
-		Argument: 16
-	Identifier: Wait
-		Argument: 60
-	Identifier: screen_FadeOut
-		Argument: 1
-		Argument: 16
-	Identifier: Wait
-		Argument: 15
-	Identifier: switch
-		Argument: scn
-		Argument: SCENARIO_MAIN
-		Argument: 1
-		Argument: case
-		Argument: 3
-		Argument: SCENARIO_MAIN
-		Argument: scn
-		Argument: 3
-		Argument: 6
-	Identifier: label_3
-	Identifier: back_SetGround
-		Argument: LEVEL_D02P31A
-	Identifier: supervision_Acting
-		Argument: 0
-	Identifier: camera_SetMyself
+	Conditional
+		Type: If
 		Template
 			Type: performer
 			Identifier: 0
-	Identifier: Wait
-		Argument: 1
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 32
 			Identifier: 35.5
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 28
 			Identifier: 35.5
-	Identifier: bgm_PlayFadeIn
-		Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
-		Argument: 0
-		Argument: 256
-	Identifier: screen_FadeIn
-		Argument: 1
-		Argument: 30
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: se_Play
-		Argument: 8978
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Hey! There it is!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Oh! Look at that!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Oh! Over there!
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m2
 			Identifier: 30
 			Identifier: 24.5
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m3
 			Identifier: 32
 			Identifier: 25.5
-	Identifier: Wait
-		Argument: 5
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m4
 			Identifier: 28
 			Identifier: 25.5
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: DIR_UPLEFT
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: 10
 		Argument: DIR_UPRIGHT
-	Identifier: WaitExecuteLives
+		Argument: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Wait
+		Argument: Wait
 		Argument: 30
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT1
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: This has to be [CS:N]Spoink[CR]'s pearl!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: This must be [CS:N]Spoink[CR]'s pearl!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: This has to be [CS:N]Spoink[CR]'s pearl!
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Let's take it back right now!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Let's hurry back with it!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Quick! Let's take it back!
-		Argument: message_Close
-	Identifier: MovePositionOffset
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 0.7969
-		Argument: 16
-		Argument: 16
-	Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: DIR_UPRIGHT
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Wait
-		Argument: 30
-	Identifier: bgm_FadeOut
+		Argument: bgm_FadeOut
 		Argument: 120
-	Identifier: screen_FadeOut
+		Argument: screen_FadeOut
 		Argument: 1
 		Argument: 60
-	Identifier: WaitBgm
+		Argument: WaitBgm
 		Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
-	Identifier: switch
+		Argument: switch
 		Argument: message_Menu
 		Argument: MENU_DUNGEON_TEAM_RETURNS_FROM_MAP
-		Command: end
-	Identifier: default
+		Argument: end
+		Argument: default
 		Argument: label_2
-	Identifier: SCENARIO_MAIN
+		Argument: SCENARIO_MAIN
 		Argument: scn
 		Argument: 3
 		Argument: 7
-	Identifier: jump
+		Argument: jump
 		Argument: label_3

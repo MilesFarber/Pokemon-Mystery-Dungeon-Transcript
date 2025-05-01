@@ -4,8 +4,6 @@ def 0:
 		Argument: 4
 	Identifier: back2_SetGround
 		Argument: LEVEL_V02P06A
-	Identifier: camera2_SetPositionMark
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 19.5
@@ -24,7 +22,6 @@ def 0:
 		Argument: LEVEL_G01P07C
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -45,45 +42,36 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Just before dinner, [CS:N]Chatot[CR] said another Time Gear was stolen.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Just before dinner, [CS:N]Chatot[CR] said another Time Gear was stolen.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Just before dinner, [CS:N]Chatot[CR] said another Time Gear was stolen.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: That makes two now! Who'd go around stealing them?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: That's two now! I can't imagine who'd be stealing them!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: That's two now! I can't imagine who'd be stealing them!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: What would anyone want with the Time Gears anyway?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: What would anyone want with the Time Gears anyway?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: What would anyone want with the Time Gears anyway?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: Wait
 		Argument: 30
@@ -95,24 +83,19 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I just don't know...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: I just don't understand...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I just can't figure it out...
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -123,37 +106,31 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(..................)", } default: { english="(..................
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (..................)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (..................)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(I don't know either...)", } default: { english="(I don't know either...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (I don't know either...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (I don't know either...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (But when I was at [CS:P]Fogbound Lake[CR] and saw a Time Gear for the first time...) """, } default: { english=""" (But when I was at [CS:P]Fogbound Lake[CR] and saw a Time Gear for the first time...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (But when I was at [CS:P]Fogbound Lake[CR] and saw a Time Gear for the first time...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (But when I was at [CS:P]Fogbound Lake[CR] and saw a Time Gear for the first time...)
-		Argument: message_Close
+	Identifier: message_Close
 	Identifier: screen_FadeOut
 		Argument: 1
 		Argument: 30
-	Command: end
+	Identifier: end

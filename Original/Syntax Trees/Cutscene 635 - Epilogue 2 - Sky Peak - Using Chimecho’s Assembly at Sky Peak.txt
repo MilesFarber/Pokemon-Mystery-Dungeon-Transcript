@@ -4,40 +4,31 @@ def 0:
 		Argument: 30
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
 	Identifier: Wait
 		Argument: 1
-	Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: Position
-		Template
-			Type: m0
+			Identifier: Position
+			Identifier: m0
 			Identifier: 43.5
 			Identifier: 20.5
-	Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: Position
-		Template
-			Type: m1
+			Identifier: Position
+			Identifier: m1
 			Identifier: 39.5
 			Identifier: 20.5
-	Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: DIR_UP
-	Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: DIR_UP
 	Identifier: screen_FadeIn
 		Argument: 1
 		Argument: 30
@@ -46,17 +37,16 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: [hero]! [partner]! You rang?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_TEAM_ASSEMBLY
-		Argument: main_SetGround
+	Switch:
+		Variable: message_Menu(MENU_TEAM_ASSEMBLY)
+
+	Identifier: main_SetGround
 		Argument: LEVEL_G01P03A
 	Identifier: main_EnterGround
 		Argument: LEVEL_D73P11A
 		Argument: 30
 	Identifier: hold
-	Command: end
+	Identifier: end

@@ -1,73 +1,18 @@
 def 0:
 	Identifier: sound_Stop
-	Identifier: if
-		Argument: SCENARIO_MAIN_BIT_FLAG
-		Argument: 8
-		Argument: label_0
-	Array accessor
-		Array: $SCENARIO_MAIN_BIT_FLAG
-		Index: 8
-		Value: 0
-	Identifier: back_SetGround
-		Argument: LEVEL_D52P32A
-	Identifier: supervision_Acting
-		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
-	Identifier: bgm_PlayFadeIn
-		Argument: BGM_IN_THE_FUTURE
-		Argument: 0
-		Argument: 256
-	Identifier: screen_FadeIn
-		Argument: 1
-		Argument: 30
-	Identifier: Wait
-		Argument: 90
-	Identifier: MovePositionOffset
 		Template
 			Type: performer
 			Identifier: 0
-		Argument: 0.5
-		Argument: 0
+	Identifier: 0
 		Argument: 200
-	Identifier: Wait
+		Argument: Wait
 		Argument: 150
-	Identifier: screen_FadeOut
+		Argument: screen_FadeOut
 		Argument: 1
 		Argument: 30
-	Command: end
-	Identifier: else
-		Argument: message_SetFace
-		Argument: ACTOR_PLAYER_FUTURE
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Looks like we made it through.
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_YONOWAARU
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_BOTTOM_R_FACEINW
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: I think the [CS:N]Sableye[CR] are up ahead.
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Let's proceed with caution.
-	Identifier: message_Close
-	Identifier: Wait
-		Argument: 60
-	Array accessor
-		Array: $SCENARIO_MAIN_BIT_FLAG
-		Index: 8
-		Value: 1
-	Identifier: COMPULSORY_SAVE_POINT_SIDE
-		Argument: 2
-	Identifier: CallCommon
-		Argument: CORO_HANYOU_SAVE_FUNC
-	Identifier: jump
-		Argument: label_0
+		Argument: end
+	Conditional
+		Type: Else

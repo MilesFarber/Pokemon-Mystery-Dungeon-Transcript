@@ -1,57 +1,30 @@
 def 0:
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_PUPURIN
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
-		Argument: 2
 	Identifier: message_ResetActor
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN]Where will you go?
 	Identifier: message_Close
-	Identifier: switch
-		Argument: main_EnterAdventure
-		Argument: 1
-		Argument: 30
-		Argument: case
-		Argument: 0
-		Argument: label_0
-	Identifier: message_Close
-	Identifier: switch
-		Argument: main_EnterAdventure
-		Argument: 251
-		Argument: 30
-		Argument: hold
-	Command: end
-	Identifier: default
-		Argument: message_Close
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PUKURIN_PAPA
-		Argument: 4
-	Identifier: SetAnimation
+	Switch:
+		Variable: main_EnterAdventure(-1, 30) ) { case 0: @label_0; message_Close(); switch ( main_EnterAdventure(251, 30) ) { } hold; end; default: message_Close(); SetAnimation<actor ACTOR_NPC_PUKURIN_PAPA>(4
+		Case:
+			Value: default
+
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
-		Argument: 4
-	Command: end
+	Identifier: end

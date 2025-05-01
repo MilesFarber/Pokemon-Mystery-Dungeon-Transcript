@@ -3,7 +3,6 @@ def 0:
 		Argument: LEVEL_P14P01A2
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -17,40 +16,32 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (It was [CS:N]Wigglytuff[CR] that put this treasure here...) """, } default: { english=""" (It was [CS:N]Wigglytuff[CR] that put this treasure here...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (It was [CS:N]Wigglytuff[CR] that put this treasure here...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (It was [CS:N]Wigglytuff[CR] that put this treasure here...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(That means...[K]inside this treasure box...)", } default: { english="(That means...[K]inside this treasure box...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (That means...[K]inside this treasure box...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (That means...[K]inside this treasure box...)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN][hero] opened [CN]the treasure box.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 6411
-	Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_G01P05A1_106
-		Argument: 18
-	Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_G01P05A1_106
@@ -62,81 +53,56 @@ def 0:
 		Argument: 6413
 	Identifier: supervision_Acting
 		Argument: 1
-	Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P03P02A1_128
-		Argument: 18
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 5
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 0
+	Identifier: 0
 		Argument: 24
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 5
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: 5
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 1
-		Argument: 8
+	Identifier: 8
 		Argument: 0
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: 1
-		Argument: 8
+	Identifier: 8
 		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_RINGUMA
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: 2
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNRIGHT
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNLEFT
-	Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P03P02A1_128
@@ -144,13 +110,10 @@ def 0:
 		Argument: OBJECT_P03P02A1_128
 	Identifier: se_Play
 		Argument: 8978
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -164,7 +127,6 @@ def 0:
 		Argument: 2
 		Argument: 0
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Th-this is...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -176,7 +138,6 @@ def 0:
 		Argument: 2
 		Argument: 0
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: It's a Perfect Apple.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -188,24 +149,19 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: The treasure of [CS:P]Luminous Spring[CR]...[K] It was a Perfect Apple.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: The treasure of [CS:P]Luminous Spring[CR]...[K] It was a Perfect Apple.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: The treasure of [CS:P]Luminous Spring[CR]...[K] It was a Perfect Apple.
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: 16
+	Identifier: 16
 		Argument: 16
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -215,25 +171,19 @@ def 0:
 		Argument: 1
 	Identifier: Wait
 		Argument: 30
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 5
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: 16
+	Identifier: 16
 		Argument: 16
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
 	Identifier: Wait
 		Argument: 15
 	Identifier: message_SetFace
@@ -241,16 +191,14 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (A Perfect Apple as the treasure...[K] It suits [CS:N]Wigglytuff[CR], I guess.) """, } default: { english=""" (A Perfect Apple as the treasure...[K] It suits [CS:N]Wigglytuff[CR], I guess.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (A Perfect Apple as the treasure...[K] It suits [CS:N]Wigglytuff[CR], I guess.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (A Perfect Apple as the treasure...[K] It suits [CS:N]Wigglytuff[CR], I guess.)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 5143
@@ -280,30 +228,22 @@ def 0:
 		Argument: 5143
 	Identifier: se_Play
 		Argument: 8967
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
-		Argument: 0
-	Identifier: SetEffect
+	Identifier: 0
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_SHOCKED
-		Argument: 3
-	Identifier: SetEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: EFFECT_SHOCKED
-		Argument: 3
-	Identifier: SetEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: EFFECT_SHOCKED
-		Argument: 3
+	Identifier: 3
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -314,30 +254,23 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Wa-waah![K] What was that?!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Wa-waah![K] What was that?!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Wa-waah![K] What was that?!
-		Argument: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_LOOK_AROUND_FAST_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: CORO_LOOK_AROUND_RIGHT_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: se_Play
 		Argument: 5143
 	Identifier: screen_WhiteOut
@@ -345,23 +278,19 @@ def 0:
 		Argument: 2
 	Identifier: Wait
 		Argument: 2
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_LOOK_AROUND_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: screen_FadeIn
 		Argument: 1
 		Argument: 2
 	Identifier: Wait
 		Argument: 5
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: se_Play
 		Argument: 5143
 	Identifier: screen_WhiteOut
@@ -369,12 +298,10 @@ def 0:
 		Argument: 2
 	Identifier: Wait
 		Argument: 2
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: CORO_LOOK_AROUND_DOWN_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: screen_FadeIn
 		Argument: 1
 		Argument: 2
@@ -386,12 +313,9 @@ def 0:
 		Argument: BGM_CRYSTAL_CAVE
 		Argument: 0
 		Argument: 256
-	Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
-		Argument: 2
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 37.5
@@ -409,83 +333,61 @@ def 0:
 		Argument: LEVEL_P14P01A
 	Identifier: Wait
 		Argument: 60
-	Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P14P01A1_153
-		Argument: 2
 	Identifier: screen_FadeIn
 		Argument: 1
 		Argument: 30
 	Identifier: Wait
 		Argument: 120
-	Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
-		Argument: 2
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 37.5
 			Identifier: 52.5
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecutePerformer
 		Argument: 0
 	Identifier: se_Play
 		Argument: 8978
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SHOCKED
-		Argument: 3
-	Identifier: SetEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: SetEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: EFFECT_SHOCKED
-		Argument: 3
-	Identifier: SetEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
@@ -499,33 +401,27 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: What's that...?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: What's that...?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: What's that...?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_RINGUMA
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Light...[K] Light is shining down!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_HIMEGUMA
 	Identifier: message_SetFace
@@ -533,59 +429,42 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_L_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Oh, then maybe...!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Did [CS:P]Luminous Spring[CR] regain its power?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m2
 			Identifier: 37.5
 			Identifier: 32.5
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m3
 			Identifier: 39.5
 			Identifier: 30.5
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m4
 			Identifier: 35.5
 			Identifier: 30.5
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m5
 			Identifier: 34.5
 			Identifier: 34
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m6
 			Identifier: 40.5
@@ -596,37 +475,27 @@ def 0:
 		Argument: 30
 	Identifier: message_EmptyActor
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: [CN]Those that seek awakening...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8967
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SHOCKED
-		Argument: 3
-	Identifier: SetEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: SetEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: EFFECT_SHOCKED
-		Argument: 3
-	Identifier: SetEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
@@ -640,36 +509,28 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Whoa! Where's that voice coming from?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Waah! Who's saying that?!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Waah! Who's saying that?!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_EmptyActor
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: [CN]The resumption of time...
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: [CN]has brought light here again.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: [CN]If you seek evolution, step forward.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_HIMEGUMA
 	Identifier: message_SetFace
@@ -677,28 +538,22 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_L_CENTER
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I knew it!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_RINGUMA
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_HIMEGUMA
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_HIMEGUMA
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I knew that [CS:P]Luminous Spring[CR] would be revived!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -707,10 +562,8 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_R_CENTER
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Good for you, [CS:N]Teddiursa[CR]!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: You've been looking forward to evolution for a long time!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -719,30 +572,24 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_L_CENTER
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Yup!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8962
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: Wait
 		Argument: 10
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_QUESTION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -756,40 +603,31 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Evolution?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Evolution?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Evolution?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: Wait
 		Argument: 5
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
@@ -797,13 +635,10 @@ def 0:
 		Argument: 30
 	Identifier: se_Play
 		Argument: 8978
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -817,18 +652,15 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Oh![K] That's right, [CS:N]Wigglytuff[CR] mentioned it before...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Oh![K] That's right, [CS:N]Wigglytuff[CR] mentioned it before...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Oh![K] That's right, [CS:N]Wigglytuff[CR] mentioned it before...
-		Argument: message_Close
+	Identifier: message_Close
 	Identifier: screen_FadeOut
 		Argument: 1
 		Argument: 30
-	Command: end
+	Identifier: end

@@ -2,7 +2,6 @@ def 0:
 	Identifier: sound_Stop
 	Identifier: message_Narration
 		Argument: 30
-		Argument: english
 		Dialogue: [CN]The next morning...
 	Identifier: message_Close
 	Identifier: bgm_PlayFadeIn
@@ -17,31 +16,25 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Hey, [hero].
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Hey, [hero].
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Hey, [hero].
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Come on, [hero].
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Come on, [hero].
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Come on, [hero].
-		Argument: message_Close
+	Identifier: message_Close
 	Identifier: back2_SetMode
 		Argument: 4
 	Identifier: back2_SetGround
@@ -52,21 +45,16 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera2_SetPositionMark
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 19
 			Identifier: 15.5
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 62
 	Identifier: screen2_FadeIn
 		Argument: 0
 		Argument: 30
@@ -75,12 +63,10 @@ def 0:
 		Argument: 30
 	Identifier: Wait
 		Argument: 30
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_EXPLANATION_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
 		Argument: FACE_SAD
@@ -89,134 +75,105 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Wake up, [hero].
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Wake up, [hero].
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Wake up, [hero].
-		Argument: message_KeyWait
+	Identifier: message_KeyWait
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_EXPLANATION_FUNC_SERIES
-		Argument: 0
-	Identifier: SetAnimation
+	Identifier: 0
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 76
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: It's morning already.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: It's morning already.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: It's morning.
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 1
+	Identifier: 1
 		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 2
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 1
+	Identifier: 1
 		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 30
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 1
+	Identifier: 1
 		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 2
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 1
+	Identifier: 1
 		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 2
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 1
+	Identifier: 1
 		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 2
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 1
+	Identifier: 1
 		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 45
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 63
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 30
@@ -225,25 +182,20 @@ def 0:
 		Argument: FACE_PAIN
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(Uh...[K] Uh-huh...)", } default: { english="(Uh...[K] Uh-huh...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Uh...[K] Uh-huh...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Uh...[K] Uh-huh...)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: Wait
 		Argument: 15
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 28
@@ -252,12 +204,10 @@ def 0:
 		Argument: ACTOR_ATTENDANT1
 	Identifier: Wait
 		Argument: 15
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -268,93 +218,75 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Hey, look at this![K] The weather's great again!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Hey, look at this![K] The weather's great again!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Come look at this![K] The weather's great again!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_PLAYER
 		Argument: FACE_WORRIED
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(I...[K] I had a dream again.)", } default: { english="(I...[K] I had a dream again.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (I...[K] I had a dream again.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (I...[K] I had a dream again.)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(It felt strangely real for a dream, though.)", } default: { english="(It felt strangely real for a dream, though.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (It felt strangely real for a dream, though.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (It felt strangely real for a dream, though.)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(I was told...[K]I can't exist in this world.)", } default: { english="(I was told...[K]I can't exist in this world.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (I was told...[K]I can't exist in this world.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (I was told...[K]I can't exist in this world.)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(..................)", } default: { english="(..................
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (..................)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (..................)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(In my dream...[K] [CS:N]Cresselia[CR] said...)", } default: { english="(In my dream...[K] [CS:N]Cresselia[CR] said...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (In my dream...[K] [CS:N]Cresselia[CR] said...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (In my dream...[K] [CS:N]Cresselia[CR] said...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (If the distortion in the fabric of space expands...[K]the world will be ruined.) """, } default: { english=""" (If the distortion in the fabric of space expands...[K]the world will be ruined.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (If the distortion in the fabric of space expands...[K]the world will be ruined.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (If the distortion in the fabric of space expands...[K]the world will be ruined.)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8978
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -365,16 +297,14 @@ def 0:
 		Argument: FACE_SURPRISED
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (Oh! The distortion of space![K] We heard that somewhere before!) """, } default: { english=""" (Oh! The distortion of space![K] We heard that somewhere before!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Oh! The distortion of space![K] We heard that somewhere before!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Oh! The distortion of space![K] We heard that somewhere before!)
-		Argument: message_Close
+	Identifier: message_Close
 	Identifier: bgm_FadeOut
 		Argument: 160
 	Identifier: screen2_FadeOut
@@ -385,4 +315,4 @@ def 0:
 		Argument: 30
 	Identifier: back2_SetMode
 		Argument: 0
-	Command: end
+	Identifier: end

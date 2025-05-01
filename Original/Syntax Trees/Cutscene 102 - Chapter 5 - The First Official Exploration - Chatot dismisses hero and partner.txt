@@ -12,16 +12,12 @@ def 0:
 		Argument: 7
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: SetPositionInitial
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 2
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -35,403 +31,87 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_C_FACEL
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: That's all. Do you understand what this mission entails?
-	Identifier: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: Understood
-		Argument: label_0
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SCENARIO_MAIN
-		Argument: scn
-		Argument: 6
-		Argument: 2
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_PERAPPU
-		Argument: FACE_HAPPY
-		Argument: FACE_POS_TOP_C_FACEL
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Good! ♪
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: All right, I'll leave you all to thoroughly investigate the waterfall! ♪
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: bgm_FadeOut
-		Argument: 120
-	Identifier: clear
-		Argument: EVENT_LOCAL
-	Identifier: Unlock
-		Argument: 5
-	Identifier: Wait
-		Argument: 60
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Wait
-		Argument: 5
-	Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWNLEFT
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_PERAPPU
-	Identifier: se_Play
-		Argument: 8978
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_PERAPPU
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_PERAPPU
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_TOP_C_FACEL
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Huh? What's wrong? You're shivering.
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_TEARY_EYED
-		Argument: FACE_POS_STANDARD
 	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: ...
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: ...
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: ...
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: se_Play
-		Argument: 8972
-	Identifier: SetEffect
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="Understood", }): @label_0; CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); $SCENARIO_MAIN = scn[6, 2]; message_SetFace(ACTOR_NPC_PERAPPU, FACE_HAPPY, FACE_POS_TOP_C_FACEL); message_Talk({ english=" Good! ♪", }); message_Talk({ english=""" All right, I'll leave you all to thoroughly investigate the waterfall! ♪ """, }); CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); bgm_FadeOut(120); clear $EVENT_LOCAL; Unlock(5); Wait(60
+
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 18
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 2
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_PERAPPU
-		Argument: FACE_SURPRISED
-		Argument: FACE_POS_TOP_C_FACEL
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: A-are you all right?
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_TEARY_EYED
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Yup. I'm OK. It's just the anticipation that's making me nervous.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Yes. I'm OK. It's just the anticipation that's making me nervous.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Yep. I'm OK. It's just the anticipation that's making me nervous.
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: This will be our first real job as an exploration team.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: This will be the first time we get to do a real job as an exploration team.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: This will be our first real job as an exploration team.
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: I'm feeling a little worked up...
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: I'm feeling a little worked up...
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: I'm getting a bit emotional...
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: EVENT_LOCAL
-		Argument: 1
-	Identifier: WaitLockLives
-		Argument: 6
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Wait
-		Argument: 30
-	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_PERAPPU
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWN
-	Identifier: Wait
-		Argument: 15
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: bgm_PlayFadeIn
-		Argument: BGM_WIGGLYTUFFS_GUILD
-		Argument: 0
-		Argument: 256
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Yeah! I might just burst from the excitement!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Oh, I feel like I'm going to burst from excitement!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Ooh... I'm bubbling over with excitement!
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Let's do this right, [hero]!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Let's do our best, [hero]!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Let's do our best, [hero]!
-		Argument: message_Close
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: Wait
-		Argument: 30
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWN
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWN
-	Identifier: Wait
-		Argument: 20
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 66
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 66
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-	Identifier: Wait
-		Argument: 60
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-	Identifier: Wait
-		Argument: 30
-	Identifier: dungeon_mode
-		Argument: 6
-		Argument: DMODE_OPEN
-	Command: end
-	Identifier: case
-		Argument: menu
-		Argument: english
-		Dialogue: Please explain again
-		Argument: default
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: se_Play
-		Argument: 8961
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: EFFECT_SWEAT_DROP
-		Argument: 3
-	Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PERAPPU
-	Identifier: message_SetFace
+		Argument: message_SetFace
 		Argument: ACTOR_NPC_PERAPPU
 		Argument: FACE_PAIN
 		Argument: FACE_POS_TOP_C_FACEL
-	Identifier: message_Talk
-		Argument: english
+		Argument: message_Talk
 		Dialogue: Fine, I'll explain it again.
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Let me see your Wonder Map.
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN][hero] opened [CN]the Wonder Map.
-	Identifier: message_Close
-	Identifier: se_Play
-		Argument: 6667
-	Identifier: screen_FadeOut
-		Argument: 1
-		Argument: 15
-	Command: end
-	Identifier: def
-		Argument: 1
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_ATTENDANT1
-		Argument: SetAnimation
-		Argument: 2
-	Identifier: Lock
-		Argument: 5
-	Identifier: ResetHitAttribute
-		Argument: 31
-	Identifier: SetAnimation
-		Argument: 3
-	Identifier: label_3
-	Command: forever
-	Identifier: SlidePositionOffset
-		Argument: 1
-		Argument: 1
-		Argument: 0
-	Identifier: Wait
-		Argument: 2
-	Identifier: SlidePositionOffset
-		Argument: 1
-		Argument: 1
-		Argument: 0
-	Identifier: Wait
-		Argument: 2
-	Identifier: switch
-		Argument: EVENT_LOCAL
-		Argument: case
-		Argument: 1
-		Argument: break_loop
-	Identifier: break
-	Identifier: default
-		Command: continue
-	Identifier: may
-		Argument: be
-		Argument: redundant
-		Argument: SetAnimation
-		Argument: 2
-	Identifier: Lock
-		Argument: 6
-	Identifier: hold
 def 1:
 	Target: actor ACTOR_ATTENDANT1
 	Identifier: SetAnimation
@@ -442,32 +122,29 @@ def 1:
 		Argument: 31
 	Identifier: SetAnimation
 		Argument: 3
-	Identifier: label_3
-	Command: forever
-	Identifier: SlidePositionOffset
+	Label: @label_3
+	Identifier: forever
+		Argument: SlidePositionOffset
 		Argument: 1
 		Argument: 1
 		Argument: 0
-	Identifier: Wait
+		Argument: Wait
 		Argument: 2
-	Identifier: SlidePositionOffset
+		Argument: SlidePositionOffset
 		Argument: 1
 		Argument: 1
 		Argument: 0
-	Identifier: Wait
+		Argument: Wait
 		Argument: 2
-	Identifier: switch
+		Argument: switch
 		Argument: EVENT_LOCAL
 		Argument: case
 		Argument: 1
 		Argument: break_loop
-	Identifier: break
-	Identifier: default
-		Command: continue
-	Identifier: may
-		Argument: be
-		Argument: redundant
-		Argument: SetAnimation
+		Argument: break
+		Argument: default
+		Argument: continue
+	Identifier: SetAnimation
 		Argument: 2
 	Identifier: Lock
 		Argument: 6

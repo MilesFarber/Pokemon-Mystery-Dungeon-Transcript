@@ -7,10 +7,10 @@ def 0:
 		Argument: LEVEL_S04P01A
 	Identifier: back_SetGround
 		Argument: LEVEL_S04P01A
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS1
-		Argument: supervision_Acting
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS1)
+
+	Identifier: supervision_Acting
 		Argument: 0
 	Identifier: screen2_FadeIn
 		Argument: 0
@@ -22,33 +22,30 @@ def 0:
 		Argument: BGM_SYMPATHY
 		Argument: 0
 		Argument: 256
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS2
-		Argument: Wait
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS2)
+
+	Identifier: Wait
 		Argument: 180
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS2
-		Argument: Wait
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS2)
+
+	Identifier: Wait
 		Argument: 1008
-	Identifier: MovePositionMark
 		Template
 			Type: object
 			Identifier: OBJECT_S05P02A4_533
-		Argument: 0.25
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 16
 			Identifier: 12.5
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS2
-		Argument: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS3
-		Argument: WaitExecuteObject
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS2)
+
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS3)
+
+	Identifier: WaitExecuteObject
 		Argument: OBJECT_S05P02A4_533
 	Identifier: Wait
 		Argument: 210
@@ -68,22 +65,20 @@ def 0:
 		Argument: BGM_SYMPATHY
 	Identifier: Wait
 		Argument: 90
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS4
-		Argument: SPECIAL_EPISODE_TYPE
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS4)
+
+	Identifier: SPECIAL_EPISODE_TYPE
 		Argument: 1
 	Identifier: adventure_log
 		Argument: 1002
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_DUNGEON_TEAM_RETURNS_FROM_MAP
-		Argument: switch
-		Argument: message_Menu
-		Argument: MENU_SAVE_MENU
-		Argument: switch
-		Argument: ProcessSpecial
-		Argument: 24
-		Argument: 0
-		Argument: 0
-		Command: end
+	Switch:
+		Variable: message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP)
+
+	Switch:
+		Variable: message_Menu(MENU_SAVE_MENU)
+
+	Switch:
+		Variable: ProcessSpecial(24, 0, 0)
+
+	Identifier: end

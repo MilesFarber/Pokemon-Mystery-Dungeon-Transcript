@@ -13,17 +13,14 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Ugh...[K] We got wiped out.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Ugh...[K] That didn't go well.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Ugh...[K] That wasn't so good.
-		Argument: message_KeyWait
+	Identifier: message_KeyWait
 	Identifier: screen_FadeOutAll
 		Argument: 1
 		Argument: 60
@@ -43,16 +40,12 @@ def 0:
 		Argument: 0
 	Identifier: Wait
 		Argument: 1
-	Identifier: SetPositionInitial
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RAPURASU
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RAPURASU
-		Argument: 2
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -82,36 +75,27 @@ def 0:
 		Argument: 3
 	Identifier: Wait
 		Argument: 15
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 15
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -123,115 +107,38 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Urk! This is pretty hard.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Urk! That was challenging.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Urk! It's not easy...
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_JUPUTORU
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_JUPUTORU
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_JUPUTORU
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_R_CENTER
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: We've come too far to give up.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: We'll take on the challenge again.
 	Identifier: message_Close
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
-		Argument: 4
-	Command: end
-	Identifier: def
-		Argument: 1
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_PLAYER
-		Argument: SetDirection
-		Argument: DIR_RIGHT
-	Identifier: SetAnimation
-		Argument: 76
-	Identifier: Lock
-		Argument: 5
-	Identifier: CallCommon
-		Argument: CORO_WAKEUP_FUNC
-	Identifier: CallCommon
-		Argument: CORO_LOOK_AROUND_DOWN_FUNC
-	Identifier: Lock
-		Argument: 6
-	Identifier: hold
-	Identifier: def
-		Argument: 2
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_ATTENDANT1
-		Argument: SetDirection
-		Argument: DIR_LEFT
-	Identifier: SetAnimation
-		Argument: 76
-	Identifier: Lock
-		Argument: 7
-	Identifier: CallCommon
-		Argument: CORO_WAKEUP_FUNC
-	Identifier: CallCommon
-		Argument: CORO_LOOK_AROUND_FUNC
-	Identifier: Unlock
-		Argument: 3
-	Identifier: Lock
-		Argument: 8
-	Identifier: hold
-	Identifier: def
-		Argument: 3
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_NPC_JUPUTORU
-		Argument: SetPositionInitial
-	Identifier: SetAnimation
-		Argument: 29
-	Identifier: Lock
-		Argument: 9
-	Identifier: Wait
-		Argument: 30
-	Identifier: SetAnimation
-		Argument: 31
-	Identifier: WaitAnimation
-	Identifier: SetAnimation
-		Argument: 2
-	Identifier: Wait
-		Argument: 15
-	Identifier: Turn2Direction
-		Argument: 4
-		Argument: 10
-		Argument: DIR_UPLEFT
-	Identifier: CallCommon
-		Argument: CORO_LOOK_AROUND_FUNC
-	Identifier: Lock
-		Argument: 10
-	Identifier: hold
+	Identifier: end
 def 1:
 	Target: actor ACTOR_PLAYER
 	Identifier: SetDirection
@@ -247,12 +154,9 @@ def 1:
 	Identifier: Lock
 		Argument: 6
 	Identifier: hold
-	Identifier: def
-		Argument: 2
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_ATTENDANT1
-		Argument: SetDirection
+def 2:
+	Target: actor ACTOR_ATTENDANT1
+	Identifier: SetDirection
 		Argument: DIR_LEFT
 	Identifier: SetAnimation
 		Argument: 76
@@ -267,12 +171,9 @@ def 1:
 	Identifier: Lock
 		Argument: 8
 	Identifier: hold
-	Identifier: def
-		Argument: 3
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_NPC_JUPUTORU
-		Argument: SetPositionInitial
+def 3:
+	Target: actor ACTOR_NPC_JUPUTORU
+	Identifier: SetPositionInitial
 	Identifier: SetAnimation
 		Argument: 29
 	Identifier: Lock

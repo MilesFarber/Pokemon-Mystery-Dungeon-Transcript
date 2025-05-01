@@ -6,7 +6,6 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -17,22 +16,16 @@ def 0:
 		Argument: BGM_CRYSTAL_CAVE
 		Argument: 0
 		Argument: 256
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 39.5
 			Identifier: 17.5
-	Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 35.5
@@ -41,21 +34,17 @@ def 0:
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 10
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -67,49 +56,37 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: We'll find the path to [CS:N]Azelf[CR]'s lake this time!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: We'll find the path to [CS:N]Azelf[CR]'s lake this time!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: We'll find the way to [CS:N]Azelf[CR]'s lake this time!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Let's give it our best, [hero]!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Let's do our best, [hero]!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's try our best, [hero]!
-		Argument: message_Close
-	Identifier: Move2PositionMark
+	Identifier: message_Close
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m2
 			Identifier: 35.5
 			Identifier: 9.5
 	Identifier: Wait
 		Argument: 10
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m3
 			Identifier: 39.5
@@ -122,11 +99,11 @@ def 0:
 	Identifier: main_EnterDungeon
 		Argument: 24
 		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_DUNGEON_INITIALIZE_TEAM
-		Argument: main_EnterDungeon
+	Switch:
+		Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+
+	Identifier: main_EnterDungeon
 		Argument: 1
 		Argument: 0
 	Identifier: hold
-	Command: end
+	Identifier: end

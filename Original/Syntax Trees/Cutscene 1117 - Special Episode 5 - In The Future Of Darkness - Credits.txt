@@ -13,10 +13,8 @@ def 0:
 		Argument: 210
 		Argument: 90
 	Identifier: message_Explanation
-		Argument: english
 		Dialogue: [CN][c_name:NPC_HERO_FIRST]! [K][c_name:NPC_PARTNER_FIRST]![K] [CN]Can you hear me?!
 	Identifier: message_Explanation
-		Argument: english
 		Dialogue: [CN]We are still alive!!
 	Identifier: message_Close
 	Identifier: message_SetWaitMode
@@ -24,20 +22,17 @@ def 0:
 		Argument: 1
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera2_SetPositionMark
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 19
 			Identifier: 15.5
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS1
-		Argument: Wait
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS1)
+
+	Identifier: Wait
 		Argument: 15
 	Identifier: screen2_FadeIn
 		Argument: 0
@@ -49,21 +44,21 @@ def 0:
 		Argument: 30
 	Identifier: Wait
 		Argument: 60
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS2
-		Argument: Wait
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS2)
+
+	Identifier: Wait
 		Argument: 180
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS2
-		Argument: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS2
-		Argument: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS3
-		Argument: bgm_FadeOut
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS2)
+
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS2)
+
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS3)
+
+	Identifier: bgm_FadeOut
 		Argument: 210
 	Identifier: screen2_FadeOut
 		Argument: 0
@@ -83,7 +78,6 @@ def 0:
 		Argument: LEVEL_V26P11A
 	Identifier: supervision_Acting
 		Argument: 1
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -101,10 +95,10 @@ def 0:
 		Argument: 120
 	Identifier: Wait
 		Argument: 90
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS4
-		Argument: SPECIAL_EPISODE_TYPE
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS4)
+
+	Identifier: SPECIAL_EPISODE_TYPE
 		Argument: 1
 	Array accessor
 		Array: $SIDE08_BOSS2ND
@@ -112,12 +106,10 @@ def 0:
 		Value: 0
 	Identifier: adventure_log
 		Argument: 1004
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_SAVE_MENU
-		Argument: switch
-		Argument: ProcessSpecial
-		Argument: 24
-		Argument: 0
-		Argument: 0
-		Command: end
+	Switch:
+		Variable: message_Menu(MENU_SAVE_MENU)
+
+	Switch:
+		Variable: ProcessSpecial(24, 0, 0)
+
+	Identifier: end

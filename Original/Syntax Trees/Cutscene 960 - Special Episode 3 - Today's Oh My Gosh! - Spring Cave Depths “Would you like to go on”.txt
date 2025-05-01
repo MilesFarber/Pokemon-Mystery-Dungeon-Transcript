@@ -1,37 +1,14 @@
 def 0:
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_KIMAWARI
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_KIMAWARI
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN]Would you like to go on?
-	Identifier: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: Yes
-		Argument: default
-		Argument: label_0
-	Identifier: message_Close
-	Identifier: main_EnterDungeon
-		Argument: 163
-		Argument: 30
-	Identifier: main_EnterDungeon
-		Argument: 1
-		Argument: 30
-	Identifier: hold
-	Identifier: case
-		Argument: menu
-		Argument: english
-		Dialogue: No
-		Argument: message_Close
-	Command: end
+	Switch:
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="Yes", }): default: @label_0; message_Close(); main_EnterDungeon(163, 30); main_EnterDungeon(-1, 30); hold; case menu({ english="No", }): message_Close(
+		Case:
+			Value: default

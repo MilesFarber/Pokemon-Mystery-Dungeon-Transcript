@@ -1,57 +1,19 @@
 def 0:
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN]Return to [CN]Treasure Town?
-	Identifier: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: Yes
-		Argument: default
-		Argument: label_0
-	Identifier: message_Close
-	Identifier: if
-		Argument: scn
-		Argument: SCENARIO_MAIN
-		Argument: 29
-		Argument: 11
-		Argument: label_2
-	Identifier: bgm_FadeOut
-		Argument: 60
-	Identifier: main_EnterGround
-		Argument: LEVEL_P01P01A
-		Argument: 30
-	Identifier: hold
-	Identifier: else
-		Argument: SCENARIO_MAIN
-		Argument: scn
-		Argument: 29
-		Argument: 11
-	Identifier: jump
-		Argument: label_2
-	Identifier: break
-	Identifier: case
-		Argument: menu
-		Argument: english
-		Dialogue: No
-		Argument: message_Close
-	Command: end
+	Switch:
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="Yes", }): default: @label_0; message_Close(); if ( scn($SCENARIO_MAIN) >= [29, 11] ) { @label_2; bgm_FadeOut(60); main_EnterGround(LEVEL_P01P01A, 30); hold; } else { $SCENARIO_MAIN = scn[29, 11]; jump @label_2; } break; case menu({ english="No", }): message_Close(
+		Case:
+			Value: default

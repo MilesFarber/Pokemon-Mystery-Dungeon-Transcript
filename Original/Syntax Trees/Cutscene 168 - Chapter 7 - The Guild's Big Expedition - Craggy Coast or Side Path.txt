@@ -9,7 +9,6 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -18,156 +17,121 @@ def 0:
 		Argument: 15
 	Identifier: Wait
 		Argument: 30
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 46
 			Identifier: 27.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 46
 			Identifier: 24.5
-	Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m2
 			Identifier: 46
 			Identifier: 27.5
 	Identifier: Wait
 		Argument: 20
-	Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m3
 			Identifier: 43
 			Identifier: 29.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_BIPPA
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_LOOK_AROUND_FUNC_SERIES
-		Argument: 0
-	Identifier: SetAnimation
+	Identifier: 0
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 4
 	Identifier: message_SetFace
 		Argument: ACTOR_PLAYER
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_STANDARD
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" ([partner] is acting like a leader. I didn't notice it before...) """, } default: { english=""" ([partner] is acting like a leader. I didn't notice it before...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: ([partner] is acting like a leader. I didn't notice it before...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: ([partner] is acting like a leader. I didn't notice it before...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (It must be the excitement from exploring that's bringing it out...) """, } default: { english=""" (It must be the excitement from exploring that's bringing it out...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (It must be the excitement from exploring that's bringing it out...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (It must be the excitement from exploring that's bringing it out...)
-		Argument: WaitExecuteLives
+	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_LOOK_AROUND_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (But [partner], who was so timid before, is trying so much harder...) """, } default: { english=""" (But [partner], who was so timid before, is trying so much harder...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (But [partner], who was so timid before, is trying so much harder...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (But [partner], who was so timid before, is trying so much harder...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (Yes, [partner] is getting stronger and more confident bit by bit...) """, } default: { english=""" (Yes, [partner] is getting stronger and more confident bit by bit...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Yes, [partner] is getting stronger and more confident bit by bit...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Yes, [partner] is getting stronger and more confident bit by bit...)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: se_Play
 		Argument: 8964
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 2
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
 		Argument: FACE_WORRIED
@@ -176,24 +140,19 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Oh... Huh?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Oh... Huh?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Oh... Huh?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_BIPPA
@@ -202,16 +161,13 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Huh? Problem?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_NPC_BIPPA
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -223,27 +179,21 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: If you look closely here, there are two entrances.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: If you look closely here, there are two entrances.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: If you look closely here, there are two entrances.
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8973
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: EFFECT_SHOCKED
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
@@ -254,16 +204,13 @@ def 0:
 		Argument: FACE_SAD
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Huh? Now, that is mighty vexing.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -275,213 +222,72 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: What'll we do, [hero]?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: What'll we do, [hero]?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: What'll we do, [hero]?
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Which way should we go?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Which way should we go?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Which way should we go?
-		Argument: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: [CS:P]Craggy Coast[CR]
-		Argument: default
-		Argument: label_0
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_TOP_R_CENTER
 	Switch:
-		Variable: $PARTNER_TALK_KIND
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="[CS:P]Craggy Coast[CR]", }): default: @label_0; CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_TOP_R_CENTER); message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=" OK. [CS:P]Craggy Coast[CR] it is.", } case 2: { english=" OK. [CS:P]Craggy Coast[CR] it is.", } default: { english=" OK. [CS:P]Craggy Coast[CR] it is.", } } @label_2; message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=" All right. Now...", } case 2: { english=" All right. Now...", } default: { english=" All right. Now...", } } CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_SetFace(ACTOR_NPC_BIPPA, FACE_NORMAL, FACE_POS_BOTTOM_R_FACEINW); message_Talk({ english=""" Let's all three work as one and get this done! """, }); CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
-		Argument: label_2
-	Switch:
-		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: All right. Now...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: All right. Now...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: All right. Now...
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_BIPPA
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_BOTTOM_R_FACEINW
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Let's all three work as one and get this done!
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: DIR_UP
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 4
-		Argument: 10
-		Argument: DIR_UP
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWN
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_BIPPA
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 71
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: Wait
-		Argument: 30
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: DIR_UP
-	Identifier: SCENARIO_MAIN
-		Argument: scn
-		Argument: 9
-		Argument: 2
-	Identifier: if
-		Argument: SCENARIO_MAIN_BIT_FLAG
-		Argument: 5
-		Argument: debug_Print
-		Argument: ENTER_CHIISANAYOKOANA
-	Identifier: bgm_FadeOut
-		Argument: 60
-	Identifier: main_EnterDungeon
-		Argument: 9
-		Argument: 30
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_DUNGEON_INITIALIZE_TEAM
-		Argument: main_EnterDungeon
-		Argument: 1
-		Argument: 30
-	Identifier: hold
-	Command: end
-	Identifier: else
-		Argument: debug_Print
-		Argument: ENTER_ENGANNOIWABA
-	Identifier: main_EnterDungeon
-		Argument: 8
-		Argument: 30
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_DUNGEON_INITIALIZE_TEAM
-		Argument: main_EnterDungeon
-		Argument: 1
-		Argument: 30
-	Identifier: hold
-	Identifier: break
-	Identifier: case
-		Argument: menu
-		Argument: english
-		Dialogue: [CS:P]Side Path[CR]
 	Array accessor
 		Array: $SCENARIO_MAIN_BIT_FLAG
 		Index: 5
 		Value: 1
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_TOP_R_CENTER
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: OK. [CS:P]Side Path[CR] it is.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: OK. [CS:P]Side Path[CR] it is.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: OK. [CS:P]Side Path[CR] it is.
-		Argument: jump
-		Argument: label_2

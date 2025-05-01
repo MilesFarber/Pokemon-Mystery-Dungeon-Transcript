@@ -3,110 +3,24 @@ def 0:
 		Argument: BGM_WIGGLYTUFFS_GUILD
 		Argument: 0
 		Argument: 256
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_PERAPPU
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_STANDARD
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Oh? Are you all ready for the expedition?
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: The expedition will be a long journey. You should be stocked up on items. Are you all ready to go?
-	Identifier: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: Yes
-		Argument: default
-		Argument: label_0
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Incidentally...
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: You may not bring members of your team that aren't members of the guild. Understood?
-	Identifier: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: I know!
-		Argument: default
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: supervision_ExecuteCommon
-		Argument: CORO_EVENT_M08_05_06
-	Identifier: label_1
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: What, not yet?[K] Get moving and get ready.
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: The other apprentices should be getting their stocks of items ready too.
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: When you're done preparing for the expedition, report to me. ♪
-	Identifier: message_Close
-	Identifier: label_4
-	Command: end
-	Identifier: case
-		Argument: menu
-		Argument: english
-		Dialogue: I didn't know...
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_PERAPPU
-		Argument: FACE_PAIN
-		Argument: FACE_POS_STANDARD
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: It's quite apparent that someone failed to pay attention to me...
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_PERAPPU
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: The situation being what it is, I shall explain again.
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: You may not bring members of your team that are not members of the guild.
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Keeping that in mind, you should complete your preparations.
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Understood. ♪
-	Identifier: message_Close
-	Identifier: jump
-		Argument: label_4
-	Identifier: break
-	Identifier: case
-		Argument: menu
-		Argument: english
-		Dialogue: No
-		Argument: jump
-		Argument: label_1
+	Switch:
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="Yes", }): default: @label_0; CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_Talk({ english=" Incidentally...", }); message_Talk({ english=""" You may not bring members of your team that aren't members of the guild. Understood? """, }); switch ( message_SwitchMenu(0, 1) ) { case menu({ english="I know!", }): default: CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); supervision_ExecuteCommon(CORO_EVENT_M08_05_06); @label_1; CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_Talk({ english=""" What, not yet?[K] Get moving and get ready. """, }); message_Talk({ english=""" The other apprentices should be getting their stocks of items ready too. """, }); message_Talk({ english=""" When you're done preparing for the expedition, report to me. ♪ """, }); message_Close(); @label_4; end; case menu({ english="I didn't know...", }): CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_SetFace(ACTOR_NPC_PERAPPU, FACE_PAIN, FACE_POS_STANDARD); message_Talk({ english=""" It's quite apparent that someone failed to pay attention to me... """, }); CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_SetFace(ACTOR_NPC_PERAPPU, FACE_NORMAL, FACE_POS_STANDARD); message_Talk({ english=""" The situation being what it is, I shall explain again. """, }); message_Talk({ english=""" You may not bring members of your team that are not members of the guild. """, }); message_Talk({ english=""" Keeping that in mind, you should complete your preparations. """, }); message_Talk({ english=" Understood. ♪", }); message_Close(); jump @label_4; } break; case menu({ english="No", }
+		Case:
+			Value: default
+
+		Case:
+			Value: default

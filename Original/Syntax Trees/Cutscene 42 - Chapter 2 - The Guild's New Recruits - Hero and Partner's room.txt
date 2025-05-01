@@ -1,240 +1,44 @@
 def 0:
 	Identifier: sound_Stop
-	Identifier: if
-		Argument: variation
-		Argument: label_0
-	Identifier: switch
-		Argument: ProcessSpecial
-		Argument: 53
-		Argument: 1
-		Argument: 0
-		Argument: message_SetWaitMode
-		Argument: 300
-		Argument: 300
-	Identifier: message_Explanation
-		Argument: english
-		Dialogue: [CN]Thanks for playing! [CN]We hope you enjoyed [CN]the demo!
-	Identifier: message_KeyWait
-	Identifier: switch
-		Argument: ProcessSpecial
-		Argument: PROCESS_SPECIAL_JUMP_TO_TITLE_SCREEN
-		Argument: 0
-		Argument: 0
-		Command: end
-	Identifier: else
-		Argument: back2_SetMode
-		Argument: 4
-	Identifier: back2_SetGround
-		Argument: LEVEL_V02P06A
-	Identifier: camera2_SetPositionMark
-		Argument: Position
+	Conditional
+		Type: If
 		Template
 			Type: m0
 			Identifier: 19.5
 			Identifier: 15.5
-	Identifier: screen2_FadeIn
-		Argument: 1
-		Argument: 60
-	Identifier: Wait
-		Argument: 150
-	Identifier: screen2_FadeOut
-		Argument: 1
-		Argument: 60
-	Identifier: back2_SetMode
-		Argument: 0
-	Identifier: back_SetGround
-		Argument: LEVEL_G01P07C
-	Identifier: supervision_Acting
-		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 76
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 76
-	Identifier: screen_FadeChange
-		Argument: 1
-		Argument: 60
-		Argument: 0
-		Argument: 192
-	Identifier: bgm_PlayFadeIn
-		Argument: BGM_GOODNIGHT
-		Argument: 0
-		Argument: 256
-	Identifier: Wait
-		Argument: 30
-	Identifier: message_SetActor
-		Argument: ACTOR_ATTENDANT1
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Hey, [hero]...
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Listen, [hero]...
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Say, [hero]...
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Today was pretty hectic, wasn't it! So much happened!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Wasn't today hectic? So much happened!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Today was pretty hectic with everything we went through, wasn't it?
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: But I'm glad we managed to pull off our first job.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: But I'm relieved that our first job was a success.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: But I'm glad our first job turned out so well.
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: I was really steamed about how [CS:N]Wigglytuff[CR]'s Guild took most of the money...
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: It was really upsetting how [CS:N]Wigglytuff[CR]'s Guild took most of the money...
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: I was really mad about how [CS:N]Wigglytuff[CR]'s Guild took most of the money...
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: That's just the cost of training, I guess. We can't do anything about it.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: That's just the cost of training, I guess. We can't do anything about it.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: That's just the cost of training, I guess. We can't do anything about it.
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: What meant the most to me today, though, was getting thanked by [CS:N]Spoink[CR]!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: But what made me really happy today, though, was getting thanked by [CS:N]Spoink[CR]!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: But what made me really happy today, though, was getting thanked by [CS:N]Spoink[CR]!
-		Argument: message_Close
-	Identifier: Wait
-		Argument: 45
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Yawn... I'm getting sleepy.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Yawn... I'm getting sleepy.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Yawn... I'm getting sleepy.
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: I'm going to sleep.[K] Let's do a good job again tomorrow.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: I'm going to sleep.[K] Let's try our best again tomorrow.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: I'm going to sleep.[K] Let's try our best again tomorrow.
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Good night, [hero]...
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Good night, [hero]...
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Sleep tight, [hero]...
-		Argument: message_Close
-	Identifier: Wait
-		Argument: 30
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 62
-	Identifier: Wait
-		Argument: 10
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 62
 	Identifier: Wait
 		Argument: 80
-	Identifier: bgm_FadeOut
+		Argument: bgm_FadeOut
 		Argument: 120
-	Identifier: screen_FadeOut
+		Argument: screen_FadeOut
 		Argument: 1
 		Argument: 120
-	Identifier: WaitBgm
+		Argument: WaitBgm
 		Argument: BGM_GOODNIGHT
-	Identifier: Wait
+		Argument: Wait
 		Argument: 30
-	Identifier: if
+		Argument: if
 		Argument: variation
 		Argument: jump
 		Argument: label_0
-	Identifier: else
+		Argument: else
 		Argument: SCENARIO_MAIN
 		Argument: scn
 		Argument: 4
 		Argument: 0
-	Command: end
+		Argument: end

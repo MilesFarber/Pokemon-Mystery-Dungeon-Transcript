@@ -7,13 +7,9 @@ def 0:
 		Argument: LEVEL_V26P05A
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: SetOutputAttribute
 		Template
 			Type: object
 			Identifier: OBJECT_V26P05A1_329
-		Argument: 2048
-	Identifier: camera2_SetPositionMark
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 19
@@ -26,10 +22,10 @@ def 0:
 		Argument: 23
 		Argument: 600
 		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS1
-		Argument: WaitBgmSignal
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS1)
+
+	Identifier: WaitBgmSignal
 	Identifier: screen2_FadeIn
 		Argument: 0
 		Argument: 120
@@ -42,21 +38,21 @@ def 0:
 		Argument: BGM_ENDING_THEME
 		Argument: 0
 		Argument: 256
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS2
-		Argument: Wait
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS2)
+
+	Identifier: Wait
 		Argument: 180
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS2
-		Argument: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS2
-		Argument: switch
-		Argument: message_Menu
-		Argument: MENU_STAFF_CREDITS3
-		Argument: bgm_FadeOut
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS2)
+
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS2)
+
+	Switch:
+		Variable: message_Menu(MENU_STAFF_CREDITS3)
+
+	Identifier: bgm_FadeOut
 		Argument: 210
 	Identifier: screen2_FadeOut
 		Argument: 0
@@ -78,147 +74,43 @@ def 0:
 		Argument: 0
 	Identifier: WaitBgm
 		Argument: BGM_ENDING_THEME
-	Command: end
-	Identifier: def
-		Argument: 1
-		Argument: for
-		Argument: performer
-		Argument: 0
-		Argument: camera_SetMyself
-	Identifier: label_0
-	Command: forever
-	Identifier: camera_SetPositionMark
-		Argument: Position
-		Template
-			Type: m1
-			Identifier: 19.5
-			Identifier: 13.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
-		Template
-			Type: m2
-			Identifier: 58.5
-			Identifier: 13.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
-		Template
-			Type: m3
-			Identifier: 97.5
-			Identifier: 13.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
-		Template
-			Type: m4
-			Identifier: 19.5
-			Identifier: 43.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
-		Template
-			Type: m5
-			Identifier: 58.5
-			Identifier: 43.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
-		Template
-			Type: m6
-			Identifier: 97.5
-			Identifier: 43.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
-		Template
-			Type: m7
-			Identifier: 19.5
-			Identifier: 73.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
-		Template
-			Type: m8
-			Identifier: 58.5
-			Identifier: 73.5
-	Identifier: Wait
-		Argument: 8
-	Command: continue
+	Identifier: end
 def 1:
 	Target: performer 0
 	Identifier: camera_SetMyself
-	Identifier: label_0
-	Command: forever
-	Identifier: camera_SetPositionMark
-		Argument: Position
+	Label: @label_0
 		Template
 			Type: m1
 			Identifier: 19.5
 			Identifier: 13.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
 		Template
 			Type: m2
 			Identifier: 58.5
 			Identifier: 13.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
 		Template
 			Type: m3
 			Identifier: 97.5
 			Identifier: 13.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
 		Template
 			Type: m4
 			Identifier: 19.5
 			Identifier: 43.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
 		Template
 			Type: m5
 			Identifier: 58.5
 			Identifier: 43.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
 		Template
 			Type: m6
 			Identifier: 97.5
 			Identifier: 43.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
 		Template
 			Type: m7
 			Identifier: 19.5
 			Identifier: 73.5
-	Identifier: Wait
-		Argument: 8
-	Identifier: camera_SetPositionMark
-		Argument: Position
 		Template
 			Type: m8
 			Identifier: 58.5
 			Identifier: 73.5
 	Identifier: Wait
 		Argument: 8
-	Command: continue
+		Argument: continue

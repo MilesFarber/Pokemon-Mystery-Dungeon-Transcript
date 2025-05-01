@@ -1,216 +1,146 @@
 def 0:
 	Identifier: sound_Stop
-	Identifier: if
-		Argument: scn
-		Argument: SCENARIO_MAIN
-		Argument: 29
-		Argument: 82
-		Argument: label_0
-	Identifier: back_SetGround
-		Argument: LEVEL_S04P01A
-	Identifier: screen_FadeIn
-		Argument: 1
-		Argument: 0
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_PAIN
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Ugh...[K] We couldn't get through...
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Ugh...[K] We couldn't break through.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Ugh...[K] We couldn't break through.
-		Argument: message_KeyWait
-	Identifier: screen_FadeOutAll
-		Argument: 1
-		Argument: 60
-	Identifier: message_CloseEnforce
-	Identifier: CallCommon
-		Argument: CORO_FADE_OUT_ALL_AFTER
-	Identifier: back_SetGround
-		Argument: LEVEL_D38P12A
-	Identifier: supervision_StationCommon
-		Argument: 0
-	Identifier: supervision_Acting
-		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
-	Identifier: screen_FadeIn
-		Argument: 1
-		Argument: 30
-	Identifier: bgm_PlayFadeIn
-		Argument: BGM_CHASM_CAVE
-		Argument: 0
-		Argument: 256
-	Identifier: Wait
-		Argument: 30
-	Identifier: WaitLockLives
-		Argument: 5
-		Argument: ACTOR_PLAYER
-	Identifier: Unlock
-		Argument: 5
-	Identifier: Wait
-		Argument: 15
-	Identifier: Unlock
-		Argument: 7
-	Identifier: Lock
-		Argument: 3
-	Identifier: Wait
-		Argument: 15
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
+			Identifier: screen_FadeIn
+			Identifier: 1
+			Identifier: 30
+			Identifier: bgm_PlayFadeIn
+			Identifier: BGM_CHASM_CAVE
+			Identifier: 0
+			Identifier: 256
+			Identifier: Wait
+			Identifier: 30
+			Identifier: WaitLockLives
+			Identifier: 5
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
+			Identifier: Unlock
+			Identifier: 5
+			Identifier: Wait
+			Identifier: 15
+			Identifier: Unlock
+			Identifier: 7
+			Identifier: Lock
+			Identifier: 3
+			Identifier: Wait
+			Identifier: 15
+			Identifier: Turn2DirectionLives
+			Identifier: actor
+			Identifier: ACTOR_PLAYER
+			Identifier: 4
+			Identifier: 10
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_PLAYER
-	Identifier: Wait
-		Argument: 15
-	Identifier: SetEffect
-		Template
-			Type: actor
+			Identifier: Turn2DirectionLives
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_PAIN
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Hmm... We were a bit careless.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Hmm... We were a bit careless.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Hmm... We were a bit careless.
-		Argument: message_Close
-	Identifier: ExecuteCommon
-		Template
-			Type: actor
+			Identifier: 4
+			Identifier: 10
+			Identifier: ACTOR_PLAYER
+			Identifier: Wait
+			Identifier: 15
+			Identifier: SetEffect
+			Identifier: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
-		Argument: 0
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_DETERMINED
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: If we stick around here, [CS:N]Palkia[CR] could find us.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: If we stay here, [CS:N]Palkia[CR] could find us.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: We can't stay here, because [CS:N]Palkia[CR] could find us.
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
+			Identifier: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+			Identifier: 3
+			Identifier: message_SetFace
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_DETERMINED
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
+			Identifier: FACE_PAIN
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
 			Identifier: english
-				Dialogue: Let's get away from here.
-		Case:
-			Value: 2
+			Identifier: Hmm...
+			Identifier: We
+			Identifier: were
+			Identifier: a
+			Identifier: bit
+			Identifier: careless.
+			Identifier: case
+			Identifier: 2
 			Identifier: english
-				Dialogue: We need to get out of here right away.
-		Case:
-			Value: default
+			Identifier: Hmm...
+			Identifier: We
+			Identifier: were
+			Identifier: a
+			Identifier: bit
+			Identifier: careless.
+			Identifier: default
 			Identifier: english
-				Dialogue: We should get away from here.
-		Argument: message_Close
-	Command: end
-	Identifier: else
-		Argument: SCENARIO_MAIN
-		Argument: scn
-		Argument: 29
-		Argument: 82
-	Identifier: jump
-		Argument: label_0
-	Identifier: def
-		Argument: 1
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_PLAYER
-		Argument: SetDirection
-		Argument: DIR_RIGHT
-	Identifier: SetAnimation
-		Argument: 76
-	Identifier: Lock
-		Argument: 5
-	Identifier: CallCommon
-		Argument: CORO_WAKEUP_FUNC
-	Identifier: CallCommon
-		Argument: CORO_LOOK_AROUND_DOWN_FUNC
-	Identifier: Lock
-		Argument: 6
-	Identifier: hold
-	Identifier: def
-		Argument: 2
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_ATTENDANT1
-		Argument: SetDirection
-		Argument: DIR_LEFT
-	Identifier: SetAnimation
-		Argument: 76
-	Identifier: Lock
-		Argument: 7
-	Identifier: CallCommon
-		Argument: CORO_WAKEUP_FUNC
-	Identifier: CallCommon
-		Argument: CORO_LOOK_AROUND_FUNC
-	Identifier: Unlock
-		Argument: 3
-	Identifier: Lock
-		Argument: 8
-	Identifier: hold
+			Identifier: Hmm...
+			Identifier: We
+			Identifier: were
+			Identifier: a
+			Identifier: bit
+			Identifier: careless.
+			Identifier: message_Close
+			Identifier: ExecuteCommon
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+			Identifier: 0
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_DETERMINED
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: If
+			Identifier: we
+			Identifier: stick
+			Identifier: around
+			Identifier: here
+			Identifier: CS
+			Identifier: N
+			Identifier: Palkia
+			Identifier: CR
+			Identifier: could
+			Identifier: find
+			Identifier: us.
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: If
+			Identifier: we
+			Identifier: stay
+			Identifier: here
+			Identifier: CS
+			Identifier: N
+			Identifier: Palkia
+			Identifier: CR
+			Identifier: could
+			Identifier: find
+			Identifier: us.
+			Identifier: default
+			Identifier: english
+			Identifier: We
+			Identifier: can
+			Identifier: t
+			Identifier: stay
+			Identifier: here
+			Identifier: because
+			Identifier: CS
+			Identifier: N
+			Identifier: Palkia
+			Identifier: CR
+			Identifier: could
+			Identifier: find
+			Identifier: us.
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2DirectionLives
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+	Conditional
+		Type: Else
 def 1:
 	Target: actor ACTOR_PLAYER
 	Identifier: SetDirection
@@ -226,12 +156,9 @@ def 1:
 	Identifier: Lock
 		Argument: 6
 	Identifier: hold
-	Identifier: def
-		Argument: 2
-		Argument: for
-		Argument: actor
-		Argument: ACTOR_ATTENDANT1
-		Argument: SetDirection
+def 2:
+	Target: actor ACTOR_ATTENDANT1
+	Identifier: SetDirection
 		Argument: DIR_LEFT
 	Identifier: SetAnimation
 		Argument: 76

@@ -6,7 +6,6 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 2
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -27,28 +26,20 @@ def 0:
 		Argument: 0
 	Identifier: WaitExecuteObject
 		Argument: OBJECT_V23P04A1_281
-	Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_V23P04A1_281
-		Argument: 17
-	Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_V23P04A1_281
-	Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_V23P04A1_281
-		Argument: 2
 	Identifier: Wait
 		Argument: 90
-	Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_V23P04A1_281
-		Argument: 19
-	Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_V23P04A1_281
@@ -61,7 +52,6 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: What...[K] What was that?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -73,40 +63,32 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: A beam of light shot out to sea...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: A beam of light shot out to sea...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: A beam of light shot out to sea...
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: What's that out there...?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: What's that out there...?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: What's that out there...?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: back_SetEffect
 		Argument: 11
 		Argument: 120
-	Identifier: ResetOutputAttribute
 		Template
 			Type: object
 			Identifier: OBJECT_V23P04A2_284
-		Argument: 128
 	Identifier: Wait
 		Argument: 120
 	Identifier: message_SetFace
@@ -117,50 +99,39 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: ...Huh?[K] That's...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: ...What?[K] That's...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: ...What?[K] That's...
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetEffect
 		Template
 			Type: performer
 			Identifier: 3
-		Argument: 658
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: performer
 			Identifier: 3
 	Identifier: Wait
 		Argument: 70
-	Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_V23P04A2_284
-		Argument: 19
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: It's coming closer...[K] It's swimming...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: It's coming closer...[K] It's swimming...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: It's coming closer...[K] It's swimming...
-		Argument: message_Close
+	Identifier: message_Close
 	Identifier: screen2_FadeOut
 		Argument: 0
 		Argument: 30
@@ -169,29 +140,7 @@ def 0:
 		Argument: 30
 	Identifier: back2_SetMode
 		Argument: 0
-	Command: end
-	Identifier: def
-		Argument: 1
-		Argument: for
-		Argument: object
-		Argument: OBJECT_V23P04A1_281
-		Argument: SetOutputAttribute
-		Argument: 64
-	Identifier: SetOutputAttribute
-		Argument: 8
-	Identifier: hold
-	Identifier: def
-		Argument: 2
-		Argument: for
-		Argument: object
-		Argument: OBJECT_V23P04A2_284
-		Argument: SetOutputAttribute
-		Argument: 128
-	Identifier: SetOutputAttribute
-		Argument: 64
-	Identifier: SetOutputAttribute
-		Argument: 8
-	Identifier: hold
+	Identifier: end
 def 1:
 	Target: object OBJECT_V23P04A1_281
 	Identifier: SetOutputAttribute
@@ -199,12 +148,9 @@ def 1:
 	Identifier: SetOutputAttribute
 		Argument: 8
 	Identifier: hold
-	Identifier: def
-		Argument: 2
-		Argument: for
-		Argument: object
-		Argument: OBJECT_V23P04A2_284
-		Argument: SetOutputAttribute
+def 2:
+	Target: object OBJECT_V23P04A2_284
+	Identifier: SetOutputAttribute
 		Argument: 128
 	Identifier: SetOutputAttribute
 		Argument: 64

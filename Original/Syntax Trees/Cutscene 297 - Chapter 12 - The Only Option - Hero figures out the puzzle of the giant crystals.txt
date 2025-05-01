@@ -5,24 +5,18 @@ def 0:
 		Argument: 0
 	Identifier: supervision_StationCommon
 		Argument: 8
-	Identifier: SetPositionInitial
 		Template
 			Type: actor
 			Identifier: ACTOR_UNIT_NPC1
-	Identifier: SetPositionInitial
 		Template
 			Type: actor
 			Identifier: ACTOR_UNIT_NPC2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_UNIT_NPC1
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_UNIT_NPC2
-		Argument: 2
 	Identifier: supervision_StationCommon
 		Argument: 28
 	Identifier: supervision_StationCommon
@@ -31,7 +25,6 @@ def 0:
 		Argument: 21
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -52,96 +45,78 @@ def 0:
 		Argument: 2
 		Argument: 1
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(That was...)", } default: { english="(That was...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (That was...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (That was...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(Unlike my earlier experiences!)", } default: { english="(Unlike my earlier experiences!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Unlike my earlier experiences!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Unlike my earlier experiences!)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(All I heard was a voice.)", } default: { english="(All I heard was a voice.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (All I heard was a voice.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (All I heard was a voice.)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(No.[K] That's wrong.)", } default: { english="(No.[K] That's wrong.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (No.[K] That's wrong.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (No.[K] That's wrong.)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(This...[K]this happened once before.)", } default: { english="(This...[K]this happened once before.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (This...[K]this happened once before.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (This...[K]this happened once before.)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(It was...[K] It was at Groudon's statue!)", } default: { english="(It was...[K] It was at Groudon's statue!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (It was...[K] It was at Groudon's statue!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (It was...[K] It was at Groudon's statue!)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(I heard only a voice that time too.)", } default: { english="(I heard only a voice that time too.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (I heard only a voice that time too.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (I heard only a voice that time too.)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(But why does that happen?)", } default: { english="(But why does that happen?
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (But why does that happen?)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (But why does that happen?)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(Why did I hear only a voice then...and now?)", } default: { english="(Why did I hear only a voice then...and now?
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Why did I hear only a voice then...and now?)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Why did I hear only a voice then...and now?)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -151,24 +126,19 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Huh? What's up, [hero]?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Hey, what's the matter, [hero]?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Hey, is there something wrong, [hero]?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
@@ -176,13 +146,10 @@ def 0:
 		Argument: 20
 	Identifier: se_Play
 		Argument: 8978
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -196,86 +163,67 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Oh! Did you have another vision?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Oh! Did you have another vision?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Oh! Did you have another vision?
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Did another Dimensional Scream come to you?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Did another Dimensional Scream come to you?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Did another Dimensional Scream come to you?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
 	Identifier: Wait
 		Argument: 30
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I knew it!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: I knew it!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I knew it!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: S-so what did you see?!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: S-so what did you see?!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: S-so what did you see?!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
@@ -289,65 +237,52 @@ def 0:
 		Argument: 2
 		Argument: 1
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(According to that voice...)", } default: { english="(According to that voice...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (According to that voice...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (According to that voice...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="([CS:N]Azelf[CR] is the Being of Willpower.)", } default: { english="([CS:N]Azelf[CR] is the Being of Willpower.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: ([CS:N]Azelf[CR] is the Being of Willpower.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: ([CS:N]Azelf[CR] is the Being of Willpower.)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (The voice said the crystals should all be made one color.) """, } default: { english=""" (The voice said the crystals should all be made one color.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (The voice said the crystals should all be made one color.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (The voice said the crystals should all be made one color.)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(Make the crystals one color...)", } default: { english="(Make the crystals one color...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Make the crystals one color...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Make the crystals one color...)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8965
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
@@ -359,26 +294,22 @@ def 0:
 		Argument: 2
 		Argument: 1
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(That's it![K] I need to match the color!)", } default: { english="(That's it![K] I need to match the color!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (That's it![K] I need to match the color!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (That's it![K] I need to match the color!)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (These three crystals need to be all the same color!) """, } default: { english=""" (These three crystals need to be all the same color!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (These three crystals need to be all the same color!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (These three crystals need to be all the same color!)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: bgm_PlayFadeIn
 		Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
@@ -386,23 +317,19 @@ def 0:
 		Argument: 256
 	Identifier: Wait
 		Argument: 10
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 1
+	Identifier: 1
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: Wait
 		Argument: 45
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 2
+	Identifier: 2
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -414,51 +341,39 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I'm guessing you have an idea now.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: I guess you have an idea about what to do.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I guess you got an idea about what to do.
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 1
+	Identifier: 1
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
 	Identifier: Wait
 		Argument: 60
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 2
+	Identifier: 2
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
@@ -470,83 +385,67 @@ def 0:
 		Argument: 2
 		Argument: 1
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(Now, what's the color supposed to be?)", } default: { english="(Now, what's the color supposed to be?
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Now, what's the color supposed to be?)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Now, what's the color supposed to be?)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(The color of willpower...)", } default: { english="(The color of willpower...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (The color of willpower...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (The color of willpower...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(That must mean the color of [CS:N]Azelf[CR]'s spirit...)", } default: { english="(That must mean the color of [CS:N]Azelf[CR]'s spirit...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (That must mean the color of [CS:N]Azelf[CR]'s spirit...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (That must mean the color of [CS:N]Azelf[CR]'s spirit...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="([CS:N]Azelf[CR] lives at [CS:P]Crystal Lake[CR].)", } default: { english="([CS:N]Azelf[CR] lives at [CS:P]Crystal Lake[CR].
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: ([CS:N]Azelf[CR] lives at [CS:P]Crystal Lake[CR].)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: ([CS:N]Azelf[CR] lives at [CS:P]Crystal Lake[CR].)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" ([CS:P]Crystal Cave[CR]...[K]and [CS:P]Crystal Lake[CR]...) """, } default: { english="([CS:P]Crystal Cave[CR]...[K]and [CS:P]Crystal Lake[CR]...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: ([CS:P]Crystal Cave[CR]...[K]and [CS:P]Crystal Lake[CR]...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: ([CS:P]Crystal Cave[CR]...[K]and [CS:P]Crystal Lake[CR]...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(Is [CS:N]Azelf[CR]'s spirit...[K]as clear as crystal...?)", } default: { english="(Is [CS:N]Azelf[CR]'s spirit...[K]as clear as crystal...?
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Is [CS:N]Azelf[CR]'s spirit...[K]as clear as crystal...?)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Is [CS:N]Azelf[CR]'s spirit...[K]as clear as crystal...?)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(Or, no...[K]could it be the color of cold water?)", } default: { english="(Or, no...[K]could it be the color of cold water?
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Or, no...[K]could it be the color of cold water?)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Or, no...[K]could it be the color of cold water?)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 2
+	Identifier: 2
 		Argument: DIR_RIGHT
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -556,58 +455,45 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I guess you really are onto something.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: I guess you really have an idea about what to do.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I guess you're really convinced now.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: All right. This is your call, [hero].
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: OK. I'll leave it up to you, [hero].
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: OK. You should do whatever you need to, [hero].
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Go on and solve the secret of the three crystals!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: See if you can solve the secret of the three crystals!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Try solving the secret of the three crystals!
-		Argument: message_Close
-	Identifier: Turn2Direction
+	Identifier: message_Close
 		Template
 			Type: actor
 			Identifier: ACTOR_UNIT_NPC1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_UNIT_NPC2
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_UNIT_NPC2
@@ -617,4 +503,4 @@ def 0:
 		Argument: 3
 	Identifier: CRYSTAL_COLOR_03
 		Argument: 0
-	Command: end
+	Identifier: end

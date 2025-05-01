@@ -4,7 +4,6 @@ def 0:
 		Argument: LEVEL_T01P01A
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -23,26 +22,22 @@ def 0:
 		Argument: 1
 		Argument: 0
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="([CS:N]Darkrai[CR] told us to go to the [CS:P]Dark Crater[CR].)", } default: { english="([CS:N]Darkrai[CR] told us to go to the [CS:P]Dark Crater[CR].
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: ([CS:N]Darkrai[CR] told us to go to the [CS:P]Dark Crater[CR].)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: ([CS:N]Darkrai[CR] told us to go to the [CS:P]Dark Crater[CR].)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(And that he would be waiting for us.)", } default: { english="(And that he would be waiting for us.
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (And that he would be waiting for us.)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (And that he would be waiting for us.)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_PUKURIN
@@ -52,10 +47,8 @@ def 0:
 		Argument: 2
 		Argument: 2
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: [CS:N]Cresselia[CR], you believe that he demanded [partner] and [hero] come to him for a reason, don't you?
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Do you believe that it's a trap?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -67,43 +60,32 @@ def 0:
 		Argument: 0
 		Argument: 2
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Yes.[K] It's a trap. Without a doubt.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: Wait
 		Argument: 30
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 71
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -111,31 +93,23 @@ def 0:
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
 	Identifier: Wait
 		Argument: 30
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPRIGHT
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -145,12 +119,10 @@ def 0:
 		Argument: BGM_THROUGH_THE_SEA_OF_TIME
 		Argument: 0
 		Argument: 256
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -164,59 +136,47 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: It doesn't matter if it's a trap or not!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: It doesn't matter if it's a trap or not!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: It doesn't matter if it's a trap or not!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: If we don't stop [CS:N]Darkrai[CR], the whole world will be smothered by darkness.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: If we don't stop [CS:N]Darkrai[CR], he'll smother the whole world with darkness.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: If we don't stop [CS:N]Darkrai[CR], he'll smother the whole world with darkness.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: We have to do something!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: We have to do something!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: We have to do something!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: We're going to the [CS:P]Dark Crater[CR]!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: We're going to the [CS:P]Dark Crater[CR]!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: We're going to the [CS:P]Dark Crater[CR]!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_KURESERIA
@@ -226,28 +186,21 @@ def 0:
 		Argument: 0
 		Argument: 2
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: ...OK.[K] I respect your decision.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I will accompany you.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I have long been aware of [CS:N]Darkrai[CR]'s scheme...[K] I have pursued him a long time to thwart his plan.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: But every time I caught up to him, he would elude me...[K] This time, he is waiting for us.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I would like to settle this once and for all.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SURIIPU
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_SURIIPU
 	Identifier: message_SetFace
@@ -255,16 +208,13 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I'll go too!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PERAPPU
 	Identifier: message_SetFace
@@ -272,16 +222,13 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_L_CENTER
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Me too!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_BIPPA
 	Identifier: message_SetFace
@@ -289,34 +236,27 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_STANDARD
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Yup yup! I'll go, by golly!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KURESERIA
-		Argument: 8
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 45
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KURESERIA
-		Argument: 8
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: Wait
 		Argument: 45
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KURESERIA
-		Argument: 8
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: Wait
 		Argument: 45
@@ -328,28 +268,21 @@ def 0:
 		Argument: 0
 		Argument: 2
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I'm delighted by everyone's offer to help.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I'm afraid that [CS:N]Darkrai[CR] would be scared off if too many of us were to go.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: This is a rare chance to corner [CS:N]Darkrai[CR] and stop his nefarious scheme.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Please be content with just the three of us going.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8972
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
@@ -360,112 +293,84 @@ def 0:
 		Argument: FACE_SAD
 		Argument: FACE_POS_STANDARD
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Aww...[K] That's too bad...
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: But I'd have to say you all are right...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 15
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: Wait
 		Argument: 5
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KIMAWARI
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: Wait
 		Argument: 5
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RURIRI
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MARIRU
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SURIIPU
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_HEIGANI
@@ -480,24 +385,19 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Don't worry, everyone![K] We'll be sure to defeat [CS:N]Darkrai[CR] and come back!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Don't worry, everyone![K] We'll be sure to defeat [CS:N]Darkrai[CR] and come back!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Don't worry, everyone![K] We'll be sure to defeat [CS:N]Darkrai[CR] and come back!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PERAPPU
 	Identifier: message_SetFace
@@ -508,30 +408,23 @@ def 0:
 		Argument: 1
 		Argument: 1
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Yes! You do that!
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SURIIPU
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_SURIIPU
 	Identifier: message_SetFace
@@ -539,30 +432,23 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: If anyone can, it's you!
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNRIGHT
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BIPPA
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_BIPPA
 	Identifier: message_SetFace
@@ -570,21 +456,16 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_STANDARD
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: You all take care, by golly!
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNLEFT
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -599,42 +480,33 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Thanks, everyone!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Everyone, thank you!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Everyone, thank you!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -648,58 +520,44 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Let's go, [hero]!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Let's go, [hero]!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's go, [hero]!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Let's go to the [CS:P]Dark Crater[CR]...[K] where [CS:N]Darkrai[CR] awaits us!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Let's go to the [CS:P]Dark Crater[CR]...[K] where [CS:N]Darkrai[CR] awaits us!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's go to the [CS:P]Dark Crater[CR]...[K] where [CS:N]Darkrai[CR] awaits us!
-		Argument: message_Close
-	Identifier: SetAnimation
+	Identifier: message_Close
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 30
 	Identifier: bgm_FadeOut
@@ -711,4 +569,4 @@ def 0:
 		Argument: CORO_FADE_OUT_ALL_AFTER
 	Identifier: WaitBgm
 		Argument: BGM_THROUGH_THE_SEA_OF_TIME
-	Command: end
+	Identifier: end

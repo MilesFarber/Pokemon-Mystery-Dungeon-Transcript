@@ -1,362 +1,133 @@
 def 0:
 	Identifier: back_SetGround
 		Argument: LEVEL_P02P01A
-	Identifier: switch
-		Argument: sector
-		Argument: case
-		Argument: 0
-		Argument: default
-		Argument: label_0
-	Identifier: bgm_PlayFadeIn
-		Argument: BGM_HEARTWARMING
-		Argument: 0
-		Argument: 256
-	Identifier: supervision_Acting
-		Argument: 8
-	Identifier: supervision_Acting
-		Argument: 0
-	Identifier: camera_SetMyself
-		Template
-			Type: performer
-			Identifier: 0
-	Identifier: Wait
-		Argument: 1
-	Identifier: ResetOutputAttribute
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 256
-	Identifier: ResetOutputAttribute
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 256
-	Identifier: ResetOutputAttribute
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 256
-	Identifier: ResetOutputAttribute
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_RINGUMA
-		Argument: 256
-	Identifier: ResetOutputAttribute
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_YARUKIMONO
-		Argument: 256
-	Identifier: ResetOutputAttribute
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANKII
-		Argument: 256
-	Identifier: ResetOutputAttribute
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_OKORIZARU
-		Argument: 256
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER
-		Argument: 4
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER
-		Argument: 4
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER
-		Argument: 4
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_RINGUMA
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER_DEEP
-		Argument: 4
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_YARUKIMONO
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM
-		Argument: 4
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_MANKII
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM2
-		Argument: 4
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_OKORIZARU
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER_DEEP2
-		Argument: 4
-	Identifier: screen_FadeIn
-		Argument: 1
-		Argument: 30
-	Identifier: Wait
-		Argument: 30
-	Identifier: se_Play
-		Argument: 8973
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_KOOTASU
-		Argument: EFFECT_SHOCKED
-		Argument: 3
-	Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_KOOTASU
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_KOOTASU
-	Identifier: label_2
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_KOOTASU
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_TOP_R_CENTER
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: My goodness! It was the water that carried you all this way?
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: What a long journey that must have been![K] Let the Hot Spring wash away your fatigue before you make your way home.
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 71
-	Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
 	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Good idea. We'll do that. Thanks, everyone!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Good idea. We'll do that. Thanks, everyone!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Good idea. We'll do that. Thanks, everyone!
-		Argument: message_Close
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
+		Variable: sector() ) { case 0: default: @label_0; bgm_PlayFadeIn(BGM_HEARTWARMING, 0, 256); supervision_Acting(8); supervision_Acting(0); camera_SetMyself<performer 0>(
+
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Wait
-		Argument: 20
-	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Wait
-		Argument: 10
-	Identifier: Turn2DirectionLives
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YARUKIMONO
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MANKII
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT1
-	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_OKORIZARU
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HIMEGUMA
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_RINGUMA
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_YARUKIMONO
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANKII
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_OKORIZARU
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOOTASU
-		Argument: EFFECT_LAUGHING
-		Argument: 3
-	Identifier: Wait
-		Argument: 60
-	Identifier: switch
-		Argument: sector
-		Argument: case
-		Argument: 0
-		Argument: default
-		Argument: bgm_FadeOut
-		Argument: 120
-	Identifier: screen_FadeOut
-		Argument: 1
-		Argument: 90
-	Identifier: Wait
-		Argument: 60
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_DUNGEON_TEAM_RETURNS_FROM_MAP
-	Array accessor
-		Array: $SCENARIO_MAIN_BIT_FLAG
-		Index: 8
-		Value: 1
-	Identifier: COMPULSORY_SAVE_POINT
-		Argument: 3
-	Identifier: CallCommon
-		Argument: CORO_HANYOU_SAVE_FUNC
-	Identifier: label_5
-	Command: end
-	Identifier: case
-		Argument: 1
-		Argument: screen_FadeOut
-		Argument: 1
-		Argument: 30
-	Identifier: screen_FlushIn
-		Argument: 1
-		Argument: 0
-		Argument: 1
-		Argument: 0
-		Argument: 0
-		Argument: 0
-	Identifier: jump
-		Argument: label_5
-	Identifier: break
-	Identifier: case
-		Argument: 1
-		Argument: screen_FlushOut
-		Argument: 1
-		Argument: 0
-		Argument: 8
-		Argument: 0
-		Argument: 0
-		Argument: 0
-	Identifier: supervision_Acting
-		Argument: 0
-	Identifier: camera_SetMyself
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOOTASU
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_HIMEGUMA
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_MANKII
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_KOOTASU
 		Template
 			Type: performer
 			Identifier: 0
-	Identifier: Wait
-		Argument: 1
-	Identifier: ResetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 256
-	Identifier: ResetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 256
-	Identifier: ResetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: 256
-	Identifier: ResetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: 256
-	Identifier: ResetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YARUKIMONO
-		Argument: 256
-	Identifier: ResetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MANKII
-		Argument: 256
-	Identifier: ResetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_OKORIZARU
-		Argument: 256
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER
-		Argument: 4
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER
-		Argument: 4
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER
-		Argument: 4
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER_DEEP
-		Argument: 4
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YARUKIMONO
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM
-		Argument: 4
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MANKII
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER_MEDIUM2
-		Argument: 4
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_OKORIZARU
-		Argument: EFFECT_STUCK_IN_YELLOW_WATER_DEEP2
-		Argument: 4
-	Identifier: screen_FadeIn
-		Argument: 1
-		Argument: 30
-	Identifier: Wait
-		Argument: 30
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOOTASU
-		Argument: EFFECT_SHOCKED
-		Argument: 3
-	Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOOTASU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_KOOTASU
-	Identifier: jump
+		Argument: jump
 		Argument: label_2

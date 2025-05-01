@@ -4,8 +4,6 @@ def 0:
 		Argument: 4
 	Identifier: back2_SetGround
 		Argument: LEVEL_V02P06A
-	Identifier: camera2_SetPositionMark
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 19.5
@@ -26,15 +24,12 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 76
 	Identifier: bgm2_PlayFadeIn
 		Argument: BGM_OCEAN1
 		Argument: 90
@@ -46,54 +41,42 @@ def 0:
 		Argument: 30
 	Identifier: message_EmptyActor
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(............)", } default: { english="(............
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (............)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (............)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(..................)", } default: { english="(..................
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (..................)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (..................)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(...![K] Huh?)", } default: { english="(...![K] Huh?
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (...![K] Huh?)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (...![K] Huh?)
-		Argument: message_Close
-	Identifier: SetAnimation
+	Identifier: message_Close
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 5
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
@@ -101,13 +84,10 @@ def 0:
 		Argument: 10
 	Identifier: se_Play
 		Argument: 8978
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -118,23 +98,19 @@ def 0:
 		Argument: FACE_SURPRISED
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="([partner] isn't here...)", } default: { english="([partner] isn't here...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: ([partner] isn't here...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: ([partner] isn't here...)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: CORO_LOOK_AROUND_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
@@ -144,14 +120,12 @@ def 0:
 		Argument: FACE_WORRIED
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(Maybe outside...?)", } default: { english="(Maybe outside...?
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (Maybe outside...?)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (Maybe outside...?)
-		Argument: message_Close
-	Command: end
+	Identifier: message_Close
+	Identifier: end

@@ -4,7 +4,6 @@ def 0:
 		Argument: LEVEL_G01P05A
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -18,7 +17,6 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Guildmaster![K] I present to you two Pokémon who wish to join our guild as apprentices.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -26,47 +24,37 @@ def 0:
 		Argument: 60
 	Identifier: se_Play
 		Argument: 8964
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
 	Identifier: Wait
 		Argument: 30
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Guildmaster...[K]um...[K]Guildmaster?
 	Identifier: message_Close
 	Identifier: Wait
 		Argument: 60
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN
-		Argument: 1
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PUKURIN
 	Identifier: se_Play
 		Argument: 8974
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: ExecuteCommon
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: bgm_PlayFadeIn
 		Argument: BGM_GUILDMASTER_WIGGLYTUFF
 		Argument: 0
@@ -76,30 +64,22 @@ def 0:
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_L_CENTER
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Hiya!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I'm [CS:N]Wigglytuff[CR]![K] I'm the guild's Guildmaster!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: You want to form an exploration team?[K] Then, let's go for it!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: First we must register your exploration team's name!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: So tell me your team's name?
 	Identifier: message_Close
 	Identifier: se_Play
 		Argument: 8972
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -111,17 +91,14 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Huh? The team's name?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Oh? Our team's name?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Oh? Our team's name?
-		Argument: message_SetFace
+	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
 		Argument: FACE_WORRIED
 		Argument: FACE_POS_STANDARD
@@ -129,40 +106,31 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I never thought of that.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: We didn't think of that.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I didn't think about a team name.
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -172,34 +140,28 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Hey, do you have any ideas for a cool name, [hero]?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: So what do you think would be a good name for us, [hero]?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: So what do you think would be a good name for us, [hero]?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_TEAM_NAME
+	Switch:
+		Variable: message_Menu(MENU_TEAM_NAME)
+
 	Array accessor
 		Array: $PERFORMANCE_PROGRESS_LIST
 		Index: 1
 		Value: 1
 	Identifier: se_Play
 		Argument: 8965
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_EXCLAMATION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -211,45 +173,34 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: ...[team:]?![K] Team [team:]!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: ...[team:]?![K] Team [team:]!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: ...[team:]?![K] Team [team:]!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 71
-	Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 71
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_ATTENDANT1
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
 		Argument: FACE_HAPPY
@@ -258,65 +209,49 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Yeah... That's a good name![K] I like it!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Yeah... That's a good name![K] It suits us!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I like it! It's a good name![K] It's perfect for us!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UP
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_PUKURIN
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_L_CENTER
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: All settled, then![K] I'll register your team as [team:].
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Registering! ♪ Registering! ♪
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: All registered...
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_PUKURIN
 		Argument: FACE_SIGH
 		Argument: FACE_POS_TOP_L_CENTER
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: YOOM...TAH!
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN
-		Argument: 17
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN
@@ -345,11 +280,9 @@ def 0:
 		Argument: 2
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PUKURIN
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN
-		Argument: 2
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: bgm_PlayFadeIn
@@ -357,28 +290,22 @@ def 0:
 		Argument: 0
 		Argument: 256
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Congratulations![K] From now on, you're an official exploration team!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: I present you with this in commemoration.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN
-		Argument: 0.7969
-		Argument: 0
+	Identifier: 0
 		Argument: 16
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PUKURIN
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: se_Play
 		Argument: 6410
@@ -391,38 +318,28 @@ def 0:
 	Identifier: Wait
 		Argument: 30
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN][CS:N]Wigglytuff[CR] set down [CN]a Pokémon Exploration Team Kit!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN
-		Argument: 5
-	Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN
-		Argument: 0.7969
-		Argument: 0
+	Identifier: 0
 		Argument: 16
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PUKURIN
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN
-		Argument: 2
 	Identifier: se_Play
 		Argument: 8962
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_QUESTION_MARK
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -434,63 +351,50 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: A Pokémon Exploration Team Kit?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: A Pokémon Exploration Team Kit?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: A Pokémon Exploration Team Kit?
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_PUKURIN
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_TOP_L_CENTER
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Yup. It's what every exploration team needs.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Quick, open it up.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: 0
+	Identifier: 0
 		Argument: 12
 	Identifier: Wait
 		Argument: 10
-	Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 0
+	Identifier: 0
 		Argument: 12
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
@@ -498,12 +402,9 @@ def 0:
 		Argument: 15
 	Identifier: se_Play
 		Argument: 6411
-	Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_G01P05A1_106
-		Argument: 18
-	Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_G01P05A1_106
@@ -512,7 +413,6 @@ def 0:
 	Identifier: Wait
 		Argument: 30
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN][partner] opened the [CN]Pokémon Exploration Team Kit.
 	Identifier: message_Close
 	Identifier: screen_FadeOut
@@ -526,7 +426,6 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 2
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -538,7 +437,6 @@ def 0:
 	Identifier: me_Play
 		Argument: 4
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN]There was an [CN]Explorer Badge inside...
 	Identifier: WaitMe
 		Argument: 4
@@ -546,7 +444,6 @@ def 0:
 	Identifier: me_Play
 		Argument: 4
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN]And a Wonder Map...
 	Identifier: WaitMe
 		Argument: 4
@@ -554,7 +451,6 @@ def 0:
 	Identifier: me_Play
 		Argument: 4
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN]And a Treasure Bag!
 	Identifier: WaitMe
 		Argument: 4
@@ -568,39 +464,30 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Yeah! There's all sorts of good stuff in here!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Yeah! There are all sorts of great items in here!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Yes! There are all sorts of great items in here!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_PUKURIN
 		Argument: FACE_NORMAL
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: That's your Explorer Badge! It's your official team identification!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: And there's the Wonder Map, which is a wonder of convenience!
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Finally, there's a Treasure Bag.[K] It lets you carry items you find in dungeons.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Your successes as an exploration team can lead to bigger and bigger space for your Treasure Bag.
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: It's a very wonderful bag! ♪
 	Identifier: message_Talk
-		Argument: english
 		Dialogue: Have a peek inside your Treasure Bag.
 	Identifier: message_Close
 	Identifier: screen_FadeOut
@@ -612,16 +499,12 @@ def 0:
 		Argument: LEVEL_G01P05A
 	Identifier: supervision_Acting
 		Argument: 3
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
-	Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_G01P05A1_106
-		Argument: 18
-	Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_G01P05A1_106
@@ -633,858 +516,77 @@ def 0:
 	Identifier: Wait
 		Argument: 30
 	Identifier: message_Mail
-		Argument: english
 		Dialogue: [CN][partner] peered into [CN]the Treasure Bag.
 	Identifier: message_KeyWait
-	Identifier: switch
-		Argument: ProcessSpecial
-		Argument: PROCESS_SPECIAL_GET_HERO_KIND
-		Argument: 0
-		Argument: 0
-		Argument: case
-		Argument: 0
-		Argument: default
-		Argument: label_0
-	Identifier: item_Set
-		Argument: 0
-		Argument: 37
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: label_21
-	Identifier: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]The [s_item:0] [CN]was inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: message_KeyWait
-	Identifier: switch
-		Argument: CONFIG_COLOR_KIND
-		Argument: case
-		Argument: 0
-		Argument: default
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Silver Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 428
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: label_38
-	Identifier: Wait
-		Argument: 20
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_PUKURIN
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_TOP_L_CENTER
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Those two items are special.
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: I'm sure they will help you on your adventures! ♪
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: DIR_UP
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: DIR_UP
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: ExecuteCommon
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_INSPIRED
-		Argument: FACE_POS_STANDARD
 	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Th-thank you![K] We'll do our best!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Th-thank you![K] We'll do our best!
+		Variable: ProcessSpecial(PROCESS_SPECIAL_GET_HERO_KIND, 0, 0) ) { case 0: default: @label_0; item_Set(0, 37, 0); switch ( message_Menu(MENU_GIVE_ITEM) ) { } Wait(10); @label_21; me_Play(4); message_Mail({ english=""" [CN]The [s_item:0] [CN]was inside! """, }); WaitMe(4); message_KeyWait(); switch ( $CONFIG_COLOR_KIND ) { case 0: default: me_Play(4); message_Mail({ english=""" [CN]A [CS:I]Silver Bow[CR] was also inside! """, }); WaitMe(4); CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); item_Set(0, 428, 0); switch ( message_Menu(MENU_GIVE_ITEM) ) { } Wait(10); @label_38; Wait(20); message_SetFace(ACTOR_NPC_PUKURIN, FACE_NORMAL, FACE_POS_TOP_L_CENTER); message_Talk({ english=" Those two items are special.", }); message_Talk({ english=""" I'm sure they will help you on your adventures! ♪ """, }); CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC
 		Case:
 			Value: default
-			Identifier: english
-				Dialogue: Th-thank you![K] We'll do our best!
-		Argument: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: message_SetFace
-		Argument: ACTOR_NPC_PUKURIN
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_TOP_L_CENTER
-	Identifier: message_Talk
-		Argument: english
-		Dialogue: Yup.[K] But you're only apprenticing right now. So do your best...to train!
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: ExecuteCommon
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-		Argument: 0
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_INSPIRED
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: We will!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: We will!
+
 		Case:
 			Value: default
-			Identifier: english
-				Dialogue: We will!
-		Argument: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
+
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: ACTOR_ATTENDANT1
-	Identifier: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_HAPPY
-		Argument: FACE_POS_STANDARD
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: Let's do this right, [hero]!
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: Let's always do our best, [hero]!
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Let's always do our best, [hero]!
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 71
-	Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: Wait
-		Argument: 45
-	Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWN
-	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWN
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-	Identifier: Wait
-		Argument: 20
-	Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 66
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 66
-	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-	Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 	Identifier: Wait
 		Argument: 80
-	Identifier: bgm_FadeOut
+		Argument: bgm_FadeOut
 		Argument: 120
-	Identifier: screen_FadeOut
+		Argument: screen_FadeOut
 		Argument: 1
 		Argument: 60
-	Identifier: WaitBgm
+		Argument: WaitBgm
 		Argument: BGM_WIGGLYTUFFS_GUILD
-	Command: end
-	Identifier: case
+		Argument: end
+		Argument: case
 		Argument: 1
 		Argument: me_Play
 		Argument: 4
-	Identifier: message_Mail
-		Argument: english
+		Argument: message_Mail
 		Dialogue: [CN]A [CS:I]Brown Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 429
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 2
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Red Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 430
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 3
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Pink Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 431
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 4
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]An [CS:I]Orange Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 432
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 5
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Yellow Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 433
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 6
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Lime Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 434
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 7
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Green Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 435
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 8
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Viridian Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 436
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 9
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Minty Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 437
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 10
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Sky Blue Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 438
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 11
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Blue Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 439
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 12
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Cobalt Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 440
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 13
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Purple Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 441
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 14
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Violet Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 442
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: case
-		Argument: 15
-		Argument: me_Play
-		Argument: 4
-	Identifier: message_Mail
-		Argument: english
-		Dialogue: [CN]A [CS:I]Fuchsia Bow[CR] was also inside!
-	Identifier: WaitMe
-		Argument: 4
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: item_Set
-		Argument: 0
-		Argument: 443
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_38
-	Identifier: break
-	Identifier: case
-		Argument: 1
-		Argument: item_Set
-		Argument: 0
-		Argument: 40
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 2
-		Argument: item_Set
-		Argument: 0
-		Argument: 41
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 3
-		Argument: item_Set
-		Argument: 0
-		Argument: 23
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 4
-		Argument: item_Set
-		Argument: 0
-		Argument: 23
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 5
-		Argument: item_Set
-		Argument: 0
-		Argument: 37
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 6
-		Argument: item_Set
-		Argument: 0
-		Argument: 37
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 7
-		Argument: item_Set
-		Argument: 0
-		Argument: 40
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 8
-		Argument: item_Set
-		Argument: 0
-		Argument: 41
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 9
-		Argument: item_Set
-		Argument: 0
-		Argument: 26
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 10
-		Argument: item_Set
-		Argument: 0
-		Argument: 40
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 11
-		Argument: item_Set
-		Argument: 0
-		Argument: 26
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 12
-		Argument: item_Set
-		Argument: 0
-		Argument: 41
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 13
-		Argument: item_Set
-		Argument: 0
-		Argument: 26
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 14
-		Argument: item_Set
-		Argument: 0
-		Argument: 23
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 15
-		Argument: item_Set
-		Argument: 0
-		Argument: 40
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 16
-		Argument: item_Set
-		Argument: 0
-		Argument: 40
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 17
-		Argument: item_Set
-		Argument: 0
-		Argument: 41
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 18
-		Argument: item_Set
-		Argument: 0
-		Argument: 26
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 19
-		Argument: item_Set
-		Argument: 0
-		Argument: 41
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21
-	Identifier: case
-		Argument: 20
-		Argument: item_Set
-		Argument: 0
-		Argument: 37
-		Argument: 0
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_GIVE_ITEM
-		Argument: Wait
-		Argument: 10
-	Identifier: jump
-		Argument: label_21

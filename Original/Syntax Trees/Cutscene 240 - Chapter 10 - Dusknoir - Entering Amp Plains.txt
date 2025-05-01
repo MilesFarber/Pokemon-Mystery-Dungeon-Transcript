@@ -8,7 +8,6 @@ def 0:
 		Argument: LEVEL_D11P11A
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -19,22 +18,16 @@ def 0:
 		Argument: BGM_AMP_PLAINS
 		Argument: 0
 		Argument: 256
-	Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 26.5
 			Identifier: 24.5
-	Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 30.5
@@ -43,21 +36,17 @@ def 0:
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 10
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
@@ -69,40 +58,32 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: So this is the entrance to [CS:P]Amp Plains[CR], huh?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: This must be the entrance to [CS:P]Amp Plains[CR].
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: This must be the entrance to [CS:P]Amp Plains[CR].
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I don't know what sort of creeps would do something like this...
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: I can't imagine what sort of bullies would do something like this...
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I can't imagine what sort of creeps would do something like this...
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8971
-	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Argument: 0
+	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -113,50 +94,38 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: I mean, threatening little kids like those brothers really stinks.
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: I mean, threatening little kids like those brothers really stinks.
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: I mean, threatening little kids like those brothers really stinks.
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: We've got to get their [CS:Z]Water Float[CR] back for sure, [hero]!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: We have to get their [CS:Z]Water Float[CR] back, [hero]!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's make sure we get their [CS:Z]Water Float[CR] back, [hero]!
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m2
 			Identifier: 26.5
 			Identifier: 16.5
 	Identifier: Wait
 		Argument: 10
-	Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m3
 			Identifier: 30.5
@@ -166,11 +135,11 @@ def 0:
 	Identifier: main_EnterDungeon
 		Argument: 17
 		Argument: 30
-	Identifier: switch
-		Argument: message_Menu
-		Argument: MENU_DUNGEON_INITIALIZE_TEAM
-		Argument: main_EnterDungeon
+	Switch:
+		Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+
+	Identifier: main_EnterDungeon
 		Argument: 1
 		Argument: 30
 	Identifier: hold
-	Command: end
+	Identifier: end

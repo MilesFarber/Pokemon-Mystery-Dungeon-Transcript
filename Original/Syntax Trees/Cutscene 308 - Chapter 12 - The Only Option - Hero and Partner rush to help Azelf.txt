@@ -7,7 +7,6 @@ def 0:
 		Argument: LEVEL_D17P32A
 	Identifier: supervision_Acting
 		Argument: 0
-	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -16,13 +15,10 @@ def 0:
 		Argument: 15
 	Identifier: se_Play
 		Argument: 8973
-	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_SHOCKED
-		Argument: 3
-	Identifier: WaitEffect
+	Identifier: 3
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -33,52 +29,42 @@ def 0:
 		Argument: FACE_SURPRISED
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english="(This is...)", } default: { english="(This is...
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (This is...)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (This is...)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (This is what I saw in my vision during that Dimensional Scream!) """, } default: { english=""" (This is what I saw in my vision during that Dimensional Scream!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (This is what I saw in my vision during that Dimensional Scream!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (This is what I saw in my vision during that Dimensional Scream!)
 	Switch:
-		Variable: $HERO_TALK_KIND
+		Variable: $HERO_TALK_KIND) { case 4: { english=""" (The vision I saw then...[K] It was an event in the future after all!) """, } default: { english=""" (The vision I saw then...[K] It was an event in the future after all!
 		Case:
 			Value: 4
-			Identifier: english
 				Dialogue: (The vision I saw then...[K] It was an event in the future after all!)
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: (The vision I saw then...[K] It was an event in the future after all!)
-		Argument: CallCommon
+	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -88,85 +74,66 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Who is that over there? [CS:N]Azelf[CR]?!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Who is that over there? [CS:N]Azelf[CR]?!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Who is that over there? [CS:N]Azelf[CR]?!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: If it is, [CS:N]Azelf[CR]'s in trouble!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: If it is, [CS:N]Azelf[CR]'s in trouble!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: If it is, [CS:N]Azelf[CR]'s in trouble!
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Let's go help! Hurry!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Let's go help! Hurry!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Let's go help! Hurry!
-		Argument: message_Close
-	Identifier: MovePositionOffset
+	Identifier: message_Close
 		Template
 			Type: performer
 			Identifier: 0
-		Argument: 3
-		Argument: 0
+	Identifier: 0
 		Argument: 180
-	Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-		Argument: 0
+	Identifier: 0
 		Argument: 180
 	Identifier: Wait
 		Argument: 5
-	Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-		Argument: 0
+	Identifier: 0
 		Argument: 180
-	Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_UNIT_NPC1
-		Argument: 2
-		Argument: 0
+	Identifier: 0
 		Argument: 180
-	Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_UNIT_NPC2
-		Argument: 2
-		Argument: 0
+	Identifier: 0
 		Argument: 180
 	Identifier: Wait
 		Argument: 10
 	Identifier: screen_FadeOut
 		Argument: 1
 		Argument: 15
-	Command: end
+	Identifier: end

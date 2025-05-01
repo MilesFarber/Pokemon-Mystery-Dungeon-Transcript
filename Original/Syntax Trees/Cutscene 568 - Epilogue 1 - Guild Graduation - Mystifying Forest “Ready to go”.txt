@@ -3,33 +3,25 @@ def 0:
 		Argument: BGM_MYSTIFYING_FOREST
 		Argument: 0
 		Argument: 256
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Argument: 10
+	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -39,75 +31,40 @@ def 0:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: You ready, [hero]?
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Are you ready, [hero]?
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Are you ready, [hero]?
-		Argument: switch
-		Argument: message_SwitchMenu
-		Argument: 0
-		Argument: 1
-		Argument: case
-		Argument: menu
-		Argument: english
-		Dialogue: Yes
-		Argument: default
-		Argument: label_0
-	Identifier: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Switch:
-		Variable: $PARTNER_TALK_KIND
+		Variable: message_SwitchMenu(0, 1) ) { case menu({ english="Yes", }): default: @label_0; CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=" Yup. Looks like we're all set!", } case 2: { english=" Yes. We're all ready to go!", } default: { english=" Yep. We're set to go!", } } message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=" All right! Let's go!", } case 2: { english=" OK! Let's go!", } default: { english=" OK! Let's go!", } } message_Close(
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: Yup. Looks like we're all set!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: Yes. We're all ready to go!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: Yep. We're set to go!
-	Switch:
-		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
-			Identifier: english
 				Dialogue: All right! Let's go!
 		Case:
 			Value: 2
-			Identifier: english
 				Dialogue: OK! Let's go!
 		Case:
 			Value: default
-			Identifier: english
 				Dialogue: OK! Let's go!
-		Argument: message_Close
-	Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m0
 			Identifier: 37.5
 			Identifier: 3.5
-	Identifier: Wait
-		Argument: 10
-	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Argument: Position
 		Template
 			Type: m1
 			Identifier: 37.5
@@ -115,50 +72,17 @@ def 0:
 	Identifier: screen_FadeOut
 		Argument: 1
 		Argument: 30
-	Identifier: main_EnterDungeon
+		Argument: main_EnterDungeon
 		Argument: 44
 		Argument: 0
-	Identifier: switch
+		Argument: switch
 		Argument: message_Menu
 		Argument: MENU_DUNGEON_INITIALIZE_TEAM
 		Argument: main_EnterDungeon
 		Argument: 1
 		Argument: 0
-	Identifier: hold
-	Command: end
-	Identifier: case
+		Argument: hold
+		Argument: end
+		Argument: case
 		Argument: menu
-		Argument: english
 		Dialogue: No
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: All right.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: OK.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: OK.
-	Switch:
-		Variable: $PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: english
-				Dialogue: We'll go when you're ready.
-		Case:
-			Value: 2
-			Identifier: english
-				Dialogue: We'll leave when you're ready.
-		Case:
-			Value: default
-			Identifier: english
-				Dialogue: Let's go when you're ready.
-		Argument: message_Close
-	Command: end
