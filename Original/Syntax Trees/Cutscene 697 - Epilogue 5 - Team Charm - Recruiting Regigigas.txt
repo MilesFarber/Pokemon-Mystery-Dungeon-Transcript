@@ -4,7 +4,7 @@ def 0:
 		Argument: LEVEL_D32P44A
 	Identifier: supervision_Acting
 		Argument: 0
-		Identifier: camera_SetMyself
+	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -25,19 +25,52 @@ def 0:
 		Dialogue: I AM [CS:N]REGIGIGAS[CR]...
 	Identifier: message_Talk
 		Dialogue: I PLEDGE...SERVICE TO YOU...
-	Label: @label_2
+	Label: @label_2;
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Switch:
-		Variable: ProcessSpecial(PROCESS_SPECIAL_PREPARE_MENU_ACCEPT_TEAM_MEMBER, 9, 0)
-
+	Unknown: Jump-switches to-be-implemented
 	Switch:
 		Variable: message_Menu(MENU_ACCEPT_TEAM_MEMBER)
 		Case:
+			Value: 1
+				Dialogue: [CN][c_name:NPC_NEW_FRIEND] joined the team!
+		Case:
+			Value: CS
+				Dialogue: [CN][player] cleared [CS:P]Aegis Cave[CR] [CN]in admirable fashion!
+		Case:
+			Value: default
+
+		Case:
 			Value: default
 
 		Case:
 			Value: default
 
 		Case:
+			Value: 2
+				Dialogue: [CN]Are you sure?[K] [CN]You're sure you won't accept [CN]this potential new member?
+		Case:
 			Value: default
+			Identifier: case
+				Argument: menu
+				Dialogue: Reconsider
+			Identifier: jump
+				Argument: label_2
+			Identifier: case
+				Argument: menu
+				Dialogue: Refuse
+			Identifier: default
+				Argument: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_Mail
+				Dialogue: [CN][player] turned down [CN][CS:N]Regigigas[CR]'s offer to join.
+			Identifier: message_Close
+			Identifier: bgm_FadeOut
+				Argument: 120
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 60
+			Identifier: WaitBgm
+				Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+			Identifier: jump
+				Argument: label_4

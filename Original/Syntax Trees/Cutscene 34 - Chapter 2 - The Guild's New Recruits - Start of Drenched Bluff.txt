@@ -2,106 +2,61 @@ def 0:
 	Identifier: sound_Stop
 	Identifier: back_SetGround
 		Argument: LEVEL_D02P11A
-	Conditional
-		Type: If
-		Identifier: camera_SetMyself
-		Template
-			Type: performer
-			Identifier: 0
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m0
-			Identifier: 34.5
-			Identifier: 19.5
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m1
-			Identifier: 31
-			Identifier: 19.5
-		Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 71
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 71
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 2
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m2
-			Identifier: 33
-			Identifier: 11.5
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m3
-			Identifier: 33
-			Identifier: 11.5
-	Identifier: Wait
-		Argument: 20
-		Argument: screen_FadeOut
-		Argument: 1
-		Argument: 30
-		Argument: SCENARIO_MAIN
-		Argument: scn
-		Argument: 3
-		Argument: 3
-		Argument: main_EnterDungeon
-		Argument: 3
-		Argument: 0
-		Argument: switch
-		Argument: message_Menu
-		Argument: MENU_DUNGEON_INITIALIZE_TEAM
-		Argument: main_EnterDungeon
-		Argument: 1
-		Argument: 0
-		Argument: hold
+	Switch:
+		Variable: variation
+		Case:
+			Value: default
+				Dialogue: You wake up one day, only to realize that you've been turned into a Pokémon and are now in a world inhabited only by Pokémon!
+		Case:
+			Value: default
+				Dialogue: It's up to you to form an exploration team and embark on the adventure of a lifetime!
+		Case:
+			Value: CS
+				Dialogue: Welcome to the fascinating world of [CS:L]Pokémon Mystery Dungeon: Explorers of Sky[CR]! Now YOU are the Pokémon!
+		Case:
+			Value: default
+
+	Switch:
+		Variable: 0); camera_SetMyself<performer 0>(); screen_FadeIn(1, 30); bgm_PlayFadeIn(BGM_DRENCHED_BLUFF, 0, 256); MovePositionMark<actor ACTOR_PLAYER>(1, Position<'m0', 34.5, 19.5>); MovePositionMark<actor ACTOR_ATTENDANT1>(1, Position<'m1', 31, 19.5>); WaitExecuteLives(ACTOR_ATTENDANT1); Wait(30); Turn2DirectionLives<actor ACTOR_ATTENDANT1>(4, 10, ACTOR_PLAYER); WaitExecuteLives(ACTOR_ATTENDANT1); Turn2DirectionLives<actor ACTOR_PLAYER>(4, 10, ACTOR_ATTENDANT1); message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD); message_SwitchTalk ($PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: This must be the bluff's entrance.
+			Identifier: case
+				Argument: 2
+				Dialogue: This must be the bluff's entrance.
+			Identifier: default
+				Dialogue: This must be the bluff's entrance.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: [CS:N]Spoink[CR]'s mission description said the pearl is deep down on the B7F level.
+			Identifier: case
+				Argument: 2
+				Dialogue: [CS:N]Spoink[CR]'s mission description said the pearl is deep down on the B7F level.
+			Identifier: default
+				Dialogue: [CS:N]Spoink[CR]'s mission description said the pearl is deep down on the B7F level.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: It's supposed to be a really dangerous place. We'd better be careful.
+			Identifier: case
+				Argument: 2
+				Dialogue: It sounds like a seriously dangerous place. Let's be careful.
+			Identifier: default
+				Dialogue: It's supposedly very dangerous. Let's be really careful.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Let's do our best, [hero]!
+			Identifier: case
+				Argument: 2
+				Dialogue: Let's do our best, [hero]!
+			Identifier: default
+				Dialogue: Let's do our best, [hero]!
+		Case:
+			Value: default

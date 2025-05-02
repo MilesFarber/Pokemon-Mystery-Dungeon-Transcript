@@ -3,34 +3,34 @@ def 0:
 		Argument: BGM_HIDDEN_LAND
 		Argument: 0
 		Argument: 256
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 2
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 2
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
 		Argument: 2
-		Identifier: Turn2DirectionLives
+	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: ACTOR_ATTENDANT1
-		Identifier: Turn2DirectionLives
+	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: ACTOR_PLAYER
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -50,63 +50,70 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: 1
-				Dialogue: Yup! Looks like we're all set.
-		Case:
-			Value: 2
-				Dialogue: Yes. Looks like we're ready.
+			Value: default
+				Dialogue: Yes
 		Case:
 			Value: default
+			Identifier: case
+				Argument: 1
+				Dialogue: Yup! Looks like we're all set.
+			Identifier: case
+				Argument: 2
+				Dialogue: Yes. Looks like we're ready.
+			Identifier: default
 				Dialogue: Yep! I guess we're ready to go.
-		Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_JUPUTORU
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m1
-			Identifier: 28.5
-			Identifier: 27
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m2
-			Identifier: 28.5
-			Identifier: 8.5
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m3
-			Identifier: 28.5
-			Identifier: 8.5
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_JUPUTORU
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m4
-			Identifier: 28.5
-			Identifier: 8.5
-	Conditional
-		Type: If
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: All right! Let's roll out!
+			Identifier: case
+				Argument: 2
+				Dialogue: OK! Let's go!
+			Identifier: default
+				Dialogue: OK! Let's go!
+		Case:
+			Value: default
+			Label: @label_2;
+			Identifier: main_EnterDungeon
+				Argument: 38
+				Argument: 30
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+
+			Identifier: main_EnterDungeon
+				Argument: 1
+				Argument: 30
+			Identifier: hold
+			Identifier: end
+		Case:
+			Value: default
+			Identifier: SCENARIO_MAIN
+				Argument: scn
+				Argument: 25
+				Argument: 2
+			Identifier: jump
+				Argument: label_2
+		Case:
+			Value: default
+				Dialogue: Not yet
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: All right.
+			Identifier: case
+				Argument: 2
+				Dialogue: OK.
+			Identifier: default
+				Dialogue: OK.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: We'll go when you're ready.
+			Identifier: case
+				Argument: 2
+				Dialogue: Let's go when you're ready.
+			Identifier: default
+				Dialogue: Let's go when you're ready.

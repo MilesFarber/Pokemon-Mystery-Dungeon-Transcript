@@ -4,58 +4,23 @@ def 0:
 		Argument: LEVEL_D01P11A
 	Switch:
 		Variable: scn($SCENARIO_MAIN)[0]
-
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_JUPUTORU
-		Argument: 2
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_RAPURASU
-		Argument: 2
-	Identifier: bgm_PlayFadeIn
-		Argument: BGM_OCEAN1
-		Argument: 90
-		Argument: 256
-		Argument: screen_FadeIn
-		Argument: 1
-		Argument: 30
-		Argument: Wait
-		Argument: 30
-		Argument: message_SetFace
-		Argument: ACTOR_ATTENDANT1
-		Argument: FACE_NORMAL
-		Argument: FACE_POS_STANDARD
-		Argument: message_SwitchTalk
-		Argument: PARTNER_TALK_KIND
-		Argument: case
-		Argument: 1
-		Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
-		Argument: case
-		Argument: 2
-		Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
-		Argument: default
-		Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
-		Argument: message_SwitchTalk
-		Argument: PARTNER_TALK_KIND
-		Argument: case
-		Argument: 1
-		Dialogue: Let's move when you're ready, [hero]!
-		Argument: case
-		Argument: 2
-		Dialogue: Let's go when you're ready, [hero]!
-		Argument: default
-		Dialogue: Let's go when you're ready, [hero]!
-		Argument: message_Close
-		Argument: end
-		Argument: case
-		Argument: 26
-		Argument: supervision_LoadStation
-		Argument: LEVEL_D01P11A
-		Argument: UM25
-		Argument: supervision_Station
-		Argument: 8
-		Argument: jump
-		Argument: label_2
+		Case:
+			Value: 25
+			Identifier: case
+				Argument: 1
+				Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
+			Identifier: case
+				Argument: 2
+				Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
+			Identifier: default
+				Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Let's move when you're ready, [hero]!
+			Identifier: case
+				Argument: 2
+				Dialogue: Let's go when you're ready, [hero]!
+			Identifier: default
+				Dialogue: Let's go when you're ready, [hero]!

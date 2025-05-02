@@ -1,10 +1,10 @@
 def 0:
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_FUTURE
@@ -15,3 +15,28 @@ def 0:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
 			Value: default
+				Dialogue: Yes
+		Case:
+			Value: default
+			Label: @label_2;
+			Identifier: main_EnterDungeon
+				Argument: 146
+				Argument: 30
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+
+			Identifier: main_EnterDungeon
+				Argument: 1
+				Argument: 30
+			Identifier: hold
+		Case:
+			Value: default
+			Identifier: SCENARIO_SIDE
+				Argument: scn
+				Argument: 48
+				Argument: 6
+			Identifier: jump
+				Argument: label_2
+		Case:
+			Value: default
+				Dialogue: No

@@ -4,7 +4,7 @@ def 0:
 		Argument: LEVEL_G01P09C
 	Identifier: supervision_Acting
 		Argument: 0
-		Identifier: camera_SetMyself
+	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -34,24 +34,24 @@ def 0:
 		Argument: 60
 	Identifier: se_Play
 		Argument: 8978
-		Identifier: SetEffect
+	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
 		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
-	Identifier: 3
-		Identifier: WaitEffect
+		Argument: 3
+	Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHIRIIN
-		Identifier: Turn2DirectionLives
+	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: ACTOR_PLAYER_KIMAWARI
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHIRIIN
@@ -63,24 +63,23 @@ def 0:
 		Dialogue: Huh?[K] [CS:Y]Sunflora[CR]?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-		Identifier: MovePositionMark
+	Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
-		Argument: 0
-		Identifier: Position
+	Identifier: Position
 		Template
 			Type: m0
 			Identifier: 28.5
 			Identifier: 15.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHIRIIN
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHIRIIN
@@ -94,13 +93,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8964
-		Identifier: SetEffect
+	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
 		Argument: EFFECT_EXCLAMATION_MARK
-	Identifier: 3
-		Identifier: WaitEffect
+		Argument: 3
+	Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
@@ -133,12 +132,12 @@ def 0:
 		Dialogue: Oh my gosh![K] D-don't look!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_DOWN
 	Identifier: clear
 		Argument: EVENT_LOCAL
@@ -156,13 +155,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8972
-		Identifier: SetEffect
+	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
 		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-	Identifier: 3
-		Identifier: WaitEffect
+		Argument: 3
+	Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
@@ -181,13 +180,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8978
-		Identifier: SetEffect
+	Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
 		Argument: EFFECT_EXCLAMATION_MARK
-	Identifier: 3
-		Identifier: WaitEffect
+		Argument: 3
+	Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
@@ -249,12 +248,12 @@ def 0:
 		Dialogue: Anyway...[K] I'll do my best to write in it!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-		Identifier: ExecuteCommon
+	Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
 		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-	Identifier: 0
+		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHIRIIN
 	Identifier: message_SetFace
@@ -368,25 +367,29 @@ def 1:
 	Identifier: WaitEffect
 	Identifier: Lock
 		Argument: 6
-	Label: @label_1
-		Identifier: Position
-		Template
-			Type: m1
-			Identifier: 30.5
-			Identifier: 19.5
+	Label: @label_1;
 	Switch:
-		Variable: $EVENT_LOCAL
-
-	Switch:
-		Variable: $EVENT_LOCAL
+		Variable: 438, 3); MovePositionMark(2, Position<'m1', 30.5, 19.5>); switch ( $EVENT_LOCAL
 		Case:
-			Value: default
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Argument: break_loop
+			Identifier: break
+			Identifier: Position
+				Template
+					Type: m2
+					Identifier: 26.5
+					Identifier: 19.5
+			Switch:
+				Variable: $EVENT_LOCAL
 
-	Label: @label_0
+			Identifier: break
+	Label: @label_0;
 	Identifier: SetEffect
 		Argument: EFFECT_NONE
 		Argument: 3
-		Identifier: Position
+	Identifier: Position
 		Template
 			Type: m3
 			Identifier: 28.5
@@ -413,25 +416,29 @@ def 1:
 	Identifier: WaitEffect
 	Identifier: Lock
 		Argument: 9
-	Label: @label_3
-		Identifier: Position
-		Template
-			Type: m4
-			Identifier: 30.5
-			Identifier: 19.5
+	Label: @label_3;
 	Switch:
-		Variable: $EVENT_LOCAL
-
-	Switch:
-		Variable: $EVENT_LOCAL
+		Variable: 438, 3); MovePositionMark(2, Position<'m4', 30.5, 19.5>); switch ( $EVENT_LOCAL
 		Case:
-			Value: default
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Argument: break_loop
+			Identifier: break
+			Identifier: Position
+				Template
+					Type: m5
+					Identifier: 26.5
+					Identifier: 19.5
+			Switch:
+				Variable: $EVENT_LOCAL
 
-	Label: @label_2
+			Identifier: break
+	Label: @label_2;
 	Identifier: SetEffect
 		Argument: EFFECT_NONE
 		Argument: 3
-		Identifier: Position
+	Identifier: Position
 		Template
 			Type: m6
 			Identifier: 28.5
@@ -446,25 +453,29 @@ def 1:
 		Argument: CORO_HEAD_SHAKE_FUNC
 	Identifier: Lock
 		Argument: 11
-	Label: @label_5
-		Identifier: Position
-		Template
-			Type: m7
-			Identifier: 30.5
-			Identifier: 19.5
+	Label: @label_5;
 	Switch:
-		Variable: $EVENT_LOCAL
-
-	Switch:
-		Variable: $EVENT_LOCAL
+		Variable: 438, 3); MovePositionMark(2, Position<'m7', 30.5, 19.5>); switch ( $EVENT_LOCAL
 		Case:
-			Value: default
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Argument: break_loop
+			Identifier: break
+			Identifier: Position
+				Template
+					Type: m8
+					Identifier: 26.5
+					Identifier: 19.5
+			Switch:
+				Variable: $EVENT_LOCAL
 
-	Label: @label_4
+			Identifier: break
+	Label: @label_4;
 	Identifier: SetEffect
 		Argument: EFFECT_NONE
 		Argument: 3
-		Identifier: Position
+	Identifier: Position
 		Template
 			Type: m9
 			Identifier: 26.5

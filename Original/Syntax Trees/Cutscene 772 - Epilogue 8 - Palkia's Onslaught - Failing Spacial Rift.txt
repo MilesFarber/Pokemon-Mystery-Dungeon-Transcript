@@ -1,205 +1,67 @@
 def 0:
 	Identifier: sound_Stop
-		Identifier: camera_SetMyself
-		Template
-			Type: performer
-			Identifier: 0
-			Identifier: screen_FadeIn
-			Identifier: 1
-			Identifier: 30
-			Identifier: bgm_PlayFadeIn
-			Identifier: BGM_CHASM_CAVE
-			Identifier: 0
-			Identifier: 256
-			Identifier: Wait
-			Identifier: 30
-			Identifier: WaitLockLives
-			Identifier: 5
-			Identifier: ACTOR_PLAYER
-			Identifier: Unlock
-			Identifier: 5
-			Identifier: Wait
-			Identifier: 15
-			Identifier: Unlock
-			Identifier: 7
-			Identifier: Lock
-			Identifier: 3
-			Identifier: Wait
-			Identifier: 15
-			Identifier: Turn2DirectionLives
-			Identifier: actor
-			Identifier: ACTOR_PLAYER
-			Identifier: 4
-			Identifier: 10
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: Turn2DirectionLives
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: 4
-			Identifier: 10
-			Identifier: ACTOR_PLAYER
-			Identifier: Wait
-			Identifier: 15
-			Identifier: SetEffect
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-			Identifier: 3
-			Identifier: message_SetFace
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: FACE_PAIN
-			Identifier: FACE_POS_STANDARD
-			Identifier: message_SwitchTalk
-			Identifier: PARTNER_TALK_KIND
+	Switch:
+		Variable: scn($SCENARIO_MAIN) >= [29, 82]
+		Case:
+			Value: 1
 			Identifier: case
-			Identifier: 1
-			Identifier: english
-			Identifier: Urk
-			Identifier: K
-			Identifier: This
-			Identifier: is
-			Identifier: rough...
+				Argument: 1
+				Dialogue: Urggh...[K] We couldn't do it...
 			Identifier: case
-			Identifier: 2
-			Identifier: english
-			Identifier: Urk
-			Identifier: K
-			Identifier: This
-			Identifier: is
-			Identifier: so
-			Identifier: hard...
+				Argument: 2
+				Dialogue: Urggh...[K] We came up short...
 			Identifier: default
-			Identifier: english
-			Identifier: Urk
-			Identifier: K
-			Identifier: This
-			Identifier: is
-			Identifier: difficult...
-			Identifier: CallCommon
-			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: Turn2Direction
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: 4
-			Identifier: 10
-			Identifier: DIR_UP
-			Identifier: Wait
-			Identifier: 60
-			Identifier: message_SetFace
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: FACE_SAD
-			Identifier: FACE_POS_STANDARD
-			Identifier: message_SwitchTalk
-			Identifier: PARTNER_TALK_KIND
+				Dialogue: Urggh...[K] We couldn't do it...
+		Case:
+			Value: 1
 			Identifier: case
-			Identifier: 1
-			Identifier: english
-			Identifier: But
-			Identifier: we
-			Identifier: have
-			Identifier: to
-			Identifier: keep
-			Identifier: struggling
-			Identifier: to
-			Identifier: the
-			Identifier: very
-			Identifier: end...
+				Argument: 1
+				Dialogue: Urk![K] This is rough...
 			Identifier: case
-			Identifier: 2
-			Identifier: english
-			Identifier: But
-			Identifier: we
-			Identifier: have
-			Identifier: no
-			Identifier: choice.
-			Identifier: We
-			Identifier: have
-			Identifier: to
-			Identifier: keep
-			Identifier: struggling
-			Identifier: to
-			Identifier: the
-			Identifier: end.
+				Argument: 2
+				Dialogue: Urk![K] This is so hard...
 			Identifier: default
-			Identifier: english
-			Identifier: But
-			Identifier: we
-			Identifier: have
-			Identifier: no
-			Identifier: other
-			Identifier: choice.
-			Identifier: We
-			Identifier: have
-			Identifier: to
-			Identifier: keep
-			Identifier: struggling
-			Identifier: to
-			Identifier: the
-			Identifier: end.
-			Identifier: message_SwitchTalk
-			Identifier: PARTNER_TALK_KIND
+				Dialogue: Urk![K] This is difficult...
+		Case:
+			Value: 1
 			Identifier: case
-			Identifier: 1
-			Identifier: english
-			Identifier: We
-			Identifier: have
-			Identifier: to
-			Identifier: force
-			Identifier: CS
-			Identifier: N
-			Identifier: Palkia
-			Identifier: CR
-			Identifier: to
-			Identifier: tell
-			Identifier: us
-			Identifier: what
-			Identifier: we
-			Identifier: need
-			Identifier: to
-			Identifier: know
+				Argument: 1
+				Dialogue: But we have to keep struggling to the very end...
 			Identifier: case
-			Identifier: 2
-			Identifier: english
-			Identifier: We
-			Identifier: have
-			Identifier: to
-			Identifier: force
-			Identifier: CS
-			Identifier: N
-			Identifier: Palkia
-			Identifier: CR
-			Identifier: to
-			Identifier: tell
-			Identifier: us
-			Identifier: what
-			Identifier: we
-			Identifier: need
-			Identifier: to
-			Identifier: know
+				Argument: 2
+				Dialogue: But we have no choice. We have to keep struggling to the end.
 			Identifier: default
-			Identifier: english
-			Identifier: We
-			Identifier: have
-			Identifier: to
-			Identifier: force
-			Identifier: CS
-			Identifier: N
-			Identifier: Palkia
-			Identifier: CR
-			Identifier: to
-			Identifier: tell
-			Identifier: us
-			Identifier: what
-			Identifier: we
-			Identifier: need
-			Identifier: to
-			Identifier: know
-			Identifier: CallCommon
-			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: Turn2DirectionLives
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
+				Dialogue: But we have no other choice. We have to keep struggling to the end.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: We have to force [CS:N]Palkia[CR] to tell us what we need to know!
+			Identifier: case
+				Argument: 2
+				Dialogue: We have to force [CS:N]Palkia[CR] to tell us what we need to know!
+			Identifier: default
+				Dialogue: We have to force [CS:N]Palkia[CR] to tell us what we need to know!
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: We really have to find a way out of here!
+			Identifier: case
+				Argument: 2
+				Dialogue: We really have to find a way out of here!
+			Identifier: default
+				Dialogue: We really have to find a way out of here!
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Let's roll, [hero]!
+			Identifier: case
+				Argument: 2
+				Dialogue: Let's go, [hero]!
+			Identifier: default
+				Dialogue: Let's go, [hero]!
 	Conditional
 		Type: Else
 def 1:

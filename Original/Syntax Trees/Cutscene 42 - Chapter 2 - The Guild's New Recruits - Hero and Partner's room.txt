@@ -1,54 +1,106 @@
 def 0:
 	Identifier: sound_Stop
-	Conditional
-		Type: If
-		Identifier: Position
-		Template
-			Type: m0
-			Identifier: 19.5
-			Identifier: 15.5
-		Identifier: camera_SetMyself
-		Template
-			Type: performer
-			Identifier: 0
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 76
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 76
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 62
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 62
-	Identifier: Wait
-		Argument: 80
-		Argument: bgm_FadeOut
-		Argument: 120
-		Argument: screen_FadeOut
-		Argument: 1
-		Argument: 120
-		Argument: WaitBgm
-		Argument: BGM_GOODNIGHT
-		Argument: Wait
-		Argument: 30
-		Argument: if
-		Argument: variation
-		Argument: jump
-		Argument: label_0
-		Argument: else
-		Argument: SCENARIO_MAIN
-		Argument: scn
-		Argument: 4
-		Argument: 0
-		Argument: end
+	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: 4); back2_SetGround(LEVEL_V02P06A); camera2_SetPositionMark(Position<'m0', 19.5, 15.5>); screen2_FadeIn(1, 60); Wait(150); screen2_FadeOut(1, 60); back2_SetMode(0); back_SetGround(LEVEL_G01P07C); supervision_Acting(0); camera_SetMyself<performer 0>(); SetAnimation<actor ACTOR_PLAYER>(76); SetAnimation<actor ACTOR_ATTENDANT1>(76); screen_FadeChange(1, 60, 0, 192); bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256); Wait(30); message_SetActor(ACTOR_ATTENDANT1); message_SwitchTalk ($PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Hey, [hero]...
+			Identifier: case
+				Argument: 2
+				Dialogue: Listen, [hero]...
+			Identifier: default
+				Dialogue: Say, [hero]...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Today was pretty hectic, wasn't it! So much happened!
+			Identifier: case
+				Argument: 2
+				Dialogue: Wasn't today hectic? So much happened!
+			Identifier: default
+				Dialogue: Today was pretty hectic with everything we went through, wasn't it?
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: But I'm glad we managed to pull off our first job.
+			Identifier: case
+				Argument: 2
+				Dialogue: But I'm relieved that our first job was a success.
+			Identifier: default
+				Dialogue: But I'm glad our first job turned out so well.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: I was really steamed about how [CS:N]Wigglytuff[CR]'s Guild took most of the money...
+			Identifier: case
+				Argument: 2
+				Dialogue: It was really upsetting how [CS:N]Wigglytuff[CR]'s Guild took most of the money...
+			Identifier: default
+				Dialogue: I was really mad about how [CS:N]Wigglytuff[CR]'s Guild took most of the money...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: That's just the cost of training, I guess. We can't do anything about it.
+			Identifier: case
+				Argument: 2
+				Dialogue: That's just the cost of training, I guess. We can't do anything about it.
+			Identifier: default
+				Dialogue: That's just the cost of training, I guess. We can't do anything about it.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: What meant the most to me today, though, was getting thanked by [CS:N]Spoink[CR]!
+			Identifier: case
+				Argument: 2
+				Dialogue: But what made me really happy today, though, was getting thanked by [CS:N]Spoink[CR]!
+			Identifier: default
+				Dialogue: But what made me really happy today, though, was getting thanked by [CS:N]Spoink[CR]!
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Yawn... I'm getting sleepy.
+			Identifier: case
+				Argument: 2
+				Dialogue: Yawn... I'm getting sleepy.
+			Identifier: default
+				Dialogue: Yawn... I'm getting sleepy.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: I'm going to sleep.[K] Let's do a good job again tomorrow.
+			Identifier: case
+				Argument: 2
+				Dialogue: I'm going to sleep.[K] Let's try our best again tomorrow.
+			Identifier: default
+				Dialogue: I'm going to sleep.[K] Let's try our best again tomorrow.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Good night, [hero]...
+			Identifier: case
+				Argument: 2
+				Dialogue: Good night, [hero]...
+			Identifier: default
+				Dialogue: Sleep tight, [hero]...
+		Case:
+			Value: default
+			Identifier: jump
+				Argument: label_0
+		Case:
+			Value: default
+			Identifier: SCENARIO_MAIN
+				Argument: scn
+				Argument: 4
+				Argument: 0
+			Identifier: end

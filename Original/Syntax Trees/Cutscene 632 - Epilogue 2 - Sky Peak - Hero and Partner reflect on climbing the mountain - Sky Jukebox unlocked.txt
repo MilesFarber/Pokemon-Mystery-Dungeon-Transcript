@@ -14,31 +14,32 @@ def 0:
 		Argument: 0
 	Identifier: supervision_StationCommon
 		Argument: 0
+	Identifier: camera2_SetPositionMark
 		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 19
 			Identifier: 15.5
-		Identifier: camera_SetMyself
+	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
-		Identifier: SetDirection
+	Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: DIR_RIGHT
-		Identifier: SetDirection
+	Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: DIR_LEFT
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 76
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -55,23 +56,23 @@ def 0:
 		Argument: 30
 	Identifier: Wait
 		Argument: 30
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 63
 	Identifier: Wait
 		Argument: 5
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 63
-		Identifier: WaitAnimation
+	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Identifier: WaitAnimation
+	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -79,47 +80,47 @@ def 0:
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 2
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_DOWN
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 2
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 30
-		Identifier: Turn2DirectionLives
+	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-		Identifier: Turn2DirectionLives
+	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -214,88 +215,54 @@ def 0:
 				Dialogue: Exploring is so much fun, isn't it?
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
-
-		Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: ExecuteCommon
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 71
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 71
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 2
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 66
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 66
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 2
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_LAUGHING
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_NONE
-	Identifier: 3
-		Argument: jump
-		Argument: label_2
+		Case:
+			Value: default
+				Dialogue: Yeah!
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Right!
+			Identifier: case
+				Argument: 2
+				Dialogue: Right!
+			Identifier: default
+				Dialogue: Right!
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: All right! Let's go have fun exploring today!
+			Identifier: case
+				Argument: 2
+				Dialogue: All right! Let's go have fun exploring today!
+			Identifier: default
+				Dialogue: All right! Let's go have fun exploring today!
+		Case:
+			Value: W
+				Dialogue: [CN]A message has arrived from the [CN]Exploration Team Federation...[W:30]
+		Case:
+			Value: default
+				Dialogue: [CN]If you want to hear that song again...
+		Case:
+			Value: W
+				Dialogue: [CN]There's now a machine available for you to [CN]listen to the game music anytime! [CN]The Sky Jukebox is now available![W:100]
+		Case:
+			Value: default
+				Dialogue: [CN]To access the Sky Jukebox, select [CN]Other from the Top Menu.
+		Case:
+			Value: default
+				Dialogue: [CN]To use the Sky Jukebox, save your adventure [CN]and return to the Top Menu.
+		Case:
+			Value: default
+				Dialogue: Nope...
+		Case:
+			Value: default
+			Identifier: case
+				Argument: 1
+				Dialogue: Ah ha ha ha ha ha! Stayed up too late. Still half asleep!
+			Identifier: case
+				Argument: 2
+				Dialogue: Ah ha ha ha ha ha! Stayed up too late. Still half asleep!
+			Identifier: default
+				Dialogue: Ah ha ha ha ha ha! Stayed up too late. Still half asleep!

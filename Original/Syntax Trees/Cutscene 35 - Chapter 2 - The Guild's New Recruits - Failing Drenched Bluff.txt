@@ -1,35 +1,113 @@
 def 0:
 	Identifier: sound_Stop
-	Conditional
-		Type: If
-		Identifier: camera_SetMyself
-		Template
-			Type: performer
-			Identifier: 0
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROP
-		Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 44
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 2
-	Identifier: bgm_FadeOut
-		Argument: 120
-		Argument: screen_FadeOut
-		Argument: 1
-		Argument: 60
-		Argument: WaitBgm
-		Argument: BGM_WIGGLYTUFFS_GUILD
-		Argument: end
+	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: LEVEL_S04P01A); screen_FadeIn(1, 0); message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD); message_SwitchTalk ($PARTNER_TALK_KIND
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Ugh... That didn't end well...
+			Identifier: case
+				Argument: 2
+				Dialogue: Ugh... That didn't go well, did it?
+			Identifier: default
+				Dialogue: Ugh... That didn't work at all...
+		Case:
+			Value: default
+			Identifier: supervision_ExecuteActing
+				Argument: LEVEL_D02P11A
+				Argument: M02A0701
+				Argument: 0
+			Identifier: hold
+		Case:
+			Value: 1
+			Identifier: back_SetGround
+				Argument: LEVEL_G01P03A
+			Identifier: supervision_Acting
+				Argument: 0
+			Identifier: camera_SetMyself
+				Template
+					Type: performer
+					Identifier: 0
+			Identifier: screen_FadeIn
+				Argument: 1
+				Argument: 30
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_WIGGLYTUFFS_GUILD
+				Argument: 0
+				Argument: 256
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
+				Dialogue: Well...[K] It appears that your outing was less than a total success.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8961
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_SWEAT_DROP
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_PAIN
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Ugh...
+				Case:
+					Value: 2
+						Dialogue: Ugh...
+				Case:
+					Value: default
+						Dialogue: Ugh...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
+				Dialogue: Of course, you're just beginners at all this. No need to fret! ♪
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 44
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
+				Dialogue: These things happen! ♪[K] You can attempt another challenge tomorrow! ♪
+			Identifier: message_Close
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 2
+			Identifier: bgm_FadeOut
+				Argument: 120
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 60
+			Identifier: WaitBgm
+				Argument: BGM_WIGGLYTUFFS_GUILD
+			Identifier: end

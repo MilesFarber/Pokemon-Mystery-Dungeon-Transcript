@@ -1,39 +1,39 @@
 def 0:
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
 		Argument: 2
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
 		Argument: 2
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
 		Argument: 2
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_UPRIGHT
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_UPRIGHT
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_UPRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_CHARMS
@@ -44,3 +44,30 @@ def 0:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
 			Value: default
+				Dialogue: Yes
+		Case:
+			Value: default
+			Label: @label_2;
+			Identifier: bgm_FadeOut
+				Argument: 60
+			Identifier: main_EnterDungeon
+				Argument: 153
+				Argument: 30
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+
+			Identifier: main_EnterDungeon
+				Argument: 1
+				Argument: 30
+			Identifier: hold
+		Case:
+			Value: default
+			Identifier: SCENARIO_SIDE
+				Argument: scn
+				Argument: 45
+				Argument: 8
+			Identifier: jump
+				Argument: label_2
+		Case:
+			Value: default
+				Dialogue: No

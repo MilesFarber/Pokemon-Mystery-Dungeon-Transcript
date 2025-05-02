@@ -1,27 +1,27 @@
 def 0:
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 2
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 2
-		Identifier: Turn2DirectionLives
+	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: ACTOR_ATTENDANT1
-		Identifier: Turn2DirectionLives
+	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -43,229 +43,507 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: 1
-				Dialogue: Which way should we go?
-		Case:
-			Value: 2
-				Dialogue: Which way should we go?
+			Value: default
+				Dialogue: Yes
 		Case:
 			Value: default
+			Identifier: case
+				Argument: 1
 				Dialogue: Which way should we go?
-		Identifier: SetPositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
+			Identifier: case
+				Argument: 2
+				Dialogue: Which way should we go?
+			Identifier: default
+				Dialogue: Which way should we go?
+		Case:
+			Value: CS
+			Identifier: case
+				Argument: menu
+				Dialogue: [CS:P]Foggy Forest[CR]
+			Array accessor
+				Array: $SCENARIO_MAIN_BIT_FLAG
+				Index: 5
+				Value: 0
+			Identifier: message_Close
+			Identifier: screen_FadeOutAll
+				Argument: 1
+				Argument: 30
+			Identifier: Wait
+				Argument: 10
+			Identifier: supervision_Acting
+				Argument: 0
+			Identifier: Wait
+				Argument: 1
+			Identifier: camera_SetMyself
+				Template
+					Type: performer
+					Identifier: 0
+			Identifier: SetPositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Identifier: Position
+				Template
+					Type: m0
+					Identifier: 39.5
+					Identifier: 38.5
+			Identifier: SetPositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Identifier: Position
+				Template
+					Type: m1
+					Identifier: 35.5
+					Identifier: 38.5
+			Identifier: SetDirection
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: DIR_LEFT
+			Identifier: SetDirection
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: DIR_RIGHT
+			Identifier: screen_FadeInAll
+				Argument: 1
+				Argument: 30
+			Identifier: Wait
+				Argument: 30
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right. [CS:P]Foggy Forest[CR] it is.
+				Case:
+					Value: 2
+						Dialogue: All right. [CS:P]Foggy Forest[CR] it is.
+				Case:
+					Value: default
+						Dialogue: All right. [CS:P]Foggy Forest[CR] it is.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right! Let's roll out!
+				Case:
+					Value: 2
+						Dialogue: All right! Let's roll out!
+				Case:
+					Value: default
+						Dialogue: All right! Let's roll out!
+			Identifier: message_Close
+			Label: @label_4;
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
 			Identifier: Position
-			Identifier: m0
-			Identifier: 39.5
-			Identifier: 38.5
-		Identifier: SetPositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
+				Template
+					Type: m4
+					Identifier: 37.5
+					Identifier: 12.5
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPLEFT
+			Identifier: Wait
+				Argument: 30
+			Identifier: bgm_FadeOut
+				Argument: 120
+			Identifier: MovePositionMark
+				Template
+					Type: performer
+					Identifier: 0
 			Identifier: Position
-			Identifier: m1
-			Identifier: 35.5
-			Identifier: 38.5
-		Identifier: SetDirection
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: DIR_LEFT
-		Identifier: SetDirection
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: DIR_RIGHT
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m4
-			Identifier: 37.5
-			Identifier: 12.5
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Identifier: MovePositionMark
-		Template
-			Type: performer
-			Identifier: 0
-		Argument: 0
-		Identifier: Position
-		Template
-			Type: m5
-			Identifier: 37.5
-			Identifier: 28.5
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 0
-		Identifier: Position
-		Template
-			Type: m6
-			Identifier: 37.5
-			Identifier: 28.5
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_EXCLAMATION_MARK
-		Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: MovePositionMark
-		Template
-			Type: performer
-			Identifier: 0
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m7
-			Identifier: 37.5
-			Identifier: 16.5
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m8
-			Identifier: 37.5
-			Identifier: 16.5
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Identifier: MovePositionOffset
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Identifier: Destroy
-		Template
-			Type: object
-			Identifier: OBJECT_D08P11A1_23
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_LAUGHING
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_NONE
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m9
-			Identifier: 37.5
-			Identifier: 1.5
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m10
-			Identifier: 37.5
-			Identifier: 1.5
-		Identifier: camera_SetMyself
-		Template
-			Type: performer
-			Identifier: 0
-		Identifier: SetPositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
+				Template
+					Type: m5
+					Identifier: 37.5
+					Identifier: 28.5
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
 			Identifier: Position
-			Identifier: m2
-			Identifier: 39.5
-			Identifier: 38.5
-		Identifier: SetPositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
+				Template
+					Type: m6
+					Identifier: 37.5
+					Identifier: 28.5
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_BOTTOM_R_FACEINW
+			Switch:
+				Variable: $HERO_TALK_KIND
+				Case:
+					Value: 4
+						Dialogue: (...)
+				Case:
+					Value: default
+						Dialogue: (...)
+			Switch:
+				Variable: $HERO_TALK_KIND
+				Case:
+					Value: 4
+						Dialogue: (Anyway...)
+				Case:
+					Value: default
+						Dialogue: (Anyway...)
+			Switch:
+				Variable: $HERO_TALK_KIND
+				Case:
+					Value: 4
+						Dialogue: (Maybe the keys to unlocking my memory are here...)
+				Case:
+					Value: default
+						Dialogue: (Maybe the keys to unlocking my memory are here...)
+			Switch:
+				Variable: $HERO_TALK_KIND
+				Case:
+					Value: 4
+						Dialogue: ([CS:P]Fogbound Lake[CR]...)
+				Case:
+					Value: default
+						Dialogue: ([CS:P]Fogbound Lake[CR]...)
+			Switch:
+				Variable: $HERO_TALK_KIND
+				Case:
+					Value: 4
+						Dialogue: (I may find some answers if [CS:P]Fogbound Lake[CR] can be found...)
+				Case:
+					Value: default
+						Dialogue: (I may find some answers if [CS:P]Fogbound Lake[CR] can be found...)
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetActor
+				Argument: ACTOR_ATTENDANT1
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Huh? What is this?
+				Case:
+					Value: 2
+						Dialogue: Huh? What is this?
+				Case:
+					Value: default
+						Dialogue: Huh? What is this?
+			Identifier: message_Close
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_LEFT
+			Identifier: se_Play
+				Argument: 8978
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_EXCLAMATION_MARK
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: Wait
+				Argument: 15
+			Identifier: MovePositionMark
+				Template
+					Type: performer
+					Identifier: 0
 			Identifier: Position
-			Identifier: m3
-			Identifier: 35.5
-			Identifier: 38.5
-		Identifier: SetDirection
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: DIR_LEFT
-		Identifier: SetDirection
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: DIR_RIGHT
-	Identifier: screen_FadeInAll
-		Argument: 1
-		Argument: 30
-		Argument: message_SwitchTalk
-		Argument: PARTNER_TALK_KIND
-		Argument: case
-		Argument: 1
-		Dialogue: All right. [CS:P]Forest Path[CR] it is.
-		Argument: case
-		Argument: 2
-		Dialogue: All right. [CS:P]Forest Path[CR] it is.
-		Argument: default
-		Dialogue: All right. [CS:P]Forest Path[CR] it is.
-		Argument: message_SwitchTalk
-		Argument: PARTNER_TALK_KIND
-		Argument: case
-		Argument: 1
-		Dialogue: All right! Let's roll out!
-		Argument: case
-		Argument: 2
-		Dialogue: All right! Let's roll out!
-		Argument: default
-		Dialogue: All right! Let's roll out!
-		Argument: message_Close
-		Argument: jump
-		Argument: label_4
-		Argument: break
-		Argument: case
-		Argument: menu
-		Dialogue: Not yet
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-		Argument: message_SwitchTalk
-		Argument: PARTNER_TALK_KIND
-		Argument: case
-		Argument: 1
-		Dialogue: Tell me when you're set.
-		Argument: case
-		Argument: 2
-		Dialogue: Tell me when you're ready.
-		Argument: default
-		Dialogue: Tell me when you're ready.
-		Argument: message_Close
-		Argument: end
+				Template
+					Type: m7
+					Identifier: 37.5
+					Identifier: 16.5
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: Position
+				Template
+					Type: m8
+					Identifier: 37.5
+					Identifier: 16.5
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_C_FACEL
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: It looks like some kind of stone, I guess.
+				Case:
+					Value: 2
+						Dialogue: It looks like some kind of stone, I guess.
+				Case:
+					Value: default
+						Dialogue: It looks like some kind of stone, I guess.
+			Identifier: message_KeyWait
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPLEFT
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: It's red and pretty. It's kind of like a gem, actually.
+				Case:
+					Value: 2
+						Dialogue: It's red and pretty. It's kind of like a gem, actually.
+				Case:
+					Value: default
+						Dialogue: It's red and pretty. It's kind of like a gem, actually.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: MovePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 1
+				Argument: 16
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Destroy
+				Template
+					Type: object
+					Identifier: OBJECT_D08P11A1_23
+			Identifier: se_Play
+				Argument: 8710
+			Identifier: message_Mail
+				Dialogue: [CN][partner] picked [CN]up the red stone.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_LAUGHING
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_L_CENTER
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Hey! This stone feels warm!
+				Case:
+					Value: 2
+						Dialogue: Wow! This stone feels warm!
+				Case:
+					Value: default
+						Dialogue: Wow! It feels warm!
+			Identifier: message_KeyWait
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_NONE
+				Argument: 3
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: It's like heat is coming from inside the stone. It's weird.
+				Case:
+					Value: 2
+						Dialogue: It's like heat is coming from inside the stone. It's weird.
+				Case:
+					Value: default
+						Dialogue: It's like heat is coming from inside the stone. It's weird.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: It doesn't seem to be lava. What could it be?
+				Case:
+					Value: 2
+						Dialogue: It doesn't seem to be lava. What could it be?
+				Case:
+					Value: default
+						Dialogue: It doesn't seem to be lava. What could it be?
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: It might be rare. I'll keep it.
+				Case:
+					Value: 2
+						Dialogue: It might be rare. I'll keep it.
+				Case:
+					Value: default
+						Dialogue: This could be rare. I'll keep it.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right, let's roll, [hero]!
+				Case:
+					Value: 2
+						Dialogue: All right, let's roll, [hero]!
+				Case:
+					Value: default
+						Dialogue: All right, let's roll, [hero]!
+			Identifier: message_Close
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: Position
+				Template
+					Type: m9
+					Identifier: 37.5
+					Identifier: 1.5
+			Identifier: Wait
+				Argument: 10
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: Position
+				Template
+					Type: m10
+					Identifier: 37.5
+					Identifier: 1.5
+			Identifier: Wait
+				Argument: 45
+			Identifier: screen_FadeOutAll
+				Argument: 1
+				Argument: 30
+			Identifier: CallCommon
+				Argument: CORO_FADE_OUT_ALL_AFTER
+			Identifier: SCENARIO_MAIN
+				Argument: scn
+				Argument: 10
+				Argument: 2
+			Switch:
+				Variable: $SCENARIO_MAIN_BIT_FLAG[5]
+				Case:
+					Value: default
+
+			Switch:
+				Variable: 12, 0); switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+				Case:
+					Value: default
+
+			Identifier: break
+			Identifier: case
+				Argument: menu
+				Dialogue: [CS:P]Forest Path[CR]
+			Array accessor
+				Array: $SCENARIO_MAIN_BIT_FLAG
+				Index: 5
+				Value: 1
+			Identifier: message_Close
+			Identifier: screen_FadeOutAll
+				Argument: 1
+				Argument: 30
+			Identifier: Wait
+				Argument: 10
+			Identifier: supervision_Acting
+				Argument: 0
+			Identifier: Wait
+				Argument: 1
+			Identifier: camera_SetMyself
+				Template
+					Type: performer
+					Identifier: 0
+			Identifier: SetPositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Identifier: Position
+				Template
+					Type: m2
+					Identifier: 39.5
+					Identifier: 38.5
+			Identifier: SetPositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Identifier: Position
+				Template
+					Type: m3
+					Identifier: 35.5
+					Identifier: 38.5
+			Identifier: SetDirection
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: DIR_LEFT
+			Identifier: SetDirection
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: DIR_RIGHT
+			Identifier: screen_FadeInAll
+				Argument: 1
+				Argument: 30
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right. [CS:P]Forest Path[CR] it is.
+				Case:
+					Value: 2
+						Dialogue: All right. [CS:P]Forest Path[CR] it is.
+				Case:
+					Value: default
+						Dialogue: All right. [CS:P]Forest Path[CR] it is.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right! Let's roll out!
+				Case:
+					Value: 2
+						Dialogue: All right! Let's roll out!
+				Case:
+					Value: default
+						Dialogue: All right! Let's roll out!
+			Identifier: message_Close
+			Identifier: jump
+				Argument: label_4
+		Case:
+			Value: default
+				Dialogue: Not yet
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Tell me when you're set.
+			Identifier: case
+				Argument: 2
+				Dialogue: Tell me when you're ready.
+			Identifier: default
+				Dialogue: Tell me when you're ready.

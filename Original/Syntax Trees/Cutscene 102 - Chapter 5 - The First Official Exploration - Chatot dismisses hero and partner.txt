@@ -12,16 +12,16 @@ def 0:
 		Argument: 7
 	Identifier: supervision_Acting
 		Argument: 0
-		Identifier: SetPositionInitial
+	Identifier: SetPositionInitial
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
 		Argument: 2
-		Identifier: camera_SetMyself
+	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -38,137 +38,93 @@ def 0:
 		Dialogue: That's all. Do you understand what this mission entails?
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
-
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 4
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: EFFECT_EXCLAMATION_MARK
-		Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 18
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 2
-		Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: 4
-		Identifier: ExecuteCommon
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 71
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 2
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 66
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 66
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 2
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-		Argument: EFFECT_SWEAT_DROP
-		Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_PERAPPU
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_NPC_PERAPPU
-		Argument: message_SetFace
-		Argument: ACTOR_NPC_PERAPPU
-		Argument: FACE_PAIN
-		Argument: FACE_POS_TOP_C_FACEL
-		Argument: message_Talk
-		Dialogue: Fine, I'll explain it again.
-		Argument: message_Talk
-		Dialogue: Let me see your Wonder Map.
-		Argument: CallCommon
-		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-		Argument: message_Mail
-		Dialogue: [CN][hero] opened [CN]the Wonder Map.
-		Argument: message_Close
-		Argument: se_Play
-		Argument: 6667
-		Argument: screen_FadeOut
-		Argument: 1
-		Argument: 15
-		Argument: end
+		Case:
+			Value: default
+				Dialogue: Understood
+		Case:
+			Value: default
+				Dialogue: Good! ♪
+		Case:
+			Value: default
+				Dialogue: All right, I'll leave you all to thoroughly investigate the waterfall! ♪
+		Case:
+			Value: default
+				Dialogue: Huh? What's wrong? You're shivering.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: ...
+			Identifier: case
+				Argument: 2
+				Dialogue: ...
+			Identifier: default
+				Dialogue: ...
+		Case:
+			Value: default
+				Dialogue: A-are you all right?
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Yup. I'm OK. It's just the anticipation that's making me nervous.
+			Identifier: case
+				Argument: 2
+				Dialogue: Yes. I'm OK. It's just the anticipation that's making me nervous.
+			Identifier: default
+				Dialogue: Yep. I'm OK. It's just the anticipation that's making me nervous.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: This will be our first real job as an exploration team.
+			Identifier: case
+				Argument: 2
+				Dialogue: This will be the first time we get to do a real job as an exploration team.
+			Identifier: default
+				Dialogue: This will be our first real job as an exploration team.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: I'm feeling a little worked up...
+			Identifier: case
+				Argument: 2
+				Dialogue: I'm feeling a little worked up...
+			Identifier: default
+				Dialogue: I'm getting a bit emotional...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Yeah! I might just burst from the excitement!
+			Identifier: case
+				Argument: 2
+				Dialogue: Oh, I feel like I'm going to burst from excitement!
+			Identifier: default
+				Dialogue: Ooh... I'm bubbling over with excitement!
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Let's do this right, [hero]!
+			Identifier: case
+				Argument: 2
+				Dialogue: Let's do our best, [hero]!
+			Identifier: default
+				Dialogue: Let's do our best, [hero]!
+		Case:
+			Value: default
+				Dialogue: Please explain again
+		Case:
+			Value: default
+				Dialogue: Fine, I'll explain it again.
+		Case:
+			Value: default
+				Dialogue: Let me see your Wonder Map.
+		Case:
+			Value: default
+				Dialogue: [CN][hero] opened [CN]the Wonder Map.
 def 1:
 	Target: actor ACTOR_ATTENDANT1
 	Identifier: SetAnimation
@@ -179,28 +135,17 @@ def 1:
 		Argument: 31
 	Identifier: SetAnimation
 		Argument: 3
-	Label: @label_3
-	Identifier: forever
-		Argument: SlidePositionOffset
-		Argument: 1
-		Argument: 1
-		Argument: 0
-		Argument: Wait
-		Argument: 2
-		Argument: SlidePositionOffset
-		Argument: 1
-		Argument: 1
-		Argument: 0
-		Argument: Wait
-		Argument: 2
-		Argument: switch
-		Argument: EVENT_LOCAL
-		Argument: case
-		Argument: 1
-		Argument: break_loop
-		Argument: break
-		Argument: default
-		Argument: continue
+	Label: @label_3;
+	Switch:
+		Variable: 1, 1, 0); Wait(2); SlidePositionOffset(1, -1, 0); Wait(2); switch ( $EVENT_LOCAL
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Argument: break_loop
+			Identifier: break
+			Identifier: default
+				Argument: continue
 	Identifier: SetAnimation
 		Argument: 2
 	Identifier: Lock

@@ -3,12 +3,12 @@ def 0:
 		Argument: BGM_WIGGLYTUFFS_GUILD
 		Argument: 0
 		Argument: 256
-		Identifier: Turn2DirectionLives
+	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: ACTOR_NPC_BIPPA
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -20,15 +20,18 @@ def 0:
 		Dialogue: Huh?[K] Are you folks all set and ready for some exploring?
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
-
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_BIPPA
-		Argument: 4
-	Identifier: 10
-		Argument: DIR_DOWN
-		Argument: WaitExecuteLives
-		Argument: ACTOR_NPC_BIPPA
-		Argument: jump
-		Argument: label_2
+		Case:
+			Value: default
+				Dialogue: Yes
+		Case:
+			Value: default
+				Dialogue: No
+		Case:
+			Value: default
+				Dialogue: Not yet, huh?
+		Case:
+			Value: default
+				Dialogue: Just give me a holler when you're all ready to go.
+		Case:
+			Value: default
+				Dialogue: Then we'll all have a gander at the Outlaw Notice Board and pick out a suitable outlaw for you.

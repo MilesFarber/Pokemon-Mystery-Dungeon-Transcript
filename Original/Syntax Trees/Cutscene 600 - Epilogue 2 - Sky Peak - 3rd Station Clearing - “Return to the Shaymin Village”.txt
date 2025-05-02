@@ -1,10 +1,10 @@
 def 0:
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_APPOINT
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_APPOINT
@@ -14,3 +14,29 @@ def 0:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
 			Value: default
+				Dialogue: Yes
+		Case:
+			Value: default
+			Label: @label_2;
+			Identifier: message_Close
+			Identifier: bgm_FadeOut
+				Argument: 60
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP)
+
+			Identifier: main_EnterGround
+				Argument: LEVEL_D73P11A
+				Argument: 30
+			Identifier: hold
+			Identifier: end
+		Case:
+			Value: default
+			Identifier: SCENARIO_MAIN
+				Argument: scn
+				Argument: 29
+				Argument: 17
+			Identifier: jump
+				Argument: label_2
+		Case:
+			Value: default
+				Dialogue: No

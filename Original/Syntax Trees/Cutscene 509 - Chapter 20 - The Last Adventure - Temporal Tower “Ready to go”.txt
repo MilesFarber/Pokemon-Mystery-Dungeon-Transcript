@@ -3,125 +3,107 @@ def 0:
 		Argument: BGM_TEMPORAL_TOWER
 		Argument: 0
 		Argument: 256
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-			Identifier: 2
-			Identifier: SetAnimation
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: 2
-			Identifier: Turn2DirectionLives
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: 4
-			Identifier: 10
-			Identifier: ACTOR_PLAYER
-			Identifier: WaitExecuteLives
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: Turn2DirectionLives
-			Identifier: actor
-			Identifier: ACTOR_PLAYER
-			Identifier: 4
-			Identifier: 10
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: message_SetFace
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: FACE_NORMAL
-			Identifier: FACE_POS_STANDARD
-			Identifier: message_SwitchTalk
-			Identifier: PARTNER_TALK_KIND
+	Switch:
+		Variable: scn($SCENARIO_MAIN) >= [26, 3]
+		Case:
+			Value: 1
 			Identifier: case
-			Identifier: 1
-			Identifier: english
-			Identifier: You
-			Identifier: ready
-			Identifier: hero
+				Argument: 1
+				Dialogue: You ready, [hero]?
 			Identifier: case
-			Identifier: 2
-			Identifier: english
-			Identifier: Are
-			Identifier: you
-			Identifier: ready
-			Identifier: hero
+				Argument: 2
+				Dialogue: Are you ready, [hero]?
 			Identifier: default
-			Identifier: english
-			Identifier: Ready
-			Identifier: hero
-			Identifier: switch
-			Identifier: message_SwitchMenu
-			Identifier: 0
-			Identifier: 1
+				Dialogue: Ready, [hero]?
+		Case:
+			Value: default
 			Identifier: case
-			Identifier: menu
-			Identifier: english
-			Identifier: Yes
+				Argument: menu
+				Dialogue: Yes
 			Identifier: default
-			Identifier: CallCommon
-			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: message_SwitchTalk
-			Identifier: PARTNER_TALK_KIND
-			Identifier: case
-			Identifier: 1
-			Identifier: english
-			Identifier: Yup.
-			Identifier: We
-			Identifier: re
-			Identifier: all
-			Identifier: geared
-			Identifier: up
-			Identifier: case
-			Identifier: 2
-			Identifier: english
-			Identifier: OK
-			Identifier: We
-			Identifier: re
-			Identifier: all
-			Identifier: set
-			Identifier: to
-			Identifier: go
-			Identifier: default
-			Identifier: english
-			Identifier: OK.
-			Identifier: I
-			Identifier: guess
-			Identifier: we
-			Identifier: re
-			Identifier: ready
-			Identifier: message_SwitchTalk
-			Identifier: PARTNER_TALK_KIND
-			Identifier: case
-			Identifier: 1
-			Identifier: english
-			Identifier: All
-			Identifier: right
-			Identifier: Let
-			Identifier: s
-			Identifier: roll
-			Identifier: case
-			Identifier: 2
-			Identifier: english
-			Identifier: OK
-			Identifier: Off
-			Identifier: we
-			Identifier: go
-			Identifier: default
-			Identifier: english
-			Identifier: OK
-			Identifier: Let
-			Identifier: s
-			Identifier: go
+				Argument: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Yup. We're all geared up!
+				Case:
+					Value: 2
+						Dialogue: OK! We're all set to go!
+				Case:
+					Value: default
+						Dialogue: OK. I guess we're ready!
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right! Let's roll!
+				Case:
+					Value: 2
+						Dialogue: OK! Off we go!
+				Case:
+					Value: default
+						Dialogue: OK! Let's go!
 			Identifier: message_Close
 			Identifier: Turn2Direction
-			Identifier: actor
-			Identifier: ACTOR_PLAYER
-			Identifier: 4
-			Identifier: 10
-			Identifier: DIR_UP
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
 			Identifier: Turn2Direction
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 30
+			Identifier: main_EnterDungeon
+				Argument: 41
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+
+			Identifier: main_EnterDungeon
+				Argument: 1
+				Argument: 0
+			Identifier: hold
+			Identifier: end
+			Identifier: case
+				Argument: menu
+				Dialogue: No
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Oh, all right.
+				Case:
+					Value: 2
+						Dialogue: Oh, OK.
+				Case:
+					Value: default
+						Dialogue: Oh, OK.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: We'll go when you're ready.
+				Case:
+					Value: 2
+						Dialogue: We'll go when you're ready.
+				Case:
+					Value: default
+						Dialogue: We'll go when you're ready.
+			Identifier: message_Close
+			Identifier: end
 	Conditional
 		Type: Else

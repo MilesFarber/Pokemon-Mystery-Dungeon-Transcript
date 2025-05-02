@@ -13,19 +13,19 @@ def 0:
 		Argument: 99
 	Identifier: supervision_StationCommon
 		Argument: 0
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_GUREGGURU
 		Argument: 2
-		Identifier: SetDirection
+	Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_GUREGGURU
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_GUREGGURU
-		Identifier: camera_SetMyself
+	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -47,160 +47,116 @@ def 0:
 		Dialogue: All right? Understood?
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
-
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m0
-			Identifier: 25
-			Identifier: 36.5
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m1
-			Identifier: 28
-			Identifier: 39.5
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m2
-			Identifier: 24
-			Identifier: 37.5
-		Identifier: MovePositionMark
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 1
-		Identifier: Position
-		Template
-			Type: m3
-			Identifier: 26
-			Identifier: 37.5
-		Identifier: Position
-		Template
-			Type: m4
-			Identifier: 19.5
-			Identifier: 16
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_DOGOOMU
-		Argument: EFFECT_ANGRY
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_DOGOOMU
-		Argument: 19
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_DOGOOMU
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_DOGOOMU
-		Argument: 2
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_DOGOOMU
-		Argument: EFFECT_ANGRY
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_SHOCKED
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SHOCKED
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 68
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 68
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 9
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 9
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 2
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 2
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_DOGOOMU
-		Argument: EFFECT_NONE
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_DOGOOMU
-		Argument: EFFECT_LAUGHING
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: EFFECT_SWEAT_DROP
-		Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: EFFECT_SWEAT_DROP
-		Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: WaitEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_ATTENDANT1
-		Argument: screen_FadeOut
-		Argument: 1
-		Argument: 15
-		Argument: end
+		Case:
+			Value: default
+				Dialogue: Understood
+		Case:
+			Value: default
+				Dialogue: Good! Then let's get to WORK!
+		Case:
+			Value: default
+				Dialogue: Buck up and do a GOOD job!
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Waah! It's pitch black in here, [hero]...
+			Identifier: case
+				Argument: 2
+				Dialogue: Ack! It's pitch black in here, [hero]...
+			Identifier: default
+				Dialogue: Yow! It's pitch black in here, [hero]...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: We'll have to feel our way...
+			Identifier: case
+				Argument: 2
+				Dialogue: We'll have to feel our way...
+			Identifier: default
+				Dialogue: We'll have to feel our way...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: ...
+			Identifier: case
+				Argument: 2
+				Dialogue: ...
+			Identifier: default
+				Dialogue: ...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: ......
+			Identifier: case
+				Argument: 2
+				Dialogue: ......
+			Identifier: default
+				Dialogue: ......
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Well, we should be getting close to the sentry post...
+			Identifier: case
+				Argument: 2
+				Dialogue: Well, we should be getting close to the sentry post...
+			Identifier: default
+				Dialogue: Well, we should be getting close to the sentry post...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Hey![K] There![K] I see light, [hero]!
+			Identifier: case
+				Argument: 2
+				Dialogue: Oh![K] There![K] I see light, [hero]!
+			Identifier: default
+				Dialogue: Oh![K] There it is![K] I see light, [hero]!
+		Case:
+			Value: default
+				Dialogue: HOW'S IT GOING?![K] Have you taken position at the sentry post?!
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Yup! We're here!
+			Identifier: case
+				Argument: 2
+				Dialogue: Yes! We're in position!
+			Identifier: default
+				Dialogue: Yep! We're here!
+		Case:
+			Value: default
+				Dialogue: GOOD!
+		Case:
+			Value: default
+				Dialogue: Pokémon visitors will step onto the grill above the sentry post!
+		Case:
+			Value: default
+				Dialogue: Identify them by footprint, then inform me![K] Got that?!
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Yup! Got it!
+			Identifier: case
+				Argument: 2
+				Dialogue: Yes! Understood!
+			Identifier: default
+				Dialogue: Yep! We got it!
+		Case:
+			Value: default
+				Dialogue: GOOD! Let's get started!
+		Case:
+			Value: default
+				Dialogue: Please explain again
+		Case:
+			Value: default
+				Dialogue: Really?! You're not just messing with me, ARE you?
+		Case:
+			Value: default
+				Dialogue: All right. I've got a BIG heart. I'll explain as much as you want.

@@ -1,146 +1,47 @@
 def 0:
 	Identifier: sound_Stop
-		Identifier: camera_SetMyself
-		Template
-			Type: performer
-			Identifier: 0
-			Identifier: screen_FadeIn
-			Identifier: 1
-			Identifier: 30
-			Identifier: bgm_PlayFadeIn
-			Identifier: BGM_CHASM_CAVE
-			Identifier: 0
-			Identifier: 256
-			Identifier: Wait
-			Identifier: 30
-			Identifier: WaitLockLives
-			Identifier: 5
-			Identifier: ACTOR_PLAYER
-			Identifier: Unlock
-			Identifier: 5
-			Identifier: Wait
-			Identifier: 15
-			Identifier: Unlock
-			Identifier: 7
-			Identifier: Lock
-			Identifier: 3
-			Identifier: Wait
-			Identifier: 15
-			Identifier: Turn2DirectionLives
-			Identifier: actor
-			Identifier: ACTOR_PLAYER
-			Identifier: 4
-			Identifier: 10
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: Turn2DirectionLives
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: 4
-			Identifier: 10
-			Identifier: ACTOR_PLAYER
-			Identifier: Wait
-			Identifier: 15
-			Identifier: SetEffect
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-			Identifier: 3
-			Identifier: message_SetFace
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: FACE_PAIN
-			Identifier: FACE_POS_STANDARD
-			Identifier: message_SwitchTalk
-			Identifier: PARTNER_TALK_KIND
+	Switch:
+		Variable: scn($SCENARIO_MAIN) >= [29, 82]
+		Case:
+			Value: 1
 			Identifier: case
-			Identifier: 1
-			Identifier: english
-			Identifier: Hmm...
-			Identifier: We
-			Identifier: were
-			Identifier: a
-			Identifier: bit
-			Identifier: careless.
+				Argument: 1
+				Dialogue: Ugh...[K] We couldn't get through...
 			Identifier: case
-			Identifier: 2
-			Identifier: english
-			Identifier: Hmm...
-			Identifier: We
-			Identifier: were
-			Identifier: a
-			Identifier: bit
-			Identifier: careless.
+				Argument: 2
+				Dialogue: Ugh...[K] We couldn't break through.
 			Identifier: default
-			Identifier: english
-			Identifier: Hmm...
-			Identifier: We
-			Identifier: were
-			Identifier: a
-			Identifier: bit
-			Identifier: careless.
-			Identifier: message_Close
-			Identifier: ExecuteCommon
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
-			Identifier: 0
-			Identifier: WaitExecuteLives
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: message_SetFace
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: FACE_DETERMINED
-			Identifier: FACE_POS_STANDARD
-			Identifier: message_SwitchTalk
-			Identifier: PARTNER_TALK_KIND
+				Dialogue: Ugh...[K] We couldn't break through.
+		Case:
+			Value: 1
 			Identifier: case
-			Identifier: 1
-			Identifier: english
-			Identifier: If
-			Identifier: we
-			Identifier: stick
-			Identifier: around
-			Identifier: here
-			Identifier: CS
-			Identifier: N
-			Identifier: Palkia
-			Identifier: CR
-			Identifier: could
-			Identifier: find
-			Identifier: us.
+				Argument: 1
+				Dialogue: Hmm... We were a bit careless.
 			Identifier: case
-			Identifier: 2
-			Identifier: english
-			Identifier: If
-			Identifier: we
-			Identifier: stay
-			Identifier: here
-			Identifier: CS
-			Identifier: N
-			Identifier: Palkia
-			Identifier: CR
-			Identifier: could
-			Identifier: find
-			Identifier: us.
+				Argument: 2
+				Dialogue: Hmm... We were a bit careless.
 			Identifier: default
-			Identifier: english
-			Identifier: We
-			Identifier: can
-			Identifier: t
-			Identifier: stay
-			Identifier: here
-			Identifier: because
-			Identifier: CS
-			Identifier: N
-			Identifier: Palkia
-			Identifier: CR
-			Identifier: could
-			Identifier: find
-			Identifier: us.
-			Identifier: CallCommon
-			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: Turn2DirectionLives
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
+				Dialogue: Hmm... We were a bit careless.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: If we stick around here, [CS:N]Palkia[CR] could find us.
+			Identifier: case
+				Argument: 2
+				Dialogue: If we stay here, [CS:N]Palkia[CR] could find us.
+			Identifier: default
+				Dialogue: We can't stay here, because [CS:N]Palkia[CR] could find us.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Let's get away from here.
+			Identifier: case
+				Argument: 2
+				Dialogue: We need to get out of here right away.
+			Identifier: default
+				Dialogue: We should get away from here.
 	Conditional
 		Type: Else
 def 1:

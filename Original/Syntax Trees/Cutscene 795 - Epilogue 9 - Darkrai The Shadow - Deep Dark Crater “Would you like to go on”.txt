@@ -3,17 +3,17 @@ def 0:
 		Argument: BGM_DEEP_DARK_CRATER
 		Argument: 0
 		Argument: 256
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 2
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 2
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KURESERIA
@@ -22,43 +22,28 @@ def 0:
 		Dialogue: [CN]Would you like to go on?
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
-
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_NPC_KURESERIA
-		Argument: 4
-	Identifier: 10
-		Argument: DIR_UP
-		Argument: if
-		Argument: scn
-		Argument: SCENARIO_MAIN
-		Argument: 29
-		Argument: 90
-		Argument: label_2
-		Argument: main_EnterDungeon
-		Argument: 68
-		Argument: 30
-		Argument: main_EnterDungeon
-		Argument: 1
-		Argument: 30
-		Argument: hold
-		Argument: end
-		Argument: else
-		Argument: SCENARIO_MAIN
-		Argument: scn
-		Argument: 29
-		Argument: 90
-		Argument: jump
-		Argument: label_2
-		Argument: break
-		Argument: case
-		Argument: menu
-		Dialogue: No
-		Argument: message_Close
-		Argument: end
+		Case:
+			Value: default
+				Dialogue: Yes
+		Case:
+			Value: default
+			Label: @label_2;
+			Identifier: main_EnterDungeon
+				Argument: 68
+				Argument: 30
+			Identifier: main_EnterDungeon
+				Argument: 1
+				Argument: 30
+			Identifier: hold
+			Identifier: end
+		Case:
+			Value: default
+			Identifier: SCENARIO_MAIN
+				Argument: scn
+				Argument: 29
+				Argument: 90
+			Identifier: jump
+				Argument: label_2
+		Case:
+			Value: default
+				Dialogue: No

@@ -3,12 +3,12 @@ def 0:
 		Argument: BGM_SEALED_RUIN_PIT
 		Argument: 0
 		Argument: 256
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 2
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -19,3 +19,23 @@ def 0:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
 			Value: default
+				Dialogue: Yes
+		Case:
+			Value: default
+			Label: @label_2;
+			Identifier: main_EnterDungeon
+				Argument: 30
+				Argument: 30
+			Identifier: main_EnterDungeon
+				Argument: 1
+				Argument: 30
+			Identifier: hold
+		Case:
+			Value: default
+			Identifier: supervision_ExecuteCommon
+				Argument: CORO_EVENT_M18_09
+			Identifier: jump
+				Argument: label_2
+		Case:
+			Value: default
+				Dialogue: No

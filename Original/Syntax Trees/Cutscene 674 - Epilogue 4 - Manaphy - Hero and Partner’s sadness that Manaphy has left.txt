@@ -14,26 +14,27 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 0
+	Identifier: camera2_SetPositionMark
 		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 19
 			Identifier: 15.5
-		Identifier: camera_SetMyself
+	Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
-		Identifier: SetDirection
+	Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: DIR_LEFT
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 76
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -50,71 +51,71 @@ def 0:
 		Argument: 30
 	Identifier: Wait
 		Argument: 30
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 63
 	Identifier: Wait
 		Argument: 5
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 63
-		Identifier: WaitAnimation
+	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Identifier: WaitAnimation
+	Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 2
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-		Identifier: SetAnimation
+	Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 2
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 30
-		Identifier: Turn2DirectionLives
+	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-		Identifier: Turn2DirectionLives
+	Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -133,21 +134,21 @@ def 0:
 				Dialogue: Good morning, [hero]!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_UPRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
-		Identifier: Turn2Direction
+	Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 		Argument: 4
-	Identifier: 10
+		Argument: 10
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 60
@@ -180,53 +181,108 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: 1
-				Dialogue: Yup...[K] But...
-		Case:
-			Value: 2
-				Dialogue: Yes...[K] But...
+			Value: default
+				Dialogue: It's sad...
 		Case:
 			Value: default
+			Identifier: case
+				Argument: 1
+				Dialogue: Yup...[K] But...
+			Identifier: case
+				Argument: 2
 				Dialogue: Yes...[K] But...
-		Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 4
-		Identifier: Turn2Direction
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 8
-		Identifier: Turn2DirectionLives
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-		Argument: 4
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 71
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 71
-		Identifier: WaitAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Identifier: SetAnimation
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-		Argument: 2
-	Array accessor
-		Array: $PERFORMANCE_PROGRESS_LIST
-		Index: 24
-		Value: 1
+			Identifier: default
+				Dialogue: Yes...[K] But...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: It was the right thing to do for [CS:N]Manaphy[CR].
+			Identifier: case
+				Argument: 2
+				Dialogue: We did the only right thing for [CS:N]Manaphy[CR].
+			Identifier: default
+				Dialogue: It was the right thing to do for [CS:N]Manaphy[CR].
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: I'm sure [CS:N]Walrein[CR] will raise him properly.
+			Identifier: case
+				Argument: 2
+				Dialogue: I think [CS:N]Walrein[CR] will raise him properly.
+			Identifier: default
+				Dialogue: I'm sure [CS:N]Walrein[CR] will raise him properly.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: And maybe...
+			Identifier: case
+				Argument: 2
+				Dialogue: And maybe...
+			Identifier: default
+				Dialogue: And maybe...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Maybe, one day somewhere, we'll be able to meet [CS:N]Manaphy[CR]...
+			Identifier: case
+				Argument: 2
+				Dialogue: Maybe, one day somewhere, we'll be able to see [CS:N]Manaphy[CR] again...
+			Identifier: default
+				Dialogue: Maybe, one day somewhere, we'll be able to see [CS:N]Manaphy[CR] again...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Oh, [hero].
+			Identifier: case
+				Argument: 2
+				Dialogue: Oh, [hero].
+			Identifier: default
+				Dialogue: Oh, [hero].
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: We shouldn't go around feeling sorry and sad forever. I doubt [CS:N]Manaphy[CR] would want that.
+			Identifier: case
+				Argument: 2
+				Dialogue: We shouldn't go around feeling sorry and sad forever. I doubt [CS:N]Manaphy[CR] would want that.
+			Identifier: default
+				Dialogue: We shouldn't go around feeling sorry and sad forever. I doubt [CS:N]Manaphy[CR] would want that.
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: But it's not like I can shake this off so easily...
+			Identifier: case
+				Argument: 2
+				Dialogue: But I can't get back to feeling like it's normal right away...
+			Identifier: default
+				Dialogue: But I don't think I can get over this right away...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Still, we should try to be positive and keep moving forward...[K] All right?
+			Identifier: case
+				Argument: 2
+				Dialogue: Still, I think we should be positive and keep moving forward...[K] OK?
+			Identifier: default
+				Dialogue: Still, we should try to be positive and keep moving forward...[K] OK?
+		Case:
+			Value: default
+				Dialogue: This is for the best...
+		Case:
+			Value: 1
+			Identifier: case
+				Argument: 1
+				Dialogue: Yup...[K] You're right...
+			Identifier: case
+				Argument: 2
+				Dialogue: Yes...[K] You're right...
+			Identifier: default
+				Dialogue: Yes...[K] You're right...
