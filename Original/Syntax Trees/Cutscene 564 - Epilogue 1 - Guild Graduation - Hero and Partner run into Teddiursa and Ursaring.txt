@@ -22,42 +22,58 @@ def 0:
 		Argument: 99
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
 	Identifier: Wait
 		Argument: 1
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 52
 			Identifier: 27.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 55
 			Identifier: 25.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m2
 			Identifier: 55
 			Identifier: 28.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 49
 			Identifier: 25.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 49
@@ -69,10 +85,13 @@ def 0:
 		Argument: ACTOR_NPC_HIMEGUMA
 	Identifier: se_Play
 		Argument: 8978
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
@@ -88,10 +107,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -135,13 +157,17 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8968
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -186,16 +212,21 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8963
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: EFFECT_QUESTION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
+		Argument: EFFECT_QUESTION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
@@ -209,32 +240,40 @@ def 0:
 		Dialogue: The grand master of all things bad?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_HIMEGUMA
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_RINGUMA
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_RINGUMA
 	Identifier: message_Talk
 		Dialogue: I've never...[K]heard of anything like that.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_RINGUMA
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: message_SetFace
@@ -263,25 +302,31 @@ def 0:
 		Dialogue: You must have misheard a bad rumor or something.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_HIMEGUMA
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_RINGUMA
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_RINGUMA
 	Identifier: message_Talk
 		Dialogue: Let's go.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
@@ -294,77 +339,102 @@ def 0:
 		Dialogue: Bye.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 57
 			Identifier: 27.5
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
+		Argument: 1
 	Identifier: 260
 		Argument: 0
 	Identifier: Wait
 		Argument: 5
+		Identifier: Move2PositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
 	Identifier: 32
 		Argument: 32
+		Identifier: Move2PositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 8
 		Argument: 8
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
+		Argument: 1
 	Identifier: 260
 		Argument: 16
 	Identifier: Wait
 		Argument: 30
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: Wait
 		Argument: 10
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_HIMEGUMA
+		Identifier: Destroy
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_RINGUMA
+		Identifier: Destroy
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HIMEGUMA
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 2
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace

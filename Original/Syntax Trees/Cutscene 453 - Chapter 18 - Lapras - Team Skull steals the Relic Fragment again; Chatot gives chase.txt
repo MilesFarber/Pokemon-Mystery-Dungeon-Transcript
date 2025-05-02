@@ -10,6 +10,7 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -20,41 +21,56 @@ def 0:
 		Argument: BGM_LOWER_BRINE_CAVE
 		Argument: 0
 		Argument: 256
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 28.5
 			Identifier: 36.5
 	Identifier: Wait
 		Argument: 10
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 30.5
 			Identifier: 36.5
 	Identifier: Wait
 		Argument: 10
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m2
 			Identifier: 26.5
 			Identifier: 37.5
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 23.5
 			Identifier: 32.5
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 30.5
@@ -78,16 +94,20 @@ def 0:
 				Dialogue: We've gone pretty far down.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: Wait
 		Argument: 10
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecuteLives
@@ -105,9 +125,11 @@ def 0:
 				Dialogue: Hey, [CS:N]Chatot[CR].[K] Are we almost at the place where you saw that pattern?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: WaitExecuteLives
@@ -141,16 +163,20 @@ def 0:
 				Dialogue: Yep. We can't get careless.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 10
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
@@ -174,23 +200,32 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: bgm_FadeOut
 		Argument: 60
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 2
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 28.5
 			Identifier: 40.5
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 2
+		Identifier: Position
 		Template
 			Type: m6
 			Identifier: 30.5
 			Identifier: 38.5
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 2
+		Identifier: Position
 		Template
 			Type: m7
 			Identifier: 26.5
@@ -207,48 +242,67 @@ def 0:
 	Identifier: screen_FadeIn
 		Argument: 1
 		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 12
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 11
+		Identifier: SlidePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 3
+		Identifier: Position
 		Template
 			Type: m8
 			Identifier: 26.5
 			Identifier: 32.5
 	Identifier: supervision_Acting
 		Argument: 1
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 2
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 68
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 	Identifier: Wait
 		Argument: 20
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 2
+		Identifier: Position
 		Template
 			Type: m9
 			Identifier: 29.5
 			Identifier: 32.5
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -276,22 +330,30 @@ def 0:
 		Dialogue: Whoops! Excuuuse me!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: WaitExecuteLives
@@ -304,20 +366,27 @@ def 0:
 		Argument: 10
 	Identifier: se_Play
 		Argument: 8968
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
@@ -370,19 +439,24 @@ def 0:
 		Dialogue: This is it?[K] The Relic Fragment?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: se_Play
 		Argument: 8967
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -403,33 +477,46 @@ def 0:
 				Dialogue: Th-that's...!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m10
 			Identifier: 32.5
 			Identifier: 38.5
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m11
 			Identifier: 24.5
 			Identifier: 38.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m12
 			Identifier: 28.5
@@ -452,17 +539,23 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8968
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -501,10 +594,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8972
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
@@ -534,10 +630,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8962
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_QUESTION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
@@ -551,16 +650,20 @@ def 0:
 		Dialogue: Your demeanor and language seem to be much coarser now!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 10
 		Argument: ACTOR_NPC_PERAPPU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -589,9 +692,11 @@ def 0:
 		Case:
 			Value: default
 				Dialogue: They were fooling the guild all this time!
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 10
 		Argument: ACTOR_NPC_PERAPPU
 	Switch:
@@ -607,26 +712,33 @@ def 0:
 				Dialogue: They're a bad exploration team! Team [CS:X]Skull[CR] is a bunch of crooks!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 20
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: Wait
 		Argument: 10
 	Identifier: se_Play
 		Argument: 8968
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_SHOCKED_MIRRORED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
@@ -668,113 +780,154 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: bgm_FadeOut
 		Argument: 160
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m13
 			Identifier: 33.5
 			Identifier: 33.5
 	Identifier: Wait
 		Argument: 30
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m14
 			Identifier: 33.5
 			Identifier: 33.5
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKATANKU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m15
 			Identifier: 33.5
 			Identifier: 21.5
 	Identifier: Wait
 		Argument: 10
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m16
 			Identifier: 33.5
 			Identifier: 33.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_RIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_RIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_RIGHT
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGAASU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m17
 			Identifier: 33.5
 			Identifier: 21.5
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_ZUBATTO
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m18
 			Identifier: 33.5
 			Identifier: 21.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: Wait
 		Argument: 10
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Destroy
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_ZUBATTO
+		Identifier: Destroy
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKATANKU
+		Identifier: Destroy
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGAASU
 	Identifier: Wait
 		Argument: 60
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
@@ -783,24 +936,32 @@ def 0:
 		Argument: 10
 	Identifier: se_Play
 		Argument: 8971
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_ANGRY
 	Identifier: 3
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: Wait
 		Argument: 10
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: message_SetFace
@@ -813,56 +974,73 @@ def 0:
 		Dialogue: Those stinking scoundrels...[K] Play me for a fool, will they!?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_NONE
 	Identifier: 3
 	Identifier: se_Play
 		Argument: 5122
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 18
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PERAPPU
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
 	Identifier: message_Talk
 		Dialogue: Squawk! They won't get away with this!
 	Identifier: message_Talk
 		Dialogue: I'll show them what it means to trifle with me!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+		Identifier: Position
 		Template
 			Type: m19
 			Identifier: 23.5
 			Identifier: 21.5
 	Identifier: Wait
 		Argument: 20
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 1
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 10
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
 	Identifier: 1
 		Argument: DIR_UP
+		Identifier: Destroy
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Identifier: MovePositionOffset
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
 	Identifier: 0
 		Argument: 46
 	Identifier: WaitExecutePerformer
@@ -903,16 +1081,20 @@ def 0:
 				Dialogue: H-he's gone!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 10
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -956,9 +1138,11 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8971
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -978,9 +1162,11 @@ def 0:
 			Value: default
 				Dialogue: We should hurry too!
 	Identifier: message_Close
+		Identifier: MovePositionLives
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
 	Identifier: ACTOR_PLAYER
 	Identifier: WaitExecutePerformer
 		Argument: 0

@@ -11,10 +11,12 @@ def 0:
 		Argument: LEVEL_H01P99E
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 20
 			Identifier: 18.5
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -60,21 +62,28 @@ def 0:
 				Dialogue: ...[K]I'm...[K]ashamed.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 22
 			Identifier: 18.5
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
@@ -121,9 +130,11 @@ def 0:
 		Case:
 			Value: default
 				Dialogue: I won't give up, either!
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -198,9 +209,11 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -234,25 +247,33 @@ def 0:
 			Value: default
 				Dialogue: Let's find a way out of this!
 	Identifier: message_Close
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
-	Identifier: WaitExecuteLives
-		Argument: ACTOR_PLAYER
-		Template
-			Type: actor
-			Identifier: ACTOR_PLAYER
+		Argument: 71
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 71
+		Identifier: WaitAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+	Identifier: WaitExecuteLives
+		Argument: ACTOR_PLAYER
+		Identifier: SetAnimation
+		Template
+			Type: actor
+			Identifier: ACTOR_PLAYER
+		Argument: 2
 	Identifier: Wait
 		Argument: 45
 	Identifier: bgm_FadeOut

@@ -62,12 +62,15 @@ def 0:
 		Argument: 0
 	Identifier: Wait
 		Argument: 1
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_D56P41A1_437
+		Argument: 9
 	Identifier: bgm2_PlayFadeIn
 		Argument: BGM_CAVE_AMBIANCE
 		Argument: 30
@@ -75,27 +78,36 @@ def 0:
 	Identifier: screen_FadeIn
 		Argument: 0
 		Argument: 30
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 32
 			Identifier: 35.5
 	Identifier: Wait
 		Argument: 15
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 25
 			Identifier: 35.5
 	Identifier: Wait
 		Argument: 24
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m2
 			Identifier: 28.5
@@ -104,10 +116,13 @@ def 0:
 		Argument: ACTOR_NPC_SAANAITO
 	Identifier: se_Play
 		Argument: 8968
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
@@ -126,50 +141,66 @@ def 0:
 	Identifier: message_Close
 	Identifier: bgm2_FadeOut
 		Argument: 60
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 28.5
 			Identifier: 18.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 32
 			Identifier: 17
 	Identifier: Wait
 		Argument: 9
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 25
 			Identifier: 17
 	Identifier: Wait
 		Argument: 12
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m6
 			Identifier: 28.5
 			Identifier: 19
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_SAANAITO
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHAAREMU
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecutePerformer
@@ -208,9 +239,11 @@ def 0:
 		Dialogue: ...You said it. Looks like treasure to me...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER_CHARMS
 	Identifier: WaitExecuteLives
@@ -223,9 +256,11 @@ def 0:
 		Dialogue: [CS:Y]Lopunny[CR]! Open it![K] Quick! I can't wait!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_CHAAREMU
 	Identifier: WaitExecuteLives
@@ -256,9 +291,11 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8975
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHAAREMU
@@ -280,16 +317,20 @@ def 0:
 		Dialogue: Hee hee![K] Can you be a little more mindful? A little less rash?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_CHARMS
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: message_SetFace
@@ -315,22 +356,28 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: Don't disappoint me! [M:H8]
 	Identifier: message_Close
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER_CHARMS
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_CHARMS
 	Identifier: se_Play
 		Argument: 8971
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_ANGRY
 	Identifier: 3
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHAAREMU
@@ -342,9 +389,11 @@ def 0:
 		Dialogue: I don't care about all that! Open it already, [CS:Y]Lopunny[CR]!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_CHAAREMU
 	Identifier: WaitExecuteLives
@@ -361,25 +410,31 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: Wait
 		Argument: 10
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 6
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_CHARMS
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHAAREMU
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_NONE
 	Identifier: 3
 	Identifier: message_Mail
 		Dialogue: [CN][CS:Y]Lopunny[CR] opened the treasure chest!
@@ -387,13 +442,17 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 10254
+		Identifier: SetEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Argument: 652
 	Identifier: 3
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_D56P41A1_437
+		Argument: 17
 	Identifier: Wait
 		Argument: 38
 	Identifier: screen_WhiteOutAll
@@ -405,12 +464,15 @@ def 0:
 	Identifier: screen_FadeInAll
 		Argument: 1
 		Argument: 0
+		Identifier: WaitEndAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_D56P41A1_437
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_D56P41A1_437
+		Argument: 10
 	Identifier: Wait
 		Argument: 10
 	Identifier: message_SetFace
@@ -437,12 +499,16 @@ def 0:
 		Dialogue: Is... inside? [M:H8]
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 1
+		Identifier: SetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: 1
 	Identifier: screen_FadeIn
 		Argument: 1
 		Argument: 30
@@ -450,25 +516,33 @@ def 0:
 		Argument: 30
 	Identifier: se_Play
 		Argument: 8968
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_SHOCKED_MIRRORED
 	Identifier: 3
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHAAREMU
@@ -497,13 +571,17 @@ def 0:
 	Identifier: message_Close
 	Identifier: se_Play
 		Argument: 8969
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_SHOCKED_MIRRORED
 	Identifier: 3
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHAAREMU
@@ -516,10 +594,13 @@ def 0:
 	Identifier: message_Close
 	Identifier: se_Play
 		Argument: 8972
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
@@ -553,45 +634,58 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8967
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: message_ResetActor
 	Identifier: message_Talk
 		Dialogue: Y-YOU!!
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 3
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
@@ -601,9 +695,12 @@ def 0:
 		Argument: BGM_GROWING_ANXIETY
 		Argument: 0
 		Argument: 256
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m7
 			Identifier: 28.5
@@ -612,49 +709,65 @@ def 0:
 		Argument: 1
 	Identifier: Wait
 		Argument: 1
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MANYUURA
+		Argument: 2
+		Identifier: Position
 		Template
 			Type: m8
 			Identifier: 28.5
 			Identifier: 28
 	Identifier: Wait
 		Argument: 12
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DORAPION
+		Argument: 2
+		Identifier: Position
 		Template
 			Type: m9
 			Identifier: 33
 			Identifier: 28.5
 	Identifier: Wait
 		Argument: 12
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AABOKKU
+		Argument: 2
+		Identifier: Position
 		Template
 			Type: m10
 			Identifier: 24
 			Identifier: 29
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_MANYUURA
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: EFFECT_SHOCKED_MIRRORED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
@@ -669,22 +782,29 @@ def 0:
 	Identifier: message_Close
 	Identifier: se_Play
 		Argument: 8969
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DORAPION
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MANYUURA
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AABOKKU
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DORAPION
@@ -715,22 +835,29 @@ def 0:
 	Identifier: message_Close
 	Identifier: se_Play
 		Argument: 8973
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
@@ -741,27 +868,36 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: N-no! Hang on!
 	Identifier: message_Close
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m11
 			Identifier: 28.5
 			Identifier: 22.5
 	Identifier: Wait
 		Argument: 9
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m12
 			Identifier: 32
 			Identifier: 21.5
 	Identifier: Wait
 		Argument: 9
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m13
 			Identifier: 25
@@ -781,15 +917,19 @@ def 0:
 	Identifier: message_Close
 	Identifier: se_Play
 		Argument: 8971
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DORAPION
+		Argument: EFFECT_ANGRY
 	Identifier: 3
 	Identifier: Wait
 		Argument: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AABOKKU
+		Argument: EFFECT_ANGRY
 	Identifier: 3
 	Identifier: Wait
 		Argument: 6
@@ -801,13 +941,17 @@ def 0:
 		Dialogue: Don't lie! You cheater!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DORAPION
+		Argument: EFFECT_NONE
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AABOKKU
+		Argument: EFFECT_NONE
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_SAANAITO
@@ -871,9 +1015,11 @@ def 0:
 		Argument: 60
 	Identifier: se_Play
 		Argument: 8971
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_ANGRY
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_CHAAREMU
@@ -898,9 +1044,11 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: We just can't forgive an exploration team like you!
 	Identifier: message_Close
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_NONE
 	Identifier: 3
 	Identifier: bgm_PlayFadeIn
 		Argument: BGM_TEAM_CHARMS_THEME
@@ -918,17 +1066,23 @@ def 0:
 	Identifier: screen_WhiteOut
 		Argument: 1
 		Argument: 2
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: EFFECT_NONE
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: EFFECT_NONE
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: EFFECT_NONE
 	Identifier: 3
 	Identifier: Wait
 		Argument: 2
@@ -945,38 +1099,53 @@ def 0:
 		Dialogue: We're the treasure hunters-- Team [CS:X]Charm[CR]!
 	Identifier: message_Talk
 		Dialogue: You![K] We're going to punish you, so get ready!
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_CHARMS
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Argument: 24
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: 24
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
+		Argument: 27
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_CHARMS
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHAAREMU
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SAANAITO
@@ -1046,40 +1215,52 @@ def 0:
 	Identifier: message_Close
 	Identifier: se_Play
 		Argument: 8971
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AABOKKU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 3
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DORAPION
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_AABOKKU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_DORAPION
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AABOKKU
+		Argument: EFFECT_JOYOUS
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DORAPION
+		Argument: EFFECT_JOYOUS
 	Identifier: 3
 	Identifier: message_EmptyActor
 	Identifier: message_Talk
 		Dialogue: [CS:N]Arbok[CR] & [CS:N]Drapion[CR]: YEAH!
 	Identifier: Wait
 		Argument: 18
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AABOKKU
+		Argument: EFFECT_NONE
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DORAPION
+		Argument: EFFECT_NONE
 	Identifier: 3
 	Identifier: message_Close
 	Identifier: se_Play

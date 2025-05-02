@@ -4,6 +4,7 @@ def 0:
 		Argument: LEVEL_D01P11A
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -16,42 +17,58 @@ def 0:
 		Argument: 60
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 61
 			Identifier: 24.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 67
 			Identifier: 24.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m2
 			Identifier: 64
 			Identifier: 21.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 58
 			Identifier: 21.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -88,18 +105,23 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8961
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROP
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
@@ -121,9 +143,11 @@ def 0:
 				Dialogue: Hmm... This isn't working.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
@@ -163,9 +187,11 @@ def 0:
 				Dialogue: I said we'd search for the [CS:P]Hidden Land[CR], but...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -194,9 +220,11 @@ def 0:
 				Dialogue: We have to hurry too. Ugh!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -279,37 +307,47 @@ def 0:
 				Dialogue: (That's it.[K] I'll tell [partner].)
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 15
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: se_Play
 		Argument: 8962
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -331,21 +369,31 @@ def 0:
 			Value: default
 				Dialogue: Hm? What is it, [hero]?
 	Label: @label_2
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SWEAT_DROP
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: CORO_EXPLANATION_FUNC_SERIES
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -360,13 +408,36 @@ def 0:
 		Argument: case
 		Argument: 1
 		Dialogue: Huh? That was a mistake?
+		Argument: case
+		Argument: 2
+		Dialogue: What? That was a mistake?
+		Argument: default
+		Dialogue: Pardon? That was a mistake?
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: All right. Then where were you going to suggest?
+		Argument: case
+		Argument: 2
+		Dialogue: OK. Then where were you going to suggest?
+		Argument: default
+		Dialogue: OK. Then where were you going to suggest?
+		Argument: continue
+		Argument: case
+		Argument: menu
+		Dialogue: Let's go to [CS:N]Wigglytuff[CR]'s Guild!
+		Argument: break_loop
+		Argument: break
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8974
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -603,65 +674,97 @@ def 0:
 		Case:
 			Value: default
 				Dialogue: (But...!)
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 71
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 71
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 2
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 67
 			Identifier: 24.5
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 67
 			Identifier: 24.5
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 160
 		Argument: 0
 		Argument: bgm2_FadeOut
@@ -683,3 +786,83 @@ def 0:
 		Argument: case
 		Argument: menu
 		Dialogue: I don't know...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: ...You're right.[K] We can tell everyone about what we went through.
+		Argument: case
+		Argument: 2
+		Dialogue: ...You're right.[K] We can tell everyone about what we experienced.
+		Argument: default
+		Dialogue: ...You're right.[K] We can tell everyone about what we went through.
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: But there's no telling if they'd believe us or not.
+		Argument: case
+		Argument: 2
+		Dialogue: But there's no telling if they would believe us or not.
+		Argument: default
+		Dialogue: But there's no telling if they would believe us or not.
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: I mean, everyone in this world is convinced that [CS:N]Grovyle[CR] is the villain.
+		Argument: case
+		Argument: 2
+		Dialogue: After all, everyone in this world is convinced that [CS:N]Grovyle[CR] is the villain.
+		Argument: default
+		Dialogue: I mean, everyone in this world is convinced that [CS:N]Grovyle[CR] is the villain.
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: And they think [CS:N]Dusknoir[CR] is a really good Pokémon.
+		Argument: case
+		Argument: 2
+		Dialogue: And they think [CS:N]Dusknoir[CR] is a really good Pokémon.
+		Argument: default
+		Dialogue: And they think [CS:N]Dusknoir[CR] is a really good Pokémon.
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: Everyone especially thinks highly of [CS:N]Dusknoir[CR].
+		Argument: case
+		Argument: 2
+		Dialogue: Everyone especially thinks highly of [CS:N]Dusknoir[CR].
+		Argument: default
+		Dialogue: Everyone especially respects [CS:N]Dusknoir[CR].
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: I saw the future...[K] But I still didn't want to believe the truth about [CS:N]Dusknoir[CR].
+		Argument: case
+		Argument: 2
+		Dialogue: I saw the future...[K] But I still didn't want to believe the truth about [CS:N]Dusknoir[CR].
+		Argument: default
+		Dialogue: I saw the future...[K] But I still didn't want to believe the truth about [CS:N]Dusknoir[CR].
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: If we tell everyone the truth, I wonder if they'd be able to accept it.
+		Argument: case
+		Argument: 2
+		Dialogue: Even if we were to tell everyone the truth, I wonder if they would be able to accept it.
+		Argument: default
+		Dialogue: If we tell everyone the truth, I wonder if they would be able to accept it.
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Argument: jump
+		Argument: label_5

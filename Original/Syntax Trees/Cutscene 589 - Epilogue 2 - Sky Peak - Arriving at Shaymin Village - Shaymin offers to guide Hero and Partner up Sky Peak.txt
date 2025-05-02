@@ -21,21 +21,28 @@ def 0:
 		Argument: 7
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
+		Identifier: SetPositionInitial
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Identifier: SetPositionInitial
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KUCHIITO
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KUCHIITO
+		Argument: 2
+		Identifier: MovePositionOffset
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 0
 	Identifier: 180
 		Argument: 0
 	Identifier: bgm_PlayFadeIn
@@ -50,6 +57,7 @@ def 0:
 	Identifier: screen_FadeOut
 		Argument: 1
 		Argument: 30
+		Identifier: SetPositionMark
 		Template
 			Type: performer
 			Identifier: 0
@@ -62,29 +70,39 @@ def 0:
 		Argument: 30
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 43
 			Identifier: 42.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m2
 			Identifier: 38.5
 			Identifier: 42.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
@@ -115,12 +133,16 @@ def 0:
 			Value: default
 				Dialogue: It's so peaceful...
 	Identifier: message_Close
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
@@ -129,18 +151,24 @@ def 0:
 		Argument: 15
 	Identifier: se_Play
 		Argument: 8978
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_SHEIMI
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 40.5
@@ -163,9 +191,11 @@ def 0:
 		Dialogue: Then again, all the residents of this village are [CS:N]Shaymin[CR]...[K] That makes it hard to tell us apart, doesn't it?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_LAUGHING
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -183,9 +213,11 @@ def 0:
 			Value: default
 				Dialogue: Ha ha ha!
 	Identifier: message_KeyWait
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -288,10 +320,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -360,9 +395,11 @@ def 0:
 				Dialogue: Really? I'm not sure I fully understand, but I think there's a little more to it than that.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Argument: EFFECT_LAUGHING
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_SHEIMI
@@ -372,9 +409,11 @@ def 0:
 		Dialogue: That's right.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Argument: EFFECT_NONE
 	Identifier: 3
 	Identifier: Wait
 		Argument: 10
@@ -390,9 +429,11 @@ def 0:
 		Dialogue: For some reason, while talking to you, Team [team:], I've begun to really want to climb the mountain with you.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -413,16 +454,20 @@ def 0:
 				Dialogue: Really? Why, thank you! I was thinking that too.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -441,9 +486,12 @@ def 0:
 			Value: default
 				Dialogue: Hey, [hero]? What do you think? Should we let [CS:N]Shaymin[CR] join us?
 	Label: @label_2
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED_MIRRORED
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -458,12 +506,44 @@ def 0:
 		Argument: case
 		Argument: 1
 		Dialogue: Whaat?! Really?!
+		Argument: case
+		Argument: 2
+		Dialogue: Whaat?! Really?!
+		Argument: default
+		Dialogue: Whaat?! Really?!
+		Argument: message_SetFace
+		Argument: ACTOR_ATTENDANT1
+		Argument: FACE_SAD
+		Argument: FACE_POS_STANDARD
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: Don't you think it would definitely be better if we had a guide?
+		Argument: case
+		Argument: 2
+		Dialogue: Don't you think it would be better if we had a guide?
+		Argument: default
+		Dialogue: Don't you think it would be better if we had a guide?
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: We should ask [CS:N]Shaymin[CR] to guide us, OK?
+		Argument: case
+		Argument: 2
+		Dialogue: I really think we should ask [CS:N]Shaymin[CR] to guide us. OK?
+		Argument: default
+		Dialogue: I really think we should ask [CS:N]Shaymin[CR] to guide us. OK?
+		Argument: continue
 	Label: @label_0
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Argument: EFFECT_LAUGHING
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_SHEIMI
@@ -473,20 +553,26 @@ def 0:
 		Dialogue: Hee hee hee. Yay!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Argument: EFFECT_NONE
 	Identifier: 3
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: message_SetFace
@@ -502,9 +588,11 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: See you later!
 	Identifier: message_Close
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Argument: 1
 	Identifier: 0
 		Argument: 88
 	Identifier: WaitExecuteLives
@@ -512,6 +600,7 @@ def 0:
 	Identifier: screen_FadeOut
 		Argument: 1
 		Argument: 60
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
@@ -519,23 +608,33 @@ def 0:
 			Identifier: m4
 			Identifier: 45
 			Identifier: 16.5
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SHEIMI
+		Argument: DIR_DOWN
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KINOGASSA
+		Argument: EFFECT_NONE
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_OKUTAN
+		Argument: EFFECT_NONE
 	Identifier: 3
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_BARIYAADO
+		Argument: 2
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KINOGASSA
+		Argument: DIR_DOWN
 	Identifier: camera_SetDefault
 	Identifier: Wait
 		Argument: 30

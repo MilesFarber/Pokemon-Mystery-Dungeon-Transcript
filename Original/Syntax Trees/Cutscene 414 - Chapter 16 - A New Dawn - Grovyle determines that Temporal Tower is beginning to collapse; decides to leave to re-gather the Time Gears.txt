@@ -4,6 +4,7 @@ def 0:
 		Argument: LEVEL_H02P99A
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -20,33 +21,43 @@ def 0:
 		Argument: 1
 	Identifier: Wait
 		Argument: 10
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 34.5
 			Identifier: 21
 	Identifier: se_Play
 		Argument: 8978
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_JUPUTORU
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
@@ -76,9 +87,11 @@ def 0:
 		Dialogue: What's the word?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: WaitExecuteLives
@@ -165,14 +178,19 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8967
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: EFFECT_SHOCKED_MIRRORED
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -226,19 +244,24 @@ def 0:
 		Dialogue: [CS:P]Temporal Tower[CR] is starting to collapse.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
 	Identifier: se_Play
 		Argument: 8962
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -277,14 +300,19 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8968
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -389,16 +417,20 @@ def 0:
 				Dialogue: OK.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Switch:
@@ -414,24 +446,31 @@ def 0:
 				Dialogue: Is that OK, [hero]?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_JUPUTORU
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 71
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 2
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_JUPUTORU
 		Argument: FACE_NORMAL
@@ -440,16 +479,20 @@ def 0:
 		Dialogue: OK then. You're in charge.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: message_Talk
@@ -490,49 +533,63 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: Well, I'll be off to gather the Time Gears.[K] Good luck.
 	Identifier: message_Close
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 34.5
 			Identifier: 17.5
 	Identifier: Wait
 		Argument: 10
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 15
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_JUPUTORU
+		Identifier: Destroy
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPUTORU
 	Identifier: Wait
 		Argument: 90
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 2
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -580,10 +637,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8961
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROP
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -606,9 +666,11 @@ def 0:
 				Dialogue: So...[K]where should we begin looking?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: WaitExecuteLives
@@ -628,9 +690,11 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: Wait
 		Argument: 30
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives

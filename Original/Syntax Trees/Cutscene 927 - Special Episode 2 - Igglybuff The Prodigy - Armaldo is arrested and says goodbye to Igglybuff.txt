@@ -8,6 +8,7 @@ def 0:
 		Argument: LEVEL_P22P01A
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -20,25 +21,33 @@ def 0:
 		Argument: 256
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 23.5
 			Identifier: 17.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 27.5
 			Identifier: 17.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_LAUGHING
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_PLAYER_PUPURIN
@@ -48,21 +57,27 @@ def 0:
 		Dialogue: Uwaaaahhh. ♪
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_NONE
 	Identifier: 3
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_PUPURIN
 	Identifier: Wait
 		Argument: 15
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_AAMARUDO
 	Identifier: WaitExecuteLives
@@ -75,9 +90,11 @@ def 0:
 		Dialogue: Hey, Master.[K] This is outside. ♪
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER_PUPURIN
 	Identifier: WaitExecuteLives
@@ -90,9 +107,11 @@ def 0:
 		Dialogue: It looks like once you leave the ravine, it connects to this place.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_AAMARUDO
@@ -106,9 +125,11 @@ def 0:
 		Dialogue: Don't tell me that this is...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -117,10 +138,13 @@ def 0:
 		Argument: 30
 	Identifier: se_Play
 		Argument: 8965
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
@@ -134,16 +158,20 @@ def 0:
 		Dialogue: Oh! Master!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER_PUPURIN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_PUPURIN
@@ -154,9 +182,11 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: Look over there!
 	Identifier: message_Close
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -165,12 +195,14 @@ def 0:
 		Argument: 4
 	Identifier: back2_SetGround
 		Argument: LEVEL_V33P01A
+		Identifier: Position
 		Template
 			Type: m2
 			Identifier: 16
 			Identifier: 23.5
 	Identifier: Wait
 		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 16
@@ -193,9 +225,11 @@ def 0:
 		Dialogue: I knew it. This is...[K]an ancient city that's been buried by time, I believe.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_PUPURIN
@@ -209,9 +243,11 @@ def 0:
 		Dialogue: I bet there's a bunch of treasure over there. ♪
 	Identifier: message_Talk
 		Dialogue: Hurry, let's go! ♪ So excited! ♪
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -222,18 +258,24 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: Oh.
 	Identifier: message_Close
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 23.5
 			Identifier: 16.5
 	Identifier: Wait
 		Argument: 5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 27.5
@@ -242,13 +284,17 @@ def 0:
 		Argument: ACTOR_NPC_AAMARUDO
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: bgm_FadeOut
 		Argument: 10
@@ -257,26 +303,36 @@ def 0:
 		Dialogue: Wait!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m6
 			Identifier: 25.5
 			Identifier: 25.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m7
 			Identifier: 25.5
@@ -295,10 +351,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8967
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
@@ -315,78 +374,108 @@ def 0:
 		Dialogue: What...[K] What did you say?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m8
 			Identifier: 21.5
 			Identifier: 26
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m9
 			Identifier: 19.5
 			Identifier: 26
 	Identifier: Wait
 		Argument: 10
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m10
 			Identifier: 29.5
 			Identifier: 25
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m11
 			Identifier: 27.5
 			Identifier: 27
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m12
 			Identifier: 31.5
 			Identifier: 27
 	Identifier: Wait
 		Argument: 10
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m13
 			Identifier: 16.5
 			Identifier: 27
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m14
 			Identifier: 19.5
 			Identifier: 28
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m15
 			Identifier: 22.5
 			Identifier: 28
 	Identifier: Wait
 		Argument: 5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m16
 			Identifier: 30.5
 			Identifier: 29
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m17
 			Identifier: 33.5
@@ -395,16 +484,21 @@ def 0:
 		Argument: ACTOR_NPC_SUKORUPI
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
@@ -425,9 +519,11 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8972
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_PUKURIN_MAMA
@@ -441,10 +537,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8962
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_QUESTION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
@@ -465,9 +564,11 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8975
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_MUCHUURU
@@ -494,9 +595,11 @@ def 0:
 		Dialogue: What?[K] An outlaw?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_UPAA
@@ -511,9 +614,11 @@ def 0:
 		Dialogue: A bad guy! That's what that Pokémon is!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_AAMARUDO
 	Identifier: WaitExecuteLives
@@ -535,9 +640,11 @@ def 0:
 		Argument: FACE_POS_BOTTOM_L_CENTER
 	Identifier: message_Talk
 		Dialogue: That's right.
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: message_Talk
@@ -550,16 +657,20 @@ def 0:
 		Dialogue: In order to catch [CS:N]Armaldo[CR], I came here.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 0
 	Identifier: 0
 		Argument: 8
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_JIBAKOIRU
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecuteLives
@@ -570,13 +681,16 @@ def 0:
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
 		Dialogue: ZZZT! [CS:N]Nidoking[CR] is telling the truth. ZZZT!
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: message_Talk
 		Dialogue: ZZZT! [CS:N]Armaldo[CR] is a
+		Dialogue: rank outlaw...
 	Identifier: message_Talk
 		Dialogue: We've been searching the entire region for him. ZZZT!
 	Identifier: message_Talk
@@ -604,9 +718,11 @@ def 0:
 		Dialogue: So.[K] Let the kid go, [CS:N]Armaldo[CR].
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
@@ -624,18 +740,23 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m18
 			Identifier: 27.5
 			Identifier: 20
 	Identifier: Wait
 		Argument: 7
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: bgm_PlayFadeIn
@@ -657,41 +778,55 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m19
 			Identifier: 23.5
 			Identifier: 20.5
 	Identifier: Wait
 		Argument: 10
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m20
 			Identifier: 27.5
 			Identifier: 23
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m21
 			Identifier: 25.5
 			Identifier: 24
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m22
 			Identifier: 29.5
 			Identifier: 24
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_JIBAKOIRU
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -707,9 +842,11 @@ def 0:
 		Dialogue: Kid.[K] It's all right.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
@@ -725,25 +862,32 @@ def 0:
 		Dialogue: To drag a kid into this...[K] You're the lowest.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 0
 	Identifier: 8
 		Argument: 0
 	Identifier: se_Play
 		Argument: 8967
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_PUPURIN
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_PUPURIN
@@ -765,9 +909,11 @@ def 0:
 		Argument: 0
 	Identifier: message_Talk
 		Dialogue: And...[K] Master isn't a bad Pokémon!
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -782,9 +928,11 @@ def 0:
 		Dialogue: ZZZT! All right, let's finish this! ZZZT!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 0
 	Identifier: 0
 		Argument: 4
 	Identifier: WaitExecuteLives
@@ -802,61 +950,82 @@ def 0:
 		Dialogue: Please...[K] Listen to me...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m23
 			Identifier: 27.5
 			Identifier: 19
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m24
 			Identifier: 25.5
 			Identifier: 21.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m25
 			Identifier: 29.5
 			Identifier: 21.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_KOIRU2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_KOIRU2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: Wait
 		Argument: 5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: message_SetFace
@@ -870,43 +1039,57 @@ def 0:
 		Dialogue: Hurry up! Move it!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 0
 	Identifier: 0
 		Argument: 24
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 0
 	Identifier: 0
 		Argument: 24
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 0
 	Identifier: 0
 		Argument: 24
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 0
 	Identifier: 0
 		Argument: 24
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 0
 	Identifier: 0
 		Argument: 24
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_PUPURIN
 	Identifier: Wait
 		Argument: 60
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 9
 	Identifier: message_SetFace
 		Argument: ACTOR_PLAYER_PUPURIN
 		Argument: FACE_TEARY_EYED
@@ -916,19 +1099,25 @@ def 0:
 		Argument: 0
 	Identifier: message_Talk
 		Dialogue: ...OOOOOooooooooo... OOOOoooooooooooOOOOOoooooooo...
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_RIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_RIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: bgm_FadeOut
@@ -951,105 +1140,147 @@ def 0:
 		Argument: 0
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 25
 	Identifier: message_CloseEnforce
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: CORO_LOOK_AROUND_RIGHT_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 10
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 7
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: CORO_LOOK_AROUND_FAST_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 7
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 5
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 7
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: CORO_LOOK_AROUND_FAST_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: CORO_LOOK_AROUND_RIGHT_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: CORO_LOOK_AROUND_FAST_FUNC_SERIES
 	Identifier: 0
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_KOIRU
@@ -1077,59 +1308,81 @@ def 0:
 		Argument: 0
 	Identifier: Wait
 		Argument: 30
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: CORO_LOOK_AROUND_RIGHT_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 10
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 7
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: CORO_LOOK_AROUND_FAST_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: CORO_LOOK_AROUND_FAST_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 7
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 5
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
 	Identifier: Wait
 		Argument: 7
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: CORO_LOOK_AROUND_FAST_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: CORO_LOOK_AROUND_RIGHT_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: CORO_LOOK_AROUND_FAST_FUNC_SERIES
 	Identifier: 0
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_NIDOKINGU
@@ -1155,67 +1408,93 @@ def 0:
 		Argument: 30
 	Identifier: se_Play
 		Argument: 6917
+		Identifier: SetEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Argument: 244
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_LEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecutePerformer
 		Argument: 3
+		Identifier: SetPositionMark
 		Template
 			Type: performer
 			Identifier: 3
@@ -1225,68 +1504,94 @@ def 0:
 			Identifier: 16.5
 	Identifier: se_Play
 		Argument: 6917
+		Identifier: SetEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Argument: 244
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecutePerformer
 		Argument: 3
+		Identifier: SetPositionMark
 		Template
 			Type: performer
 			Identifier: 3
@@ -1296,78 +1601,111 @@ def 0:
 			Identifier: 18.5
 	Identifier: se_Play
 		Argument: 6917
+		Identifier: SetEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Argument: 244
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 5
+		Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 2
 	Identifier: 24
 		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_NIDOKINGU
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_LEFT
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecutePerformer
@@ -1423,14 +1761,18 @@ def 0:
 		Argument: 30
 	Identifier: Wait
 		Argument: 30
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 2
 	Identifier: Wait
 		Argument: 30
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: WaitExecuteLives
@@ -1446,67 +1788,89 @@ def 0:
 		Dialogue: ...Huh?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: Wait
 		Argument: 5
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: Wait
 		Argument: 5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: Wait
 		Argument: 5
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_AAMARUDO
 	Identifier: Wait
 		Argument: 5
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_AAMARUDO
 	Identifier: message_SetFace
@@ -1559,9 +1923,11 @@ def 0:
 		Dialogue: I've been with you this long, I know that!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_JIBAKOIRU
 	Identifier: WaitExecuteLives
@@ -1606,92 +1972,125 @@ def 0:
 		Dialogue: ZZZT! ...[K]Understood. ZZZT!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 0
 	Identifier: 12
 		Argument: 0
+		Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 0
 	Identifier: 12
 		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_KOIRU2
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionOffset
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 0
 	Identifier: 0
 		Argument: 32
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m28
 			Identifier: 26
 			Identifier: 18.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecuteLives
@@ -1717,9 +2116,11 @@ def 0:
 		Dialogue: I'm a bad guy.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_PUPURIN
@@ -1783,9 +2184,11 @@ def 0:
 		Dialogue: So you...[K] You can't be with me.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_PUPURIN
@@ -1805,30 +2208,38 @@ def 0:
 		Dialogue: I thought you were going to teach me even more as we kept on exploring!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 1
 	Identifier: 1
 		Argument: 0
 	Identifier: Wait
 		Argument: 3
+		Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 1
 	Identifier: 1
 		Argument: 0
 	Identifier: Wait
 		Argument: 3
+		Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 1
 	Identifier: 1
 		Argument: 0
 	Identifier: Wait
 		Argument: 3
+		Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 1
 	Identifier: 1
 		Argument: 0
 	Identifier: Wait
@@ -1852,9 +2263,12 @@ def 0:
 		Dialogue: Junior.[K] Did you enjoy exploring?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 33
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
@@ -1866,9 +2280,11 @@ def 0:
 		Dialogue: Yeah...
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_PUPURIN
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 2
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
@@ -1896,9 +2312,11 @@ def 0:
 		Dialogue: M-Master...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 0
 	Identifier: 0
 		Argument: 12
 	Identifier: WaitExecuteLives
@@ -1914,42 +2332,55 @@ def 0:
 		Dialogue: ZZZT! It's about time. ZZZT!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_AAMARUDO
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionOffset
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 0
 	Identifier: 0
 		Argument: 32
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m29
 			Identifier: 26
 			Identifier: 21.5
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 0
 	Identifier: 8
 		Argument: 8
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
@@ -1962,9 +2393,11 @@ def 0:
 		Dialogue: D-don't go!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -1996,9 +2429,11 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8972
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_PLAYER_PUPURIN
@@ -2039,9 +2474,11 @@ def 0:
 		Dialogue: It's...[K] It's a promise!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
@@ -2054,227 +2491,318 @@ def 0:
 		Dialogue: Sorry to have kept you waiting.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m30
 			Identifier: 28.5
 			Identifier: 19.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m31
 			Identifier: 26
 			Identifier: 24
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m32
 			Identifier: 23.5
 			Identifier: 21.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m33
 			Identifier: 28.5
 			Identifier: 21.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_KOIRU2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 4
 	Identifier: 2
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_KOIRU2
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 0
 	Identifier: 0
 		Argument: 64
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 0
 	Identifier: 0
 		Argument: 64
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 0
 	Identifier: 0
 		Argument: 64
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 0
 	Identifier: 0
 		Argument: 64
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 0
 	Identifier: 0
 		Argument: 64
 	Identifier: Wait
 		Argument: 45
+		Identifier: MovePositionOffset
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 0
 	Identifier: 0
 		Argument: 32
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 5
+		Identifier: Slide2PositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 0
 	Identifier: 8
 		Argument: 8
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 5
+		Identifier: Slide2PositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 0
 	Identifier: 8
 		Argument: 8
 	Identifier: Wait
 		Argument: 10
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 5
+		Identifier: Slide2PositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 0
 	Identifier: 8
 		Argument: 8
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 5
+		Identifier: Slide2PositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 0
 	Identifier: 16
 		Argument: 16
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PUKURIN_PAPA
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 5
+		Identifier: Slide2PositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 0
 	Identifier: 16
 		Argument: 16
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PUKURIN_MAMA
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_UPAA
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_MUCHUURU
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_SUBOMII
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_RIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_LEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_LEFT
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 5
+		Identifier: Slide2PositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 0
 	Identifier: 8
 		Argument: 8
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 5
+		Identifier: Slide2PositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 0
 	Identifier: 16
 		Argument: 16
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_SUKORUPI
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 2
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_JUPETTA
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 2
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m34
 			Identifier: 26
@@ -2283,9 +2811,11 @@ def 0:
 		Argument: ACTOR_PLAYER_PUPURIN
 	Identifier: se_Play
 		Argument: 8972
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_PLAYER_PUPURIN
@@ -2298,66 +2828,90 @@ def 0:
 		Dialogue: Master![K] Master!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: message_SetFace
@@ -2368,9 +2922,12 @@ def 0:
 		Dialogue: Take this!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 24
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
@@ -2378,24 +2935,33 @@ def 0:
 		Argument: 15
 	Identifier: se_Play
 		Argument: 9737
+		Identifier: SetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 2
 	Identifier: supervision_Acting
 		Argument: 1
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P22P01A1_376
+		Argument: 17
+		Identifier: MovePositionOffset
 		Template
 			Type: object
 			Identifier: OBJECT_P22P01A1_376
+		Argument: 1
 	Identifier: 0
 		Argument: 52
 	Identifier: WaitExecuteObject
 		Argument: OBJECT_P22P01A1_376
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 32
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
@@ -2403,9 +2969,11 @@ def 0:
 		Argument: ACTOR_PLAYER_PUPURIN
 	Identifier: Wait
 		Argument: 60
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 2
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_AAMARUDO
 		Argument: FACE_NORMAL
@@ -2414,137 +2982,186 @@ def 0:
 		Dialogue: Be seeing you.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Destroy
 		Template
 			Type: object
 			Identifier: OBJECT_P22P01A1_376
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_AAMARUDO
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_JIBAKOIRU
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_NIDOKINGU
+		Argument: 0
 	Identifier: 0
 		Argument: 180
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_AAMARUDO
+		Argument: 0
 	Identifier: 0
 		Argument: 180
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JIBAKOIRU
+		Argument: 0
 	Identifier: 0
 		Argument: 180
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU
+		Argument: 0
 	Identifier: 0
 		Argument: 180
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_KOIRU2
+		Argument: 0
 	Identifier: 0
 		Argument: 180
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 3
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 3
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: Wait
 		Argument: 3
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_DOWN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 32
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 0
 	Identifier: 0
 		Argument: 12
 	Identifier: Wait
@@ -2559,13 +3176,17 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: MASTER!
 	Identifier: message_Close
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
 	Identifier: 3
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 30
 	Identifier: message_SetFace
 		Argument: ACTOR_PLAYER_PUPURIN
 		Argument: FACE_CRYING
@@ -2576,138 +3197,185 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: WAAAAAAAAAaaaaaaaaaaahhhhh!
 	Identifier: message_Close
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: Wait
 		Argument: 10
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 3
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: Wait
 		Argument: 7
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: Wait
 		Argument: 3
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: Wait
 		Argument: 30
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m35
 			Identifier: 27.5
 			Identifier: 25.5
 	Identifier: Wait
 		Argument: 5
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m36
 			Identifier: 24.5
 			Identifier: 25.5
 	Identifier: Wait
 		Argument: 10
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m37
 			Identifier: 24.5
 			Identifier: 27.5
 	Identifier: Wait
 		Argument: 5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m38
 			Identifier: 21.5
 			Identifier: 26.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_UPAA
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m39
 			Identifier: 20.5
 			Identifier: 24.5
 	Identifier: Wait
 		Argument: 10
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m40
 			Identifier: 28.5
 			Identifier: 27.5
 	Identifier: Wait
 		Argument: 5
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m41
 			Identifier: 30.5
 			Identifier: 25.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUBOMII
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MUCHUURU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_JUPETTA
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SUKORUPI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecuteLives

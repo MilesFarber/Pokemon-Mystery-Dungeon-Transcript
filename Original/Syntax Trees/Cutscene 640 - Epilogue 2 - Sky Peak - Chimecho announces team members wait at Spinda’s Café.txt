@@ -8,17 +8,22 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 1
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
 	Identifier: Wait
 		Argument: 1
+		Identifier: SetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 128
+		Identifier: SetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 128
 	Identifier: screen_FadeIn
 		Argument: 1
 		Argument: 30
@@ -28,57 +33,77 @@ def 0:
 		Argument: 256
 	Identifier: Wait
 		Argument: 30
+		Identifier: ResetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 128
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 29.5
 			Identifier: 29.5
 	Identifier: Wait
 		Argument: 15
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 27
 			Identifier: 25.5
 	Identifier: Wait
 		Argument: 20
+		Identifier: ResetOutputAttribute
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 128
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m2
 			Identifier: 25
 			Identifier: 29.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: se_Play
 		Argument: 8978
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
@@ -94,9 +119,11 @@ def 0:
 		Dialogue: Were you just at the café?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_CHIRIIN
@@ -125,75 +152,111 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_EXCLAMATION_MARK
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 34
 			Identifier: 19.5
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 27
 			Identifier: 23.5
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 35
 			Identifier: 23.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m6
 			Identifier: 34.5
 			Identifier: 24.5
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m7
 			Identifier: 29
 			Identifier: 25.5
+		Identifier: Position
 		Template
 			Type: m8
 			Identifier: 31
 			Identifier: 23
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -201,6 +264,7 @@ def 0:
 			Identifier: m9
 			Identifier: 34.5
 			Identifier: 24.5
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -208,51 +272,79 @@ def 0:
 			Identifier: m10
 			Identifier: 31
 			Identifier: 24.5
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: DIR_UP
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_SHOCKED
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_CHIRIIN
@@ -264,3 +356,54 @@ def 0:
 		Argument: FACE_POS_TOP_C_FACER
 		Argument: message_Talk
 		Dialogue: Are you making fun of me, [hero]? You are! I know it!
+		Argument: message_Talk
+		Dialogue: You said
+		Argument: No
+		Dialogue: to see how I'd react, didn't you?
+		Argument: message_SetFace
+		Argument: ACTOR_NPC_CHIRIIN
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_TOP_C_FACER
+		Argument: message_Talk
+		Dialogue: ...[K]I understand how you feel...
+		Argument: message_Talk
+		Dialogue: Even if you select a
+		Argument: No
+		Argument: you
+		Argument: eventually
+		Argument: have
+		Argument: to
+		Argument: select
+		Argument: the
+		Argument: Yes
+		Argument: so
+		Argument: it
+		Argument: always
+		Argument: ends
+		Argument: up
+		Argument: the
+		Argument: same
+		Argument: anyway
+		Argument: message_Talk
+		Dialogue: That comes up frequently, that sort of thing...[K] But...
+		Argument: message_Talk
+		Dialogue: I'll ask you again, [hero].
+		Argument: message_Talk
+		Dialogue: Would you like to meet up with your team members waiting at the café?
+		Argument: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Dialogue: OK!
+		Argument: default
+		Argument: break_loop
+		Argument: break
+		Argument: case
+		Argument: menu
+		Dialogue: No way.
+		Argument: continue
+		Argument: break
+		Argument: jump
+		Argument: label_0

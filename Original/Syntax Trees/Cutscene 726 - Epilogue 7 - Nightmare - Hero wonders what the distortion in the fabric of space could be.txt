@@ -6,6 +6,7 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -45,9 +46,23 @@ def 0:
 		Case:
 			Value: 4
 				Dialogue: (But what does
+			Identifier: a
+				Argument: distortion
+				Argument: in
+				Argument: the
+				Argument: fabric
+				Argument: of
+				Dialogue: mean?)
 		Case:
 			Value: default
 				Dialogue: (But what does
+			Identifier: a
+				Argument: distortion
+				Argument: in
+				Argument: the
+				Argument: fabric
+				Argument: of
+				Dialogue: mean?)
 	Switch:
 		Variable: $HERO_TALK_KIND
 		Case:
@@ -82,13 +97,17 @@ def 0:
 		Argument: 2
 		Argument: 0
 		Argument: 192
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -96,9 +115,11 @@ def 0:
 		Argument: 10
 	Identifier: se_Play
 		Argument: 6425
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
@@ -120,9 +141,11 @@ def 0:
 				Dialogue: Waah! Lightning!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
@@ -155,17 +178,22 @@ def 0:
 				Dialogue: We should get some sleep now.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 71
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 2
 	Identifier: Wait
 		Argument: 30
 	Switch:

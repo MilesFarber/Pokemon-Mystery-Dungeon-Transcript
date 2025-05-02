@@ -3,6 +3,7 @@ def 0:
 		Argument: LEVEL_G01P03A
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -17,9 +18,12 @@ def 0:
 		Argument: 1
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 34
@@ -30,9 +34,12 @@ def 0:
 		Argument: 2
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 29.5
@@ -43,39 +50,51 @@ def 0:
 		Argument: 3
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m2
 			Identifier: 33.5
 			Identifier: 30.5
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 31.5
 			Identifier: 28.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PERAPPU
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -97,9 +116,11 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: We'll have you start off with this assignment. ♪
 	Identifier: message_Close
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
 	Identifier: 1
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -107,9 +128,11 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: This is the Job Bulletin Board. Pokémon from various regions post job requests here.
 	Identifier: message_Close
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
 	Identifier: 2
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
@@ -212,9 +235,11 @@ def 0:
 				Dialogue: (Mystery dungeons?!)
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 1
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
@@ -236,9 +261,11 @@ def 0:
 				Dialogue: So, [hero]!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 2
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
@@ -339,17 +366,22 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 5122
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 18
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PERAPPU
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_PERAPPU
 		Argument: FACE_NORMAL
@@ -358,16 +390,20 @@ def 0:
 		Dialogue: Well! You're quite informed, aren't you! ♪
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -382,9 +418,11 @@ def 0:
 		Dialogue: Jobs all take place in mystery dungeons.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
 	Identifier: 1
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -401,18 +439,23 @@ def 0:
 		Argument: 30
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PERAPPU
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
 	Identifier: 2
 		Argument: DIR_DOWN
 	Identifier: WaitExecuteLives
@@ -424,19 +467,25 @@ def 0:
 	Conditional
 		Type: If
 	Label: @label_0
+		Identifier: Move2PositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
 	Identifier: 16
 		Argument: 16
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecuteLives
@@ -445,29 +494,39 @@ def 0:
 		Argument: 5124
 	Identifier: Wait
 		Argument: 45
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 5
+		Identifier: SlidePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 1
 	Identifier: 16
 		Argument: 16
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PERAPPU
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: Wait
 		Argument: 20
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: bgm_FadeOut
@@ -491,22 +550,134 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_Mail
 		Dialogue: \
+		Argument: Hello
+		Argument: My
+		Argument: name
+		Argument: is
+		Argument: CS
+		Argument: N
+		Argument: Spoink
+		Argument: CR
 	Identifier: message_Mail
 		Dialogue: 
+		Argument: An
+		Argument: outlaw
+		Argument: has
+		Argument: run
+		Argument: off
+		Argument: with
+		Argument: my
+		Argument: most
+		Argument: prized
+		Argument: possession
+		Argument: My
+		Argument: precious
+		Argument: pearl
 	Identifier: message_Mail
 		Dialogue: \
+		Argument: That
+		Argument: pearl
+		Argument: is
+		Argument: life
+		Argument: itself
+		Argument: to
+		Argument: me
 	Identifier: message_Mail
 		Dialogue: 
+		Argument: I
+		Argument: just
+		Argument: can
+		Argument: t
+		Argument: seem
+		Argument: to
+		Argument: settle
+		Argument: down
+		Argument: if
+		Argument: that
+		Argument: pearl
+		Argument: isn
+		Argument: t
+		Argument: in
+		Argument: its
+		Argument: proper
+		Argument: place
+		Argument: atop
+		Argument: my
+		Argument: head
 	Identifier: message_Mail
 		Dialogue: \
+		Argument: But
+		Argument: I
+		Argument: ve
+		Argument: heard
+		Argument: my
+		Argument: pearl
+		Argument: has
+		Argument: been
+		Argument: sighted
 	Identifier: message_Mail
 		Dialogue: 
+		Argument: It
+		Argument: s
+		Argument: said
+		Argument: to
+		Argument: be
+		Argument: on
+		Argument: a
+		Argument: rocky
+		Argument: bluff
+		Argument: But
+		Argument: this
+		Argument: bluff
+		Argument: is
+		Argument: reported
+		Argument: to
+		Argument: be
+		Argument: extremely
+		Argument: unsafe
 	Identifier: message_Mail
 		Dialogue: \
+		Argument: I
+		Argument: could
+		Argument: never
+		Argument: go
+		Argument: somewhere
+		Argument: so
+		Argument: frightening
 	Identifier: message_Mail
 		Dialogue: 
+		Argument: Oh
+		Argument: friendly
+		Argument: readers
+		Argument: Would
+		Argument: you
+		Argument: be
+		Argument: so
+		Argument: kind
+		Argument: as
+		Argument: to
+		Argument: go
+		Argument: to
+		Argument: the
+		Argument: bluff
+		Argument: and
+		Argument: get
+		Argument: my
+		Argument: pearl
 	Identifier: message_Mail
 		Dialogue: 
+		Argument: I
+		Argument: beg
+		Argument: your
+		Argument: help
+		Argument: exploration
+		Argument: team
+		Argument: members
+		Argument: From
+		Argument: CS
+		Argument: N
+		Argument: Spoink
+		Argument: CR
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_SetFace
@@ -528,15 +699,19 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8971
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_ANGRY_MIRRORED
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -554,9 +729,11 @@ def 0:
 			Value: default
 				Dialogue: We're going to fetch an item that someone dropped?
 	Identifier: message_KeyWait
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
 	Identifier: 3
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -592,20 +769,27 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 5122
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 18
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PERAPPU
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: message_SetFace
@@ -618,9 +802,11 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8974
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: message_SetFace
 		Argument: ACTOR_ATTENDANT1
@@ -657,17 +843,22 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 5122
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 18
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PERAPPU
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
 	Identifier: message_SetFace
 		Argument: ACTOR_NPC_PERAPPU
 		Argument: FACE_NORMAL
@@ -678,10 +869,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8961
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROP
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1

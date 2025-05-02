@@ -7,6 +7,7 @@ def 0:
 		Argument: LEVEL_P18P01A
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
@@ -16,9 +17,11 @@ def 0:
 	Identifier: screen_FadeIn
 		Argument: 1
 		Argument: 0
+		Identifier: SetEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Argument: EFFECT_VERY_HEAVY_RAIN
 	Identifier: 3
 	Identifier: screen_FadeInAll
 		Argument: 1
@@ -59,16 +62,22 @@ def 0:
 		Argument: 3
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 41.5
 			Identifier: 22.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 48
@@ -87,6 +96,7 @@ def 0:
 		Argument: 3
 	Identifier: supervision_Acting
 		Argument: 2
+		Identifier: SetPositionMark
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
@@ -94,51 +104,68 @@ def 0:
 			Identifier: m2
 			Identifier: 52.5
 			Identifier: 21.5
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
+		Argument: 17
+		Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
 	Identifier: supervision_Acting
 		Argument: 1
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A1_365
+		Argument: 17
+		Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A1_365
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PUKURIN_PAPA
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 9
 	Identifier: se_Play
 		Argument: 9489
 	Identifier: WaitExecuteObject
 		Argument: OBJECT_P18P01A2_366
+		Identifier: Destroy
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
 	Identifier: WaitExecuteObject
 		Argument: OBJECT_P18P01A1_365
+		Identifier: Destroy
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A1_365
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 1
 	Identifier: 2
 		Argument: ACTOR_PLAYER_PUPURIN
 	Identifier: WaitExecuteLives
@@ -153,9 +180,11 @@ def 0:
 		Dialogue: S-so...[K]scary...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 1
 	Identifier: 24
 		Argument: 0
 	Identifier: WaitExecuteLives
@@ -168,9 +197,11 @@ def 0:
 		Dialogue: Are you all right?! [CS:Y]Igglybuff[CR]?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 2
 	Identifier: Wait
 		Argument: 30
 	Identifier: message_SetFace
@@ -203,9 +234,12 @@ def 0:
 		Argument: 2
 	Identifier: supervision_Acting
 		Argument: 1
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A1_365
+		Argument: 17
+		Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A1_365
@@ -213,9 +247,12 @@ def 0:
 		Argument: 20
 	Identifier: supervision_Acting
 		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
+		Argument: 17
+		Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
@@ -223,19 +260,23 @@ def 0:
 		Argument: 10
 	Identifier: se_Play
 		Argument: 9489
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: CORO_LOOK_AROUND_RIGHT_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PUKURIN_PAPA
 	Identifier: WaitExecuteObject
 		Argument: OBJECT_P18P01A1_365
+		Identifier: Destroy
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A1_365
 	Identifier: WaitExecuteObject
 		Argument: OBJECT_P18P01A2_366
+		Identifier: Destroy
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
@@ -249,9 +290,11 @@ def 0:
 		Dialogue: We need to get off this mountain quickly...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER_PUPURIN
 	Identifier: WaitExecuteLives
@@ -272,25 +315,34 @@ def 0:
 		Dialogue: Yeah...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 34.5
 			Identifier: 21.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 32.5
 			Identifier: 22.5
 	Identifier: Wait
 		Argument: 10
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 37
@@ -299,6 +351,7 @@ def 0:
 		Argument: 0
 	Identifier: supervision_Acting
 		Argument: 2
+		Identifier: SetPositionMark
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
@@ -306,14 +359,18 @@ def 0:
 			Identifier: m6
 			Identifier: 42.5
 			Identifier: 18.5
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
+		Argument: 17
+		Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
 	Identifier: supervision_Acting
 		Argument: 1
+		Identifier: SetPositionMark
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A1_365
@@ -321,9 +378,12 @@ def 0:
 			Identifier: m7
 			Identifier: 26.5
 			Identifier: 16.5
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A1_365
+		Argument: 17
+		Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A1_365
@@ -347,21 +407,28 @@ def 0:
 	Identifier: screen_FadeIn
 		Argument: 1
 		Argument: 2
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 30
 	Identifier: se_Play
 		Argument: 9489
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 19
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
@@ -369,11 +436,13 @@ def 0:
 		Argument: ACTOR_PLAYER_PUPURIN
 	Identifier: WaitExecuteObject
 		Argument: OBJECT_P18P01A2_366
+		Identifier: Destroy
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A2_366
 	Identifier: WaitExecuteObject
 		Argument: OBJECT_P18P01A1_365
+		Identifier: Destroy
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A1_365
@@ -383,9 +452,11 @@ def 0:
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
 		Dialogue: Waaaaaaaahhh!!
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 1
 	Identifier: 10
 		Argument: ACTOR_PLAYER_PUPURIN
 	Identifier: WaitExecuteLives
@@ -394,18 +465,23 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8973
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: EFFECT_SHOCKED_MIRRORED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PUKURIN_PAPA
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 1
 	Identifier: 8
 		Argument: 0
 	Identifier: message_SetFace
@@ -420,9 +496,12 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: supervision_Acting
 		Argument: 3
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A4_368
+		Argument: 17
+		Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A4_368
@@ -432,9 +511,11 @@ def 0:
 		Argument: 4
 	Identifier: bgm_FadeOut
 		Argument: 5
+		Identifier: PauseEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Argument: EFFECT_VERY_HEAVY_RAIN
 	Identifier: message_Mail
 		Dialogue: [CN]And right then!
 	Identifier: message_Mail
@@ -447,12 +528,17 @@ def 0:
 		Argument: BGM_STORM
 		Argument: 10
 		Argument: 256
+		Identifier: ResumeEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Argument: EFFECT_VERY_HEAVY_RAIN
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 24
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
@@ -460,10 +546,13 @@ def 0:
 		Argument: ACTOR_NPC_PUKURIN_PAPA
 	Identifier: se_Play
 		Argument: 8968
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: EFFECT_SHOCKED_MIRRORED
 	Identifier: 0
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
@@ -471,9 +560,11 @@ def 0:
 		Argument: ACTOR_NPC_PUKURIN_PAPA
 	Identifier: se_Play
 		Argument: 9490
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 2
 	Identifier: message_SetWaitMode
 		Argument: 45
 		Argument: 0
@@ -485,9 +576,11 @@ def 0:
 		Dialogue: W-waaaaaaaahhhhhhh!!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: message_SetFace
 		Argument: ACTOR_PLAYER_PUPURIN
@@ -502,20 +595,28 @@ def 0:
 	Identifier: message_SetWaitMode
 		Argument: 1
 		Argument: 1
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A4_368
+		Argument: 18
 	Identifier: supervision_Acting
 		Argument: 4
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A3_367
+		Argument: 17
+		Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A3_367
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 19
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
@@ -527,9 +628,11 @@ def 0:
 		Argument: 4
 	Identifier: bgm_FadeOut
 		Argument: 5
+		Identifier: PauseEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Argument: EFFECT_VERY_HEAVY_RAIN
 	Identifier: message_Mail
 		Dialogue: [CN](It's no good!)[K] (I'm going to be crushed!)
 	Identifier: message_Mail
@@ -541,21 +644,27 @@ def 0:
 		Argument: BGM_STORM
 		Argument: 10
 		Argument: 256
+		Identifier: ResumeEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Argument: EFFECT_VERY_HEAVY_RAIN
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_P18P01A3_367
+		Argument: 18
 	Identifier: message_SetFace
 		Argument: ACTOR_PLAYER_PUPURIN
 		Argument: FACE_SHOUTING
 		Argument: FACE_POS_BOTTOM_R_FACEINW
 	Identifier: message_Talk
 		Dialogue: YOOM...TAH!!
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_PUPURIN
+		Argument: 17
 	Identifier: se_Play
 		Argument: 5143
 	Identifier: screen_WhiteOut
@@ -615,15 +724,20 @@ def 0:
 		Argument: 7435
 	Identifier: Wait
 		Argument: 60
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: 2
 	Identifier: se_Play
 		Argument: 8978
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_RIGHT
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
@@ -631,9 +745,11 @@ def 0:
 		Argument: ACTOR_NPC_PUKURIN_PAPA
 	Identifier: Wait
 		Argument: 45
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PUKURIN_PAPA
+		Argument: CORO_LOOK_AROUND_RIGHT_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_PUKURIN_PAPA
@@ -651,9 +767,11 @@ def 0:
 		Argument: 60
 	Identifier: CallCommon
 		Argument: CORO_FADE_OUT_ALL_AFTER
+		Identifier: SetEffect
 		Template
 			Type: performer
 			Identifier: 3
+		Argument: EFFECT_NONE
 	Identifier: 3
 	Identifier: Wait
 		Argument: 30

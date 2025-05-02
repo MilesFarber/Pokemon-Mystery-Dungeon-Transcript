@@ -1,18 +1,26 @@
 def 0:
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
@@ -43,6 +51,7 @@ def 0:
 		Case:
 			Value: default
 				Dialogue: Which way should we go?
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -50,6 +59,7 @@ def 0:
 			Identifier: m0
 			Identifier: 39.5
 			Identifier: 38.5
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -57,94 +67,139 @@ def 0:
 			Identifier: m1
 			Identifier: 35.5
 			Identifier: 38.5
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: DIR_LEFT
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_RIGHT
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 37.5
 			Identifier: 12.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 37.5
 			Identifier: 28.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m6
 			Identifier: 37.5
 			Identifier: 28.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m7
 			Identifier: 37.5
 			Identifier: 16.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m8
 			Identifier: 37.5
 			Identifier: 16.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Destroy
 		Template
 			Type: object
 			Identifier: OBJECT_D08P11A1_23
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_LAUGHING
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_NONE
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m9
 			Identifier: 37.5
 			Identifier: 1.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m10
 			Identifier: 37.5
 			Identifier: 1.5
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -152,6 +207,7 @@ def 0:
 			Identifier: m2
 			Identifier: 39.5
 			Identifier: 38.5
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -159,12 +215,16 @@ def 0:
 			Identifier: m3
 			Identifier: 35.5
 			Identifier: 38.5
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: DIR_LEFT
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_RIGHT
 	Identifier: screen_FadeInAll
 		Argument: 1
 		Argument: 30
@@ -173,3 +233,39 @@ def 0:
 		Argument: case
 		Argument: 1
 		Dialogue: All right. [CS:P]Forest Path[CR] it is.
+		Argument: case
+		Argument: 2
+		Dialogue: All right. [CS:P]Forest Path[CR] it is.
+		Argument: default
+		Dialogue: All right. [CS:P]Forest Path[CR] it is.
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: All right! Let's roll out!
+		Argument: case
+		Argument: 2
+		Dialogue: All right! Let's roll out!
+		Argument: default
+		Dialogue: All right! Let's roll out!
+		Argument: message_Close
+		Argument: jump
+		Argument: label_4
+		Argument: break
+		Argument: case
+		Argument: menu
+		Dialogue: Not yet
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: Tell me when you're set.
+		Argument: case
+		Argument: 2
+		Dialogue: Tell me when you're ready.
+		Argument: default
+		Dialogue: Tell me when you're ready.
+		Argument: message_Close
+		Argument: end

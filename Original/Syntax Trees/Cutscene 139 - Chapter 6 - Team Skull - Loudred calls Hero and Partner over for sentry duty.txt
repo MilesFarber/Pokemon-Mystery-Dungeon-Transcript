@@ -20,21 +20,29 @@ def 0:
 		Argument: 0
 	Identifier: Wait
 		Argument: 1
+		Identifier: SetPositionInitial
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Identifier: SetPositionInitial
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_GUREGGURU
+		Argument: 2
 	Identifier: bgm_FadeOut
 		Argument: 10
 	Identifier: se_Play
@@ -48,17 +56,23 @@ def 0:
 		Argument: ACTOR_NPC_DOGOOMU
 	Identifier: message_Talk
 		Dialogue: HEY, YOU TWO!
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 10
@@ -72,45 +86,57 @@ def 0:
 		Argument: 8971
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_PERAPPU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
 	Identifier: Wait
 		Argument: 30
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
 	Identifier: 48
 		Argument: 0
 	Identifier: Wait
 		Argument: 5
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
 	Identifier: 48
 		Argument: 0
 	Identifier: screen_FadeOut
 		Argument: 1
 		Argument: 60
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
+		Identifier: SetPositionMark
 		Template
 			Type: performer
 			Identifier: 0
@@ -118,6 +144,7 @@ def 0:
 			Identifier: m0
 			Identifier: 23.5
 			Identifier: 40
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -125,6 +152,7 @@ def 0:
 			Identifier: m1
 			Identifier: 28
 			Identifier: 36.5
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -132,12 +160,16 @@ def 0:
 			Identifier: m2
 			Identifier: 28
 			Identifier: 40.5
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: DIR_LEFT
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: Wait
@@ -161,32 +193,42 @@ def 0:
 		Dialogue: Please take over my sentry duty again today. Bye.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DIGUDA
+		Argument: DIR_DOWN
 	Identifier: se_Play
 		Argument: 6422
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DIGUDA
+		Argument: 24
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DIGUDA
+		Identifier: Destroy
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DIGUDA
 	Identifier: Wait
 		Argument: 30
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNRIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_DOGOOMU
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: message_SetFace
@@ -207,97 +249,148 @@ def 0:
 		Case:
 			Value: default
 
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 25
 			Identifier: 36.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 28
 			Identifier: 39.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 24
 			Identifier: 37.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m6
 			Identifier: 26
 			Identifier: 37.5
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_ANGRY
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 19
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: 2
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_ANGRY
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SHOCKED
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 68
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 68
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 9
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 9
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_NONE
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_DOGOOMU
+		Argument: EFFECT_LAUGHING
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SWEAT_DROP
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROP
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1

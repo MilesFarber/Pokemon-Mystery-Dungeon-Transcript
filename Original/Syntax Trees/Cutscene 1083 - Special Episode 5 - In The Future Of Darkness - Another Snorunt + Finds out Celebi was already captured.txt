@@ -15,21 +15,30 @@ def 0:
 		Argument: 0
 	Identifier: supervision_RemoveActing
 		Argument: 2
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
+		Identifier: SetPositionInitial
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_D52P11A1_411
+		Argument: 1
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m0
 			Identifier: 21.5
@@ -37,36 +46,46 @@ def 0:
 	Identifier: screen_FadeIn
 		Argument: 1
 		Argument: 30
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 24.5
 			Identifier: 30.5
 	Identifier: Wait
 		Argument: 50
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m2
 			Identifier: 17.5
 			Identifier: 33.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_FUTURE
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
 	Identifier: 0
 	Identifier: se_FadeOut
 		Argument: 10759
 		Argument: 90
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_YONOWAARU_N9
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecutePerformer
 		Argument: 0
@@ -84,9 +103,11 @@ def 0:
 		Dialogue: They're crackling with electricity...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: WaitExecuteLives
@@ -103,15 +124,19 @@ def 0:
 		Argument: 60
 	Identifier: se_Play
 		Argument: 8978
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
 	Identifier: 3
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_RIGHT
 	Identifier: 3
 	Identifier: message_SetActor
 		Argument: ACTOR_NPC_YUKIWARASHI
@@ -119,40 +144,54 @@ def 0:
 		Dialogue: Gigii.[K] Gigii.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 29.5
 			Identifier: 31.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: Wait
 		Argument: 40
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_YUKIWARASHI
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: 4
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
@@ -166,16 +205,20 @@ def 0:
 		Dialogue: I-it's...[K] Who is it?!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 1
 	Identifier: 16
 		Argument: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_FUTURE
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: message_SetFace
@@ -186,9 +229,11 @@ def 0:
 		Dialogue: Relax.[K] He's different from the ones we encountered before.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: WaitExecuteLives
@@ -227,23 +272,29 @@ def 0:
 		Dialogue: But...[K] There's no trail, so we have no other way...
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER_FUTURE
 	Identifier: Wait
 		Argument: 15
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 1
 	Identifier: 24
 		Argument: 0
 	Identifier: WaitExecuteLives
@@ -259,22 +310,29 @@ def 0:
 		Dialogue: Hey! You!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: 2
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_YUKIWARASHI
 	Identifier: se_Play
 		Argument: 8967
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
@@ -290,24 +348,32 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8972
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_YUKIWARASHI
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: 9
 	Identifier: Wait
 		Argument: 45
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
@@ -328,17 +394,22 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: Wait
 		Argument: 15
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: 2
 	Identifier: Wait
 		Argument: 15
 	Identifier: se_Play
 		Argument: 8962
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: EFFECT_QUESTION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
@@ -352,9 +423,12 @@ def 0:
 		Dialogue: Gigii?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 34.5
@@ -376,10 +450,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
@@ -401,16 +478,21 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8965
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
@@ -420,16 +502,22 @@ def 0:
 		Argument: BGM_GROWING_ANXIETY
 		Argument: 0
 		Argument: 256
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 35
 			Identifier: 31.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m6
 			Identifier: 29.5
@@ -455,9 +543,11 @@ def 0:
 		Dialogue: Where did they go?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: 4
 	Identifier: 2
 		Argument: DIR_RIGHT
 	Identifier: WaitExecuteLives
@@ -483,9 +573,11 @@ def 0:
 		Dialogue: Did you see only [CS:N]Sableye[CR]?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
@@ -500,10 +592,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
@@ -521,9 +616,11 @@ def 0:
 		Dialogue: It was pink...[K]and very pretty, that Pokémon.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 1
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: WaitExecuteLives
@@ -547,9 +644,11 @@ def 0:
 		Argument: FACE_POS_STANDARD
 	Identifier: message_Talk
 		Dialogue: Any other Pokémon?
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_RIGHT
 	Identifier: message_Talk
@@ -587,21 +686,27 @@ def 0:
 		Argument: 2
 	Identifier: Wait
 		Argument: 15
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 4
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_YUKIWARASHI
@@ -611,64 +716,90 @@ def 0:
 		Argument: 10762
 	Identifier: supervision_Acting
 		Argument: 2
+		Identifier: Destroy
 		Template
 			Type: object
 			Identifier: OBJECT_D52P11A2_415
+		Identifier: SetOutputAttribute
 		Template
 			Type: object
 			Identifier: OBJECT_D52P11A3_416
+		Argument: 1024
+		Identifier: SetOutputAttribute
 		Template
 			Type: object
 			Identifier: OBJECT_D52P11A3_417
+		Argument: 1024
+		Identifier: SetOutputAttribute
 		Template
 			Type: object
 			Identifier: OBJECT_D52P11A3_417
+		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_D52P11A3_416
+		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_D52P11A3_417
+		Argument: 1
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 4
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_YUKIWARASHI
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: 36
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: 27
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
 	Identifier: Wait
 		Argument: 3
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: 22
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
@@ -676,22 +807,29 @@ def 0:
 		Argument: ACTOR_NPC_YUKIWARASHI
 	Identifier: Wait
 		Argument: 15
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER_FUTURE
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 3
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YONOWAARU_N9
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
 	Identifier: Wait
 		Argument: 2
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
+		Argument: EFFECT_SHOCKED
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_YUKIWARASHI
@@ -704,9 +842,12 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: Wh-what!?
 	Identifier: message_Close
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m7
 			Identifier: 35

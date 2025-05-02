@@ -6,12 +6,15 @@ def 0:
 		Argument: LEVEL_P03P01A
 	Identifier: supervision_Acting
 		Argument: 0
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
+		Identifier: MovePositionOffset
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 0
 	Identifier: 300
 		Argument: 0
 	Identifier: bgm_PlayFadeIn
@@ -30,6 +33,7 @@ def 0:
 	Identifier: screen_FadeOutAll
 		Argument: 1
 		Argument: 60
+		Identifier: SetPositionMark
 		Template
 			Type: performer
 			Identifier: 0
@@ -42,25 +46,33 @@ def 0:
 		Argument: 30
 	Identifier: Wait
 		Argument: 60
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m1
 			Identifier: 44.5
 			Identifier: 89.5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m2
 			Identifier: 49.5
 			Identifier: 89.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -81,16 +93,20 @@ def 0:
 				Dialogue: It's incredible! The water's coming down in waterfalls all over the place!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -121,9 +137,11 @@ def 0:
 				Dialogue: Is this the deepest part of the forest?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_LOOK_AROUND_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -131,10 +149,13 @@ def 0:
 		Argument: 15
 	Identifier: se_Play
 		Argument: 8972
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -170,30 +191,39 @@ def 0:
 		Argument: 8971
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 15
 	Identifier: se_Play
 		Argument: 8978
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
 	Identifier: Wait
 		Argument: 5
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -215,44 +245,57 @@ def 0:
 			Value: default
 				Dialogue: Look, it's [CS:N]Corphish[CR]!
 	Identifier: message_Close
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m3
 			Identifier: 47
 			Identifier: 75.5
 	Identifier: Wait
 		Argument: 45
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_HEIGANI
 	Identifier: WaitExecutePerformer
 		Argument: 0
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m4
 			Identifier: 49.5
 			Identifier: 75.5
 	Identifier: Wait
 		Argument: 10
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m5
 			Identifier: 44.5
 			Identifier: 75.5
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_HEIGANI
@@ -310,10 +353,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8962
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_QUESTION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -336,9 +382,11 @@ def 0:
 				Dialogue: Interesting?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: WaitExecuteLives
@@ -350,9 +398,12 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: There. Have a look for yourself.
 	Identifier: message_Close
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m6
 			Identifier: 47
@@ -361,27 +412,36 @@ def 0:
 		Argument: 0
 	Identifier: Wait
 		Argument: 45
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m7
 			Identifier: 47
 			Identifier: 60.5
 	Identifier: Wait
 		Argument: 5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m8
 			Identifier: 49.5
 			Identifier: 62.5
 	Identifier: Wait
 		Argument: 5
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m9
 			Identifier: 44.5
@@ -392,13 +452,17 @@ def 0:
 		Argument: 10
 	Identifier: se_Play
 		Argument: 8967
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -454,81 +518,104 @@ def 0:
 		Dialogue: I've never seen a Pokémon like that before.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 0
 	Identifier: 0
 		Argument: 32
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
 	Identifier: Wait
 		Argument: 30
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: Wait
 		Argument: 30
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: Wait
 		Argument: 60
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 0
 	Identifier: 56
 		Argument: 0
 	Identifier: Wait
 		Argument: 30
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 30
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: Wait
 		Argument: 30
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 8
 	Identifier: 10
 		Argument: DIR_UP
 	Identifier: Wait
 		Argument: 60
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m10
 			Identifier: 53
 			Identifier: 54.5
 	Identifier: Wait
 		Argument: 15
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPRIGHT
 	Identifier: Wait
 		Argument: 15
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
@@ -537,10 +624,13 @@ def 0:
 		Argument: 30
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -563,37 +653,50 @@ def 0:
 				Dialogue: Huh? Is this an inscription here?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: MovePositionMark
 		Template
 			Type: performer
 			Identifier: 0
+		Argument: 0
+		Identifier: Position
 		Template
 			Type: m11
 			Identifier: 47
 			Identifier: 57
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m12
 			Identifier: 54
 			Identifier: 56.5
 	Identifier: Wait
 		Argument: 15
+		Identifier: MovePositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m13
 			Identifier: 52
 			Identifier: 58.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: WaitExecuteLives
@@ -605,6 +708,7 @@ def 0:
 		Argument: 4
 	Identifier: back2_SetGround
 		Argument: LEVEL_V09P01A
+		Identifier: Position
 		Template
 			Type: m14
 			Identifier: 20
@@ -645,42 +749,117 @@ def 0:
 		Case:
 			Value: 1
 				Dialogue: 
+			Identifier: Reignite
+				Argument: the
+				Argument: life
+				Argument: that
+				Argument: burned
+				Argument: within
+				Argument: Groudon
 		Case:
 			Value: 2
 				Dialogue: 
+			Identifier: Reignite
+				Argument: the
+				Argument: life
+				Argument: that
+				Argument: burned
+				Argument: within
+				Argument: Groudon
 		Case:
 			Value: default
 				Dialogue: 
+			Identifier: Reignite
+				Argument: the
+				Argument: life
+				Argument: that
+				Argument: burned
+				Argument: within
+				Argument: Groudon
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
 				Dialogue: 
+			Identifier: Then
+				Argument: the
+				Argument: sky
+				Argument: shall
+				Argument: blaze
+				Argument: with
+				Argument: the
+				Argument: sun
+				Argument: s
+				Argument: heat
 		Case:
 			Value: 2
 				Dialogue: 
+			Identifier: Then
+				Argument: the
+				Argument: sky
+				Argument: shall
+				Argument: blaze
+				Argument: with
+				Argument: the
+				Argument: sun
+				Argument: s
+				Argument: heat
 		Case:
 			Value: default
 				Dialogue: 
+			Identifier: Then
+				Argument: the
+				Argument: sky
+				Argument: shall
+				Argument: blaze
+				Argument: with
+				Argument: the
+				Argument: sun
+				Argument: s
+				Argument: heat
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
 				Dialogue: 
+			Identifier: The
+				Argument: path
+				Argument: to
+				Argument: treasure
+				Argument: shall
+				Argument: be
+				Argument: revealed
 		Case:
 			Value: 2
 				Dialogue: 
+			Identifier: The
+				Argument: path
+				Argument: to
+				Argument: treasure
+				Argument: shall
+				Argument: be
+				Argument: revealed
 		Case:
 			Value: default
 				Dialogue: 
+			Identifier: The
+				Argument: path
+				Argument: to
+				Argument: treasure
+				Argument: shall
+				Argument: be
+				Argument: revealed
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8967
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -695,12 +874,24 @@ def 0:
 		Case:
 			Value: 1
 				Dialogue: 
+			Identifier: The
+				Argument: path
+				Argument: to
+				Dialogue: ? That's incredible!
 		Case:
 			Value: 2
 				Dialogue: 
+			Identifier: The
+				Argument: path
+				Argument: to
+				Dialogue: ? That's incredible!
 		Case:
 			Value: default
 				Dialogue: 
+			Identifier: The
+				Argument: path
+				Argument: to
+				Dialogue: ? That's incredible!
 	Identifier: message_Close
 	Identifier: screen2_FadeOut
 		Argument: 1
@@ -709,28 +900,36 @@ def 0:
 		Argument: 0
 	Identifier: Wait
 		Argument: 30
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_HEIGANI
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -765,12 +964,45 @@ def 0:
 		Case:
 			Value: 1
 				Dialogue: 
+			Identifier: The
+				Argument: path
+				Argument: to
+				Argument: treasure
+				Argument: shall
+				Argument: be
+				Argument: revealed
+				Argument: K
+				Argument: So
+				Argument: this
+				Argument: means
 		Case:
 			Value: 2
 				Dialogue: 
+			Identifier: The
+				Argument: path
+				Argument: to
+				Argument: treasure
+				Argument: shall
+				Argument: be
+				Argument: revealed
+				Argument: K
+				Argument: So
+				Argument: this
+				Argument: means
 		Case:
 			Value: default
 				Dialogue: 
+			Identifier: The
+				Argument: path
+				Argument: to
+				Argument: treasure
+				Argument: shall
+				Argument: be
+				Argument: revealed
+				Argument: K
+				Argument: So
+				Argument: this
+				Argument: means
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
@@ -786,18 +1018,23 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8978
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_HEIGANI
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_NPC_HEIGANI
@@ -814,21 +1051,27 @@ def 0:
 		Dialogue: Hey, hey! Now that's a mystery we've got to solve!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UPLEFT
 	Identifier: message_SetFace
@@ -851,28 +1094,72 @@ def 0:
 		Case:
 			Value: 1
 				Dialogue: This part about
+			Identifier: life
+				Argument: that
+				Argument: burned
+				Argument: within
+				Argument: Groudon
+				Argument: What
+				Argument: s
+				Argument: this
+				Argument: about
 		Case:
 			Value: 2
 				Dialogue: This part about
+			Identifier: life
+				Argument: that
+				Argument: burned
+				Argument: within
+				Argument: Groudon
+				Argument: What
+				Argument: s
+				Argument: this
+				Argument: about
 		Case:
 			Value: default
 				Dialogue: This part about
+			Identifier: life
+				Argument: that
+				Argument: burned
+				Argument: within
+				Argument: Groudon
+				Argument: What
+				Argument: s
+				Argument: this
+				Argument: about
 	Switch:
 		Variable: $PARTNER_TALK_KIND
 		Case:
 			Value: 1
 				Dialogue: So this
+			Identifier: Groudon
+				Argument: is
+				Argument: it
+				Argument: this
+				Argument: statue
 		Case:
 			Value: 2
 				Dialogue: So this
+			Identifier: Groudon
+				Argument: is
+				Argument: it
+				Argument: this
+				Argument: statue
 		Case:
 			Value: default
 				Dialogue: So this
+			Identifier: Groudon
+				Argument: is
+				Argument: it
+				Argument: this
+				Argument: statue
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_HEIGANI
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
@@ -888,14 +1175,18 @@ def 0:
 		Dialogue: Hey, hey! So we're supposed to what, ignite the life that was in this statue?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_HEIGANI
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
 	Identifier: message_SetFace
@@ -928,10 +1219,13 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8964
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -956,25 +1250,32 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play
 		Argument: 8965
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_EXCLAMATION_MARK
 	Identifier: 3
+		Identifier: WaitEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Switch:
@@ -1047,22 +1348,29 @@ def 0:
 				Dialogue: (If the answers are held by this statue...)
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 71
+		Identifier: WaitAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_PLAYER
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 2
 	Identifier: Wait
 		Argument: 30
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
 	Identifier: 0
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -1083,28 +1391,38 @@ def 0:
 				Dialogue: You'll do it for us!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m15
 			Identifier: 55
 			Identifier: 52.5
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_DOWNLEFT
+		Identifier: Move2PositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 1
+		Identifier: Position
 		Template
 			Type: m16
 			Identifier: 52
 			Identifier: 55
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_LEFT
 	Identifier: WaitExecuteLives

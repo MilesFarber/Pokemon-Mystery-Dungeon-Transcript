@@ -3,28 +3,40 @@ def 0:
 		Argument: BGM_WIGGLYTUFFS_GUILD
 		Argument: 0
 		Argument: 256
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SURIIPU
+		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SURIIPU
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_SURIIPU
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_SURIIPU
 	Identifier: message_SetFace
@@ -38,15 +50,22 @@ def 0:
 		Case:
 			Value: default
 
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SURIIPU
+		Argument: DIR_DOWNRIGHT
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: DIR_DOWN
+		Identifier: SetDirection
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: DIR_RIGHT
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_MARIRU
@@ -54,6 +73,7 @@ def 0:
 			Identifier: m0
 			Identifier: 19.5
 			Identifier: 23
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
@@ -61,6 +81,7 @@ def 0:
 			Identifier: m1
 			Identifier: 25.5
 			Identifier: 20.5
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
@@ -68,6 +89,7 @@ def 0:
 			Identifier: m2
 			Identifier: 23
 			Identifier: 23
+		Identifier: SetPositionMark
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_SURIIPU
@@ -75,39 +97,59 @@ def 0:
 			Identifier: m3
 			Identifier: 23
 			Identifier: 20.5
+		Identifier: camera_SetMyself
 		Template
 			Type: performer
 			Identifier: 0
+		Identifier: SetOutputAttribute
 		Template
 			Type: object
 			Identifier: OBJECT_G01P07A1_108
+		Argument: 4
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_G01P07A1_108
+		Argument: 17
+		Identifier: WaitAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_G01P07A1_108
+		Identifier: SetAnimation
 		Template
 			Type: object
 			Identifier: OBJECT_G01P07A1_108
+		Argument: 2
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_NPC_SURIIPU
 		Argument: label_1
@@ -119,3 +161,54 @@ def 0:
 		Argument: FACE_POS_STANDARD
 		Argument: message_Talk
 		Dialogue: I'm all ready to send you into the dream.
+		Argument: message_Talk
+		Dialogue: Tell me when you're ready.
+		Argument: message_Close
+		Argument: end
+		Argument: break
+		Argument: default
+		Argument: label_4
+		Argument: message_SetFace
+		Argument: ACTOR_NPC_SURIIPU
+		Argument: FACE_NORMAL
+		Argument: FACE_POS_STANDARD
+		Argument: message_Talk
+		Dialogue: By the way...
+		Argument: message_Talk
+		Dialogue: [CS:N]Azurill[CR] is in a very delicate state now.
+		Argument: message_Talk
+		Dialogue: Judging by the resonations from [CS:N]Azurill[CR]'s dream...
+		Argument: message_Talk
+		Dialogue: I believe that only the two of you should enter the [CS:P]nightmare[CR].[K] What do you think of that plan?
+		Argument: message_Talk
+		Dialogue: Will just the two of you go into the [CS:P]nightmare[CR]?
+		Argument: switch
+		Argument: message_SwitchMenu
+		Argument: 0
+		Argument: 1
+		Argument: case
+		Argument: menu
+		Dialogue: Go as a duo
+		Argument: default
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Argument: switch
+		Argument: ProcessSpecial
+		Argument: PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY
+		Argument: 0
+		Argument: 0
+		Argument: jump
+		Argument: label_2
+		Argument: case
+		Argument: menu
+		Dialogue: Don't enter the [CS:P]nightmare[CR]
+		Argument: jump
+		Argument: label_1
+		Argument: break
+		Argument: break
+		Argument: break
+		Argument: case
+		Argument: menu
+		Dialogue: No
+		Argument: jump
+		Argument: label_1

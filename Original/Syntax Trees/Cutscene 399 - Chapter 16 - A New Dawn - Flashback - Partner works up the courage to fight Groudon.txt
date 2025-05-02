@@ -2,30 +2,46 @@ def 0:
 	Switch:
 		Variable: sector()
 
+		Identifier: MovePositionOffset
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_GURAADON
+		Argument: 0
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: EFFECT_SHOCKED
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_GURAADON
+		Argument: 9
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_NPC_GURAADON
+		Argument: 2
+		Identifier: SetEffect
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+		Identifier: ExecuteCommon
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Identifier: 0
 		Argument: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
@@ -38,3 +54,52 @@ def 0:
 		Argument: case
 		Argument: 1
 		Dialogue: And I gotta face up to this!
+		Argument: case
+		Argument: 2
+		Dialogue: And I need to face up to this!
+		Argument: default
+		Dialogue: And I need to stand up to this!
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: No stopping now, [hero]!
+		Argument: case
+		Argument: 2
+		Dialogue: There's no giving up now, [hero]!
+		Argument: default
+		Dialogue: We can't just run away now, [hero]!
+		Argument: message_Close
+		Argument: switch
+		Argument: sector
+		Argument: case
+		Argument: 0
+		Argument: default
+		Argument: screen_FadeOut
+		Argument: 1
+		Argument: 30
+		Argument: label_5
+		Argument: screen_FlushIn
+		Argument: 1
+		Argument: 0
+		Argument: 1
+		Argument: 0
+		Argument: 0
+		Argument: 0
+		Argument: end
+		Argument: case
+		Argument: 1
+		Argument: screen_WhiteOut
+		Argument: 1
+		Argument: 30
+		Argument: jump
+		Argument: label_5
+		Argument: break
+		Argument: case
+		Argument: 1
+		Argument: bgm_PlayFadeIn
+		Argument: BGM_MEMORIES_RETURNED
+		Argument: 0
+		Argument: 256
+		Argument: jump
+		Argument: label_2

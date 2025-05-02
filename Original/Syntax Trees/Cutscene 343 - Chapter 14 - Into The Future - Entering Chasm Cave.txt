@@ -3,22 +3,30 @@ def 0:
 		Argument: BGM_CHASM_CAVE
 		Argument: 0
 		Argument: 256
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 2
+		Identifier: SetAnimation
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 2
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_PLAYER
 	Identifier: WaitExecuteLives
 		Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
 		Template
 			Type: actor
 			Identifier: ACTOR_PLAYER
+		Argument: 4
 	Identifier: 10
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_SetFace
@@ -47,9 +55,11 @@ def 0:
 		Case:
 			Value: default
 				Dialogue: Yep! Let's get going!
+		Identifier: Turn2Direction
 		Template
 			Type: actor
 			Identifier: ACTOR_ATTENDANT1
+		Argument: 4
 	Identifier: 10
 		Argument: DIR_UP
 		Argument: main_EnterDungeon
@@ -65,3 +75,27 @@ def 0:
 		Argument: case
 		Argument: menu
 		Dialogue: Not yet...
+		Argument: CallCommon
+		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: We'll go when you're ready.
+		Argument: case
+		Argument: 2
+		Dialogue: Let's go when you're ready.
+		Argument: default
+		Dialogue: Let's go when you're ready.
+		Argument: message_SwitchTalk
+		Argument: PARTNER_TALK_KIND
+		Argument: case
+		Argument: 1
+		Dialogue: Let's get moving before those [CS:N]Sableye[CR] come.
+		Argument: case
+		Argument: 2
+		Dialogue: Let's go before those [CS:N]Sableye[CR] get here.
+		Argument: default
+		Dialogue: We should get going before those [CS:N]Sableye[CR] come.
+		Argument: message_Close
+		Argument: end
