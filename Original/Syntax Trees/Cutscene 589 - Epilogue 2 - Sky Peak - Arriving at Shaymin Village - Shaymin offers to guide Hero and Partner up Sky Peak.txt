@@ -484,76 +484,15 @@ def 0:
 			Value: default
 				Dialogue: Hey, [hero]? What do you think? Should we let [CS:N]Shaymin[CR] join us?
 	Label: @label_2;
-	Switch:
-		Variable: message_SwitchMenu(0, 1)
-		Case:
-			Value: default
-			Identifier: case
-				Argument: menu
-				Dialogue: Yes
-			Identifier: break_loop
-			Identifier: break
-			Identifier: case
-				Argument: menu
-				Dialogue: No
-			Identifier: default
-				Argument: message_Close
-			Identifier: se_Play
-				Argument: 8968
-			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-				Argument: EFFECT_SHOCKED_MIRRORED
-				Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: EFFECT_SHOCKED_MIRRORED
+			Identifier: 3
 			Identifier: WaitEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_ATTENDANT1
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_SURPRISED
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Whaat?! Really?!
-				Case:
-					Value: 2
-						Dialogue: Whaat?! Really?!
-				Case:
-					Value: default
-						Dialogue: Whaat?! Really?!
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_SAD
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Don't you think it would definitely be better if we had a guide?
-				Case:
-					Value: 2
-						Dialogue: Don't you think it would be better if we had a guide?
-				Case:
-					Value: default
-						Dialogue: Don't you think it would be better if we had a guide?
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: We should ask [CS:N]Shaymin[CR] to guide us, OK?
-				Case:
-					Value: 2
-						Dialogue: I really think we should ask [CS:N]Shaymin[CR] to guide us. OK?
-				Case:
-					Value: default
-						Dialogue: I really think we should ask [CS:N]Shaymin[CR] to guide us. OK?
-			Identifier: continue
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
 	Label: @label_0;
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -667,30 +606,30 @@ def 1:
 	Identifier: SetAnimation
 		Argument: 2
 	Label: @label_3;
-	Identifier: forever
-		Argument: Turn2Direction
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWN
-		Argument: SetEffect
-		Argument: EFFECT_JOYOUS
-		Argument: 3
-		Argument: WaitRandom
-		Argument: 90
-		Argument: 180
-		Argument: SetEffect
-		Argument: EFFECT_NONE
-		Argument: 3
-		Argument: Turn2Direction
-		Argument: 4
-		Argument: 10
-		Argument: DIR_DOWNRIGHT
-		Argument: SetAnimation
-		Argument: 4
-		Argument: WaitRandom
-		Argument: 120
-		Argument: 180
-		Argument: continue
+	Loop: forever
+		Identifier: Turn2Direction
+			Argument: 4
+			Argument: 10
+			Argument: DIR_DOWN
+		Identifier: SetEffect
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: WaitRandom
+			Argument: 90
+			Argument: 180
+		Identifier: SetEffect
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: Turn2Direction
+			Argument: 4
+			Argument: 10
+			Argument: DIR_DOWNRIGHT
+		Identifier: SetAnimation
+			Argument: 4
+		Identifier: WaitRandom
+			Argument: 120
+			Argument: 180
+		Identifier: continue
 def 2:
 	Target: actor ACTOR_NPC_BARIYAADO
 	Identifier: SetPositionInitial
@@ -699,18 +638,18 @@ def 2:
 	Identifier: Wait
 		Argument: 15
 	Label: @label_4;
-	Identifier: forever
-		Argument: SetAnimation
-		Argument: 4
-		Argument: WaitRandom
-		Argument: 90
-		Argument: 180
-		Argument: SetAnimation
-		Argument: 2
-		Argument: WaitRandom
-		Argument: 60
-		Argument: 180
-		Argument: continue
+	Loop: forever
+		Identifier: SetAnimation
+			Argument: 4
+		Identifier: WaitRandom
+			Argument: 90
+			Argument: 180
+		Identifier: SetAnimation
+			Argument: 2
+		Identifier: WaitRandom
+			Argument: 60
+			Argument: 180
+		Identifier: continue
 def 3:
 	Target: actor ACTOR_NPC_OKUTAN
 	Identifier: SetPositionInitial
@@ -719,17 +658,17 @@ def 3:
 	Identifier: Wait
 		Argument: 30
 	Label: @label_5;
-	Identifier: forever
-		Argument: SetEffect
-		Argument: EFFECT_JOYOUS
-		Argument: 3
-		Argument: WaitRandom
-		Argument: 90
-		Argument: 180
-		Argument: SetEffect
-		Argument: EFFECT_NONE
-		Argument: 3
-		Argument: WaitRandom
-		Argument: 60
-		Argument: 180
-		Argument: continue
+	Loop: forever
+		Identifier: SetEffect
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: WaitRandom
+			Argument: 90
+			Argument: 180
+		Identifier: SetEffect
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: WaitRandom
+			Argument: 60
+			Argument: 180
+		Identifier: continue

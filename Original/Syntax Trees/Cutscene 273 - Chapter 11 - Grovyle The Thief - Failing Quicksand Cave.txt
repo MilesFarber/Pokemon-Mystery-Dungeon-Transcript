@@ -505,47 +505,77 @@ def 0:
 			Identifier: ACTOR_NPC_PERAPPU
 		Argument: EFFECT_JOYOUS
 		Argument: 3
-	Switch:
-		Variable: scn($SCENARIO_MAIN) >= [15, 1]
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: We should go back to [CS:P]Quicksand Cave[CR], [hero].
-			Identifier: case
-				Argument: 2
-				Dialogue: We should go back to [CS:P]Quicksand Cave[CR], [hero].
-			Identifier: default
-				Dialogue: Let's go back to [CS:P]Quicksand Cave[CR], [hero].
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's search [CS:P]Quicksand Cave[CR] carefully.
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's search [CS:P]Quicksand Cave[CR] thoroughly.
-			Identifier: default
-				Dialogue: We should search [CS:P]Quicksand Cave[CR] carefully.
-	Switch:
-		Variable: ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD); message_SwitchTalk ($PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: We should head back to [CS:P]Quicksand Desert[CR], [hero].
-			Identifier: case
-				Argument: 2
-				Dialogue: We should go back to [CS:P]Quicksand Desert[CR], [hero].
-			Identifier: default
-				Dialogue: We should return to [CS:P]Quicksand Desert[CR], [hero].
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's search [CS:P]Quicksand Desert[CR] carefully.
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's search [CS:P]Quicksand Desert[CR] thoroughly.
-			Identifier: default
-				Dialogue: We should search [CS:P]Quicksand Desert[CR] carefully.
+	Conditional: If
+		Condition: ($SCENARIO_MAIN) >= [15, 1]
+		Label: @label_0;
+		Identifier: message_SetFace
+			Argument: ACTOR_ATTENDANT1
+			Argument: FACE_NORMAL
+			Argument: FACE_POS_STANDARD
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: We should go back to [CS:P]Quicksand Cave[CR], [hero].
+			Case:
+				Value: 2
+					Dialogue: We should go back to [CS:P]Quicksand Cave[CR], [hero].
+			Case:
+				Value: default
+					Dialogue: Let's go back to [CS:P]Quicksand Cave[CR], [hero].
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Let's search [CS:P]Quicksand Cave[CR] carefully.
+			Case:
+				Value: 2
+					Dialogue: Let's search [CS:P]Quicksand Cave[CR] thoroughly.
+			Case:
+				Value: default
+					Dialogue: We should search [CS:P]Quicksand Cave[CR] carefully.
+		Identifier: message_Close
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PERAPPU
+			Argument: EFFECT_NONE
+			Argument: 3
+		Label: @label_1;
+		Identifier: end
+	Conditional: Else
+		Identifier: message_SetFace
+			Argument: ACTOR_ATTENDANT1
+			Argument: FACE_NORMAL
+			Argument: FACE_POS_STANDARD
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: We should head back to [CS:P]Quicksand Desert[CR], [hero].
+			Case:
+				Value: 2
+					Dialogue: We should go back to [CS:P]Quicksand Desert[CR], [hero].
+			Case:
+				Value: default
+					Dialogue: We should return to [CS:P]Quicksand Desert[CR], [hero].
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Let's search [CS:P]Quicksand Desert[CR] carefully.
+			Case:
+				Value: 2
+					Dialogue: Let's search [CS:P]Quicksand Desert[CR] thoroughly.
+			Case:
+				Value: default
+					Dialogue: We should search [CS:P]Quicksand Desert[CR] carefully.
+		Identifier: message_Close
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PERAPPU
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: jump
+			Argument: label_1

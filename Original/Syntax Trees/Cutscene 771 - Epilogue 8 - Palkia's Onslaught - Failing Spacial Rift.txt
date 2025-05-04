@@ -1,49 +1,163 @@
 def 0:
 	Identifier: sound_Stop
-	Switch:
-		Variable: scn($SCENARIO_MAIN) >= [29, 82]
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Ugh...[K] We couldn't get through...
-			Identifier: case
-				Argument: 2
-				Dialogue: Ugh...[K] We couldn't break through.
-			Identifier: default
-				Dialogue: Ugh...[K] We couldn't break through.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Hmm... We were a bit careless.
-			Identifier: case
-				Argument: 2
-				Dialogue: Hmm... We were a bit careless.
-			Identifier: default
-				Dialogue: Hmm... We were a bit careless.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: If we stick around here, [CS:N]Palkia[CR] could find us.
-			Identifier: case
-				Argument: 2
-				Dialogue: If we stay here, [CS:N]Palkia[CR] could find us.
-			Identifier: default
-				Dialogue: We can't stay here, because [CS:N]Palkia[CR] could find us.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's get away from here.
-			Identifier: case
-				Argument: 2
-				Dialogue: We need to get out of here right away.
-			Identifier: default
-				Dialogue: We should get away from here.
-	Conditional
-		Type: Else
+	Conditional: If
+		Condition: ($SCENARIO_MAIN) >= [29, 82]
+		Label: @label_0;
+		Identifier: back_SetGround
+			Argument: LEVEL_S04P01A
+		Identifier: screen_FadeIn
+			Argument: 1
+			Argument: 0
+		Identifier: message_SetFace
+			Argument: ACTOR_ATTENDANT1
+			Argument: FACE_PAIN
+			Argument: FACE_POS_STANDARD
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Ugh...[K] We couldn't get through...
+			Case:
+				Value: 2
+					Dialogue: Ugh...[K] We couldn't break through.
+			Case:
+				Value: default
+					Dialogue: Ugh...[K] We couldn't break through.
+		Identifier: message_KeyWait
+		Identifier: screen_FadeOutAll
+			Argument: 1
+			Argument: 60
+		Identifier: message_CloseEnforce
+		Identifier: CallCommon
+			Argument: CORO_FADE_OUT_ALL_AFTER
+		Identifier: back_SetGround
+			Argument: LEVEL_D38P12A
+		Identifier: supervision_StationCommon
+			Argument: 0
+		Identifier: supervision_Acting
+			Argument: 0
+		Identifier: camera_SetMyself
+			Template
+				Type: performer
+				Identifier: 0
+		Identifier: screen_FadeIn
+			Argument: 1
+			Argument: 30
+		Identifier: bgm_PlayFadeIn
+			Argument: BGM_CHASM_CAVE
+			Argument: 0
+			Argument: 256
+		Identifier: Wait
+			Argument: 30
+		Identifier: WaitLockLives
+			Argument: 5
+			Argument: ACTOR_PLAYER
+		Identifier: Unlock
+			Argument: 5
+		Identifier: Wait
+			Argument: 15
+		Identifier: Unlock
+			Argument: 7
+		Identifier: Lock
+			Argument: 3
+		Identifier: Wait
+			Argument: 15
+		Identifier: Turn2DirectionLives
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER
+			Argument: 4
+			Argument: 10
+			Argument: ACTOR_ATTENDANT1
+		Identifier: Turn2DirectionLives
+			Template
+				Type: actor
+				Identifier: ACTOR_ATTENDANT1
+			Argument: 4
+			Argument: 10
+			Argument: ACTOR_PLAYER
+		Identifier: Wait
+			Argument: 15
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_ATTENDANT1
+			Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+			Argument: 3
+		Identifier: message_SetFace
+			Argument: ACTOR_ATTENDANT1
+			Argument: FACE_PAIN
+			Argument: FACE_POS_STANDARD
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Hmm... We were a bit careless.
+			Case:
+				Value: 2
+					Dialogue: Hmm... We were a bit careless.
+			Case:
+				Value: default
+					Dialogue: Hmm... We were a bit careless.
+		Identifier: message_Close
+		Identifier: ExecuteCommon
+			Template
+				Type: actor
+				Identifier: ACTOR_ATTENDANT1
+			Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+			Argument: 0
+		Identifier: WaitExecuteLives
+			Argument: ACTOR_ATTENDANT1
+		Identifier: message_SetFace
+			Argument: ACTOR_ATTENDANT1
+			Argument: FACE_DETERMINED
+			Argument: FACE_POS_STANDARD
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: If we stick around here, [CS:N]Palkia[CR] could find us.
+			Case:
+				Value: 2
+					Dialogue: If we stay here, [CS:N]Palkia[CR] could find us.
+			Case:
+				Value: default
+					Dialogue: We can't stay here, because [CS:N]Palkia[CR] could find us.
+		Identifier: CallCommon
+			Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: Turn2DirectionLives
+			Template
+				Type: actor
+				Identifier: ACTOR_ATTENDANT1
+			Argument: 4
+			Argument: 10
+			Argument: ACTOR_PLAYER
+		Identifier: WaitExecuteLives
+			Argument: ACTOR_PLAYER
+		Identifier: message_SetFace
+			Argument: ACTOR_ATTENDANT1
+			Argument: FACE_DETERMINED
+			Argument: FACE_POS_STANDARD
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Let's get away from here.
+			Case:
+				Value: 2
+					Dialogue: We need to get out of here right away.
+			Case:
+				Value: default
+					Dialogue: We should get away from here.
+		Identifier: message_Close
+		Identifier: end
+	Conditional: Else
+		Identifier: SCENARIO_MAIN
+			Argument: scn
+			Argument: 29
+			Argument: 82
+		Identifier: jump
+			Argument: label_0
 def 1:
 	Target: actor ACTOR_PLAYER
 	Identifier: SetDirection

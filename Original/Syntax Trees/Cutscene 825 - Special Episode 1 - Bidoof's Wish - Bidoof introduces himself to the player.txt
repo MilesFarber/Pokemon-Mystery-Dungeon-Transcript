@@ -1,280 +1,738 @@
 def 0:
 	Identifier: sound_Stop
-	Switch:
-		Variable: not debug
-		Case:
-			Value: default
-				Dialogue: All right! Here we go today! ♪
-		Case:
-			Value: default
-				Dialogue: Our morning cheers![K] All together now! ♪
-		Case:
-			Value: CS
-				Dialogue: [CS:N]Everyone[CR]: ONE![K] DON'T SHIRK WORK!
-		Case:
-			Value: CS
-				Dialogue: [CS:N]Everyone[CR]: TWO![K] RUN AWAY AND PAY!
-		Case:
-			Value: CS
-				Dialogue: [CS:N]Everyone[CR]: THREE![K] SMILES GO FOR MILES!
-		Case:
-			Value: default
-				Dialogue: OK, Pokémon! Get to work! ♪
-		Case:
-			Value: CS
-				Dialogue: [CS:N]Everyone[CR]: HOORAY!
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: [c_name:NPC_HERO_FIRST]![K] Let's do our best on our guild assignments today!
-			Identifier: case
-				Argument: 2
-				Dialogue: [c_name:NPC_HERO_FIRST]![K] Let's do our best on our guild assignments today!
-			Identifier: default
-				Dialogue: [c_name:NPC_HERO_FIRST]![K] Let's do our best on our guild assignments today!
-		Case:
-			Value: c_name
-				Dialogue: [c_name:NPC_HERO_FIRST]'s team...[K] They're so happy today, yup yup!
-		Case:
-			Value: default
-				Dialogue: I'm...[K] I'm not giving up either! Yup yup!
-		Case:
-			Value: CS
-				Dialogue: [CN]My name's [CS:Y]Bidoof[CR].[K] [CN]I'm an apprentice at the guild.
-		Case:
-			Value: c_name
-				Dialogue: [CN]Before [c_name:NPC_HERO_FIRST] arrived, I was the [CN]newest apprentice here. Yup yup!
-		Case:
-			Value: default
-				Dialogue: [CN]My...[K]my dream is...[K] [CN]to do my best at the guild...[K]study...
-		Case:
-			Value: default
-				Dialogue: [CN]And someday...
-		Case:
-			Value: default
-				Dialogue: [CN]Someday I'll be the best explorer ever! [CN]Yup yup!
-	Switch:
-		Variable: { english="[M:D2][CS:C]Start from where?[CR]", }); switch ( message_SwitchMenu(0, 1)
-		Case:
-			Value: M
-				Dialogue: [M:D2][CS:C]Start from where?[CR]
-		Case:
-			Value: M
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]Beginning
-			Identifier: default
-				Argument: message_Close
-			Identifier: jump
-				Argument: label_0
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionA
-			Identifier: message_Close
-			Array accessor
-				Array: $SIDE01_BOSS2ND
-				Index: 0
-				Value: 0
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 1
-			Identifier: main_SetGround
-				Argument: LEVEL_G01P08A
-			Identifier: main_EnterGround
-				Argument: LEVEL_G01P03A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionB
-			Identifier: message_Close
-			Array accessor
-				Array: $SIDE01_BOSS2ND
-				Index: 0
-				Value: 0
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 2
-			Identifier: dungeon_mode
-				Argument: 123
-				Argument: DMODE_OPEN
-			Identifier: main_SetGround
-				Argument: LEVEL_G01P01A
-			Identifier: main_EnterGround
-				Argument: LEVEL_P01P01A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionC
-			Identifier: message_Close
-			Array accessor
-				Array: $SIDE01_BOSS2ND
-				Index: 0
-				Value: 0
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 3
-			Identifier: dungeon_mode
-				Argument: 123
-				Argument: DMODE_OPEN
-			Identifier: main_SetGround
-				Argument: LEVEL_G01P08A
-			Identifier: main_EnterGround
-				Argument: LEVEL_G01P03A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionD(w/Snover)
-			Identifier: message_Close
-			Array accessor
-				Array: $SIDE01_BOSS2ND
-				Index: 0
-				Value: 0
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 4
-			Identifier: dungeon_mode
-				Argument: 123
-				Argument: DMODE_OPEN
-			Identifier: main_EnterGround
-				Argument: LEVEL_D42P21A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionD(w/oSnover)
-			Identifier: message_Close
-			Array accessor
-				Array: $SIDE01_BOSS2ND
-				Index: 0
+	Conditional: If
+		Condition: ( not debug
+		Label: @label_0;
+		Identifier: SCENARIO_SIDE
+			Argument: scn
+			Argument: 40
+			Argument: 1
+		Identifier: message_SetFace
+			Argument: ACTOR_NPC_PERAPPU
+			Argument: FACE_NORMAL
+			Argument: FACE_POS_STANDARD
+		Identifier: message_Talk
+			Dialogue: All right! Here we go today! ♪
+		Identifier: message_Talk
+			Dialogue: Our morning cheers![K] All together now! ♪
+		Identifier: CallCommon
+			Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: message_EmptyActor
+		Identifier: message_Talk
+			Dialogue: [CS:N]Everyone[CR]: ONE![K] DON'T SHIRK WORK!
+		Identifier: message_Talk
+			Dialogue: [CS:N]Everyone[CR]: TWO![K] RUN AWAY AND PAY!
+		Identifier: message_Close
+		Identifier: back_SetGround
+			Argument: LEVEL_G01P04A
+		Identifier: supervision_Acting
+			Argument: 0
+		Identifier: supervision_Acting
+			Argument: 1
+		Identifier: supervision_Acting
+			Argument: 2
+		Identifier: camera_SetMyself
+			Template
+				Type: performer
+				Identifier: 0
+		Identifier: SetPositionInitial
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_GUREGGURU
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_GUREGGURU
+			Argument: 2
+		Identifier: screen_FadeIn
+			Argument: 1
+			Argument: 30
+		Identifier: bgm_PlayFadeIn
+			Argument: BGM_WIGGLYTUFFS_GUILD
+			Argument: 0
+			Argument: 256
+		Identifier: Wait
+			Argument: 30
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DOGOOMU
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_CHIRIIN
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_KIMAWARI
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PARTNER_FIRST
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: message_EmptyActor
+		Identifier: message_Talk
+			Dialogue: [CS:N]Everyone[CR]: THREE![K] SMILES GO FOR MILES!
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DOGOOMU
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_CHIRIIN
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_KIMAWARI
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PARTNER_FIRST
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: message_Close
+		Identifier: Wait
+			Argument: 15
+		Identifier: message_SetFace
+			Argument: ACTOR_NPC_PERAPPU
+			Argument: FACE_NORMAL
+			Argument: FACE_POS_TOP_R_FACEINW
+		Identifier: message_Talk
+			Dialogue: OK, Pokémon! Get to work! ♪
+		Identifier: CallCommon
+			Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DOGOOMU
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_CHIRIIN
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_KIMAWARI
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PARTNER_FIRST
+			Argument: EFFECT_JOYOUS
+			Argument: 3
+		Identifier: Wait
+			Argument: 1
+		Identifier: SetDirection
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_GUREGGURU
+			Argument: DIR_UP
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_GUREGGURU
+			Argument: 23
+		Identifier: SetDirection
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+			Argument: DIR_UP
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+			Argument: 23
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_CHIRIIN
+			Argument: 23
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HEIGANI
+			Argument: 23
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER_BIPPA
+			Argument: 24
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DOGOOMU
+			Argument: 23
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_KIMAWARI
+			Argument: 23
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DIGUDA
+			Argument: 25
+		Identifier: SetDirection
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HERO_FIRST
+			Argument: DIR_UP
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HERO_FIRST
+			Argument: 66
+		Identifier: SetDirection
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PARTNER_FIRST
+			Argument: DIR_UP
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PARTNER_FIRST
+			Argument: 66
+		Identifier: message_EmptyActor
+		Identifier: message_Talk
+			Dialogue: [CS:N]Everyone[CR]: HOORAY!
+		Identifier: message_Close
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_GUREGGURU
+			Argument: 2
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+			Argument: 2
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_CHIRIIN
+			Argument: 2
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HEIGANI
+			Argument: 2
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER_BIPPA
+			Argument: 2
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DOGOOMU
+			Argument: 2
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_KIMAWARI
+			Argument: 2
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DIGUDA
+			Argument: 2
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HERO_FIRST
+			Argument: 2
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PARTNER_FIRST
+			Argument: 2
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DOGOOMU
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_CHIRIIN
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_KIMAWARI
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: SetEffect
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PARTNER_FIRST
+			Argument: EFFECT_NONE
+			Argument: 3
+		Identifier: MovePositionLives
+			Template
+				Type: performer
+				Identifier: 0
+			Argument: 1
+			Argument: ACTOR_NPC_HERO_FIRST
+		Identifier: SetDirection
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+			Argument: DIR_DOWN
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+			Argument: 25
+		Identifier: WaitAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+		Identifier: Destroy
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DAGUTORIO
+		Identifier: SetDirection
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DIGUDA
+			Argument: DIR_DOWN
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DIGUDA
+			Argument: 24
+		Identifier: WaitAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DIGUDA
+		Identifier: Destroy
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DIGUDA
+		Identifier: Turn2Direction
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HERO_FIRST
+			Argument: 8
+			Argument: 10
+			Argument: DIR_LEFT
+		Identifier: Turn2Direction
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PARTNER_FIRST
+			Argument: 8
+			Argument: 10
+			Argument: DIR_LEFT
+		Identifier: MovePositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PUKURIN
+		Identifier: Position
+			Template
+				Type: m0
+				Identifier: 52.5
+				Identifier: 22.5
+		Identifier: MovePositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_GUREGGURU
+		Identifier: Position
+			Template
+				Type: m1
+				Identifier: 28
+				Identifier: 31.5
+		Identifier: MovePositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_CHIRIIN
+		Identifier: Position
+			Template
+				Type: m2
+				Identifier: 40.5
+				Identifier: 23.5
+		Identifier: Wait
+			Argument: 5
+		Identifier: MovePositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HEIGANI
+		Identifier: Position
+			Template
+				Type: m3
+				Identifier: 40.5
+				Identifier: 23.5
+		Identifier: MovePositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DOGOOMU
+		Identifier: Position
+			Template
+				Type: m4
+				Identifier: 30
+				Identifier: 34
+		Identifier: Move2PositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER_BIPPA
+		Identifier: Position
+			Template
+				Type: m5
+				Identifier: 40.5
+				Identifier: 23.5
+		Identifier: Move2PositionOffset
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_KIMAWARI
+			Argument: 1.1992
+			Argument: 32
+			Argument: 0
+		Identifier: Destroy
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PUKURIN
+		Identifier: Move2PositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_KIMAWARI
+		Identifier: Position
+			Template
+				Type: m6
+				Identifier: 40.5
+				Identifier: 23.5
+		Identifier: MovePositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_CHIRIIN
+		Identifier: Position
+			Template
+				Type: m7
+				Identifier: 40.5
+				Identifier: 16.5
+		Identifier: MovePositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HEIGANI
+		Identifier: Position
+			Template
+				Type: m8
+				Identifier: 40.5
+				Identifier: 16.5
+		Identifier: Wait
+			Argument: 45
+		Identifier: supervision_RemoveActing
+			Argument: 1
+		Identifier: SetDirection
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER_BIPPA
+			Argument: DIR_DOWNRIGHT
+		Identifier: SetPositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DOGOOMU
+			Identifier: Position
+			Template
+				Type: m9
+				Identifier: 27
+				Identifier: 38.5
+		Identifier: SetDirection
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DOGOOMU
+			Argument: DIR_DOWNLEFT
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_DOGOOMU
+			Argument: 4
+		Identifier: SetPositionMark
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_GUREGGURU
+			Identifier: Position
+			Template
+				Type: m10
+				Identifier: 28.5
+				Identifier: 27.5
+		Identifier: SetDirection
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_GUREGGURU
+			Argument: DIR_DOWN
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_GUREGGURU
+			Argument: 4
+		Identifier: Turn2DirectionLives
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_PARTNER_FIRST
+			Argument: 4
+			Argument: 10
+			Argument: ACTOR_NPC_HERO_FIRST
+		Identifier: WaitExecuteLives
+			Argument: ACTOR_NPC_PARTNER_FIRST
+		Identifier: Turn2DirectionLives
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HERO_FIRST
+			Argument: 4
+			Argument: 10
+			Argument: ACTOR_NPC_PARTNER_FIRST
+		Identifier: WaitExecuteLives
+			Argument: ACTOR_NPC_HERO_FIRST
+		Identifier: message_SetFace
+			Argument: ACTOR_NPC_PARTNER_FIRST
+			Argument: FACE_NORMAL
+			Argument: FACE_POS_STANDARD
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
 				Value: 1
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 6
-			Identifier: dungeon_mode
-				Argument: 123
-				Argument: DMODE_OPEN
-			Identifier: main_EnterGround
-				Argument: LEVEL_D42P21A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionF
-			Identifier: message_Close
-			Array accessor
-				Array: $SIDE01_BOSS2ND
-				Index: 0
-				Value: 1
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 6
-			Identifier: dungeon_mode
-				Argument: 123
-				Argument: DMODE_OPEN
-			Identifier: main_SetGround
-				Argument: LEVEL_G01P01A
-			Identifier: main_EnterGround
-				Argument: LEVEL_P01P01A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionG
-			Identifier: message_Close
-			Array accessor
-				Array: $SIDE01_BOSS2ND
-				Index: 0
-				Value: 1
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 7
-			Identifier: dungeon_mode
-				Argument: 123
-				Argument: DMODE_OPEN
-			Identifier: main_SetGround
-				Argument: LEVEL_G01P08A
-			Identifier: main_EnterGround
-				Argument: LEVEL_G01P03A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionH
-			Identifier: message_Close
-			Array accessor
-				Array: $SIDE01_BOSS2ND
-				Index: 0
-				Value: 1
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 8
-			Identifier: dungeon_mode
-				Argument: 123
-				Argument: DMODE_OPEN
-			Identifier: main_SetGround
-				Argument: LEVEL_G01P08A
-			Identifier: main_EnterGround
-				Argument: LEVEL_G01P03A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]TALK-N01-01
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 1
-			Label: @label_15;
-			Identifier: message_Close
-			Identifier: main_EnterGround
-				Argument: LEVEL_P01P01A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]TALK-N01-02
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 2
-			Identifier: jump
-				Argument: label_15
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]TALK-N01-03
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 3
-			Identifier: jump
-				Argument: label_15
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]TALK-N01-035
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 6
-			Identifier: jump
-				Argument: label_15
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]TALK-N01-04
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 40
-				Argument: 7
-			Identifier: jump
-				Argument: label_15
+					Dialogue: [c_name:NPC_HERO_FIRST]![K] Let's do our best on our guild assignments today!
+			Case:
+				Value: 2
+					Dialogue: [c_name:NPC_HERO_FIRST]![K] Let's do our best on our guild assignments today!
+			Case:
+				Value: default
+					Dialogue: [c_name:NPC_HERO_FIRST]![K] Let's do our best on our guild assignments today!
+		Identifier: CallCommon
+			Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HERO_FIRST
+			Argument: 71
+		Identifier: WaitAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HERO_FIRST
+		Identifier: WaitExecuteLives
+			Argument: ACTOR_NPC_HERO_FIRST
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_NPC_HERO_FIRST
+			Argument: 2
+		Identifier: Wait
+			Argument: 30
+		Identifier: MovePositionMark
+			Template
+				Type: performer
+				Identifier: 0
+		Identifier: Position
+			Template
+				Type: m11
+				Identifier: 40.5
+				Identifier: 31.5
+		Identifier: Position
+			Template
+				Type: m12
+				Identifier: 40.5
+				Identifier: 26.5
+		Identifier: WaitExecutePerformer
+			Argument: 0
+		Identifier: Wait
+			Argument: 15
+		Identifier: message_SetFace
+			Argument: ACTOR_PLAYER_BIPPA
+			Argument: FACE_NORMAL
+			Argument: FACE_POS_TOP_C_FACER
+		Identifier: message_Talk
+			Dialogue: [c_name:NPC_HERO_FIRST]'s team...[K] They're so happy today, yup yup!
+		Identifier: message_Talk
+			Dialogue: I'm...[K] I'm not giving up either! Yup yup!
+		Identifier: message_Close
+		Identifier: supervision_SpecialActing
+			Argument: 27
+			Argument: 0
+			Argument: 0
+		Identifier: supervision_SpecialActing
+			Argument: 28
+			Argument: 130
+			Argument: 78
+		Identifier: supervision_SpecialActing
+			Argument: 29
+			Argument: 16
+			Argument: 0
+		Identifier: supervision_SpecialActing
+			Argument: 30
+			Argument: 64
+			Argument: 0
+		Identifier: bgm_ChangeVolume
+			Argument: 60
+			Argument: 128
+		Identifier: Wait
+			Argument: 60
+		Identifier: Wait
+			Argument: 30
+		Identifier: message_Mail
+			Dialogue: [CN]My name's [CS:Y]Bidoof[CR].[K] [CN]I'm an apprentice at the guild.
+		Identifier: message_Mail
+			Dialogue: [CN]Before [c_name:NPC_HERO_FIRST] arrived, I was the [CN]newest apprentice here. Yup yup!
+		Identifier: message_Mail
+			Dialogue: [CN]My...[K]my dream is...[K] [CN]to do my best at the guild...[K]study...
+		Identifier: message_Mail
+			Dialogue: [CN]And someday...
+		Identifier: CallCommon
+			Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: supervision_SpecialActing
+			Argument: 31
+			Argument: 64
+			Argument: 0
+		Identifier: bgm_ChangeVolume
+			Argument: 60
+			Argument: 256
+		Identifier: Wait
+			Argument: 60
+		Identifier: Wait
+			Argument: 30
+		Identifier: Turn2Direction
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER_BIPPA
+			Argument: 4
+			Argument: 10
+			Argument: DIR_RIGHT
+		Identifier: WaitExecuteLives
+			Argument: ACTOR_PLAYER_BIPPA
+		Identifier: Wait
+			Argument: 15
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER_BIPPA
+			Argument: 29
+		Identifier: WaitAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER_BIPPA
+		Identifier: WaitExecuteLives
+			Argument: ACTOR_PLAYER_BIPPA
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER_BIPPA
+			Argument: 2
+		Identifier: Wait
+			Argument: 30
+		Identifier: Turn2Direction
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER_BIPPA
+			Argument: 4
+			Argument: 10
+			Argument: DIR_DOWN
+		Identifier: WaitExecuteLives
+			Argument: ACTOR_PLAYER_BIPPA
+		Identifier: Wait
+			Argument: 15
+		Identifier: message_Mail
+			Dialogue: [CN]Someday I'll be the best explorer ever! [CN]Yup yup!
+		Identifier: message_Close
+		Identifier: bgm_FadeOut
+			Argument: 120
+		Identifier: screen_FadeOut
+			Argument: 1
+			Argument: 60
+		Identifier: supervision_SpecialActing
+			Argument: 32
+			Argument: 0
+			Argument: 0
+		Identifier: Wait
+			Argument: 80
+		Identifier: end
+	Conditional: Else
+		Identifier: message_Notice
+			Dialogue: [M:D2][CS:C]Start from where?[CR]
+		Switch:
+			Variable: message_SwitchMenu(0, 1)
+			Case:
+				Value: M
+					Dialogue: [M:D2]Beginning
+			Case:
+				Value: default
+					Dialogue: [M:D2]SectionA
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionB
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionC
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionD(w/Snover)
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionD(w/oSnover)
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionF
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionG
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionH
+			Case:
+				Value: M
+					Dialogue: [M:D2]TALK-N01-01
+			Case:
+				Value: M
+					Dialogue: [M:D2]TALK-N01-02
+			Case:
+				Value: M
+					Dialogue: [M:D2]TALK-N01-03
+			Case:
+				Value: M
+					Dialogue: [M:D2]TALK-N01-035
+			Case:
+				Value: M
+					Dialogue: [M:D2]TALK-N01-04

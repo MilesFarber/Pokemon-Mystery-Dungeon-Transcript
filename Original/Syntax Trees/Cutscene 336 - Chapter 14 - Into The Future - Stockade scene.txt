@@ -1870,88 +1870,68 @@ def 0:
 			Value: default
 				Dialogue: (You ask me that out of nowhere...![K] Umm...)
 	Label: @label_3;
-	Switch:
-		Variable: ACTOR_PLAYER, FACE_WORRIED, FACE_POS_TOP_C_FACEL); message_SwitchMonologue ($HERO_TALK_KIND
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (Wh-what to do...?)
-			Identifier: default
-				Dialogue: (Wh-what to do...?)
-		Case:
-			Value: default
-			Identifier: case
-				Argument: menu
-				Dialogue: Use an item!
-			Identifier: default
-				Argument: label_0
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_JUPUTORU
-				Argument: FACE_NORMAL
-				Argument: FACE_POS_TOP_L_FACEINW
-			Identifier: message_Talk
-				Dialogue: ...No. An item's no good...
-			Identifier: message_Talk
-				Dialogue: ...We're tied up...and unable to move...
-			Identifier: message_Talk
-				Dialogue: ...It should be something you can do instantaneously...
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: message_SetFace
-				Argument: ACTOR_PLAYER
-				Argument: FACE_WORRIED
-				Argument: FACE_POS_TOP_C_FACEL
-			Switch:
-				Variable: $HERO_TALK_KIND
-				Case:
-					Value: 4
-						Dialogue: (Urk...! That's easy for you to say...[K] Ummm...)
-				Case:
-					Value: default
-						Dialogue: (Urk...! That's easy for you to say...[K] Ummm...)
-			Identifier: continue
-			Identifier: case
-				Argument: menu
-				Dialogue: Use a move!
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_JUPUTORU
-				Argument: FACE_NORMAL
-				Argument: FACE_POS_TOP_L_FACEINW
-			Identifier: message_Talk
-				Dialogue: ...A move...?[K] That could work, but...
-			Identifier: message_Talk
-				Dialogue: ...No! That's no good...
-			Identifier: message_Talk
-				Dialogue: ...We're trussed up...so we can't move...
-			Identifier: message_Talk
-				Dialogue: ...It has to be something you can do instantaneously...
-			Identifier: message_Talk
-				Dialogue: ...It doesn't need to be flashy... Can't you do anything more basic...?
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: message_SetFace
-				Argument: ACTOR_PLAYER
-				Argument: FACE_WORRIED
-				Argument: FACE_POS_TOP_C_FACEL
-			Switch:
-				Variable: $HERO_TALK_KIND
-				Case:
-					Value: 4
-						Dialogue: (Urk...! You're not helping...[K] Ummm...)
-				Case:
-					Value: default
-						Dialogue: (Urk...! You're not helping...[K] Ummm...)
-			Identifier: continue
-			Identifier: case
-				Argument: menu
-				Dialogue: Attack!
-			Identifier: break_loop
-			Identifier: break
+	Loop: forever
+		Identifier: message_SetFace
+			Argument: ACTOR_PLAYER
+			Argument: FACE_WORRIED
+			Argument: FACE_POS_TOP_C_FACEL
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (Wh-what to do...?)
+			Case:
+				Value: default
+					Dialogue: (Wh-what to do...?)
+		Switch:
+			Variable: message_SwitchMenu(0, 1)
+			Case:
+				Value: default
+					Dialogue: Use an item!
+			Case:
+				Value: default
+					Dialogue: ...No. An item's no good...
+			Case:
+				Value: default
+					Dialogue: ...We're tied up...and unable to move...
+			Case:
+				Value: default
+					Dialogue: ...It should be something you can do instantaneously...
+			Case:
+				Value: 4
+				Identifier: case
+					Argument: 4
+					Dialogue: (Urk...! That's easy for you to say...[K] Ummm...)
+				Identifier: default
+					Dialogue: (Urk...! That's easy for you to say...[K] Ummm...)
+			Case:
+				Value: default
+					Dialogue: Use a move!
+			Case:
+				Value: default
+					Dialogue: ...A move...?[K] That could work, but...
+			Case:
+				Value: default
+					Dialogue: ...No! That's no good...
+			Case:
+				Value: default
+					Dialogue: ...We're trussed up...so we can't move...
+			Case:
+				Value: default
+					Dialogue: ...It has to be something you can do instantaneously...
+			Case:
+				Value: default
+					Dialogue: ...It doesn't need to be flashy... Can't you do anything more basic...?
+			Case:
+				Value: 4
+				Identifier: case
+					Argument: 4
+					Dialogue: (Urk...! You're not helping...[K] Ummm...)
+				Identifier: default
+					Dialogue: (Urk...! You're not helping...[K] Ummm...)
+			Case:
+				Value: default
+					Dialogue: Attack!
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play

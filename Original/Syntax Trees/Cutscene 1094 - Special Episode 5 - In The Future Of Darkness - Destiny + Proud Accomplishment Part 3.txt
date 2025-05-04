@@ -5018,14 +5018,14 @@ def 1:
 	Identifier: SetOutputAttribute
 		Argument: 4
 	Label: @label_0;
-	Identifier: forever
-		Argument: SetAnimation
-		Argument: 20
-		Argument: WaitAnimation
-		Argument: WaitRandom
-		Argument: 120
-		Argument: 270
-		Argument: continue
+	Loop: forever
+		Identifier: SetAnimation
+			Argument: 20
+		Identifier: WaitAnimation
+		Identifier: WaitRandom
+			Argument: 120
+			Argument: 270
+		Identifier: continue
 def 2:
 	Target: actor ACTOR_NPC_DEBUG
 	Label: @label_1;
@@ -5048,16 +5048,23 @@ def 3:
 	Identifier: Lock
 		Argument: 5
 	Label: @label_3;
-	Switch:
-		Variable: 3); SlidePositionOffset(1, -1, 0); Wait(2); SlidePositionOffset(1, 1, 0); Wait(2); switch ( $EVENT_LOCAL
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Argument: break_loop
-			Identifier: break
-			Identifier: default
-				Argument: continue
+	Loop: forever
+		Identifier: SetAnimation
+			Argument: 3
+		Identifier: SlidePositionOffset
+			Argument: 1
+			Argument: 1
+			Argument: 0
+		Identifier: Wait
+			Argument: 2
+		Identifier: SlidePositionOffset
+			Argument: 1
+			Argument: 1
+			Argument: 0
+		Identifier: Wait
+			Argument: 2
+		Switch:
+			Variable: $EVENT_LOCAL
 	Identifier: SetAnimation
 		Argument: 2
 	Identifier: Lock

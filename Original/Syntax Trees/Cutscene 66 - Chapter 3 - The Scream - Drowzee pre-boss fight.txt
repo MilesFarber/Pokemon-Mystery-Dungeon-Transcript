@@ -937,16 +937,21 @@ def 1:
 	Identifier: SetAnimation
 		Argument: 3
 	Label: @label_1;
-	Switch:
-		Variable: 1, 1, 0); Wait(1); SlidePositionOffset(1, -1, 0); Wait(1); switch ( $EVENT_LOCAL
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Argument: break_loop
-			Identifier: break
-			Identifier: default
-				Argument: continue
+	Loop: forever
+		Identifier: SlidePositionOffset
+			Argument: 1
+			Argument: 1
+			Argument: 0
+		Identifier: Wait
+			Argument: 1
+		Identifier: SlidePositionOffset
+			Argument: 1
+			Argument: 1
+			Argument: 0
+		Identifier: Wait
+			Argument: 1
+		Switch:
+			Variable: $EVENT_LOCAL
 	Label: @label_0;
 	Identifier: SetAnimation
 		Argument: 2

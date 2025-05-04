@@ -18,13 +18,26 @@ def 0:
 		Case:
 			Value: default
 			Label: @label_2;
-			Switch:
-				Variable: $SCENARIO_MAIN_BIT_FLAG[48]
-				Case:
-					Value: default
-
-			Conditional
-				Type: Else
+			Conditional: If
+				Condition: ( $SCENARIO_MAIN_BIT_FLAG[48]
+				Array accessor
+					Array: $SCENARIO_MAIN_BIT_FLAG
+					Index: 49
+					Value: 1
+				Label: @label_4;
+				Identifier: message_Close
+				Identifier: bgm_FadeOut
+					Argument: 60
+				Switch:
+					Variable: message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP)
+				Identifier: main_EnterGround
+					Argument: LEVEL_D73P11A
+					Argument: 30
+				Identifier: hold
+				Identifier: end
+			Conditional: Else
+				Identifier: jump
+					Argument: label_4
 		Case:
 			Value: default
 			Identifier: SCENARIO_MAIN

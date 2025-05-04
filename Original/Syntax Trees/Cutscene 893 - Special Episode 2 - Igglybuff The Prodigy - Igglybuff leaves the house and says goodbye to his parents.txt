@@ -171,9 +171,31 @@ def 0:
 			Identifier: ACTOR_NPC_PUKURIN_MAMA
 		Argument: EFFECT_NONE
 		Argument: 3
-	Conditional
-		Type: If
-	Conditional
-		Type: ElseIf
-	Conditional
-		Type: Else
+	Conditional: If
+		Condition: ($SCENARIO_SIDE) == [41, 3]
+		Label: @label_0;
+		Identifier: bgm_FadeOut
+			Argument: 60
+		Identifier: screen_FadeOut
+			Argument: 1
+			Argument: 60
+		Identifier: Wait
+			Argument: 30
+		Label: @label_3;
+		Identifier: end
+	Conditional: ElseIf
+		Condition: ($SCENARIO_SIDE) == [42, 0]
+		Identifier: screen_FadeOut
+			Argument: 1
+			Argument: 30
+		Identifier: jump
+			Argument: label_3
+	Conditional: Else
+		Label: @label_2;
+		Identifier: bgm_FadeOut
+			Argument: 30
+		Identifier: screen_FadeOut
+			Argument: 1
+			Argument: 30
+		Identifier: jump
+			Argument: label_3

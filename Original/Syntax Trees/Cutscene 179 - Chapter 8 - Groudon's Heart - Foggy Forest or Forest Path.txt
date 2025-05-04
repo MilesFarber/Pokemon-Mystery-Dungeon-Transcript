@@ -446,16 +446,27 @@ def 0:
 				Argument: scn
 				Argument: 10
 				Argument: 2
-			Switch:
-				Variable: $SCENARIO_MAIN_BIT_FLAG[5]
-				Case:
-					Value: default
-
-			Switch:
-				Variable: 12, 0); switch ( message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
-				Case:
-					Value: default
-
+			Conditional: If
+				Condition: ( $SCENARIO_MAIN_BIT_FLAG[5]
+				Identifier: main_EnterDungeon
+					Argument: 13
+					Argument: 0
+				Switch:
+					Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+				Identifier: main_EnterDungeon
+					Argument: 1
+					Argument: 0
+				Identifier: hold
+			Conditional: Else
+				Identifier: main_EnterDungeon
+					Argument: 12
+					Argument: 0
+				Switch:
+					Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+				Identifier: main_EnterDungeon
+					Argument: 1
+					Argument: 0
+				Identifier: hold
 			Identifier: break
 			Identifier: case
 				Argument: menu

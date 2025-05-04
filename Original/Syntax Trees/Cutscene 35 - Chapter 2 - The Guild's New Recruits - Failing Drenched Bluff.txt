@@ -1,27 +1,56 @@
 def 0:
 	Identifier: sound_Stop
-	Unknown: Jump-switches to-be-implemented
-	Switch:
-		Variable: LEVEL_S04P01A); screen_FadeIn(1, 0); message_SetFace(ACTOR_ATTENDANT1, FACE_PAIN, FACE_POS_STANDARD); message_SwitchTalk ($PARTNER_TALK_KIND
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Ugh... That didn't end well...
-			Identifier: case
-				Argument: 2
-				Dialogue: Ugh... That didn't go well, did it?
-			Identifier: default
-				Dialogue: Ugh... That didn't work at all...
-		Case:
-			Value: default
+	Conditional: If
+		Condition: ( variation
+		Label: @label_0;
+		Switch:
+			Variable: ProcessSpecial(53, -1, 0)
+		Identifier: message_SetWaitMode
+			Argument: 300
+			Argument: 300
+		Identifier: message_Explanation
+			Dialogue: [CN]Thanks for playing! [CN]We hope you enjoyed [CN]the demo!
+		Identifier: message_KeyWait
+		Unknown: Jump-switches to-be-implemented
+		Identifier: end
+	Conditional: Else
+		Identifier: back_SetGround
+			Argument: LEVEL_S04P01A
+		Identifier: screen_FadeIn
+			Argument: 1
+			Argument: 0
+		Identifier: message_SetFace
+			Argument: ACTOR_ATTENDANT1
+			Argument: FACE_PAIN
+			Argument: FACE_POS_STANDARD
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Ugh... That didn't end well...
+			Case:
+				Value: 2
+					Dialogue: Ugh... That didn't go well, did it?
+			Case:
+				Value: default
+					Dialogue: Ugh... That didn't work at all...
+		Identifier: message_KeyWait
+		Identifier: screen_FadeOutAll
+			Argument: 1
+			Argument: 60
+		Identifier: message_CloseEnforce
+		Identifier: Wait
+			Argument: 60
+		Identifier: CallCommon
+			Argument: CORO_FADE_OUT_ALL_AFTER
+		Conditional: If
+			Condition: ( variation
 			Identifier: supervision_ExecuteActing
 				Argument: LEVEL_D02P11A
 				Argument: M02A0701
 				Argument: 0
 			Identifier: hold
-		Case:
-			Value: 1
+		Conditional: Else
 			Identifier: back_SetGround
 				Argument: LEVEL_G01P03A
 			Identifier: supervision_Acting

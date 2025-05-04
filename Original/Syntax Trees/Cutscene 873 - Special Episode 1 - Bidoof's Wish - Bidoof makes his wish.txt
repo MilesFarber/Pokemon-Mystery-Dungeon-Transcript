@@ -223,105 +223,85 @@ def 0:
 	Identifier: message_Talk
 		Dialogue: What is your wish, [CS:Y]Bidoof[CR]?
 	Label: @label_9;
-	Switch:
-		Variable: CORO_MESSAGE_CLOSE_WAIT_FUNC); message_SetFace(ACTOR_PLAYER_BIPPA, FACE_NORMAL, FACE_POS_STANDARD); message_Talk({ english=" M-my wish...", }); message_SetActor(ACTOR_PLAYER_BIPPA); message_Talk({ english=""" My wish is...[K] Ummmm...[K] Uuuuummmm... """, }); switch ( message_SwitchMenu(0, 1)
-		Case:
-			Value: default
-				Dialogue: M-my wish...
-		Case:
-			Value: default
-				Dialogue: My wish is...[K] Ummmm...[K] Uuuuummmm...
-		Case:
-			Value: default
-			Identifier: case
-				Argument: menu
-				Dialogue: To become rich!
-			Identifier: default
-				Argument: label_0
-			Identifier: EVENT_LOCAL
-				Argument: 1
-			Identifier: message_Mail
-				Dialogue: [CN]To become rich! [CN]Is this truly what you want?
-			Label: @label_7;
-			Switch:
-				Variable: message_SwitchMenu(0, 1)
-				Case:
-					Value: default
-						Dialogue: Yes
-				Case:
-					Value: default
-						Dialogue: [CN]Are you absolutely sure this is what you want?
-				Case:
-					Value: default
-					Identifier: case
-						Argument: menu
-						Dialogue: Yes
-					Identifier: default
-						Argument: break_loop
-					Identifier: break
-					Identifier: case
-						Argument: menu
-						Dialogue: No
-					Identifier: continue
-					Identifier: break
-				Case:
-					Value: default
-						Dialogue: No
-			Identifier: break
-			Identifier: case
-				Argument: menu
-				Dialogue: To be the strongest Pokémon!
-			Identifier: EVENT_LOCAL
-				Argument: 2
-			Identifier: message_Mail
-				Dialogue: [CN]To be the strongest Pokémon! [CN]Is this truly what you want?
-			Identifier: jump
-				Argument: label_7
-			Identifier: case
-				Argument: menu
-				Dialogue: To be the best explorer!
-			Identifier: EVENT_LOCAL
-				Argument: 3
-			Identifier: message_Mail
-				Dialogue: [CN]To be the best explorer! [CN]Is this truly what you want?
-			Identifier: jump
-				Argument: label_7
-			Identifier: case
-				Argument: menu
-				Dialogue: To eat lots of yummy food!
-			Identifier: EVENT_LOCAL
-				Argument: 4
-			Identifier: message_Mail
-				Dialogue: [CN]To eat lots of yummy food! [CN]Is this truly what you want?
-			Identifier: jump
-				Argument: label_7
-			Identifier: case
-				Argument: menu
-				Dialogue: To sleep well...
-			Identifier: EVENT_LOCAL
-				Argument: 5
-			Identifier: message_Mail
-				Dialogue: [CN]To sleep well! [CN]Is this truly what you want?
-			Identifier: jump
-				Argument: label_7
-			Identifier: case
-				Argument: menu
-				Dialogue: To get lots of items!
-			Identifier: EVENT_LOCAL
-				Argument: 6
-			Identifier: message_Mail
-				Dialogue: [CN]To get lots of items! [CN]Is this truly what you want?
-			Identifier: jump
-				Argument: label_7
-			Identifier: case
-				Argument: menu
-				Dialogue: To rule the world!
-			Identifier: EVENT_LOCAL
-				Argument: 7
-			Identifier: message_Mail
-				Dialogue: [CN]To rule the world! [CN]Is this truly what you want?
-			Identifier: jump
-				Argument: label_7
+	Loop: forever
+		Identifier: CallCommon
+			Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: message_SetFace
+			Argument: ACTOR_PLAYER_BIPPA
+			Argument: FACE_NORMAL
+			Argument: FACE_POS_STANDARD
+		Identifier: message_Talk
+			Dialogue: M-my wish...
+		Identifier: message_SetActor
+			Argument: ACTOR_PLAYER_BIPPA
+		Identifier: message_Talk
+			Dialogue: My wish is...[K] Ummmm...[K] Uuuuummmm...
+		Switch:
+			Variable: message_SwitchMenu(0, 1)
+			Case:
+				Value: default
+					Dialogue: To become rich!
+			Case:
+				Value: default
+					Dialogue: [CN]To become rich! [CN]Is this truly what you want?
+			Case:
+				Value: default
+				Identifier: case
+					Argument: menu
+					Dialogue: Yes
+				Identifier: default
+					Argument: message_Mail
+					Dialogue: [CN]Are you absolutely sure this is what you want?
+				Switch:
+					Variable: message_SwitchMenu(0, 1)
+					Case:
+						Value: default
+							Dialogue: Yes
+					Case:
+						Value: default
+							Dialogue: No
+				Identifier: break
+				Identifier: case
+					Argument: menu
+					Dialogue: No
+				Identifier: continue
+				Identifier: break
+			Case:
+				Value: default
+					Dialogue: To be the strongest Pokémon!
+			Case:
+				Value: default
+					Dialogue: [CN]To be the strongest Pokémon! [CN]Is this truly what you want?
+			Case:
+				Value: default
+					Dialogue: To be the best explorer!
+			Case:
+				Value: default
+					Dialogue: [CN]To be the best explorer! [CN]Is this truly what you want?
+			Case:
+				Value: default
+					Dialogue: To eat lots of yummy food!
+			Case:
+				Value: default
+					Dialogue: [CN]To eat lots of yummy food! [CN]Is this truly what you want?
+			Case:
+				Value: default
+					Dialogue: To sleep well...
+			Case:
+				Value: default
+					Dialogue: [CN]To sleep well! [CN]Is this truly what you want?
+			Case:
+				Value: default
+					Dialogue: To get lots of items!
+			Case:
+				Value: default
+					Dialogue: [CN]To get lots of items! [CN]Is this truly what you want?
+			Case:
+				Value: default
+					Dialogue: To rule the world!
+			Case:
+				Value: default
+					Dialogue: [CN]To rule the world! [CN]Is this truly what you want?
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Switch:

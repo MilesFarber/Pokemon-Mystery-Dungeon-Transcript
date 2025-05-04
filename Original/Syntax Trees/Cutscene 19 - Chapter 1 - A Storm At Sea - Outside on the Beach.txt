@@ -743,279 +743,392 @@ def 0:
 			Value: default
 				Dialogue: (What should I do?[K] Should I join this Pokémon and form an exploration team?)
 	Label: @label_3;
-	Switch:
-		Variable: message_SwitchMenu(0, 1)
-		Case:
-			Value: default
-			Identifier: case
-				Argument: menu
-				Dialogue: Form a team
-			Identifier: break_loop
-			Identifier: break
-			Identifier: case
-				Argument: menu
-				Dialogue: Say no
-			Identifier: default
-				Argument: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: se_Play
-				Argument: 8968
-			Identifier: ExecuteCommon
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-				Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
-				Argument: 0
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: CORO_JUMP_SURPRISE_FUNC_SERIES
+			Identifier: 0
 			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_SURPRISED
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Huh? Oh, come on!
-				Case:
-					Value: 2
-						Dialogue: What?! Oh, but...
-				Case:
-					Value: default
-						Dialogue: What?! Oh, please!
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_SURPRISED
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Huh
+			Identifier: Oh
+			Identifier: come
+			Identifier: on
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: What
+			Identifier: Oh
+			Identifier: but...
+			Identifier: default
+			Identifier: english
+			Identifier: What
+			Identifier: Oh
+			Identifier: please
 			Identifier: WaitExecuteLives
-				Argument: ACTOR_ATTENDANT1
+			Identifier: ACTOR_ATTENDANT1
 			Identifier: message_KeyWait
 			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_SAD
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: But I'm braver when I'm with you, [hero]...
-				Case:
-					Value: 2
-						Dialogue: But I'm braver when I'm with you, [hero]...
-				Case:
-					Value: default
-						Dialogue: But I'm braver when I'm with you, [hero]...
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: And you were awesome when we beat [CS:N]Koffing[CR] and his buddy.
-				Case:
-					Value: 2
-						Dialogue: You were so fantastic when we confronted [CS:N]Koffing[CR] and his sidekick.
-				Case:
-					Value: default
-						Dialogue: And you were fantastic when we faced [CS:N]Koffing[CR] and his sidekick.
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: When I saw that, I realized you're no ordinary Pokémon, [hero]!
-				Case:
-					Value: 2
-						Dialogue: When I saw that, I realized you're no ordinary Pokémon, [hero]!
-				Case:
-					Value: default
-						Dialogue: When I saw that, I realized you're no ordinary Pokémon, [hero]!
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: I thought that you'd make a first-class explorer, [hero].
-				Case:
-					Value: 2
-						Dialogue: I became convinced that you'd make a first-class explorer, [hero].
-				Case:
-					Value: default
-						Dialogue: I thought that you could be a first-class explorer, [hero].
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
-				Case:
-					Value: 2
-						Dialogue: So come on now.[K] Let's form an exploration team together.
-				Case:
-					Value: default
-						Dialogue: So, please?[K] Will you please form an exploration team with me?
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_SAD
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: But
+			Identifier: I
+			Identifier: m
+			Identifier: braver
+			Identifier: when
+			Identifier: I
+			Identifier: m
+			Identifier: with
+			Identifier: you
+			Identifier: hero
+			Identifier: ...
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: But
+			Identifier: I
+			Identifier: m
+			Identifier: braver
+			Identifier: when
+			Identifier: I
+			Identifier: m
+			Identifier: with
+			Identifier: you
+			Identifier: hero
+			Identifier: ...
+			Identifier: default
+			Identifier: english
+			Identifier: But
+			Identifier: I
+			Identifier: m
+			Identifier: braver
+			Identifier: when
+			Identifier: I
+			Identifier: m
+			Identifier: with
+			Identifier: you
+			Identifier: hero
+			Identifier: ...
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: And
+			Identifier: you
+			Identifier: were
+			Identifier: awesome
+			Identifier: when
+			Identifier: we
+			Identifier: beat
+			Identifier: CS
+			Identifier: N
+			Identifier: Koffing
+			Identifier: CR
+			Identifier: and
+			Identifier: his
+			Identifier: buddy.
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: You
+			Identifier: were
+			Identifier: so
+			Identifier: fantastic
+			Identifier: when
+			Identifier: we
+			Identifier: confronted
+			Identifier: CS
+			Identifier: N
+			Identifier: Koffing
+			Identifier: CR
+			Identifier: and
+			Identifier: his
+			Identifier: sidekick.
+			Identifier: default
+			Identifier: english
+			Identifier: And
+			Identifier: you
+			Identifier: were
+			Identifier: fantastic
+			Identifier: when
+			Identifier: we
+			Identifier: faced
+			Identifier: CS
+			Identifier: N
+			Identifier: Koffing
+			Identifier: CR
+			Identifier: and
+			Identifier: his
+			Identifier: sidekick.
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: When
+			Identifier: I
+			Identifier: saw
+			Identifier: that
+			Identifier: I
+			Identifier: realized
+			Identifier: you
+			Identifier: re
+			Identifier: no
+			Identifier: ordinary
+			Identifier: Pokémon
+			Identifier: hero
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: When
+			Identifier: I
+			Identifier: saw
+			Identifier: that
+			Identifier: I
+			Identifier: realized
+			Identifier: you
+			Identifier: re
+			Identifier: no
+			Identifier: ordinary
+			Identifier: Pokémon
+			Identifier: hero
+			Identifier: default
+			Identifier: english
+			Identifier: When
+			Identifier: I
+			Identifier: saw
+			Identifier: that
+			Identifier: I
+			Identifier: realized
+			Identifier: you
+			Identifier: re
+			Identifier: no
+			Identifier: ordinary
+			Identifier: Pokémon
+			Identifier: hero
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: I
+			Identifier: thought
+			Identifier: that
+			Identifier: you
+			Identifier: d
+			Identifier: make
+			Identifier: a
+			Identifier: first
+			Identifier: class
+			Identifier: explorer
+			Identifier: hero
+			Identifier: .
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: I
+			Identifier: became
+			Identifier: convinced
+			Identifier: that
+			Identifier: you
+			Identifier: d
+			Identifier: make
+			Identifier: a
+			Identifier: first
+			Identifier: class
+			Identifier: explorer
+			Identifier: hero
+			Identifier: .
+			Identifier: default
+			Identifier: english
+			Identifier: I
+			Identifier: thought
+			Identifier: that
+			Identifier: you
+			Identifier: could
+			Identifier: be
+			Identifier: a
+			Identifier: first
+			Identifier: class
+			Identifier: explorer
+			Identifier: hero
+			Identifier: .
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: So
+			Identifier: come
+			Identifier: on
+			Identifier: I
+			Identifier: m
+			Identifier: begging
+			Identifier: you.
+			Identifier: K
+			Identifier: Let
+			Identifier: s
+			Identifier: form
+			Identifier: an
+			Identifier: exploration
+			Identifier: team
+			Identifier: you
+			Identifier: and
+			Identifier: me.
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: So
+			Identifier: come
+			Identifier: on
+			Identifier: now.
+			Identifier: K
+			Identifier: Let
+			Identifier: s
+			Identifier: form
+			Identifier: an
+			Identifier: exploration
+			Identifier: team
+			Identifier: together.
+			Identifier: default
+			Identifier: english
+			Identifier: So
+			Identifier: please
+			Identifier: K
+			Identifier: Will
+			Identifier: you
+			Identifier: please
+			Identifier: form
+			Identifier: an
+			Identifier: exploration
+			Identifier: team
+			Identifier: with
+			Identifier: me
 			Identifier: continue
 			Identifier: case
-				Argument: menu
-				Dialogue: Are you...?
+			Identifier: menu
+			Identifier: english
+			Identifier: Are
+			Identifier: you...
 			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
 			Identifier: se_Play
-				Argument: 8962
+			Identifier: 8962
 			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-				Argument: EFFECT_QUESTION_MARK
-				Argument: 3
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: EFFECT_QUESTION_MARK
+			Identifier: 3
 			Identifier: WaitEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
 			Identifier: WaitExecuteLives
-				Argument: ACTOR_ATTENDANT1
+			Identifier: ACTOR_ATTENDANT1
 			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_NORMAL
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Huh? [K]Am I what?
-				Case:
-					Value: 2
-						Dialogue: Huh? [K]Am I what?
-				Case:
-					Value: default
-						Dialogue: Huh? [K]Am I what?
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_NORMAL
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: Huh
+			Identifier: K
+			Identifier: Am
+			Identifier: I
+			Identifier: what
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Huh
+			Identifier: K
+			Identifier: Am
+			Identifier: I
+			Identifier: what
+			Identifier: default
+			Identifier: english
+			Identifier: Huh
+			Identifier: K
+			Identifier: Am
+			Identifier: I
+			Identifier: what
 			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_NORMAL
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: What do you mean, [K]\
-					Identifier: Are
-						Argument: you...
-				Case:
-					Value: 2
-						Dialogue: What do you mean, [K]\
-					Identifier: Are
-						Argument: you...
-				Case:
-					Value: default
-						Dialogue: What do you mean, [K]\
-					Identifier: Are
-						Argument: you...
-			Switch:
-				Variable: message_SwitchMenu(0, 1)
-				Case:
-					Value: default
-						Dialogue: You're trying to talk me into it?
-			Label: @label_4;
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_NORMAL
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: What
+			Identifier: do
+			Identifier: you
+			Identifier: mean
+			Identifier: K
+			Identifier: Are
+			Identifier: you...
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: What
+			Identifier: do
+			Identifier: you
+			Identifier: mean
+			Identifier: K
+			Identifier: Are
+			Identifier: you...
+			Identifier: default
+			Identifier: english
+			Identifier: What
+			Identifier: do
+			Identifier: you
+			Identifier: mean
+			Identifier: K
+			Identifier: Are
+			Identifier: you...
+			Identifier: switch
+			Identifier: message_SwitchMenu
+			Identifier: 0
+			Identifier: 1
+			Identifier: case
+			Identifier: menu
+			Identifier: english
+			Identifier: You
+			Identifier: re
+			Identifier: trying
+			Identifier: to
+			Identifier: talk
+			Identifier: me
+			Identifier: into
+			Identifier: it
+			Identifier: default
+			Identifier: break
+			Identifier: label_4
 			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
 			Identifier: se_Play
-				Argument: 8968
+			Identifier: 8968
 			Identifier: ExecuteCommon
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-				Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
-				Argument: 0
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_SURPRISED
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: What?! [K]Talk you into it?!
-				Case:
-					Value: 2
-						Dialogue: What?! [K]Talk you into it?!
-				Case:
-					Value: default
-						Dialogue: What?! [K]Talk you into it?!
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: I wasn't trying to do anything!
-				Case:
-					Value: 2
-						Dialogue: I didn't even think of it!
-				Case:
-					Value: default
-						Dialogue: The thought never crossed my mind!
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_SAD
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Well, I'm a complete coward...[K] Honestly...
-				Case:
-					Value: 2
-						Dialogue: Well, I'm a complete coward...[K] Honestly...
-				Case:
-					Value: default
-						Dialogue: Well, I'm a complete coward...[K] Honestly...
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: I mean, yes, I thought I could depend on you, [hero]...
-				Case:
-					Value: 2
-						Dialogue: I mean, yes, I thought I could depend on you, [hero]...
-				Case:
-					Value: default
-						Dialogue: I mean, yes, I thought I could depend on you, [hero]...
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_NORMAL
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: But during that fight with [CS:N]Koffing[CR] earlier...
-				Case:
-					Value: 2
-						Dialogue: But during that fight with [CS:N]Koffing[CR] earlier...
-				Case:
-					Value: default
-						Dialogue: But during that fight with [CS:N]Koffing[CR] earlier...
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Having you there with me, I felt really brave.
-				Case:
-					Value: 2
-						Dialogue: Having you there with me, I felt really brave.
-				Case:
-					Value: default
-						Dialogue: Having you there with me, I felt really brave.
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: I think I could do anything as long as you're helping me, [hero].
-				Case:
-					Value: 2
-						Dialogue: I think I could do anything as long as you're helping me, [hero].
-				Case:
-					Value: default
-						Dialogue: I think I could do anything as long as you're helping me, [hero].
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
-				Case:
-					Value: 2
-						Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
-				Case:
-					Value: default
-						Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
-			Identifier: continue
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+		Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
 	Label: @label_0;
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -1319,5 +1432,4 @@ def 0:
 		Argument: 60
 	Switch:
 		Variable: message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP)
-
 	Identifier: end

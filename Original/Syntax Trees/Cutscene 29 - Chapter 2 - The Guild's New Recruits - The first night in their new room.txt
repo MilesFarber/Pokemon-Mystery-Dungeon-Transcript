@@ -1,200 +1,335 @@
 def 0:
 	Identifier: sound_Stop
-	Conditional
-		Type: If
-	Switch:
-		Variable: 4); back2_SetGround(LEVEL_V02P06A); camera2_SetPositionMark(Position<'m0', 19.5, 15.5>); screen2_FadeIn(1, 60); Wait(150); screen2_FadeOut(1, 60); back2_SetMode(0); back_SetGround(LEVEL_G01P07C); supervision_Acting(0); camera_SetMyself<performer 0>(); SetAnimation<actor ACTOR_PLAYER>(76); SetAnimation<actor ACTOR_ATTENDANT1>(76); screen_FadeChange(1, 60, 0, 192); bgm_PlayFadeIn(BGM_GOODNIGHT, 0, 256); Wait(30); message_SetActor(ACTOR_ATTENDANT1); message_SwitchTalk ($PARTNER_TALK_KIND
-		Case:
+	Conditional: If
+		Condition: ( $SCENARIO_MAIN_BIT_FLAG[8]
+		Label: @label_0;
+		Array accessor
+			Array: $SCENARIO_MAIN_BIT_FLAG
+			Index: 8
+			Value: 0
+		Identifier: Wait
+			Argument: 30
+		Identifier: me_Play
+			Argument: 7
+		Identifier: message_Explanation
+			Dialogue: [CN]Exploration Team [CN]Quick Tip[W:30]
+		Identifier: CallCommon
+			Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: message_Explanation
+			Dialogue: [CN]You can save a record of your progress [CN]by climbing onto your bed from now on.
+		Identifier: message_Explanation
+			Dialogue: [CN]So whenever you want to save your [CN]progress, just climb onto your bed.
+		Identifier: message_Close
+		Identifier: Wait
+			Argument: 60
+		Identifier: end
+	Conditional: Else
+		Identifier: back2_SetMode
+			Argument: 4
+		Identifier: back2_SetGround
+			Argument: LEVEL_V02P06A
+		Identifier: camera2_SetPositionMark
+			Identifier: Position
+			Template
+				Type: m0
+				Identifier: 19.5
+				Identifier: 15.5
+		Identifier: screen2_FadeIn
+			Argument: 1
+			Argument: 60
+		Identifier: Wait
+			Argument: 150
+		Identifier: screen2_FadeOut
+			Argument: 1
+			Argument: 60
+		Identifier: back2_SetMode
+			Argument: 0
+		Identifier: back_SetGround
+			Argument: LEVEL_G01P07C
+		Identifier: supervision_Acting
+			Argument: 0
+		Identifier: camera_SetMyself
+			Template
+				Type: performer
+				Identifier: 0
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER
+			Argument: 76
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_ATTENDANT1
+			Argument: 76
+		Identifier: screen_FadeChange
+			Argument: 1
+			Argument: 60
+			Argument: 0
+			Argument: 192
+		Identifier: bgm_PlayFadeIn
+			Argument: BGM_GOODNIGHT
+			Argument: 0
+			Argument: 256
+		Identifier: Wait
+			Argument: 30
+		Identifier: message_SetActor
+			Argument: ACTOR_ATTENDANT1
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: ...
+			Case:
+				Value: 2
+					Dialogue: ...
+			Case:
+				Value: default
+					Dialogue: ...
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: ......
+			Case:
+				Value: 2
+					Dialogue: ......
+			Case:
+				Value: default
+					Dialogue: ......
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Hey, are you still awake, [hero]?
+			Case:
+				Value: 2
+					Dialogue: Oh, are you still awake, [hero]?
+			Case:
+				Value: default
+					Dialogue: Say, are you still awake, [hero]?
+		Identifier: CallCommon
+			Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: My heart's been pounding over every little thing today...
+			Case:
+				Value: 2
+					Dialogue: My heart's been racing all day today over every little thing...
+			Case:
+				Value: default
+					Dialogue: My heart's been racing all day...
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: But I'm glad I finally worked up the courage to come here.
+			Case:
+				Value: 2
+					Dialogue: But I'm glad I finally made myself come here.
+			Case:
+				Value: default
+					Dialogue: But I'm glad I finally forced myself to come here.
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: I thought [CS:N]Wigglytuff[CR] would be a lot scarier, but he seems pretty nice.
+			Case:
+				Value: 2
+					Dialogue: I thought [CS:N]Wigglytuff[CR] would be scary, but he seems pretty friendly.
+			Case:
+				Value: default
+					Dialogue: I thought [CS:N]Wigglytuff[CR] would be kind of scary, but he was pretty nice.
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Even though tomorrow has all sorts of new stuff in store for us, I'm not scared at all!
+			Case:
+				Value: 2
+					Dialogue: We're going to experience all sorts of things starting tomorrow, but I'm not very scared.
+			Case:
+				Value: default
+					Dialogue: We'll experience all sorts of new stuff starting tomorrow, but I'm not very frightened.
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Actually, I'm excited about the new adventures we'll face!
+			Case:
+				Value: 2
+					Dialogue: In fact, it's the other way around. I'm super excited about the adventures we'll face!
+			Case:
+				Value: default
+					Dialogue: Actually, I can't wait to find out what new adventures are in store for us!
+		Identifier: CallCommon
+			Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Yawn... I'm getting sleepy...
+			Case:
+				Value: 2
+					Dialogue: I'm feeling a little sleepy...
+			Case:
+				Value: default
+					Dialogue: I'm getting a little sleepy...
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: Let's do our best tomorrow.
+			Case:
+				Value: 2
+					Dialogue: Let's give it our all tomorrow.
+			Case:
+				Value: default
+					Dialogue: Let's give it our all tomorrow.
+		Switch:
+			Variable: $PARTNER_TALK_KIND
+			Case:
+				Value: 1
+					Dialogue: All right then. Good night, [hero]...
+			Case:
+				Value: 2
+					Dialogue: OK, [hero]. Good night.
+			Case:
+				Value: default
+					Dialogue: OK, [hero]. Sleep tight.
+		Identifier: CallCommon
+			Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_ATTENDANT1
+			Argument: 62
+		Identifier: Wait
+			Argument: 90
+		Identifier: bgm_FadeOut
+			Argument: 120
+		Identifier: message_EmptyActor
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (Um...)
+			Case:
+				Value: default
+					Dialogue: (Um...)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (Now I'm suddenly apprenticing at the guild...)
+			Case:
+				Value: default
+					Dialogue: (Now I'm suddenly apprenticing at the guild...)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (I gotta admit, it's pretty exciting to be in an exploration team.)
+			Case:
+				Value: default
+					Dialogue: (I gotta admit, it's pretty exciting to be in an exploration team.)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (And it's fun to be friends with [partner]...)
+			Case:
+				Value: default
+					Dialogue: (And it's fun to be friends with [partner]...)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (But first things first...)
+			Case:
+				Value: default
+					Dialogue: (But first things first...)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (Who am I?)
+			Case:
+				Value: default
+					Dialogue: (Who am I?)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (How did I turn into a Pokémon?)
+			Case:
+				Value: default
+					Dialogue: (How did I turn into a Pokémon?)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (How did I end up unconscious on that beach?)
+			Case:
+				Value: default
+					Dialogue: (How did I end up unconscious on that beach?)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (I'm feeling sleepy too...)
+			Case:
+				Value: default
+					Dialogue: (I'm feeling sleepy too...)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (Well, thinking about it won't help right now. I'd better focus on the guild's work for now...)
+			Case:
+				Value: default
+					Dialogue: (Well, thinking about it won't help right now. I'd better focus on the guild's work for now...)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (If I do that, well, everything should become clear eventually...)
+			Case:
+				Value: default
+					Dialogue: (If I do that, well, everything should become clear eventually...)
+		Switch:
+			Variable: $HERO_TALK_KIND
+			Case:
+				Value: 4
+					Dialogue: (I'll surely get to the bottom of this in time.)
+			Case:
+				Value: default
+					Dialogue: (I'll surely get to the bottom of this in time.)
+		Identifier: message_Close
+		Identifier: Wait
+			Argument: 30
+		Identifier: SetAnimation
+			Template
+				Type: actor
+				Identifier: ACTOR_PLAYER
+			Argument: 62
+		Identifier: Wait
+			Argument: 120
+		Identifier: screen_FadeOut
+			Argument: 1
+			Argument: 120
+		Identifier: Wait
+			Argument: 60
+		Array accessor
+			Array: $SCENARIO_MAIN_BIT_FLAG
+			Index: 8
 			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: ...
-			Identifier: case
-				Argument: 2
-				Dialogue: ...
-			Identifier: default
-				Dialogue: ...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: ......
-			Identifier: case
-				Argument: 2
-				Dialogue: ......
-			Identifier: default
-				Dialogue: ......
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Hey, are you still awake, [hero]?
-			Identifier: case
-				Argument: 2
-				Dialogue: Oh, are you still awake, [hero]?
-			Identifier: default
-				Dialogue: Say, are you still awake, [hero]?
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: My heart's been pounding over every little thing today...
-			Identifier: case
-				Argument: 2
-				Dialogue: My heart's been racing all day today over every little thing...
-			Identifier: default
-				Dialogue: My heart's been racing all day...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: But I'm glad I finally worked up the courage to come here.
-			Identifier: case
-				Argument: 2
-				Dialogue: But I'm glad I finally made myself come here.
-			Identifier: default
-				Dialogue: But I'm glad I finally forced myself to come here.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I thought [CS:N]Wigglytuff[CR] would be a lot scarier, but he seems pretty nice.
-			Identifier: case
-				Argument: 2
-				Dialogue: I thought [CS:N]Wigglytuff[CR] would be scary, but he seems pretty friendly.
-			Identifier: default
-				Dialogue: I thought [CS:N]Wigglytuff[CR] would be kind of scary, but he was pretty nice.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Even though tomorrow has all sorts of new stuff in store for us, I'm not scared at all!
-			Identifier: case
-				Argument: 2
-				Dialogue: We're going to experience all sorts of things starting tomorrow, but I'm not very scared.
-			Identifier: default
-				Dialogue: We'll experience all sorts of new stuff starting tomorrow, but I'm not very frightened.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Actually, I'm excited about the new adventures we'll face!
-			Identifier: case
-				Argument: 2
-				Dialogue: In fact, it's the other way around. I'm super excited about the adventures we'll face!
-			Identifier: default
-				Dialogue: Actually, I can't wait to find out what new adventures are in store for us!
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Yawn... I'm getting sleepy...
-			Identifier: case
-				Argument: 2
-				Dialogue: I'm feeling a little sleepy...
-			Identifier: default
-				Dialogue: I'm getting a little sleepy...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's do our best tomorrow.
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's give it our all tomorrow.
-			Identifier: default
-				Dialogue: Let's give it our all tomorrow.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: All right then. Good night, [hero]...
-			Identifier: case
-				Argument: 2
-				Dialogue: OK, [hero]. Good night.
-			Identifier: default
-				Dialogue: OK, [hero]. Sleep tight.
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (Um...)
-			Identifier: default
-				Dialogue: (Um...)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (Now I'm suddenly apprenticing at the guild...)
-			Identifier: default
-				Dialogue: (Now I'm suddenly apprenticing at the guild...)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (I gotta admit, it's pretty exciting to be in an exploration team.)
-			Identifier: default
-				Dialogue: (I gotta admit, it's pretty exciting to be in an exploration team.)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (And it's fun to be friends with [partner]...)
-			Identifier: default
-				Dialogue: (And it's fun to be friends with [partner]...)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (But first things first...)
-			Identifier: default
-				Dialogue: (But first things first...)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (Who am I?)
-			Identifier: default
-				Dialogue: (Who am I?)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (How did I turn into a Pokémon?)
-			Identifier: default
-				Dialogue: (How did I turn into a Pokémon?)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (How did I end up unconscious on that beach?)
-			Identifier: default
-				Dialogue: (How did I end up unconscious on that beach?)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (I'm feeling sleepy too...)
-			Identifier: default
-				Dialogue: (I'm feeling sleepy too...)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (Well, thinking about it won't help right now. I'd better focus on the guild's work for now...)
-			Identifier: default
-				Dialogue: (Well, thinking about it won't help right now. I'd better focus on the guild's work for now...)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (If I do that, well, everything should become clear eventually...)
-			Identifier: default
-				Dialogue: (If I do that, well, everything should become clear eventually...)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (I'll surely get to the bottom of this in time.)
-			Identifier: default
-				Dialogue: (I'll surely get to the bottom of this in time.)
+		Identifier: COMPULSORY_SAVE_POINT
+			Argument: 1
+		Identifier: CallCommon
+			Argument: CORO_HANYOU_SAVE_FUNC
+		Identifier: jump
+			Argument: label_0

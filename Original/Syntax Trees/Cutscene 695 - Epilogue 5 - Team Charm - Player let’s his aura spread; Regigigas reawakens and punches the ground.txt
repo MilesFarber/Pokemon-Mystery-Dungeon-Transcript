@@ -434,59 +434,15 @@ def 0:
 	Identifier: message_Mail
 		Dialogue: [CN][player] checked [CN]the stone marker.
 	Identifier: message_Mail
-		Dialogue: [CN]
-		Argument: Close
-		Argument: your
-		Argument: eyes
-		Argument: then
-		Argument: let
-		Argument: your
-		Argument: CN
-		Argument: aura
-		Argument: flow
-		Argument: into
-		Argument: the
-		Dialogue: 
+		Dialogue: [CN]"Close your eyes, then let your [CN]aura flow into the ground.
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Label: @label_2;
-	Switch:
-		Variable: { english="[CN]Will you close your eyes?", }); switch ( message_SwitchMenu(0, 1)
-		Case:
-			Value: default
-				Dialogue: [CN]Will you close your eyes?
-		Case:
-			Value: default
-			Identifier: case
-				Argument: menu
-				Dialogue: Yes
-			Identifier: break_loop
-			Identifier: break
-			Identifier: case
-				Argument: menu
-				Dialogue: No
-			Identifier: default
-				Argument: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: se_Play
-				Argument: 8971
-			Identifier: ExecuteCommon
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHAAREMU
-				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-				Argument: 0
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHAAREMU
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_CHAAREMU
-				Argument: FACE_ANGRY
-				Argument: FACE_POS_TOP_L_FACEINW
-			Identifier: message_Talk
-				Dialogue: Now, hold on![K] You're not about to get cold feet now!
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: continue
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_NPC_CHAAREMU
+		Argument: CORO_JUMP_ANGRY_FUNC_SERIES
 	Label: @label_0;
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC

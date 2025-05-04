@@ -66,7 +66,37 @@ def 0:
 		Argument: 256
 	Identifier: Wait
 		Argument: 30
-	Conditional
-		Type: If
-	Conditional
-		Type: Else
+	Conditional: If
+		Condition: ($SCENARIO_MAIN) == [29, 30]
+		Label: @label_0;
+		Identifier: message_SetFace
+			Argument: ACTOR_NPC_SHEIMI
+			Argument: FACE_WORRIED
+			Argument: FACE_POS_TOP_C_FACER
+		Identifier: message_Talk
+			Dialogue: Usually, [CS:N]Grimer[CR] and [CS:N]Muk[CR] should be living farther down the mountain, I think...
+		Identifier: message_SetFace
+			Argument: ACTOR_NPC_SHEIMI
+			Argument: FACE_NORMAL
+			Argument: FACE_POS_TOP_C_FACER
+		Identifier: message_Talk
+			Dialogue: We need to do something about the summit, no matter what!
+		Identifier: message_Close
+		Identifier: end
+	Conditional: Else
+		Identifier: message_SetFace
+			Argument: ACTOR_NPC_SHEIMI
+			Argument: FACE_WORRIED
+			Argument: FACE_POS_TOP_C_FACER
+		Identifier: message_Talk
+			Dialogue: Yeah... Looks like it might be too difficult...
+		Identifier: message_SetFace
+			Argument: ACTOR_NPC_SHEIMI
+			Argument: FACE_NORMAL
+			Argument: FACE_POS_TOP_C_FACER
+		Identifier: message_Talk
+			Dialogue: But it will be amazing to reach the summit after such hard work!
+		Identifier: message_Talk
+			Dialogue: We can't give up! Let's do our best!
+		Identifier: message_Close
+		Identifier: end

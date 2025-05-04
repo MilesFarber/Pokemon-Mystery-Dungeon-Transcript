@@ -435,90 +435,15 @@ def 0:
 			Value: default
 				Dialogue: Should we go into the nightmare?
 	Label: @label_2;
-	Switch:
-		Variable: message_SwitchMenu(0, 1)
-		Case:
-			Value: default
-			Identifier: case
-				Argument: menu
-				Dialogue: Enter the nightmare
-			Identifier: break_loop
-			Identifier: break
-			Identifier: case
-				Argument: menu
-				Dialogue: Refuse
-			Identifier: default
-				Argument: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: se_Play
-				Argument: 8968
-			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-				Argument: EFFECT_SHOCKED_MIRRORED
-				Argument: 3
+	Identifier: SetEffect
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: EFFECT_SHOCKED_MIRRORED
+			Identifier: 3
 			Identifier: WaitEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_ATTENDANT1
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_SURPRISED
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Wh-what, you won't?
-				Case:
-					Value: 2
-						Dialogue: Wh-what, you won't go in?
-				Case:
-					Value: default
-						Dialogue: Wh-what, you won't go in?
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_SAD
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: But...[K]if we don't do anything...
-				Case:
-					Value: 2
-						Dialogue: But...[K]if we don't do anything...
-				Case:
-					Value: default
-						Dialogue: But...[K]if we don't do anything...
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: We will never be able to return to Treasure Town.
-				Case:
-					Value: 2
-						Dialogue: We will never be able to return to Treasure Town.
-				Case:
-					Value: default
-						Dialogue: We will never be able to return to Treasure Town.
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: We have no choice. We have to go into the nightmare.
-				Case:
-					Value: 2
-						Dialogue: We don't have any choice. We have to go into the nightmare.
-				Case:
-					Value: default
-						Dialogue: We don't have any choice. We have to go into the nightmare.
-			Identifier: continue
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
 	Label: @label_0;
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
@@ -566,7 +491,6 @@ def 0:
 		Argument: 60
 	Switch:
 		Variable: message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP)
-
 	Array accessor
 		Array: $SCENARIO_MAIN_BIT_FLAG
 		Index: 8

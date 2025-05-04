@@ -365,194 +365,333 @@ def 0:
 			Value: default
 				Dialogue: Hm? What is it, [hero]?
 	Label: @label_2;
-	Switch:
-		Variable: message_SwitchMenu(0, 1)
-		Case:
-			Value: default
+	Identifier: ExecuteCommon
+		Template
+			Type: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: CORO_JUMP_SURPRISE_FUNC_SERIES
+			Identifier: 0
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: FACE_SURPRISED
+			Identifier: FACE_POS_STANDARD
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
 			Identifier: case
-				Argument: menu
-				Dialogue: Let's go to Treasure Town!
+			Identifier: 1
+			Identifier: english
+			Identifier: Huh
+			Identifier: You
+			Identifier: want
+			Identifier: to
+			Identifier: go
+			Identifier: to
+			Identifier: Treasure
+			Identifier: Town
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: What
+			Identifier: You
+			Identifier: want
+			Identifier: to
+			Identifier: go
+			Identifier: to
+			Identifier: Treasure
+			Identifier: Town
 			Identifier: default
-				Argument: label_0
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: se_Play
-				Argument: 8974
-			Identifier: ExecuteCommon
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-				Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
-				Argument: 0
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_ATTENDANT1
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_SURPRISED
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Huh?! You want to go to Treasure Town?!
-				Case:
-					Value: 2
-						Dialogue: What?! You want to go to Treasure Town?!
-				Case:
-					Value: default
-						Dialogue: Pardon?! You want to go to Treasure Town?!
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Wh-why?!
-				Case:
-					Value: 2
-						Dialogue: Wh-why?!
-				Case:
-					Value: default
-						Dialogue: Wh-why?!
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: We vanished in front of everyone, remember?
-				Case:
-					Value: 2
-						Dialogue: We disappeared in front of everyone, remember?
-				Case:
-					Value: default
-						Dialogue: We vanished in front of everyone, remember?
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: I think if we suddenly showed up, everyone'd be shocked!
-				Case:
-					Value: 2
-						Dialogue: I think if we suddenly showed up, everyone would be shocked!
-				Case:
-					Value: default
-						Dialogue: I think if we suddenly showed up, everyone would be shocked!
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: But why Treasure Town?[K] What are we going to do there?
-				Case:
-					Value: 2
-						Dialogue: But why do you want to go to Treasure Town?[K] What are we going to do there?
-				Case:
-					Value: default
-						Dialogue: But why Treasure Town?[K] What are we going to do there?
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: se_Play
-				Argument: 8961
-			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_PLAYER
-				Argument: EFFECT_SWEAT_DROP
-				Argument: 3
-			Identifier: WaitEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_PLAYER
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_PLAYER
-			Identifier: message_SetFace
-				Argument: ACTOR_PLAYER
-				Argument: FACE_WORRIED
-				Argument: FACE_POS_BOTTOM_R_FACEINW
-			Switch:
-				Variable: $HERO_TALK_KIND
-				Case:
-					Value: 4
-						Dialogue: (Th-that's true.)
-				Case:
-					Value: default
-						Dialogue: (Th-that's true.)
-			Switch:
-				Variable: $HERO_TALK_KIND
-				Case:
-					Value: 4
-						Dialogue: (Come to think of it, there isn't much point in going to Treasure Town.)
-				Case:
-					Value: default
-						Dialogue: (Come to think of it, there isn't much point in going to Treasure Town.)
-			Switch:
-				Variable: $HERO_TALK_KIND
-				Case:
-					Value: 4
-						Dialogue: (What would we possibly do there?)
-				Case:
-					Value: default
-						Dialogue: (What would we possibly do there?)
-			Switch:
-				Variable: $HERO_TALK_KIND
-				Case:
-					Value: 4
-						Dialogue: (I flubbed it.[K] I guess that's not what I meant.)
-				Case:
-					Value: default
-						Dialogue: (I flubbed it.[K] I guess that's not what I meant.)
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: ExecuteCommon
-				Template
-					Type: actor
-					Identifier: ACTOR_PLAYER
-				Argument: CORO_EXPLANATION_FUNC_SERIES
-				Argument: 0
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_PLAYER
-			Identifier: se_Play
-				Argument: 8962
-			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-				Argument: EFFECT_QUESTION_MARK
-				Argument: 3
-			Identifier: WaitEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_ATTENDANT1
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_WORRIED
-				Argument: FACE_POS_STANDARD
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Huh? That was a mistake?
-				Case:
-					Value: 2
-						Dialogue: What? That was a mistake?
-				Case:
-					Value: default
-						Dialogue: Pardon? That was a mistake?
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: All right. Then where were you going to suggest?
-				Case:
-					Value: 2
-						Dialogue: OK. Then where were you going to suggest?
-				Case:
-					Value: default
-						Dialogue: OK. Then where were you going to suggest?
-			Identifier: continue
+			Identifier: english
+			Identifier: Pardon
+			Identifier: You
+			Identifier: want
+			Identifier: to
+			Identifier: go
+			Identifier: to
+			Identifier: Treasure
+			Identifier: Town
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
 			Identifier: case
-				Argument: menu
-				Dialogue: Let's go to [CS:N]Wigglytuff[CR]'s Guild!
-			Identifier: break_loop
-			Identifier: break
+			Identifier: 1
+			Identifier: english
+			Identifier: Wh
+			Identifier: why
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: Wh
+			Identifier: why
+			Identifier: default
+			Identifier: english
+			Identifier: Wh
+			Identifier: why
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: We
+			Identifier: vanished
+			Identifier: in
+			Identifier: front
+			Identifier: of
+			Identifier: everyone
+			Identifier: remember
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: We
+			Identifier: disappeared
+			Identifier: in
+			Identifier: front
+			Identifier: of
+			Identifier: everyone
+			Identifier: remember
+			Identifier: default
+			Identifier: english
+			Identifier: We
+			Identifier: vanished
+			Identifier: in
+			Identifier: front
+			Identifier: of
+			Identifier: everyone
+			Identifier: remember
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: I
+			Identifier: think
+			Identifier: if
+			Identifier: we
+			Identifier: suddenly
+			Identifier: showed
+			Identifier: up
+			Identifier: everyone
+			Identifier: d
+			Identifier: be
+			Identifier: shocked
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: I
+			Identifier: think
+			Identifier: if
+			Identifier: we
+			Identifier: suddenly
+			Identifier: showed
+			Identifier: up
+			Identifier: everyone
+			Identifier: would
+			Identifier: be
+			Identifier: shocked
+			Identifier: default
+			Identifier: english
+			Identifier: I
+			Identifier: think
+			Identifier: if
+			Identifier: we
+			Identifier: suddenly
+			Identifier: showed
+			Identifier: up
+			Identifier: everyone
+			Identifier: would
+			Identifier: be
+			Identifier: shocked
+			Identifier: message_SwitchTalk
+			Identifier: PARTNER_TALK_KIND
+			Identifier: case
+			Identifier: 1
+			Identifier: english
+			Identifier: But
+			Identifier: why
+			Identifier: Treasure
+			Identifier: Town
+			Identifier: K
+			Identifier: What
+			Identifier: are
+			Identifier: we
+			Identifier: going
+			Identifier: to
+			Identifier: do
+			Identifier: there
+			Identifier: case
+			Identifier: 2
+			Identifier: english
+			Identifier: But
+			Identifier: why
+			Identifier: do
+			Identifier: you
+			Identifier: want
+			Identifier: to
+			Identifier: go
+			Identifier: to
+			Identifier: Treasure
+			Identifier: Town
+			Identifier: K
+			Identifier: What
+			Identifier: are
+			Identifier: we
+			Identifier: going
+			Identifier: to
+			Identifier: do
+			Identifier: there
+			Identifier: default
+			Identifier: english
+			Identifier: But
+			Identifier: why
+			Identifier: Treasure
+			Identifier: Town
+			Identifier: K
+			Identifier: What
+			Identifier: are
+			Identifier: we
+			Identifier: going
+			Identifier: to
+			Identifier: do
+			Identifier: there
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+			Identifier: 8961
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_PLAYER
+			Identifier: EFFECT_SWEAT_DROP
+			Identifier: 3
+			Identifier: WaitEffect
+			Identifier: actor
+			Identifier: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_PLAYER
+			Identifier: message_SetFace
+			Identifier: ACTOR_PLAYER
+			Identifier: FACE_WORRIED
+			Identifier: FACE_POS_BOTTOM_R_FACEINW
+			Identifier: message_SwitchMonologue
+			Identifier: HERO_TALK_KIND
+			Identifier: case
+			Identifier: 4
+			Identifier: english
+			Identifier: Th
+			Identifier: that
+			Identifier: s
+			Identifier: true.
+			Identifier: default
+			Identifier: english
+			Identifier: Th
+			Identifier: that
+			Identifier: s
+			Identifier: true.
+			Identifier: message_SwitchMonologue
+			Identifier: HERO_TALK_KIND
+			Identifier: case
+			Identifier: 4
+			Identifier: english
+			Identifier: Come
+			Identifier: to
+			Identifier: think
+			Identifier: of
+			Identifier: it
+			Identifier: there
+			Identifier: isn
+			Identifier: t
+			Identifier: much
+			Identifier: point
+			Identifier: in
+			Identifier: going
+			Identifier: to
+			Identifier: Treasure
+			Identifier: Town.
+			Identifier: default
+			Identifier: english
+			Identifier: Come
+			Identifier: to
+			Identifier: think
+			Identifier: of
+			Identifier: it
+			Identifier: there
+			Identifier: isn
+			Identifier: t
+			Identifier: much
+			Identifier: point
+			Identifier: in
+			Identifier: going
+			Identifier: to
+			Identifier: Treasure
+			Identifier: Town.
+			Identifier: message_SwitchMonologue
+			Identifier: HERO_TALK_KIND
+			Identifier: case
+			Identifier: 4
+			Identifier: english
+			Identifier: What
+			Identifier: would
+			Identifier: we
+			Identifier: possibly
+			Identifier: do
+			Identifier: there
+			Identifier: default
+			Identifier: english
+			Identifier: What
+			Identifier: would
+			Identifier: we
+			Identifier: possibly
+			Identifier: do
+			Identifier: there
+			Identifier: message_SwitchMonologue
+			Identifier: HERO_TALK_KIND
+			Identifier: case
+			Identifier: 4
+			Identifier: english
+			Identifier: I
+			Identifier: flubbed
+			Identifier: it.
+			Identifier: K
+			Identifier: I
+			Identifier: guess
+			Identifier: that
+			Identifier: s
+			Identifier: not
+			Identifier: what
+			Identifier: I
+			Identifier: meant.
+			Identifier: default
+			Identifier: english
+			Identifier: I
+			Identifier: flubbed
+			Identifier: it.
+			Identifier: K
+			Identifier: I
+			Identifier: guess
+			Identifier: that
+			Identifier: s
+			Identifier: not
+			Identifier: what
+			Identifier: I
+			Identifier: meant.
+			Identifier: CallCommon
+			Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: ExecuteCommon
+			Identifier: actor
+			Identifier: ACTOR_PLAYER
+			Identifier: CORO_EXPLANATION_FUNC_SERIES
+			Identifier: 0
+			Identifier: WaitExecuteLives
+			Identifier: ACTOR_PLAYER
+			Identifier: se_Play
+			Identifier: 8962
+			Identifier: SetEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
+			Identifier: EFFECT_QUESTION_MARK
+			Identifier: 3
+			Identifier: WaitEffect
+			Identifier: actor
+			Identifier: ACTOR_ATTENDANT1
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: se_Play

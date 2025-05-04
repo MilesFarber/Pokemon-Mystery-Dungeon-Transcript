@@ -1406,25 +1406,23 @@ def 1:
 		Argument: EFFECT_APPLE_ON_HEAD
 		Argument: 3
 	Label: @label_1;
-	Switch:
-		Variable: 8, 1, DIR_UP); Wait(20); switch ( $EVENT_LOCAL
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Argument: break_loop
-			Identifier: break
-			Identifier: default
-				Argument: Turn2Direction
-				Argument: 8
-				Argument: 1
-				Argument: DIR_DOWN
-			Identifier: Wait
-				Argument: 20
-			Switch:
-				Variable: $EVENT_LOCAL
-
-			Identifier: break
+	Loop: forever
+		Identifier: Turn2Direction
+			Argument: 8
+			Argument: 1
+			Argument: DIR_UP
+		Identifier: Wait
+			Argument: 20
+		Switch:
+			Variable: $EVENT_LOCAL
+			Case:
+				Value: 1
+				Identifier: case
+					Argument: 1
+					Argument: break_loop
+				Identifier: break
+				Identifier: default
+					Argument: continue
 	Label: @label_0;
 	Identifier: Turn2Direction
 		Argument: 8

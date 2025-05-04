@@ -1,124 +1,91 @@
 def 0:
 	Identifier: sound_Stop
-	Conditional
-		Type: If
-	Switch:
-		Variable: { english="[M:D2][CS:C]Start from where?[CR]", }); switch ( message_SwitchMenu(0, 1)
-		Case:
-			Value: M
-				Dialogue: [M:D2][CS:C]Start from where?[CR]
-		Case:
-			Value: M
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]Beginning
-			Identifier: default
-				Argument: message_Close
-			Identifier: jump
-				Argument: label_0
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionA
-			Identifier: message_Close
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 43
-				Argument: 1
-			Identifier: main_EnterGround
-				Argument: LEVEL_P01P01A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionB
-			Identifier: message_Close
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 43
-				Argument: 2
-			Identifier: main_EnterGround
-				Argument: LEVEL_P01P01A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionC
-			Identifier: message_Close
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 43
-				Argument: 4
-			Identifier: main_EnterGround
-				Argument: LEVEL_P01P01A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionD
-			Identifier: message_Close
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 43
-				Argument: 6
-			Identifier: main_EnterGround
-				Argument: LEVEL_P01P01A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SpringCaveMidpoint
-			Identifier: message_Close
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 43
-				Argument: 7
-			Identifier: main_EnterGround
-				Argument: LEVEL_D57P21A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SpringCaveDepths2ndTry
-			Identifier: message_Close
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 43
-				Argument: 8
-			Identifier: main_EnterGround
-				Argument: LEVEL_D57P21A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]SectionF
-			Identifier: message_Close
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 43
-				Argument: 9
-			Identifier: main_EnterGround
-				Argument: LEVEL_P01P01A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]TALK-N04-01
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 43
-				Argument: 1
-			Label: @label_11;
-			Identifier: message_Close
-			Identifier: main_EnterGround
-				Argument: LEVEL_P01P01A
-				Argument: 30
-			Identifier: hold
-			Identifier: case
-				Argument: menu
-				Dialogue: [M:D2]TALK-N04-02
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 43
-				Argument: 2
-			Identifier: jump
-				Argument: label_11
+	Conditional: If
+		Condition: ( not debug
+		Label: @label_0;
+		Identifier: SCENARIO_SIDE
+			Argument: scn
+			Argument: 43
+			Argument: 1
+		Identifier: message_Narration
+			Argument: 30
+			Dialogue: [CN]One night at the guild...
+		Identifier: message_Close
+		Identifier: back2_SetMode
+			Argument: 4
+		Identifier: back2_SetGround
+			Argument: LEVEL_V02P06A
+		Identifier: back_SetGround
+			Argument: LEVEL_G01P01C
+		Identifier: supervision_StationCommon
+			Argument: 0
+		Identifier: supervision_Acting
+			Argument: 0
+		Identifier: camera2_SetPositionMark
+			Identifier: Position
+			Template
+				Type: m0
+				Identifier: 19.5
+				Identifier: 16.5
+		Identifier: camera_SetMyself
+			Template
+				Type: performer
+				Identifier: 0
+		Identifier: bgm_PlayFadeIn
+			Argument: BGM_FIRE_CRACKLING_LOUDER
+			Argument: 120
+			Argument: 256
+		Identifier: screen2_FadeIn
+			Argument: 0
+			Argument: 60
+		Identifier: screen_FadeIn
+			Argument: 1
+			Argument: 60
+		Identifier: Wait
+			Argument: 150
+		Identifier: bgm_FadeOut
+			Argument: 120
+		Identifier: screen2_FadeOut
+			Argument: 0
+			Argument: 60
+		Identifier: screen_FadeOut
+			Argument: 1
+			Argument: 60
+		Identifier: back2_SetMode
+			Argument: 0
+		Identifier: end
+	Conditional: Else
+		Identifier: message_Notice
+			Dialogue: [M:D2][CS:C]Start from where?[CR]
+		Switch:
+			Variable: message_SwitchMenu(0, 1)
+			Case:
+				Value: M
+					Dialogue: [M:D2]Beginning
+			Case:
+				Value: default
+					Dialogue: [M:D2]SectionA
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionB
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionC
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionD
+			Case:
+				Value: M
+					Dialogue: [M:D2]SpringCaveMidpoint
+			Case:
+				Value: M
+					Dialogue: [M:D2]SpringCaveDepths2ndTry
+			Case:
+				Value: M
+					Dialogue: [M:D2]SectionF
+			Case:
+				Value: M
+					Dialogue: [M:D2]TALK-N04-01
+			Case:
+				Value: M
+					Dialogue: [M:D2]TALK-N04-02
