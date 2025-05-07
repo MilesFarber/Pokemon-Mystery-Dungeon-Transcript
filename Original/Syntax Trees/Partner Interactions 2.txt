@@ -122,33 +122,22 @@ def 0:
 					Identifier: message_Close
 					Identifier: jump
 						Argument: label_94
-					Loop: else
-						Identifier: message_SetFace
-							Argument: ACTOR_ATTENDANT1
-							Argument: FACE_NORMAL
-							Argument: FACE_POS_STANDARD
-						Switch:
-							Variable: $PARTNER_TALK_KIND
-							Case:
-								Value: 1
-									Dialogue: We'll reach base camp when we cross this mountain.
-							Case:
-								Value: 2
-									Dialogue: We'll reach base camp when we cross this mountain.
-							Case:
-								Value: default
-									Dialogue: We'll reach base camp when we cross this mountain.
-						Switch:
-							Variable: $PARTNER_TALK_KIND
-							Case:
-								Value: 1
-									Dialogue: Let's keep at it, [hero]!
-							Case:
-								Value: 2
-									Dialogue: Let's keep at it, [hero]!
-							Case:
-								Value: default
-									Dialogue: Let's keep at it, [hero]!
-						Identifier: message_Close
-						Identifier: jump
-							Argument: label_94
+					Identifier: case
+						Argument: 24
+						Argument: if
+						Argument: scn
+						Argument: SCENARIO_MAIN
+						Argument: 9
+						Argument: 5
+						Argument: message_SetFace
+						Argument: ACTOR_ATTENDANT1
+						Argument: FACE_NORMAL
+						Argument: FACE_POS_STANDARD
+						Argument: message_SwitchTalk
+						Argument: PARTNER_TALK_KIND
+						Argument: case
+						Argument: 1
+						Dialogue: It's not far to base camp.", } case 2: { english=""" There's not much to go to base camp. """, } default: { english=" We're almost at base camp.", } } message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=" Hang in there, [hero]!", } case 2: { english=" Let's keep at it, [hero]!", } default: { english=" Let's keep at it, [hero]!", } } message_Close(); jump @label_94; } else { message_SetFace(ACTOR_ATTENDANT1, FACE_NORMAL, FACE_POS_STANDARD); message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=""" We'll reach base camp when we cross this mountain. """, } case 2: { english=""" We'll reach base camp when we cross this mountain. """, } default: { english=""" We'll reach base camp when we cross this mountain. """, } } message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=" Let's keep at it, [hero]!", } case 2: { english=" Let's keep at it, [hero]!", } default: { english=" Let's keep at it, [hero]!
+						Argument: message_Close
+						Argument: jump
+						Argument: label_94
