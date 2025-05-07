@@ -216,53 +216,226 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yeah!
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Right!
-			Identifier: case
+			Value: Yeah!
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Right!
+				Case:
+					Value: 2
+						Dialogue: Right!
+				Case:
+					Value: default
+						Dialogue: Right!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Label: @label_2;
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right! Let's go have fun exploring today!
+				Case:
+					Value: 2
+						Dialogue: All right! Let's go have fun exploring today!
+				Case:
+					Value: default
+						Dialogue: All right! Let's go have fun exploring today!
+			Identifier: message_Close
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
 				Argument: 2
-				Dialogue: Right!
-			Identifier: default
-				Dialogue: Right!
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: All right! Let's go have fun exploring today!
-			Identifier: case
+			Identifier: Wait
+				Argument: 30
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWN
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWN
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Wait
+				Argument: 20
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 66
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 66
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: Wait
+				Argument: 80
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
 				Argument: 2
-				Dialogue: All right! Let's go have fun exploring today!
-			Identifier: default
-				Dialogue: All right! Let's go have fun exploring today!
-		Case:
-			Value: W
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 2
+			Identifier: Wait
+				Argument: 45
+			Identifier: bgm_FadeOut
+				Argument: 120
+			Identifier: screen2_FadeOut
+				Argument: 0
+				Argument: 30
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 30
+			Identifier: back2_SetMode
+				Argument: 0
+			Identifier: Wait
+				Argument: 90
+			Identifier: me_Play
+				Argument: 7
+			Identifier: message_Explanation
 				Dialogue: [CN]A message has arrived from the [CN]Exploration Team Federation...[W:30]
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_Explanation
 				Dialogue: [CN]If you want to hear that song again...
-		Case:
-			Value: W
-				Dialogue: [CN]There's now a machine available for you to [CN]listen to the game music anytime! [CN]The Sky Jukebox is now available![W:100]
-		Case:
-			Value: default
-				Dialogue: [CN]To access the Sky Jukebox, select [CN]Other from the Top Menu.
-		Case:
-			Value: default
-				Dialogue: [CN]To use the Sky Jukebox, save your adventure [CN]and return to the Top Menu.
-		Case:
-			Value: default
-				Dialogue: Nope...
-		Case:
-			Value: default
-			Identifier: case
+			Identifier: message_KeyWait
+			Identifier: me_Play
 				Argument: 1
-				Dialogue: Ah ha ha ha ha ha! Stayed up too late. Still half asleep!
-			Identifier: case
-				Argument: 2
-				Dialogue: Ah ha ha ha ha ha! Stayed up too late. Still half asleep!
-			Identifier: default
-				Dialogue: Ah ha ha ha ha ha! Stayed up too late. Still half asleep!
+			Identifier: message_Explanation
+				Dialogue: [CN]There's now a machine available for you to [CN]listen to the game music anytime! [CN]The Sky Jukebox is now available![W:100]
+			Identifier: message_Explanation
+				Dialogue: [CN]To access the Sky Jukebox, select [CN]Other from the Top Menu.
+			Identifier: message_Explanation
+				Dialogue: [CN]To use the Sky Jukebox, save your adventure [CN]and return to the Top Menu.
+			Identifier: message_Close
+			Identifier: Wait
+				Argument: 30
+			Identifier: camera_SetDefault
+			Identifier: screen2_FadeIn
+				Argument: 0
+				Argument: 30
+			Identifier: screen_FadeIn
+				Argument: 1
+				Argument: 30
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_DO_YOUR_BEST_AS_ALWAYS
+				Argument: 0
+				Argument: 256
+			Identifier: end
+		Case:
+			Value: Nope...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_LAUGHING
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_JOYOUS
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Ah ha ha ha ha ha! Stayed up too late. Still half asleep!
+				Case:
+					Value: 2
+						Dialogue: Ah ha ha ha ha ha! Stayed up too late. Still half asleep!
+				Case:
+					Value: default
+						Dialogue: Ah ha ha ha ha ha! Stayed up too late. Still half asleep!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: jump
+				Argument: label_2

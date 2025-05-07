@@ -47,4 +47,421 @@ def 0:
 		Dialogue: Oh!
 	Identifier: message_Talk
 		Dialogue: Are you two ready to go into the dream?
-	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: message_SwitchMenu(0, 1)
+		Case:
+			Value: Ready
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: ProcessSpecial(PROCESS_SPECIAL_IS_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0)
+				Case:
+					Value: 1
+					Identifier: message_SetFace
+						Argument: ACTOR_ATTENDANT1
+						Argument: FACE_NORMAL
+						Argument: FACE_POS_STANDARD
+					Switch:
+						Variable: $PARTNER_TALK_KIND
+						Case:
+							Value: 1
+								Dialogue: Yup! We're good to go!
+						Case:
+							Value: 2
+								Dialogue: Yes! We're all set!
+						Case:
+							Value: default
+								Dialogue: Yep! Everything's ready!
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Label: @label_5;
+					Identifier: bgm_FadeOut
+						Argument: 120
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_SURIIPU
+						Argument: FACE_NORMAL
+						Argument: FACE_POS_BOTTOM_R_FACEINW
+					Identifier: message_Talk
+						Dialogue: Good.
+					Identifier: message_Talk
+						Dialogue: Then come over here.
+					Identifier: message_Close
+					Identifier: screen_FadeOut
+						Argument: 1
+						Argument: 60
+					Identifier: SetDirection
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_MARIRU
+						Argument: DIR_RIGHT
+					Identifier: SetDirection
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_SURIIPU
+						Argument: DIR_DOWNRIGHT
+					Identifier: SetDirection
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: DIR_DOWN
+					Identifier: SetDirection
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+						Argument: DIR_RIGHT
+					Identifier: SetPositionMark
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_MARIRU
+						Identifier: Position
+						Template
+							Type: m0
+							Identifier: 19.5
+							Identifier: 23
+					Identifier: SetPositionMark
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Identifier: Position
+						Template
+							Type: m1
+							Identifier: 25.5
+							Identifier: 20.5
+					Identifier: SetPositionMark
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+						Identifier: Position
+						Template
+							Type: m2
+							Identifier: 23
+							Identifier: 23
+					Identifier: SetPositionMark
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_SURIIPU
+						Identifier: Position
+						Template
+							Type: m3
+							Identifier: 23
+							Identifier: 20.5
+					Identifier: supervision_Acting
+						Argument: 0
+					Identifier: camera_SetMyself
+						Template
+							Type: performer
+							Identifier: 0
+					Identifier: Wait
+						Argument: 45
+					Identifier: screen_FadeIn
+						Argument: 1
+						Argument: 30
+					Identifier: Wait
+						Argument: 30
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_SURIIPU
+						Argument: FACE_NORMAL
+						Argument: FACE_POS_TOP_C_FACER
+					Identifier: message_FacePositionOffset
+						Argument: 1
+						Argument: 1
+					Identifier: message_Talk
+						Dialogue: I'm going to send you into [CS:N]Azurill[CR]'s dream.
+					Identifier: message_Talk
+						Dialogue: Here goes!
+					Identifier: message_Close
+					Identifier: se_Play
+						Argument: 8195
+					Identifier: supervision_Acting
+						Argument: 1
+					Identifier: SetOutputAttribute
+						Template
+							Type: object
+							Identifier: OBJECT_G01P07A1_108
+						Argument: 4
+					Identifier: SetAnimation
+						Template
+							Type: object
+							Identifier: OBJECT_G01P07A1_108
+						Argument: 17
+					Identifier: WaitAnimation
+						Template
+							Type: object
+							Identifier: OBJECT_G01P07A1_108
+					Identifier: WaitExecuteObject
+						Argument: OBJECT_G01P07A1_108
+					Identifier: SetAnimation
+						Template
+							Type: object
+							Identifier: OBJECT_G01P07A1_108
+						Argument: 2
+					Identifier: screen_FadeOut
+						Argument: 1
+						Argument: 30
+					Identifier: WaitSe
+						Argument: 8195
+					Identifier: supervision_ExecuteActing
+						Argument: LEVEL_D37P11A
+						Argument: S20P0902
+						Argument: 0
+					Identifier: hold
+					Identifier: end
+				Case:
+					Value: default
+					Switch:
+						Variable: ProcessSpecial(PROCESS_SPECIAL_IS_TEAM_SETUP_PARTNER_AND_HERO_ONLY, 0, 0)
+						Case:
+							Value: 1
+							Identifier: Turn2DirectionLives
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: 4
+								Argument: 10
+								Argument: ACTOR_PLAYER
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_ATTENDANT1
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_STANDARD
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Hold on a second, [hero].
+								Case:
+									Value: 2
+										Dialogue: Hold on, [hero].
+								Case:
+									Value: default
+										Dialogue: Hold on, [hero].
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: Turn2DirectionLives
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 4
+								Argument: 10
+								Argument: ACTOR_ATTENDANT1
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: When we go into the [CS:P]nightmare[CR], you should be the leader, [hero].
+								Case:
+									Value: 2
+										Dialogue: When we go into the [CS:P]nightmare[CR], you should be the leader, [hero].
+								Case:
+									Value: default
+										Dialogue: When we go into the [CS:P]nightmare[CR], you should go as the leader, [hero].
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: After all, that's the way we've always done it for important missions.
+								Case:
+									Value: 2
+										Dialogue: After all, that's the way we've always handled things on important missions.
+								Case:
+									Value: default
+										Dialogue: After all, we've always gone on our important missions that way.
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: So I think that you should be the leader, [hero]...[K] What do you think?
+								Case:
+									Value: 2
+										Dialogue: So I think that you should be the leader, [hero]...[K] What do you think?
+								Case:
+									Value: default
+										Dialogue: So I think that you should be the leader, [hero]...[K] What do you think?
+							Switch:
+								Variable: message_SwitchMenu(0, 1)
+								Case:
+									Value: Accept leadership
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Switch:
+										Variable: ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0)
+									Identifier: message_SetFace
+										Argument: ACTOR_ATTENDANT1
+										Argument: FACE_NORMAL
+										Argument: FACE_POS_STANDARD
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: Cool![K] That's it, then! You're the leader, [hero]!
+										Case:
+											Value: 2
+												Dialogue: OK![K] That's settled, then! You're the leader, [hero]!
+										Case:
+											Value: default
+												Dialogue: OK![K] You're the team leader, [hero]!
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: Let's go! Into the [CS:P]nightmare[CR]!
+										Case:
+											Value: 2
+												Dialogue: Let's go! Into the [CS:P]nightmare[CR]!
+										Case:
+											Value: default
+												Dialogue: Let's go! Into the [CS:P]nightmare[CR]!
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: Turn2DirectionLives
+										Template
+											Type: actor
+											Identifier: ACTOR_ATTENDANT1
+										Argument: 4
+										Argument: 10
+										Argument: ACTOR_NPC_SURIIPU
+									Identifier: WaitExecuteLives
+										Argument: ACTOR_ATTENDANT1
+									Identifier: Turn2DirectionLives
+										Template
+											Type: actor
+											Identifier: ACTOR_PLAYER
+										Argument: 4
+										Argument: 10
+										Argument: ACTOR_NPC_SURIIPU
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: All right, [CS:N]Drowzee[CR]![K] Do your thing!
+										Case:
+											Value: 2
+												Dialogue: OK, [CS:N]Drowzee[CR]![K] It's your show!
+										Case:
+											Value: default
+												Dialogue: All right, [CS:N]Drowzee[CR]![K] We're counting on you!
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: jump
+										Argument: label_5
+								Case:
+									Value: Refuse
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: message_SetFace
+										Argument: ACTOR_ATTENDANT1
+										Argument: FACE_SURPRISED
+										Argument: FACE_POS_STANDARD
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: Whoa![K] Hang on, we're going with me as leader?
+										Case:
+											Value: 2
+												Dialogue: What?[K] Wait, so I'm going as the leader?
+										Case:
+											Value: default
+												Dialogue: What?[K] So I'm going to go as the leader?
+									Identifier: message_Close
+									Identifier: message_SetFace
+										Argument: ACTOR_ATTENDANT1
+										Argument: FACE_WORRIED
+										Argument: FACE_POS_STANDARD
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: Hmm...[K] I don't feel confident about doing that...
+										Case:
+											Value: 2
+												Dialogue: Hmm...[K] I don't have the confidence to do that...
+										Case:
+											Value: default
+												Dialogue: Hmm...[K] I don't feel confident enough to be the leader...
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: If we're going into the [CS:P]nightmare[CR], you should be the leader, [hero]...
+										Case:
+											Value: 2
+												Dialogue: If we're going into the [CS:P]nightmare[CR], you should be the leader, [hero]...
+										Case:
+											Value: default
+												Dialogue: If we're going to go into the [CS:P]nightmare[CR], I think you should be the leader, [hero]...
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: Turn2DirectionLives
+										Template
+											Type: actor
+											Identifier: ACTOR_ATTENDANT1
+										Argument: 4
+										Argument: 10
+										Argument: ACTOR_NPC_SURIIPU
+									Identifier: WaitExecuteLives
+										Argument: ACTOR_ATTENDANT1
+									Identifier: Turn2DirectionLives
+										Template
+											Type: actor
+											Identifier: ACTOR_PLAYER
+										Argument: 4
+										Argument: 10
+										Argument: ACTOR_NPC_SURIIPU
+									Label: @label_1;
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: message_SetFace
+										Argument: ACTOR_NPC_SURIIPU
+										Argument: FACE_NORMAL
+										Argument: FACE_POS_STANDARD
+									Identifier: message_Talk
+										Dialogue: I'm all ready to send you into the dream.
+									Identifier: message_Talk
+										Dialogue: Tell me when you're ready.
+									Identifier: message_Close
+									Identifier: end
+							Identifier: break
+						Case:
+							Value: default
+							Label: @label_4;
+							Identifier: message_SetFace
+								Argument: ACTOR_NPC_SURIIPU
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_STANDARD
+							Identifier: message_Talk
+								Dialogue: By the way...
+							Identifier: message_Talk
+								Dialogue: [CS:N]Azurill[CR] is in a very delicate state now.
+							Identifier: message_Talk
+								Dialogue: Judging by the resonations from [CS:N]Azurill[CR]'s dream...
+							Identifier: message_Talk
+								Dialogue: I believe that only the two of you should enter the [CS:P]nightmare[CR].[K] What do you think of that plan?
+							Identifier: message_Talk
+								Dialogue: Will just the two of you go into the [CS:P]nightmare[CR]?
+							Switch:
+								Variable: message_SwitchMenu(0, 1)
+								Case:
+									Value: Go as a duo
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Switch:
+										Variable: ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0)
+									Identifier: jump
+										Argument: label_5
+								Case:
+									Value: CS
+									Identifier: P
+										Argument: nightmare
+										Argument: CR
+										Argument: jump
+										Argument: label_1
+							Identifier: break
+					Identifier: break
+			Identifier: break
+		Case:
+			Value: Not yet
+			Identifier: jump
+				Argument: label_1

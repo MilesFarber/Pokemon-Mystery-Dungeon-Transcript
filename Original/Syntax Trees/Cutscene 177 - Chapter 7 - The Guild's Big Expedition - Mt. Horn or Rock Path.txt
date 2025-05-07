@@ -61,264 +61,121 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: All set!
-		Case:
-			Value: default
-			Identifier: case
-				Argument: 1
-				Dialogue: Which way should we go?
-			Identifier: case
-				Argument: 2
-				Dialogue: Which way should we go?
-			Identifier: default
-				Dialogue: Which way should we go?
-		Case:
-			Value: CS
-			Identifier: case
-				Argument: menu
-				Dialogue: [CS:P]Mt. Horn[CR]
-			Identifier: default
-				Argument: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: All right. [CS:P]Mt. Horn[CR] it is.
-				Case:
-					Value: 2
-						Dialogue: All right. [CS:P]Mt. Horn[CR] it is.
-				Case:
-					Value: default
-						Dialogue: OK. [CS:P]Mt. Horn[CR] it is.
+			Value: All set!
+			Label: @label_0;
 			Identifier: CallCommon
 				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: SetPositionLives
-				Template
-					Type: performer
-					Identifier: 0
-				Argument: 0
-			Identifier: camera_SetMyself
-				Template
-					Type: performer
-					Identifier: 0
-			Identifier: MovePositionOffset
-				Template
-					Type: performer
-					Identifier: 0
-				Argument: 1
-				Argument: 0
-				Argument: 48
-			Identifier: Turn2Direction
-				Template
-					Type: actor
-					Identifier: ACTOR_PLAYER
-				Argument: 4
-				Argument: 10
-				Argument: DIR_DOWN
-			Identifier: MovePositionMark
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-			Identifier: Position
-				Template
-					Type: m0
-					Identifier: 45
-					Identifier: 19.5
-			Identifier: MovePositionMark
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_BIPPA
-			Identifier: Position
-				Template
-					Type: m1
-					Identifier: 42
-					Identifier: 19
-			Identifier: Turn2Direction
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-				Argument: 4
-				Argument: 10
-				Argument: DIR_UPLEFT
-			Identifier: Turn2Direction
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_BIPPA
-				Argument: 4
-				Argument: 10
-				Argument: DIR_UPRIGHT
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_BIPPA
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_NORMAL
-				Argument: FACE_POS_STANDARD
 			Switch:
 				Variable: $PARTNER_TALK_KIND
 				Case:
 					Value: 1
-						Dialogue: All right! Let's roll out!
+						Dialogue: Which way should we go?
 				Case:
 					Value: 2
-						Dialogue: All right! Let's roll out!
+						Dialogue: Which way should we go?
 				Case:
 					Value: default
+						Dialogue: Which way should we go?
+			Switch:
+				Variable: message_SwitchMenu(0, 1)
+				Case:
+					Value: CS
+					Identifier: P
+						Argument: Mt.
+						Argument: Horn
+						Argument: CR
+						Argument: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+						Argument: message_SwitchTalk
+						Argument: PARTNER_TALK_KIND
+						Argument: case
+						Argument: 1
+						Dialogue: All right. [CS:P]Mt. Horn[CR] it is.
+					Identifier: case
+						Argument: 2
+						Dialogue: All right. [CS:P]Mt. Horn[CR] it is.
+					Identifier: default
+						Dialogue: OK. [CS:P]Mt. Horn[CR] it is.
+					Identifier: SetPositionLives
+						Template
+							Type: performer
+							Identifier: 0
+							Identifier: 0
+							Identifier: camera_SetMyself
+							Identifier: performer
+							Identifier: 0
+							Identifier: MovePositionOffset
+							Identifier: performer
+							Identifier: 0
+							Identifier: 1
+							Identifier: 0
+							Identifier: 48
+							Identifier: Turn2Direction
+							Identifier: actor
+							Identifier: ACTOR_PLAYER
+							Identifier: 4
+							Identifier: 10
+							Identifier: DIR_DOWN
+							Identifier: MovePositionMark
+							Identifier: actor
+							Identifier: ACTOR_ATTENDANT1
+							Identifier: 1
+							Identifier: Position
+							Identifier: m0
+							Identifier: 45
+							Identifier: 19.5
+							Identifier: MovePositionMark
+							Identifier: actor
+							Identifier: ACTOR_NPC_BIPPA
+							Identifier: 1
+							Identifier: Position
+							Identifier: m1
+							Identifier: 42
+							Identifier: 19
+							Identifier: Turn2Direction
+							Identifier: actor
+							Identifier: ACTOR_ATTENDANT1
+							Identifier: 4
+							Identifier: 10
+							Identifier: DIR_UPLEFT
+							Identifier: Turn2Direction
+							Identifier: actor
+							Identifier: ACTOR_NPC_BIPPA
+						Argument: 4
+						Argument: case
+						Argument: 2
 						Dialogue: All right! Let's roll out!
-			Identifier: message_Close
-			Identifier: MovePositionMark
-				Template
-					Type: actor
-					Identifier: ACTOR_PLAYER
-			Identifier: Position
-				Template
-					Type: m2
-					Identifier: 45.5
-					Identifier: 12.5
-			Identifier: Wait
-				Argument: 5
-			Identifier: MovePositionMark
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-			Identifier: Position
-				Template
-					Type: m3
-					Identifier: 45.5
-					Identifier: 12.5
-			Identifier: Wait
-				Argument: 10
-			Identifier: MovePositionMark
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_BIPPA
-			Identifier: Position
-				Template
-					Type: m4
-					Identifier: 45.5
-					Identifier: 12.5
-			Conditional: If
-				Condition: ($SCENARIO_MAIN) >= [9, 5]
-				Label: @label_4;
-				Identifier: main_EnterDungeon
-					Argument: 10
-					Argument: 30
-				Switch:
-					Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
-				Identifier: main_EnterDungeon
-					Argument: 1
-					Argument: 30
-				Identifier: hold
-				Identifier: else
-					Argument: SCENARIO_MAIN
-					Argument: scn
-					Argument: 9
-					Argument: 5
-				Identifier: jump
-					Argument: label_4
-				Identifier: break
-					Argument: case
-					Argument: menu
-					Dialogue: [CS:P]Rock Path[CR]", }): CallCommon(CORO_MESSAGE_CLOSE_WAIT_FUNC); message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=" All right. [CS:P]Rock Path[CR] it is.
-				Identifier: case
-					Argument: 2
-					Dialogue: All right. [CS:P]Rock Path[CR] it is.
-				Identifier: default
-					Dialogue: OK. [CS:P]Rock Path[CR] it is.
-				Identifier: SetPositionLives
-					Template
-						Type: performer
-						Identifier: 0
-						Identifier: 0
-						Identifier: camera_SetMyself
-						Identifier: performer
-						Identifier: 0
-						Identifier: MovePositionOffset
-						Identifier: performer
-						Identifier: 0
-						Identifier: 1
-						Identifier: 0
-						Identifier: 48
-						Identifier: Turn2Direction
-						Identifier: actor
-						Identifier: ACTOR_PLAYER
-						Identifier: 4
-						Identifier: 10
-						Identifier: DIR_DOWN
-						Identifier: MovePositionMark
-						Identifier: actor
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: 1
-						Identifier: Position
-						Identifier: m5
-						Identifier: 45
-						Identifier: 19.5
-						Identifier: MovePositionMark
-						Identifier: actor
-						Identifier: ACTOR_NPC_BIPPA
-						Identifier: 1
-						Identifier: Position
-						Identifier: m6
-						Identifier: 42
-						Identifier: 19
-						Identifier: Turn2Direction
-						Identifier: actor
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: 4
-						Identifier: 10
-						Identifier: DIR_UPLEFT
-						Identifier: Turn2Direction
-						Identifier: actor
-						Identifier: ACTOR_NPC_BIPPA
-					Argument: 4
-					Argument: case
-					Argument: 2
-					Dialogue: All right! Let's roll out!
-				Identifier: default
-					Dialogue: All right! Let's roll out!
-				Identifier: MovePositionMark
-					Template
-						Type: actor
-						Identifier: ACTOR_PLAYER
-						Identifier: 1
-						Identifier: Position
-						Identifier: m7
-						Identifier: 45.5
-						Identifier: 12.5
-						Identifier: Wait
-						Identifier: 5
-						Identifier: MovePositionMark
-						Identifier: actor
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: 1
-						Identifier: Position
-						Identifier: m8
-						Identifier: 45.5
-						Identifier: 12.5
-						Identifier: Wait
-						Identifier: 10
-						Identifier: MovePositionMark
-						Identifier: actor
-						Identifier: ACTOR_NPC_BIPPA
-						Identifier: 1
-						Identifier: Position
-						Identifier: m9
-						Identifier: 45.5
-						Identifier: 12.5
-						Identifier: if
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-		Case:
-			Value: default
-				Dialogue: Not yet...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: All right. We'll get moving when you're ready.
-			Identifier: case
-				Argument: 2
-				Dialogue: OK. Let's get moving when you're ready.
-			Identifier: default
-				Dialogue: OK. Let's get moving when you're ready.
+					Identifier: default
+						Dialogue: All right! Let's roll out!
+					Identifier: MovePositionMark
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+							Identifier: 1
+							Identifier: Position
+							Identifier: m2
+							Identifier: 45.5
+							Identifier: 12.5
+							Identifier: Wait
+							Identifier: 5
+							Identifier: MovePositionMark
+							Identifier: actor
+							Identifier: ACTOR_ATTENDANT1
+							Identifier: 1
+							Identifier: Position
+							Identifier: m3
+							Identifier: 45.5
+							Identifier: 12.5
+							Identifier: Wait
+							Identifier: 10
+							Identifier: MovePositionMark
+							Identifier: actor
+							Identifier: ACTOR_NPC_BIPPA
+							Identifier: 1
+							Identifier: Position
+							Identifier: m4
+							Identifier: 45.5
+							Identifier: 12.5
+							Identifier: if
+							Identifier: scn
+							Identifier: SCENARIO_MAIN

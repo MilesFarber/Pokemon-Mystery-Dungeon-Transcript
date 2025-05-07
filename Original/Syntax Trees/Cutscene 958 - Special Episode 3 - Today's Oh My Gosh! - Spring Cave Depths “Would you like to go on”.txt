@@ -13,26 +13,55 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yes
-		Case:
-			Value: default
+			Value: Yes
+			Label: @label_0;
+			Identifier: message_Close
+			Identifier: SCENARIO_SIDE
+				Argument: scn
+				Argument: 43
+				Argument: 8
+			Identifier: bgm_FadeOut
+				Argument: 60
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 60
+			Identifier: Wait
+				Argument: 80
+			Identifier: message_SetActor
+				Argument: ACTOR_NPC_GOOSUTO
+			Identifier: message_Talk
 				Dialogue: ...[K]She...
-		Case:
-			Value: CS
+			Identifier: message_Talk
 				Dialogue: That [CS:Y]Sunflora[CR]... I think she's still pursuing me.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: So persistent...[K] Good grief.
-		Case:
-			Value: default
+			Identifier: message_KeyWait
+			Identifier: se_Play
+				Argument: 8978
+			Identifier: message_Talk
 				Dialogue: ...[K]That's right!
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: She's a Grass-type Pokémon.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: So if I run away over there...[K] Heh heh heh heh!
-		Case:
-			Value: default
+			Identifier: message_KeyWait
+			Identifier: screen_FadeOutAll
+				Argument: 1
+				Argument: 60
+			Identifier: message_CloseEnforce
+			Identifier: Wait
+				Argument: 60
+			Identifier: CallCommon
+				Argument: CORO_FADE_OUT_ALL_AFTER
+			Identifier: main_EnterDungeon
+				Argument: 163
+				Argument: 30
+			Identifier: main_EnterDungeon
+				Argument: 1
+				Argument: 30
+			Identifier: hold
+			Identifier: case
+				Argument: menu
 				Dialogue: No
+			Identifier: message_Close
+			Identifier: end

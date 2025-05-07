@@ -62,4 +62,44 @@ def 0:
 		Case:
 			Value: default
 				Dialogue: So how about leaving behind the other team members...[K] That way, we can go as a pair.
-	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: message_SwitchMenu(0, 1)
+		Case:
+			Value: Go as a pair
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0)
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: OK![K] Let's get moving to [CS:P]Mystifying Forest[CR]!
+				Case:
+					Value: 2
+						Dialogue: That's that![K] Let's get moving to [CS:P]Mystifying Forest[CR]!
+				Case:
+					Value: default
+						Dialogue: OK![K] Let's go to [CS:P]Mystifying Forest[CR]!
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Let's give it our best, [hero]!
+				Case:
+					Value: 2
+						Dialogue: Let's do our best, [hero]!
+				Case:
+					Value: default
+						Dialogue: Let's do our best, [hero]!
+			Identifier: message_Close
+			Identifier: end
+		Case:
+			Value: CS
+			Identifier: P
+				Argument: Mystifying
+				Argument: Forest
+				Argument: CR
+				Argument: message_Close
+				Argument: end

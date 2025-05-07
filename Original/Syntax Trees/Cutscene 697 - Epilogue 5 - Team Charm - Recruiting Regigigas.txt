@@ -28,40 +28,23 @@ def 0:
 	Label: @label_2;
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: ProcessSpecial(PROCESS_SPECIAL_PREPARE_MENU_ACCEPT_TEAM_MEMBER, 9, 0)
 	Switch:
 		Variable: message_Menu(MENU_ACCEPT_TEAM_MEMBER)
 		Case:
 			Value: 1
-				Dialogue: [CN][c_name:NPC_NEW_FRIEND] joined the team!
-		Case:
-			Value: CS
-				Dialogue: [CN][player] cleared [CS:P]Aegis Cave[CR] [CN]in admirable fashion!
-		Case:
-			Value: default
-		Case:
-			Value: default
-		Case:
-			Value: default
-		Case:
-			Value: 2
-				Dialogue: [CN]Are you sure?[K] [CN]You're sure you won't accept [CN]this potential new member?
-		Case:
-			Value: default
-			Identifier: case
-				Argument: menu
-				Dialogue: Reconsider
-			Identifier: jump
-				Argument: label_2
-			Identifier: case
-				Argument: menu
-				Dialogue: Refuse
-			Identifier: default
-				Argument: CallCommon
+			Label: @label_0;
+			Identifier: CallCommon
 				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: me_Play
+				Argument: 5
 			Identifier: message_Mail
-				Dialogue: [CN][player] turned down [CN][CS:N]Regigigas[CR]'s offer to join.
-			Identifier: message_Close
+				Dialogue: [CN][c_name:NPC_NEW_FRIEND] joined the team!
+			Identifier: WaitMe
+				Argument: 5
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 			Identifier: bgm_FadeOut
 				Argument: 120
 			Identifier: screen_FadeOut
@@ -69,5 +52,43 @@ def 0:
 				Argument: 60
 			Identifier: WaitBgm
 				Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
-			Identifier: jump
-				Argument: label_4
+			Label: @label_4;
+			Identifier: message_Explanation
+				Dialogue: [CN][player] cleared [CS:P]Aegis Cave[CR] [CN]in admirable fashion!
+			Identifier: message_Close
+			Switch:
+				Variable: ProcessSpecial(55, 58, 0)
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_EXPLORATION_RESULTS)
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP)
+			Identifier: end
+		Case:
+			Value: 2
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_Mail
+				Dialogue: [CN]Are you sure?[K] [CN]You're sure you won't accept [CN]this potential new member?
+			Switch:
+				Variable: message_SwitchMenu(0, 1)
+				Case:
+					Value: Reconsider
+					Identifier: jump
+						Argument: label_2
+				Case:
+					Value: Refuse
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: message_Mail
+						Dialogue: [CN][player] turned down [CN][CS:N]Regigigas[CR]'s offer to join.
+					Identifier: message_Close
+					Identifier: bgm_FadeOut
+						Argument: 120
+					Identifier: screen_FadeOut
+						Argument: 1
+						Argument: 60
+					Identifier: WaitBgm
+						Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+					Identifier: jump
+						Argument: label_4
+			Identifier: break

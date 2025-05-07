@@ -11,33 +11,80 @@ def 0:
 		Variable: sector()
 		Case:
 			Value: 0
-				Dialogue: If you keep being difficult, it will mean big trouble for you!
-		Case:
-			Value: default
-				Dialogue: H-h-h...HELP!
-		Case:
-			Value: 0
-			Identifier: case
+			Label: @label_0;
+			Identifier: screen_FlushOut
+				Argument: 1
 				Argument: 0
-				Argument: default
-				Argument: screen_FadeOut
+				Argument: 8
+				Argument: 0
+				Argument: 0
+				Argument: 0
+			Identifier: screen_FadeIn
 				Argument: 1
 				Argument: 15
-			Label: @label_5;
-			Identifier: screen_FlushIn
+			Identifier: Wait
+				Argument: 30
+			Label: @label_2;
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_SURIIPU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
+				Dialogue: If you keep being difficult, it will mean big trouble for you!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_RURIRI
+				Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_RURIRI
+				Argument: FACE_TEARY_EYED
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+				Dialogue: H-h-h...HELP!
+			Identifier: message_Close
+			Switch:
+				Variable: sector()
+				Case:
+					Value: 0
+					Identifier: screen_FadeOut
+						Argument: 1
+						Argument: 15
+					Label: @label_5;
+					Identifier: screen_FlushIn
+						Argument: 1
+						Argument: 0
+						Argument: 1
+						Argument: 0
+						Argument: 0
+						Argument: 0
+					Identifier: end
+				Case:
+					Value: 1
+					Identifier: se_Play
+						Argument: 5139
+					Identifier: screen_WhiteOut
+						Argument: 1
+						Argument: 5
+					Identifier: jump
+						Argument: label_5
+			Identifier: break
+		Case:
+			Value: 1
+			Identifier: screen_FlushOut
 				Argument: 1
 				Argument: 0
-				Argument: 1
+				Argument: 6
 				Argument: 0
 				Argument: 0
 				Argument: 0
-			Identifier: end
-			Identifier: case
-				Argument: 1
-				Argument: se_Play
-				Argument: 5139
-			Identifier: screen_WhiteOut
+			Identifier: screen_FadeIn
 				Argument: 1
 				Argument: 5
+			Identifier: Wait
+				Argument: 30
 			Identifier: jump
-				Argument: label_5
+				Argument: label_2

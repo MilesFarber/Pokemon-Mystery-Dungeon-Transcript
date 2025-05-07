@@ -1167,58 +1167,91 @@ def 1:
 			Variable: $EVENT_LOCAL
 			Case:
 				Value: 1
-				Identifier: case
-					Argument: 1
-					Argument: break_loop
+				Identifier: break_loop
 				Identifier: break
-				Identifier: default
-					Argument: Turn2DirectionLives
-					Argument: 4
-					Argument: 10
-					Argument: ACTOR_NPC_SAANAITO
+			Case:
+				Value: default
 				Identifier: WaitRandom
-					Argument: 12
-					Argument: 30
+					Argument: 18
+					Argument: 21
 				Switch:
 					Variable: $EVENT_LOCAL
 					Case:
 						Value: 1
-						Identifier: case
-							Argument: 1
-							Argument: break_loop
+						Identifier: break_loop
 						Identifier: break
-						Identifier: default
-							Argument: SetEffect
-							Argument: EFFECT_NONE
-							Argument: 3
-						Identifier: WaitEffect
-						Identifier: SetEffect
-							Argument: EFFECT_JOYOUS
-							Argument: 3
-						Identifier: CallCommon
-							Argument: CORO_JUMP_HAPPY_FUNC
-						Identifier: Turn2DirectionLives
-							Argument: 4
-							Argument: 10
-							Argument: ACTOR_NPC_CHAAREMU
-						Identifier: WaitRandom
-							Argument: 12
-							Argument: 30
+					Case:
+						Value: default
 						Identifier: Turn2DirectionLives
 							Argument: 4
 							Argument: 10
 							Argument: ACTOR_NPC_SAANAITO
-						Identifier: CallCommon
-							Argument: CORO_JUMP_HAPPY_FUNC
-						Identifier: SetEffect
-							Argument: EFFECT_NONE
-							Argument: 3
-						Identifier: WaitEffect
-						Identifier: SetEffect
-							Argument: EFFECT_LAUGHING
-							Argument: 3
+						Identifier: WaitRandom
+							Argument: 12
+							Argument: 30
 						Switch:
 							Variable: $EVENT_LOCAL
+							Case:
+								Value: 1
+								Identifier: break_loop
+								Identifier: break
+							Case:
+								Value: default
+								Identifier: Turn2DirectionLives
+									Argument: 4
+									Argument: 10
+									Argument: ACTOR_NPC_CHAAREMU
+								Identifier: WaitRandom
+									Argument: 18
+									Argument: 21
+								Switch:
+									Variable: $EVENT_LOCAL
+									Case:
+										Value: 1
+										Identifier: break_loop
+										Identifier: break
+									Case:
+										Value: default
+										Identifier: SetEffect
+											Argument: EFFECT_NONE
+											Argument: 3
+										Identifier: WaitEffect
+										Identifier: SetEffect
+											Argument: EFFECT_JOYOUS
+											Argument: 3
+										Identifier: CallCommon
+											Argument: CORO_JUMP_HAPPY_FUNC
+										Identifier: Turn2DirectionLives
+											Argument: 4
+											Argument: 10
+											Argument: ACTOR_NPC_CHAAREMU
+										Identifier: WaitRandom
+											Argument: 12
+											Argument: 30
+										Identifier: Turn2DirectionLives
+											Argument: 4
+											Argument: 10
+											Argument: ACTOR_NPC_SAANAITO
+										Identifier: CallCommon
+											Argument: CORO_JUMP_HAPPY_FUNC
+										Identifier: SetEffect
+											Argument: EFFECT_NONE
+											Argument: 3
+										Identifier: WaitEffect
+										Identifier: SetEffect
+											Argument: EFFECT_LAUGHING
+											Argument: 3
+										Switch:
+											Variable: $EVENT_LOCAL
+											Case:
+												Value: 1
+												Identifier: break_loop
+												Identifier: break
+											Case:
+												Value: default
+												Identifier: continue
+										Identifier: break
+								Identifier: break
 						Identifier: break
 				Identifier: break
 	Label: @label_0;
@@ -1277,37 +1310,25 @@ def 2:
 			Variable: $EVENT_LOCAL
 			Case:
 				Value: 1
-				Identifier: case
-					Argument: 1
-					Argument: break_loop
+				Identifier: break_loop
 				Identifier: break
-				Identifier: default
-					Argument: SetEffect
-					Argument: EFFECT_NONE
-					Argument: 3
-				Identifier: WaitEffect
-				Identifier: SetEffect
-					Argument: EFFECT_JOYOUS
-					Argument: 3
+			Case:
+				Value: default
 				Identifier: WaitRandom
-					Argument: 18
-					Argument: 24
-				Identifier: CallCommon
-					Argument: CORO_JUMP_HAPPY_FUNC
+					Argument: 12
+					Argument: 30
+				Identifier: Turn2DirectionLives
+					Argument: 4
+					Argument: 10
+					Argument: ACTOR_NPC_SAANAITO
 				Switch:
 					Variable: $EVENT_LOCAL
 					Case:
 						Value: 1
-						Identifier: case
-							Argument: 1
-							Argument: break_loop
+						Identifier: break_loop
 						Identifier: break
-						Identifier: default
-							Argument: WaitRandom
-							Argument: 18
-							Argument: 24
-						Identifier: CallCommon
-							Argument: CORO_JUMP_HAPPY_FUNC
+					Case:
+						Value: default
 						Identifier: SetEffect
 							Argument: EFFECT_NONE
 							Argument: 3
@@ -1315,8 +1336,64 @@ def 2:
 						Identifier: SetEffect
 							Argument: EFFECT_JOYOUS
 							Argument: 3
+						Identifier: WaitRandom
+							Argument: 18
+							Argument: 24
+						Identifier: CallCommon
+							Argument: CORO_JUMP_HAPPY_FUNC
 						Switch:
 							Variable: $EVENT_LOCAL
+							Case:
+								Value: 1
+								Identifier: break_loop
+								Identifier: break
+							Case:
+								Value: default
+								Identifier: WaitRandom
+									Argument: 12
+									Argument: 30
+								Identifier: Turn2DirectionLives
+									Argument: 4
+									Argument: 10
+									Argument: ACTOR_PLAYER_CHARMS
+								Identifier: SetEffect
+									Argument: EFFECT_NONE
+									Argument: 3
+								Identifier: WaitEffect
+								Identifier: SetEffect
+									Argument: EFFECT_LAUGHING
+									Argument: 3
+								Switch:
+									Variable: $EVENT_LOCAL
+									Case:
+										Value: 1
+										Identifier: break_loop
+										Identifier: break
+									Case:
+										Value: default
+										Identifier: WaitRandom
+											Argument: 18
+											Argument: 24
+										Identifier: CallCommon
+											Argument: CORO_JUMP_HAPPY_FUNC
+										Identifier: SetEffect
+											Argument: EFFECT_NONE
+											Argument: 3
+										Identifier: WaitEffect
+										Identifier: SetEffect
+											Argument: EFFECT_JOYOUS
+											Argument: 3
+										Switch:
+											Variable: $EVENT_LOCAL
+											Case:
+												Value: 1
+												Identifier: break_loop
+												Identifier: break
+											Case:
+												Value: default
+												Identifier: continue
+										Identifier: break
+								Identifier: break
 						Identifier: break
 				Identifier: break
 	Label: @label_2;
@@ -1362,28 +1439,26 @@ def 3:
 			Variable: $EVENT_LOCAL
 			Case:
 				Value: 1
-				Identifier: case
-					Argument: 1
-					Argument: break_loop
+				Identifier: break_loop
 				Identifier: break
-				Identifier: default
-					Argument: WaitRandom
-					Argument: 12
-					Argument: 27
+			Case:
+				Value: default
+				Identifier: WaitRandom
+					Argument: 18
+					Argument: 21
 				Identifier: Turn2DirectionLives
 					Argument: 4
 					Argument: 10
-					Argument: ACTOR_PLAYER_CHARMS
+					Argument: ACTOR_NPC_CHAAREMU
 				Switch:
 					Variable: $EVENT_LOCAL
 					Case:
 						Value: 1
-						Identifier: case
-							Argument: 1
-							Argument: break_loop
+						Identifier: break_loop
 						Identifier: break
-						Identifier: default
-							Argument: WaitRandom
+					Case:
+						Value: default
+						Identifier: WaitRandom
 							Argument: 12
 							Argument: 27
 						Identifier: Turn2DirectionLives
@@ -1394,29 +1469,92 @@ def 3:
 							Variable: $EVENT_LOCAL
 							Case:
 								Value: 1
-								Identifier: case
-									Argument: 1
-									Argument: break_loop
+								Identifier: break_loop
 								Identifier: break
-								Identifier: default
-									Argument: WaitRandom
-									Argument: 12
-									Argument: 27
+							Case:
+								Value: default
+								Identifier: WaitRandom
+									Argument: 18
+									Argument: 21
 								Identifier: Turn2DirectionLives
 									Argument: 4
 									Argument: 10
-									Argument: ACTOR_PLAYER_CHARMS
+									Argument: ACTOR_NPC_CHAAREMU
 								Identifier: SetEffect
 									Argument: EFFECT_NONE
 									Argument: 3
 								Identifier: WaitEffect
 								Identifier: SetEffect
-									Argument: EFFECT_LAUGHING
+									Argument: EFFECT_JOYOUS
 									Argument: 3
 								Identifier: CallCommon
 									Argument: CORO_JUMP_HAPPY_FUNC
 								Switch:
 									Variable: $EVENT_LOCAL
+									Case:
+										Value: 1
+										Identifier: break_loop
+										Identifier: break
+									Case:
+										Value: default
+										Identifier: WaitRandom
+											Argument: 12
+											Argument: 27
+										Identifier: Turn2DirectionLives
+											Argument: 4
+											Argument: 10
+											Argument: ACTOR_PLAYER_CHARMS
+										Switch:
+											Variable: $EVENT_LOCAL
+											Case:
+												Value: 1
+												Identifier: break_loop
+												Identifier: break
+											Case:
+												Value: default
+												Identifier: WaitRandom
+													Argument: 18
+													Argument: 21
+												Identifier: Turn2DirectionLives
+													Argument: 4
+													Argument: 10
+													Argument: ACTOR_NPC_CHAAREMU
+												Switch:
+													Variable: $EVENT_LOCAL
+													Case:
+														Value: 1
+														Identifier: break_loop
+														Identifier: break
+													Case:
+														Value: default
+														Identifier: WaitRandom
+															Argument: 12
+															Argument: 27
+														Identifier: Turn2DirectionLives
+															Argument: 4
+															Argument: 10
+															Argument: ACTOR_PLAYER_CHARMS
+														Identifier: SetEffect
+															Argument: EFFECT_NONE
+															Argument: 3
+														Identifier: WaitEffect
+														Identifier: SetEffect
+															Argument: EFFECT_LAUGHING
+															Argument: 3
+														Identifier: CallCommon
+															Argument: CORO_JUMP_HAPPY_FUNC
+														Switch:
+															Variable: $EVENT_LOCAL
+															Case:
+																Value: 1
+																Identifier: break_loop
+																Identifier: break
+															Case:
+																Value: default
+																Identifier: continue
+														Identifier: break
+												Identifier: break
+										Identifier: break
 								Identifier: break
 						Identifier: break
 				Identifier: break

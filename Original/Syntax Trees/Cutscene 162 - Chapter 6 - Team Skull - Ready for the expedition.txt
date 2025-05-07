@@ -24,64 +24,63 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yes
-		Case:
-			Value: default
+			Value: Yes
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_Talk
 				Dialogue: Incidentally...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: You may not bring members of your team that aren't members of the guild. Understood?
+			Switch:
+				Variable: message_SwitchMenu(0, 1)
+				Case:
+					Value: I know!
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: supervision_ExecuteCommon
+						Argument: CORO_EVENT_M08_05_06
+					Label: @label_1;
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: message_Talk
+						Dialogue: What, not yet?[K] Get moving and get ready.
+					Identifier: message_Talk
+						Dialogue: The other apprentices should be getting their stocks of items ready too.
+					Identifier: message_Talk
+						Dialogue: When you're done preparing for the expedition, report to me. ♪
+					Identifier: message_Close
+					Label: @label_4;
+					Identifier: end
+				Case:
+					Value: I didn't know...
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_PERAPPU
+						Argument: FACE_PAIN
+						Argument: FACE_POS_STANDARD
+					Identifier: message_Talk
+						Dialogue: It's quite apparent that someone failed to pay attention to me...
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_PERAPPU
+						Argument: FACE_NORMAL
+						Argument: FACE_POS_STANDARD
+					Identifier: message_Talk
+						Dialogue: The situation being what it is, I shall explain again.
+					Identifier: message_Talk
+						Dialogue: You may not bring members of your team that are not members of the guild.
+					Identifier: message_Talk
+						Dialogue: Keeping that in mind, you should complete your preparations.
+					Identifier: message_Talk
+						Dialogue: Understood. ♪
+					Identifier: message_Close
+					Identifier: jump
+						Argument: label_4
+			Identifier: break
 		Case:
-			Value: default
-			Identifier: case
-				Argument: menu
-				Dialogue: I know!
-			Identifier: default
-				Argument: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: supervision_ExecuteCommon
-				Argument: CORO_EVENT_M08_05_06
-			Label: @label_1;
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: message_Talk
-				Dialogue: What, not yet?[K] Get moving and get ready.
-			Identifier: message_Talk
-				Dialogue: The other apprentices should be getting their stocks of items ready too.
-			Identifier: message_Talk
-				Dialogue: When you're done preparing for the expedition, report to me. ♪
-			Identifier: message_Close
-			Label: @label_4;
-			Identifier: end
-			Identifier: case
-				Argument: menu
-				Dialogue: I didn't know...
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_PERAPPU
-				Argument: FACE_PAIN
-				Argument: FACE_POS_STANDARD
-			Identifier: message_Talk
-				Dialogue: It's quite apparent that someone failed to pay attention to me...
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_PERAPPU
-				Argument: FACE_NORMAL
-				Argument: FACE_POS_STANDARD
-			Identifier: message_Talk
-				Dialogue: The situation being what it is, I shall explain again.
-			Identifier: message_Talk
-				Dialogue: You may not bring members of your team that are not members of the guild.
-			Identifier: message_Talk
-				Dialogue: Keeping that in mind, you should complete your preparations.
-			Identifier: message_Talk
-				Dialogue: Understood. ♪
-			Identifier: message_Close
+			Value: No
 			Identifier: jump
-				Argument: label_4
-		Case:
-			Value: default
-				Dialogue: No
+				Argument: label_1

@@ -18,28 +18,25 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yes
-		Case:
-			Value: default
-			Label: @label_2;
-			Identifier: main_EnterDungeon
-				Argument: 139
-				Argument: 30
-			Switch:
-				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
-			Identifier: main_EnterDungeon
-				Argument: 1
-				Argument: 30
-			Identifier: hold
-		Case:
-			Value: default
-			Identifier: SCENARIO_SIDE
-				Argument: scn
-				Argument: 47
-				Argument: 9
-			Identifier: jump
-				Argument: label_2
-		Case:
-			Value: default
-				Dialogue: No
+			Value: Yes
+			Label: @label_0;
+			Identifier: message_Close
+			Conditional: If
+				Condition: ($SCENARIO_SIDE) >= [47, 9]
+				Label: @label_2;
+				Identifier: main_EnterDungeon
+					Argument: 139
+					Argument: 30
+				Switch:
+					Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+				Identifier: main_EnterDungeon
+					Argument: 1
+					Argument: 30
+				Identifier: hold
+				Identifier: else
+					Argument: SCENARIO_SIDE
+					Argument: scn
+					Argument: 47
+					Argument: 9
+				Identifier: jump
+					Argument: label_2

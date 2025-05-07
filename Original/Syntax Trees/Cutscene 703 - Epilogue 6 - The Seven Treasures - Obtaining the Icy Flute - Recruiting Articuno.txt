@@ -98,4 +98,188 @@ def 0:
 		Argument: 0
 		Argument: 59
 		Argument: 0
-	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: message_Menu(MENU_GIVE_ITEM)
+		Case:
+			Value: 2
+			Label: @label_1;
+			Switch:
+				Variable: random(100)
+				Case:
+					Value: 50
+					Identifier: SetAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER_APPOINT
+						Argument: 5
+					Identifier: SlidePositionOffset
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER_APPOINT
+						Argument: 1
+						Argument: 0
+						Argument: 36
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_PLAYER_APPOINT
+					Identifier: SetAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER_APPOINT
+						Argument: 2
+					Identifier: Wait
+						Argument: 30
+					Identifier: se_Play
+						Argument: 7175
+					Identifier: SetEffect
+						Template
+							Type: performer
+							Identifier: 4
+						Argument: EFFECT_WHITE_LIGHT_ENGULFING_OUT
+						Argument: 3
+					Identifier: Wait
+						Argument: 15
+					Identifier: supervision_Acting
+						Argument: 2
+					Identifier: Wait
+						Argument: 15
+					Identifier: WaitExecutePerformer
+						Argument: 4
+					Identifier: SetEffect
+						Template
+							Type: performer
+							Identifier: 4
+						Argument: EFFECT_NONE
+						Argument: 3
+					Identifier: Wait
+						Argument: 15
+					Identifier: bgm_PlayFadeIn
+						Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+						Argument: 0
+						Argument: 256
+					Identifier: message_Mail
+						Dialogue: [CN]Oh?[K] [CN][CS:N]Articuno[CR] is saying something.
+					Identifier: message_Mail
+						Dialogue: [CN]It seemed to develop a kinship [CN]with [player] while battling!
+					Identifier: message_Mail
+						Dialogue: [CN]It says that it wants [CN]to join the team!
+					Label: @label_6;
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Switch:
+						Variable: ProcessSpecial(PROCESS_SPECIAL_PREPARE_MENU_ACCEPT_TEAM_MEMBER, 12, 0)
+					Switch:
+						Variable: message_Menu(MENU_ACCEPT_TEAM_MEMBER)
+						Case:
+							Value: 1
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: me_Play
+								Argument: 5
+							Identifier: message_Mail
+								Dialogue: [CN][c_name:NPC_NEW_FRIEND] joined the team!
+							Identifier: WaitMe
+								Argument: 5
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: bgm_FadeOut
+								Argument: 30
+							Identifier: se_Play
+								Argument: 7183
+							Identifier: SetEffect
+								Template
+									Type: performer
+									Identifier: 4
+								Argument: EFFECT_WHITE_LIGHT_ENGULFING
+								Argument: 3
+							Identifier: Wait
+								Argument: 10
+							Identifier: Destroy
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_FURIIZAA
+							Identifier: Wait
+								Argument: 15
+							Identifier: WaitExecutePerformer
+								Argument: 4
+							Identifier: SetEffect
+								Template
+									Type: performer
+									Identifier: 4
+								Argument: EFFECT_NONE
+								Argument: 3
+							Identifier: Wait
+								Argument: 30
+							Identifier: WaitSe
+								Argument: 7183
+							Label: @label_3;
+							Identifier: screen_FadeOut
+								Argument: 1
+								Argument: 60
+							Identifier: Wait
+								Argument: 30
+							Array accessor
+								Array: $SCENARIO_MAIN_BIT_FLAG
+								Index: 33
+								Value: 0
+							Conditional: If
+								Condition: ( $SCENARIO_MAIN_BIT_FLAG[33] || $SCENARIO_MAIN_BIT_FLAG[34] || $SCENARIO_MAIN_BIT_FLAG[35] || $SCENARIO_MAIN_BIT_FLAG[36] || $SCENARIO_MAIN_BIT_FLAG[37] || $SCENARIO_MAIN_BIT_FLAG[38] || $SCENARIO_MAIN_BIT_FLAG[39]
+								Label: @label_8;
+								Identifier: end
+						Case:
+							Value: default
+				Case:
+					Value: 2
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: message_Mail
+						Dialogue: [CN]Are you sure?[K] [CN]You're sure you won't accept [CN]this potential new member?
+					Switch:
+						Variable: message_SwitchMenu(0, 1)
+						Case:
+							Value: Reconsider
+							Identifier: jump
+								Argument: label_6
+						Case:
+							Value: Refuse
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: message_Mail
+								Dialogue: [CN][CS:N]Articuno[CR] was turned down [CN]as a team member.
+							Identifier: message_Close
+							Identifier: bgm_FadeOut
+								Argument: 30
+							Identifier: se_Play
+								Argument: 7183
+							Identifier: SetEffect
+								Template
+									Type: performer
+									Identifier: 4
+								Argument: EFFECT_WHITE_LIGHT_ENGULFING
+								Argument: 3
+							Identifier: Wait
+								Argument: 10
+							Identifier: Destroy
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_FURIIZAA
+							Identifier: Wait
+								Argument: 15
+							Identifier: WaitExecutePerformer
+								Argument: 4
+							Identifier: SetEffect
+								Template
+									Type: performer
+									Identifier: 4
+								Argument: EFFECT_NONE
+								Argument: 3
+							Identifier: Wait
+								Argument: 30
+							Identifier: WaitSe
+								Argument: 7183
+							Identifier: jump
+								Argument: label_3
+					Identifier: break
+		Case:
+			Value: default
+			Identifier: jump
+				Argument: label_3

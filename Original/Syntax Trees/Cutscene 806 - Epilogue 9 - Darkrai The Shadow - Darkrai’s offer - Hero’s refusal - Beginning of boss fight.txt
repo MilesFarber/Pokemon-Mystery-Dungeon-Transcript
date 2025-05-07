@@ -881,225 +881,810 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: ..................
-		Case:
-			Value: default
-			Identifier: case
-				Argument: 4
-				Dialogue: (..................)
-			Identifier: default
-				Dialogue: (..................)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (...My...)
-			Identifier: default
-				Dialogue: (...My...)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (...My answer is...)
-			Identifier: default
-				Dialogue: (...My answer is...)
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Argument: message_Explanation
-				Dialogue: [CN]Don't, [hero]!
-			Identifier: message_Explanation
-				Dialogue: [CN]Don't be fooled!
-			Label: @label_5;
+			Value: ..................
+			Label: @label_0;
 			Identifier: CallCommon
 				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 			Identifier: message_SetFace
 				Argument: ACTOR_PLAYER
-				Argument: FACE_SURPRISED
-				Argument: FACE_POS_BOTTOM_R_FACEINW
+				Argument: FACE_SAD
+				Argument: FACE_POS_BOTTOM_R_CENTER
+			Identifier: message_FacePositionOffset
+				Argument: 0
+				Argument: 2
 			Switch:
 				Variable: $HERO_TALK_KIND
 				Case:
 					Value: 4
-						Dialogue: ......!
+						Dialogue: (..................)
 				Case:
 					Value: default
-						Dialogue: ......!
+						Dialogue: (..................)
 			Switch:
 				Variable: $HERO_TALK_KIND
 				Case:
 					Value: 4
-						Dialogue: Th-that voice just now...[K] [partner]?!
+						Dialogue: (...My...)
 				Case:
 					Value: default
-						Dialogue: Th-that voice just now...[K] [partner]?!
+						Dialogue: (...My...)
 			Switch:
 				Variable: $HERO_TALK_KIND
 				Case:
 					Value: 4
-						Dialogue: Th-that's it![K] This is all...[K] This is all...
+						Dialogue: (...My answer is...)
 				Case:
 					Value: default
-						Dialogue: Th-that's it![K] This is all...[K] This is all...
+						Dialogue: (...My answer is...)
 			Identifier: CallCommon
 				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Label: @label_6;
+			Identifier: screen_FlushOut
+				Argument: 1
+				Argument: 3
+				Argument: 2
+				Argument: 0
+				Argument: 0
+				Argument: 0
+			Identifier: Wait
+				Argument: 15
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+					Identifier: message_Explanation
+						Dialogue: [CN]Don't, [hero]!
+					Identifier: message_Explanation
+						Dialogue: [CN]Don't be fooled!
+					Label: @label_5;
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: message_SetFace
+						Argument: ACTOR_PLAYER
+						Argument: FACE_SURPRISED
+						Argument: FACE_POS_BOTTOM_R_FACEINW
+					Switch:
+						Variable: $HERO_TALK_KIND
+						Case:
+							Value: 4
+								Dialogue: ......!
+						Case:
+							Value: default
+								Dialogue: ......!
+					Switch:
+						Variable: $HERO_TALK_KIND
+						Case:
+							Value: 4
+								Dialogue: Th-that voice just now...[K] [partner]?!
+						Case:
+							Value: default
+								Dialogue: Th-that voice just now...[K] [partner]?!
+					Switch:
+						Variable: $HERO_TALK_KIND
+						Case:
+							Value: 4
+								Dialogue: Th-that's it![K] This is all...[K] This is all...
+						Case:
+							Value: default
+								Dialogue: Th-that's it![K] This is all...[K] This is all...
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Label: @label_6;
+					Switch:
+						Variable: $HERO_TALK_KIND
+						Case:
+							Value: 4
+							Identifier: message_Explanation
+								Dialogue: [CN]This is all...[K] [CN]a nightmare!
+							Label: @label_9;
+							Identifier: message_Close
+							Identifier: se_Play
+								Argument: 8198
+							Identifier: screen_WhiteOut
+								Argument: 1
+								Argument: 30
+							Identifier: Wait
+								Argument: 60
+							Identifier: SetPositionMark
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Identifier: Position
+								Template
+									Type: m2
+									Identifier: 34.5
+									Identifier: 20.5
+							Identifier: SetPositionMark
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+								Identifier: Position
+								Template
+									Type: m3
+									Identifier: 36.5
+									Identifier: 27.5
+							Identifier: SetPositionMark
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Identifier: Position
+								Template
+									Type: m4
+									Identifier: 32.5
+									Identifier: 27.5
+							Identifier: SetDirection
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: DIR_DOWN
+							Identifier: SetDirection
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+								Argument: DIR_UP
+							Identifier: SetDirection
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: DIR_UP
+							Identifier: screen_FlushIn
+								Argument: 0
+								Argument: 0
+								Argument: 2
+								Argument: 0
+								Argument: 0
+								Argument: 0
+							Identifier: screen_FadeIn
+								Argument: 1
+								Argument: 15
+							Identifier: Wait
+								Argument: 30
+							Identifier: se_Play
+								Argument: 5126
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 13
+							Identifier: WaitAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+							Identifier: screen_WhiteOut
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 2
+							Identifier: screen_FadeIn
+								Argument: 1
+								Argument: 2
+							Identifier: SetEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: EFFECT_SHOCKED
+								Argument: 3
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: 11
+							Identifier: SlidePositionOffset
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: 2.5
+								Argument: 0
+								Argument: 16
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_NPC_DAAKURAI
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: 43
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 2
+							Identifier: message_SetFace
+								Argument: ACTOR_NPC_DAAKURAI
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_TOP_R_CENTER
+							Identifier: message_Talk
+								Dialogue: Gaaaah!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: ExecuteCommon
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+								Argument: 0
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_ATTENDANT1
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_STANDARD
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Oh, [hero]!
+								Case:
+									Value: 2
+										Dialogue: Oh, [hero]!
+								Case:
+									Value: default
+										Dialogue: Oh, [hero]!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: se_Play
+								Argument: 8967
+							Identifier: SetEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+								Argument: EFFECT_EXCLAMATION_MARK
+								Argument: 3
+							Identifier: WaitEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_NPC_KURESERIA
+							Identifier: message_SetFace
+								Argument: ACTOR_NPC_KURESERIA
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_BOTTOM_R_FACEINW
+							Identifier: message_Talk
+								Dialogue: Oh, [hero]!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: 2
+							Identifier: SetEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: EFFECT_SHOCKED
+								Argument: 3
+							Identifier: message_SetFace
+								Argument: ACTOR_NPC_DAAKURAI
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_TOP_R_CENTER
+							Identifier: message_Talk
+								Dialogue: Y-you!
+							Identifier: message_Close
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: 12
+							Identifier: WaitAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+							Identifier: se_Play
+								Argument: 5121
+							Identifier: screen_WhiteOut
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 2
+							Identifier: screen_FadeIn
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 10
+							Identifier: MovePositionOffset
+								Template
+									Type: performer
+									Identifier: 0
+								Argument: 2.5
+								Argument: 0
+								Argument: 16
+							Identifier: SetDirection
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: DIR_LEFT
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 68
+							Identifier: SetEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: EFFECT_SHOCKED
+								Argument: 3
+							Identifier: SlidePositionOffset
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 2.5
+								Argument: 0
+								Argument: 32
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: SetEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: EFFECT_SHOCKED
+								Argument: 3
+							Identifier: SetEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+								Argument: EFFECT_SHOCKED
+								Argument: 3
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: 5
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+								Argument: 5
+							Identifier: SlidePositionOffset
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: 1
+								Argument: 0
+								Argument: 4
+							Identifier: SlidePositionOffset
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+								Argument: 1
+								Argument: 0
+								Argument: 4
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_NPC_DAAKURAI
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: 2
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_NPC_KURESERIA
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: 2
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+								Argument: 2
+							Identifier: MovePositionOffset
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: 1
+								Argument: 0
+								Argument: 16
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_NPC_DAAKURAI
+							Identifier: Wait
+								Argument: 30
+							Identifier: message_SetFace
+								Argument: ACTOR_PLAYER
+								Argument: FACE_PAIN
+								Argument: FACE_POS_BOTTOM_R_CENTER
+							Identifier: message_FacePositionOffset
+								Argument: 0
+								Argument: 2
+							Switch:
+								Variable: $HERO_TALK_KIND
+								Case:
+									Value: 4
+										Dialogue: (I was right!)
+								Case:
+									Value: default
+										Dialogue: (I was right!)
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 63
+							Identifier: WaitAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 2
+							Identifier: Turn2Direction
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 4
+								Argument: 10
+								Argument: DIR_UP
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: Wait
+								Argument: 30
+							Switch:
+								Variable: $HERO_TALK_KIND
+								Case:
+									Value: 4
+										Dialogue: (I was being deceived!)
+								Case:
+									Value: default
+										Dialogue: (I was being deceived!)
+							Switch:
+								Variable: $HERO_TALK_KIND
+								Case:
+									Value: 4
+										Dialogue: ([CS:N]Darkrai[CR] was showing me an illusion!)
+								Case:
+									Value: default
+										Dialogue: ([CS:N]Darkrai[CR] was showing me an illusion!)
+							Switch:
+								Variable: $HERO_TALK_KIND
+								Case:
+									Value: 4
+										Dialogue: (That was close!)
+								Case:
+									Value: default
+										Dialogue: (That was close!)
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: bgm_PlayFadeIn
+								Argument: BGM_DOWN_A_DARK_PATH
+								Argument: 0
+								Argument: 256
+							Identifier: message_SetFace
+								Argument: ACTOR_NPC_DAAKURAI
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_TOP_R_CENTER
+							Identifier: message_Talk
+								Dialogue: Blast it! I was on the verge of success!
+							Identifier: message_Talk
+								Dialogue: Is that your answer, [hero]?!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: message_SetFace
+								Argument: ACTOR_PLAYER
+								Argument: FACE_DETERMINED
+								Argument: FACE_POS_BOTTOM_R_CENTER
+							Identifier: message_FacePositionOffset
+								Argument: 0
+								Argument: 2
+							Switch:
+								Variable: $HERO_TALK_KIND
+								Case:
+									Value: 4
+										Dialogue: (Of course!)
+								Case:
+									Value: default
+										Dialogue: (Of course!)
+							Switch:
+								Variable: $HERO_TALK_KIND
+								Case:
+									Value: 4
+										Dialogue: ([partner] would never consider even saying something like that!)
+								Case:
+									Value: default
+										Dialogue: ([partner] would never consider even saying something like that!)
+							Switch:
+								Variable: $HERO_TALK_KIND
+								Case:
+									Value: 4
+										Dialogue: (Join with [CS:N]Darkrai[CR]?[K] Not on my life!)
+								Case:
+									Value: default
+										Dialogue: (Join with [CS:N]Darkrai[CR]?[K] Not on my life!)
+							Switch:
+								Variable: $HERO_TALK_KIND
+								Case:
+									Value: 4
+										Dialogue: (A world of darkness...[K] I won't let it happen!)
+								Case:
+									Value: default
+										Dialogue: (A world of darkness...[K] I won't let it happen!)
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: message_SetFace
+								Argument: ACTOR_NPC_DAAKURAI
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_TOP_R_CENTER
+							Identifier: message_Talk
+								Dialogue: Humph...[K] So be it.[K] You've made the wrong choice.
+							Identifier: message_Talk
+								Dialogue: There's nothing left to say.[K] I will be rid of you now.
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: se_Play
+								Argument: 5133
+							Identifier: screen_FadeOut
+								Argument: 1
+								Argument: 15
+							Identifier: Wait
+								Argument: 15
+							Identifier: supervision_Acting
+								Argument: 1
+							Identifier: screen_FadeIn
+								Argument: 1
+								Argument: 15
+							Identifier: Wait
+								Argument: 30
+							Identifier: se_Play
+								Argument: 8968
+							Identifier: SetEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: EFFECT_SHOCKED
+								Argument: 3
+							Identifier: SetEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: EFFECT_SHOCKED
+								Argument: 3
+							Identifier: SetEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+								Argument: EFFECT_SHOCKED
+								Argument: 3
+							Identifier: ExecuteCommon
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: CORO_LOOK_AROUND_FUNC_SERIES
+								Argument: 0
+							Identifier: Wait
+								Argument: 12
+							Identifier: ExecuteCommon
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: CORO_LOOK_AROUND_LEFT_FUNC_SERIES
+								Argument: 0
+							Identifier: Wait
+								Argument: 4
+							Identifier: ExecuteCommon
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+								Argument: CORO_LOOK_AROUND_DOWN_FUNC_SERIES
+								Argument: 0
+							Identifier: Wait
+								Argument: 7
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_SURPRISED
+								Argument: FACE_POS_STANDARD
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Whoa![K] We're surrounded!
+								Case:
+									Value: 2
+										Dialogue: Waah![K] We're surrounded!
+								Case:
+									Value: default
+										Dialogue: Waah![K] We're surrounded!
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_NPC_KURESERIA
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: se_Play
+								Argument: 8967
+							Identifier: SetEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+								Argument: EFFECT_EXCLAMATION_MARK
+								Argument: 3
+							Identifier: WaitEffect
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_KURESERIA
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_NPC_KURESERIA
+							Identifier: message_SetFace
+								Argument: ACTOR_NPC_KURESERIA
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_BOTTOM_R_FACEINW
+							Identifier: message_Talk
+								Dialogue: I knew it.[K] I figured that you would do something like this!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: message_SetFace
+								Argument: ACTOR_NPC_DAAKURAI
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_TOP_R_CENTER
+							Identifier: message_Talk
+								Dialogue: Humph. Say what you will.
+							Identifier: message_Talk
+								Dialogue: This is where I will finally be rid of you meddlers.
+							Identifier: message_Close
+							Identifier: se_Play
+								Argument: 5143
+							Identifier: screen_WhiteOut
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 2
+							Identifier: screen_FadeIn
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 10
+							Identifier: message_Talk
+								Dialogue: I will seize control of the darkened world...
+							Identifier: message_Close
+							Identifier: se_Play
+								Argument: 5143
+							Identifier: screen_WhiteOut
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 2
+							Identifier: screen_FadeIn
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 10
+							Identifier: message_Talk
+								Dialogue: as its king.
+							Identifier: message_Close
+							Identifier: se_Play
+								Argument: 5143
+							Identifier: screen_WhiteOut
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 2
+							Identifier: screen_FadeIn
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 10
+							Identifier: se_Play
+								Argument: 5143
+							Identifier: screen_WhiteOut
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 2
+							Identifier: screen_FadeIn
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 10
+							Identifier: message_Talk
+								Dialogue: This is it![K] Attack!
+							Identifier: message_Close
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+								Argument: 18
+							Identifier: WaitAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_NPC_DAAKURAI
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_NPC_DAAKURAI
+							Identifier: bgm_Stop
+							Identifier: se_Play
+								Argument: 5143
+							Identifier: screen_WhiteOut
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 2
+							Identifier: screen_FadeIn
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 10
+							Identifier: se_Play
+								Argument: 5143
+							Identifier: screen_WhiteOut
+								Argument: 1
+								Argument: 2
+							Identifier: Wait
+								Argument: 2
+							Identifier: screen_FadeIn
+								Argument: 1
+								Argument: 2
+							Identifier: WaitSe
+								Argument: 5143
+							Identifier: se_Play
+								Argument: 5136
+							Identifier: CallCommon
+								Argument: CORO_BOSS_WIPE_FUNC
+							Identifier: end
+						Case:
+							Value: default
+							Label: @label_8;
+							Identifier: message_Explanation
+								Dialogue: [CN]This is all...[K] [CN]a nightmare!
+							Identifier: jump
+								Argument: label_9
+					Identifier: break
+				Case:
+					Value: 2
+					Identifier: message_Explanation
+						Dialogue: [CN]Don't, [hero]!
+					Identifier: message_Explanation
+						Dialogue: [CN]Don't be fooled!
+					Identifier: jump
+						Argument: label_5
+				Case:
+					Value: default
+					Label: @label_4;
+					Identifier: message_Explanation
+						Dialogue: [CN]Don't, [hero]!
+					Identifier: message_Explanation
+						Dialogue: [CN]Don't be fooled!
+					Identifier: jump
+						Argument: label_5
+			Identifier: break
+		Case:
+			Value: I refuse!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER
+				Argument: FACE_DETERMINED
+				Argument: FACE_POS_BOTTOM_R_CENTER
+			Identifier: message_FacePositionOffset
+				Argument: 0
+				Argument: 2
 			Switch:
 				Variable: $HERO_TALK_KIND
 				Case:
 					Value: 4
-						Dialogue: [CN]This is all...[K] [CN]a nightmare!
+						Dialogue: (Do that...?[K] I refuse!)
 				Case:
 					Value: default
-						Dialogue: Gaaaah!
-				Case:
-					Value: 1
-					Identifier: case
-						Argument: 1
-						Dialogue: Oh, [hero]!
-					Identifier: case
-						Argument: 2
-						Dialogue: Oh, [hero]!
-					Identifier: default
-						Dialogue: Oh, [hero]!
-				Case:
-					Value: default
-						Dialogue: Oh, [hero]!
-				Case:
-					Value: default
-						Dialogue: Y-you!
+						Dialogue: (Do that...?[K] I refuse!)
+			Switch:
+				Variable: $HERO_TALK_KIND
 				Case:
 					Value: 4
-					Identifier: case
-						Argument: 4
-						Dialogue: (I was right!)
-					Identifier: default
-						Dialogue: (I was right!)
-				Case:
-					Value: 4
-					Identifier: case
-						Argument: 4
-						Dialogue: (I was being deceived!)
-					Identifier: default
-						Dialogue: (I was being deceived!)
-				Case:
-					Value: 4
-					Identifier: case
-						Argument: 4
-						Dialogue: ([CS:N]Darkrai[CR] was showing me an illusion!)
-					Identifier: default
-						Dialogue: ([CS:N]Darkrai[CR] was showing me an illusion!)
-				Case:
-					Value: 4
-					Identifier: case
-						Argument: 4
-						Dialogue: (That was close!)
-					Identifier: default
-						Dialogue: (That was close!)
+						Dialogue: (This is all...[K] This is all...)
 				Case:
 					Value: default
-						Dialogue: Blast it! I was on the verge of success!
-				Case:
-					Value: default
-						Dialogue: Is that your answer, [hero]?!
-				Case:
-					Value: 4
-					Identifier: case
-						Argument: 4
-						Dialogue: (Of course!)
-					Identifier: default
-						Dialogue: (Of course!)
-				Case:
-					Value: 4
-					Identifier: case
-						Argument: 4
-						Dialogue: ([partner] would never consider even saying something like that!)
-					Identifier: default
-						Dialogue: ([partner] would never consider even saying something like that!)
-				Case:
-					Value: 4
-					Identifier: case
-						Argument: 4
-						Dialogue: (Join with [CS:N]Darkrai[CR]?[K] Not on my life!)
-					Identifier: default
-						Dialogue: (Join with [CS:N]Darkrai[CR]?[K] Not on my life!)
-				Case:
-					Value: 4
-					Identifier: case
-						Argument: 4
-						Dialogue: (A world of darkness...[K] I won't let it happen!)
-					Identifier: default
-						Dialogue: (A world of darkness...[K] I won't let it happen!)
-				Case:
-					Value: default
-						Dialogue: Humph...[K] So be it.[K] You've made the wrong choice.
-				Case:
-					Value: default
-						Dialogue: There's nothing left to say.[K] I will be rid of you now.
-				Case:
-					Value: 1
-					Identifier: case
-						Argument: 1
-						Dialogue: Whoa![K] We're surrounded!
-					Identifier: case
-						Argument: 2
-						Dialogue: Waah![K] We're surrounded!
-					Identifier: default
-						Dialogue: Waah![K] We're surrounded!
-				Case:
-					Value: default
-						Dialogue: I knew it.[K] I figured that you would do something like this!
-				Case:
-					Value: default
-						Dialogue: Humph. Say what you will.
-				Case:
-					Value: default
-						Dialogue: This is where I will finally be rid of you meddlers.
-				Case:
-					Value: default
-						Dialogue: I will seize control of the darkened world...
-				Case:
-					Value: default
-						Dialogue: as its king.
-				Case:
-					Value: default
-						Dialogue: This is it![K] Attack!
-				Case:
-					Value: default
-						Dialogue: [CN]This is all...[K] [CN]a nightmare!
-			Identifier: break
-			Identifier: case
+						Dialogue: (This is all...[K] This is all...)
+			Identifier: message_Close
+			Identifier: bgm_Stop
+			Identifier: screen_FlushOut
+				Argument: 1
+				Argument: 3
 				Argument: 2
-				Argument: message_Explanation
-				Dialogue: [CN]Don't, [hero]!
-			Identifier: message_Explanation
-				Dialogue: [CN]Don't be fooled!
+				Argument: 0
+				Argument: 0
+				Argument: 0
+			Identifier: Wait
+				Argument: 15
 			Identifier: jump
-				Argument: label_5
-			Identifier: default
-				Argument: label_4
-			Identifier: message_Explanation
-				Dialogue: [CN]Don't, [hero]!
-			Identifier: message_Explanation
-				Dialogue: [CN]Don't be fooled!
-			Identifier: jump
-				Argument: label_5
-		Case:
-			Value: default
-				Dialogue: I refuse!
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (Do that...?[K] I refuse!)
-			Identifier: default
-				Dialogue: (Do that...?[K] I refuse!)
-		Case:
-			Value: 4
-			Identifier: case
-				Argument: 4
-				Dialogue: (This is all...[K] This is all...)
-			Identifier: default
-				Dialogue: (This is all...[K] This is all...)
+				Argument: label_6

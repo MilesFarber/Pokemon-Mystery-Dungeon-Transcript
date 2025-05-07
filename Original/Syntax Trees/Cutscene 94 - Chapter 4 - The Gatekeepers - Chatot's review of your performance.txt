@@ -29,206 +29,1887 @@ def 0:
 		Variable: $EVENT_LOCAL
 		Case:
 			Value: 0
+			Label: @switch0_724;
+			Label: @label_0;
+			Identifier: screen_FadeIn
+				Argument: 1
+				Argument: 30
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_WIGGLYTUFFS_GUILD_REMIX
+				Argument: 0
+				Argument: 256
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: You've done an honest day's work! ♪
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Let me review your sentry-duty performance...
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Wait
+				Argument: 10
+			Identifier: se_Play
+				Argument: 5122
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 18
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 2
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_Talk
 				Dialogue: Your results were...[K]dreadful!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: bgm_Stop
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_FAILED_SENTRY_DUTY
+				Argument: 0
+				Argument: 256
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_SWEAT_DROP
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_SWEAT_DROP
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_SWEAT_DROP
+				Argument: 3
+			Identifier: WaitBgm
+				Argument: BGM_FAILED_SENTRY_DUTY
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_PAIN
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: You failed so many times!
-		Case:
-			Value: default
+			Identifier: Wait
+				Argument: 20
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 1
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 1
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: message_Close
+			Identifier: Wait
+				Argument: 20
+			Identifier: se_Play
+				Argument: 5122
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 18
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 2
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPRIGHT
+			Identifier: se_Play
+				Argument: 8971
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_ANGRY
+				Argument: 3
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+				Argument: 0
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+				Argument: 0
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_SHOCKED_MIRRORED
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_ANGRY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: You slackers! Did you do anything besides goof off?
-		Case:
-			Value: default
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_L_CENTER
+			Identifier: message_Talk
 				Dialogue: UGH...!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 9
+			Identifier: Wait
+				Argument: 30
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPLEFT
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPLEFT
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNLEFT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Wait
+				Argument: 30
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_ANGRY
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_ANGRY
+				Argument: FACE_POS_TOP_L_CENTER
+			Identifier: message_Talk
 				Dialogue: You two got SO many wrong...
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 2
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: se_Play
+				Argument: 8971
+			Identifier: camera_SetEffect
+				Argument: 2
+				Argument: 2
+				Argument: 3.0
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 19
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 2
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_ANGRY
+				Argument: 3
+			Identifier: Wait
+				Argument: 5
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_SHOCKED
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_SHOCKED
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_SHOCKED
+				Argument: 3
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 68
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 68
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 11
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: WaitSe
+				Argument: 8971
+			Identifier: camera_SetEffect
+				Argument: 0
+				Argument: 0
+				Argument: 0
+			Identifier: message_Talk
 				Dialogue: I even got in TROUBLE for it!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 9
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 9
+			Identifier: Wait
+				Argument: 10
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 2
+			Identifier: Wait
+				Argument: 10
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 2
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 2
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 2
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNLEFT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: se_Play
+				Argument: 8972
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_DIZZY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: H-hush!
-		Case:
-			Value: default
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8971
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_ANGRY
+				Argument: 3
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_ANGRY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: Don't you dare blame anyone else!
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Sentry duty is a cooperative job, isn't it?
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWN
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: se_Play
+				Argument: 8971
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_ANGRY
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_ANGRY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: Anyway, this job was a fiasco, no doubt about it!
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: As such, there shall be no reward!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8968
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_SHOCKED
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_SHOCKED_MIRRORED
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_SHOCKED
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_L_CENTER
+			Identifier: message_Talk
 				Dialogue: WHAAAT?!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_ANGRY
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_ANGRY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: Furthermore!
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: You'll go without dinner tonight!
-		Case:
-			Value: 1
-			Identifier: case
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8972
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_TEARY_EYED
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: B-but...
+				Case:
+					Value: 2
+						Dialogue: B-but...
+				Case:
+					Value: default
+						Dialogue: B-but...
+			Identifier: message_Close
+			Identifier: screen_FadeOut
 				Argument: 1
-				Dialogue: B-but...
-			Identifier: case
-				Argument: 2
-				Dialogue: B-but...
-			Identifier: default
-				Dialogue: B-but...
+				Argument: 60
+			Identifier: Wait
+				Argument: 30
+			Identifier: SCENARIO_MAIN
+				Argument: scn
+				Argument: 5
+				Argument: 4
+			Label: @label_4;
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 60
+			Identifier: Wait
+				Argument: 30
+			Identifier: end
 		Case:
 			Value: 1
+			Label: @switch0_727;
+			Identifier: screen_FadeIn
+				Argument: 1
+				Argument: 30
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_WIGGLYTUFFS_GUILD_REMIX
+				Argument: 0
+				Argument: 256
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: You've done an honest day's work! ♪
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Let me review your sentry-duty performance...
-		Case:
-			Value: default
-				Dialogue: Your results were...[K]adequate.
-		Case:
-			Value: default
-				Dialogue: Hmm...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Oh...
-			Identifier: case
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Wait
+				Argument: 10
+			Identifier: se_Play
+				Argument: 5122
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 18
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
 				Argument: 2
-				Dialogue: Oh...
-			Identifier: default
-				Dialogue: Oh...
-		Case:
-			Value: default
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_Talk
+				Dialogue: Your results were...[K]adequate.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: bgm_Stop
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_DECENT_SENTRY_DUTY
+				Argument: 0
+				Argument: 256
+			Identifier: WaitBgm
+				Argument: BGM_DECENT_SENTRY_DUTY
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_L_CENTER
+			Identifier: message_Talk
+				Dialogue: Hmm...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Oh...
+				Case:
+					Value: 2
+						Dialogue: Oh...
+				Case:
+					Value: default
+						Dialogue: Oh...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: Here are your rewards for the job.
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_ResetActor
+			Identifier: message_Mail
 				Dialogue: [CN]As a reward for doing the job, [CN][hero]'s team...
-		Case:
-			Value: CS
+			Identifier: message_KeyWait
+			Identifier: me_Play
+				Argument: 4
+			Identifier: message_Mail
 				Dialogue: [CN]received [CS:G]100[CR][M:S0]!
-		Case:
-			Value: CS
+			Identifier: WaitMe
+				Argument: 4
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: CARRY_GOLD
+				Argument: 100
+			Identifier: me_Play
+				Argument: 4
+			Identifier: message_Mail
 				Dialogue: [CN]In addition, the team [CN]also received a [CS:I]Protein[CR]!
-		Case:
-			Value: default
-		Case:
-			Value: default
+			Identifier: WaitMe
+				Argument: 4
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: item_Set
+				Argument: 0
+				Argument: 100
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM2)
+			Identifier: Wait
+				Argument: 10
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: I expect to see better effort out of you lot next time. ♪
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 2
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 2
+			Identifier: Wait
+				Argument: 30
+			Identifier: jump
+				Argument: label_4
 		Case:
 			Value: 2
-				Dialogue: You've all worked an honest day.
-		Case:
-			Value: default
-				Dialogue: Let me review your sentry-duty performance...
-		Case:
-			Value: default
-				Dialogue: Your results were...[K] Hmm! Well done!
-		Case:
-			Value: default
-				Dialogue: Good job, team! ♪
-		Case:
-			Value: default
-				Dialogue: Good!
-		Case:
-			Value: 1
-			Identifier: case
+			Label: @switch0_726;
+			Identifier: screen_FadeIn
 				Argument: 1
-				Dialogue: Yay!
-			Identifier: case
+				Argument: 30
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_WIGGLYTUFFS_GUILD_REMIX
+				Argument: 0
+				Argument: 256
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+				Dialogue: You've all worked an honest day.
+			Identifier: message_Talk
+				Dialogue: Let me review your sentry-duty performance...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Wait
+				Argument: 10
+			Identifier: se_Play
+				Argument: 5122
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 18
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
 				Argument: 2
-				Dialogue: Yay!
-			Identifier: default
-				Dialogue: Yay!
-		Case:
-			Value: default
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_Talk
+				Dialogue: Your results were...[K] Hmm! Well done!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_LAUGHING
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+				Dialogue: Good job, team! ♪
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: bgm_Stop
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_GOOD_SENTRY_DUTY
+				Argument: 0
+				Argument: 256
+			Identifier: WaitBgm
+				Argument: BGM_GOOD_SENTRY_DUTY
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_JOYOUS
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_JOYOUS
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_JOYOUS
+				Argument: 3
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+				Argument: 0
+			Identifier: Wait
+				Argument: 5
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+				Argument: 0
+			Identifier: Wait
+				Argument: 5
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 5
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_TOP_L_CENTER
+			Identifier: message_Talk
+				Dialogue: Good!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_JOYOUS
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Yay!
+				Case:
+					Value: 2
+						Dialogue: Yay!
+				Case:
+					Value: default
+						Dialogue: Yay!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: Here are your rewards for all your work today! ♪
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 2
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: Wait
+				Argument: 15
+			Identifier: message_ResetActor
+			Identifier: message_Mail
 				Dialogue: [CN]As thanks for a job well [CN]done, [hero]'s team...
-		Case:
-			Value: CS
+			Identifier: message_KeyWait
+			Identifier: me_Play
+				Argument: 4
+			Identifier: message_Mail
 				Dialogue: [CN]received [CS:G]200[CR][M:S0]!
-		Case:
-			Value: CS
+			Identifier: WaitMe
+				Argument: 4
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: CARRY_GOLD
+				Argument: 200
+			Identifier: me_Play
+				Argument: 4
+			Identifier: message_Mail
 				Dialogue: [CN]In addition, the team [CN]also received a [CS:I]Zinc[CR]!
-		Case:
-			Value: default
-		Case:
-			Value: CS
+			Identifier: WaitMe
+				Argument: 4
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: item_Set
+				Argument: 0
+				Argument: 108
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM2)
+			Identifier: Wait
+				Argument: 10
+			Identifier: me_Play
+				Argument: 4
+			Identifier: message_Mail
 				Dialogue: [CN]Not only that, the team [CN]also received a [CS:I]Nectar[CR]!
-		Case:
-			Value: default
-		Case:
-			Value: default
+			Identifier: WaitMe
+				Argument: 4
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: item_Set
+				Argument: 0
+				Argument: 103
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM2)
+			Identifier: Wait
+				Argument: 10
+			Identifier: se_Play
+				Argument: 5122
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 18
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 2
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_LAUGHING
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_JOYOUS
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: Keep up the good work! ♪
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 2
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 2
+			Identifier: Wait
+				Argument: 30
+			Identifier: jump
+				Argument: label_4
 		Case:
 			Value: 3
-				Dialogue: You've worked an honest day, you two! ♪
-		Case:
-			Value: default
-				Dialogue: Let me review your sentry-duty performance...
-		Case:
-			Value: default
-				Dialogue: Well, well![K] Your results were... completely perfect!
-		Case:
-			Value: default
-				Dialogue: You identified every visitor correctly! ♪
-		Case:
-			Value: default
-				Dialogue: Excellent!
-		Case:
-			Value: 1
-			Identifier: case
+			Label: @switch0_725;
+			Identifier: screen_FadeIn
 				Argument: 1
-				Dialogue: We did it!
-			Identifier: case
+				Argument: 30
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_WIGGLYTUFFS_GUILD_REMIX
+				Argument: 0
+				Argument: 256
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+				Dialogue: You've worked an honest day, you two! ♪
+			Identifier: message_Talk
+				Dialogue: Let me review your sentry-duty performance...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Wait
+				Argument: 10
+			Identifier: se_Play
+				Argument: 5122
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 18
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
 				Argument: 2
-				Dialogue: We did it!
-			Identifier: default
-				Dialogue: We did it!
-		Case:
-			Value: default
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_Talk
+				Dialogue: Well, well![K] Your results were... completely perfect!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: bgm_Stop
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_PERFECT_SENTRY_DUTY
+				Argument: 0
+				Argument: 256
+			Identifier: WaitBgm
+				Argument: BGM_PERFECT_SENTRY_DUTY
+			Identifier: se_Play
+				Argument: 5122
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 18
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 2
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_LAUGHING
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_JOYOUS
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
+				Dialogue: You identified every visitor correctly! ♪
+			Identifier: se_Play
+				Argument: 7944
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 3
+				Argument: EFFECT_CONFETTI
+				Argument: 3
+			Identifier: Wait
+				Argument: 10
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 4
+				Argument: EFFECT_CONFETTI
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 5
+				Argument: EFFECT_CONFETTI
+				Argument: 3
+			Identifier: Wait
+				Argument: 10
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 6
+				Argument: EFFECT_CONFETTI
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 7
+				Argument: EFFECT_CONFETTI
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: performer
+					Identifier: 3
+			Identifier: WaitEffect
+				Template
+					Type: performer
+					Identifier: 4
+			Identifier: WaitEffect
+				Template
+					Type: performer
+					Identifier: 5
+			Identifier: SetPositionMark
+				Template
+					Type: performer
+					Identifier: 3
+				Identifier: Position
+				Template
+					Type: m0
+					Identifier: 21.5
+					Identifier: 35.5
+			Identifier: SetPositionMark
+				Template
+					Type: performer
+					Identifier: 4
+				Identifier: Position
+				Template
+					Type: m1
+					Identifier: 18
+					Identifier: 35.5
+			Identifier: SetPositionMark
+				Template
+					Type: performer
+					Identifier: 5
+				Identifier: Position
+				Template
+					Type: m2
+					Identifier: 25
+					Identifier: 35.5
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 3
+				Argument: EFFECT_CONFETTI
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 4
+				Argument: EFFECT_CONFETTI
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 5
+				Argument: EFFECT_CONFETTI
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: performer
+					Identifier: 3
+			Identifier: WaitEffect
+				Template
+					Type: performer
+					Identifier: 4
+			Identifier: WaitEffect
+				Template
+					Type: performer
+					Identifier: 5
+			Identifier: WaitExecutePerformer
+				Argument: 5
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 3
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 4
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 5
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 6
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: performer
+					Identifier: 7
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_JOYOUS
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_JOYOUS
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_JOYOUS
+				Argument: 3
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+				Argument: 0
+			Identifier: Wait
+				Argument: 5
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+				Argument: 0
+			Identifier: Wait
+				Argument: 5
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 5
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_TOP_L_CENTER
+			Identifier: message_Talk
+				Dialogue: Excellent!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_RIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_LEFT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_JOYOUS
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: We did it!
+				Case:
+					Value: 2
+						Dialogue: We did it!
+				Case:
+					Value: default
+						Dialogue: We did it!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_FadeOut
+				Argument: 7944
+				Argument: 30
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: We'll reward your effort![K] Generously, I might add!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 2
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: message_Talk
 				Dialogue: You all deserve an especially large reward! ♪
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_ResetActor
+			Identifier: message_Mail
 				Dialogue: [CN]As the reward for a job perfectly [CN]done, [hero]'s team...
-		Case:
-			Value: CS
+			Identifier: message_KeyWait
+			Identifier: me_Play
+				Argument: 4
+			Identifier: message_Mail
 				Dialogue: [CN]received [CS:G]500[CR][M:S0]!
-		Case:
-			Value: CS
+			Identifier: WaitMe
+				Argument: 4
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: CARRY_GOLD
+				Argument: 500
+			Identifier: me_Play
+				Argument: 4
+			Identifier: message_Mail
 				Dialogue: [CN]In addition, the team [CN]also received a [CS:I]Joy Seed[CR]!
-		Case:
-			Value: default
-		Case:
-			Value: CS
+			Identifier: WaitMe
+				Argument: 4
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: item_Set
+				Argument: 0
+				Argument: 89
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM2)
+			Identifier: Wait
+				Argument: 10
+			Identifier: me_Play
+				Argument: 4
+			Identifier: message_Mail
 				Dialogue: [CN]Not only that, the team [CN]also received a [CS:I]Ginseng[CR]!
-		Case:
-			Value: default
-		Case:
-			Value: default
+			Identifier: WaitMe
+				Argument: 4
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: item_Set
+				Argument: 0
+				Argument: 88
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM2)
+			Identifier: Wait
+				Argument: 10
+			Identifier: message_Mail
 				Dialogue: [CN]But that's not the end of it!
-		Case:
-			Value: CS
+			Identifier: message_KeyWait
+			Identifier: me_Play
+				Argument: 9
+			Identifier: message_Mail
 				Dialogue: [CN]The team also [CN]received a [CS:I]Life Seed[CR]!
-		Case:
-			Value: default
-		Case:
-			Value: default
+			Identifier: WaitMe
+				Argument: 9
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: item_Set
+				Argument: 0
+				Argument: 77
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM2)
+			Identifier: Wait
+				Argument: 10
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+				Argument: 0
+			Identifier: Wait
+				Argument: 5
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+				Argument: 0
+			Identifier: Wait
+				Argument: 5
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 5
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_LAUGHING
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_LAUGHING
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_LAUGHING
+				Argument: 3
+			Identifier: message_Mail
 				Dialogue: [CN]So many rewards! Can you believe it?
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: se_Play
+				Argument: 5122
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 18
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 2
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_LAUGHING
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: Keep up the good work! ♪
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 2
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DOGOOMU
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 2
+				Argument: DIR_DOWN
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWN
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Wait
+				Argument: 20
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 66
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 66
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: Wait
+				Argument: 80
+			Identifier: jump
+				Argument: label_4
+		Case:
+			Value: 4
+			Identifier: jump
+				Argument: switch0_724
+		Case:
+			Value: 5
+			Identifier: jump
+				Argument: switch0_727
+		Case:
+			Value: 6
+			Identifier: jump
+				Argument: switch0_726
+		Case:
+			Value: 7
+			Identifier: jump
+				Argument: switch0_725

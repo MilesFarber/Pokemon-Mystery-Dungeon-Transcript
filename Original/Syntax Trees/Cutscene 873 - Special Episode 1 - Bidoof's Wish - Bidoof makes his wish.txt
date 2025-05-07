@@ -239,259 +239,553 @@ def 0:
 		Switch:
 			Variable: message_SwitchMenu(0, 1)
 			Case:
-				Value: default
-					Dialogue: To become rich!
-			Case:
-				Value: default
+				Value: To become rich!
+				Label: @label_0;
+				Identifier: EVENT_LOCAL
+					Argument: 1
+				Identifier: message_Mail
 					Dialogue: [CN]To become rich! [CN]Is this truly what you want?
-			Case:
-				Value: default
-				Identifier: case
-					Argument: menu
-					Dialogue: Yes
-				Identifier: default
-					Argument: message_Mail
-					Dialogue: [CN]Are you absolutely sure this is what you want?
+				Label: @label_7;
 				Switch:
 					Variable: message_SwitchMenu(0, 1)
 					Case:
-						Value: default
-							Dialogue: Yes
+						Value: Yes
+						Identifier: message_Mail
+							Dialogue: [CN]Are you absolutely sure this is what you want?
+						Switch:
+							Variable: message_SwitchMenu(0, 1)
+							Case:
+								Value: Yes
+								Identifier: break_loop
+								Identifier: break
+							Case:
+								Value: No
+								Identifier: continue
+								Identifier: break
+						Identifier: break
 					Case:
-						Value: default
-							Dialogue: No
-				Identifier: break
-				Identifier: case
-					Argument: menu
-					Dialogue: No
-				Identifier: continue
+						Value: No
+						Identifier: continue
+						Identifier: break
 				Identifier: break
 			Case:
-				Value: default
-					Dialogue: To be the strongest Pokémon!
-			Case:
-				Value: default
+				Value: To be the strongest Pokémon!
+				Identifier: EVENT_LOCAL
+					Argument: 2
+				Identifier: message_Mail
 					Dialogue: [CN]To be the strongest Pokémon! [CN]Is this truly what you want?
+				Identifier: jump
+					Argument: label_7
 			Case:
-				Value: default
-					Dialogue: To be the best explorer!
-			Case:
-				Value: default
+				Value: To be the best explorer!
+				Identifier: EVENT_LOCAL
+					Argument: 3
+				Identifier: message_Mail
 					Dialogue: [CN]To be the best explorer! [CN]Is this truly what you want?
+				Identifier: jump
+					Argument: label_7
 			Case:
-				Value: default
-					Dialogue: To eat lots of yummy food!
-			Case:
-				Value: default
+				Value: To eat lots of yummy food!
+				Identifier: EVENT_LOCAL
+					Argument: 4
+				Identifier: message_Mail
 					Dialogue: [CN]To eat lots of yummy food! [CN]Is this truly what you want?
+				Identifier: jump
+					Argument: label_7
 			Case:
-				Value: default
-					Dialogue: To sleep well...
-			Case:
-				Value: default
+				Value: To sleep well...
+				Identifier: EVENT_LOCAL
+					Argument: 5
+				Identifier: message_Mail
 					Dialogue: [CN]To sleep well! [CN]Is this truly what you want?
+				Identifier: jump
+					Argument: label_7
 			Case:
-				Value: default
-					Dialogue: To get lots of items!
-			Case:
-				Value: default
+				Value: To get lots of items!
+				Identifier: EVENT_LOCAL
+					Argument: 6
+				Identifier: message_Mail
 					Dialogue: [CN]To get lots of items! [CN]Is this truly what you want?
+				Identifier: jump
+					Argument: label_7
 			Case:
-				Value: default
-					Dialogue: To rule the world!
-			Case:
-				Value: default
+				Value: To rule the world!
+				Identifier: EVENT_LOCAL
+					Argument: 7
+				Identifier: message_Mail
 					Dialogue: [CN]To rule the world! [CN]Is this truly what you want?
+				Identifier: jump
+					Argument: label_7
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Switch:
 		Variable: $EVENT_LOCAL
 		Case:
 			Value: 1
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SIGH
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: ......... (To become rich...!)
-		Case:
-			Value: default
+			Label: @label_18;
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SAD
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: (Th-that's[K] a really nice wish and all...)
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: (But...)
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: (But my dream...)
-		Case:
-			Value: default
+			Label: @label_19;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8962
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_JIRAACHI
+				Argument: EFFECT_QUESTION_MARK
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_JIRAACHI
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_JIRAACHI
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: Huh?[K] Something wrong?
-		Case:
-			Value: CS
+			Identifier: message_Talk
 				Dialogue: What's your wish, [CS:Y]Bidoof[CR]?
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SAD
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: .........
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8963
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_JIRAACHI
+				Argument: EFFECT_QUESTION_MARK
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_JIRAACHI
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_JIRAACHI
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: Something wrong?[K] You don't have a wish?
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: M-my[K] dream...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Is to become the best explorer ever, yup yup.
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: The best explorer?[K] Got it.[K] That's pretty easy! ♪
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: OK, here we go! ♪
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8972
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+				Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_BIPPA
+			Identifier: se_Play
+				Argument: 8974
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+				Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+				Argument: 0
+			Identifier: bgm_FadeOut
+				Argument: 30
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SURPRISED
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: Uwaaaah![K] W-wait[K] a moment, please!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: Huh?[K] What is it?
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SAD
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: Golly, well, my dream is to become the best explorer ever, that's true...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: At first I thought I'd come down here and ask you for that, yup yup.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: B-but[K] I'm giving up on that plan.
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8969
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_JIRAACHI
+				Argument: EFFECT_SHOCKED
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_JIRAACHI
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_JIRAACHI
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: Truly?[K] Why?
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SAD
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: Because...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Because I've come to see it's not something you can wish for, by golly.
-		Case:
-			Value: default
+			Identifier: message_KeyWait
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_SYMPATHY
+				Argument: 0
+				Argument: 256
+			Identifier: message_Talk
 				Dialogue: You've got to work hard...[K] Once you've really done your best...put in the effort, then you can feel like a worthy explorer.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: You gotta have lots of experiences...[K]lots of feelings and memories...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Those are the ways you learn, grow, and get better, little by little. Yup yup.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Yes sirree, I got a lot clearer on all this stuff during this adventure.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: So my wish to be the best explorer ever...
-		Case:
-			Value: CS
+			Identifier: message_Talk
 				Dialogue: [CS:N]Jirachi[CR]...[K] I'm not asking you for that anymore.
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: ...[K]I see...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Well spoken. So you don't have any wishes?
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: What you've just said...[K] It shows something about you. Not everyone can resist being greedy.
-		Case:
-			Value: CS
+			Identifier: message_Talk
 				Dialogue: You're a good Pokémon, [CS:Y]Bidoof[CR].[K] I've come to like you.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: So, if you don't have a wish right now...
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8974
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+				Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_BIPPA
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SURPRISED
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: Oh![K] ...W-wait[K] just a moment, please! Yup yup!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: What is it?
-		Case:
-			Value: CS
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SAD
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: You just said a nice thing about me not being greedy, [CS:N]Jirachi[CR]...[K] So maybe I shouldn't ask...
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: It's all right.[K] Go ahead.
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: If...[K]you'll still grant me a wish...
-		Case:
-			Value: default
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SIGH
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: I...I wish...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: I wish...[K] I wish for a buddy who I could teach stuff to.
-		Case:
-			Value: CS
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: A buddy?[K] You're training at the guild, aren't you, [CS:Y]Bidoof[CR]?
-		Case:
-			Value: CS
+			Identifier: message_Talk
 				Dialogue: So...you want a buddy, [CS:Y]Bidoof[CR]? Someone you can show around and give a helping hand to?
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: That's right.[K] During this adventure, I...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Golly, thanks to the Guildmaster and everyone in the guild caring about me...[K] I feel so incredibly happy. Yup!
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: But...[K] I don't want to get used to it and start acting spoiled or anything.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: That's why...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: That's the reason I'd like a pal or two.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: If I had a buddy...[K] A pal I could share what I learned with, I'd...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Get better and better as I push forward, know what I mean?
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: ...[K]Yes.[K] Got it.
-		Case:
-			Value: CS
+			Identifier: message_Talk
 				Dialogue: Your wish, [CS:Y]Bidoof[CR]...[K] I will make it come true.
-		Case:
-			Value: default
+			Identifier: message_Close
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+				Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_BIPPA
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_STUNNED
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: R-really?!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_JIRAACHI
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: Yep. ♪[K] Maybe it won't be soon...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: But sooner or later, you'll see some new faces at the guild.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: You should look forward to it. ♪
-		Case:
-			Value: CS
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+				Argument: 3
+			Identifier: SlidePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+				Argument: 1
+				Argument: 1
+				Argument: 0
+			Identifier: Wait
+				Argument: 3
+			Identifier: SlidePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+				Argument: 1
+				Argument: 1
+				Argument: 0
+			Identifier: Wait
+				Argument: 3
+			Identifier: SlidePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+				Argument: 1
+				Argument: 1
+				Argument: 0
+			Identifier: Wait
+				Argument: 3
+			Identifier: SlidePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+				Argument: 1
+				Argument: 1
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_BIPPA
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_BIPPA
+				Argument: 2
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_TEARY_EYED
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: Thank you...[K][CS:N]Jirachi[CR]...
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Thank you so much...[K] Sniff...
+			Identifier: message_Close
+			Identifier: bgm_FadeOut
+				Argument: 240
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 90
+			Identifier: Wait
+				Argument: 60
+			Identifier: end
 		Case:
 			Value: 2
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_DETERMINED
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: ......... (To be the strongest Pokémon...!)
+			Identifier: jump
+				Argument: label_18
 		Case:
 			Value: 3
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: ... (That's right.)
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: (My dream...[K] It was...)
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: (To become the best explorer ever, yup yup.)
+			Identifier: jump
+				Argument: label_19
 		Case:
 			Value: 4
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SIGH
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: ......... (To eat lots of yummy food...!)
+			Identifier: jump
+				Argument: label_18
 		Case:
 			Value: 5
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_STUNNED
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: ......... (To sleep well...)
+			Identifier: jump
+				Argument: label_18
 		Case:
 			Value: 6
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_SIGH
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: ......... (To get lots of items...!)
+			Identifier: jump
+				Argument: label_18
 		Case:
 			Value: 7
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_BIPPA
+				Argument: FACE_DETERMINED
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: ......... (To rule the world...!)
+			Identifier: jump
+				Argument: label_18

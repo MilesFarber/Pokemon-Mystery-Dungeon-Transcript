@@ -17,4 +17,28 @@ def 0:
 		Argument: ACTOR_ATTENDANT1
 	Identifier: message_Mail
 		Dialogue: [CN]Climb [CS:P]Sky Peak[CR]?
-	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: message_SwitchMenu(0, 1)
+		Case:
+			Value: Yes
+			Label: @label_0;
+			Conditional: If
+				Condition: ($SCENARIO_MAIN) >= [29, 31]
+				Label: @label_2;
+				Identifier: CallCommon
+					Argument: CORO_SORANOITADAKI_FLAGSET
+				Conditional: If
+					Condition: ($SCENARIO_MAIN) >= [29, 11]
+					Label: @label_4;
+					Identifier: bgm_FadeOut
+						Argument: 60
+					Identifier: main_EnterDungeon
+						Argument: 111
+						Argument: 30
+					Switch:
+						Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+					Identifier: main_EnterDungeon
+						Argument: 1
+						Argument: 30
+					Identifier: hold
+					Identifier: end

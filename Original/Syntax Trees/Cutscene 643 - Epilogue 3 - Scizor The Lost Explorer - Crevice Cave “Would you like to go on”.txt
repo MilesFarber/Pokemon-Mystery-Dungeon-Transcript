@@ -49,10 +49,34 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yes
+			Value: Yes
+			Label: @label_0;
+			Identifier: message_Close
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_APPOINT
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: bgm_FadeOut
+				Argument: 60
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 30
+			Identifier: WaitBgm
+				Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+			Identifier: main_EnterDungeon
+				Argument: 47
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+			Identifier: main_EnterDungeon
+				Argument: 1
+				Argument: 0
+			Identifier: hold
+			Identifier: end
 		Case:
-			Value: default
-		Case:
-			Value: default
-				Dialogue: No
+			Value: No
+			Identifier: message_Close
+			Identifier: end

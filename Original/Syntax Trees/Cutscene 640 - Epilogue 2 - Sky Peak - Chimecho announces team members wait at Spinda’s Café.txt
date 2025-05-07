@@ -149,47 +149,10 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: OK.
-		Case:
-			Value: default
-				Dialogue: Thank you, [hero]!
-		Case:
-			Value: default
-				Dialogue: I'll make sure to let everyone know!
-		Case:
-			Value: default
-				Dialogue: I'm sure everyone will be happy to hear that!
-		Case:
-			Value: default
-				Dialogue: Oh! [K]I almost forgot!
-		Case:
-			Value: default
-				Dialogue: I placed a secret signpost here...[K] Did you see it, [hero]?
-		Case:
-			Value: default
-			Identifier: case
-				Argument: menu
-				Dialogue: Yes
-			Identifier: default
-				Argument: CallCommon
+			Value: OK.
+			Label: @label_0;
+			Identifier: CallCommon
 				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: Turn2Direction
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-				Argument: 4
-				Argument: 10
-				Argument: DIR_DOWN
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHIRIIN
-			Identifier: Turn2Direction
-				Template
-					Type: actor
-					Identifier: ACTOR_PLAYER
-				Argument: 4
-				Argument: 10
-				Argument: DIR_UP
 			Identifier: ExecuteCommon
 				Template
 					Type: actor
@@ -201,161 +164,89 @@ def 0:
 			Identifier: message_SetFace
 				Argument: ACTOR_NPC_CHIRIIN
 				Argument: FACE_HAPPY
-				Argument: FACE_POS_TOP_L_CENTER
+				Argument: FACE_POS_TOP_C_FACER
 			Identifier: message_Talk
-				Dialogue: Of course you would, [hero]!
+				Dialogue: Thank you, [hero]!
 			Identifier: message_Talk
-				Dialogue: You must have rung the bell, because your team has assembled here already.
+				Dialogue: I'll make sure to let everyone know!
+			Identifier: message_Talk
+				Dialogue: I'm sure everyone will be happy to hear that!
 			Identifier: CallCommon
 				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: Turn2Direction
+			Identifier: se_Play
+				Argument: 8964
+			Identifier: SetEffect
 				Template
 					Type: actor
 					Identifier: ACTOR_NPC_CHIRIIN
-				Argument: 4
-				Argument: 10
-				Argument: DIR_RIGHT
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHIRIIN
-			Identifier: Turn2Direction
+				Argument: EFFECT_EXCLAMATION_MARK
+				Argument: 3
+			Identifier: WaitEffect
 				Template
 					Type: actor
-					Identifier: ACTOR_PLAYER
-				Argument: 4
-				Argument: 10
-				Argument: DIR_UPRIGHT
+					Identifier: ACTOR_NPC_CHIRIIN
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_CHIRIIN
 			Identifier: message_SetFace
 				Argument: ACTOR_NPC_CHIRIIN
 				Argument: FACE_NORMAL
-				Argument: FACE_POS_TOP_L_CENTER
+				Argument: FACE_POS_TOP_C_FACER
 			Identifier: message_Talk
-				Dialogue: As you know, when you ring this bell...[K] I come here from the guild...
-			Identifier: message_Talk
-				Dialogue: You can still assemble your exploration team here!
+				Dialogue: Oh! [K]I almost forgot!
 			Identifier: CallCommon
 				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: Turn2Direction
+			Identifier: MovePositionMark
 				Template
 					Type: actor
 					Identifier: ACTOR_NPC_CHIRIIN
-				Argument: 4
-				Argument: 10
-				Argument: DIR_DOWN
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHIRIIN
-			Identifier: Turn2Direction
+			Identifier: Position
 				Template
-					Type: actor
-					Identifier: ACTOR_PLAYER
-				Argument: 4
-				Argument: 10
-				Argument: DIR_UP
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_CHIRIIN
-				Argument: FACE_HAPPY
-				Argument: FACE_POS_TOP_L_CENTER
-			Identifier: message_Talk
-				Dialogue: So when you want to assemble your team, just ring this bell!
-			Identifier: message_Talk
-				Dialogue: That's all, [hero]![K] Good luck exploring!
-			Identifier: message_Close
-			Label: @label_4;
-			Identifier: screen_FadeOut
-				Argument: 1
-				Argument: 30
+					Type: m3
+					Identifier: 34
+					Identifier: 19.5
 			Identifier: Wait
-				Argument: 30
-			Identifier: supervision_RemoveActing
-				Argument: 1
-			Identifier: SetPositionMark
+				Argument: 20
+			Identifier: MovePositionMark
+				Template
+					Type: performer
+					Identifier: 0
+			Identifier: Position
+				Template
+					Type: m4
+					Identifier: 27
+					Identifier: 23.5
+			Identifier: Position
+				Template
+					Type: m5
+					Identifier: 35
+					Identifier: 23.5
+			Identifier: MovePositionMark
 				Template
 					Type: actor
 					Identifier: ACTOR_PLAYER
-				Identifier: Position
+			Identifier: Position
 				Template
-					Type: m9
+					Type: m6
 					Identifier: 34.5
 					Identifier: 24.5
-			Identifier: SetPositionMark
+			Identifier: Wait
+				Argument: 10
+			Identifier: Move2PositionMark
 				Template
 					Type: actor
 					Identifier: ACTOR_ATTENDANT1
-				Identifier: Position
+			Identifier: Position
 				Template
-					Type: m10
+					Type: m7
+					Identifier: 29
+					Identifier: 25.5
+			Identifier: Position
+				Template
+					Type: m8
 					Identifier: 31
-					Identifier: 24.5
-			Identifier: SetDirection
-				Template
-					Type: actor
-					Identifier: ACTOR_PLAYER
-				Argument: DIR_UP
-			Identifier: SetDirection
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-				Argument: DIR_UP
+					Identifier: 23
 			Identifier: WaitExecuteLives
-				Argument: ACTOR_ATTENDANT1
-			Identifier: camera_SetDefault
-			Identifier: screen_FadeIn
-				Argument: 1
-				Argument: 30
-			Identifier: end
-			Identifier: case
-				Argument: menu
-				Dialogue: No
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: Turn2Direction
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-				Argument: 4
-				Argument: 10
-				Argument: DIR_DOWN
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHIRIIN
-			Identifier: Turn2Direction
-				Template
-					Type: actor
-					Identifier: ACTOR_PLAYER
-				Argument: 4
-				Argument: 10
-				Argument: DIR_UP
-			Identifier: se_Play
-				Argument: 8972
-			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-				Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-				Argument: 3
-			Identifier: WaitEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHIRIIN
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_CHIRIIN
-				Argument: FACE_SURPRISED
-				Argument: FACE_POS_TOP_L_CENTER
-			Identifier: message_Talk
-				Dialogue: I...I knew it!
-			Identifier: message_Talk
-				Dialogue: I'm sorry, [hero].[K] I guess I should explain!
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: Turn2Direction
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-				Argument: 4
-				Argument: 10
-				Argument: DIR_RIGHT
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHIRIIN
+				Argument: ACTOR_PLAYER
 			Identifier: Turn2Direction
 				Template
 					Type: actor
@@ -363,149 +254,329 @@ def 0:
 				Argument: 4
 				Argument: 10
 				Argument: DIR_UPRIGHT
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_CHIRIIN
-				Argument: FACE_NORMAL
-				Argument: FACE_POS_TOP_L_CENTER
-			Identifier: message_Talk
-				Dialogue: If you ring the bell attached to this sign...[K] I'll come here from the guild...
-			Identifier: message_Talk
-				Dialogue: You can still assemble your exploration team here!
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
 			Identifier: Turn2Direction
 				Template
 					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
+					Identifier: ACTOR_ATTENDANT1
 				Argument: 4
 				Argument: 10
-				Argument: DIR_DOWN
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHIRIIN
-			Identifier: Turn2Direction
-				Template
-					Type: actor
-					Identifier: ACTOR_PLAYER
-				Argument: 4
-				Argument: 10
-				Argument: DIR_UP
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_CHIRIIN
-				Argument: FACE_HAPPY
-				Argument: FACE_POS_TOP_L_CENTER
-			Identifier: message_Talk
-				Dialogue: So when you want to assemble your team, just ring this bell!
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: se_Play
-				Argument: 8972
-			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-				Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-				Argument: 3
-			Identifier: WaitEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHIRIIN
+				Argument: DIR_UPRIGHT
+			Identifier: WaitExecutePerformer
+				Argument: 0
 			Identifier: message_SetFace
 				Argument: ACTOR_NPC_CHIRIIN
 				Argument: FACE_NORMAL
 				Argument: FACE_POS_TOP_L_CENTER
 			Identifier: message_Talk
-				Dialogue: ...[K]M-maybe you already did ring the bell to summon me here before...
-			Identifier: message_Talk
-				Dialogue: ...and you did assemble your team here...
-			Identifier: message_Talk
-				Dialogue: Regardless, you rather carelessly answered my question with a "No.
-			Identifier: message_Talk
-				Dialogue: Maybe you just wanted to see what would happen if you answered with a "No"...
-			Identifier: message_Talk
-				Dialogue: Anyway...[K] If you ring the bell here, your team will assemble...
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_CHIRIIN
-				Argument: FACE_HAPPY
-				Argument: FACE_POS_TOP_L_CENTER
-			Identifier: message_Talk
-				Dialogue: So try it sometime and see!
-			Identifier: message_Talk
-				Dialogue: That's all, [hero]![K] Good luck exploring!
-			Identifier: message_Close
-			Identifier: jump
-				Argument: label_4
-		Case:
-			Value: default
-				Dialogue: No way.
-		Case:
-			Value: default
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: se_Play
-				Argument: 8968
-			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-				Argument: EFFECT_SHOCKED
-				Argument: 3
-			Identifier: WaitEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHIRIIN
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_CHIRIIN
-				Argument: FACE_SURPRISED
-				Argument: FACE_POS_TOP_C_FACER
-			Identifier: message_Talk
-				Dialogue: W-what?![K] N-no...[K]way?!
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: se_Play
-				Argument: 8972
-			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-				Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-				Argument: 3
-			Identifier: WaitEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-			Identifier: WaitExecuteLives
-				Argument: ACTOR_NPC_CHIRIIN
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_CHIRIIN
-				Argument: FACE_SURPRISED
-				Argument: FACE_POS_TOP_C_FACER
-			Identifier: message_Talk
-				Dialogue: Are you making fun of me, [hero]? You are! I know it!
-			Identifier: message_Talk
-				Dialogue: You said "No way" to see how I'd react, didn't you?
-			Identifier: message_SetFace
-				Argument: ACTOR_NPC_CHIRIIN
-				Argument: FACE_NORMAL
-				Argument: FACE_POS_TOP_C_FACER
-			Identifier: message_Talk
-				Dialogue: ...[K]I understand how you feel...
-			Identifier: message_Talk
-				Dialogue: Even if you select a "No," you eventually have to select the "Yes," so it always ends up the same anyway...
-			Identifier: message_Talk
-				Dialogue: That comes up frequently, that sort of thing...[K] But...
-			Identifier: message_Talk
-				Dialogue: I'll ask you again, [hero].
-			Identifier: message_Talk
-				Dialogue: Would you like to meet up with your team members waiting at the café?
+				Dialogue: I placed a secret signpost here...[K] Did you see it, [hero]?
 			Switch:
 				Variable: message_SwitchMenu(0, 1)
 				Case:
-					Value: default
-						Dialogue: OK!
+					Value: Yes
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+						Argument: 4
+						Argument: 10
+						Argument: DIR_DOWN
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_NPC_CHIRIIN
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 4
+						Argument: 10
+						Argument: DIR_UP
+					Identifier: ExecuteCommon
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+						Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+						Argument: 0
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_NPC_CHIRIIN
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_CHIRIIN
+						Argument: FACE_HAPPY
+						Argument: FACE_POS_TOP_L_CENTER
+					Identifier: message_Talk
+						Dialogue: Of course you would, [hero]!
+					Identifier: message_Talk
+						Dialogue: You must have rung the bell, because your team has assembled here already.
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+						Argument: 4
+						Argument: 10
+						Argument: DIR_RIGHT
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_NPC_CHIRIIN
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 4
+						Argument: 10
+						Argument: DIR_UPRIGHT
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_CHIRIIN
+						Argument: FACE_NORMAL
+						Argument: FACE_POS_TOP_L_CENTER
+					Identifier: message_Talk
+						Dialogue: As you know, when you ring this bell...[K] I come here from the guild...
+					Identifier: message_Talk
+						Dialogue: You can still assemble your exploration team here!
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+						Argument: 4
+						Argument: 10
+						Argument: DIR_DOWN
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_NPC_CHIRIIN
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 4
+						Argument: 10
+						Argument: DIR_UP
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_CHIRIIN
+						Argument: FACE_HAPPY
+						Argument: FACE_POS_TOP_L_CENTER
+					Identifier: message_Talk
+						Dialogue: So when you want to assemble your team, just ring this bell!
+					Identifier: message_Talk
+						Dialogue: That's all, [hero]![K] Good luck exploring!
+					Identifier: message_Close
+					Label: @label_4;
+					Identifier: screen_FadeOut
+						Argument: 1
+						Argument: 30
+					Identifier: Wait
+						Argument: 30
+					Identifier: supervision_RemoveActing
+						Argument: 1
+					Identifier: SetPositionMark
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Identifier: Position
+						Template
+							Type: m9
+							Identifier: 34.5
+							Identifier: 24.5
+					Identifier: SetPositionMark
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+						Identifier: Position
+						Template
+							Type: m10
+							Identifier: 31
+							Identifier: 24.5
+					Identifier: SetDirection
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: DIR_UP
+					Identifier: SetDirection
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+						Argument: DIR_UP
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_ATTENDANT1
+					Identifier: camera_SetDefault
+					Identifier: screen_FadeIn
+						Argument: 1
+						Argument: 30
+					Identifier: end
 				Case:
-					Value: default
-						Dialogue: No way.
+					Value: No
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+						Argument: 4
+						Argument: 10
+						Argument: DIR_DOWN
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_NPC_CHIRIIN
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 4
+						Argument: 10
+						Argument: DIR_UP
+					Identifier: se_Play
+						Argument: 8972
+					Identifier: SetEffect
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+						Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+						Argument: 3
+					Identifier: WaitEffect
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_NPC_CHIRIIN
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_CHIRIIN
+						Argument: FACE_SURPRISED
+						Argument: FACE_POS_TOP_L_CENTER
+					Identifier: message_Talk
+						Dialogue: I...I knew it!
+					Identifier: message_Talk
+						Dialogue: I'm sorry, [hero].[K] I guess I should explain!
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+						Argument: 4
+						Argument: 10
+						Argument: DIR_RIGHT
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_NPC_CHIRIIN
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 4
+						Argument: 10
+						Argument: DIR_UPRIGHT
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_CHIRIIN
+						Argument: FACE_NORMAL
+						Argument: FACE_POS_TOP_L_CENTER
+					Identifier: message_Talk
+						Dialogue: If you ring the bell attached to this sign...[K] I'll come here from the guild...
+					Identifier: message_Talk
+						Dialogue: You can still assemble your exploration team here!
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+						Argument: 4
+						Argument: 10
+						Argument: DIR_DOWN
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_NPC_CHIRIIN
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 4
+						Argument: 10
+						Argument: DIR_UP
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_CHIRIIN
+						Argument: FACE_HAPPY
+						Argument: FACE_POS_TOP_L_CENTER
+					Identifier: message_Talk
+						Dialogue: So when you want to assemble your team, just ring this bell!
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: se_Play
+						Argument: 8972
+					Identifier: SetEffect
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+						Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+						Argument: 3
+					Identifier: WaitEffect
+						Template
+							Type: actor
+							Identifier: ACTOR_NPC_CHIRIIN
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_NPC_CHIRIIN
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_CHIRIIN
+						Argument: FACE_NORMAL
+						Argument: FACE_POS_TOP_L_CENTER
+					Identifier: message_Talk
+						Dialogue: ...[K]M-maybe you already did ring the bell to summon me here before...
+					Identifier: message_Talk
+						Dialogue: ...and you did assemble your team here...
+					Identifier: message_Talk
+						Dialogue: Regardless, you rather carelessly answered my question with a "No.
+					Identifier: message_Talk
+						Dialogue: Maybe you just wanted to see what would happen if you answered with a "No"...
+					Identifier: message_Talk
+						Dialogue: Anyway...[K] If you ring the bell here, your team will assemble...
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_CHIRIIN
+						Argument: FACE_HAPPY
+						Argument: FACE_POS_TOP_L_CENTER
+					Identifier: message_Talk
+						Dialogue: So try it sometime and see!
+					Identifier: message_Talk
+						Dialogue: That's all, [hero]![K] Good luck exploring!
+					Identifier: message_Close
+					Identifier: jump
+						Argument: label_4
+			Identifier: break
+		Case:
+			Value: No way.
+			Label: @label_1;
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_CHIRIIN
+					Identifier: EFFECT_SHOCKED
+					Identifier: 3
+					Identifier: WaitEffect
+					Identifier: actor
+					Identifier: ACTOR_NPC_CHIRIIN
+					Identifier: WaitExecuteLives
+					Identifier: ACTOR_NPC_CHIRIIN
+					Identifier: message_SetFace
+					Identifier: ACTOR_NPC_CHIRIIN
+					Identifier: FACE_SURPRISED
+					Identifier: FACE_POS_TOP_C_FACER
+					Identifier: message_Talk
+					Identifier: english
+					Identifier: W
+					Identifier: what
+					Identifier: K
+					Identifier: N
+					Identifier: no...
+					Identifier: K
+					Identifier: way
+					Identifier: CallCommon
+					Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: se_Play
+					Identifier: 8972
+					Identifier: SetEffect
+					Identifier: actor
+					Identifier: ACTOR_NPC_CHIRIIN
+					Identifier: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+					Identifier: 3
+					Identifier: WaitEffect
+					Identifier: actor
+					Identifier: ACTOR_NPC_CHIRIIN
+				Argument: jump
+				Argument: label_0

@@ -70,26 +70,176 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yep!
-		Case:
-			Value: default
+			Value: Yep!
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_PUPURIN
+			Identifier: Position
+				Template
+					Type: m2
+					Identifier: 28.5
+					Identifier: 30.5
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_PUPURIN
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_PUPURIN
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_PUPURIN
+			Identifier: Wait
+				Argument: 4
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_AAMARUDO
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWN
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_AAMARUDO
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_PUPURIN
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: Yep. ♪
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_AAMARUDO
+			Identifier: Position
+				Template
+					Type: m3
+					Identifier: 31.5
+					Identifier: 27.5
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_AAMARUDO
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_AAMARUDO
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNLEFT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_AAMARUDO
+			Identifier: Wait
+				Argument: 4
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_PUPURIN
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_PUPURIN
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_AAMARUDO
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
 				Dialogue: All right!
-		Case:
-			Value: CS
+			Identifier: message_Talk
 				Dialogue: OK, let's go![K] To [CS:P]Fortune Ravine[CR]!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_PLAYER_PUPURIN
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_STANDARD
+			Identifier: message_Talk
 				Dialogue: Yep. ♪
-		Case:
-			Value: default
+			Identifier: message_Close
+			Identifier: MovePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_PUPURIN
+				Argument: 1
+				Argument: 0
+				Argument: 180
+			Identifier: Wait
+				Argument: 4
+			Identifier: MovePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_AAMARUDO
+				Argument: 1
+				Argument: 0
+				Argument: 180
+			Identifier: Wait
+				Argument: 40
+			Identifier: bgm_FadeOut
+				Argument: 60
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 60
+			Identifier: Wait
+				Argument: 30
+			Identifier: supervision_ExecuteCommon
+				Argument: CORO_EVENT_N03_10
+			Identifier: hold
+			Identifier: case
+				Argument: menu
 				Dialogue: Not yet.
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_AAMARUDO
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_FacePositionOffset
+				Argument: 2
+				Argument: 0
+			Identifier: message_Talk
 				Dialogue: What do you mean, not yet?
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Once you're ready, we'll go.
+			Identifier: message_Close
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_AAMARUDO
+				Argument: 4
+			Identifier: end
+			Identifier: Move2PositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_PUPURIN
+			Identifier: Position
+				Template
+					Type: m1
+					Identifier: 28.5
+					Identifier: 30.5
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_PUPURIN
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_AAMARUDO
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER_PUPURIN
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_AAMARUDO
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_PUPURIN
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER_APPOINT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_PUPURIN
+			Identifier: jump
+				Argument: label_0

@@ -49,57 +49,85 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yes
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's do our best, [hero]!
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's try our best, [hero]!
-			Identifier: default
-				Dialogue: OK, let's give it our very best, [hero]!
-		Case:
-			Value: default
-			Identifier: screen_FadeOut
-				Argument: 1
-				Argument: 30
-			Identifier: supervision_ExecuteCommon
-				Argument: CORO_EVENT_M10_03
-			Identifier: hold
-		Case:
-			Value: default
-			Identifier: main_EnterDungeon
-				Argument: 14
-				Argument: 30
+			Value: Yes
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 			Switch:
-				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
-			Identifier: main_EnterDungeon
-				Argument: 1
-				Argument: 30
-			Identifier: hold
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Let's do our best, [hero]!
+				Case:
+					Value: 2
+						Dialogue: Let's try our best, [hero]!
+				Case:
+					Value: default
+						Dialogue: OK, let's give it our very best, [hero]!
+			Identifier: message_Close
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Conditional: If
+				Condition: ($SCENARIO_MAIN) == [11, 1]
+				Identifier: screen_FadeOut
+					Argument: 1
+					Argument: 30
+				Identifier: supervision_ExecuteCommon
+					Argument: CORO_EVENT_M10_03
+				Identifier: hold
+			Conditional: Else
+				Identifier: main_EnterDungeon
+					Argument: 14
+					Argument: 30
+				Switch:
+					Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+				Identifier: main_EnterDungeon
+					Argument: 1
+					Argument: 30
+				Identifier: hold
+			Identifier: break
+		Case:
+			Value: Not yet
+			Label: @label_1;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right, then!
+				Case:
+					Value: 2
+						Dialogue: OK, then!
+				Case:
+					Value: default
+						Dialogue: OK, then!
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Let's go as soon as you're ready!
+				Case:
+					Value: 2
+						Dialogue: We'll go when you're ready.
+				Case:
+					Value: default
+						Dialogue: Let's go when you're ready.
+			Identifier: message_Close
+			Identifier: end
 		Case:
 			Value: default
-				Dialogue: Not yet
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: All right, then!
-			Identifier: case
-				Argument: 2
-				Dialogue: OK, then!
-			Identifier: default
-				Dialogue: OK, then!
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's go as soon as you're ready!
-			Identifier: case
-				Argument: 2
-				Dialogue: We'll go when you're ready.
-			Identifier: default
-				Dialogue: Let's go when you're ready.
+			Identifier: jump
+				Argument: label_1

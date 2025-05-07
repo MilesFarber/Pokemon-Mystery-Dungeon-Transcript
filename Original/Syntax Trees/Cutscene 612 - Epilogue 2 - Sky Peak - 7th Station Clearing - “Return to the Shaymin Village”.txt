@@ -13,29 +13,20 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yes
+			Value: Yes
+			Label: @label_0;
+			Conditional: If
+				Condition: ($SCENARIO_MAIN) >= [29, 25]
+				Label: @label_2;
+				Identifier: message_Close
+				Identifier: bgm_FadeOut
+					Argument: 60
+				Switch:
+					Variable: message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP)
+				Identifier: main_EnterGround
+					Argument: LEVEL_D73P11A
+					Argument: 30
+				Identifier: hold
+				Identifier: end
 		Case:
 			Value: default
-			Label: @label_2;
-			Identifier: message_Close
-			Identifier: bgm_FadeOut
-				Argument: 60
-			Switch:
-				Variable: message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP)
-			Identifier: main_EnterGround
-				Argument: LEVEL_D73P11A
-				Argument: 30
-			Identifier: hold
-			Identifier: end
-		Case:
-			Value: default
-			Identifier: SCENARIO_MAIN
-				Argument: scn
-				Argument: 29
-				Argument: 25
-			Identifier: jump
-				Argument: label_2
-		Case:
-			Value: default
-				Dialogue: No

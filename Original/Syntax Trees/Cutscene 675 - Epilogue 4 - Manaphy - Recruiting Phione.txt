@@ -240,34 +240,24 @@ def 0:
 	Label: @label_2;
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: ProcessSpecial(PROCESS_SPECIAL_PREPARE_MENU_ACCEPT_TEAM_MEMBER, 17, 0)
 	Switch:
 		Variable: message_Menu(MENU_ACCEPT_TEAM_MEMBER)
 		Case:
 			Value: 1
-				Dialogue: [CN][c_name:NPC_NEW_FRIEND] joined the team!
-		Case:
-			Value: CS
-				Dialogue: [CN][player] cleared the [CS:P]Miracle Sea[CR] [CN]in admirable fashion!
-		Case:
-			Value: 2
-				Dialogue: [CN]Are you sure?[K] [CN]You're sure you won't accept [CN]this potential new member?
-		Case:
-			Value: default
-			Identifier: case
-				Argument: menu
-				Dialogue: Reconsider
-			Identifier: jump
-				Argument: label_2
-			Identifier: case
-				Argument: menu
-				Dialogue: Refuse
-			Identifier: default
-				Argument: CallCommon
+			Label: @label_0;
+			Identifier: CallCommon
 				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: bgm_Stop
+			Identifier: me_Play
+				Argument: 5
 			Identifier: message_Mail
-				Dialogue: [CN][player] turned down [CN][CS:N]Phione[CR]'s offer to join.
-			Identifier: message_Close
+				Dialogue: [CN][c_name:NPC_NEW_FRIEND] joined the team!
+			Identifier: WaitMe
+				Argument: 5
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 			Identifier: bgm_FadeOut
 				Argument: 120
 			Identifier: screen_FadeOut
@@ -277,4 +267,37 @@ def 0:
 				Argument: 30
 			Identifier: WaitBgm
 				Argument: BGM_MYSTIFYING_FOREST
+			Identifier: message_Explanation
+				Dialogue: [CN][player] cleared the [CS:P]Miracle Sea[CR] [CN]in admirable fashion!
+			Identifier: message_Close
 			Identifier: end
+		Case:
+			Value: 2
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_Mail
+				Dialogue: [CN]Are you sure?[K] [CN]You're sure you won't accept [CN]this potential new member?
+			Switch:
+				Variable: message_SwitchMenu(0, 1)
+				Case:
+					Value: Reconsider
+					Identifier: jump
+						Argument: label_2
+				Case:
+					Value: Refuse
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: message_Mail
+						Dialogue: [CN][player] turned down [CN][CS:N]Phione[CR]'s offer to join.
+					Identifier: message_Close
+					Identifier: bgm_FadeOut
+						Argument: 120
+					Identifier: screen_FadeOut
+						Argument: 1
+						Argument: 60
+					Identifier: Wait
+						Argument: 30
+					Identifier: WaitBgm
+						Argument: BGM_MYSTIFYING_FOREST
+					Identifier: end
+			Identifier: break

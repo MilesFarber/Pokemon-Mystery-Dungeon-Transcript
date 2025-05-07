@@ -277,10 +277,20 @@ def 0:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
 			Value: CS
-				Dialogue: [CS:P]Craggy Coast[CR]
-		Case:
-			Value: default
-			Identifier: case
+			Identifier: P
+				Argument: Craggy
+				Argument: Coast
+				Argument: CR
+				Argument: label_0
+				Argument: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Argument: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+				Argument: message_SwitchTalk
+				Argument: PARTNER_TALK_KIND
+				Argument: case
 				Argument: 1
 				Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
 			Identifier: case
@@ -288,9 +298,10 @@ def 0:
 				Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
 			Identifier: default
 				Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
-		Case:
-			Value: 1
-			Identifier: case
+			Identifier: label_2
+				Argument: message_SwitchTalk
+				Argument: PARTNER_TALK_KIND
+				Argument: case
 				Argument: 1
 				Dialogue: All right. Now...
 			Identifier: case
@@ -298,14 +309,60 @@ def 0:
 				Dialogue: All right. Now...
 			Identifier: default
 				Dialogue: All right. Now...
-		Case:
-			Value: default
-				Dialogue: Let's all three work as one and get this done!
-		Case:
-			Value: default
-			Identifier: debug_Print
-				Argument: ENTER_CHIISANAYOKOANA
-			Identifier: bgm_FadeOut
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+					Identifier: 4
+					Identifier: 10
+					Identifier: DIR_UP
+					Identifier: Turn2Direction
+					Identifier: actor
+					Identifier: ACTOR_NPC_BIPPA
+					Identifier: 4
+					Identifier: 10
+					Identifier: DIR_UP
+					Identifier: Turn2Direction
+					Identifier: actor
+					Identifier: ACTOR_ATTENDANT1
+					Identifier: 4
+					Identifier: 10
+					Identifier: DIR_DOWN
+					Identifier: WaitExecuteLives
+					Identifier: ACTOR_PLAYER
+					Identifier: WaitExecuteLives
+					Identifier: ACTOR_NPC_BIPPA
+					Identifier: WaitExecuteLives
+					Identifier: ACTOR_ATTENDANT1
+					Identifier: SetAnimation
+					Identifier: actor
+					Identifier: ACTOR_ATTENDANT1
+					Identifier: 71
+					Identifier: SetAnimation
+					Identifier: actor
+					Identifier: ACTOR_PLAYER
+					Identifier: 71
+					Identifier: WaitAnimation
+					Identifier: actor
+					Identifier: ACTOR_ATTENDANT1
+					Identifier: WaitAnimation
+					Identifier: actor
+					Identifier: ACTOR_PLAYER
+					Identifier: SetAnimation
+					Identifier: actor
+					Identifier: ACTOR_ATTENDANT1
+					Identifier: 2
+					Identifier: SetAnimation
+					Identifier: actor
+					Identifier: ACTOR_PLAYER
+					Identifier: 2
+					Identifier: Wait
+					Identifier: 30
+					Identifier: Turn2Direction
+					Identifier: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: bgm_FadeOut
 				Argument: 60
 			Identifier: main_EnterDungeon
 				Argument: 9
@@ -319,27 +376,3 @@ def 0:
 			Identifier: end
 		Case:
 			Value: default
-			Identifier: debug_Print
-				Argument: ENTER_ENGANNOIWABA
-			Identifier: main_EnterDungeon
-				Argument: 8
-				Argument: 30
-			Switch:
-				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
-			Identifier: main_EnterDungeon
-				Argument: 1
-				Argument: 30
-			Identifier: hold
-		Case:
-			Value: CS
-				Dialogue: [CS:P]Side Path[CR]
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: OK. [CS:P]Side Path[CR] it is.
-			Identifier: case
-				Argument: 2
-				Dialogue: OK. [CS:P]Side Path[CR] it is.
-			Identifier: default
-				Dialogue: OK. [CS:P]Side Path[CR] it is.

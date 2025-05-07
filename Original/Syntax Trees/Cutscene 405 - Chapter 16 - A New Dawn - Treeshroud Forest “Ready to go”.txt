@@ -59,50 +59,112 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yes
-		Case:
-			Value: default
-			Identifier: case
+			Value: Yes
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: MovePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_JUPUTORU
 				Argument: 1
-				Dialogue: All right. We're good to go!
-			Identifier: case
+				Argument: 0
+				Argument: 24
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_JUPUTORU
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right. We're good to go!
+				Case:
+					Value: 2
+						Dialogue: OK. We're good to go!
+				Case:
+					Value: default
+						Dialogue: OK. We're all set to go!
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Let's get moving!
+				Case:
+					Value: 2
+						Dialogue: Let's set off!
+				Case:
+					Value: default
+						Dialogue: Let's get moving!
+			Identifier: message_Close
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: Position
+				Template
+					Type: m0
+					Identifier: 32
+					Identifier: 9.5
+			Identifier: Wait
+				Argument: 15
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: Position
+				Template
+					Type: m1
+					Identifier: 32
+					Identifier: 9.5
+			Identifier: Wait
+				Argument: 5
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_JUPUTORU
+			Identifier: Position
+				Template
+					Type: m2
+					Identifier: 32
+					Identifier: 9.5
+			Identifier: SCENARIO_MAIN
+				Argument: scn
+				Argument: 21
 				Argument: 2
-				Dialogue: OK. We're good to go!
-			Identifier: default
-				Dialogue: OK. We're all set to go!
-		Case:
-			Value: 1
-			Identifier: case
+			Identifier: main_EnterDungeon
+				Argument: 34
+				Argument: 30
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+			Identifier: main_EnterDungeon
 				Argument: 1
-				Dialogue: Let's get moving!
+				Argument: 30
+			Identifier: hold
 			Identifier: case
-				Argument: 2
-				Dialogue: Let's set off!
-			Identifier: default
-				Dialogue: Let's get moving!
-		Case:
-			Value: default
-		Case:
-			Value: default
+				Argument: menu
 				Dialogue: No
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: All right.
-			Identifier: case
-				Argument: 2
-				Dialogue: OK.
-			Identifier: default
-				Dialogue: OK.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: We'll be on our way when you're ready.
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's go as soon as you're ready.
-			Identifier: default
-				Dialogue: Let's leave when you're ready.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right.
+				Case:
+					Value: 2
+						Dialogue: OK.
+				Case:
+					Value: default
+						Dialogue: OK.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: We'll be on our way when you're ready.
+				Case:
+					Value: 2
+						Dialogue: Let's go as soon as you're ready.
+				Case:
+					Value: default
+						Dialogue: Let's leave when you're ready.
+			Identifier: message_Close
+			Identifier: end

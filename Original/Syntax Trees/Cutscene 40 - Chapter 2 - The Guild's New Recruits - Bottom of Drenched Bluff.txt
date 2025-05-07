@@ -11,7 +11,8 @@ def 0:
 		Identifier: message_Explanation
 			Dialogue: [CN]Thanks for playing! [CN]We hope you enjoyed [CN]the demo!
 		Identifier: message_KeyWait
-		Unknown: Jump-switches to-be-implemented
+		Switch:
+			Variable: ProcessSpecial(PROCESS_SPECIAL_JUMP_TO_TITLE_SCREEN, 0, 0)
 		Identifier: end
 	Conditional: Else
 		Identifier: back_SetDungeonBanner
@@ -31,33 +32,205 @@ def 0:
 			Variable: scn($SCENARIO_MAIN)[1]
 			Case:
 				Value: 3
-				Identifier: case
+				Identifier: SCENARIO_MAIN
+					Argument: scn
+					Argument: 3
+					Argument: 6
+				Label: @label_3;
+				Identifier: back_SetGround
+					Argument: LEVEL_D02P31A
+				Identifier: supervision_Acting
+					Argument: 0
+				Identifier: camera_SetMyself
+					Template
+						Type: performer
+						Identifier: 0
+				Identifier: Wait
 					Argument: 1
-					Dialogue: Hey! There it is!
-				Identifier: case
-					Argument: 2
-					Dialogue: Oh! Look at that!
-				Identifier: default
-					Dialogue: Oh! Over there!
-			Case:
-				Value: 1
-				Identifier: case
+				Identifier: MovePositionMark
+					Template
+						Type: actor
+						Identifier: ACTOR_PLAYER
+				Identifier: Position
+					Template
+						Type: m0
+						Identifier: 32
+						Identifier: 35.5
+				Identifier: MovePositionMark
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+				Identifier: Position
+					Template
+						Type: m1
+						Identifier: 28
+						Identifier: 35.5
+				Identifier: bgm_PlayFadeIn
+					Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+					Argument: 0
+					Argument: 256
+				Identifier: screen_FadeIn
 					Argument: 1
-					Dialogue: This has to be [CS:N]Spoink[CR]'s pearl!
-				Identifier: case
-					Argument: 2
-					Dialogue: This must be [CS:N]Spoink[CR]'s pearl!
-				Identifier: default
-					Dialogue: This has to be [CS:N]Spoink[CR]'s pearl!
-			Case:
-				Value: 1
-				Identifier: case
+					Argument: 30
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_PLAYER
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: se_Play
+					Argument: 8978
+				Identifier: SetEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: EFFECT_EXCLAMATION_MARK
+					Argument: 3
+				Identifier: WaitEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_NORMAL
+					Argument: FACE_POS_STANDARD
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Hey! There it is!
+					Case:
+						Value: 2
+							Dialogue: Oh! Look at that!
+					Case:
+						Value: default
+							Dialogue: Oh! Over there!
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Identifier: MovePositionMark
+					Template
+						Type: performer
+						Identifier: 0
+				Identifier: Position
+					Template
+						Type: m2
+						Identifier: 30
+						Identifier: 24.5
+				Identifier: MovePositionMark
+					Template
+						Type: actor
+						Identifier: ACTOR_PLAYER
+				Identifier: Position
+					Template
+						Type: m3
+						Identifier: 32
+						Identifier: 25.5
+				Identifier: Wait
+					Argument: 5
+				Identifier: MovePositionMark
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+				Identifier: Position
+					Template
+						Type: m4
+						Identifier: 28
+						Identifier: 25.5
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_PLAYER
+				Identifier: Turn2Direction
+					Template
+						Type: actor
+						Identifier: ACTOR_PLAYER
+					Argument: 4
+					Argument: 10
+					Argument: DIR_UPLEFT
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: Turn2Direction
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: 4
+					Argument: 10
+					Argument: DIR_UPRIGHT
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: Wait
+					Argument: 30
+				Identifier: Turn2DirectionLives
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: 4
+					Argument: 10
+					Argument: ACTOR_PLAYER
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: Turn2DirectionLives
+					Template
+						Type: actor
+						Identifier: ACTOR_PLAYER
+					Argument: 4
+					Argument: 10
+					Argument: ACTOR_ATTENDANT1
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: This has to be [CS:N]Spoink[CR]'s pearl!
+					Case:
+						Value: 2
+							Dialogue: This must be [CS:N]Spoink[CR]'s pearl!
+					Case:
+						Value: default
+							Dialogue: This has to be [CS:N]Spoink[CR]'s pearl!
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Let's take it back right now!
+					Case:
+						Value: 2
+							Dialogue: Let's hurry back with it!
+					Case:
+						Value: default
+							Dialogue: Quick! Let's take it back!
+				Identifier: message_Close
+				Identifier: MovePositionOffset
+					Template
+						Type: actor
+						Identifier: ACTOR_PLAYER
+					Argument: 0.7969
+					Argument: 16
+					Argument: 16
+				Identifier: Turn2Direction
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: 4
+					Argument: 10
+					Argument: DIR_UPRIGHT
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: Wait
+					Argument: 30
+				Identifier: bgm_FadeOut
+					Argument: 120
+				Identifier: screen_FadeOut
 					Argument: 1
-					Dialogue: Let's take it back right now!
-				Identifier: case
-					Argument: 2
-					Dialogue: Let's hurry back with it!
-				Identifier: default
-					Dialogue: Quick! Let's take it back!
+					Argument: 60
+				Identifier: WaitBgm
+					Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+				Switch:
+					Variable: message_Menu(MENU_DUNGEON_TEAM_RETURNS_FROM_MAP)
+				Identifier: end
 			Case:
 				Value: default
+				Label: @label_2;
+				Identifier: SCENARIO_MAIN
+					Argument: scn
+					Argument: 3
+					Argument: 7
+				Identifier: jump
+					Argument: label_3

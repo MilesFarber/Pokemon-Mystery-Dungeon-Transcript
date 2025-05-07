@@ -43,4 +43,220 @@ def 0:
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 	Identifier: message_Mail
 		Dialogue: [CN]Will you close your eyes?
-	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: message_SwitchMenu(0, 1)
+		Case:
+			Value: Yes
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: bgm_FadeOut
+				Argument: 90
+			Identifier: message_Mail
+				Dialogue: [CN][player] did as instructed.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ADVENTURE_NPC1
+				Argument: EFFECT_EXCLAMATION_MARK
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ADVENTURE_NPC2
+				Argument: EFFECT_EXCLAMATION_MARK
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ADVENTURE_NPC3
+				Argument: EFFECT_EXCLAMATION_MARK
+				Argument: 3
+			Identifier: se_Play
+				Argument: 7948
+			Identifier: SetAnimation
+				Template
+					Type: object
+					Identifier: OBJECT_D32P44A1_84
+				Argument: 2
+			Conditional: If
+				Condition: ( not debug
+				Label: @label_2;
+				Identifier: message_Close
+				Switch:
+					Variable: ProcessSpecial(PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG, 417, 0)
+					Case:
+						Value: 1
+						Switch:
+							Variable: ProcessSpecial(PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG, 414, 0)
+							Case:
+								Value: 1
+								Switch:
+									Variable: ProcessSpecial(PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG, 402, 0)
+									Case:
+										Value: 1
+										Switch:
+											Variable: ProcessSpecial(PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG, 410, 0)
+											Case:
+												Value: 1
+												Label: @label_3;
+												Identifier: message_Close
+												Identifier: Wait
+													Argument: 30
+												Identifier: message_Mail
+													Dialogue: [CN]!!!
+												Identifier: message_Mail
+													Dialogue: [CN]The [CS:I]Unown Stones[CR] in the Treasure Bag: [CN][FT:1]R[FT:0], [FT:1]O[FT:0], [FT:1]C[FT:0], and [FT:1]K[FT:0] are responding!
+												Identifier: message_Mail
+													Dialogue: [CN]The activated [CS:I]Unown Stones[CR] were [CN]absorbed by the stone marker!
+												Identifier: CallCommon
+													Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+												Switch:
+													Variable: ProcessSpecial(PROCESS_SPECIAL_REMOVE_ITEMS_TYPE_IN_BAG, 417, 0)
+												Switch:
+													Variable: ProcessSpecial(PROCESS_SPECIAL_REMOVE_ITEMS_TYPE_IN_BAG, 414, 0)
+												Switch:
+													Variable: ProcessSpecial(PROCESS_SPECIAL_REMOVE_ITEMS_TYPE_IN_BAG, 402, 0)
+												Switch:
+													Variable: ProcessSpecial(PROCESS_SPECIAL_REMOVE_ITEMS_TYPE_IN_BAG, 410, 0)
+												Identifier: se_FadeOut
+													Argument: 7948
+													Argument: 15
+												Identifier: Wait
+													Argument: 15
+												Identifier: se_Play
+													Argument: 7949
+												Identifier: Wait
+													Argument: 30
+												Identifier: SetAnimation
+													Template
+														Type: object
+														Identifier: OBJECT_D32P44A1_84
+													Argument: 5
+												Identifier: Wait
+													Argument: 60
+												Identifier: SetAnimation
+													Template
+														Type: object
+														Identifier: OBJECT_D32P44A1_84
+													Argument: 6
+												Identifier: Wait
+													Argument: 60
+												Identifier: SetAnimation
+													Template
+														Type: object
+														Identifier: OBJECT_D32P44A1_84
+													Argument: 19
+												Identifier: WaitAnimation
+													Template
+														Type: object
+														Identifier: OBJECT_D32P44A1_84
+												Identifier: WaitExecuteObject
+													Argument: OBJECT_D32P44A1_84
+												Identifier: screen_WhiteOut
+													Argument: 1
+													Argument: 30
+												Identifier: supervision_Acting
+													Argument: 0
+												Identifier: SetAnimation
+													Template
+														Type: actor
+														Identifier: ACTOR_ADVENTURE_NPC1
+													Argument: 4
+												Identifier: SetAnimation
+													Template
+														Type: actor
+														Identifier: ACTOR_ADVENTURE_NPC2
+													Argument: 4
+												Identifier: SetAnimation
+													Template
+														Type: actor
+														Identifier: ACTOR_ADVENTURE_NPC3
+													Argument: 4
+												Identifier: SetPositionOffset
+													Template
+														Type: actor
+														Identifier: ACTOR_PLAYER_APPOINT
+													Argument: 432
+													Argument: 0
+												Identifier: SetPositionOffset
+													Template
+														Type: actor
+														Identifier: ACTOR_ADVENTURE_NPC1
+													Argument: 432
+													Argument: 0
+												Identifier: SetPositionOffset
+													Template
+														Type: actor
+														Identifier: ACTOR_ADVENTURE_NPC2
+													Argument: 432
+													Argument: 0
+												Identifier: SetPositionOffset
+													Template
+														Type: actor
+														Identifier: ACTOR_ADVENTURE_NPC3
+													Argument: 432
+													Argument: 0
+												Identifier: Wait
+													Argument: 45
+												Identifier: screen_FadeIn
+													Argument: 1
+													Argument: 15
+												Identifier: Wait
+													Argument: 45
+												Identifier: se_Play
+													Argument: 8966
+												Identifier: message_Mail
+													Dialogue: [CN]The stone marker disappeared, and [CN]a hidden stairway was revealed!
+												Identifier: WaitSe
+													Argument: 8966
+												Identifier: message_Close
+												Array accessor
+													Array: $SCENARIO_MAIN_BIT_FLAG
+													Index: 44
+													Value: 1
+												Identifier: bgm_PlayFadeIn
+													Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+													Argument: 0
+													Argument: 256
+												Identifier: end
+											Case:
+												Value: default
+												Label: @label_4;
+												Identifier: message_Close
+												Identifier: Wait
+													Argument: 90
+												Identifier: SetAnimation
+													Template
+														Type: object
+														Identifier: OBJECT_D32P44A1_84
+													Argument: 1
+												Identifier: se_FadeOut
+													Argument: 7948
+													Argument: 90
+												Identifier: message_Mail
+													Dialogue: [CN]Nothing happened...
+												Identifier: message_Close
+												Identifier: bgm_PlayFadeIn
+													Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+													Argument: 0
+													Argument: 256
+												Identifier: end
+									Case:
+										Value: default
+										Identifier: jump
+											Argument: label_4
+							Case:
+								Value: default
+								Identifier: jump
+									Argument: label_4
+					Case:
+						Value: default
+						Identifier: jump
+							Argument: label_4
+		Case:
+			Value: No
+			Identifier: message_Close
+			Identifier: end

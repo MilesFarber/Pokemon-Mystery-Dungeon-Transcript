@@ -43,40 +43,78 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: I'm ready!
-		Case:
-			Value: default
-			Identifier: case
+			Value: I'm ready!
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right![K] Let's roll on out!
+				Case:
+					Value: 2
+						Dialogue: OK![K] Let's go!
+				Case:
+					Value: default
+						Dialogue: OK![K] Let's go!
+			Identifier: message_Close
+			Identifier: MovePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
 				Argument: 1
-				Dialogue: All right![K] Let's roll on out!
-			Identifier: case
-				Argument: 2
-				Dialogue: OK![K] Let's go!
-			Identifier: default
-				Dialogue: OK![K] Let's go!
-		Case:
-			Value: default
-		Case:
-			Value: default
-				Dialogue: Not yet...
-		Case:
-			Value: 1
-			Identifier: case
+				Argument: 80
+				Argument: 0
+			Identifier: Wait
+				Argument: 10
+			Identifier: MovePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
 				Argument: 1
-				Dialogue: We'll go when you're ready.
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's go when you're ready.
-			Identifier: default
-				Dialogue: Let's go when you're ready.
-		Case:
-			Value: 1
-			Identifier: case
+				Argument: 80
+				Argument: 0
+			Identifier: Wait
+				Argument: 15
+			Identifier: screen_FadeOut
 				Argument: 1
-				Dialogue: Let's go before those [CS:N]Sableye[CR] catch up.
-			Identifier: case
-				Argument: 2
-				Dialogue: We need to go before those [CS:N]Sableye[CR] catch up.
-			Identifier: default
-				Dialogue: Let's go before those [CS:N]Sableye[CR] catch up.
+				Argument: 30
+			Identifier: main_EnterDungeon
+				Argument: 28
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+			Identifier: main_EnterDungeon
+				Argument: 1
+				Argument: 0
+			Identifier: hold
+			Identifier: end
+		Case:
+			Value: Not yet...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: We'll go when you're ready.
+				Case:
+					Value: 2
+						Dialogue: Let's go when you're ready.
+				Case:
+					Value: default
+						Dialogue: Let's go when you're ready.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Let's go before those [CS:N]Sableye[CR] catch up.
+				Case:
+					Value: 2
+						Dialogue: We need to go before those [CS:N]Sableye[CR] catch up.
+				Case:
+					Value: default
+						Dialogue: Let's go before those [CS:N]Sableye[CR] catch up.
+			Identifier: message_Close
+			Identifier: end

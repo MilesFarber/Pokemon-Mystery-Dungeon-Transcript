@@ -49,40 +49,74 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: All set!
-		Case:
-			Value: default
-			Identifier: case
+			Value: All set!
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right! Let's roll out!
+				Case:
+					Value: 2
+						Dialogue: OK! Let's go!
+				Case:
+					Value: default
+						Dialogue: OK! Let's go!
+			Identifier: message_Close
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: screen_FadeOut
 				Argument: 1
-				Dialogue: All right! Let's roll out!
-			Identifier: case
-				Argument: 2
-				Dialogue: OK! Let's go!
-			Identifier: default
-				Dialogue: OK! Let's go!
-		Case:
-			Value: default
-		Case:
-			Value: default
-				Dialogue: Not yet...
-		Case:
-			Value: 1
-			Identifier: case
+				Argument: 30
+			Identifier: main_EnterDungeon
+				Argument: 29
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+			Identifier: main_EnterDungeon
 				Argument: 1
-				Dialogue: We'll go when you're ready.
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's go when you're ready.
-			Identifier: default
-				Dialogue: Let's go when you're ready.
+				Argument: 0
+			Identifier: hold
+			Identifier: end
 		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's hurry after [CS:N]Grovyle[CR]!
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's hurry and catch up to [CS:N]Grovyle[CR]!
-			Identifier: default
-				Dialogue: Let's hurry and catch up to [CS:N]Grovyle[CR]!
+			Value: Not yet...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: We'll go when you're ready.
+				Case:
+					Value: 2
+						Dialogue: Let's go when you're ready.
+				Case:
+					Value: default
+						Dialogue: Let's go when you're ready.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Let's hurry after [CS:N]Grovyle[CR]!
+				Case:
+					Value: 2
+						Dialogue: Let's hurry and catch up to [CS:N]Grovyle[CR]!
+				Case:
+					Value: default
+						Dialogue: Let's hurry and catch up to [CS:N]Grovyle[CR]!
+			Identifier: message_Close
+			Identifier: end

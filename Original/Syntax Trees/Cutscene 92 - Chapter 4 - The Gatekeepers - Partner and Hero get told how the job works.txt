@@ -48,115 +48,411 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Understood
-		Case:
-			Value: default
+			Value: Understood
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_Talk
 				Dialogue: Good! Then let's get to WORK!
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Buck up and do a GOOD job!
-		Case:
-			Value: 1
-			Identifier: case
+			Identifier: message_Close
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNLEFT
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_LEFT
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: Position
+				Template
+					Type: m0
+					Identifier: 25
+					Identifier: 36.5
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: Position
+				Template
+					Type: m1
+					Identifier: 28
+					Identifier: 39.5
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: Position
+				Template
+					Type: m2
+					Identifier: 24
+					Identifier: 37.5
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: Position
+				Template
+					Type: m3
+					Identifier: 26
+					Identifier: 37.5
+			Identifier: screen_FadeOut
 				Argument: 1
-				Dialogue: Waah! It's pitch black in here, [hero]...
-			Identifier: case
+				Argument: 30
+			Identifier: SCENARIO_MAIN
+				Argument: scn
+				Argument: 5
 				Argument: 2
-				Dialogue: Ack! It's pitch black in here, [hero]...
-			Identifier: default
-				Dialogue: Yow! It's pitch black in here, [hero]...
-		Case:
-			Value: 1
-			Identifier: case
+			Identifier: bgm_FadeOut
+				Argument: 120
+			Identifier: Wait
+				Argument: 60
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_SURPRISED
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Waah! It's pitch black in here, [hero]...
+				Case:
+					Value: 2
+						Dialogue: Ack! It's pitch black in here, [hero]...
+				Case:
+					Value: default
+						Dialogue: Yow! It's pitch black in here, [hero]...
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: We'll have to feel our way...
+				Case:
+					Value: 2
+						Dialogue: We'll have to feel our way...
+				Case:
+					Value: default
+						Dialogue: We'll have to feel our way...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Wait
+				Argument: 20
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: ...
+				Case:
+					Value: 2
+						Dialogue: ...
+				Case:
+					Value: default
+						Dialogue: ...
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: ......
+				Case:
+					Value: 2
+						Dialogue: ......
+				Case:
+					Value: default
+						Dialogue: ......
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Well, we should be getting close to the sentry post...
+				Case:
+					Value: 2
+						Dialogue: Well, we should be getting close to the sentry post...
+				Case:
+					Value: default
+						Dialogue: Well, we should be getting close to the sentry post...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8978
+			Identifier: WaitSe
+				Argument: 8978
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Hey![K] There![K] I see light, [hero]!
+				Case:
+					Value: 2
+						Dialogue: Oh![K] There![K] I see light, [hero]!
+				Case:
+					Value: default
+						Dialogue: Oh![K] There it is![K] I see light, [hero]!
+			Identifier: message_Close
+			Identifier: back2_SetMode
+				Argument: 4
+			Identifier: back2_SetGround
+				Argument: LEVEL_V04P02A
+			Identifier: camera2_SetPositionMark
+				Identifier: Position
+				Template
+					Type: m4
+					Identifier: 19.5
+					Identifier: 16
+			Identifier: screen2_FadeIn
 				Argument: 1
-				Dialogue: We'll have to feel our way...
-			Identifier: case
-				Argument: 2
-				Dialogue: We'll have to feel our way...
-			Identifier: default
-				Dialogue: We'll have to feel our way...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: ...
-			Identifier: case
-				Argument: 2
-				Dialogue: ...
-			Identifier: default
-				Dialogue: ...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: ......
-			Identifier: case
-				Argument: 2
-				Dialogue: ......
-			Identifier: default
-				Dialogue: ......
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Well, we should be getting close to the sentry post...
-			Identifier: case
-				Argument: 2
-				Dialogue: Well, we should be getting close to the sentry post...
-			Identifier: default
-				Dialogue: Well, we should be getting close to the sentry post...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Hey![K] There![K] I see light, [hero]!
-			Identifier: case
-				Argument: 2
-				Dialogue: Oh![K] There![K] I see light, [hero]!
-			Identifier: default
-				Dialogue: Oh![K] There it is![K] I see light, [hero]!
-		Case:
-			Value: default
+				Argument: 30
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_BOTTOM_R_FACEINW
+			Identifier: message_Talk
 				Dialogue: HOW'S IT GOING?![K] Have you taken position at the sentry post?!
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Yup! We're here!
-			Identifier: case
-				Argument: 2
-				Dialogue: Yes! We're in position!
-			Identifier: default
-				Dialogue: Yep! We're here!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Yup! We're here!
+				Case:
+					Value: 2
+						Dialogue: Yes! We're in position!
+				Case:
+					Value: default
+						Dialogue: Yep! We're here!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_BOTTOM_R_FACEINW
+			Identifier: message_Talk
 				Dialogue: GOOD!
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Pokémon visitors will step onto the grill above the sentry post!
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Identify them by footprint, then inform me![K] Got that?!
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Yup! Got it!
-			Identifier: case
-				Argument: 2
-				Dialogue: Yes! Understood!
-			Identifier: default
-				Dialogue: Yep! We got it!
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Yup! Got it!
+				Case:
+					Value: 2
+						Dialogue: Yes! Understood!
+				Case:
+					Value: default
+						Dialogue: Yep! We got it!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_BOTTOM_R_FACEINW
+			Identifier: message_Talk
 				Dialogue: GOOD! Let's get started!
+			Identifier: message_Close
+			Identifier: screen2_FadeOut
+				Argument: 0
+				Argument: 30
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 30
+			Identifier: back2_SetMode
+				Argument: 0
+			Identifier: end
 		Case:
-			Value: default
-				Dialogue: Please explain again
-		Case:
-			Value: default
+			Value: Please explain again
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_ANGRY
+				Argument: 3
+			Identifier: Wait
+				Argument: 15
+			Identifier: se_Play
+				Argument: 8971
+			Identifier: camera_SetEffect
+				Argument: 2
+				Argument: 2
+				Argument: 3.0
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 19
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: 2
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_ANGRY
+				Argument: 3
+			Identifier: Wait
+				Argument: 5
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_SHOCKED
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_SHOCKED
+				Argument: 3
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 68
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 68
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitSe
+				Argument: 8971
+			Identifier: camera_SetEffect
+				Argument: 0
+				Argument: 0
+				Argument: 0
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_ANGRY
+				Argument: FACE_POS_TOP_L_CENTER
+			Identifier: message_FacePositionOffset
+				Argument: 3
+				Argument: 0
+			Identifier: message_Talk
 				Dialogue: Really?! You're not just messing with me, ARE you?
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 9
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 9
+			Identifier: Wait
+				Argument: 20
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 2
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 2
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_NONE
+				Argument: 3
+			Identifier: Wait
+				Argument: 30
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DOGOOMU
+				Argument: EFFECT_LAUGHING
+				Argument: 3
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DOGOOMU
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_TOP_L_CENTER
+			Identifier: message_FacePositionOffset
+				Argument: 3
+				Argument: 0
+			Identifier: message_Talk
 				Dialogue: All right. I've got a BIG heart. I'll explain as much as you want.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Wait
+				Argument: 30
+			Identifier: se_Play
+				Argument: 8961
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: EFFECT_SWEAT_DROP
+				Argument: 3
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_SWEAT_DROP
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 15
+			Identifier: end

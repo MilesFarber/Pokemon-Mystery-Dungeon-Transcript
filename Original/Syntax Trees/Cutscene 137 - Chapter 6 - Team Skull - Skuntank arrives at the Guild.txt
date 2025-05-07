@@ -2040,188 +2040,330 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: You're not a wimp...
+			Value: You're not a wimp...
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8972
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_TEARY_EYED
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Thanks for trying to cheer me up, [hero]...
+				Case:
+					Value: 2
+						Dialogue: Thanks for trying to cheer me up, [hero]...
+				Case:
+					Value: default
+						Dialogue: Thanks for trying to cheer me up, [hero]...
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_SAD
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: But...
+				Case:
+					Value: 2
+						Dialogue: But...
+				Case:
+					Value: default
+						Dialogue: But...
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: But I really am a wimp...
+				Case:
+					Value: 2
+						Dialogue: But I really am a wimp...
+				Case:
+					Value: default
+						Dialogue: But I really am a wimp...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Wait
+				Argument: 20
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: But it's nothing new for me...
+				Case:
+					Value: 2
+						Dialogue: But it's nothing new for me...
+				Case:
+					Value: default
+						Dialogue: But it's nothing new for me...
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: I've decided that I can still do my best even if I'm not very brave.
+				Case:
+					Value: 2
+						Dialogue: I've decided that I can still do my best even if I'm not very brave.
+				Case:
+					Value: default
+						Dialogue: I've decided that I can still do my best even if I'm not very brave.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: I won't let something like this break me.
+				Case:
+					Value: 2
+						Dialogue: I'm not going to give up over something like this.
+				Case:
+					Value: default
+						Dialogue: I'm not giving up over something like this.
+			Identifier: message_KeyWait
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_WIGGLYTUFFS_GUILD
+				Argument: 0
+				Argument: 256
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: I'm going to be cheerful and keep trying.
+				Case:
+					Value: 2
+						Dialogue: I'm going to be cheerful and keep trying.
+				Case:
+					Value: default
+						Dialogue: I'm going to be cheerful and keep trying.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Thanks, [hero]!
+				Case:
+					Value: 2
+						Dialogue: Thank you, [hero]!
+				Case:
+					Value: default
+						Dialogue: Thank you, [hero]!
+			Label: @label_2;
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: For now, we'd better keep working like we've been doing.
+				Case:
+					Value: 2
+						Dialogue: For now, we'd better keep working like we've been doing.
+				Case:
+					Value: default
+						Dialogue: For now, we'd better keep working like we've been doing.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPLEFT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UPLEFT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Today we're supposed to handle the jobs on the Job Bulletin Board and the Outlaw Notice Board.
+				Case:
+					Value: 2
+						Dialogue: Today we're supposed to handle the jobs on the Job Bulletin Board and the Outlaw Notice Board.
+				Case:
+					Value: default
+						Dialogue: Today we're supposed to handle the jobs on the Job Bulletin Board and the Outlaw Notice Board.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Let's keep at it, [hero]!
+				Case:
+					Value: 2
+						Dialogue: Let's keep at it, [hero]!
+				Case:
+					Value: default
+						Dialogue: Let's keep at it, [hero]!
+			Identifier: message_Close
+			Identifier: end
 		Case:
-			Value: default
-			Identifier: case
-				Argument: 1
-				Dialogue: Thanks for trying to cheer me up, [hero]...
-			Identifier: case
-				Argument: 2
-				Dialogue: Thanks for trying to cheer me up, [hero]...
-			Identifier: default
-				Dialogue: Thanks for trying to cheer me up, [hero]...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: But...
-			Identifier: case
-				Argument: 2
-				Dialogue: But...
-			Identifier: default
-				Dialogue: But...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: But I really am a wimp...
-			Identifier: case
-				Argument: 2
-				Dialogue: But I really am a wimp...
-			Identifier: default
-				Dialogue: But I really am a wimp...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: But it's nothing new for me...
-			Identifier: case
-				Argument: 2
-				Dialogue: But it's nothing new for me...
-			Identifier: default
-				Dialogue: But it's nothing new for me...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I've decided that I can still do my best even if I'm not very brave.
-			Identifier: case
-				Argument: 2
-				Dialogue: I've decided that I can still do my best even if I'm not very brave.
-			Identifier: default
-				Dialogue: I've decided that I can still do my best even if I'm not very brave.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I won't let something like this break me.
-			Identifier: case
-				Argument: 2
-				Dialogue: I'm not going to give up over something like this.
-			Identifier: default
-				Dialogue: I'm not giving up over something like this.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I'm going to be cheerful and keep trying.
-			Identifier: case
-				Argument: 2
-				Dialogue: I'm going to be cheerful and keep trying.
-			Identifier: default
-				Dialogue: I'm going to be cheerful and keep trying.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Thanks, [hero]!
-			Identifier: case
-				Argument: 2
-				Dialogue: Thank you, [hero]!
-			Identifier: default
-				Dialogue: Thank you, [hero]!
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: For now, we'd better keep working like we've been doing.
-			Identifier: case
-				Argument: 2
-				Dialogue: For now, we'd better keep working like we've been doing.
-			Identifier: default
-				Dialogue: For now, we'd better keep working like we've been doing.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Today we're supposed to handle the jobs on the Job Bulletin Board and the Outlaw Notice Board.
-			Identifier: case
-				Argument: 2
-				Dialogue: Today we're supposed to handle the jobs on the Job Bulletin Board and the Outlaw Notice Board.
-			Identifier: default
-				Dialogue: Today we're supposed to handle the jobs on the Job Bulletin Board and the Outlaw Notice Board.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's keep at it, [hero]!
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's keep at it, [hero]!
-			Identifier: default
-				Dialogue: Let's keep at it, [hero]!
-		Case:
-			Value: default
-				Dialogue: Bok bok bok!
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I-I guess you're right...
-			Identifier: case
-				Argument: 2
-				Dialogue: I-I guess you're right...
-			Identifier: default
-				Dialogue: I-I guess you're right...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I'm a really big chicken.
-			Identifier: case
-				Argument: 2
-				Dialogue: I'm a really big chicken.
-			Identifier: default
-				Dialogue: I'm a really big chicken.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: But it's nothing new for me...
-			Identifier: case
-				Argument: 2
-				Dialogue: But it's nothing new for me...
-			Identifier: default
-				Dialogue: But it's nothing new for me...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I've decided that I can still do my best even if I'm not very brave.
-			Identifier: case
-				Argument: 2
-				Dialogue: I've decided that I can still do my best even if I'm not very brave.
-			Identifier: default
-				Dialogue: I've decided that I can still do my best even if I'm not very brave.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I won't let something like this break me.
-			Identifier: case
-				Argument: 2
-				Dialogue: I'm not going to give up over something like this.
-			Identifier: default
-				Dialogue: I'm not giving up over something like this.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I'm going to be cheerful and keep trying.
-			Identifier: case
-				Argument: 2
-				Dialogue: I'm going to be cheerful and keep trying.
-			Identifier: default
-				Dialogue: I'm going to be cheerful and keep trying.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Thanks for straightening me out, [hero]!
-			Identifier: case
-				Argument: 2
-				Dialogue: Thank you for straightening me out, [hero]!
-			Identifier: default
-				Dialogue: Thank you for straightening me out, [hero]!
+			Value: Bok bok bok!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8972
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_SAD
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: I-I guess you're right...
+				Case:
+					Value: 2
+						Dialogue: I-I guess you're right...
+				Case:
+					Value: default
+						Dialogue: I-I guess you're right...
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: I'm a really big chicken.
+				Case:
+					Value: 2
+						Dialogue: I'm a really big chicken.
+				Case:
+					Value: default
+						Dialogue: I'm a really big chicken.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Wait
+				Argument: 20
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: But it's nothing new for me...
+				Case:
+					Value: 2
+						Dialogue: But it's nothing new for me...
+				Case:
+					Value: default
+						Dialogue: But it's nothing new for me...
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: I've decided that I can still do my best even if I'm not very brave.
+				Case:
+					Value: 2
+						Dialogue: I've decided that I can still do my best even if I'm not very brave.
+				Case:
+					Value: default
+						Dialogue: I've decided that I can still do my best even if I'm not very brave.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: I won't let something like this break me.
+				Case:
+					Value: 2
+						Dialogue: I'm not going to give up over something like this.
+				Case:
+					Value: default
+						Dialogue: I'm not giving up over something like this.
+			Identifier: message_KeyWait
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_WIGGLYTUFFS_GUILD
+				Argument: 0
+				Argument: 256
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: I'm going to be cheerful and keep trying.
+				Case:
+					Value: 2
+						Dialogue: I'm going to be cheerful and keep trying.
+				Case:
+					Value: default
+						Dialogue: I'm going to be cheerful and keep trying.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Thanks for straightening me out, [hero]!
+				Case:
+					Value: 2
+						Dialogue: Thank you for straightening me out, [hero]!
+				Case:
+					Value: default
+						Dialogue: Thank you for straightening me out, [hero]!
+			Identifier: jump
+				Argument: label_2

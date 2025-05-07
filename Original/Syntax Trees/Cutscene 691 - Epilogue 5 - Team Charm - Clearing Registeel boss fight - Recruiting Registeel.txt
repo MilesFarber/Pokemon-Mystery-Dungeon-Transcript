@@ -188,4 +188,155 @@ def 0:
 			Argument: 30
 		Identifier: end
 	Conditional: Else
-		Unknown: Jump-switches to-be-implemented
+		Switch:
+			Variable: random(100)
+			Case:
+				Value: 50
+				Identifier: Wait
+					Argument: 15
+				Identifier: bgm_PlayFadeIn
+					Argument: BGM_IN_THE_DEPTHS_OF_THE_PIT
+					Argument: 0
+					Argument: 256
+				Identifier: message_Mail
+					Dialogue: [CN]........................
+				Identifier: message_Mail
+					Dialogue: [CN]A voice echoed from somewhere...
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Identifier: se_Play
+					Argument: 7175
+				Identifier: SetEffect
+					Template
+						Type: performer
+						Identifier: 3
+					Argument: EFFECT_WHITE_LIGHT_ENGULFING_OUT
+					Argument: 3
+				Identifier: Wait
+					Argument: 15
+				Identifier: supervision_Acting
+					Argument: 2
+				Identifier: Wait
+					Argument: 15
+				Identifier: WaitExecutePerformer
+					Argument: 3
+				Identifier: SetEffect
+					Template
+						Type: performer
+						Identifier: 3
+					Argument: EFFECT_NONE
+					Argument: 3
+				Identifier: Wait
+					Argument: 15
+				Identifier: message_SetFace
+					Argument: ACTOR_NPC_REJISUCHIRU
+					Argument: FACE_NORMAL
+					Argument: FACE_POS_TOP_R_CENTER
+				Identifier: message_Talk
+					Dialogue: I AM [CS:N]REGISTEEL[CR]...
+				Identifier: message_Talk
+					Dialogue: I PLEDGE...SERVICE TO YOU...
+				Label: @label_4;
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Switch:
+					Variable: ProcessSpecial(PROCESS_SPECIAL_PREPARE_MENU_ACCEPT_TEAM_MEMBER, 2, 0)
+				Switch:
+					Variable: message_Menu(MENU_ACCEPT_TEAM_MEMBER)
+					Case:
+						Value: 1
+						Identifier: CallCommon
+							Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+						Identifier: me_Play
+							Argument: 5
+						Identifier: message_Mail
+							Dialogue: [CN][c_name:NPC_NEW_FRIEND] joined the team!
+						Identifier: WaitMe
+							Argument: 5
+						Identifier: CallCommon
+							Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+						Identifier: bgm_FadeOut
+							Argument: 30
+						Identifier: se_Play
+							Argument: 7183
+						Identifier: SetEffect
+							Template
+								Type: performer
+								Identifier: 3
+							Argument: EFFECT_WHITE_LIGHT_ENGULFING
+							Argument: 3
+						Identifier: Wait
+							Argument: 10
+						Identifier: Destroy
+							Template
+								Type: actor
+								Identifier: ACTOR_NPC_REJISUCHIRU
+						Identifier: Wait
+							Argument: 15
+						Identifier: WaitExecutePerformer
+							Argument: 3
+						Identifier: SetEffect
+							Template
+								Type: performer
+								Identifier: 3
+							Argument: EFFECT_NONE
+							Argument: 3
+						Identifier: Wait
+							Argument: 30
+						Identifier: jump
+							Argument: label_0
+					Case:
+						Value: 2
+						Identifier: CallCommon
+							Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+						Identifier: message_Mail
+							Dialogue: [CN]Are you sure?[K] [CN]You're sure you won't accept [CN]this potential new member?
+						Switch:
+							Variable: message_SwitchMenu(0, 1)
+							Case:
+								Value: Reconsider
+								Identifier: jump
+									Argument: label_4
+							Case:
+								Value: Refuse
+								Identifier: CallCommon
+									Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+								Identifier: message_Mail
+									Dialogue: [CN][player] turned down [CN][CS:N]Registeel[CR]'s offer to join.
+								Identifier: message_Close
+								Identifier: bgm_FadeOut
+									Argument: 30
+								Identifier: se_Play
+									Argument: 7183
+								Identifier: SetEffect
+									Template
+										Type: performer
+										Identifier: 3
+									Argument: EFFECT_WHITE_LIGHT_ENGULFING
+									Argument: 3
+								Identifier: Wait
+									Argument: 10
+								Identifier: Destroy
+									Template
+										Type: actor
+										Identifier: ACTOR_NPC_REJISUCHIRU
+								Identifier: Wait
+									Argument: 15
+								Identifier: WaitExecutePerformer
+									Argument: 3
+								Identifier: SetEffect
+									Template
+										Type: performer
+										Identifier: 3
+									Argument: EFFECT_NONE
+									Argument: 3
+								Identifier: Wait
+									Argument: 30
+								Identifier: jump
+									Argument: label_0
+						Identifier: break
+				Identifier: break
+			Case:
+				Value: default
+				Identifier: jump
+					Argument: label_0

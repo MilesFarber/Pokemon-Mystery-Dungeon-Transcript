@@ -20,26 +20,48 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yes
-		Case:
-			Value: default
-			Label: @label_2;
-			Identifier: main_EnterDungeon
-				Argument: 22
-				Argument: 0
-			Identifier: main_EnterDungeon
-				Argument: 1
-				Argument: 0
-			Identifier: hold
-		Case:
-			Value: default
-			Identifier: SCENARIO_MAIN
-				Argument: scn
+			Value: Yes
+			Label: @label_0;
+			Identifier: message_Close
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: Position
+				Template
+					Type: m0
+					Identifier: 28.5
+					Identifier: 3.5
+			Identifier: Wait
 				Argument: 15
-				Argument: 2
-			Identifier: jump
-				Argument: label_2
-		Case:
-			Value: default
-				Dialogue: No
+			Identifier: MovePositionMark
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: Position
+				Template
+					Type: m1
+					Identifier: 28.5
+					Identifier: 3.5
+			Identifier: Wait
+				Argument: 20
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 30
+			Conditional: If
+				Condition: ($SCENARIO_MAIN) >= [15, 2]
+				Label: @label_2;
+				Identifier: main_EnterDungeon
+					Argument: 22
+					Argument: 0
+				Identifier: main_EnterDungeon
+					Argument: 1
+					Argument: 0
+				Identifier: hold
+				Identifier: else
+					Argument: SCENARIO_MAIN
+					Argument: scn
+					Argument: 15
+					Argument: 2
+				Identifier: jump
+					Argument: label_2

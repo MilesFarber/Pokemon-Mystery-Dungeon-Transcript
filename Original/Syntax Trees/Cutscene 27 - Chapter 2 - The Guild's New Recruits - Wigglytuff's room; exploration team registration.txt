@@ -587,4 +587,784 @@ def 0:
 	Identifier: message_Mail
 		Dialogue: [CN][partner] peered into [CN]the Treasure Bag.
 	Identifier: message_KeyWait
-	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: ProcessSpecial(PROCESS_SPECIAL_GET_HERO_KIND, 0, 0)
+		Case:
+			Value: 0
+			Label: @label_0;
+			Identifier: item_Set
+				Argument: 0
+				Argument: 37
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Label: @label_21;
+			Identifier: me_Play
+				Argument: 4
+			Identifier: message_Mail
+				Dialogue: [CN]The [s_item:0] [CN]was inside!
+			Identifier: WaitMe
+				Argument: 4
+			Identifier: message_KeyWait
+			Switch:
+				Variable: $CONFIG_COLOR_KIND
+				Case:
+					Value: 0
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Silver Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 428
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Label: @label_38;
+					Identifier: Wait
+						Argument: 20
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_PUKURIN
+						Argument: FACE_NORMAL
+						Argument: FACE_POS_TOP_L_CENTER
+					Identifier: message_Talk
+						Dialogue: Those two items are special.
+					Identifier: message_Talk
+						Dialogue: I'm sure they will help you on your adventures! ♪
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+						Argument: 4
+						Argument: 10
+						Argument: DIR_UP
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_ATTENDANT1
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 4
+						Argument: 10
+						Argument: DIR_UP
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_PLAYER
+					Identifier: ExecuteCommon
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+						Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+						Argument: 0
+					Identifier: message_SetFace
+						Argument: ACTOR_ATTENDANT1
+						Argument: FACE_INSPIRED
+						Argument: FACE_POS_STANDARD
+					Switch:
+						Variable: $PARTNER_TALK_KIND
+						Case:
+							Value: 1
+								Dialogue: Th-thank you![K] We'll do our best!
+						Case:
+							Value: 2
+								Dialogue: Th-thank you![K] We'll do our best!
+						Case:
+							Value: default
+								Dialogue: Th-thank you![K] We'll do our best!
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_ATTENDANT1
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: message_SetFace
+						Argument: ACTOR_NPC_PUKURIN
+						Argument: FACE_NORMAL
+						Argument: FACE_POS_TOP_L_CENTER
+					Identifier: message_Talk
+						Dialogue: Yup.[K] But you're only apprenticing right now. So do your best...to train!
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: ExecuteCommon
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+						Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+						Argument: 0
+					Identifier: message_SetFace
+						Argument: ACTOR_ATTENDANT1
+						Argument: FACE_INSPIRED
+						Argument: FACE_POS_STANDARD
+					Switch:
+						Variable: $PARTNER_TALK_KIND
+						Case:
+							Value: 1
+								Dialogue: We will!
+						Case:
+							Value: 2
+								Dialogue: We will!
+						Case:
+							Value: default
+								Dialogue: We will!
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_ATTENDANT1
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: Turn2DirectionLives
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+						Argument: 4
+						Argument: 10
+						Argument: ACTOR_PLAYER
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_ATTENDANT1
+					Identifier: Turn2DirectionLives
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 4
+						Argument: 10
+						Argument: ACTOR_ATTENDANT1
+					Identifier: message_SetFace
+						Argument: ACTOR_ATTENDANT1
+						Argument: FACE_HAPPY
+						Argument: FACE_POS_STANDARD
+					Switch:
+						Variable: $PARTNER_TALK_KIND
+						Case:
+							Value: 1
+								Dialogue: Let's do this right, [hero]!
+						Case:
+							Value: 2
+								Dialogue: Let's always do our best, [hero]!
+						Case:
+							Value: default
+								Dialogue: Let's always do our best, [hero]!
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: SetAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 71
+					Identifier: WaitAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_PLAYER
+					Identifier: SetAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 71
+					Identifier: WaitAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_PLAYER
+					Identifier: SetAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 2
+					Identifier: Wait
+						Argument: 45
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 4
+						Argument: 10
+						Argument: DIR_DOWN
+					Identifier: Turn2Direction
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+						Argument: 4
+						Argument: 10
+						Argument: DIR_DOWN
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_PLAYER
+					Identifier: WaitExecuteLives
+						Argument: ACTOR_ATTENDANT1
+					Identifier: Wait
+						Argument: 20
+					Identifier: SetAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+						Argument: 66
+					Identifier: SetAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+						Argument: 66
+					Identifier: WaitAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_PLAYER
+					Identifier: WaitAnimation
+						Template
+							Type: actor
+							Identifier: ACTOR_ATTENDANT1
+					Identifier: Wait
+						Argument: 80
+					Identifier: bgm_FadeOut
+						Argument: 120
+					Identifier: screen_FadeOut
+						Argument: 1
+						Argument: 60
+					Identifier: WaitBgm
+						Argument: BGM_WIGGLYTUFFS_GUILD
+					Identifier: end
+				Case:
+					Value: 1
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Brown Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 429
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 2
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Red Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 430
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 3
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Pink Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 431
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 4
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]An [CS:I]Orange Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 432
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 5
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Yellow Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 433
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 6
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Lime Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 434
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 7
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Green Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 435
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 8
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Viridian Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 436
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 9
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Minty Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 437
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 10
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Sky Blue Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 438
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 11
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Blue Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 439
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 12
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Cobalt Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 440
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 13
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Purple Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 441
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 14
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Violet Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 442
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+				Case:
+					Value: 15
+					Identifier: me_Play
+						Argument: 4
+					Identifier: message_Mail
+						Dialogue: [CN]A [CS:I]Fuchsia Bow[CR] was also inside!
+					Identifier: WaitMe
+						Argument: 4
+					Identifier: CallCommon
+						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+					Identifier: item_Set
+						Argument: 0
+						Argument: 443
+						Argument: 0
+					Switch:
+						Variable: message_Menu(MENU_GIVE_ITEM)
+					Identifier: Wait
+						Argument: 10
+					Identifier: jump
+						Argument: label_38
+			Identifier: break
+		Case:
+			Value: 1
+			Identifier: item_Set
+				Argument: 0
+				Argument: 40
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 2
+			Identifier: item_Set
+				Argument: 0
+				Argument: 41
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 3
+			Identifier: item_Set
+				Argument: 0
+				Argument: 23
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 4
+			Identifier: item_Set
+				Argument: 0
+				Argument: 23
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 5
+			Identifier: item_Set
+				Argument: 0
+				Argument: 37
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 6
+			Identifier: item_Set
+				Argument: 0
+				Argument: 37
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 7
+			Identifier: item_Set
+				Argument: 0
+				Argument: 40
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 8
+			Identifier: item_Set
+				Argument: 0
+				Argument: 41
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 9
+			Identifier: item_Set
+				Argument: 0
+				Argument: 26
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 10
+			Identifier: item_Set
+				Argument: 0
+				Argument: 40
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 11
+			Identifier: item_Set
+				Argument: 0
+				Argument: 26
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 12
+			Identifier: item_Set
+				Argument: 0
+				Argument: 41
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 13
+			Identifier: item_Set
+				Argument: 0
+				Argument: 26
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 14
+			Identifier: item_Set
+				Argument: 0
+				Argument: 23
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 15
+			Identifier: item_Set
+				Argument: 0
+				Argument: 40
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 16
+			Identifier: item_Set
+				Argument: 0
+				Argument: 40
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 17
+			Identifier: item_Set
+				Argument: 0
+				Argument: 41
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 18
+			Identifier: item_Set
+				Argument: 0
+				Argument: 26
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 19
+			Identifier: item_Set
+				Argument: 0
+				Argument: 41
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21
+		Case:
+			Value: 20
+			Identifier: item_Set
+				Argument: 0
+				Argument: 37
+				Argument: 0
+			Switch:
+				Variable: message_Menu(MENU_GIVE_ITEM)
+			Identifier: Wait
+				Argument: 10
+			Identifier: jump
+				Argument: label_21

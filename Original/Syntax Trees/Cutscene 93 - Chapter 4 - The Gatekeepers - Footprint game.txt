@@ -45,17 +45,80 @@ def 0:
 			Variable: message_Menu(MENU_GUILD_MINI_GAME_FLAG_CHECK)
 			Case:
 				Value: 0
-			Case:
-				Value: 53
-				Identifier: case
-					Argument: 53
-					Argument: supervision_ExecuteStation
-					Argument: LEVEL_T00P01
-					Argument: M01A01
+				Identifier: EVENT_LOCAL
 					Argument: 0
-				Identifier: hold
+				Label: @label_10;
+				Identifier: screen2_FadeOut
+					Argument: 0
+					Argument: 30
+				Identifier: screen_FadeOut
+					Argument: 1
+					Argument: 30
+				Identifier: supervision2_SpecialActing
+					Argument: 3
+					Argument: 0
+					Argument: 0
+				Identifier: back2_SetMode
+					Argument: 0
+				Switch:
+					Variable: message_Menu(MENU_GUILD_MINI_GAME_END)
+				Switch:
+					Variable: scn($SCENARIO_SELECT)[0]
+					Case:
+						Value: 53
+						Identifier: supervision_ExecuteStation
+							Argument: LEVEL_T00P01
+							Argument: M01A01
+							Argument: 0
+						Identifier: hold
+						Identifier: default
+							Argument: end
+				Identifier: break
+				Identifier: case
+					Argument: 1
+					Argument: EVENT_LOCAL
+					Argument: 1
+				Identifier: jump
+					Argument: label_10
+				Identifier: case
+					Argument: 2
+					Argument: EVENT_LOCAL
+					Argument: 2
+				Identifier: jump
+					Argument: label_10
+				Identifier: case
+					Argument: 3
+					Argument: EVENT_LOCAL
+					Argument: 3
+				Identifier: jump
+					Argument: label_10
+				Identifier: case
+					Argument: 4
+					Argument: EVENT_LOCAL
+					Argument: 4
+				Identifier: jump
+					Argument: label_10
+				Identifier: case
+					Argument: 5
+					Argument: EVENT_LOCAL
+					Argument: 5
+				Identifier: jump
+					Argument: label_10
+				Identifier: case
+					Argument: 6
+					Argument: EVENT_LOCAL
+					Argument: 6
+				Identifier: jump
+					Argument: label_10
+				Identifier: case
+					Argument: 7
+					Argument: EVENT_LOCAL
+					Argument: 7
+				Identifier: jump
+					Argument: label_10
 				Identifier: default
-					Argument: end
+					Argument: jump
+					Argument: label_10
 	Conditional: Else
 		Identifier: EVENT_LOCAL
 			Argument: 0

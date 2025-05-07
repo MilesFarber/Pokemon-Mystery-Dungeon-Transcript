@@ -50,53 +50,89 @@ def 0:
 		Switch:
 			Variable: message_SwitchMenu(0, 1)
 			Case:
-				Value: default
-					Dialogue: Yes
-			Case:
-				Value: default
-				Identifier: case
+				Value: Yes
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Yup. We're all geared up!
+					Case:
+						Value: 2
+							Dialogue: OK! We're all set to go!
+					Case:
+						Value: default
+							Dialogue: OK. I guess we're ready!
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: All right! Let's roll!
+					Case:
+						Value: 2
+							Dialogue: OK! Off we go!
+					Case:
+						Value: default
+							Dialogue: OK! Let's go!
+				Identifier: message_Close
+				Identifier: Turn2Direction
+					Template
+						Type: actor
+						Identifier: ACTOR_PLAYER
+					Argument: 4
+					Argument: 10
+					Argument: DIR_UP
+				Identifier: Turn2Direction
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: 4
+					Argument: 10
+					Argument: DIR_UP
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: screen_FadeOut
 					Argument: 1
-					Dialogue: Yup. We're all geared up!
-				Identifier: case
-					Argument: 2
-					Dialogue: OK! We're all set to go!
-				Identifier: default
-					Dialogue: OK. I guess we're ready!
-			Case:
-				Value: 1
-				Identifier: case
+					Argument: 30
+				Identifier: main_EnterDungeon
+					Argument: 41
+					Argument: 0
+				Switch:
+					Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+				Identifier: main_EnterDungeon
 					Argument: 1
-					Dialogue: All right! Let's roll!
-				Identifier: case
-					Argument: 2
-					Dialogue: OK! Off we go!
-				Identifier: default
-					Dialogue: OK! Let's go!
+					Argument: 0
+				Identifier: hold
+				Identifier: end
 			Case:
-				Value: default
-			Case:
-				Value: default
-					Dialogue: No
-			Case:
-				Value: 1
-				Identifier: case
-					Argument: 1
-					Dialogue: Oh, all right.
-				Identifier: case
-					Argument: 2
-					Dialogue: Oh, OK.
-				Identifier: default
-					Dialogue: Oh, OK.
-			Case:
-				Value: 1
-				Identifier: case
-					Argument: 1
-					Dialogue: We'll go when you're ready.
-				Identifier: case
-					Argument: 2
-					Dialogue: We'll go when you're ready.
-				Identifier: default
-					Dialogue: We'll go when you're ready.
+				Value: No
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Oh, all right.
+					Case:
+						Value: 2
+							Dialogue: Oh, OK.
+					Case:
+						Value: default
+							Dialogue: Oh, OK.
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: We'll go when you're ready.
+					Case:
+						Value: 2
+							Dialogue: We'll go when you're ready.
+					Case:
+						Value: default
+							Dialogue: We'll go when you're ready.
+				Identifier: message_Close
+				Identifier: end
 	Conditional: Else
 		Identifier: SCENARIO_MAIN
 			Argument: scn

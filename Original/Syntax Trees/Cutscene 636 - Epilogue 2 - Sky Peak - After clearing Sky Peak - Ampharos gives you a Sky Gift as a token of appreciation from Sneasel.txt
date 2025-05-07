@@ -363,4 +363,103 @@ def 0:
 		Argument: 8710
 	Identifier: Wait
 		Argument: 30
-	Unknown: Jump-switches to-be-implemented
+	Switch:
+		Variable: ProcessSpecial(PROCESS_SPECIAL_IS_BAG_FULL, 0, 0)
+		Case:
+			Value: 0
+			Label: @label_0;
+			Array accessor
+				Array: $SCENARIO_MAIN_BIT_FLAG
+				Index: 48
+				Value: 1
+			Identifier: item_SetTableData
+				Argument: 0
+				Argument: 0
+			Switch:
+				Variable: ProcessSpecial(PROCESS_SPECIAL_ADD_TABLE_ITEM_TO_BAG, 0, 0)
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_APPOINT
+				Argument: 5
+			Identifier: SlidePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_APPOINT
+				Argument: 1
+				Argument: 0
+				Argument: 16
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_APPOINT
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_APPOINT
+				Argument: 2
+			Identifier: Wait
+				Argument: 20
+			Identifier: message_Mail
+				Dialogue: [CN]This is...
+			Identifier: message_Mail
+				Dialogue: [CN][player] received [CN]a [CS:I]Sky Gift[CR]!
+			Identifier: message_Mail
+				Dialogue: [CN]You gently open the lid...
+			Identifier: message_Close
+			Identifier: se_Play
+				Argument: 11021
+			Identifier: WaitSe
+				Argument: 11021
+			Identifier: message_Mail
+				Dialogue: [CN]Inside was the [CN][s_item:0]!
+			Identifier: message_Mail
+				Dialogue: [CN]A warm and fuzzy feeling falls over you...
+			Identifier: message_Close
+			Identifier: end
+		Case:
+			Value: 1
+			Identifier: se_Play
+				Argument: 8964
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DENRYUU
+				Argument: EFFECT_TWO_ARROWS_AT_SIDE_LEFT
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_DENRYUU
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_DENRYUU
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_DENRYUU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Identifier: message_Talk
+				Dialogue: Well, I thought so, but you seem to have too much already.
+			Identifier: message_Close
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_APPOINT
+				Argument: 5
+			Identifier: SlidePositionOffset
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_APPOINT
+				Argument: 1
+				Argument: 0
+				Argument: 16
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER_APPOINT
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER_APPOINT
+				Argument: 2
+			Identifier: Wait
+				Argument: 20
+			Identifier: message_Talk
+				Dialogue: All right, I'll hold on to this for you, then.
+			Identifier: message_Close
+			Identifier: end

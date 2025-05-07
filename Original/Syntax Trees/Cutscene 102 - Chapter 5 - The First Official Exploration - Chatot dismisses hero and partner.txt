@@ -39,92 +39,323 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Understood
-		Case:
-			Value: default
+			Value: Understood
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: SCENARIO_MAIN
+				Argument: scn
+				Argument: 6
+				Argument: 2
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_HAPPY
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: Good! ♪
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: All right, I'll leave you all to thoroughly investigate the waterfall! ♪
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: bgm_FadeOut
+				Argument: 120
+			Identifier: clear
+				Argument: EVENT_LOCAL
+			Identifier: Unlock
+				Argument: 5
+			Identifier: Wait
+				Argument: 60
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Wait
+				Argument: 5
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWNLEFT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: se_Play
+				Argument: 8978
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_EXCLAMATION_MARK
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: Huh? What's wrong? You're shivering.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: ...
-			Identifier: case
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_TEARY_EYED
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: ...
+				Case:
+					Value: 2
+						Dialogue: ...
+				Case:
+					Value: default
+						Dialogue: ...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8972
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+				Argument: 3
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 18
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
 				Argument: 2
-				Dialogue: ...
-			Identifier: default
-				Dialogue: ...
-		Case:
-			Value: default
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_SURPRISED
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: A-are you all right?
-		Case:
-			Value: 1
-			Identifier: case
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_TEARY_EYED
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Yup. I'm OK. It's just the anticipation that's making me nervous.
+				Case:
+					Value: 2
+						Dialogue: Yes. I'm OK. It's just the anticipation that's making me nervous.
+				Case:
+					Value: default
+						Dialogue: Yep. I'm OK. It's just the anticipation that's making me nervous.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: This will be our first real job as an exploration team.
+				Case:
+					Value: 2
+						Dialogue: This will be the first time we get to do a real job as an exploration team.
+				Case:
+					Value: default
+						Dialogue: This will be our first real job as an exploration team.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: I'm feeling a little worked up...
+				Case:
+					Value: 2
+						Dialogue: I'm feeling a little worked up...
+				Case:
+					Value: default
+						Dialogue: I'm getting a bit emotional...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: EVENT_LOCAL
 				Argument: 1
-				Dialogue: Yup. I'm OK. It's just the anticipation that's making me nervous.
-			Identifier: case
+			Identifier: WaitLockLives
+				Argument: 6
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Wait
+				Argument: 30
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWN
+			Identifier: Wait
+				Argument: 15
+			Identifier: ExecuteCommon
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+				Argument: 0
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_WIGGLYTUFFS_GUILD
+				Argument: 0
+				Argument: 256
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Yeah! I might just burst from the excitement!
+				Case:
+					Value: 2
+						Dialogue: Oh, I feel like I'm going to burst from excitement!
+				Case:
+					Value: default
+						Dialogue: Ooh... I'm bubbling over with excitement!
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Let's do this right, [hero]!
+				Case:
+					Value: 2
+						Dialogue: Let's do our best, [hero]!
+				Case:
+					Value: default
+						Dialogue: Let's do our best, [hero]!
+			Identifier: message_Close
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
 				Argument: 2
-				Dialogue: Yes. I'm OK. It's just the anticipation that's making me nervous.
-			Identifier: default
-				Dialogue: Yep. I'm OK. It's just the anticipation that's making me nervous.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: This will be our first real job as an exploration team.
-			Identifier: case
+			Identifier: Wait
+				Argument: 30
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWN
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWN
+			Identifier: Wait
+				Argument: 20
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 66
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 66
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: Wait
+				Argument: 60
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
 				Argument: 2
-				Dialogue: This will be the first time we get to do a real job as an exploration team.
-			Identifier: default
-				Dialogue: This will be our first real job as an exploration team.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I'm feeling a little worked up...
-			Identifier: case
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
 				Argument: 2
-				Dialogue: I'm feeling a little worked up...
-			Identifier: default
-				Dialogue: I'm getting a bit emotional...
+			Identifier: Wait
+				Argument: 30
+			Identifier: dungeon_mode
+				Argument: 6
+				Argument: DMODE_OPEN
+			Identifier: end
 		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Yeah! I might just burst from the excitement!
-			Identifier: case
-				Argument: 2
-				Dialogue: Oh, I feel like I'm going to burst from excitement!
-			Identifier: default
-				Dialogue: Ooh... I'm bubbling over with excitement!
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's do this right, [hero]!
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's do our best, [hero]!
-			Identifier: default
-				Dialogue: Let's do our best, [hero]!
-		Case:
-			Value: default
-				Dialogue: Please explain again
-		Case:
-			Value: default
+			Value: Please explain again
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8961
+			Identifier: SetEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+				Argument: EFFECT_SWEAT_DROP
+				Argument: 3
+			Identifier: WaitEffect
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_PERAPPU
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_PERAPPU
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_PERAPPU
+				Argument: FACE_PAIN
+				Argument: FACE_POS_TOP_C_FACEL
+			Identifier: message_Talk
 				Dialogue: Fine, I'll explain it again.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Let me see your Wonder Map.
-		Case:
-			Value: default
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_Mail
 				Dialogue: [CN][hero] opened [CN]the Wonder Map.
+			Identifier: message_Close
+			Identifier: se_Play
+				Argument: 6667
+			Identifier: screen_FadeOut
+				Argument: 1
+				Argument: 15
+			Identifier: end
 def 1:
 	Target: actor ACTOR_ATTENDANT1
 	Identifier: SetAnimation
@@ -151,6 +382,13 @@ def 1:
 			Argument: 2
 		Switch:
 			Variable: $EVENT_LOCAL
+			Case:
+				Value: 1
+				Identifier: break_loop
+				Identifier: break
+			Case:
+				Value: default
+				Identifier: continue
 	Identifier: SetAnimation
 		Argument: 2
 	Identifier: Lock

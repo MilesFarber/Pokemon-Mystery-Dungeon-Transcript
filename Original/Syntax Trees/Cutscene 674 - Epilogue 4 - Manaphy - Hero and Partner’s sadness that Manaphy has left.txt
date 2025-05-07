@@ -181,108 +181,214 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: It's sad...
-		Case:
-			Value: default
-			Identifier: case
-				Argument: 1
-				Dialogue: Yup...[K] But...
-			Identifier: case
+			Value: It's sad...
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Yup...[K] But...
+				Case:
+					Value: 2
+						Dialogue: Yes...[K] But...
+				Case:
+					Value: default
+						Dialogue: Yes...[K] But...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Label: @label_2;
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_ATTENDANT1
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: It was the right thing to do for [CS:N]Manaphy[CR].
+				Case:
+					Value: 2
+						Dialogue: We did the only right thing for [CS:N]Manaphy[CR].
+				Case:
+					Value: default
+						Dialogue: It was the right thing to do for [CS:N]Manaphy[CR].
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: I'm sure [CS:N]Walrein[CR] will raise him properly.
+				Case:
+					Value: 2
+						Dialogue: I think [CS:N]Walrein[CR] will raise him properly.
+				Case:
+					Value: default
+						Dialogue: I'm sure [CS:N]Walrein[CR] will raise him properly.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: And maybe...
+				Case:
+					Value: 2
+						Dialogue: And maybe...
+				Case:
+					Value: default
+						Dialogue: And maybe...
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Maybe, one day somewhere, we'll be able to meet [CS:N]Manaphy[CR]...
+				Case:
+					Value: 2
+						Dialogue: Maybe, one day somewhere, we'll be able to see [CS:N]Manaphy[CR] again...
+				Case:
+					Value: default
+						Dialogue: Maybe, one day somewhere, we'll be able to see [CS:N]Manaphy[CR] again...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 8
+				Argument: 10
+				Argument: DIR_UPRIGHT
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Wait
+				Argument: 120
+			Identifier: Turn2DirectionLives
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: Wait
+				Argument: 15
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Oh, [hero].
+				Case:
+					Value: 2
+						Dialogue: Oh, [hero].
+				Case:
+					Value: default
+						Dialogue: Oh, [hero].
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: We shouldn't go around feeling sorry and sad forever. I doubt [CS:N]Manaphy[CR] would want that.
+				Case:
+					Value: 2
+						Dialogue: We shouldn't go around feeling sorry and sad forever. I doubt [CS:N]Manaphy[CR] would want that.
+				Case:
+					Value: default
+						Dialogue: We shouldn't go around feeling sorry and sad forever. I doubt [CS:N]Manaphy[CR] would want that.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: But it's not like I can shake this off so easily...
+				Case:
+					Value: 2
+						Dialogue: But I can't get back to feeling like it's normal right away...
+				Case:
+					Value: default
+						Dialogue: But I don't think I can get over this right away...
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Still, we should try to be positive and keep moving forward...[K] All right?
+				Case:
+					Value: 2
+						Dialogue: Still, I think we should be positive and keep moving forward...[K] OK?
+				Case:
+					Value: default
+						Dialogue: Still, we should try to be positive and keep moving forward...[K] OK?
+			Identifier: message_Close
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
 				Argument: 2
-				Dialogue: Yes...[K] But...
-			Identifier: default
-				Dialogue: Yes...[K] But...
-		Case:
-			Value: 1
-			Identifier: case
+			Identifier: Wait
+				Argument: 30
+			Identifier: screen2_FadeOut
 				Argument: 1
-				Dialogue: It was the right thing to do for [CS:N]Manaphy[CR].
-			Identifier: case
-				Argument: 2
-				Dialogue: We did the only right thing for [CS:N]Manaphy[CR].
-			Identifier: default
-				Dialogue: It was the right thing to do for [CS:N]Manaphy[CR].
+				Argument: 30
+			Identifier: back2_SetMode
+				Argument: 0
+			Array accessor
+				Array: $PERFORMANCE_PROGRESS_LIST
+				Index: 24
+				Value: 1
+			Identifier: end
 		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: I'm sure [CS:N]Walrein[CR] will raise him properly.
-			Identifier: case
-				Argument: 2
-				Dialogue: I think [CS:N]Walrein[CR] will raise him properly.
-			Identifier: default
-				Dialogue: I'm sure [CS:N]Walrein[CR] will raise him properly.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: And maybe...
-			Identifier: case
-				Argument: 2
-				Dialogue: And maybe...
-			Identifier: default
-				Dialogue: And maybe...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Maybe, one day somewhere, we'll be able to meet [CS:N]Manaphy[CR]...
-			Identifier: case
-				Argument: 2
-				Dialogue: Maybe, one day somewhere, we'll be able to see [CS:N]Manaphy[CR] again...
-			Identifier: default
-				Dialogue: Maybe, one day somewhere, we'll be able to see [CS:N]Manaphy[CR] again...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Oh, [hero].
-			Identifier: case
-				Argument: 2
-				Dialogue: Oh, [hero].
-			Identifier: default
-				Dialogue: Oh, [hero].
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: We shouldn't go around feeling sorry and sad forever. I doubt [CS:N]Manaphy[CR] would want that.
-			Identifier: case
-				Argument: 2
-				Dialogue: We shouldn't go around feeling sorry and sad forever. I doubt [CS:N]Manaphy[CR] would want that.
-			Identifier: default
-				Dialogue: We shouldn't go around feeling sorry and sad forever. I doubt [CS:N]Manaphy[CR] would want that.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: But it's not like I can shake this off so easily...
-			Identifier: case
-				Argument: 2
-				Dialogue: But I can't get back to feeling like it's normal right away...
-			Identifier: default
-				Dialogue: But I don't think I can get over this right away...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Still, we should try to be positive and keep moving forward...[K] All right?
-			Identifier: case
-				Argument: 2
-				Dialogue: Still, I think we should be positive and keep moving forward...[K] OK?
-			Identifier: default
-				Dialogue: Still, we should try to be positive and keep moving forward...[K] OK?
-		Case:
-			Value: default
-				Dialogue: This is for the best...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Yup...[K] You're right...
-			Identifier: case
-				Argument: 2
-				Dialogue: Yes...[K] You're right...
-			Identifier: default
-				Dialogue: Yes...[K] You're right...
+			Value: This is for the best...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Yup...[K] You're right...
+				Case:
+					Value: 2
+						Dialogue: Yes...[K] You're right...
+				Case:
+					Value: default
+						Dialogue: Yes...[K] You're right...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: jump
+				Argument: label_2

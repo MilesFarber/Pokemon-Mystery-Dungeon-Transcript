@@ -20,25 +20,22 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yes
-		Case:
-			Value: default
-			Label: @label_2;
-			Identifier: bgm_FadeOut
-				Argument: 60
-			Identifier: main_EnterGround
-				Argument: LEVEL_P01P01A
-				Argument: 30
-			Identifier: hold
-		Case:
-			Value: default
-			Identifier: SCENARIO_MAIN
-				Argument: scn
-				Argument: 29
-				Argument: 11
-			Identifier: jump
-				Argument: label_2
-		Case:
-			Value: default
-				Dialogue: No
+			Value: Yes
+			Label: @label_0;
+			Identifier: message_Close
+			Conditional: If
+				Condition: ($SCENARIO_MAIN) >= [29, 11]
+				Label: @label_2;
+				Identifier: bgm_FadeOut
+					Argument: 60
+				Identifier: main_EnterGround
+					Argument: LEVEL_P01P01A
+					Argument: 30
+				Identifier: hold
+				Identifier: else
+					Argument: SCENARIO_MAIN
+					Argument: scn
+					Argument: 29
+					Argument: 11
+				Identifier: jump
+					Argument: label_2

@@ -47,40 +47,71 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: All set!
-		Case:
-			Value: default
-			Identifier: case
+			Value: All set!
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right! Let's roll!
+				Case:
+					Value: 2
+						Dialogue: OK! Let's go, quick!
+				Case:
+					Value: default
+						Dialogue: Yep! Let's get going!
+			Identifier: message_Close
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: main_EnterDungeon
+				Argument: 27
+				Argument: 30
+			Switch:
+				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+			Identifier: main_EnterDungeon
 				Argument: 1
-				Dialogue: All right! Let's roll!
+				Argument: 30
+			Identifier: hold
 			Identifier: case
-				Argument: 2
-				Dialogue: OK! Let's go, quick!
-			Identifier: default
-				Dialogue: Yep! Let's get going!
-		Case:
-			Value: default
-		Case:
-			Value: default
+				Argument: menu
 				Dialogue: Not yet...
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: We'll go when you're ready.
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's go when you're ready.
-			Identifier: default
-				Dialogue: Let's go when you're ready.
-		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's get moving before those [CS:N]Sableye[CR] come.
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's go before those [CS:N]Sableye[CR] get here.
-			Identifier: default
-				Dialogue: We should get going before those [CS:N]Sableye[CR] come.
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: We'll go when you're ready.
+				Case:
+					Value: 2
+						Dialogue: Let's go when you're ready.
+				Case:
+					Value: default
+						Dialogue: Let's go when you're ready.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Let's get moving before those [CS:N]Sableye[CR] come.
+				Case:
+					Value: 2
+						Dialogue: Let's go before those [CS:N]Sableye[CR] get here.
+				Case:
+					Value: default
+						Dialogue: We should get going before those [CS:N]Sableye[CR] come.
+			Identifier: message_Close
+			Identifier: end

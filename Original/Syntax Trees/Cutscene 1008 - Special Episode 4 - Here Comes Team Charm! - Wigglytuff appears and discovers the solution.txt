@@ -1417,12 +1417,26 @@ def 1:
 			Variable: $EVENT_LOCAL
 			Case:
 				Value: 1
-				Identifier: case
-					Argument: 1
-					Argument: break_loop
+				Identifier: break_loop
 				Identifier: break
-				Identifier: default
-					Argument: continue
+			Case:
+				Value: default
+				Identifier: Turn2Direction
+					Argument: 8
+					Argument: 1
+					Argument: DIR_DOWN
+				Identifier: Wait
+					Argument: 20
+				Switch:
+					Variable: $EVENT_LOCAL
+					Case:
+						Value: 1
+						Identifier: break_loop
+						Identifier: break
+					Case:
+						Value: default
+						Identifier: continue
+				Identifier: break
 	Label: @label_0;
 	Identifier: Turn2Direction
 		Argument: 8

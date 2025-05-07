@@ -21,17 +21,40 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: default
-				Dialogue: Yes
+			Value: Yes
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: supervision_ExecuteCommon
+				Argument: CORO_EVENT_M03_05_06
+			Label: @label_2;
+			Identifier: CallCommon
+				Argument: CORO_EVENT_END_FREE
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_BIPPA
+				Argument: 4
+			Identifier: end
 		Case:
-			Value: default
-				Dialogue: No
-		Case:
-			Value: default
+			Value: No
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_Talk
 				Dialogue: Not yet, huh?
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Just give me a holler when you're all ready to go.
-		Case:
-			Value: default
+			Identifier: message_Talk
 				Dialogue: Then we'll all have a gander at the Outlaw Notice Board and pick out a suitable outlaw for you.
+			Identifier: message_Close
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_BIPPA
+				Argument: 4
+				Argument: 10
+				Argument: DIR_DOWN
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_BIPPA
+			Identifier: jump
+				Argument: label_2

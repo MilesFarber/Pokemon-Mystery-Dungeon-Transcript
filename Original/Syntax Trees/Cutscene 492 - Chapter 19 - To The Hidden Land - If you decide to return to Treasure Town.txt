@@ -6,21 +6,72 @@ def 0:
 		Variable: scn($SCENARIO_MAIN)[0]
 		Case:
 			Value: 25
-			Identifier: case
-				Argument: 1
-				Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
-			Identifier: case
+			Label: @label_0;
+			Identifier: supervision_LoadStation
+				Argument: LEVEL_D01P11A
+				Argument: UM24
+			Identifier: supervision_Station
+				Argument: 8
+			Label: @label_2;
+			Identifier: supervision_Acting
+				Argument: 0
+			Identifier: camera_SetMyself
+				Template
+					Type: performer
+					Identifier: 0
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_JUPUTORU
 				Argument: 2
-				Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
-			Identifier: default
-				Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_NPC_RAPURASU
+				Argument: 2
+			Identifier: bgm_PlayFadeIn
+				Argument: BGM_OCEAN1
+				Argument: 90
+				Argument: 256
+			Identifier: screen_FadeIn
+				Argument: 1
+				Argument: 30
+			Identifier: Wait
+				Argument: 30
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_STANDARD
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
+				Case:
+					Value: 2
+						Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
+				Case:
+					Value: default
+						Dialogue: Hurry! We have to go to the [CS:P]Hidden Land[CR]!
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: Let's move when you're ready, [hero]!
+				Case:
+					Value: 2
+						Dialogue: Let's go when you're ready, [hero]!
+				Case:
+					Value: default
+						Dialogue: Let's go when you're ready, [hero]!
+			Identifier: message_Close
+			Identifier: end
 		Case:
-			Value: 1
-			Identifier: case
-				Argument: 1
-				Dialogue: Let's move when you're ready, [hero]!
-			Identifier: case
-				Argument: 2
-				Dialogue: Let's go when you're ready, [hero]!
-			Identifier: default
-				Dialogue: Let's go when you're ready, [hero]!
+			Value: 26
+			Identifier: supervision_LoadStation
+				Argument: LEVEL_D01P11A
+				Argument: UM25
+			Identifier: supervision_Station
+				Argument: 8
+			Identifier: jump
+				Argument: label_2
