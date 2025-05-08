@@ -10,9 +10,6 @@
 * * *
 
 
-* * *
-
-
 >There everyone lived an easy life...
 >
 >It was a very peaceful prairie...

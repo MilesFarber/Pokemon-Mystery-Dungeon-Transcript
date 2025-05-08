@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "............"
@@ -283,9 +280,6 @@
   * `Partner Inspired`
 
   * `Partner Name`: "Th-thanks! Can we go take care of it right now?"
-
-
-  * * * *
 
 
   * * * *

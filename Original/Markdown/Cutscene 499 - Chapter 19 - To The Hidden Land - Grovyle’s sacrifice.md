@@ -42,9 +42,6 @@
 * * *
 
 
-* * *
-
-
 `Hero Shouting`
 
 `Hero Name`: "(Waah!)"

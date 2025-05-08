@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Chatot Normal`
 
 `Chatot`: "His alias is the Invincible Haunter."

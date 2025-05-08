@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Zubat Normal`
 
 `Zubat`: "Sorry, kiddo. We'll take that!"
@@ -32,9 +29,6 @@
 `Zubat Normal`
 
 `Zubat`: "See you around, chicken. Heh-heh-heh."
-
-
-* * *
 
 
 * * *

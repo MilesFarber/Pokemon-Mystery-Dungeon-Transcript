@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Machoke Normal`
 
 `Machoke`: "........."
@@ -166,9 +163,6 @@
 `Mawile Surprised` ❗
 
 `Mawile`: "You can fly? That means..."
-
-
-* * *
 
 
 * * *

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Sad`
 
 `Partner Name`: "That was it..."
@@ -27,9 +24,6 @@
 `Partner Sad`
 
 `Partner Name`: "Just before we lost Grovyle in the Hidden Land..."
-
-
-* * *
 
 
 * * *

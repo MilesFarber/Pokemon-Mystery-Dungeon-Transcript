@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Sad`
 
 `Partner Name`: "I remember it all so fondly."
@@ -57,9 +54,6 @@
 `Bidoof Sad` 💦
 
 `Bidoof`: "Wa-wah?! What all is the matter?"
-
-
-* * *
 
 
 * * *

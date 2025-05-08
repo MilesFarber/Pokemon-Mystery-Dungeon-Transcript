@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Sad`
 
 `Partner Name`: "Grovyle entrusted me with his last wish..."
@@ -62,9 +59,6 @@
 `Partner Normal`
 
 `Partner Name`: "Let's find a way out of this!"
-
-
-* * *
 
 
 * * *

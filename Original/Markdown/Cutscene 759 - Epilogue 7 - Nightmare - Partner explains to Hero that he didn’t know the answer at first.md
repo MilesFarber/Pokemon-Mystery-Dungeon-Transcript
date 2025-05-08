@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Sad`
 
 `Partner Name`: "I didn't give up when we were trying to escape from the future."
@@ -27,9 +24,6 @@
 `Partner Sad`
 
 `Partner Name`: "But I thought about it, and I began to realize something..."
-
-
-* * *
 
 
 * * *

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Hero Surprised`
 
 `Hero Name`: "(I was told I was somehow connected to the distortion of space.)"

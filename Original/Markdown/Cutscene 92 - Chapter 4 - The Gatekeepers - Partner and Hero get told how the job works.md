@@ -100,9 +100,6 @@
   * * * *
 
 
-  * * * *
-
-
 *If the player chooses "Please explain again":*
 
   * `Loudred Angry` 〽

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 *If the player has progressed far enough:*
 
 
@@ -16,15 +13,9 @@
   * * * *
 
 
-  * * * *
-
-
   * *If the player chooses "0":*
 
   *   * *Anchor: <a name="10"></a>10*
-
-
-  *   * * * *
 
 
   *   * * * *

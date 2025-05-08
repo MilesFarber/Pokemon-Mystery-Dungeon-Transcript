@@ -306,9 +306,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Pain` 💦
 
 `Partner Name`: "Ugh... That was awful..."

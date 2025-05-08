@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "M-Master Dialga..."
@@ -167,9 +164,6 @@
 `Grovyle Normal`
 
 `Grovyle`: "(Above all, we...are still alive!)"
-
-
-* * *
 
 
 * * *

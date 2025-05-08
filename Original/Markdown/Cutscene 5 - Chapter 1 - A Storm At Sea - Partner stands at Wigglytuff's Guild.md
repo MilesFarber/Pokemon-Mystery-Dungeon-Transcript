@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Worried`
 
 `Partner Name`: "Hmm..."
@@ -115,9 +112,6 @@
 `Zubat Normal`
 
 `Zubat`: "We do."
-
-
-* * *
 
 
 * * *

@@ -52,9 +52,6 @@
 * * *
 
 
-* * *
-
-
 `Igglybuff Normal` ◀▼▶
 
 `Igglybuff`: "Hey, Master."

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Budew Normal` ❗
 
 `Budew`: "Oh! It's Igglybuff's Mama!"
@@ -218,12 +215,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Nidoking Normal` ❗
 
 `Nidoking`: "Everyone: WHAAAAAAAAAAAAAAAAAT?!"
@@ -237,9 +228,6 @@
 `Smoochum Surprised`
 
 `Smoochum`: "We... We've got a problem!!"
-
-
-* * *
 
 
 * * *

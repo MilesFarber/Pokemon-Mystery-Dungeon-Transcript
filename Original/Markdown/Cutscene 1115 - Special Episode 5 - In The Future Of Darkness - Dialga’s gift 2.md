@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Celebi Happy`
 
 `Celebi`: "Wow!"

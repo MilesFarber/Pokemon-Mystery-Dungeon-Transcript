@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Igglybuff Normal` 🔆
 
 `Igglybuff`: "We found a lot today, didn't we? ♪ Hee hee! ♪ Success, success! ♪"
@@ -122,9 +119,6 @@
 `Nidoking Normal`
 
 `Nidoking`: "That Pokémon... Was that..."
-
-
-* * *
 
 
 * * *

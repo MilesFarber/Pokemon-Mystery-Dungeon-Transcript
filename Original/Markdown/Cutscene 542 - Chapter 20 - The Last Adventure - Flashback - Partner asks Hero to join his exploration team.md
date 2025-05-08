@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Would you form an exploration team with me?"

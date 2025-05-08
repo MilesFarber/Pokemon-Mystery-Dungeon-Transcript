@@ -12,9 +12,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Pain` 💦
 
 `Partner Name`: "Ouch! We didn't do too well..."
@@ -43,9 +40,6 @@
 `Partner Determined`
 
 `Partner Name`: "Let's go, `Hero Name`!"
-
-
-* * *
 
 
 * * *

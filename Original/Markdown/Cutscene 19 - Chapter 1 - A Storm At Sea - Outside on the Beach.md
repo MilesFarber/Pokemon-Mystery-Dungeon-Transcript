@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Happy`
 
 `Partner Name`: "Thank you very much!"
@@ -290,9 +287,6 @@
 `Partner Happy`
 
 `Partner Name`: "So let's give it our best, `Hero Name`!"
-
-
-* * *
 
 
 * * *

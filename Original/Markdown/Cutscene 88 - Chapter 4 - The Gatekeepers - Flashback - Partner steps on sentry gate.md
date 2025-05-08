@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 〽
 
 `💬`: "Pokémon detected! Pokémon detected!"
@@ -18,9 +15,6 @@
 `Partner Surprised` 💦
 
 `Partner Name`: "Waah!"
-
-
-* * *
 
 
 * * *

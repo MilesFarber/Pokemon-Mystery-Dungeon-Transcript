@@ -1,13 +1,7 @@
 * * *
 
 
-* * *
-
-
 `Breloom`: "Wow! A-amazing!"
-
-
-* * *
 
 
 * * *

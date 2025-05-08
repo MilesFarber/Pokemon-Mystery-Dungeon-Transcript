@@ -4,9 +4,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "It's late, `Hero Name`!"
@@ -63,9 +60,6 @@
   * * * *
 
 
-  * * * *
-
-
   * `Partner Happy`
 
   * `Partner Name`: "A message has arrived from the Exploration Team Federation..."
@@ -89,9 +83,6 @@
   * `Partner Happy`
 
   * `Partner Name`: "To use the Sky Jukebox, save your adventure and return to the Top Menu."
-
-
-  * * * *
 
 
   * * * *

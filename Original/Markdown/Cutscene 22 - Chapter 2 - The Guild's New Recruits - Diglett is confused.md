@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Diglett Normal` 💧
 
 `Diglett`: "Umm... The footprint is..."
@@ -34,9 +31,6 @@
 `Diglett Pain` 💦
 
 `Diglett`: "Yes, but... I don't know what I don't know."
-
-
-* * *
 
 
 * * *

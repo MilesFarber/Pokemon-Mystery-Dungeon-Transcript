@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: ".................."
@@ -67,9 +64,6 @@
 `Hero Normal`
 
 `Hero Name`: "(And that Time Gear!)"
-
-
-* * *
 
 
 * * *

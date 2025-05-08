@@ -96,9 +96,6 @@
 * * *
 
 
-* * *
-
-
 `Hero Surprised` 〽
 
 `Hero Name`: "(What...?!)"
@@ -427,9 +424,6 @@
 `Cresselia Normal`
 
 `Cresselia`: "I'm very sorry that I must do this... Prepare to disappear!"
-
-
-* * *
 
 
 * * *

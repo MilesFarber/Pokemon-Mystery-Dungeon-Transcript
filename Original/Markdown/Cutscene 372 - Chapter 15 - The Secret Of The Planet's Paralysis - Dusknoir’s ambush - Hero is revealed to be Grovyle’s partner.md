@@ -14,9 +14,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Is that...the Passage of Time?"

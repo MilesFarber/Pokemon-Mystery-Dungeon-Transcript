@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Mawile Inspired`
 
 `Mawile`: "This is the summit? It's just such a change from what we were looking at before..."
@@ -47,9 +44,6 @@
 `Mawile Inspired`
 
 `Mawile`: "Hey, everyone! Look over here!"
-
-
-* * *
 
 
 * * *

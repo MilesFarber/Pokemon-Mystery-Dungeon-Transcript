@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "Hey. Tell me."
@@ -454,9 +451,6 @@
 `Grovyle Normal`
 
 `Grovyle`: "Let's go!"
-
-
-* * *
 
 
 * * *

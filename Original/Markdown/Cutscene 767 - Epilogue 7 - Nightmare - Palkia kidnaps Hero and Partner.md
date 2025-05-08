@@ -84,9 +84,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Shouting`
 
 `Partner Name`: "Waaaaaah!"

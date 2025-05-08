@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "What... What was that?"
@@ -27,9 +24,6 @@
 `Partner Normal`
 
 `Partner Name`: "It's coming closer... It's swimming..."
-
-
-* * *
 
 
 * * *

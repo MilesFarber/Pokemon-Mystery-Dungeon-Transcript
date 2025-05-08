@@ -106,9 +106,6 @@
 * * *
 
 
-* * *
-
-
 `Armaldo Surprised` ❗
 
 `Armaldo`: "UWAAAAAAAaaaaaahhhhh! It's a...Monster House!"

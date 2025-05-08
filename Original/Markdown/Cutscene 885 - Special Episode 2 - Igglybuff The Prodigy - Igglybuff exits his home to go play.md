@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Wooper Normal` ◀▼▶
 
 `Wooper`: "Oh! Igglybuff!"

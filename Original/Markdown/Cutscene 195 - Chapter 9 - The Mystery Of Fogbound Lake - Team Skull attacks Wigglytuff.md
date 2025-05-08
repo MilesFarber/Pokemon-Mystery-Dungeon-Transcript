@@ -7,9 +7,6 @@
 * * *
 
 
-* * *
-
-
 `Zubat Normal`
 
 `Zubat`: "Psst... Hey, Chief! What's going on? Something wrong?"
@@ -93,12 +90,6 @@
 `Skuntank Normal`
 
 `Skuntank`: "Take this! A noxious-gas special! Straight from me and Koffing!"
-
-
-* * *
-
-
-* * *
 
 
 * * *

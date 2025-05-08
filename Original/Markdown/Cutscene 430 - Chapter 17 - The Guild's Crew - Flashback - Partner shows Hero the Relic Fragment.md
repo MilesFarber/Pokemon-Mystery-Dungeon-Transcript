@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "And it just so happened...that I found this Relic Fragment."
@@ -33,9 +30,6 @@
 `Hero Normal`
 
 `Hero Name`: "(I've never seen a pattern like this.)"
-
-
-* * *
 
 
 * * *

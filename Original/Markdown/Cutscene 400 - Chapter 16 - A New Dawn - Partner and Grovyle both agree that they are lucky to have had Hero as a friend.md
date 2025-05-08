@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "It all gave me courage."
@@ -72,9 +69,6 @@
 `Partner Normal`
 
 `Partner Name`: "Yep."
-
-
-* * *
 
 
 * * *

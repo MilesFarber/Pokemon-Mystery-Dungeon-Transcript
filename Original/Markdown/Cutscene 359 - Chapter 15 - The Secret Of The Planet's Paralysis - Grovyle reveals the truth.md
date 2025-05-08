@@ -10,9 +10,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "Good. This will do."
@@ -576,9 +573,6 @@
 `Partner Determined`
 
 `Partner Name`: "Back to our own world!"
-
-
-* * *
 
 
 * * *

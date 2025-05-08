@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Smoochum Surprised` ❗
 
 `Smoochum`: "Huh?!"
@@ -197,9 +194,6 @@
 `Igglybuff Happy`
 
 `Igglybuff`: "OOOhhhhh! ♪"
-
-
-* * *
 
 
 * * *

@@ -282,15 +282,9 @@
 * * *
 
 
-* * *
-
-
 `Igglybuff Teary-Eyed`
 
 `Igglybuff`: "WAIT!! STOP IT! JUNIOR!!"
-
-
-* * *
 
 
 * * *
@@ -636,9 +630,6 @@
 >Was the thing we found on the first exploration Master and I went on...
 >
 >A Defend Globe.
-
-* * *
-
 
 * * *
 

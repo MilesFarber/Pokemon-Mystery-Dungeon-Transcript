@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `💬`: "Hey! You guys!"
 
 
@@ -175,9 +172,6 @@
 `Wooper Normal`
 
 `Wooper`: "Yeah."
-
-
-* * *
 
 
 * * *

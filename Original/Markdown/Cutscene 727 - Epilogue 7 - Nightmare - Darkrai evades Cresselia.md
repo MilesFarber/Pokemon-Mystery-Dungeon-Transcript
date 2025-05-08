@@ -39,9 +39,6 @@
 * * *
 
 
-* * *
-
-
 ⛈️
 
 `Cresselia Normal` ⛈️

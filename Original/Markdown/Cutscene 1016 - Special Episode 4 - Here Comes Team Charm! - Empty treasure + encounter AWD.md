@@ -142,9 +142,6 @@
 * * *
 
 
-* * *
-
-
 `Medicham Surprised`
 
 `Medicham`: "Ta dah! What..."

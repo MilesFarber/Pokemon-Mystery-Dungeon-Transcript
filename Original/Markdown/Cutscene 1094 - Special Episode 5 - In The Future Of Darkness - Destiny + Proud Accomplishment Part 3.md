@@ -319,9 +319,6 @@
 * * *
 
 
-* * *
-
-
 `Sableye Sigh` 〽
 
 `Sableye`: "EEEWAAAAH!"
@@ -491,9 +488,6 @@
 * * *
 
 
-* * *
-
-
 `Celebi Surprised` ❗
 
 `Celebi`: "Wh-what's that?!"
@@ -595,9 +589,6 @@
 * * *
 
 
-* * *
-
-
 `Primal Dialga Normal` 💦
 
 `Primal Dialga`: "Sableye: M-Master Dusknoir!"
@@ -621,9 +612,6 @@
 `Dusknoir Pain`
 
 `Dusknoir`: "H-hurry..."
-
-
-* * *
 
 
 * * *

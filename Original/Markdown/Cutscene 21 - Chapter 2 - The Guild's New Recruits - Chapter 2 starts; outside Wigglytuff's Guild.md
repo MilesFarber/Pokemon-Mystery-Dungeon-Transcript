@@ -16,15 +16,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "This is Wigglytuff's Guild."
@@ -155,9 +146,6 @@
 
 
 `Diglett`: "Umm... Er..."
-
-
-* * *
 
 
 * * *

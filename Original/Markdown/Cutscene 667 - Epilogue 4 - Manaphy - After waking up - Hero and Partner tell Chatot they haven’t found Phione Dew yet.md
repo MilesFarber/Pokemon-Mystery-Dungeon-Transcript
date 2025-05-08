@@ -4,9 +4,6 @@
 * * *
 
 
-* * *
-
-
 `Chatot Normal`
 
 `Chatot`: "You two! Have you obtained a Phione Dew?"

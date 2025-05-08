@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Banette Normal`
 
 `Banette`: "All right, guys?"
@@ -42,9 +39,6 @@
 `Igglybuff Happy`
 
 `Igglybuff`: "OOOhhhhh! ♪"
-
-
-* * *
 
 
 * * *

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Name`: "This is...our world? In the future?"
 
 
@@ -14,9 +11,6 @@
 
 
 `Partner Name`: "Not even the wind blows..."
-
-
-* * *
 
 
 * * *

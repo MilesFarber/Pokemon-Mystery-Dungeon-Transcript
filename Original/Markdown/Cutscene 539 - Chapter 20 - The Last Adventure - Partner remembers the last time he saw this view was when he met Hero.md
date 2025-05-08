@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "I haven't seen this for a long time. It's as pretty as I remember."
@@ -42,9 +39,6 @@
 `Partner Normal`
 
 `Partner Name`: "It was when...when I met `Hero Name`..."
-
-
-* * *
 
 
 * * *

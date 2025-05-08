@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Surprised` ❗
 
 `Partner Name`: "Hey!"
@@ -33,9 +30,6 @@
 `Sableye Normal`
 
 `Sableye`: "Gwah!"
-
-
-* * *
 
 
 * * *

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Corphish Normal`
 
 `Corphish`: "Hey, hey! This is no time to be gawking!"
@@ -356,9 +353,6 @@
 `Skuntank Normal`
 
 `Skuntank`: "Mumble, mumble... (Wigglytuff is really going to get it!)"
-
-
-* * *
 
 
 * * *

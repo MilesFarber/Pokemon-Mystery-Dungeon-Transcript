@@ -4,9 +4,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Ooh, yes! The weather's great today again!"

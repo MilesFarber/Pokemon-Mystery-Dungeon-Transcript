@@ -78,9 +78,6 @@
 * * *
 
 
-* * *
-
-
 `Bidoof Normal`
 
 `Bidoof`: "So I left my hometown..."

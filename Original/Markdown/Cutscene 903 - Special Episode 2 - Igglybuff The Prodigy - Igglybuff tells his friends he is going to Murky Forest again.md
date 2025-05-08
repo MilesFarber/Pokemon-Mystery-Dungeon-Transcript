@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Budew Normal` ❗
 
 `Budew`: "Oh! Igglybuff!"

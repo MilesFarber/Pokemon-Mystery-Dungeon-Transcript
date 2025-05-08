@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Chatot Normal`
 
 `Chatot`: "The Guildmaster and I decided to invite Walrein from the Northern Sea."
@@ -117,9 +114,6 @@
 `Partner Teary-Eyed`
 
 `Partner Name`: "Take care... Manaphy."
-
-
-* * *
 
 
 * * *

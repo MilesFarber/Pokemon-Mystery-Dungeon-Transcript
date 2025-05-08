@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal` ❗
 
 `Partner Name`: "Uh-oh! My stomach growled!"
@@ -32,9 +29,6 @@
 `Partner Happy`
 
 `Partner Name`: "Come on, let's go get dinner, `Hero Name`!"
-
-
-* * *
 
 
 * * *

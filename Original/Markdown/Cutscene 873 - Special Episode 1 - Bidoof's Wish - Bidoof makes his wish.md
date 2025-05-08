@@ -22,9 +22,6 @@
 * * *
 
 
-* * *
-
-
 `Jirachi Normal` ⚟
 
 `Jirachi`: "Hah! All right, I'm fully awake!"

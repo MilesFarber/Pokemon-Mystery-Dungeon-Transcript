@@ -25,15 +25,9 @@
   * * * *
 
 
-  * * * *
-
-
   * `Dusknoir Normal`
 
   * `Dusknoir`: "I won't... You'll never change history!"
-
-
-  * * * *
 
 
   * * * *

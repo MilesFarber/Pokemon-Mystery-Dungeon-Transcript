@@ -10,9 +10,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Sad`
 
 `Partner Name`: "Wake up, `Hero Name`."
@@ -66,9 +63,6 @@
 `Hero Surprised` ❗
 
 `Hero Name`: "(Oh! The distortion of space! We heard that somewhere before!)"
-
-
-* * *
 
 
 * * *

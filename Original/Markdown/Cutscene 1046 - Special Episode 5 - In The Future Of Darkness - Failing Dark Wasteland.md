@@ -14,9 +14,6 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "You appear to be so wary of me that you can't focus properly on our enemies."

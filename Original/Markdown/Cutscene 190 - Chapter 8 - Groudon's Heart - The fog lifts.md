@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Corphish Normal`
 
 `Corphish`: "Hey, hey! The fog is gone!"
@@ -67,9 +64,6 @@
 `Partner Normal`
 
 `Partner Name`: "Fogbound Lake has to be up there!"
-
-
-* * *
 
 
 * * *

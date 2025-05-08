@@ -19,15 +19,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Dusknoir Pain`
 
 `Dusknoir`: "Ooogh..."
@@ -61,9 +52,6 @@
 `Grovyle Normal`
 
 `Grovyle`: "So... Why is this?"
-
-
-* * *
 
 
 * * *

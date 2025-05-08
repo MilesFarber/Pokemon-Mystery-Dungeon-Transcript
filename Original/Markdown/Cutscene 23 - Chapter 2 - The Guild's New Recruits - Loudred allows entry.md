@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Worried` 💧
 
 `Partner Name`: "What? Are they arguing?"
@@ -41,9 +38,6 @@
 `Partner Normal`
 
 `Partner Name`: "Anyway, let's go."
-
-
-* * *
 
 
 * * *

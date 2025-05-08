@@ -4,9 +4,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Good morning, `Hero Name`!"
@@ -111,9 +108,6 @@
 `Partner Normal`
 
 `Partner Name`: "Let's go see Chatot, `Hero Name`!"
-
-
-* * *
 
 
 * * *

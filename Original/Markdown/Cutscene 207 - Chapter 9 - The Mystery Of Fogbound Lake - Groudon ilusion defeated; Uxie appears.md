@@ -32,9 +32,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal` ❗
 
 `Partner Name`: "Huh? Groudon vanished?!"

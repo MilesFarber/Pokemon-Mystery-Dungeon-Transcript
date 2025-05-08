@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Celebi Normal`
 
 `Celebi`: "Th-this is...?"

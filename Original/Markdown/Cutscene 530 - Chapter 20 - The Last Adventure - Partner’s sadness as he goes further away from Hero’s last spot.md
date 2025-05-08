@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Sad`
 
 `Partner Name`: "Temporal Tower is...getting farther and farther away..."
@@ -22,9 +19,6 @@
 `Partner Teary-Eyed`
 
 `Partner Name`: "Oh, `Hero Name`..."
-
-
-* * *
 
 
 * * *
