@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Inspired`
 
 `Partner Name`: "It's incredible! The water's coming down in waterfalls all over the place!"
@@ -98,9 +92,6 @@
 `Partner Normal` ❗
 
 `Partner Name`: "Huh? Is this an inscription here?"
-
-
-* * *
 
 
 * * *

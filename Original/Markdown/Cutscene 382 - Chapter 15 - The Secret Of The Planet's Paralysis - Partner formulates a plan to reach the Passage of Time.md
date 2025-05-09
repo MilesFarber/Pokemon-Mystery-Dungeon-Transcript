@@ -199,9 +199,6 @@
 * * *
 
 
-* * *
-
-
 `Sableye Normal` 〽
 
 `Sableye`: "Wheh-heh...?"
@@ -220,9 +217,6 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "GRRR-OOOOOO...OOOOOH!"
@@ -231,30 +225,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "GRRR-OOOOOO...OOOOOH!"
-
-
-* * *
-
-
-* * *
 
 
 * * *

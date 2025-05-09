@@ -194,15 +194,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Grovyle Surprised` 〽
 
 `Grovyle`: "Wh-what!?"

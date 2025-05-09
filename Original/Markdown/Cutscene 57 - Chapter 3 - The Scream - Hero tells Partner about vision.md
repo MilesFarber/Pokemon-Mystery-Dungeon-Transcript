@@ -29,9 +29,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "What? You had a dizzy spell?"

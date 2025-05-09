@@ -86,9 +86,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Shouting` 〽
 
 `Partner Name`: "Waah!"
@@ -112,9 +109,6 @@
 `Grovyle Normal`
 
 `Grovyle`: "I have no choice then..."
-
-
-* * *
 
 
 * * *
@@ -172,15 +166,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Pain` 〽
 
 `Partner Name`: "Ugh! He's so...fast!"
@@ -223,21 +208,6 @@
 `Mesprit Pain`
 
 `Mesprit`: "I'm sorry for doubting you."
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

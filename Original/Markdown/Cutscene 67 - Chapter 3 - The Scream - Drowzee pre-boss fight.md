@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Determined` ❗
 
 `Partner Name`: "Drowzee!"
@@ -35,15 +29,6 @@
 `Drowzee Normal`
 
 `Drowzee`: "C'mon! Whenever you want!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

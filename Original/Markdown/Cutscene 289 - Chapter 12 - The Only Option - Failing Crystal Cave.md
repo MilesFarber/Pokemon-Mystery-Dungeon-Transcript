@@ -14,9 +14,6 @@
 * * *
 
 
-* * *
-
-
 `Chatot Normal`
 
 `Chatot`: "Everyone else is still out at Crystal Cave."
@@ -40,9 +37,6 @@
 `Partner Normal`
 
 `Partner Name`: "Off to Crystal Cave!"
-
-
-* * *
 
 
 * * *

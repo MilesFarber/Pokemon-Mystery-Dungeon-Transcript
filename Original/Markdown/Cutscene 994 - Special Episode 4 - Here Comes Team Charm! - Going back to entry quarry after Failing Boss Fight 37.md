@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Medicham Normal`
 
 `Medicham`: "...Looks like we're right back here again..."

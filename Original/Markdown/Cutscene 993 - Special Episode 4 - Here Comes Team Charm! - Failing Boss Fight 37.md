@@ -6,9 +6,6 @@
 * * *
 
 
-* * *
-
-
 `Lopunny Normal`
 
 `Lopunny`: "Yeah. I'm fine."

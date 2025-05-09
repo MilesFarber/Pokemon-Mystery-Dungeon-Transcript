@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Sunflora Normal`
 
 `Sunflora`: "Loudred! Are you all right?!"
@@ -50,9 +44,6 @@
 * * *
 
 
-* * *
-
-
 `Haunter Normal`
 
 `Haunter`: "We'll defeat you so thoroughly..."
@@ -61,15 +52,6 @@
 `Haunter Normal`
 
 `Haunter`: "That you'll be scared to ever come after us again!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

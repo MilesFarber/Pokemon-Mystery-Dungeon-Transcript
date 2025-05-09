@@ -1,24 +1,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Pain`
 
 `Partner Name`: "Urk! I've got to hurry..."
-
-
-* * *
 
 
 * * *
@@ -37,9 +22,6 @@
 `Partner Inspired` ❗
 
 `Partner Name`: "I did it! They're in place!"
-
-
-* * *
 
 
 * * *
@@ -78,24 +60,6 @@
 `Partner Surprised`
 
 `Partner Name`: "Is it too late...to stop the planet's paralysis...?"
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

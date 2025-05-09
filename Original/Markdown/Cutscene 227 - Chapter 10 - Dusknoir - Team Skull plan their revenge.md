@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Zubat Normal` 💦
 
 `Zubat`: "Ch-Ch-Chief... We were really put in our place on that last expedition... Urk!"

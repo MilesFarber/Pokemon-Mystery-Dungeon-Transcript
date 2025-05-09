@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "I think I'm almost through."
@@ -100,9 +94,6 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Pain` 〽
 
 `Dusknoir`: "Gah! Wh-what is the meaning of this?!"
@@ -161,15 +152,6 @@
 `Grovyle Normal`
 
 `Grovyle`: "Sableye: Wheh-heh-heh!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

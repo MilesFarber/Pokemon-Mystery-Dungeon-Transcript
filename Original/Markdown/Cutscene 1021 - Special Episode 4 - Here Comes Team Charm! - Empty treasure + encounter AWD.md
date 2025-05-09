@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Medicham Normal`
 
 `Medicham`: "There's no one here."
@@ -78,9 +72,6 @@
 * * *
 
 
-* * *
-
-
 `Gardevoir Normal`
 
 `Gardevoir`: "We're the treasure hunters-- Team Charm!"
@@ -89,15 +80,6 @@
 `Gardevoir Normal`
 
 `Gardevoir`: "You! We're going to punish you, so get ready!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -121,9 +103,6 @@
 * * *
 
 
-* * *
-
-
 `Weavile Normal`
 
 `Weavile`: "Arbok! Drapion! Let's go!"
@@ -132,15 +111,6 @@
 `Weavile Normal` ◀▼▶
 
 `Weavile`: "Arbok & Drapion: YEAH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

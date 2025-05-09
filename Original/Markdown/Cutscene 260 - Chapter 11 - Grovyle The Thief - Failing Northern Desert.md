@@ -14,9 +14,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "Oh my gosh! Did everybody fail and end up back here?"

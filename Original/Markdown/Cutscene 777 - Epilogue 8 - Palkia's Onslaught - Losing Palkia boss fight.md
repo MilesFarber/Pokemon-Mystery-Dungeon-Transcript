@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Palkia Normal` ❗
 
 `Palkia`: "THEY...DISAPPEARED?"

@@ -6,9 +6,6 @@
 * * *
 
 
-* * *
-
-
 `Shaymin Normal`
 
 `Shaymin`: "If we don't hurry, Sneasel will..."

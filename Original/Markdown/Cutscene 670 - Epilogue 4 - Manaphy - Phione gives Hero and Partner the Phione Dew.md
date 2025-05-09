@@ -9,15 +9,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Gyarados Normal` 💦
 
 `Gyarados`: "GAH! DON'T...! DON'T YOU EVER FORGET THIS!"

@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Bidoof Normal`
 
 `Bidoof`: "All right! It's not over yet!"
@@ -50,15 +44,6 @@
 `Snover Normal`
 
 `Snover`: "Let's go!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

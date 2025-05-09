@@ -9,9 +9,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Pain` 💦
 
 `Partner Name`: "Ugh...we should have been more careful."

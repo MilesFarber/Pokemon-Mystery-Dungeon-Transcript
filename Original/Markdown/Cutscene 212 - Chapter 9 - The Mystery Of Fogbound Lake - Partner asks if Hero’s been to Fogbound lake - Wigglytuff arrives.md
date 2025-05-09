@@ -29,9 +29,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Surprised` 〽
 
 `Partner Name`: "Waah!"

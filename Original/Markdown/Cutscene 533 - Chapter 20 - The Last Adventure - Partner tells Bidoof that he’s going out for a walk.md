@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Bidoof Normal` ❗
 
 `Bidoof`: "Huh? Howdy, `Partner Name`. Going out?"

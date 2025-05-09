@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "Wh-where is this...?"
@@ -30,21 +24,9 @@
 * * *
 
 
-* * *
-
-
 `Palkia Normal`
 
 `Palkia`: "I WILL BE RID OF YOU NOW!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -58,9 +40,6 @@
 `Palkia Normal`
 
 `Palkia`: "THIS IS THE END!"
-
-
-* * *
 
 
 * * *

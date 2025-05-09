@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Surprised` ❗
 
 `Partner Name`: "Oh!"

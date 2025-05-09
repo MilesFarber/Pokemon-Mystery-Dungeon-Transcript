@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Bidoof Sad` 💦
 
 `Bidoof`: "Yeah... We can't just take our time here..."

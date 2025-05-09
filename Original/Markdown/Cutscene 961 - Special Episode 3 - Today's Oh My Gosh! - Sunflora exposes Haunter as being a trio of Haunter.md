@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Sunflora Normal`
 
 `Sunflora`: "There! Right there!"
@@ -100,9 +97,6 @@
 `Sunflora Normal`
 
 `Sunflora`: "Come on out! The rest of you!"
-
-
-* * *
 
 
 * * *

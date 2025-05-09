@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Sunflora Normal`
 
 `Sunflora`: "...The Invincible Haunter..."

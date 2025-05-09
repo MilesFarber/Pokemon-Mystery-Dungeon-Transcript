@@ -55,15 +55,9 @@
 * * *
 
 
-* * *
-
-
 `Partner Determined`
 
 `Partner Name`: "At the top! On the left!"
-
-
-* * *
 
 
 * * *

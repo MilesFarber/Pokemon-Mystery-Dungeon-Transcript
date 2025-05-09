@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Pain` 💦
 
 `Partner Name`: "Urk! When we were back at the guild..."

@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Groudon Normal` 〽
 
 `Groudon`: "GRR...GRR...OOOOOOOOOH!"
@@ -25,15 +19,6 @@
 `Groudon Normal`
 
 `Groudon`: "NEVER!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Shaymin Shouting`
 
 `Shaymin`: "Everyone wait a second!"

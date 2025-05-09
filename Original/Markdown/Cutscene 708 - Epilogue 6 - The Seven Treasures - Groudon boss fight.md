@@ -1,28 +1,7 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 〽
-
-* * *
-
 
 * * *
 
@@ -47,9 +26,6 @@
 * * *
 
 
-* * *
-
-
 `Groudon Normal`
 
 `Groudon`: "Calm the wrath of the land..."
@@ -58,15 +34,6 @@
 `Groudon Normal`
 
 `Groudon`: "I challenge you to surpass your limits..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

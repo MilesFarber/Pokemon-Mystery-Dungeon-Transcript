@@ -4,18 +4,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "This is Wigglytuff's Guild."
@@ -91,9 +79,6 @@
 * * *
 
 
-* * *
-
-
 `Hero Normal`
 
 `Hero Name`: "(............)"
@@ -117,9 +102,6 @@
 `Hero Worried`
 
 `Hero Name`: "(It looks like it will tickle my feet or...)"
-
-
-* * *
 
 
 * * *

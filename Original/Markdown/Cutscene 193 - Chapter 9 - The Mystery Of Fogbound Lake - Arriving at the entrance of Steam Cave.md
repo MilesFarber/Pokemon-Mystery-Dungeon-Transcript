@@ -4,9 +4,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "Oh! I see it, `Hero Name`!"

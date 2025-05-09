@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "You seem to be finally prepared."

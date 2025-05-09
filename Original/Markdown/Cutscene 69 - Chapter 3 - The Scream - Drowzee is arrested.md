@@ -146,6 +146,3 @@
 >
 >If you would like to play the Special Episode, save your adventure progress, and return to the Top Menu.
 
-* * *
-
-

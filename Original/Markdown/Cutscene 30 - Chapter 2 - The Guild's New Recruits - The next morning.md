@@ -68,15 +68,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Loudred Normal`
 
 `Loudred`: "I've got goose bumps just thinking about it! YEESH!"

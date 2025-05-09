@@ -4,12 +4,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "Waah! It's getting louder!"

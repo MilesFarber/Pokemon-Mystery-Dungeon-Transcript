@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Normal` ❗
 
 `Partner Name`: "Huh? `Hero Name`, over there!"
@@ -25,9 +19,6 @@
 `Partner Surprised` 〽
 
 `Partner Name`: "Waah! Tremors!"
-
-
-* * *
 
 
 * * *
@@ -61,9 +52,6 @@
 * * *
 
 
-* * *
-
-
 `Palkia Normal` 〽
 
 `Palkia`: "IT IS YOUR FATE..."
@@ -72,21 +60,9 @@
 * * *
 
 
-* * *
-
-
 `Palkia Normal`
 
 `Palkia`: "TO BE OBLITERATED BY ME!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -105,15 +81,6 @@
 `Palkia Normal`
 
 `Palkia`: "THIS IS IT!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

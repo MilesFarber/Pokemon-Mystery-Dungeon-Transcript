@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "If we don't find Master Dialga on the peak..."

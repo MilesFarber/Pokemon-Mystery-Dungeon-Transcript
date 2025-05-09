@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Bidoof Special2`
 
 `Bidoof`: "Sniff... Jirachi attacks in his sleep..."

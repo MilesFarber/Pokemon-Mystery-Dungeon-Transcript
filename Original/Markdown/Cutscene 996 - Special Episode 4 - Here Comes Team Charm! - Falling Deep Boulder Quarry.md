@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Gardevoir Worried`
 
 `Gardevoir`: "...Looks like we're right back here again..."

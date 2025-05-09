@@ -9,21 +9,9 @@
 * * *
 
 
-* * *
-
-
 `Haunter Pain`
 
 `Haunter`: "GUUUUOOOOOOOooooooohhhhhhhh!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -123,9 +111,6 @@
 `Sunflora Worried`
 
 `Sunflora`: "... (That reminds me...)"
-
-
-* * *
 
 
 * * *

@@ -149,15 +149,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Dunsparce Normal` 💦
 
 `Dunsparce`: "S-so cool..."
@@ -426,15 +417,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Drapion Pain`
 
 `Drapion`: "Guwaaa!"
@@ -463,15 +445,6 @@
 `Weavile Normal`
 
 `Weavile`: "Wait!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

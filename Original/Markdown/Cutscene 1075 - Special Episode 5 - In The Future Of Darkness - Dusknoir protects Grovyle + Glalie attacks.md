@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "It seems like this is the pinnacle."
@@ -35,18 +29,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Grovyle Pain` 〽
 
 `Grovyle`: "Gwaaaaaaahhh!!"
@@ -63,9 +45,6 @@
 `Grovyle Normal`
 
 `Grovyle`: "Y-you protected me!? Why'd you protect me?!"
-
-
-* * *
 
 
 * * *
@@ -187,15 +166,6 @@
 `Dusknoir Normal`
 
 `Dusknoir`: "H-here they come!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

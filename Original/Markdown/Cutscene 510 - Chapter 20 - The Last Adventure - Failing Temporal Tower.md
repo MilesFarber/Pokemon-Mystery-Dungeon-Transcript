@@ -9,9 +9,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Pain` 💦
 
 `Partner Name`: "Urk! This is no easy task..."

@@ -50,9 +50,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Pain`
 
 `Grovyle`: "Urrgggghhh!"

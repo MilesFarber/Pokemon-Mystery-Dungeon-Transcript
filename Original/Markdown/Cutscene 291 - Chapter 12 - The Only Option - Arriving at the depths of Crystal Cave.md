@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Is this...the deepest part of the caverns?"

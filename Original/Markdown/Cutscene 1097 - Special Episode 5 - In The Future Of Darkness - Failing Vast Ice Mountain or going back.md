@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "If we don't hurry and chase after Master Dialga..."

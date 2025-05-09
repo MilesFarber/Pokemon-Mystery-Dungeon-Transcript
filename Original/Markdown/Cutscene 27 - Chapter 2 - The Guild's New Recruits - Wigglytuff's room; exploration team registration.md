@@ -84,15 +84,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Wigglytuff Sigh`
 
 `Wigglytuff`: "Congratulations! From now on, you're an official exploration team!"
@@ -121,9 +112,6 @@
 
 
 >`Partner Name` opened the Pokémon Exploration Team Kit.
-
-* * *
-
 
 * * *
 
@@ -167,9 +155,6 @@
 `Wigglytuff Normal`
 
 `Wigglytuff`: "Have a peek inside your Treasure Bag."
-
-
-* * *
 
 
 * * *

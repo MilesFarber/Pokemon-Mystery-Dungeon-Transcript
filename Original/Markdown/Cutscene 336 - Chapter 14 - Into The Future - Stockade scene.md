@@ -459,15 +459,9 @@
 * * *
 
 
-* * *
-
-
 `Sableye Normal`
 
 `Sableye`: "Gwah!"
-
-
-* * *
 
 
 * * *

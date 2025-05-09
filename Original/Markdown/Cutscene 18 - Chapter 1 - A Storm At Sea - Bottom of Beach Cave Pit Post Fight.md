@@ -14,9 +14,6 @@
 * * *
 
 
-* * *
-
-
 `Koffing Normal`
 
 `Koffing`: "B-blast it... How'd we get wiped out by wimps like them?"

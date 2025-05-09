@@ -1,18 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 〽
 
 `💬`: "GRROOOOOOH...GRROOOOOOH...!"
@@ -34,15 +22,6 @@
 
 
 `💬`: "GRROOOOOOH...GRROOOOOOH...!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -86,15 +65,6 @@
 `Groudon Normal`
 
 `Groudon`: "YOU WILL NEVER LEAVE HERE ALIVE, INTRUDERS!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

@@ -74,9 +74,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "What are we expected to do, anyway?"

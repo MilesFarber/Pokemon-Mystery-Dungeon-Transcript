@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Sunflora Normal`
 
 `Sunflora`: "OK."

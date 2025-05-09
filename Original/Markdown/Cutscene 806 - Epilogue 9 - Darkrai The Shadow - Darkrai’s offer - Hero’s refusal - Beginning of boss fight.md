@@ -378,15 +378,6 @@
   * * * *
 
 
-  * * * *
-
-
-  * * * *
-
-
-  * * * *
-
-
   * `Darkrai Normal` 〽
 
   * `Darkrai`: "Gaaaah!"
@@ -405,9 +396,6 @@
   * `Darkrai Normal` 〽
 
   * `Darkrai`: "Y-you!"
-
-
-  * * * *
 
 
   * * * *
@@ -476,9 +464,6 @@
   * * * *
 
 
-  * * * *
-
-
   * `Partner Surprised` 〽
 
   * `Partner Name`: "Waah! We're surrounded!"
@@ -502,15 +487,9 @@
   * * * *
 
 
-  * * * *
-
-
   * `Darkrai Normal`
 
   * `Darkrai`: "I will seize control of the darkened world..."
-
-
-  * * * *
 
 
   * * * *
@@ -524,27 +503,9 @@
   * * * *
 
 
-  * * * *
-
-
-  * * * *
-
-
-  * * * *
-
-
   * `Darkrai Normal`
 
   * `Darkrai`: "This is it! Attack!"
-
-
-  * * * *
-
-
-  * * * *
-
-
-  * * * *
 
 
   * * * *

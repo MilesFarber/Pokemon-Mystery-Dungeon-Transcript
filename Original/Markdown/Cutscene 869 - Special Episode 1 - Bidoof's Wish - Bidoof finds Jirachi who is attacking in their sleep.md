@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Bidoof Normal`
 
 `Bidoof`: "I've come pretty far..."
@@ -153,15 +147,6 @@
 `Jirachi Happy`
 
 `Jirachi`: "...Yaaaaawn... I'm so sleepy..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

@@ -1,18 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Manectric Normal`
 
 `Manectric`: "You trespass again?!"
@@ -36,15 +24,6 @@
 `Manectric Normal`
 
 `Manectric`: "Prepare to fight!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

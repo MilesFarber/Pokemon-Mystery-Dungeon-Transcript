@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "But when all seemed lost... you refused to give up."

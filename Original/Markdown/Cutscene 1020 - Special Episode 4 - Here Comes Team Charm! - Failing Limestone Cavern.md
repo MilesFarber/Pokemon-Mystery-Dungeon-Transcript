@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Medicham Worried`
 
 `Medicham`: "...Looks like we're right back here again..."

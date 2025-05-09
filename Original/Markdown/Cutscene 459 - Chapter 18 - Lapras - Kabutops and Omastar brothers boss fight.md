@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Kabutops Normal`
 
 `Kabutops`: "You again!"
@@ -25,15 +19,6 @@
 `Kabutops Normal`
 
 `Kabutops`: "Take THIS!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

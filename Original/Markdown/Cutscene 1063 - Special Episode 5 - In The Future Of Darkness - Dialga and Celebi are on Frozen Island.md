@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Sableye Sigh` 〽
 
 `Sableye`: "Gwah!"

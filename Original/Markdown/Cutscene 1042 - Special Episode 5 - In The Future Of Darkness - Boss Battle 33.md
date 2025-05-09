@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "Seems you're having a tough battle, Dusknoir."
@@ -25,15 +19,6 @@
 `Grovyle Normal`
 
 `Grovyle`: "Sableye: Wheh-heh-heh!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

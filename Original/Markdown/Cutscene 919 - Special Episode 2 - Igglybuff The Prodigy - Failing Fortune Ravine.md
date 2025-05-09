@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Armaldo Normal`
 
 `Armaldo`: "Let's try again today."

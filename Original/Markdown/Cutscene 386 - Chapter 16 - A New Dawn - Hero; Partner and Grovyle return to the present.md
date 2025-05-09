@@ -4,12 +4,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Hero Normal`
 
 `Hero Name`: "(...............)"
@@ -233,9 +227,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "There's a message from the Exploration Team Federation."
@@ -249,7 +240,4 @@
 >To play a Special Episode, select it from the Episode List on the Top Menu.
 >
 >If you would like to play the Special Episode, save your adventure progress, and return to the Top Menu.
-
-* * *
-
 

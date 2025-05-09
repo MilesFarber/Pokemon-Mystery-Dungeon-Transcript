@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Th-this is..."
@@ -141,15 +135,6 @@
 `Mesprit Normal`
 
 `Mesprit`: "Get ready!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

@@ -14,15 +14,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Surprised` ❗
 
 `Partner Name`: "Waah! Wh-what's happening?"

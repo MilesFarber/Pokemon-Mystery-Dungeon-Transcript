@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Grimer Normal`
 
 `Grimer`: "Icky, sticky...grimy, slimy..."
@@ -20,15 +14,6 @@
 `Muk Normal`
 
 `Muk`: "We drive away cleanlinessss!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

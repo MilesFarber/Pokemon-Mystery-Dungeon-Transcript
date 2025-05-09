@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "... (I'd be too impatient to go there now.)"

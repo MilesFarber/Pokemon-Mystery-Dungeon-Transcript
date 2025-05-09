@@ -1,18 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GRRR-OOOOOO...OOOOOH!! YOU AGAIN?!"
@@ -26,15 +14,6 @@
 `Primal Dialga Normal`
 
 `Primal Dialga`: "TIME MUST NOT... TIME... GRRR-OOOOOO...OOOOOH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -68,15 +47,6 @@
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GRRR-OOOOOO...OOOOOH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

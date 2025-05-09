@@ -99,9 +99,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Look there. See that strange pattern inscribed on it?"
@@ -130,9 +127,6 @@
 `Partner Normal`
 
 `Partner Name`: "At least that's the feeling I get."
-
-
-* * *
 
 
 * * *

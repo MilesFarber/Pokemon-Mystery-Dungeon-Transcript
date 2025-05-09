@@ -13,9 +13,6 @@
   * * * *
 
 
-  * * * *
-
-
   * `Partner Name`: "Say, `Hero Name`..."
 
 

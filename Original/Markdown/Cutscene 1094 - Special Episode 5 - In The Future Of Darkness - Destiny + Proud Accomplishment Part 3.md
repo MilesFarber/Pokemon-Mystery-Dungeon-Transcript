@@ -34,15 +34,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Dusknoir Pain`
 
 `Dusknoir`: "UOOOOOOOOOooooooohhhh!"
@@ -56,15 +47,6 @@
 `Dusknoir Normal`
 
 `Dusknoir`: "Shut up!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -93,15 +75,6 @@
 `Dusknoir Pain`
 
 `Dusknoir`: "AAaaaaaaaaaahooooooooohhhh!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -243,9 +216,6 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Pain` 〽
 
 `Dusknoir`: "Uhhhh....uhhhh...."
@@ -299,21 +269,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Dusknoir Pain` 〽
 
 `Dusknoir`: "GRRR-OOOOOO...OOOOOH!"
-
-
-* * *
 
 
 * * *
@@ -337,9 +295,6 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Pain` 〽
 
 `Dusknoir`: "GWAH!"
@@ -353,15 +308,6 @@
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GRRR-OOOOOO...OOOOOH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -395,9 +341,6 @@
 * * *
 
 
-* * *
-
-
 `Primal Dialga Normal` 〽
 
 `Primal Dialga`: "Sableye: GYAAAAAAAaaaaaaaa!!!"
@@ -416,15 +359,6 @@
 `Grovyle Pain`
 
 `Grovyle`: "My body... It won't do what I tell it to..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -468,21 +402,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Celebi Surprised` ❗
 
 `Celebi`: "Waaah! Wh-what?!"
-
-
-* * *
 
 
 * * *
@@ -541,15 +463,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GI! GIGIGIGIGI!"
@@ -568,9 +481,6 @@
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GRRR-OOOOOO...OOOOOH!"
-
-
-* * *
 
 
 * * *

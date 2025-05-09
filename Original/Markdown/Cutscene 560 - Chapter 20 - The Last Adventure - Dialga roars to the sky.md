@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Dialga Normal`
 
 `Dialga`: "THIS IS MY THANKS!"

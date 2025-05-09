@@ -4,28 +4,10 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `💬`: "I've finally found it! A Time Gear!"
 
 
 `💬`: "But...this is only the first of many..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

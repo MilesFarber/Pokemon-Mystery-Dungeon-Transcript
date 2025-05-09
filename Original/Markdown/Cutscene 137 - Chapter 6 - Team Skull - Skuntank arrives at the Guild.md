@@ -204,9 +204,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Surprised` 〽
 
 `Partner Name`: "Oh, `Hero Name`!"

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Sunflora Normal`
 
 `Sunflora`: "Before I head out... I should confirm my assignment."

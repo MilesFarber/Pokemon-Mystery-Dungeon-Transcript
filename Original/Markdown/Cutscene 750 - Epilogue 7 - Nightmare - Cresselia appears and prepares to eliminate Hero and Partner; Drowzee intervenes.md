@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "We've come a long way here, `Hero Name`."
@@ -20,27 +14,6 @@
 `Partner Normal`
 
 `Partner Name`: "Let's keep going some more."
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -76,21 +49,6 @@
 
 
 `💬`: "I am..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -429,9 +387,6 @@
 * * *
 
 
-* * *
-
-
 `Cresselia Normal`
 
 `Cresselia`: "It must be done! The world must be saved!"
@@ -440,21 +395,9 @@
 * * *
 
 
-* * *
-
-
 `Partner Shouting` 〽
 
 `Partner Name`: "Waaaah!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

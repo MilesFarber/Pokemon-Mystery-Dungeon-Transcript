@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Is this... Is Celebi supposed to be here?"

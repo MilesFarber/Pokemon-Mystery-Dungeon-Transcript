@@ -39,27 +39,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Sunflora Surprised`
 
 `Sunflora`: "Oh my gosh!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -93,15 +75,6 @@
 `Loudred Pain`
 
 `Loudred`: "Here they COME! Look OUT!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

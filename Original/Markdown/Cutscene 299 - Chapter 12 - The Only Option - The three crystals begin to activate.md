@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "Waaah! A tremor!"

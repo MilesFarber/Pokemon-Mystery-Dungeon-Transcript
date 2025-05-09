@@ -9,9 +9,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Shouting` 〽
 
 `Partner Name`: "Waah!"
@@ -35,9 +32,6 @@
 `Hero Surprised`
 
 `Hero Name`: "(I can barely stay standing near this deluge!)"
-
-
-* * *
 
 
 * * *

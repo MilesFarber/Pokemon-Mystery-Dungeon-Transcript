@@ -9,15 +9,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Palkia Normal`
 
 `Palkia`: "GRRR-OOOO...AAAAAAH!"

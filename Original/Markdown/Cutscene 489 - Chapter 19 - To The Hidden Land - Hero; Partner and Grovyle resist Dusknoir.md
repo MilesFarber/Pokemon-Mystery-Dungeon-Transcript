@@ -39,9 +39,6 @@
 * * *
 
 
-* * *
-
-
 `Hero Determined` 〽
 
 `Hero Name`: "Sableye: Gyaaaah!"
@@ -80,21 +77,9 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "How much resistance can you even serve up?"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

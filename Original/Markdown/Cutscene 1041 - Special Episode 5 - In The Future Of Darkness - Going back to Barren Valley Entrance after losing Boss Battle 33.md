@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "I can't falter now."

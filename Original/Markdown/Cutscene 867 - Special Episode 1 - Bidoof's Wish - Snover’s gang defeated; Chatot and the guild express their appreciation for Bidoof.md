@@ -334,21 +334,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Bidoof Surprised` 〽
 
 `Bidoof`: "Waaah! Th-the wall collapsed... There's a huge opening there!"

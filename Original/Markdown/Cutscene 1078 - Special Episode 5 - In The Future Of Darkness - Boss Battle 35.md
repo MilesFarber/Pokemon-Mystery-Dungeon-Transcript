@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Glalie Normal`
 
 `Glalie`: "GOGIGIGI!"
@@ -40,15 +34,6 @@
 `Dusknoir Normal`
 
 `Dusknoir`: "Here they come!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

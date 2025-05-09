@@ -9,9 +9,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Pain` 💦
 
 `Partner Name`: "Ugh! The going is really rough here!"

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "My partner here just happened to see it in a dream."

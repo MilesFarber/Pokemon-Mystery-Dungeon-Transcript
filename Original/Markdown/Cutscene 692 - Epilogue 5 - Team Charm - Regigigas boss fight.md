@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Lopunny Normal`
 
 `Lopunny`: "This appears to be the last chamber..."
@@ -28,21 +22,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 ❗
 
 `Medicham Surprised` 〽
@@ -53,15 +32,6 @@
 `Lopunny Normal`
 
 `Lopunny`: "We'll team up for this battle!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 *If the party leader cannot be switched at this time:*
 
 

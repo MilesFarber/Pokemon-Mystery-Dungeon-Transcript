@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Lopunny Normal`
 
 `Lopunny`: "Hello again. We've been waiting for your arrival."
@@ -29,33 +23,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Lopunny Normal`
 
 `Lopunny`: "We'll get it done this time!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

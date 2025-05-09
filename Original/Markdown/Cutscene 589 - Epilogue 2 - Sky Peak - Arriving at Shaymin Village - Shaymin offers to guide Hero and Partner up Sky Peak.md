@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "So this is the Shaymin Village?"
@@ -191,9 +185,6 @@
 `Shaymin Normal`
 
 `Shaymin`: "See you later!"
-
-
-* * *
 
 
 * * *

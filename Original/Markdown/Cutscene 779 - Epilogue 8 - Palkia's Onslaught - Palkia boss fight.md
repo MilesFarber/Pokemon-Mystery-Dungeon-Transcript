@@ -1,18 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Palkia Normal` 〽
 
 `Palkia`: "THERE WILL BE NO MISTAKE THIS TIME! I WILL FINISH YOU!"
@@ -51,15 +39,9 @@
 * * *
 
 
-* * *
-
-
 `Palkia Normal` 〽
 
 `Palkia`: "TO BE...OBLITERATED!"
-
-
-* * *
 
 
 * * *
@@ -73,27 +55,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Palkia Normal` 〽
 
 `Palkia`: "THIS IS IT FOR YOU!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

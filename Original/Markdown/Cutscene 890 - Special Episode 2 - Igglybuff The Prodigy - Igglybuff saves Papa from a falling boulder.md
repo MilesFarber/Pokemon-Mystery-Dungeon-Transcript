@@ -6,30 +6,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Igglybuff Teary-Eyed` 〽
 
 `Igglybuff`: "S-so...scary..."
@@ -43,15 +19,6 @@
 `Igglybuff Teary-Eyed`
 
 `Igglybuff`: "Y-yeah..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -75,15 +42,6 @@
 `Igglybuff Teary-Eyed`
 
 `Igglybuff`: "Yeah..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -125,22 +83,7 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 >Somehow the boulder was smashed to pieces...
 >
 >I wasn't crushed by the boulder... Somehow I was saved...
-
-* * *
-
 

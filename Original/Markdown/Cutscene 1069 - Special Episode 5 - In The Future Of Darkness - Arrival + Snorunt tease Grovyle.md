@@ -139,9 +139,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Pain` 〽
 
 `Grovyle`: "GWAH!"

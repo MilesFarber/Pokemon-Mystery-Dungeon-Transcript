@@ -14,9 +14,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Look there. See that strange pattern inscribed on it?"

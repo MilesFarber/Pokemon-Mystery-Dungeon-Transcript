@@ -79,21 +79,9 @@
 * * *
 
 
-* * *
-
-
 `Snover Normal`
 
 `Snover`: "Your money...we're taking it!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

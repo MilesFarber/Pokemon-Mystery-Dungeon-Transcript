@@ -1,18 +1,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 〽
 
 〽
-
-* * *
-
 
 * * *
 
@@ -121,9 +112,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Pain` 〽
 
 `Grovyle`: "Rrrroh!"
@@ -202,9 +190,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Surprised` 〽
 
 `Partner Name`: "(Grovyle vanished?!)"
@@ -275,7 +260,4 @@
 
 
 >The clouds parted over Crystal Crossing and the vicinities of the Forest Area!
-
-* * *
-
 

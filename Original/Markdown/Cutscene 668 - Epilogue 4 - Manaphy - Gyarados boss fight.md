@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 ❗
 
 `Phione Normal` ❗
@@ -89,15 +83,6 @@
 `Gyarados Normal`
 
 `Gyarados`: "GRRAAAAHH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

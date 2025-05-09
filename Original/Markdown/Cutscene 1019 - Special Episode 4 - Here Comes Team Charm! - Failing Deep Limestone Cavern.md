@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Gardevoir Worried`
 
 `Gardevoir`: "........."

@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Armaldo Normal`
 
 `Armaldo`: "We've still got time today."

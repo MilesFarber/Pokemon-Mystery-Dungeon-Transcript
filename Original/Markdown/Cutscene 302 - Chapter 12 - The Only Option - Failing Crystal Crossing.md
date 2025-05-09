@@ -14,9 +14,6 @@
 * * *
 
 
-* * *
-
-
 `Bidoof Normal`
 
 `Bidoof`: "Did you all get knocked out? Same thing happened to me, by golly!"
@@ -40,9 +37,6 @@
 `Partner Normal`
 
 `Partner Name`: "We're getting closer. Let's keep at it, `Hero Name`!"
-
-
-* * *
 
 
 * * *

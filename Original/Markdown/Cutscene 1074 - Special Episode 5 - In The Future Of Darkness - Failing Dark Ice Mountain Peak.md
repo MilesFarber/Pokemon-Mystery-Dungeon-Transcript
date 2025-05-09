@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "... (Argh. It's bad to not make any progress in a place like this!)"

@@ -6,9 +6,6 @@
 * * *
 
 
-* * *
-
-
 `Lopunny Pain`
 
 `Lopunny`: "Yeah, that's true... That was a close call."

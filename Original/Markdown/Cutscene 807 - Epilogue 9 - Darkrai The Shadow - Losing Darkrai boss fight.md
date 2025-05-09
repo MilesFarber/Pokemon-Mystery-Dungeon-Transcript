@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Darkrai Normal` ❗
 
 `Darkrai`: "That blasted Cresselia!"
@@ -22,9 +19,6 @@
 `Darkrai Normal`
 
 `Darkrai`: "Because they will try to defeat me."
-
-
-* * *
 
 
 * * *

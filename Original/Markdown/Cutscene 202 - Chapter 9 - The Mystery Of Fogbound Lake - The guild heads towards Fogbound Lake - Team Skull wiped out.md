@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Corphish Normal`
 
 `Corphish`: "Hey, hey, hey! Check this out, everyone!"

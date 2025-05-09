@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Shaymin Normal`
 
 `Shaymin`: "Oh! I can see it! The summit!"
@@ -87,15 +84,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Shaymin Determined`
 
 `Shaymin`: "........."
@@ -109,15 +97,6 @@
 `Shaymin Determined`
 
 `Shaymin`: "Everyone, I'm counting on you!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

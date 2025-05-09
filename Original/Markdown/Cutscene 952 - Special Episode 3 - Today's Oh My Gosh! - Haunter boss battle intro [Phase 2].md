@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Haunter Normal`
 
 `Haunter`: "Heh heh! No matter how many times you try, the result stays the same!"
@@ -40,21 +34,9 @@
 * * *
 
 
-* * *
-
-
 `Haunter Normal`
 
 `Haunter`: "That anguish... How do you like the taste of it?"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

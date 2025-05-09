@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "Dusknoir isn't here... That's not a surprise..."

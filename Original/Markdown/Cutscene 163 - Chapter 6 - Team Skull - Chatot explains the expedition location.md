@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Chatot Normal`
 
 `Chatot`: "All accounted for, it appears."

@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "But `Hero Name`..."

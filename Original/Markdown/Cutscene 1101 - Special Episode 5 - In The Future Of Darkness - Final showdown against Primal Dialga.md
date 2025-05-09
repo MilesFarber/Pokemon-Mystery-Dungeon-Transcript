@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "I knew it... I knew you had already reached the pinnacle!"
@@ -25,15 +22,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GIGI... GIGIGIGI..."
@@ -47,9 +35,6 @@
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GRRR-OOOOOO...OOOOOH!"
-
-
-* * *
 
 
 * * *
@@ -83,9 +68,6 @@
 * * *
 
 
-* * *
-
-
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GIGI... GIGIGIGIGIGIGIGI..."
@@ -114,15 +96,6 @@
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GRRR-OOOOOO...OOOOOH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

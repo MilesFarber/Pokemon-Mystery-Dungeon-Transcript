@@ -1,28 +1,7 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 〽
-
-* * *
-
 
 * * *
 
@@ -47,9 +26,6 @@
 * * *
 
 
-* * *
-
-
 `Articuno Normal`
 
 `Articuno`: "Conquer the freezing cold..."
@@ -58,15 +34,6 @@
 `Articuno Normal`
 
 `Articuno`: "I challenge you to surpass your limits..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Normal` ❗
 
 `Partner Name`: "Oh!"

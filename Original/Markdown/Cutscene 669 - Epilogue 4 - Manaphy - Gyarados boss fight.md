@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Gyarados Normal` ❗
 
 `Gyarados`: "OH? WHAT, BACK AGAIN?"
@@ -20,15 +14,6 @@
 `Gyarados Normal`
 
 `Gyarados`: "GRRAAAAHH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

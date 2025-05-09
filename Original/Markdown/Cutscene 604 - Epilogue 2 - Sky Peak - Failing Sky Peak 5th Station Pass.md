@@ -6,9 +6,6 @@
 * * *
 
 
-* * *
-
-
 `Shaymin Normal`
 
 `Shaymin`: ". Let's head to the 5th Station Clearing!"

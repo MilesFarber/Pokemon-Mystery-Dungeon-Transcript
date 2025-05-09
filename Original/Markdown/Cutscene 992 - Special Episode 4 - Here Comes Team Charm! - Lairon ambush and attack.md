@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Medicham Normal`
 
 `Medicham`: "Huh? Something about this place seems different somehow."
@@ -166,21 +160,9 @@
 * * *
 
 
-* * *
-
-
 `Aggron Normal`
 
 `Aggron`: "That composure... How long can you keep it up?!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

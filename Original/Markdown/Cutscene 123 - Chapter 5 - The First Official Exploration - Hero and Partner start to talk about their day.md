@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Hero Sad`
 
 `Hero Name`: "(Today was exhausting.)"

@@ -1,28 +1,7 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 〽
-
-* * *
-
 
 * * *
 
@@ -47,9 +26,6 @@
 * * *
 
 
-* * *
-
-
 `Mew Normal`
 
 `Mew`: "Ascertain the truth..."
@@ -58,15 +34,6 @@
 `Mew Normal`
 
 `Mew`: "I challenge you to surpass your limits..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

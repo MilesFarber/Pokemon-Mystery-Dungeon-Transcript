@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "I can't hang back. I've got to move swiftly."

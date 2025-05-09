@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "I remember... I was too scared to go get it back."
@@ -102,27 +99,6 @@
 `Partner Normal`
 
 `Partner Name`: "That... What is that?"
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

@@ -15,6 +15,3 @@
 >
 >and how the world was restored to peace.
 
-* * *
-
-

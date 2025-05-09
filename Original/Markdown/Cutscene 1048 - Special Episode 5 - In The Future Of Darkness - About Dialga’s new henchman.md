@@ -119,9 +119,6 @@
 * * *
 
 
-* * *
-
-
 `Sableye Sigh` 〽
 
 `Sableye`: "Ugh!"
@@ -175,9 +172,6 @@
 `Sableye Pain`
 
 `Sableye`: "It was an order...from Master Dialga."
-
-
-* * *
 
 
 * * *

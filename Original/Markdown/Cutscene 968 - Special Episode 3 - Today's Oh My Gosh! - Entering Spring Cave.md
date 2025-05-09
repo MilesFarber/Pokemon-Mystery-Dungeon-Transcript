@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Sunflora Normal`
 
 `Sunflora`: "I've got to move quickly and help Loudred!"

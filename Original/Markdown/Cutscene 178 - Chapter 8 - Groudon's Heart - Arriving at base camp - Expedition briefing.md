@@ -4,9 +4,6 @@
 * * *
 
 
-* * *
-
-
 `Bidoof Normal`
 
 `Bidoof`: "Huff-huff..."
@@ -108,9 +105,6 @@
 `Partner Normal`
 
 `Partner Name`: "We have to go, `Hero Name`."
-
-
-* * *
 
 
 * * *

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `💬`: "And at one point, I met Team `Team Name`."
 
 

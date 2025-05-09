@@ -5,6 +5,3 @@
 >
 >I lived happily there with my parents.
 
-* * *
-
-

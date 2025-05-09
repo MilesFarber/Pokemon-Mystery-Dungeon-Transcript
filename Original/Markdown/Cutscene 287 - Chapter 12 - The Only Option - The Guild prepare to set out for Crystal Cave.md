@@ -269,15 +269,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Wigglytuff Special2` ◀▼▶
 
 `Wigglytuff`: "Everyone: HOORAY!"
@@ -326,9 +317,6 @@
 `Partner Normal`
 
 `Partner Name`: "On to Crystal Cave!"
-
-
-* * *
 
 
 * * *

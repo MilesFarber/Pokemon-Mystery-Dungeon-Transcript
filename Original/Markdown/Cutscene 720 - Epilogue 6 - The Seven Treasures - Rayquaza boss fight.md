@@ -1,28 +1,7 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 〽
-
-* * *
-
 
 * * *
 
@@ -47,9 +26,6 @@
 * * *
 
 
-* * *
-
-
 `Rayquaza Normal`
 
 `Rayquaza`: "Possess the sky..."
@@ -58,15 +34,6 @@
 `Rayquaza Normal`
 
 `Rayquaza`: "I challenge you to surpass your limits..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

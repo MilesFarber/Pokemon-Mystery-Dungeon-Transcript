@@ -1,18 +1,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Is this... Is this the top of Temporal Tower?"
-
-
-* * *
 
 
 * * *
@@ -167,25 +158,7 @@
 * * *
 
 
-* * *
-
-
 `💬`: "TIME... GRRR-OOOOOO!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -239,15 +212,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "It's no use, `Hero Name`!"
@@ -296,15 +260,6 @@
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GRRR-OOOOOO!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Sableye Normal` ❗
 
 `Sableye`: "Wheh-heh-heh? N-not here?!"

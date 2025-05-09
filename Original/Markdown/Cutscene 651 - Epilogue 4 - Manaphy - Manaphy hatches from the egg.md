@@ -42,9 +42,6 @@
 * * *
 
 
-* * *
-
-
 `Manaphy Normal` ❓
 
 `Manaphy`: ".........?"

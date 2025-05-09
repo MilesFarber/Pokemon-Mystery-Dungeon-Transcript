@@ -1,21 +1,9 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "GWOH! GWWWOOOOHH! GWWWWWOOOOOOOHHHH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

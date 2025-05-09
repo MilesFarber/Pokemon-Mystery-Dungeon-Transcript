@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Azurill Normal` ❗
 
 `Azurill`: "Uh-oh. It's a dead end."
@@ -243,15 +237,6 @@
 `Drowzee Normal`
 
 `Drowzee`: "Show me what you've got!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

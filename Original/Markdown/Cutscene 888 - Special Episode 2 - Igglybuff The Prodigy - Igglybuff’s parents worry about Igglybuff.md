@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Wigglytuff Happy`
 
 `Wigglytuff`: "Sleep now sweet, little child. ♪ You are truly adorable. ♪"

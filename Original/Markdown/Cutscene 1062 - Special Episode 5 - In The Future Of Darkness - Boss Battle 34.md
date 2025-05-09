@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `💬`: "Sableye: Wheh-heh-heh!"
 
 
@@ -23,15 +17,6 @@
 `Grovyle Normal`
 
 `Grovyle`: "Let's go!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

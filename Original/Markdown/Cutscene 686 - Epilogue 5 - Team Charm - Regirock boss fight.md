@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 *If the player has progressed far enough:*
 
 
@@ -16,15 +13,6 @@
   * `Regirock Normal`
 
   * `Regirock`: "IF YOU WANT TO GO ON, SHOW THAT YOU HAVE THE POWER."
-
-
-  * * * *
-
-
-  * * * *
-
-
-  * * * *
 
 
   * * * *

@@ -4,15 +4,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "I was hoping to see Grovyle here."

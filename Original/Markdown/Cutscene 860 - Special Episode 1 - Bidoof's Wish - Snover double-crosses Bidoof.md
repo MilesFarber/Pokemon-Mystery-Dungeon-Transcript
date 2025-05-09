@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Bidoof Normal` ❗
 
 `Bidoof`: "...Huh? This... This looks like a dead end."

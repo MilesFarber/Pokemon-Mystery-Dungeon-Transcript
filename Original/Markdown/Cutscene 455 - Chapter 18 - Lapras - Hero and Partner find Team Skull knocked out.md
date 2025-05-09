@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Well...we've descended quite a ways, but..."

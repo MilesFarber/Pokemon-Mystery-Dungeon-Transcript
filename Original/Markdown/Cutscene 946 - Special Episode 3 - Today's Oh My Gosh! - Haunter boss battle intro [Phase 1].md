@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Haunter Normal`
 
 `Haunter`: "Heh heh heh! You've come back! You don't learn, do you?!"
@@ -45,21 +39,9 @@
 * * *
 
 
-* * *
-
-
 `Haunter Normal`
 
 `Haunter`: "Heh heh heh! I'll be happy to show you how it feels!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

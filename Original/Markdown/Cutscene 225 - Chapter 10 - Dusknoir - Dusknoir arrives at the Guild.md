@@ -93,9 +93,6 @@
 * * *
 
 
-* * *
-
-
 `Wigglytuff Normal`
 
 `Wigglytuff`: "Thank you for visiting! What an honor!"
@@ -424,9 +421,6 @@
 `Chatot Normal`
 
 `Chatot`: "And take some of the listed jobs! That will do!"
-
-
-* * *
 
 
 * * *

@@ -4,12 +4,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Surprised` 〽
 
 `Partner Name`: "Wow! The sea is right up this way, `Hero Name`!"

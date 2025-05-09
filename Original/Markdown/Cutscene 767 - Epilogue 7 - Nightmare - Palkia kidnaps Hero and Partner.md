@@ -1,18 +1,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Surprised` 〽
 
 `Partner Name`: "Wa-wah! Tremors?!"
-
-
-* * *
 
 
 * * *
@@ -36,15 +27,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Surprised` 〽
 
 `Partner Name`: "Who are you...?"
@@ -53,9 +35,6 @@
 `Palkia Normal`
 
 `Palkia`: "I AM PALKIA! I HOLD SWAY OVER SPACE! I HAVE DOMINION OVER DIMENSION!"
-
-
-* * *
 
 
 * * *
@@ -87,9 +66,6 @@
 `Partner Shouting`
 
 `Partner Name`: "Waaaaaah!"
-
-
-* * *
 
 
 * * *

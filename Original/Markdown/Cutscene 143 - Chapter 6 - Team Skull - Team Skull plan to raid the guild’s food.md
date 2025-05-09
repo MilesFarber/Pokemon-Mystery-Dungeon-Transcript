@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Zubat Normal`
 
 `Zubat`: "We just had dinner, but I could go for some more food."

@@ -579,15 +579,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Chatot Normal`
 
 `Chatot`: "At least, that was the plan."

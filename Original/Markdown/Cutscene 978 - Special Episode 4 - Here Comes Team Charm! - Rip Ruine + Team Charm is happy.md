@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Gardevoir Happy`
 
 `Gardevoir`: "All right! That went well!"
@@ -52,15 +49,6 @@
 `Lopunny Normal`
 
 `Lopunny`: "Among the three of us..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

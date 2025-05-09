@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Zubat Normal`
 
 `Zubat`: "But, Chief... Why'd you bother helping out that chicken?"

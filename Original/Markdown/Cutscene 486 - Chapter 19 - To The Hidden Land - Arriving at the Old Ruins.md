@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "Wow! Th-this place is..."

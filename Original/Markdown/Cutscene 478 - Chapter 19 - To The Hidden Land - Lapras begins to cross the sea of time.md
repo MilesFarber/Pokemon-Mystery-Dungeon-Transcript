@@ -9,15 +9,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "Waah! Lapras!"

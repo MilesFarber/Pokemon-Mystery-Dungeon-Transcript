@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "(Argh! I want to go soon. I'm getting impatient.)"

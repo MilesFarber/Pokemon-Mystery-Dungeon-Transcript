@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Worried`
 
 `Partner Name`: "We've climbed far up!"
@@ -35,15 +29,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Worried` 〽
 
 `Partner Name`: "GRROOOOOOH...GRROOOOOOH...!"
@@ -62,15 +47,6 @@
 `Partner Surprised`
 
 `Partner Name`: "I thought it might...be roaring! And it is!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

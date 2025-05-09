@@ -1,28 +1,7 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 〽
-
-* * *
-
 
 * * *
 
@@ -47,9 +26,6 @@
 * * *
 
 
-* * *
-
-
 `Kyogre Normal`
 
 `Kyogre`: "Calm the raging waves..."
@@ -58,15 +34,6 @@
 `Kyogre Normal`
 
 `Kyogre`: "I challenge you to surpass your limits..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

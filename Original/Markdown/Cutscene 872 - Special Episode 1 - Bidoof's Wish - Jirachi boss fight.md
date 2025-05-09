@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Bidoof Normal`
 
 `Bidoof`: "Hey! Jirachi! I've come back, yup yup!"
@@ -51,15 +45,6 @@
 `Jirachi Happy`
 
 `Jirachi`: "Ready...? Zzzz... Snorf..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

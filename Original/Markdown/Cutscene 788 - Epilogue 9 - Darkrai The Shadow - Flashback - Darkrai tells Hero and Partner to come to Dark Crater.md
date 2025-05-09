@@ -14,9 +14,6 @@
 * * *
 
 
-* * *
-
-
 `Darkrai Normal`
 
 `Darkrai`: "You two... I shall be waiting in the Dark Crater."

@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Bidoof Sad` 💦
 
 `Bidoof`: "Hmm... I couldn't really do well... By golly..."

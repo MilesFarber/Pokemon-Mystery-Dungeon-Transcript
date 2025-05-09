@@ -4,12 +4,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Here we are, `Hero Name`. Wigglytuff's Guild."

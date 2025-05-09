@@ -24,9 +24,6 @@
 * * *
 
 
-* * *
-
-
 `Shaymin Normal`
 
 `Shaymin`: "And so Team `Team Name`, which had successfully climbed to the Sky Peak Summit..."

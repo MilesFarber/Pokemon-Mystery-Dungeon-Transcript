@@ -9,21 +9,9 @@
 * * *
 
 
-* * *
-
-
 `Haunter Pain`
 
 `Haunter`: "GAAAAAAAAAAAaaaaaaaaaaaah!!!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -228,15 +216,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Slugma Sigh` 〽
 
 `Slugma`: "Bugyaaaaaaaah!"
@@ -250,15 +229,6 @@
 `Loudred Angry` 💢
 
 `Loudred`: "Ugaaaaah!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

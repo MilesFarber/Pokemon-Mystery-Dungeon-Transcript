@@ -219,24 +219,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Igglybuff Happy` 🔆
 
 `Igglybuff`: "I did it! ♪ I opened it! ♪"

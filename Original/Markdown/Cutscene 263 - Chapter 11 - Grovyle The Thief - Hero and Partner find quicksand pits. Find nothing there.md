@@ -101,6 +101,3 @@
 
 >The clouds parted over the Northern Desert!
 
-* * *
-
-

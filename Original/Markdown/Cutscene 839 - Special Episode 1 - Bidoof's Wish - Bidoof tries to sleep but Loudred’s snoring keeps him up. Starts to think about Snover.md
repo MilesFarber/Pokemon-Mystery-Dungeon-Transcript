@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Bidoof Normal`
 
 `Bidoof`: "Phew... Today was a really long day, yup yup..."

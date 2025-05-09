@@ -144,9 +144,6 @@
 * * *
 
 
-* * *
-
-
 `Bidoof Normal` ◀▼▶
 
 `Bidoof`: "Golly, I wonder what this all could be about?"

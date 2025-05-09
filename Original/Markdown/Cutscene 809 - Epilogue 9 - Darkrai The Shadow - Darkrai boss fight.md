@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Darkrai Normal`
 
 `Darkrai`: "Ah, this time..."
@@ -20,9 +14,6 @@
 * * *
 
 
-* * *
-
-
 `Darkrai Normal` 〽
 
 `Darkrai`: "And with you out of the way..."
@@ -31,15 +22,9 @@
 * * *
 
 
-* * *
-
-
 `Darkrai Normal`
 
 `Darkrai`: "I can transform this world..."
-
-
-* * *
 
 
 * * *
@@ -73,21 +58,9 @@
 * * *
 
 
-* * *
-
-
 `Darkrai Normal`
 
 `Darkrai`: "This is it! Attack!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

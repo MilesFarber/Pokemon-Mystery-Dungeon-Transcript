@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "We fell down this pitfall trap last time..."
@@ -20,12 +14,6 @@
 `Partner Normal`
 
 `Partner Name`: "But there may be other pitfalls. Let's watch our step carefully."
-
-
-* * *
-
-
-* * *
 
 
 * * *

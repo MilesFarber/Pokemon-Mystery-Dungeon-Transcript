@@ -55,15 +55,9 @@
 * * *
 
 
-* * *
-
-
 `Partner Sad`
 
 `Partner Name`: "I thought that holding on to my personal treasure would inspire me..."
-
-
-* * *
 
 
 * * *

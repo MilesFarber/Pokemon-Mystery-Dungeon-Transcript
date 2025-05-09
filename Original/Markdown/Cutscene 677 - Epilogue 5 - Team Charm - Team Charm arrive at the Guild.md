@@ -389,15 +389,6 @@
   * * * *
 
 
-  * * * *
-
-
-  * * * *
-
-
-  * * * *
-
-
   * `Partner Joyous` 🔆
 
   * `Partner Name`: "Yay! Yes! Thank you!"
@@ -427,12 +418,6 @@
 
 
 >You can now go to Aegis Cave!
-
-  * * * *
-
-
-  * * * *
-
 
 *If the player chooses "No":*
 

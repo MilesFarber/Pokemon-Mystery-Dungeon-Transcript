@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Worried`
 
 `Partner Name`: "Hmm..."
@@ -155,9 +152,6 @@
 `Sableye Normal`
 
 `Sableye`: "We're here."
-
-
-* * *
 
 
 * * *

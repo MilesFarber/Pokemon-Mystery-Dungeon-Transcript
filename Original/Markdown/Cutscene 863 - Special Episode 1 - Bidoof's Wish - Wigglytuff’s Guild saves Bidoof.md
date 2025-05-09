@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Bidoof Pain` 〽
 
 `Bidoof`: "Sniff... It's too tough..."
@@ -67,9 +61,6 @@
 
 
 `💬`: "Three! Smiles go for miles!"
-
-
-* * *
 
 
 * * *
@@ -148,15 +139,6 @@
 `Wigglytuff Special2`
 
 `Wigglytuff`: "YOOM...TAH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

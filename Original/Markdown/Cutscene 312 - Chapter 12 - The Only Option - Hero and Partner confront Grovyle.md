@@ -87,15 +87,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "Just try to stop me!"

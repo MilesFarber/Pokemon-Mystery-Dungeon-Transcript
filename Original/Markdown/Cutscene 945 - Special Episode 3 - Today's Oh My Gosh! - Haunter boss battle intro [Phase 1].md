@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Sunflora Normal`
 
 `Sunflora`: "........."
@@ -105,9 +99,6 @@
 * * *
 
 
-* * *
-
-
 `Haunter Normal`
 
 `Haunter`: "All the explorers who have tried to catch me..."
@@ -121,15 +112,6 @@
 `Haunter Normal`
 
 `Haunter`: "That kind of disappointment... I'll be happy to show you how it feels..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

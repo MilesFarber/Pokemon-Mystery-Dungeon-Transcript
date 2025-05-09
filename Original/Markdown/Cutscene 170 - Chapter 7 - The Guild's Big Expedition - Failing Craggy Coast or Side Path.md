@@ -6,9 +6,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Pain` 💦
 
 `Partner Name`: "Maybe we got a little careless."

@@ -9,9 +9,6 @@
 * * *
 
 
-* * *
-
-
 `Croagunk Normal`
 
 `Croagunk`: "Meh-heh-heh. What are you up to with Bidoof and the others? It all looks so sneaky."

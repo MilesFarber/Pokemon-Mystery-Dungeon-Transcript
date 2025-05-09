@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 ❗
 
 `Sunflora`: "Wait! Haunter!"
@@ -65,21 +59,9 @@
 * * *
 
 
-* * *
-
-
 `Haunter Normal`
 
 `Haunter`: "There is no way you can succeed! No possible way!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

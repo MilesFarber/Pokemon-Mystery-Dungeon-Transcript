@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 *If the player has progressed far enough:*
 
 
@@ -16,15 +13,6 @@
   * `Regice Normal`
 
   * `Regice`: "IF YOU WANT TO GO ON, SHOW THAT YOU HAVE THE POWER."
-
-
-  * * * *
-
-
-  * * * *
-
-
-  * * * *
 
 
   * * * *

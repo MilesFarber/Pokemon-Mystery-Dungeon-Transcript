@@ -4,12 +4,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Magnezone Normal`
 
 `Magnezone`: "ZZZT! Thank you for helping with our criminal investigation! ZZZT!"

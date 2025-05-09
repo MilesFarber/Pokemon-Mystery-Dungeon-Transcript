@@ -3,30 +3,12 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 ⛈️
 
 `Partner Name`: "But my guess is that if a Time Gear is removed from a region..."
 
 
 `Partner Name`: "The flow of time in that region will probably stop too."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

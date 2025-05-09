@@ -4,9 +4,6 @@
 * * *
 
 
-* * *
-
-
 `💬`: "The next morning..."
 
 

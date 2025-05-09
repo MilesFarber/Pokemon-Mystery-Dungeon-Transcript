@@ -67,15 +67,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 >Chimecho rang the Friendship Bell!
 
 `Chimecho Normal`

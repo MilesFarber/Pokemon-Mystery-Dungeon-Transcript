@@ -9,21 +9,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "We...did it..."
@@ -47,18 +32,6 @@
 `Partner Surprised` 〽
 
 `Partner Name`: "Wa-waah!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -95,12 +68,6 @@
 `Hero Surprised`
 
 `Hero Name`: "(The destruction will accelerate...until the planet is fully paralyzed!)"
-
-
-* * *
-
-
-* * *
 
 
 * * *

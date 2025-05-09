@@ -6,9 +6,6 @@
 * * *
 
 
-* * *
-
-
 *If the player has progressed far enough:*
 
 

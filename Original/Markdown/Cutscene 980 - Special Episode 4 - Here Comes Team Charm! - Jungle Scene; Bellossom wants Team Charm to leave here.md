@@ -22,9 +22,6 @@
 * * *
 
 
-* * *
-
-
 `Medicham`: "W-wait...for me!"
 
 
@@ -174,15 +171,6 @@
 `Medicham Normal`
 
 `Medicham`: "After all, we are the alluring treasure hunters--Team Charm!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

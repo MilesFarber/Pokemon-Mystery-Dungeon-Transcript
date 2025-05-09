@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Igglybuff Normal` ❓
 
 `Igglybuff`: "This is...?"

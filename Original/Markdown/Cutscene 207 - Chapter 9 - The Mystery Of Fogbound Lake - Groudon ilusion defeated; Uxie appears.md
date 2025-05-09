@@ -54,15 +54,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 〽
 
 `💬`: "Like I said earlier, I am the guardian here."
@@ -123,15 +114,6 @@
 
 
 `💬`: "Well...OK, I believe you."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

@@ -4,9 +4,6 @@
 * * *
 
 
-* * *
-
-
 `Diglett Normal` ❗
 
 `Diglett`: "I'm sorry, but I have something else I have to do today."

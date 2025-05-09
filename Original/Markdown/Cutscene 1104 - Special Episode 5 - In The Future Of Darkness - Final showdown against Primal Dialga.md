@@ -1,24 +1,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Primal Dialga Normal`
 
 `Primal Dialga`: "GRRR-OOOOOO...OOOOOH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

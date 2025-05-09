@@ -39,9 +39,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Shouting` 〽
 
 `Partner Name`: "Ouch!"

@@ -181,12 +181,6 @@
 
 >You can now go to the Shaymin Village!
 
-* * *
-
-
-* * *
-
-
 `Spinda Joyous`
 
 `Spinda`: "For more details, please direct your requests to the Project P survey team already on location."
@@ -215,9 +209,6 @@
 `Partner Inspired`
 
 `Partner Name`: "I'd love to meet these Shaymin! Let's go!"
-
-
-* * *
 
 
 * * *

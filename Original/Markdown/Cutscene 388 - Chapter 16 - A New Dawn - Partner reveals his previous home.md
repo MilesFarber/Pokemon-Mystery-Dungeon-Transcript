@@ -24,9 +24,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal` ❗
 
 `Partner Name`: "It's down here."

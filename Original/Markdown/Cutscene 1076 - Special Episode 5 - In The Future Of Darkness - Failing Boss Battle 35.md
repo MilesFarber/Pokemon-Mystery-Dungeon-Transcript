@@ -19,9 +19,6 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Pain` 〽
 
 `Dusknoir`: "Gah!"

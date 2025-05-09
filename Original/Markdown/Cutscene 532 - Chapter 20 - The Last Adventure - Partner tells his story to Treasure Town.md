@@ -11,9 +11,6 @@
 >
 >It was a story of hope for future peace.
 
-* * *
-
-
 `💬`: "So months passed..."
 
 

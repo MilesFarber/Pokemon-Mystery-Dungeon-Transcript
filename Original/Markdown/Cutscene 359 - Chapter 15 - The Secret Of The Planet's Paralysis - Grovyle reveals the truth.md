@@ -4,12 +4,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Grovyle Normal`
 
 `Grovyle`: "Good. This will do."

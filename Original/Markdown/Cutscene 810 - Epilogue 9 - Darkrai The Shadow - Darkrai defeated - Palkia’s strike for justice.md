@@ -9,15 +9,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Cresselia Normal`
 
 `Cresselia`: "We...did it..."
@@ -31,9 +22,6 @@
 `Cresselia Normal`
 
 `Cresselia`: "This is the end for you, Darkrai!"
-
-
-* * *
 
 
 * * *
@@ -150,9 +138,6 @@
 * * *
 
 
-* * *
-
-
 `Darkrai Normal` ❗
 
 `Darkrai`: "Y-you're..."
@@ -201,9 +186,6 @@
 `Darkrai Normal`
 
 `Darkrai`: "Gaaaaaah!"
-
-
-* * *
 
 
 * * *

@@ -191,9 +191,6 @@
 * * *
 
 
-* * *
-
-
 `Chatot Surprised` 〽
 
 `Chatot`: "Whaaaat?! Is that right?!"

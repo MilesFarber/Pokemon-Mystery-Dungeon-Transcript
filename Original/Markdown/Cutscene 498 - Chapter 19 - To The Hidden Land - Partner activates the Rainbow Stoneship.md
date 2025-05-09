@@ -21,9 +21,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Surprised` ❗
 
 `Partner Name`: "Waah! It moved! It moved!"

@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Armaldo Normal`
 
 `Armaldo`: "When we came here before, it seemed like this was the deepest point of the cave, but..."
@@ -90,15 +87,6 @@
 `Armaldo Angry`
 
 `Armaldo`: "That's what I expected!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

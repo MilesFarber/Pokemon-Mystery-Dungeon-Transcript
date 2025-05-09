@@ -114,9 +114,6 @@
   *   * * * *
 
 
-  *   * * * *
-
-
   * *If the player chooses "No":*
 
   *   * `Chimecho Surprised` 💦

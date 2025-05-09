@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "Humph. Up to now, I've had to chase after you."
@@ -35,21 +29,9 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "You're not going to slip through our grasp now!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

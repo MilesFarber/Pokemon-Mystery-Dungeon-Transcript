@@ -14,15 +14,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Cresselia Normal` 〽
 
 `Cresselia`: "Excellent! I was just in time!"
@@ -156,9 +147,6 @@
 `Cresselia Normal`
 
 `Cresselia`: "You're not getting away, Darkrai!"
-
-
-* * *
 
 
 * * *

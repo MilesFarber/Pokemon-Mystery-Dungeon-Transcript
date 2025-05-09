@@ -4,9 +4,6 @@
 * * *
 
 
-* * *
-
-
 `Bidoof Normal`
 
 `Bidoof`: "Huff-puff..."
@@ -369,15 +366,6 @@
 `Wigglytuff Special2`
 
 `Wigglytuff`: "YOOM...TAH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

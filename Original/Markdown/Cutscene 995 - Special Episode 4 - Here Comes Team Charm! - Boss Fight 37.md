@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Aggron Normal` 🔆
 
 `Aggron`: "GRAA-HAHAHAHA-HAHAHAHA!!"
@@ -60,21 +54,9 @@
 * * *
 
 
-* * *
-
-
 `Aggron Normal`
 
 `Aggron`: "Just looking for a fight!?"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

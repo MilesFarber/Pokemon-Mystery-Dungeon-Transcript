@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Medicham Normal`
 
 `Medicham`: "Don't be so slow!"

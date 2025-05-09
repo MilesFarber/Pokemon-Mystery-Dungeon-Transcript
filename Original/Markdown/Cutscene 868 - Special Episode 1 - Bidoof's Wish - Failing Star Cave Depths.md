@@ -11,12 +11,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Bidoof Sad`
 
 `Bidoof`: "Sniff... It's too tough... But..."

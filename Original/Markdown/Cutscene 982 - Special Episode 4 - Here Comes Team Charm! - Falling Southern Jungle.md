@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Medicham Normal`
 
 `Medicham`: "This time, we'll make it through the jungle!"

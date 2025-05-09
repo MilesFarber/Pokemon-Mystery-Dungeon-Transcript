@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Medicham Angry`
 
 `Medicham`: "Aargh! We were almost there!"

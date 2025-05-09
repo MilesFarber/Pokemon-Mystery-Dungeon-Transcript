@@ -212,9 +212,6 @@
 * * *
 
 
-* * *
-
-
 `Nidoking Normal` ❗
 
 `Nidoking`: "Everyone: WHAAAAAAAAAAAAAAAAAT?!"

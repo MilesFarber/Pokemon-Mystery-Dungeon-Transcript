@@ -1,24 +1,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Sad` 💦
 
 `Partner Name`: "Urk! What an intimidating place!"
-
-
-* * *
 
 
 * * *
@@ -112,9 +97,6 @@
 * * *
 
 
-* * *
-
-
 〽
 
 〽
@@ -127,15 +109,6 @@
 `Manectric Normal`
 
 `Manectric`: "Now, prepare to fight!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

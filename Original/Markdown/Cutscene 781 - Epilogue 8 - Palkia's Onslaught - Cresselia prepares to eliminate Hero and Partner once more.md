@@ -69,15 +69,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Surprised` 〽
 
 `Partner Name`: "Waah! Palkia!"
@@ -116,9 +107,6 @@
 `Palkia Normal`
 
 `Palkia`: "TO PREVENT IT...YOU MUST BE WIPED FROM THIS EXISTENCE!"
-
-
-* * *
 
 
 * * *
@@ -177,15 +165,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Pain` 〽
 
 `Partner Name`: "Urk...!"
@@ -237,9 +216,6 @@
 
 
 `💬`: "Ah, here you are... I've found you at last."
-
-
-* * *
 
 
 * * *
@@ -313,9 +289,6 @@
 `Cresselia Normal`
 
 `Cresselia`: "The world will be saved. It's beyond a shadow of a doubt."
-
-
-* * *
 
 
 * * *
@@ -439,12 +412,6 @@
 `Cresselia Normal` 〽
 
 `Cresselia`: "Now take this!"
-
-
-* * *
-
-
-* * *
 
 
 * * *

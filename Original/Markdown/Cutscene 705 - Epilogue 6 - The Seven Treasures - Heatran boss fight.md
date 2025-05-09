@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 *Anchor: <a name="0"></a>0*
 
 
@@ -13,22 +10,7 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 〽
-
-* * *
-
 
 * * *
 
@@ -53,9 +35,6 @@
 * * *
 
 
-* * *
-
-
 `Heatran Normal`
 
 `Heatran`: "Withstand the scorching fire..."
@@ -64,15 +43,6 @@
 `Heatran Normal`
 
 `Heatran`: "I challenge you to surpass your limits..."
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

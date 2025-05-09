@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 >This Phione appears eager to join the team.
 
 *Anchor: <a name="2"></a>2*

@@ -6,9 +6,6 @@
 * * *
 
 
-* * *
-
-
 `Shaymin Worried`
 
 `Shaymin`: "Usually, Grimer and Muk should be living farther down the mountain, I think..."

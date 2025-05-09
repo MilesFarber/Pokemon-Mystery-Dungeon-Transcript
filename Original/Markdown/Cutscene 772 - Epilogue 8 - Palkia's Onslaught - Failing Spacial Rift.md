@@ -15,9 +15,6 @@
   * * * *
 
 
-  * * * *
-
-
   * `Partner Pain` 💦
 
   * `Partner Name`: "Urk! This is difficult..."

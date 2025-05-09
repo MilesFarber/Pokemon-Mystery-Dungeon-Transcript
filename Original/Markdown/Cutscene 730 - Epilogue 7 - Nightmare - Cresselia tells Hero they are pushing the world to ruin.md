@@ -91,9 +91,6 @@
 * * *
 
 
-* * *
-
-
 `Hero Shouting`
 
 `Hero Name`: "Waaaah!"

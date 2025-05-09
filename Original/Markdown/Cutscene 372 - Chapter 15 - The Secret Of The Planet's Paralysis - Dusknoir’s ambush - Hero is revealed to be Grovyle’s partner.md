@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Partner Normal`
 
 `Partner Name`: "Is that...the Passage of Time?"
@@ -206,15 +203,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "GRRR-OOOOOO!"
@@ -223,18 +211,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Surprised`
 
 `Partner Name`: "GRRR-OOOOOO...OOOOOH!"
-
-
-* * *
 
 
 * * *

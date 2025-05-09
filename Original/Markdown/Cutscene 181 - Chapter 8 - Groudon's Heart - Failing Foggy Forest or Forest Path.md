@@ -9,9 +9,6 @@
 * * *
 
 
-* * *
-
-
 `Chatot Normal`
 
 `Chatot`: "What are you doing?"

@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Dusknoir Normal`
 
 `Dusknoir`: "Is this it, Grovyle?"
@@ -105,15 +99,6 @@
 `Grovyle Normal`
 
 `Grovyle`: "Sableye: Wheh-heh-heh!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

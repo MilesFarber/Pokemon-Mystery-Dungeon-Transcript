@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Surprised` ❗
 
 `Partner Name`: "Oh! There's Grovyle!"
@@ -101,15 +95,6 @@
 `Spiritomb Normal`
 
 `Spiritomb`: "HEE-hee...HEE-hee... PREPARE to take your punishment!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Medicham Angry`
 
 `Medicham`: "I've got the feeling that the treasure is just ahead!"

@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Armaldo Normal`
 
 `Armaldo`: "This place is a bit difficult..."

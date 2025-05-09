@@ -12,9 +12,6 @@
 
   * * * *
 
-
-  * * * *
-
 >
 >`Hero Name` gave a Blue Gummi to Manaphy.
 

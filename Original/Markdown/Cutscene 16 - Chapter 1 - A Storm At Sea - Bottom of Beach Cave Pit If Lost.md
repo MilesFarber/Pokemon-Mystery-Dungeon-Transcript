@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Worried` ❓
 
 `Partner Name`: "Oh... What?"
@@ -45,15 +39,6 @@
 `Koffing Normal`
 
 `Koffing`: "We'll show you what a wimp you are all over again! You ready?"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

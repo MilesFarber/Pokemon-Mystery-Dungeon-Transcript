@@ -34,9 +34,6 @@
 
   * * * *
 
-
-  * * * *
-
 >
 >The stone marker disappeared, and a hidden stairway was revealed!
 

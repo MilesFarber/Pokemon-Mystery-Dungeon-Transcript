@@ -24,9 +24,6 @@
   * * * *
 
 
-  * * * *
-
-
   * `Drowzee Normal`
 
   * `Drowzee`: "I'm going to send you into Azurill's dream."

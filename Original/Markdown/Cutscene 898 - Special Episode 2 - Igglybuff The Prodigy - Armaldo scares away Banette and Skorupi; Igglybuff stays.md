@@ -236,9 +236,6 @@
 * * *
 
 
-* * *
-
-
 `Armaldo Angry` ❗
 
 `Armaldo`: "I don't know who in the world you think you are!"
@@ -247,27 +244,9 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Armaldo Angry`
 
 `Armaldo`: "GAOOOOOOoooooooooOOOOOOOOO!!!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -301,15 +280,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Armaldo Angry`
 
 `Armaldo`: "GAAAOOOOOOOoooooooooOOOOOOOOO!!!"
@@ -318,21 +288,9 @@
 * * *
 
 
-* * *
-
-
 `Armaldo Angry`
 
 `Armaldo`: "If you stay here, something bad will happen!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

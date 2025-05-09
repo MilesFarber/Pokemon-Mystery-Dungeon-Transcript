@@ -19,15 +19,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Grovyle Pain` 〽
 
 `Grovyle`: "Gwah!"
@@ -151,9 +142,6 @@
 `Partner Determined`
 
 `Partner Name`: "Now! Go!"
-
-
-* * *
 
 
 * * *

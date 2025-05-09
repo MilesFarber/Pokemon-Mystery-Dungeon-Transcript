@@ -24,18 +24,9 @@
 * * *
 
 
-* * *
-
-
 `Sableye Normal`
 
 `Sableye`: "Gwah!"
-
-
-* * *
-
-
-* * *
 
 
 * * *

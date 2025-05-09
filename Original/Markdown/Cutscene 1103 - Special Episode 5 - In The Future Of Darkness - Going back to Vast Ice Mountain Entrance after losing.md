@@ -11,9 +11,6 @@
 * * *
 
 
-* * *
-
-
 `Dusknoir Normal` ❗
 
 `Dusknoir`: "There's no time."

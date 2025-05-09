@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Sad`
 
 `Partner Name`: "Sigh... Things aren't going as well as we'd hoped."

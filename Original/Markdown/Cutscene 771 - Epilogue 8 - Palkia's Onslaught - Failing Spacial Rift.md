@@ -15,9 +15,6 @@
   * * * *
 
 
-  * * * *
-
-
   * `Partner Pain` 💦
 
   * `Partner Name`: "Hmm... We were a bit careless."

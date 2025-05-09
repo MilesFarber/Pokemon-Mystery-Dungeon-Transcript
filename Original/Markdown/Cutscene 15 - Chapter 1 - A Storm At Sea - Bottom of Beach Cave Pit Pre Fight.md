@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Partner Determined`
 
 `Partner Name`: "Um... Hey!"
@@ -65,15 +59,6 @@
 `Zubat Normal`
 
 `Zubat`: "If you want it back that badly... Come and get it! Heh-heh-heh!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

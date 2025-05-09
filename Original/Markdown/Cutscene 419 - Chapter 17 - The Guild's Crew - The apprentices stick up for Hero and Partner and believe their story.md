@@ -529,15 +529,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Loudred Normal`
 
 `Loudred`: "All right! Let's show some guts!"

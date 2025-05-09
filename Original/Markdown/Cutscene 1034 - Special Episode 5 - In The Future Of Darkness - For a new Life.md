@@ -16,9 +16,6 @@
 * * *
 
 
-* * *
-
-
 `Grovyle Pain`
 
 `Grovyle`: "Ooogh... OOOOooogh..."
@@ -157,9 +154,6 @@
 `Dusknoir Normal`
 
 `Dusknoir`: "Grovyle! YOOOOUUUU!!"
-
-
-* * *
 
 
 * * *
@@ -393,9 +387,6 @@
 `Dusknoir Normal`
 
 `Dusknoir`: "I... I won't let you do that!"
-
-
-* * *
 
 
 * * *

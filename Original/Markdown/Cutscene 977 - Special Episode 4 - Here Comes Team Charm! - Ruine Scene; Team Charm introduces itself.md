@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `💬`: "On the eastern horizon..."
 
 
@@ -146,15 +143,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Medicham Normal`
 
 `Medicham`: "Strength!"
@@ -171,15 +159,6 @@
 
 
 `💬`: "Here come the treasure hunters! Here comes Team Charm!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

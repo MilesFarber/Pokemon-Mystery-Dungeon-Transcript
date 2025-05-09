@@ -59,9 +59,6 @@
 * * *
 
 
-* * *
-
-
 `Snover Pain` 〽
 
 `Snover`: "OUCH!"

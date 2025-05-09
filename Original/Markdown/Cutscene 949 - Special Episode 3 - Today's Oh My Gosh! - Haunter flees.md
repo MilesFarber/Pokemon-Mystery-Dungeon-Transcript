@@ -1,9 +1,6 @@
 * * *
 
 
-* * *
-
-
 `Sunflora Surprised`
 
 `Sunflora`: "... (Invincible...Haunter!)"

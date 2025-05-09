@@ -14,9 +14,3 @@
 >
 >You can now enter Crevice Cave!
 
-* * *
-
-
-* * *
-
-

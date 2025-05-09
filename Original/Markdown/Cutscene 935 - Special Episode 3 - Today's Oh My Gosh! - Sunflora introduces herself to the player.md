@@ -31,6 +31,3 @@
 >
 >So I wanted to study more with the Guildmaster.
 
-* * *
-
-

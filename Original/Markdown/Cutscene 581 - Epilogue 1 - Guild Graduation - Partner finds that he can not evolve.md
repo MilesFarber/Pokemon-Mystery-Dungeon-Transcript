@@ -112,15 +112,6 @@
 
 * * *
 
-
-* * *
-
-
-* * *
-
-
-* * *
-
 >
 >Teddiursa evolved into Ursaring!
 
@@ -317,9 +308,6 @@
 `Hero Normal`
 
 `Hero Name`: "This is Luminous Spring. If you seek new evolution, then you shall return..."
-
-
-* * *
 
 
 * * *

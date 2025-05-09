@@ -1,12 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
 `Mesprit Normal`
 
 `Mesprit`: "You're back?!"
@@ -30,15 +24,6 @@
 `Mesprit Normal`
 
 `Mesprit`: "Get ready!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *

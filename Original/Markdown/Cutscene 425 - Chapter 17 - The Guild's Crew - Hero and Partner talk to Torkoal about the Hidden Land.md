@@ -21,9 +21,6 @@
 * * *
 
 
-* * *
-
-
 `Torkoal Normal` 🕳️
 
 `Torkoal`: "...Ah, I see... The Hidden Land, you say?"

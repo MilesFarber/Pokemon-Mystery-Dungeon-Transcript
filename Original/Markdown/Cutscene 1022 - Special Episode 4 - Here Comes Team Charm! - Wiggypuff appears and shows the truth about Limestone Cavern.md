@@ -1,18 +1,6 @@
 * * *
 
 
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
 `Arbok Pain`
 
 `Arbok`: "Ssssoooghh..."
@@ -77,18 +65,6 @@
 
 
 `💬`: "YOOM...TAH!"
-
-
-* * *
-
-
-* * *
-
-
-* * *
-
-
-* * *
 
 
 * * *
@@ -272,9 +248,6 @@
 `Arbok Surprised`
 
 `Arbok`: "It's shaking and rattling!"
-
-
-* * *
 
 
 * * *
