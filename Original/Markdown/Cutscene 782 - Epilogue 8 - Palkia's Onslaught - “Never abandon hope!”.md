@@ -1,11 +1,9 @@
 * * *
 
 
-`💬`: "Yes, that's exactly it!"
-
-
-`💬`: "Never abandon hope!"
-
+>Yes, that's exactly it!
+>
+>Never abandon hope!
 
 * * *
 

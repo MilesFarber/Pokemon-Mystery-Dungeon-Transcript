@@ -1,4 +1,4 @@
-> checked the stone marker.
+>`Hero Name` checked the stone marker.
 >
 >There are oddly shaped grooves in it.
 >
@@ -13,7 +13,7 @@
   * *Anchor: <a name="0"></a>0*
 
 >
-> did as instructed.
+>`Hero Name` did as instructed.
 
   * *If not debugging:*
 

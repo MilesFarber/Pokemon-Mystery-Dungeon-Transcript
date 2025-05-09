@@ -1,5 +1,4 @@
-`💬`: "Grovyle the Thief"
-
+>Grovyle the Thief
 
 * * *
 

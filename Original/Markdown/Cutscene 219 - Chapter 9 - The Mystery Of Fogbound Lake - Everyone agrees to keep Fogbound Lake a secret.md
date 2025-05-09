@@ -113,33 +113,24 @@
 
 * * *
 
-
-`Chatot Normal`
-
-`Chatot`: "The Exploration Team Federation has sent a message..."
-
-
-`Chatot Normal`
-
-`Chatot`: "`Hero Name`'s team was rewarded! Its Treasure Bag is now bigger!"
-
-
-`Chatot Normal`
-
-`Chatot`: "You can now carry more items than you could before!"
-
-
-`Chatot Normal`
-
-`Chatot`: "Wait... There's one more message."
-
+>
+>The Exploration Team Federation has sent a message...
+>
+>`Hero Name`'s team was rewarded! Its Treasure Bag is now bigger!
+>
+>You can now carry more items than you could before!
+>
+>Wait... There's one more message.
 
 * * *
 
-
+>
 >The Special Episode "Igglybuff the Prodigy" has been unlocked!
 >
 >To play a Special Episode, select it from the Episode List on the Top Menu.
 >
 >If you would like to play the Special Episode, save your adventure progress, and return to the Top Menu.
+
+* * *
+
 

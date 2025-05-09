@@ -1,8 +1,7 @@
 * * *
 
 
-`💬`: "A Storm at Sea"
-
+>A Storm at Sea
 
 * * *
 

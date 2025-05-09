@@ -13,7 +13,7 @@
 
 `Shaymin Normal`
 
-`Shaymin`: "By the way, . Did you happen to find any treasures called Sky Gifts while we were climbing?"
+`Shaymin`: "By the way, `Hero Name`. Did you happen to find any treasures called Sky Gifts while we were climbing?"
 
 
 `Shaymin Normal`
@@ -43,6 +43,6 @@
 
 `Shaymin Normal`
 
-`Shaymin`: ", why don't you send a Sky Gift to those who have helped you?"
+`Shaymin`: "`Hero Name`, why don't you send a Sky Gift to those who have helped you?"
 
 

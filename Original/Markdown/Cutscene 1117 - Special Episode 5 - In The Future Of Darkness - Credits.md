@@ -1,8 +1,6 @@
-`💬`: "! ! Can you hear me?!"
-
-
-`💬`: "We are still alive!!"
-
+>! ! Can you hear me?!
+>
+>We are still alive!!
 
 * * *
 

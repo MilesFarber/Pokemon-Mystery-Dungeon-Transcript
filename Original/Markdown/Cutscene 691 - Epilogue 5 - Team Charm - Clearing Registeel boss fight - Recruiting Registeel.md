@@ -1,7 +1,7 @@
 * * *
 
 
->A mysterious light enveloped !
+>A mysterious light enveloped `Hero Name`!
 >
 >The guardian's permission was granted!
 
@@ -36,16 +36,16 @@
   * *Anchor: <a name="4"></a>4*
 
 
-  * *If the player chooses "1":*
+  * *If the player chooses "Accept":*
 
-> joined the team!
+>`Friend Name` joined the team!
 
   *   * ⚪
 
   *   * *Jump to [anchor 0](#0)*
 
 
-  * *If the player chooses "2":*
+  * *If the player chooses "Refuse":*
 >
 >Are you sure? You're sure you won't accept this potential new member?
 
@@ -56,7 +56,7 @@
 
   *   * *If the player chooses "Refuse":*
 >
-> turned down Registeel's offer to join.
+>`Hero Name` turned down Registeel's offer to join.
 
   *   *   * ⚪
 

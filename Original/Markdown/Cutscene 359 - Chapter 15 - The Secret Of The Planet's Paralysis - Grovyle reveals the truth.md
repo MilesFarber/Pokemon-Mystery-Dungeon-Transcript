@@ -1,5 +1,4 @@
-`💬`: "The Secret of the Planet's Paralysis"
-
+>The Secret of the Planet's Paralysis
 
 * * *
 

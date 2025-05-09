@@ -1,5 +1,4 @@
-`💬`: "Lapras"
-
+>Lapras
 
 * * *
 

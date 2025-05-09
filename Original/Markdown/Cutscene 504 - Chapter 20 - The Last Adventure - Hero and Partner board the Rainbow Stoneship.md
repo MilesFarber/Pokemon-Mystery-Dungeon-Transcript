@@ -1,5 +1,4 @@
-`💬`: "The Last Adventure"
-
+>The Last Adventure
 
 * * *
 

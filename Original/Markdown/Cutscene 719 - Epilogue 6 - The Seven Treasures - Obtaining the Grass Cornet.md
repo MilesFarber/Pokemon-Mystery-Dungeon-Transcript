@@ -17,7 +17,7 @@
 
 *If the player chooses "default":*
 >
-> obtained a Grass Cornet, one of the seven treasures!
+>`Hero Name` obtained a Grass Cornet, one of the seven treasures!
 
   * *Jump to [anchor 1](#1)*
 

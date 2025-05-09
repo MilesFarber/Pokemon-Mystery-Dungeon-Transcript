@@ -117,32 +117,23 @@
 * * *
 
 
-`Marill Normal`
-
-`Marill`: "The Exploration Team Federation has sent a message..."
-
-
-`Marill Normal`
-
-`Marill`: "`Hero Name`'s team was rewarded with an enlarged Treasure Bag!"
-
-
-`Marill Normal`
-
-`Marill`: "You can now carry more items than you could before!"
-
-
-`Marill Normal`
-
-`Marill`: "Wait... There's one more message."
-
+>The Exploration Team Federation has sent a message...
+>
+>`Hero Name`'s team was rewarded with an enlarged Treasure Bag!
+>
+>You can now carry more items than you could before!
+>
+>Wait... There's one more message.
 
 * * *
 
-
+>
 >The Special Episode "Bidoof's Wish" has been unlocked!
 >
 >To play a Special Episode, select it from the Episode List on the Top Menu.
 >
 >If you would like to play the Special Episode, save your adventure progress, and return to the Top Menu.
+
+* * *
+
 

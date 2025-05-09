@@ -17,7 +17,7 @@
 
 *If the player chooses "default":*
 >
-> obtained a Terra Cymbal, one of the seven treasures!
+>`Hero Name` obtained a Terra Cymbal, one of the seven treasures!
 
   * *Jump to [anchor 1](#1)*
 

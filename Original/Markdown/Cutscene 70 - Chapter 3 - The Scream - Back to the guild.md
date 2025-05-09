@@ -96,10 +96,7 @@
 * * *
 
 
-`Hero Normal`
-
-`Hero Name`: "H-h-h...HELP!"
-
+>H-h-h...HELP!
 
 * * *
 

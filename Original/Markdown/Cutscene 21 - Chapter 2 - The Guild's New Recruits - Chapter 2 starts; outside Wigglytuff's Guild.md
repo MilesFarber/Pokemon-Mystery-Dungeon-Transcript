@@ -1,5 +1,4 @@
-`💬`: "The New Guild Recruits"
-
+>The New Guild Recruits
 
 * * *
 

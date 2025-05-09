@@ -7,7 +7,7 @@
 >
 >It appears to be a letter.
 >
-> read the letter.
+>`Hero Name` read the letter.
 >
 >"To Team `Team Name`:
 >

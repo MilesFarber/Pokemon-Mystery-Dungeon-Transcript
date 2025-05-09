@@ -1,5 +1,4 @@
-`💬`: "The Only Option"
-
+>The Only Option
 
 * * *
 

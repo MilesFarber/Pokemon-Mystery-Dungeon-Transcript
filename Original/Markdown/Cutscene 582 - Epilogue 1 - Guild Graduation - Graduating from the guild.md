@@ -290,47 +290,29 @@
 * * *
 
 
-`Partner Teary-Eyed`
-
-`Partner Name`: "The Exploration Team Federation has sent a message..."
-
-
-`Partner Teary-Eyed`
-
-`Partner Name`: "`Hero Name`'s team was rewarded with an enlarged Treasure Bag!"
-
-
-`Partner Teary-Eyed`
-
-`Partner Name`: "You can now carry more items than you could before!"
-
-
-`Partner Teary-Eyed`
-
-`Partner Name`: "Also, as start-up funds for the newly affiliated team..."
-
-
-`Partner Teary-Eyed`
-
-`Partner Name`: "Team `Team Name` received 10,000!"
-
-
-`Partner Teary-Eyed`
-
-`Partner Name`: "One more thing..."
-
+>The Exploration Team Federation has sent a message...
+>
+>`Hero Name`'s team was rewarded with an enlarged Treasure Bag!
+>
+>You can now carry more items than you could before!
+>
+>Also, as start-up funds for the newly affiliated team...
+>
+>Team `Team Name` received 10,000!
+>
+>One more thing...
 
 * * *
 
-
+>
 >The Special Episode "In the Future of Darkness" has been unlocked!
 >
 >To play a Special Episode, select it from the Episode List on the Top Menu.
 >
 >If you would like to play the Special Episode, save your adventure progress, and return to the Top Menu.
 
-`Partner Teary-Eyed`
+* * *
 
-`Partner Name`: "Congratulations, Team `Team Name`! You graduated!"
-
+>
+>Congratulations, Team `Team Name`! You graduated!
 

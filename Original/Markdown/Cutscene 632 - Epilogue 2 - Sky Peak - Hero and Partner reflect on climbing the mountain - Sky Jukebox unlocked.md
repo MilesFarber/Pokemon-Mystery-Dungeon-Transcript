@@ -60,30 +60,15 @@
   * * * *
 
 
-  * `Partner Happy`
-
-  * `Partner Name`: "A message has arrived from the Exploration Team Federation..."
-
-
-  * `Partner Happy`
-
-  * `Partner Name`: "If you want to hear that song again..."
-
-
-  * `Partner Happy`
-
-  * `Partner Name`: "There's now a machine available for you to listen to the game music anytime! The Sky Jukebox is now available!"
-
-
-  * `Partner Happy`
-
-  * `Partner Name`: "To access the Sky Jukebox, select Other from the Top Menu."
-
-
-  * `Partner Happy`
-
-  * `Partner Name`: "To use the Sky Jukebox, save your adventure and return to the Top Menu."
-
+>A message has arrived from the Exploration Team Federation...
+>
+>If you want to hear that song again...
+>
+>There's now a machine available for you to listen to the game music anytime! The Sky Jukebox is now available!
+>
+>To access the Sky Jukebox, select Other from the Top Menu.
+>
+>To use the Sky Jukebox, save your adventure and return to the Top Menu.
 
   * * * *
 

@@ -471,20 +471,11 @@
 * * *
 
 
-`Partner Normal`
-
-`Partner Name`: "The Exploration Team Federation has sent a message..."
-
-
-`Partner Normal`
-
-`Partner Name`: "`Hero Name`'s team was rewarded with a bigger Treasure Bag!"
-
-
-`Partner Normal`
-
-`Partner Name`: "You can now carry more items than you could before!"
-
+>The Exploration Team Federation has sent a message...
+>
+>`Hero Name`'s team was rewarded with a bigger Treasure Bag!
+>
+>You can now carry more items than you could before!
 
 * * *
 

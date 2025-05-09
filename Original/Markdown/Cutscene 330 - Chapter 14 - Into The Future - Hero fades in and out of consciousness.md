@@ -1,5 +1,4 @@
-`💬`: "Into the Future"
-
+>Into the Future
 
 * * *
 

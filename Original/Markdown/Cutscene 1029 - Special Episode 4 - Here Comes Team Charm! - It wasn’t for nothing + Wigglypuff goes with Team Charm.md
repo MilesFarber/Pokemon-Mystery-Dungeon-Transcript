@@ -309,15 +309,9 @@
 * * *
 
 
-`Wigglytuff Sigh`
-
-`Wigglytuff`: "I'll go everywhere! ♪"
-
-
-`Wigglytuff Sigh`
-
-`Wigglytuff`: "YOOM...TAH!"
-
+>I'll go everywhere! ♪
+>
+>YOOM...TAH!
 
 * * *
 

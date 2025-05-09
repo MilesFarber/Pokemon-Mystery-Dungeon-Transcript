@@ -4,8 +4,7 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * `💬`: "Thanks for playing! We hope you enjoyed the demo!"
-
+>Thanks for playing! We hope you enjoyed the demo!
 
 *Else:*
 

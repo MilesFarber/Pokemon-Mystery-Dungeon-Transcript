@@ -73,6 +73,6 @@
 
 `Shaymin Surprised`
 
-`Shaymin`: "! We should hurry too!"
+`Shaymin`: "`Hero Name`! We should hurry too!"
 
 

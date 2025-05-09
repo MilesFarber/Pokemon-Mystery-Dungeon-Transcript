@@ -46,7 +46,7 @@
 
 >This is...
 >
-> received a Sky Gift!
+>`Hero Name` received a Sky Gift!
 >
 >You gently open the lid...
 >

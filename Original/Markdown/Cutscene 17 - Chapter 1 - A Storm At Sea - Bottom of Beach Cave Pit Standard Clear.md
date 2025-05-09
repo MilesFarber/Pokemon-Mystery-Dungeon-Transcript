@@ -19,9 +19,8 @@
 
   * * * *
 
-
-  * `💬`: " cleared the Beach Cave! Impressive!"
-
+>
+>`Hero Name` cleared the Beach Cave! Impressive!
 
 *Else:*
 

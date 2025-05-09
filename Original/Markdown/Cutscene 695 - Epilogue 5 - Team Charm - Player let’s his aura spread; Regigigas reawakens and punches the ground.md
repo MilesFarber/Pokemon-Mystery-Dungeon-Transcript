@@ -18,7 +18,7 @@
 `Gardevoir`: "There's an inscription on the stone marker!"
 
 
-> checked the stone marker.
+>`Hero Name` checked the stone marker.
 >
 >"Close your eyes, then let your aura flow into the ground.
 
@@ -28,9 +28,9 @@
 *Anchor: <a name="0"></a>0*
 
 >
-> did as instructed.
+>`Hero Name` did as instructed.
 >
->And 's aura spread to the ground!
+>And `Hero Name`'s aura spread to the ground!
 
 `Gardevoir Surprised` ❗
 

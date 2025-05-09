@@ -49,40 +49,19 @@
 * * *
 
 
-`Grovyle Normal`
-
-`Grovyle`: "That's it!"
-
-
-`Grovyle Normal`
-
-`Grovyle`: "Here!"
-
-
-`Grovyle Normal`
-
-`Grovyle`: "A Time Gear is here!"
-
-
-`Grovyle Normal`
-
-`Grovyle`: "I see!"
-
-
-`Grovyle Normal`
-
-`Grovyle`: "Place the Drought Stone in Groudon's heart."
-
-
-`Grovyle Normal`
-
-`Grovyle`: "That lifts the fog!"
-
-
-`Grovyle Normal`
-
-`Grovyle`: "Very well done! Good job, partner!"
-
+>That's it!
+>
+>Here!
+>
+>A Time Gear is here!
+>
+>I see!
+>
+>Place the Drought Stone in Groudon's heart.
+>
+>That lifts the fog!
+>
+>Very well done! Good job, partner!
 
 * * *
 

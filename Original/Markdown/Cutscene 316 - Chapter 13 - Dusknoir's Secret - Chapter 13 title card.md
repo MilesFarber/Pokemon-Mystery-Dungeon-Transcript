@@ -1,5 +1,4 @@
-`💬`: "Dusknoir's Secret"
-
+>Dusknoir's Secret
 
 * * *
 

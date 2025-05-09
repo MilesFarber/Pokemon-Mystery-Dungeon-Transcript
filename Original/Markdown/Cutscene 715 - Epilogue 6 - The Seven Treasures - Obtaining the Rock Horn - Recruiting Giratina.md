@@ -16,16 +16,16 @@
 >
 >Oh? Giratina is saying something.
 >
->It seemed to develop a kinship with  while battling!
+>It seemed to develop a kinship with `Hero Name` while battling!
 >
 >It says that it wants to join the team!
 
   * *Anchor: <a name="6"></a>6*
 
 
-  * *If the player chooses "1":*
+  * *If the player chooses "Accept":*
 >
-> joined the team!
+>`Friend Name` joined the team!
 
   *   * ⚪
 
@@ -41,7 +41,7 @@
   *   *   * *Anchor: <a name="8"></a>8*
 
 
-  * *If the player chooses "default":*
+  * *If the player chooses "Refuse":*
 >
 >Are you sure? You're sure you won't accept this potential new member?
 

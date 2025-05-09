@@ -1,5 +1,4 @@
-`💬`: "The Mystery of Fogbound Lake"
-
+>The Mystery of Fogbound Lake
 
 * * *
 

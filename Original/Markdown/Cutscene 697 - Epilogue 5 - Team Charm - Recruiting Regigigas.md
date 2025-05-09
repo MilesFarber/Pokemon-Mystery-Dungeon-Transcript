@@ -14,26 +14,23 @@
 *Anchor: <a name="2"></a>2*
 
 
-*If the player chooses "1":*
+*If the player chooses "Accept":*
 
   * *Anchor: <a name="0"></a>0*
 
 
-> joined the team!
+>`Friend Name` joined the team!
 
   * * * *
 
 
   * *Anchor: <a name="4"></a>4*
 
+>
+>`Hero Name` cleared Aegis Cave in admirable fashion!
 
-  * `Regigigas Normal`
-
-  * `Regigigas`: " cleared Aegis Cave in admirable fashion!"
-
-
-*If the player chooses "2":*
-
+*If the player chooses "Refuse":*
+>
 >Are you sure? You're sure you won't accept this potential new member?
 
   * *If the player chooses "Reconsider":*
@@ -43,7 +40,7 @@
 
   * *If the player chooses "Refuse":*
 >
-> turned down Regigigas's offer to join.
+>`Hero Name` turned down Regigigas's offer to join.
 
   *   * * * *
 

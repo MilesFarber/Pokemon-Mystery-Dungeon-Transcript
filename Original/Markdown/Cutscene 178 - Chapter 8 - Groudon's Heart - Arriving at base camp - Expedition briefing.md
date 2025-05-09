@@ -1,5 +1,4 @@
-`💬`: "Groudon's Heart"
-
+>Groudon's Heart
 
 * * *
 

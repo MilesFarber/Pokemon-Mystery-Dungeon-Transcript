@@ -29,7 +29,7 @@
 `Phione`: "This is our thank-you! ♪"
 
 
-> obtained a Phione Dew!
+>`Hero Name` obtained a Phione Dew!
 
 * * *
 

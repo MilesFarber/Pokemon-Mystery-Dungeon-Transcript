@@ -30,6 +30,9 @@
 >It was then, wasn't it...
 >
 >That you changed places...
+
+* * *
+
 >
 >You'd disorient your opponents with a blinding light...
 >
@@ -38,6 +41,9 @@
 >You'd hide the Haunter who fainted...
 >
 >Then one of you would feign innocence and pretend to be the Haunter who'd fainted...
+
+* * *
+
 
 `Sunflora Surprised`
 

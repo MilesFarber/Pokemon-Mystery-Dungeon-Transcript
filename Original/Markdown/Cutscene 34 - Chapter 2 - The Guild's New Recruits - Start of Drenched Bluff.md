@@ -4,14 +4,11 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * `💬`: "You wake up one day, only to realize that you've been turned into a Pokémon and are now in a world inhabited only by Pokémon!"
-
-
-  * `💬`: "It's up to you to form an exploration team and embark on the adventure of a lifetime!"
-
-
-  * `💬`: "Welcome to the fascinating world of Pokémon Mystery Dungeon: Explorers of Sky! Now YOU are the Pokémon!"
-
+>You wake up one day, only to realize that you've been turned into a Pokémon and are now in a world inhabited only by Pokémon!
+>
+>It's up to you to form an exploration team and embark on the adventure of a lifetime!
+>
+>Welcome to the fascinating world of Pokémon Mystery Dungeon: Explorers of Sky! Now YOU are the Pokémon!
 
   * * * *
 

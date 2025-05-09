@@ -336,15 +336,9 @@
   * `Hero Name`: "(...My answer is...)"
 
 
-  * `Hero Sad`
-
-  * `Hero Name`: "Don't, `Hero Name`!"
-
-
-  * `Hero Sad`
-
-  * `Hero Name`: "Don't be fooled!"
-
+>Don't, `Hero Name`!
+>
+>Don't be fooled!
 
   * *Anchor: <a name="5"></a>5*
 
@@ -367,10 +361,7 @@
   * *Anchor: <a name="6"></a>6*
 
 
-  * `Hero Surprised`
-
-  * `Hero Name`: "This is all... a nightmare!"
-
+>This is all... a nightmare!
 
   * *Anchor: <a name="9"></a>9*
 
@@ -514,39 +505,24 @@
   * *Anchor: <a name="8"></a>8*
 
 
-  * `Darkrai Normal`
-
-  * `Darkrai`: "This is all... a nightmare!"
-
+>This is all... a nightmare!
 
   * *Jump to [anchor 9](#9)*
 
-
-  * `Darkrai Normal`
-
-  * `Darkrai`: "Don't, `Hero Name`!"
-
-
-  * `Darkrai Normal`
-
-  * `Darkrai`: "Don't be fooled!"
-
+>
+>Don't, `Hero Name`!
+>
+>Don't be fooled!
 
   * *Jump to [anchor 5](#5)*
 
 
   * *Anchor: <a name="4"></a>4*
 
-
-  * `Darkrai Normal`
-
-  * `Darkrai`: "Don't, `Hero Name`!"
-
-
-  * `Darkrai Normal`
-
-  * `Darkrai`: "Don't be fooled!"
-
+>
+>Don't, `Hero Name`!
+>
+>Don't be fooled!
 
   * *Jump to [anchor 5](#5)*
 

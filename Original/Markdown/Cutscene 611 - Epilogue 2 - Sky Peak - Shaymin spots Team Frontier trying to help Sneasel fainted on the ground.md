@@ -73,6 +73,6 @@
 
 `Shaymin Normal`
 
-`Shaymin`: "Let's hurry, !"
+`Shaymin`: "Let's hurry, `Hero Name`!"
 
 

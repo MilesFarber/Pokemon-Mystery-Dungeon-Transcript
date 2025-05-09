@@ -1,5 +1,4 @@
-`💬`: "The Guild's Big Expedition"
-
+>The Guild's Big Expedition
 
 * * *
 

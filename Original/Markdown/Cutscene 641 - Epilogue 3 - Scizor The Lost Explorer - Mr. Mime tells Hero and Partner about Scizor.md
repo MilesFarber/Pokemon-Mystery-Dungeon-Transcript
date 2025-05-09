@@ -72,3 +72,6 @@
 >
 >You can now go to Blizzard Island!
 
+* * *
+
+

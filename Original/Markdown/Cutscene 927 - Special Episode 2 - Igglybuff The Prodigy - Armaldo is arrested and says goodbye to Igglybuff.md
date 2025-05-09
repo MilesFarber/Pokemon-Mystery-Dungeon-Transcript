@@ -282,10 +282,7 @@
 * * *
 
 
-`Igglybuff Teary-Eyed`
-
-`Igglybuff`: "WAIT!! STOP IT! JUNIOR!!"
-
+>WAIT!! STOP IT! JUNIOR!!
 
 * * *
 

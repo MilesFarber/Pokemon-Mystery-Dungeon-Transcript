@@ -1,5 +1,4 @@
-`💬`: "The Guild's Crew"
-
+>The Guild's Crew
 
 * * *
 

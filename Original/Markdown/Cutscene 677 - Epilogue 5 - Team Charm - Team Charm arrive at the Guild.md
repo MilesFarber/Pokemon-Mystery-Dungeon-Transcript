@@ -419,6 +419,9 @@
 
 >You can now go to Aegis Cave!
 
+  * * * *
+
+
 *If the player chooses "No":*
 
   * *Anchor: <a name="1"></a>1*

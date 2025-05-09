@@ -1,7 +1,7 @@
 * * *
 
 
->A mysterious light enveloped !
+>A mysterious light enveloped `Hero Name`!
 >
 >The guardian's permission was granted!
 

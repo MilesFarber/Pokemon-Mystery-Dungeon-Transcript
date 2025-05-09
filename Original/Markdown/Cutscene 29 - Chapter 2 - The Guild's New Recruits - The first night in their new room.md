@@ -4,14 +4,11 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * `💬`: "Exploration Team Quick Tip"
-
-
-  * `💬`: "You can save a record of your progress by climbing onto your bed from now on."
-
-
-  * `💬`: "So whenever you want to save your progress, just climb onto your bed."
-
+>Exploration Team Quick Tip
+>
+>You can save a record of your progress by climbing onto your bed from now on.
+>
+>So whenever you want to save your progress, just climb onto your bed.
 
 *Else:*
 

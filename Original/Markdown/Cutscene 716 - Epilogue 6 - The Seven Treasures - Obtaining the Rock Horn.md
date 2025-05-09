@@ -17,7 +17,7 @@
 
 *If the player chooses "default":*
 >
-> obtained a Rock Horn, one of the seven treasures!
+>`Hero Name` obtained a Rock Horn, one of the seven treasures!
 
   * *Jump to [anchor 1](#1)*
 
