@@ -11,7 +11,7 @@
   *   * *Anchor: <a name="2"></a>2*
 
 
-  *   * *If certain conditions are met:*
+  *   * *If the player has received Sneasel's gift:*
 
 
   *   *   * *Anchor: <a name="4"></a>4*

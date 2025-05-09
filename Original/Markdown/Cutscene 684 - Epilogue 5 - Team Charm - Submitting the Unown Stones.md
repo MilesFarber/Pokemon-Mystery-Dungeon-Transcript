@@ -15,7 +15,7 @@
 >
 > did as instructed.
 
-  * *If certain conditions are met:*
+  * *If not debugging:*
 
 
   *   * *Anchor: <a name="2"></a>2*

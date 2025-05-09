@@ -4,7 +4,7 @@
 * * *
 
 
-*If certain conditions are met:*
+*If the party leader cannot be switched at this time:*
 
 
   * *Anchor: <a name="0"></a>0*

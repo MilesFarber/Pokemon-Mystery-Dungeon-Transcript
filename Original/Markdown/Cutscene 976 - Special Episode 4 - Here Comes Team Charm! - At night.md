@@ -1,4 +1,4 @@
-*If certain conditions are met:*
+*If not debugging:*
 
 
   * *Anchor: <a name="0"></a>0*

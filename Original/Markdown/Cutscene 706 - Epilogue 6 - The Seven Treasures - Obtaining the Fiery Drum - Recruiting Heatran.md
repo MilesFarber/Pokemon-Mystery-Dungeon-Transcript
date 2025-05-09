@@ -38,7 +38,7 @@
   *   * * * *
 
 
-  *   * *If certain conditions are met:*
+  *   * *If any of the seven treasures has been collected:*
 
 
   *   *   * *Anchor: <a name="11"></a>11*

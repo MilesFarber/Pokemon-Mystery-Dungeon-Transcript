@@ -1,4 +1,4 @@
-*If certain conditions are met:*
+*If the game was last saved by sleeping:*
 
 
   * *Anchor: <a name="0"></a>0*
