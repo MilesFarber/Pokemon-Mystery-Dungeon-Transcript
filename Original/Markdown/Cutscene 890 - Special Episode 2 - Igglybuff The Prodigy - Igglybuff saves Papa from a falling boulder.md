@@ -61,6 +61,7 @@
 >
 >This huge boulder started to fall, right above me!
 
+
 `Wigglytuff Surprised` 〽
 
 `Wigglytuff`: "W-waaaaaaaahhhhhhh!!"
@@ -75,6 +76,7 @@
 >
 >...And just when I thought that!
 
+
 `Igglybuff Shouting`
 
 `Igglybuff`: "YOOM...TAH!!"
@@ -86,6 +88,7 @@
 >Somehow the boulder was smashed to pieces...
 >
 >I wasn't crushed by the boulder... Somehow I was saved...
+
 
 * * *
 

@@ -5,6 +5,7 @@
 >
 >I've come to train at Guildmaster Wigglytuff's Guild! Yup yup!
 
+
 `Bidoof Normal`
 
 `Bidoof`: "Well, I'm off!"

@@ -38,6 +38,7 @@
 
 >`Hero Name` described the vision revealed by the Dimensional Scream.
 
+
 `Loudred Normal` ❗
 
 `Loudred`: "WHAT?!"

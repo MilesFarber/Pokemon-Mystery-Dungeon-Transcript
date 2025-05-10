@@ -3,6 +3,7 @@
 
 >When I knocked out Haunter...
 
+
 `Sunflora Normal`
 
 `Sunflora`: "........."
@@ -31,9 +32,10 @@
 >
 >That you changed places...
 
+
 * * *
 
->
+
 >You'd disorient your opponents with a blinding light...
 >
 >While the two of you that were hidden would come out...
@@ -41,6 +43,7 @@
 >You'd hide the Haunter who fainted...
 >
 >Then one of you would feign innocence and pretend to be the Haunter who'd fainted...
+
 
 * * *
 
@@ -95,6 +98,7 @@
 >The moment they believed that you were invincible, Haunter, they lost the will to fight...
 >
 >That's why the exploration teams were unable to apprehend Haunter.
+
 
 * * *
 

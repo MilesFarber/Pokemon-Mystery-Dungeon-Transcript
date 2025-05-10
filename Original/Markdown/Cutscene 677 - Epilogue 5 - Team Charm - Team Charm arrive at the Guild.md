@@ -419,11 +419,35 @@
 
 >You can now go to Aegis Cave!
 
+
   * * * *
 
 
 *If the player chooses "No":*
 
   * *Anchor: <a name="1"></a>1*
+
+
+  * *Loop forever:*
+
+
+  *   * `Partner Surprised` 〽
+
+  *   * `Partner Name`: "What? Why? We may be able to discover incredible treasure!"
+
+
+  *   * `Partner Surprised`
+
+  *   * `Partner Name`: "Oh, don't be that way! Let's go exploring with them!"
+
+
+  *   * *If the player chooses "Yes":*
+
+  *   *   * *Break from this loop.*
+
+
+  *   * *If the player chooses "No":*
+
+  * *Jump to [anchor 0](#0)*
 
 

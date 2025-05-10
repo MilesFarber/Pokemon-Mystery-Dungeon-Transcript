@@ -21,17 +21,20 @@
 
 >`Friend Name` joined the team!
 
+
   * * * *
 
 
   * *Anchor: <a name="4"></a>4*
 
->
+
 >`Hero Name` cleared Aegis Cave in admirable fashion!
 
+
 *If the player chooses "Refuse":*
->
+
 >Are you sure? You're sure you won't accept this potential new member?
+
 
   * *If the player chooses "Reconsider":*
 
@@ -39,8 +42,9 @@
 
 
   * *If the player chooses "Refuse":*
->
+
 >`Hero Name` turned down Regigigas's offer to join.
+
 
   *   * * * *
 

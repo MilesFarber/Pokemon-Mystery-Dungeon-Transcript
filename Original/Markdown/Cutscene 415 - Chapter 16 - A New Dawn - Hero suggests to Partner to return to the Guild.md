@@ -94,6 +94,77 @@
 *Anchor: <a name="2"></a>2*
 
 
+*Loop forever:*
+
+
+  * *If the player chooses "Let's go to Treasure Town!":*
+
+  *   * *Anchor: <a name="0"></a>0*
+
+
+  *   * `Partner Surprised`
+
+  *   * `Partner Name`: "Pardon?! You want to go to Treasure Town?!"
+
+
+  *   * `Partner Surprised`
+
+  *   * `Partner Name`: "Wh-why?!"
+
+
+  *   * `Partner Surprised`
+
+  *   * `Partner Name`: "We vanished in front of everyone, remember?"
+
+
+  *   * `Partner Surprised`
+
+  *   * `Partner Name`: "I think if we suddenly showed up, everyone would be shocked!"
+
+
+  *   * `Partner Surprised`
+
+  *   * `Partner Name`: "But why Treasure Town? What are we going to do there?"
+
+
+  *   * `Hero Worried` 💧
+
+  *   * `Hero Name`: "(Th-that's true.)"
+
+
+  *   * `Hero Worried`
+
+  *   * `Hero Name`: "(Come to think of it, there isn't much point in going to Treasure Town.)"
+
+
+  *   * `Hero Worried`
+
+  *   * `Hero Name`: "(What would we possibly do there?)"
+
+
+  *   * `Hero Worried`
+
+  *   * `Hero Name`: "(I flubbed it. I guess that's not what I meant.)"
+
+
+  *   * `Partner Worried` ❓
+
+  *   * `Partner Name`: "Pardon? That was a mistake?"
+
+
+  *   * `Partner Worried`
+
+  *   * `Partner Name`: "OK. Then where were you going to suggest?"
+
+
+  *   * `Partner Worried`
+
+  *   * `Partner Name`: "Let's go to Wigglytuff's Guild!"
+
+
+  *   * *Break from this loop.*
+
+
 `Partner Surprised`
 
 `Partner Name`: "Pardon?! You want to go to Wigglytuff's Guild?!"

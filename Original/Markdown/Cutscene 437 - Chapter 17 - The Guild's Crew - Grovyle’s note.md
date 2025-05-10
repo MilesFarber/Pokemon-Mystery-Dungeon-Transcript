@@ -57,6 +57,7 @@
 >
 >Dusknoir is liable to return from the future at any time.
 
+
 `Partner Surprised` 〽
 
 `Partner Name`: "Dusknoir?!"
@@ -93,6 +94,7 @@
 >"Good luck on your end.
 >
 >Together, we shall stop the planet's paralysis." - From Grovyle
+
 
 `Partner Normal`
 

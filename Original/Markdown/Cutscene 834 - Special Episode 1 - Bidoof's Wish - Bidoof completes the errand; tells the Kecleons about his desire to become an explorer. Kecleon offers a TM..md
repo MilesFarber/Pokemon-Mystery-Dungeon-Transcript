@@ -153,6 +153,7 @@
 
 >Kecleon showed Bidoof the TM `TM`Hidden Power.
 
+
 `Bidoof Normal`
 
 `Bidoof`: "`TM`Hidden Power... That sounds pretty strong..."

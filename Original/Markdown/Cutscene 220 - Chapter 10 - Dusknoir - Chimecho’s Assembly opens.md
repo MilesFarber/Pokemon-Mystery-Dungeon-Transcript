@@ -69,6 +69,7 @@
 
 >Chimecho rang the Friendship Bell!
 
+
 `Chimecho Normal`
 
 `Chimecho`: "Now Team `Team Name` has the power to recruit new members!"

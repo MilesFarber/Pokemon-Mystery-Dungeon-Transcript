@@ -1,49 +1,57 @@
-*Anchor: <a name="0"></a>0*
+*If the player chooses "0":*
+
+  * *Anchor: <a name="0"></a>0*
 
 
-*Anchor: <a name="2"></a>2*
+  * *Anchor: <a name="2"></a>2*
 
 
-* * *
+  * * * *
 
 
-`Groudon Normal` 〽
+  * `Groudon Normal` 〽
 
-`Groudon`: "GRR...GRR...OOOOOOOOOH!"
-
-
-`Partner Stunned` 💦
-
-`Partner Name`: "Urk... I'm scared!"
+  * `Groudon`: "GRR...GRR...OOOOOOOOOH!"
 
 
-`Partner Determined`
+  * `Partner Stunned` 💦
 
-`Partner Name`: "But it's time to be brave!"
-
-
-`Partner Determined`
-
-`Partner Name`: "And I need to stand up to this!"
+  * `Partner Name`: "Urk... I'm scared!"
 
 
-`Partner Determined`
+  * `Partner Determined`
 
-`Partner Name`: "We can't just run away now, `Hero Name`!"
-
-
-* * *
+  * `Partner Name`: "But it's time to be brave!"
 
 
-*Anchor: <a name="5"></a>5*
+  * `Partner Determined`
+
+  * `Partner Name`: "And I need to stand up to this!"
 
 
-* * *
+  * `Partner Determined`
+
+  * `Partner Name`: "We can't just run away now, `Hero Name`!"
 
 
-*Jump to [anchor 5](#5)*
+  * *If the player chooses "0":*
+
+  *   * * * *
 
 
-*Jump to [anchor 2](#2)*
+  *   * *Anchor: <a name="5"></a>5*
+
+
+  * *If the player chooses "1":*
+
+  *   * * * *
+
+
+  *   * *Jump to [anchor 5](#5)*
+
+
+*If the player chooses "1":*
+
+  * *Jump to [anchor 2](#2)*
 
 

@@ -15,6 +15,7 @@
 >
 >Inside was the Defend Globe.
 
+
 `Armaldo Surprised` 〽
 
 `Armaldo`: "Th-this...is...!"
@@ -307,6 +308,7 @@
 >And he returned to being an explorer...
 >
 >And so Master and I... went out on explorations together.
+
 
 `Igglybuff Happy` 🔆
 

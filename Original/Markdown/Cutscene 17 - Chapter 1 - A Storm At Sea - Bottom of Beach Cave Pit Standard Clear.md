@@ -17,10 +17,12 @@
 >
 >It's impossible to go any farther. It's time to go back.
 
+
   * * * *
 
->
+
 >`Hero Name` cleared the Beach Cave! Impressive!
+
 
 *Else:*
 

@@ -18,6 +18,7 @@
 
 >`Partner Name` just happened to push the gigantic gem!
 
+
 `Hero Surprised` 〽
 
 `Hero Name`: "(Aaaack! That's...)"

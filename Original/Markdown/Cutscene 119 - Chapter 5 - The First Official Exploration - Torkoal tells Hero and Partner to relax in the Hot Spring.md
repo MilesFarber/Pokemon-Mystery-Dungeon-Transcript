@@ -1,42 +1,50 @@
-*Anchor: <a name="0"></a>0*
+*If the player chooses "0":*
+
+  * *Anchor: <a name="0"></a>0*
 
 
-* * *
+  * * * *
 
 
-*Anchor: <a name="2"></a>2*
+  * *Anchor: <a name="2"></a>2*
 
 
-`Torkoal Normal` 〽
+  * `Torkoal Normal` 〽
 
-`Torkoal`: "My goodness! It was the water that carried you all this way?"
-
-
-`Torkoal Normal`
-
-`Torkoal`: "What a long journey that must have been! Let the Hot Spring wash away your fatigue before you make your way home."
+  * `Torkoal`: "My goodness! It was the water that carried you all this way?"
 
 
-`Partner Normal`
+  * `Torkoal Normal`
 
-`Partner Name`: "Good idea. We'll do that. Thanks, everyone!"
-
-
-* * *
+  * `Torkoal`: "What a long journey that must have been! Let the Hot Spring wash away your fatigue before you make your way home."
 
 
-*Anchor: <a name="5"></a>5*
+  * `Partner Normal`
+
+  * `Partner Name`: "Good idea. We'll do that. Thanks, everyone!"
 
 
-* * *
+  * *If the player chooses "0":*
+
+  *   * * * *
 
 
-*Jump to [anchor 5](#5)*
+  *   * *Anchor: <a name="5"></a>5*
 
 
-* * *
+  * *If the player chooses "1":*
+
+  *   * * * *
 
 
-*Jump to [anchor 2](#2)*
+  *   * *Jump to [anchor 5](#5)*
+
+
+*If the player chooses "1":*
+
+  * * * *
+
+
+  * *Jump to [anchor 2](#2)*
 
 

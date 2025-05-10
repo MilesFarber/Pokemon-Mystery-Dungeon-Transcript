@@ -110,10 +110,12 @@
 >
 >Teddiursa's appearance is changing...
 
+
 * * *
 
->
+
 >Teddiursa evolved into Ursaring!
+
 
 `Partner Surprised` ❗
 

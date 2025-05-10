@@ -682,101 +682,87 @@ def 0:
 						Case:
 							Value: No
 							Label: @label_5;
-							Identifier: SetEffect
-								Template
-									Type: actor
-									Identifier: ACTOR_ATTENDANT1
-									Identifier: EFFECT_SHOCKED_MIRRORED
-									Identifier: 3
-									Identifier: WaitEffect
-									Identifier: actor
-									Identifier: ACTOR_ATTENDANT1
-									Identifier: WaitExecuteLives
-									Identifier: ACTOR_ATTENDANT1
-									Identifier: message_SetFace
-									Identifier: ACTOR_ATTENDANT1
-									Identifier: FACE_SURPRISED
-									Identifier: FACE_POS_STANDARD
-									Identifier: message_SwitchTalk
-									Identifier: PARTNER_TALK_KIND
-									Identifier: case
-									Identifier: 1
-									Identifier: english
-									Identifier: Huh
-									Identifier: case
-									Identifier: 2
-									Identifier: english
-									Identifier: What
-									Identifier: default
-									Identifier: english
-									Identifier: What
-									Identifier: message_SwitchTalk
-									Identifier: PARTNER_TALK_KIND
-									Identifier: case
-									Identifier: 1
-									Identifier: english
-									Identifier: We
-									Identifier: can
-									Identifier: t
-									Identifier: just
-									Identifier: leave
-									Identifier: the
-									Identifier: poor
-									Identifier: little
-									Identifier: guy
-									Identifier: here.
-									Identifier: He
-									Identifier: can
-									Identifier: t
-									Identifier: look
-									Identifier: after
-									Identifier: himself.
-									Identifier: case
-									Identifier: 2
-									Identifier: english
-									Identifier: We
-									Identifier: can
-									Identifier: t
-									Identifier: just
-									Identifier: leave
-									Identifier: the
-									Identifier: poor
-									Identifier: little
-									Identifier: guy
-									Identifier: here.
-									Identifier: He
-									Identifier: can
-									Identifier: t
-									Identifier: fend
-									Identifier: for
-									Identifier: himself.
-									Identifier: default
-									Identifier: english
-									Identifier: We
-									Identifier: can
-									Identifier: t
-									Identifier: just
-									Identifier: leave
-									Identifier: the
-									Identifier: poor
-									Identifier: little
-									Identifier: guy
-									Identifier: here.
-									Identifier: He
-									Identifier: can
-									Identifier: t
-									Identifier: look
-									Identifier: after
-									Identifier: himself.
-									Identifier: CallCommon
-									Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
-									Identifier: se_Play
-									Identifier: 8974
-									Identifier: ExecuteCommon
-									Identifier: actor
-									Identifier: ACTOR_ATTENDANT1
-								Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-								Argument: jump
+							Loop: forever
+								Identifier: CallCommon
+									Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+								Identifier: se_Play
+									Argument: 8968
+								Identifier: SetEffect
+									Template
+										Type: actor
+										Identifier: ACTOR_ATTENDANT1
+									Argument: EFFECT_SHOCKED_MIRRORED
+									Argument: 3
+								Identifier: WaitEffect
+									Template
+										Type: actor
+										Identifier: ACTOR_ATTENDANT1
+								Identifier: WaitExecuteLives
+									Argument: ACTOR_ATTENDANT1
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_SURPRISED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Huh?!
+									Case:
+										Value: 2
+											Dialogue: What?!
+									Case:
+										Value: default
+											Dialogue: What?!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We can't just leave the poor little guy here. He can't look after himself.
+									Case:
+										Value: 2
+											Dialogue: We can't just leave the poor little guy here. He can't fend for himself.
+									Case:
+										Value: default
+											Dialogue: We can't just leave the poor little guy here. He can't look after himself.
+								Identifier: CallCommon
+									Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+								Identifier: se_Play
+									Argument: 8974
+								Identifier: ExecuteCommon
+									Template
+										Type: actor
+										Identifier: ACTOR_ATTENDANT1
+									Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+									Argument: 0
+								Identifier: WaitExecuteLives
+									Argument: ACTOR_ATTENDANT1
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_SAD
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Come on, let's look after this little guy together.[K] Please?
+									Case:
+										Value: 2
+											Dialogue: Come on, let's look after this little guy together.[K] Please?
+									Case:
+										Value: default
+											Dialogue: Aww, please, let's look after this little guy together.[K] Pretty please?
+								Switch:
+									Variable: message_SwitchMenu(0, 1)
+									Case:
+										Value: Yes
+										Identifier: break_loop
+										Identifier: break
+									Case:
+										Value: No
+										Identifier: continue
+										Identifier: break
+							Identifier: jump
 								Argument: label_4
 					Identifier: break
 				Case:

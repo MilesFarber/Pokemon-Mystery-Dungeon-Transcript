@@ -237,6 +237,7 @@
 
 >`Hero Name` touched the statue of Groudon.
 
+
 `Partner Normal`
 
 `Partner Name`: "Sensing anything, `Hero Name`?"

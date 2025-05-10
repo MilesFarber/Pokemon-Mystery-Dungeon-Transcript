@@ -68,6 +68,7 @@
 
 >`Partner Name` read the message on the scrap of paper.
 
+
 `Partner Normal`
 
 `Partner Name`: ""...is now in our possession."

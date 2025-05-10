@@ -86,6 +86,7 @@
 
 >`Hero Name` confessed what happened since arriving at base camp...
 
+
 `Partner Normal` ❗
 
 `Partner Name`: "I beg...I beg your pardon?"

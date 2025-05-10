@@ -542,41 +542,76 @@ def 0:
 		Case:
 			Value: No way.
 			Label: @label_1;
-			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-					Identifier: EFFECT_SHOCKED
-					Identifier: 3
-					Identifier: WaitEffect
-					Identifier: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-					Identifier: WaitExecuteLives
-					Identifier: ACTOR_NPC_CHIRIIN
-					Identifier: message_SetFace
-					Identifier: ACTOR_NPC_CHIRIIN
-					Identifier: FACE_SURPRISED
-					Identifier: FACE_POS_TOP_C_FACER
-					Identifier: message_Talk
-					Identifier: english
-					Identifier: W
-					Identifier: what
-					Identifier: K
-					Identifier: N
-					Identifier: no...
-					Identifier: K
-					Identifier: way
-					Identifier: CallCommon
-					Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: se_Play
-					Identifier: 8972
-					Identifier: SetEffect
-					Identifier: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-					Identifier: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
-					Identifier: 3
-					Identifier: WaitEffect
-					Identifier: actor
-					Identifier: ACTOR_NPC_CHIRIIN
-				Argument: jump
+			Loop: forever
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Identifier: se_Play
+					Argument: 8968
+				Identifier: SetEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_NPC_CHIRIIN
+					Argument: EFFECT_SHOCKED
+					Argument: 3
+				Identifier: WaitEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_NPC_CHIRIIN
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_NPC_CHIRIIN
+				Identifier: message_SetFace
+					Argument: ACTOR_NPC_CHIRIIN
+					Argument: FACE_SURPRISED
+					Argument: FACE_POS_TOP_C_FACER
+				Identifier: message_Talk
+					Dialogue: W-what?![K] N-no...[K]way?!
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Identifier: se_Play
+					Argument: 8972
+				Identifier: SetEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_NPC_CHIRIIN
+					Argument: EFFECT_SWEAT_DROPS_FROM_BOTH_SIDES_MEDIUM
+					Argument: 3
+				Identifier: WaitEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_NPC_CHIRIIN
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_NPC_CHIRIIN
+				Identifier: message_SetFace
+					Argument: ACTOR_NPC_CHIRIIN
+					Argument: FACE_SURPRISED
+					Argument: FACE_POS_TOP_C_FACER
+				Identifier: message_Talk
+					Dialogue: Are you making fun of me, [hero]? You are! I know it!
+				Identifier: message_Talk
+					Dialogue: You said "No way" to see how I'd react, didn't you?
+				Identifier: message_SetFace
+					Argument: ACTOR_NPC_CHIRIIN
+					Argument: FACE_NORMAL
+					Argument: FACE_POS_TOP_C_FACER
+				Identifier: message_Talk
+					Dialogue: ...[K]I understand how you feel...
+				Identifier: message_Talk
+					Dialogue: Even if you select a "No," you eventually have to select the "Yes," so it always ends up the same anyway...
+				Identifier: message_Talk
+					Dialogue: That comes up frequently, that sort of thing...[K] But...
+				Identifier: message_Talk
+					Dialogue: I'll ask you again, [hero].
+				Identifier: message_Talk
+					Dialogue: Would you like to meet up with your team members waiting at the café?
+				Switch:
+					Variable: message_SwitchMenu(0, 1)
+					Case:
+						Value: OK!
+						Identifier: break_loop
+						Identifier: break
+					Case:
+						Value: No way.
+						Identifier: continue
+						Identifier: break
+			Identifier: jump
 				Argument: label_0

@@ -181,6 +181,7 @@
 
 >You can now go to the Shaymin Village!
 
+
 * * *
 
 

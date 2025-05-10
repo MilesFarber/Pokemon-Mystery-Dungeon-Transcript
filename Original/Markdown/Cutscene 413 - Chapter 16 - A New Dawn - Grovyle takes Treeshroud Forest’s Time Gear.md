@@ -48,6 +48,7 @@
 
 >Grovyle took the Time Gear!
 
+
 `Partner Surprised` 〽
 
 `Partner Name`: "Hey! What are you doing?!"

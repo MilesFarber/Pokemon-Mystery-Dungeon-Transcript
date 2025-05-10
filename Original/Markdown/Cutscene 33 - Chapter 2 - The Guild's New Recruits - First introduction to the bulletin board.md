@@ -175,6 +175,7 @@
 >
 >I beg your help, exploration team members!"  From Spoink
 
+
 `Partner Normal`
 
 `Partner Name`: "Wait a second..."

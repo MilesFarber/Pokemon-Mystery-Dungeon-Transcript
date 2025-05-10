@@ -1,140 +1,144 @@
-*Anchor: <a name="switch0724"></a>switch0724*
+*If the player chooses "0":*
 
+  * *Anchor: <a name="switch0724"></a>switch0724*
 
-*Anchor: <a name="0"></a>0*
 
+  * *Anchor: <a name="0"></a>0*
 
-* * *
 
+  * * * *
 
-`Chatot Normal`
 
-`Chatot`: "You've done an honest day's work! ♪"
+  * `Chatot Normal`
 
+  * `Chatot`: "You've done an honest day's work! ♪"
 
-`Chatot Normal`
 
-`Chatot`: "Let me review your sentry-duty performance..."
+  * `Chatot Normal`
 
+  * `Chatot`: "Let me review your sentry-duty performance..."
 
-`Chatot Normal`
 
-`Chatot`: "Your results were...dreadful!"
+  * `Chatot Normal`
 
+  * `Chatot`: "Your results were...dreadful!"
 
-`Chatot Pain` 💧
 
-`Chatot`: "You failed so many times!"
+  * `Chatot Pain` 💧
 
+  * `Chatot`: "You failed so many times!"
 
-`Chatot Angry` 〽
 
-`Chatot`: "You slackers! Did you do anything besides goof off?"
+  * `Chatot Angry` 〽
 
+  * `Chatot`: "You slackers! Did you do anything besides goof off?"
 
-`Loudred Normal`
 
-`Loudred`: "UGH...!"
+  * `Loudred Normal`
 
+  * `Loudred`: "UGH...!"
 
-`Loudred Angry` 💢
 
-`Loudred`: "You two got SO many wrong..."
+  * `Loudred Angry` 💢
 
+  * `Loudred`: "You two got SO many wrong..."
 
-`Loudred Angry` 〽
 
-`Loudred`: "I even got in TROUBLE for it!"
+  * `Loudred Angry` 〽
 
+  * `Loudred`: "I even got in TROUBLE for it!"
 
-`Chatot Dizzy` 💦
 
-`Chatot`: "H-hush!"
+  * `Chatot Dizzy` 💦
 
+  * `Chatot`: "H-hush!"
 
-`Chatot Angry` 💢
 
-`Chatot`: "Don't you dare blame anyone else!"
+  * `Chatot Angry` 💢
 
+  * `Chatot`: "Don't you dare blame anyone else!"
 
-`Chatot Angry`
 
-`Chatot`: "Sentry duty is a cooperative job, isn't it?"
+  * `Chatot Angry`
 
+  * `Chatot`: "Sentry duty is a cooperative job, isn't it?"
 
-`Chatot Angry` 💢
 
-`Chatot`: "Anyway, this job was a fiasco, no doubt about it!"
+  * `Chatot Angry` 💢
 
+  * `Chatot`: "Anyway, this job was a fiasco, no doubt about it!"
 
-`Chatot Angry`
 
-`Chatot`: "As such, there shall be no reward!"
+  * `Chatot Angry`
 
+  * `Chatot`: "As such, there shall be no reward!"
 
-`Loudred Normal` 〽
 
-`Loudred`: "WHAAAT?!"
+  * `Loudred Normal` 〽
 
+  * `Loudred`: "WHAAAT?!"
 
-`Chatot Angry` 💢
 
-`Chatot`: "Furthermore!"
+  * `Chatot Angry` 💢
 
+  * `Chatot`: "Furthermore!"
 
-`Chatot Angry`
 
-`Chatot`: "You'll go without dinner tonight!"
+  * `Chatot Angry`
 
+  * `Chatot`: "You'll go without dinner tonight!"
 
-`Partner Teary-Eyed` 💦
 
-`Partner Name`: "B-but..."
+  * `Partner Teary-Eyed` 💦
 
+  * `Partner Name`: "B-but..."
 
-* * *
 
+  * * * *
 
-*Anchor: <a name="4"></a>4*
 
+  * *Anchor: <a name="4"></a>4*
 
-* * *
 
+  * * * *
 
-*Anchor: <a name="switch0727"></a>switch0727*
 
+*If the player chooses "1":*
 
-* * *
+  * *Anchor: <a name="switch0727"></a>switch0727*
 
 
-`Chatot Normal`
+  * * * *
 
-`Chatot`: "You've done an honest day's work! ♪"
 
+  * `Chatot Normal`
 
-`Chatot Normal`
+  * `Chatot`: "You've done an honest day's work! ♪"
 
-`Chatot`: "Let me review your sentry-duty performance..."
 
+  * `Chatot Normal`
 
-`Chatot Normal`
+  * `Chatot`: "Let me review your sentry-duty performance..."
 
-`Chatot`: "Your results were...adequate."
 
+  * `Chatot Normal`
 
-`Loudred Normal`
+  * `Chatot`: "Your results were...adequate."
 
-`Loudred`: "Hmm..."
 
+  * `Loudred Normal`
 
-`Partner Normal`
+  * `Loudred`: "Hmm..."
 
-`Partner Name`: "Oh..."
 
+  * `Partner Normal`
 
-`Chatot Normal`
+  * `Partner Name`: "Oh..."
 
-`Chatot`: "Here are your rewards for the job."
+
+  * `Chatot Normal`
+
+  * `Chatot`: "Here are your rewards for the job."
 
 
 >As a reward for doing the job, `Hero Name`'s team...
@@ -143,53 +147,56 @@
 >
 >In addition, the team also received a Protein!
 
-`Chatot Happy`
 
-`Chatot`: "I expect to see better effort out of you lot next time. ♪"
+  * `Chatot Happy`
 
-
-*Jump to [anchor 4](#4)*
+  * `Chatot`: "I expect to see better effort out of you lot next time. ♪"
 
 
-*Anchor: <a name="switch0726"></a>switch0726*
+  * *Jump to [anchor 4](#4)*
 
 
-* * *
+*If the player chooses "2":*
+
+  * *Anchor: <a name="switch0726"></a>switch0726*
 
 
-`Chatot Normal`
-
-`Chatot`: "You've all worked an honest day."
+  * * * *
 
 
-`Chatot Normal`
+  * `Chatot Normal`
 
-`Chatot`: "Let me review your sentry-duty performance..."
-
-
-`Chatot Normal`
-
-`Chatot`: "Your results were... Hmm! Well done!"
+  * `Chatot`: "You've all worked an honest day."
 
 
-`Chatot Happy` 🔆
+  * `Chatot Normal`
 
-`Chatot`: "Good job, team! ♪"
-
-
-`Loudred Happy` ◀▼▶
-
-`Loudred`: "Good!"
+  * `Chatot`: "Let me review your sentry-duty performance..."
 
 
-`Partner Joyous`
+  * `Chatot Normal`
 
-`Partner Name`: "Yay!"
+  * `Chatot`: "Your results were... Hmm! Well done!"
 
 
-`Chatot Happy`
+  * `Chatot Happy` 🔆
 
-`Chatot`: "Here are your rewards for all your work today! ♪"
+  * `Chatot`: "Good job, team! ♪"
+
+
+  * `Loudred Happy` ◀▼▶
+
+  * `Loudred`: "Good!"
+
+
+  * `Partner Joyous`
+
+  * `Partner Name`: "Yay!"
+
+
+  * `Chatot Happy`
+
+  * `Chatot`: "Here are your rewards for all your work today! ♪"
 
 
 >As thanks for a job well done, `Hero Name`'s team...
@@ -200,74 +207,77 @@
 >
 >Not only that, the team also received a Nectar!
 
-`Chatot Joyous` 🔆
 
-`Chatot`: "Keep up the good work! ♪"
+  * `Chatot Joyous` 🔆
 
-
-*Jump to [anchor 4](#4)*
+  * `Chatot`: "Keep up the good work! ♪"
 
 
-*Anchor: <a name="switch0725"></a>switch0725*
+  * *Jump to [anchor 4](#4)*
 
 
-* * *
+*If the player chooses "3":*
+
+  * *Anchor: <a name="switch0725"></a>switch0725*
 
 
-`Chatot Normal`
-
-`Chatot`: "You've worked an honest day, you two! ♪"
+  * * * *
 
 
-`Chatot Normal`
+  * `Chatot Normal`
 
-`Chatot`: "Let me review your sentry-duty performance..."
-
-
-`Chatot Normal`
-
-`Chatot`: "Well, well! Your results were... completely perfect!"
+  * `Chatot`: "You've worked an honest day, you two! ♪"
 
 
-`Chatot Joyous` 🔆
+  * `Chatot Normal`
 
-`Chatot`: "You identified every visitor correctly! ♪"
-
-
-🎊
-
-🎊
-
-🎊
-
-🎊
-
-🎊
-
-🎊
-
-🎊
-
-🎊
-
-`Loudred Happy` ◀▼▶
-
-`Loudred`: "Excellent!"
+  * `Chatot`: "Let me review your sentry-duty performance..."
 
 
-`Partner Joyous`
+  * `Chatot Normal`
 
-`Partner Name`: "We did it!"
-
-
-`Chatot Happy`
-
-`Chatot`: "We'll reward your effort! Generously, I might add!"
+  * `Chatot`: "Well, well! Your results were... completely perfect!"
 
 
-`Chatot Happy`
+  * `Chatot Joyous` 🔆
 
-`Chatot`: "You all deserve an especially large reward! ♪"
+  * `Chatot`: "You identified every visitor correctly! ♪"
+
+
+  * 🎊
+
+  * 🎊
+
+  * 🎊
+
+  * 🎊
+
+  * 🎊
+
+  * 🎊
+
+  * 🎊
+
+  * 🎊
+
+  * `Loudred Happy` ◀▼▶
+
+  * `Loudred`: "Excellent!"
+
+
+  * `Partner Joyous`
+
+  * `Partner Name`: "We did it!"
+
+
+  * `Chatot Happy`
+
+  * `Chatot`: "We'll reward your effort! Generously, I might add!"
+
+
+  * `Chatot Happy`
+
+  * `Chatot`: "You all deserve an especially large reward! ♪"
 
 
 >As the reward for a job perfectly done, `Hero Name`'s team...
@@ -284,23 +294,32 @@
 >
 >So many rewards! Can you believe it?
 
-`Chatot Happy` 🔆
 
-`Chatot`: "Keep up the good work! ♪"
+  * `Chatot Happy` 🔆
 
-
-*Jump to [anchor 4](#4)*
+  * `Chatot`: "Keep up the good work! ♪"
 
 
-*Jump to [anchor switch0724](#switch0724)*
+  * *Jump to [anchor 4](#4)*
 
 
-*Jump to [anchor switch0727](#switch0727)*
+*If the player chooses "4":*
+
+  * *Jump to [anchor switch0724](#switch0724)*
 
 
-*Jump to [anchor switch0726](#switch0726)*
+*If the player chooses "5":*
+
+  * *Jump to [anchor switch0727](#switch0727)*
 
 
-*Jump to [anchor switch0725](#switch0725)*
+*If the player chooses "6":*
+
+  * *Jump to [anchor switch0726](#switch0726)*
+
+
+*If the player chooses "7":*
+
+  * *Jump to [anchor switch0725](#switch0725)*
 
 

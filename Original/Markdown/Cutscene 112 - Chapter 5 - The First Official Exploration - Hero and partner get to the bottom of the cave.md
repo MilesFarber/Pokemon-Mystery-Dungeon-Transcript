@@ -33,6 +33,7 @@
 
 >`Partner Name` tried to grab the giant gem.
 
+
 `Partner Angry`
 
 `Partner Name`: "Urrrrgh! Urrrrgh! Ugh..."
@@ -54,6 +55,7 @@
 
 
 >`Hero Name` took over and tried to pull out the gigantic gem.
+
 
 `Hero Angry`
 
@@ -96,6 +98,7 @@
 
 
 >`Partner Name` tried to pull out the gigantic gem again.
+
 
 `Partner Angry`
 

@@ -75,6 +75,7 @@
 
 >`Hero Name` opened the Wonder Map.
 
+
   * * * *
 
 

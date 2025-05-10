@@ -48,6 +48,7 @@
 
 >`Hero Name` told the name to Dusknoir.
 
+
 `Dusknoir Normal` ❗
 
 `Dusknoir`: "Ah! I see..."

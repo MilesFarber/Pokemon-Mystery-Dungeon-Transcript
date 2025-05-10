@@ -102,6 +102,36 @@
 *Anchor: <a name="2"></a>2*
 
 
+*Loop forever:*
+
+
+  * *If the player chooses "Enter the nightmare":*
+
+  *   * *Break from this loop.*
+
+
+  * *If the player chooses "Refuse":*
+
+  *   * `Partner Surprised` 〽
+
+  *   * `Partner Name`: "Wh-what, you won't go in?"
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "But...if we don't do anything..."
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "We will never be able to return to Treasure Town."
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "We don't have any choice. We have to go into the nightmare."
+
+
 *Anchor: <a name="0"></a>0*
 
 

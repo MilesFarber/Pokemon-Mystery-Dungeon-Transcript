@@ -159,6 +159,31 @@
 *Anchor: <a name="2"></a>2*
 
 
+*Loop forever:*
+
+
+  * *If the player chooses "Yes":*
+
+  *   * *Break from this loop.*
+
+
+  * *If the player chooses "No":*
+
+  *   * `Partner Surprised` 〽
+
+  *   * `Partner Name`: "Whaat?! Really?!"
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "Don't you think it would be better if we had a guide?"
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "I really think we should ask Shaymin to guide us. OK?"
+
+
 *Anchor: <a name="0"></a>0*
 
 

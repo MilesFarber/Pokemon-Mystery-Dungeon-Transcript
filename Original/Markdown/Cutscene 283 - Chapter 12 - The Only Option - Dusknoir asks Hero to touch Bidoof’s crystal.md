@@ -1,5 +1,6 @@
 >The Only Option
 
+
 * * *
 
 
@@ -499,6 +500,7 @@
 
 
 >Bidoof turned over the crystal to `Hero Name`.
+
 
 `Hero Normal`
 

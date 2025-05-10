@@ -184,3 +184,56 @@
   * *Anchor: <a name="1"></a>1*
 
 
+  * *Loop forever:*
+
+
+  *   * `Chimecho Surprised` 〽
+
+  *   * `Chimecho`: "W-what?! N-no...way?!"
+
+
+  *   * `Chimecho Surprised` 💦
+
+  *   * `Chimecho`: "Are you making fun of me, `Hero Name`? You are! I know it!"
+
+
+  *   * `Chimecho Surprised`
+
+  *   * `Chimecho`: "You said "No way" to see how I'd react, didn't you?"
+
+
+  *   * `Chimecho Normal`
+
+  *   * `Chimecho`: "...I understand how you feel..."
+
+
+  *   * `Chimecho Normal`
+
+  *   * `Chimecho`: "Even if you select a "No," you eventually have to select the "Yes," so it always ends up the same anyway..."
+
+
+  *   * `Chimecho Normal`
+
+  *   * `Chimecho`: "That comes up frequently, that sort of thing... But..."
+
+
+  *   * `Chimecho Normal`
+
+  *   * `Chimecho`: "I'll ask you again, `Hero Name`."
+
+
+  *   * `Chimecho Normal`
+
+  *   * `Chimecho`: "Would you like to meet up with your team members waiting at the café?"
+
+
+  *   * *If the player chooses "OK!":*
+
+  *   *   * *Break from this loop.*
+
+
+  *   * *If the player chooses "No way.":*
+
+  * *Jump to [anchor 0](#0)*
+
+

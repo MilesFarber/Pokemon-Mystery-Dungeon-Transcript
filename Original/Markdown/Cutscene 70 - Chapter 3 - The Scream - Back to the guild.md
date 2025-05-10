@@ -28,6 +28,7 @@
 >
 >Received only the remaining 300!
 
+
 `Partner Surprised` 〽
 
 `Partner Name`: "No way! This is all we get?!"
@@ -97,6 +98,7 @@
 
 
 >H-h-h...HELP!
+
 
 * * *
 

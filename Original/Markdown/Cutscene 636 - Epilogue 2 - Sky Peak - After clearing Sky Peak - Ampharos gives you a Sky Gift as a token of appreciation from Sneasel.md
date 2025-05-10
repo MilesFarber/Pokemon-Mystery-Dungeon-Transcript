@@ -41,7 +41,9 @@
 `Ampharos`: "You should take it."
 
 
-*Anchor: <a name="0"></a>0*
+*If the player chooses "0":*
+
+  * *Anchor: <a name="0"></a>0*
 
 
 >This is...
@@ -54,13 +56,16 @@
 >
 >A warm and fuzzy feeling falls over you...
 
-`Ampharos Normal` ⚟
 
-`Ampharos`: "Well, I thought so, but you seem to have too much already."
+*If the player chooses "1":*
+
+  * `Ampharos Normal` ⚟
+
+  * `Ampharos`: "Well, I thought so, but you seem to have too much already."
 
 
-`Ampharos Normal`
+  * `Ampharos Normal`
 
-`Ampharos`: "All right, I'll hold on to this for you, then."
+  * `Ampharos`: "All right, I'll hold on to this for you, then."
 
 

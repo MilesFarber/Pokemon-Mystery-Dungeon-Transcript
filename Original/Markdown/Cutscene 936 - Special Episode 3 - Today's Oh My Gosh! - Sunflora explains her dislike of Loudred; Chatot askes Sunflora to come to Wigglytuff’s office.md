@@ -15,6 +15,7 @@
 >
 >Recently, something troublesome happened...
 
+
 `Loudred Pain` 〽
 
 `Loudred`: "...HUMPH!"
@@ -50,6 +51,7 @@
 >I couldn't believe it!
 >
 >Since then, Loudred and I have not been able to see eye-to-eye.
+
 
 `Sunflora Worried` 💦
 

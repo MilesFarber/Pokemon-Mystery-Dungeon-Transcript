@@ -13,6 +13,7 @@
 
 >`Hero Name` opened the treasure box.
 
+
 `Ursaring Normal` ❗
 
 `Ursaring`: "Th-this is..."

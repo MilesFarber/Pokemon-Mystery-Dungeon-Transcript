@@ -8,6 +8,7 @@
 
 >Bidoof received something from the strange Pokémon.
 
+
 `Bidoof Sad` 💦
 
 `Bidoof`: "Huh... Golly, what is this?"

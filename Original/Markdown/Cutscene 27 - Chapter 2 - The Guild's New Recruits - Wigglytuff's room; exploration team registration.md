@@ -96,6 +96,7 @@
 
 >Wigglytuff set down a Pokémon Exploration Team Kit!
 
+
 `Partner Normal` ❓
 
 `Partner Name`: "A Pokémon Exploration Team Kit?"
@@ -113,14 +114,16 @@
 
 >`Partner Name` opened the Pokémon Exploration Team Kit.
 
+
 * * *
 
->
+
 >There was an Explorer Badge inside...
 >
 >And a Wonder Map...
 >
 >And a Treasure Bag!
+
 
 `Partner Inspired`
 
@@ -161,125 +164,4 @@
 
 
 >`Partner Name` peered into the Treasure Bag.
-
-*Anchor: <a name="0"></a>0*
-
-
-*Anchor: <a name="21"></a>21*
-
->
->The  was inside!
->
->A Silver Bow was also inside!
-
-*Anchor: <a name="38"></a>38*
-
-
-`Wigglytuff Normal`
-
-`Wigglytuff`: "Those two items are special."
-
-
-`Wigglytuff Normal`
-
-`Wigglytuff`: "I'm sure they will help you on your adventures! ♪"
-
-
-`Partner Inspired`
-
-`Partner Name`: "Th-thank you! We'll do our best!"
-
-
-`Wigglytuff Normal`
-
-`Wigglytuff`: "Yup. But you're only apprenticing right now. So do your best...to train!"
-
-
-`Partner Inspired`
-
-`Partner Name`: "We will!"
-
-
-`Partner Happy`
-
-`Partner Name`: "Let's always do our best, `Hero Name`!"
-
-
-* * *
-
-
->A Brown Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Red Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Pink Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->An Orange Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Yellow Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Lime Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Green Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Viridian Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Minty Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Sky Blue Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Blue Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Cobalt Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Purple Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Violet Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
->
->A Fuchsia Bow was also inside!
-
-*Jump to [anchor 38](#38)*
-
 

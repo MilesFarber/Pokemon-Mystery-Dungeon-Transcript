@@ -32,6 +32,7 @@
 >
 >Incredibly, he also gave you a Max Elixir!
 
+
 `Wigglytuff Normal`
 
 `Wigglytuff`: "Those items I gave you are all very useful in dungeons."

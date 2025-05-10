@@ -111,9 +111,10 @@
 
 >The clouds lifted from Fogbound Lake and its surrounding areas!
 
+
 * * *
 
->
+
 >The Exploration Team Federation has sent a message...
 >
 >`Hero Name`'s team was rewarded! Its Treasure Bag is now bigger!
@@ -122,14 +123,16 @@
 >
 >Wait... There's one more message.
 
+
 * * *
 
->
+
 >The Special Episode "Igglybuff the Prodigy" has been unlocked!
 >
 >To play a Special Episode, select it from the Episode List on the Top Menu.
 >
 >If you would like to play the Special Episode, save your adventure progress, and return to the Top Menu.
+
 
 * * *
 

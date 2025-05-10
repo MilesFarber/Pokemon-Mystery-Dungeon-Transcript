@@ -33,6 +33,7 @@
 
 >Guuuuuuuu!
 
+
 `Medicham Surprised` ❗
 
 `Medicham`: "Th-that sound again!"
@@ -44,6 +45,7 @@
 
 
 >Guuuuuuuu!
+
 
 `Lopunny Sigh` 💧
 
@@ -68,6 +70,7 @@
 >Next to the unconscious Pokémon, Medicham placed...
 >
 >An extraordinarily delicious Perfect Apple.
+
 
 `Wigglytuff Shouting` ❗
 
@@ -140,6 +143,7 @@
 
 
 >Lopunny gave the mysterious Pokémon a Perfect Apple!
+
 
 `Wigglytuff Happy` 🔆
 

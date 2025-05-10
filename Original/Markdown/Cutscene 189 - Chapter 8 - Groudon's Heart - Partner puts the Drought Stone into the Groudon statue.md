@@ -48,6 +48,7 @@
 
 >`Partner Name` placed the strange stone in the statue's stone chest.
 
+
 `Partner Surprised` 💦
 
 `Partner Name`: "Wa-waah! Watch out! Everyone, we have to get back!"

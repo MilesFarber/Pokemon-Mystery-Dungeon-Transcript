@@ -123,6 +123,7 @@
 
 >The Secret Rank mark was added to the Explorer Badge!
 
+
 `Partner Worried`
 
 `Partner Name`: "....................."

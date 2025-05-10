@@ -103,6 +103,7 @@
 
 >`Hero Name` touched the treasure box.
 
+
 `Hero Pain`
 
 `Hero Name`: "(The dizziness...)"

@@ -98,6 +98,7 @@
 
 >Armaldo handed Igglybuff the secret map.
 
+
 `Armaldo Normal`
 
 `Armaldo`: "Open it up and have a look."
@@ -193,6 +194,7 @@
 
 >Ssssssssssssssssss...
 
+
 * * *
 
 
@@ -232,6 +234,7 @@
 
 
 >Igglybuff brushed away the charred parts of the map.
+
 
 `Armaldo Surprised` 〽
 

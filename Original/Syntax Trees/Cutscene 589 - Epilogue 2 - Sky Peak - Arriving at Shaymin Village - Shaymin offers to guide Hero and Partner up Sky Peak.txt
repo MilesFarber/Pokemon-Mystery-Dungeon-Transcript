@@ -484,15 +484,72 @@ def 0:
 			Value: default
 				Dialogue: Hey, [hero]? What do you think? Should we let [CS:N]Shaymin[CR] join us?
 	Label: @label_2;
-	Identifier: SetEffect
-		Template
-			Type: actor
-			Identifier: ACTOR_ATTENDANT1
-			Identifier: EFFECT_SHOCKED_MIRRORED
-			Identifier: 3
-			Identifier: WaitEffect
-			Identifier: actor
-			Identifier: ACTOR_ATTENDANT1
+	Loop: forever
+		Switch:
+			Variable: message_SwitchMenu(0, 1)
+			Case:
+				Value: Yes
+				Identifier: break_loop
+				Identifier: break
+			Case:
+				Value: No
+				Identifier: message_Close
+				Identifier: se_Play
+					Argument: 8968
+				Identifier: SetEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: EFFECT_SHOCKED_MIRRORED
+					Argument: 3
+				Identifier: WaitEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_SURPRISED
+					Argument: FACE_POS_STANDARD
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Whaat?! Really?!
+					Case:
+						Value: 2
+							Dialogue: Whaat?! Really?!
+					Case:
+						Value: default
+							Dialogue: Whaat?! Really?!
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_SAD
+					Argument: FACE_POS_STANDARD
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Don't you think it would definitely be better if we had a guide?
+					Case:
+						Value: 2
+							Dialogue: Don't you think it would be better if we had a guide?
+					Case:
+						Value: default
+							Dialogue: Don't you think it would be better if we had a guide?
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: We should ask [CS:N]Shaymin[CR] to guide us, OK?
+					Case:
+						Value: 2
+							Dialogue: I really think we should ask [CS:N]Shaymin[CR] to guide us. OK?
+					Case:
+						Value: default
+							Dialogue: I really think we should ask [CS:N]Shaymin[CR] to guide us. OK?
+				Identifier: continue
 	Label: @label_0;
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC

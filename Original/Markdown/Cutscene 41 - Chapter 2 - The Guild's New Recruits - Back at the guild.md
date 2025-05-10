@@ -38,29 +38,33 @@
 
 >`Hero Name`'s team was rewarded with a Protein!
 
+
 *If certain conditions are met:*
 
 
   * *Anchor: <a name="0"></a>0*
 
->
+
 >You also received a Calcium!
+
 
   * *If certain conditions are met:*
 
 
   *   * *Anchor: <a name="1"></a>1*
 
->
+
 >You also received an Iron!
+
 
   *   * *If certain conditions are met:*
 
 
   *   *   * *Anchor: <a name="2"></a>2*
 
->
+
 >You were also given 2,000! Incredible!
+
 
   *   *   * `Partner Surprised` ❗
 

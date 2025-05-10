@@ -21,6 +21,8 @@
   *   * * * *
 
 
+  *   * *If the player chooses "53":*
+
   *   * *Jump to [anchor 10](#10)*
 
 

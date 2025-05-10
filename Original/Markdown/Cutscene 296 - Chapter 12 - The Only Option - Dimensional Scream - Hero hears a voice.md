@@ -19,6 +19,7 @@
 >
 >Then Azelf's spirit must be affected by the crystals...
 
+
 * * *
 
 

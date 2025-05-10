@@ -103,6 +103,7 @@
 
 >`Partner Name` opened the Wonder Map.
 
+
 * * *
 
 

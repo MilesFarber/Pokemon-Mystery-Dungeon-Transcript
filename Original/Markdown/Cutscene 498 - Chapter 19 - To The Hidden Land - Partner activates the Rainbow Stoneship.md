@@ -18,6 +18,7 @@
 
 >`Partner Name` placed the Relic Fragment in the hollow spot.
 
+
 * * *
 
 

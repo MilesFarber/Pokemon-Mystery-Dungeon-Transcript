@@ -68,6 +68,7 @@
 
 >Sunflora received the Sun Scarf from Magnezone!
 
+
 `Sunflora Surprised` 〽
 
 `Sunflora`: "A-a Sun Scarf!"

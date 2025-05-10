@@ -126,6 +126,7 @@
 
 >You can now go to the Miracle Sea!
 
+
 * * *
 
 

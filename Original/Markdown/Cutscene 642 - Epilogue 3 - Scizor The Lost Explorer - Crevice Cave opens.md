@@ -9,10 +9,12 @@
 >
 >It's the entrance to another dungeon!
 
+
 * * *
 
->
+
 >You can now enter Crevice Cave!
+
 
 * * *
 

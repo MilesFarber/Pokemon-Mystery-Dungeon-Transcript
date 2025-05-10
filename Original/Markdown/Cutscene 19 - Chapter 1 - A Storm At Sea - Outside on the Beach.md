@@ -215,6 +215,14 @@
 *Anchor: <a name="3"></a>3*
 
 
+*Loop forever:*
+
+
+  * *If the player chooses "Form a team":*
+
+  *   * *Break from this loop.*
+
+
 *Anchor: <a name="0"></a>0*
 
 

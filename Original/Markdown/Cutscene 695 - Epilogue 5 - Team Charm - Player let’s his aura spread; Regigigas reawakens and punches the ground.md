@@ -22,19 +22,39 @@
 >
 >"Close your eyes, then let your aura flow into the ground.
 
+
 *Anchor: <a name="2"></a>2*
+
+
+*Loop forever:*
+
+
+>Will you close your eyes?
+
+
+  * *If the player chooses "Yes":*
+
+  *   * *Break from this loop.*
+
+
+  * *If the player chooses "No":*
+
+  *   * `Medicham Angry`
+
+  *   * `Medicham`: "Now, hold on! You're not about to get cold feet now!"
 
 
 *Anchor: <a name="0"></a>0*
 
->
+
 >`Hero Name` did as instructed.
 >
 >And `Hero Name`'s aura spread to the ground!
 
-`Gardevoir Surprised` ❗
 
-`Gardevoir`: "GZZZ... GZZZZ..."
+`Medicham Angry` ❗
+
+`Medicham`: "GZZZ... GZZZZ..."
 
 
 ❗

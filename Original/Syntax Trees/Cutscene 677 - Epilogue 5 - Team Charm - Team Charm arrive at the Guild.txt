@@ -3303,75 +3303,68 @@ def 0:
 		Case:
 			Value: No
 			Label: @label_1;
-			Identifier: SetEffect
-				Template
-					Type: actor
-					Identifier: ACTOR_ATTENDANT1
-					Identifier: EFFECT_SHOCKED
-					Identifier: 3
-					Identifier: WaitEffect
-					Identifier: actor
-					Identifier: ACTOR_ATTENDANT1
-					Identifier: WaitExecuteLives
-					Identifier: ACTOR_ATTENDANT1
-					Identifier: message_SetFace
-					Identifier: ACTOR_ATTENDANT1
-					Identifier: FACE_SURPRISED
-					Identifier: FACE_POS_BOTTOM_C_FACEL
-					Identifier: message_FacePositionOffset
-					Identifier: 1
-					Identifier: 5
-					Identifier: message_SwitchTalk
-					Identifier: PARTNER_TALK_KIND
-					Identifier: case
-					Identifier: 1
-					Identifier: english
-					Identifier: Huh
-					Identifier: Why
-					Identifier: K
-					Identifier: It
-					Identifier: s
-					Identifier: a
-					Identifier: chance
-					Identifier: at
-					Identifier: finding
-					Identifier: awesome
-					Identifier: treasure
-					Identifier: case
-					Identifier: 2
-					Identifier: english
-					Identifier: What
-					Identifier: Why
-					Identifier: K
-					Identifier: It
-					Identifier: s
-					Identifier: a
-					Identifier: new
-					Identifier: dungeon
-					Identifier: where
-					Identifier: we
-					Identifier: might
-					Identifier: find
-					Identifier: some
-					Identifier: amazing
-					Identifier: treasure
-					Identifier: default
-					Identifier: english
-					Identifier: What
-					Identifier: Why
-					Identifier: K
-					Identifier: We
-					Identifier: may
-					Identifier: be
-					Identifier: able
-					Identifier: to
-					Identifier: discover
-					Identifier: incredible
-					Identifier: treasure
-					Identifier: message_KeyWait
-					Identifier: ExecuteCommon
-					Identifier: actor
-					Identifier: ACTOR_ATTENDANT1
-				Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-				Argument: jump
+			Loop: forever
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Identifier: se_Play
+					Argument: 8968
+				Identifier: SetEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: EFFECT_SHOCKED
+					Argument: 3
+				Identifier: WaitEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_SURPRISED
+					Argument: FACE_POS_BOTTOM_C_FACEL
+				Identifier: message_FacePositionOffset
+					Argument: 1
+					Argument: 5
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Huh? Why?[K] It's a chance at finding awesome treasure!
+					Case:
+						Value: 2
+							Dialogue: What? Why?[K] It's a new dungeon where we might find some amazing treasure!
+					Case:
+						Value: default
+							Dialogue: What? Why?[K] We may be able to discover incredible treasure!
+				Identifier: message_KeyWait
+				Identifier: ExecuteCommon
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+					Argument: 0
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Don't be that way! Let's go exploring with them!
+					Case:
+						Value: 2
+							Dialogue: Don't be so negative! Let's go exploring with them!
+					Case:
+						Value: default
+							Dialogue: Oh, don't be that way! Let's go exploring with them!
+				Switch:
+					Variable: message_SwitchMenu(0, 1)
+					Case:
+						Value: Yes
+						Identifier: break_loop
+						Identifier: break
+					Case:
+						Value: No
+						Identifier: continue
+						Identifier: break
+			Identifier: jump
 				Argument: label_0

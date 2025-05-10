@@ -3,6 +3,7 @@
 
 >We would open up the map and look for a place to explore.
 
+
 `Igglybuff Normal` ❗
 
 `Igglybuff`: "Hey, Master... Let's explore this place today! ♪"
@@ -21,6 +22,7 @@
 >We'd decide where to go together like two old friends...
 >
 >And then head out exploring right away...
+
 
 * * *
 

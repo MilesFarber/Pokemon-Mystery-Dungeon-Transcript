@@ -23,12 +23,14 @@
 
 >Guuuuuuuu!
 
+
 `Medicham Normal` ❗
 
 `Medicham`: "Huh? I think I heard some kind of strange noise coming from over there..."
 
 
 >Guuuuuuuu!
+
 
 `Lopunny Normal`
 

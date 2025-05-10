@@ -5,8 +5,9 @@
 >
 >It's impossible to go farther. It's time to go back.
 
+
 * * *
 
->
+
 >`Hero Name` cleared Aegis Cave in admirable fashion!
 

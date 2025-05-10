@@ -18,6 +18,7 @@
 
 >Marill and Azurill bought an Apple at Kecleon Market.
 
+
 `Marill Joyous` 🔆
 
 `Marill`: "Thank you, Misters Kecleon!"
@@ -101,6 +102,7 @@
 >`Hero Name` gave the Apple back to Azurill.
 >
 >But then suddenly...
+
 
 `Hero Pain`
 

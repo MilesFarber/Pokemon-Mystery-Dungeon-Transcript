@@ -16,6 +16,7 @@
 
 >`Partner Name` picked up the red stone.
 
+
 `Partner Normal` 🔆
 
 `Partner Name`: "Wow! It feels warm!"

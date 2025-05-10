@@ -18,6 +18,7 @@
 
 >Chatot accepted the memo bearing the names of the expedition members from Wigglytuff.
 
+
 `Chatot Normal`
 
 `Chatot`: "The chosen members are written on this memo."
@@ -476,6 +477,7 @@
 >`Hero Name`'s team was rewarded with a bigger Treasure Bag!
 >
 >You can now carry more items than you could before!
+
 
 * * *
 
