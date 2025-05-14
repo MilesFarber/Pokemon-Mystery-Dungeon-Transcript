@@ -88,19 +88,19 @@ def 0:
 				Switch:
 					Variable: ProcessSpecial(PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG, 418, 0)
 					Case:
-						Value: 1
+						Value: >= 1
 						Switch:
 							Variable: ProcessSpecial(PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG, 419, 0)
 							Case:
-								Value: 1
+								Value: >= 1
 								Switch:
 									Variable: ProcessSpecial(PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG, 404, 0)
 									Case:
-										Value: 2
+										Value: >= 2
 										Switch:
 											Variable: ProcessSpecial(PROCESS_SPECIAL_COUNT_ITEM_TYPE_IN_BAG, 411, 0)
 											Case:
-												Value: 1
+												Value: >= 1
 												Label: @label_3;
 												Identifier: message_Close
 												Identifier: Wait
@@ -258,6 +258,18 @@ def 0:
 						Value: default
 						Identifier: jump
 							Argument: label_4
+					Case:
+						Value: In possession.
+						Identifier: jump
+							Argument: label_3
+					Case:
+						Value: Not in possession.
+						Identifier: jump
+							Argument: label_4
+					Case:
+						Value: Check
+						Identifier: jump
+							Argument: label_2
 		Case:
 			Value: No
 			Identifier: message_Close

@@ -699,725 +699,53 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: CS
+			Value: Let's find [CS:N]Grovyle[CR]!
+			Label: @label_0;
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: se_Play
+				Argument: 8974
 			Identifier: ExecuteCommon
 				Template
 					Type: actor
 					Identifier: ACTOR_ATTENDANT1
 				Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
-				Argument: case
-				Argument: 2
-				Dialogue: What?![K] You want to go after [CS:N]Grovyle[CR]?
-			Identifier: default
-				Dialogue: Pardon?![K] You want to go after [CS:N]Grovyle[CR]?
-			Identifier: message_SetActor
-				Argument: ACTOR_ATTENDANT1
-				Argument: message_SwitchTalk
-				Argument: PARTNER_TALK_KIND
-				Argument: case
-				Argument: 1
-				Dialogue: Wh-why?!
-			Identifier: case
-				Argument: 2
-				Dialogue: Wh-why?!
-			Identifier: default
-				Dialogue: Wh-why?!
-			Identifier: label_2
-				Argument: switch
-				Argument: message_SwitchMenu
 				Argument: 0
-				Argument: 1
-				Argument: case
-				Argument: menu
-				Dialogue: I want to ask him something!
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
 			Identifier: message_SetFace
 				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_WORRIED
+				Argument: FACE_SURPRISED
 				Argument: FACE_POS_BOTTOM_R_FACEINW
 			Switch:
 				Variable: $PARTNER_TALK_KIND
 				Case:
 					Value: 1
-						Dialogue: Ask him something?
+						Dialogue: What?![K] You want to go after [CS:N]Grovyle[CR]?
 				Case:
 					Value: 2
-						Dialogue: Ask him something?
+						Dialogue: What?![K] You want to go after [CS:N]Grovyle[CR]?
 				Case:
 					Value: default
-						Dialogue: Ask him something?
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Oh...[K]right...
-				Case:
-					Value: 2
-						Dialogue: Oh...[K]I see...
-				Case:
-					Value: default
-						Dialogue: Oh...[K]I get it...
-			Label: @label_5;
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_SAD
-				Argument: FACE_POS_BOTTOM_R_FACEINW
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: [CS:N]Grovyle[CR] went to our world from here the first time.
-				Case:
-					Value: 2
-						Dialogue: [CS:N]Grovyle[CR] went to our world from here the first time.
-				Case:
-					Value: default
-						Dialogue: [CS:N]Grovyle[CR] went to our world from here the first time.
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: So [CS:N]Grovyle[CR] should know how to go to our world.
-				Case:
-					Value: 2
-						Dialogue: So [CS:N]Grovyle[CR] should know how to travel to our world.
-				Case:
-					Value: default
-						Dialogue: So [CS:N]Grovyle[CR] should know how to travel to our world.
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: But...[K]isn't [CS:N]Grovyle[CR] a bad Pokémon?
-				Case:
-					Value: 2
-						Dialogue: But...[K]isn't [CS:N]Grovyle[CR] a bad Pokémon?
-				Case:
-					Value: default
-						Dialogue: But...[K]isn't [CS:N]Grovyle[CR] a bad Pokémon?
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Didn't he...[K]come to our world to steal the Time Gears?
-				Case:
-					Value: 2
-						Dialogue: Didn't he...[K]come to our world to steal the Time Gears?
-				Case:
-					Value: default
-						Dialogue: Didn't he...[K]come to our world to steal the Time Gears?
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: How could I trust anything that he'd say?
-				Case:
-					Value: 2
-						Dialogue: How could I trust anything he would say?
-				Case:
-					Value: default
-						Dialogue: How am I supposed to trust anything he may say?
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: What about you, [hero]?
-				Case:
-					Value: 2
-						Dialogue: What about you, [hero]?
-				Case:
-					Value: default
-						Dialogue: What about you, [hero]?
+						Dialogue: Pardon?![K] You want to go after [CS:N]Grovyle[CR]?
 			Identifier: message_SetActor
 				Argument: ACTOR_ATTENDANT1
 			Switch:
 				Variable: $PARTNER_TALK_KIND
 				Case:
 					Value: 1
-						Dialogue: Do you trust [CS:N]Grovyle[CR], [hero]?
+						Dialogue: Wh-why?!
 				Case:
 					Value: 2
-						Dialogue: Do you trust [CS:N]Grovyle[CR], [hero]?
+						Dialogue: Wh-why?!
 				Case:
 					Value: default
-						Dialogue: Do you trust [CS:N]Grovyle[CR], [hero]?
-			Label: @label_6;
+						Dialogue: Wh-why?!
+			Label: @label_2;
 			Switch:
 				Variable: message_SwitchMenu(0, 1)
 				Case:
-					Value: We have to trust him!
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: message_SetFace
-						Argument: ACTOR_ATTENDANT1
-						Argument: FACE_DETERMINED
-						Argument: FACE_POS_BOTTOM_R_FACEINW
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Well...[K]I can't trust him!
-						Case:
-							Value: 2
-								Dialogue: Well...[K]I can't trust him!
-						Case:
-							Value: default
-								Dialogue: Well...[K]I can't trust him!
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: se_Play
-						Argument: 8971
-					Identifier: ExecuteCommon
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-						Argument: 0
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_ATTENDANT1
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: A Pokémon like that? Never!
-						Case:
-							Value: 2
-								Dialogue: A Pokémon like that? Never!
-						Case:
-							Value: default
-								Dialogue: A Pokémon like that? Never!
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: There's no way that I can trust him!
-						Case:
-							Value: 2
-								Dialogue: There's no way that I can trust him!
-						Case:
-							Value: default
-								Dialogue: There's no way that I can trust him!
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: There's just no way! But...
-						Case:
-							Value: 2
-								Dialogue: There's just no way! But...
-						Case:
-							Value: default
-								Dialogue: There's just no way! But...
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: Wait
-						Argument: 45
-					Identifier: message_SetFace
-						Argument: ACTOR_ATTENDANT1
-						Argument: FACE_SAD
-						Argument: FACE_POS_BOTTOM_R_FACEINW
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: But...[K]I understand, [hero].
-						Case:
-							Value: 2
-								Dialogue: But...[K]I understand, [hero].
-						Case:
-							Value: default
-								Dialogue: But...[K]I understand, [hero].
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
-						Case:
-							Value: 2
-								Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
-						Case:
-							Value: default
-								Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: That means the only other Pokémon we know here in the future...
-						Case:
-							Value: 2
-								Dialogue: That means the only other Pokémon we know here in the future...
-						Case:
-							Value: default
-								Dialogue: That means the only other Pokémon we know here in the future...
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: That leaves only [CS:N]Grovyle[CR]...
-						Case:
-							Value: 2
-								Dialogue: That leaves only [CS:N]Grovyle[CR]...
-						Case:
-							Value: default
-								Dialogue: That leaves only [CS:N]Grovyle[CR]...
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: We don't have any choice.[K] We must rely on [CS:N]Grovyle[CR].
-						Case:
-							Value: 2
-								Dialogue: We have no choice.[K] We must pin our hopes on [CS:N]Grovyle[CR].
-						Case:
-							Value: default
-								Dialogue: We don't have any choice.[K] We must pin our hopes on [CS:N]Grovyle[CR].
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Label: @label_9;
-					Identifier: Turn2Direction
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: 8
-						Argument: 10
-						Argument: DIR_UP
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_ATTENDANT1
-					Identifier: bgm_FadeOut
-						Argument: 160
-					Identifier: Wait
-						Argument: 180
-					Identifier: message_SetFace
-						Argument: ACTOR_ATTENDANT1
-						Argument: FACE_NORMAL
-						Argument: FACE_POS_BOTTOM_R_FACEINW
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Well then...[K]all right.
-						Case:
-							Value: 2
-								Dialogue: Well then...[K]OK.
-						Case:
-							Value: default
-								Dialogue: Well then...[K]OK.
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: Turn2DirectionLives
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: 4
-						Argument: 10
-						Argument: ACTOR_PLAYER
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_ATTENDANT1
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: All right, [hero].[K] Let's chase after [CS:N]Grovyle[CR]!
-						Case:
-							Value: 2
-								Dialogue: OK, [hero].[K] Let's track down [CS:N]Grovyle[CR]!
-						Case:
-							Value: default
-								Dialogue: OK, [hero].[K] Let's track down [CS:N]Grovyle[CR]!
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Let's meet with [CS:N]Grovyle[CR] and ask him how to get back to our world!
-						Case:
-							Value: 2
-								Dialogue: Let's meet with [CS:N]Grovyle[CR] and ask him how we can return to our world!
-						Case:
-							Value: default
-								Dialogue: Let's meet with [CS:N]Grovyle[CR] and ask him how we can get back to our world!
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: message_SetFace
-						Argument: ACTOR_PLAYER
-						Argument: FACE_INSPIRED
-						Argument: FACE_POS_STANDARD
-					Switch:
-						Variable: $HERO_TALK_KIND
-						Case:
-							Value: 4
-								Dialogue: ([partner]!)
-						Case:
-							Value: default
-								Dialogue: ([partner]!)
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: ExecuteCommon
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-						Argument: 0
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_ATTENDANT1
-					Identifier: message_SetFace
-						Argument: ACTOR_ATTENDANT1
-						Argument: FACE_NORMAL
-						Argument: FACE_POS_BOTTOM_R_FACEINW
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Let's go, [hero]!
-						Case:
-							Value: 2
-								Dialogue: Let's go, [hero]!
-						Case:
-							Value: default
-								Dialogue: Let's go, [hero]!
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Let's go after [CS:N]Grovyle[CR]!
-						Case:
-							Value: 2
-								Dialogue: Let's go after [CS:N]Grovyle[CR]!
-						Case:
-							Value: default
-								Dialogue: Let's go after [CS:N]Grovyle[CR]!
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: SetAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 71
-					Identifier: WaitAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_PLAYER
-					Identifier: SetAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 71
-					Identifier: WaitAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_PLAYER
-					Identifier: SetAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 2
-					Identifier: Wait
-						Argument: 45
-					Identifier: MovePositionMark
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-					Identifier: Position
-						Template
-							Type: m9
-							Identifier: 47
-							Identifier: 22.5
-					Identifier: Wait
-						Argument: 30
-					Identifier: MovePositionMark
-						Template
-							Type: performer
-							Identifier: 0
-					Identifier: Position
-						Template
-							Type: m10
-							Identifier: 45
-							Identifier: 22
-					Identifier: Turn2Direction
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: 16
-						Argument: 10
-						Argument: DIR_DOWNRIGHT
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_PLAYER
-					Identifier: bgm_PlayFadeIn
-						Argument: BGM_IN_THE_HANDS_OF_FATE
-						Argument: 0
-						Argument: 256
-					Identifier: message_SetFace
-						Argument: ACTOR_ATTENDANT1
-						Argument: FACE_NORMAL
-						Argument: FACE_POS_TOP_L_FACEINW
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: [hero], thanks.
-						Case:
-							Value: 2
-								Dialogue: [hero], thank you.
-						Case:
-							Value: default
-								Dialogue: [hero], thank you.
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: Turn2Direction
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 4
-						Argument: 10
-						Argument: DIR_UPLEFT
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_PLAYER
-					Identifier: Wait
-						Argument: 30
-					Identifier: message_SetFace
-						Argument: ACTOR_ATTENDANT1
-						Argument: FACE_SAD
-						Argument: FACE_POS_TOP_L_FACEINW
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: You were worried about me for being so down.
-						Case:
-							Value: 2
-								Dialogue: You tried to pick me up because I was feeling down.
-						Case:
-							Value: default
-								Dialogue: You tried to cheer me up because I was feeling down.
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Even though you should be just as scared as I am, [hero]...[K] I'm sorry.
-						Case:
-							Value: 2
-								Dialogue: Even though you should be just as scared as I am, [hero]...[K] I'm sorry.
-						Case:
-							Value: default
-								Dialogue: Even though you should be just as scared as I am, [hero]...[K] I'm sorry.
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Even though I have my closest and most precious friend with me...
-						Case:
-							Value: 2
-								Dialogue: Even though I have my closest and most precious friend with me...
-						Case:
-							Value: default
-								Dialogue: Even though I have my closest and most precious friend with me...
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: I worried all alone...
-						Case:
-							Value: 2
-								Dialogue: I worried all alone...
-						Case:
-							Value: default
-								Dialogue: I worried all alone...
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: And almost gave up alone.
-						Case:
-							Value: 2
-								Dialogue: And almost gave up alone.
-						Case:
-							Value: default
-								Dialogue: And almost gave up alone.
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: When, in fact, I'm not alone.
-						Case:
-							Value: 2
-								Dialogue: When, in fact, I'm not alone.
-						Case:
-							Value: default
-								Dialogue: When, in fact, I'm not alone.
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: Move2PositionMark
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-					Identifier: Position
-						Template
-							Type: m11
-							Identifier: 42.5
-							Identifier: 22.5
-					Identifier: Wait
-						Argument: 15
-					Identifier: Turn2Direction
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 8
-						Argument: 10
-						Argument: DIR_LEFT
-					Identifier: Turn2Direction
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: 4
-						Argument: 10
-						Argument: DIR_RIGHT
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_ATTENDANT1
-					Identifier: Wait
-						Argument: 10
-					Identifier: ExecuteCommon
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: CORO_JUMP_HAPPY_FUNC_SERIES
-						Argument: 0
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_ATTENDANT1
-					Identifier: message_SetFace
-						Argument: ACTOR_ATTENDANT1
-						Argument: FACE_NORMAL
-						Argument: FACE_POS_STANDARD
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: I won't give up anymore.
-						Case:
-							Value: 2
-								Dialogue: I won't give up anymore.
-						Case:
-							Value: default
-								Dialogue: I won't give up anymore.
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Because you're by my side, I can be brave, [hero].
-						Case:
-							Value: 2
-								Dialogue: Because you're by my side, I can be brave, [hero].
-						Case:
-							Value: default
-								Dialogue: Because you're by my side, I can be brave, [hero].
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: I'm going to be fine now.
-						Case:
-							Value: 2
-								Dialogue: I'm going to be fine now.
-						Case:
-							Value: default
-								Dialogue: I'm going to be fine now.
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: So let's keep going, [hero].
-						Case:
-							Value: 2
-								Dialogue: So let's keep going, [hero].
-						Case:
-							Value: default
-								Dialogue: So let's keep going, [hero].
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Let's get back to our world...[K] together!
-						Case:
-							Value: 2
-								Dialogue: Let's get back to our world...[K] together!
-						Case:
-							Value: default
-								Dialogue: Let's get back to our world...[K] together!
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: SetAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 71
-					Identifier: WaitAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_PLAYER
-					Identifier: SetAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 71
-					Identifier: WaitAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_PLAYER
-					Identifier: SetAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 2
-					Identifier: Wait
-						Argument: 45
-					Identifier: bgm_FadeOut
-						Argument: 180
-					Identifier: MovePositionMark
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-					Identifier: Position
-						Template
-							Type: m12
-							Identifier: 61
-							Identifier: 25.5
-					Identifier: Wait
-						Argument: 10
-					Identifier: MovePositionOffset
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: 1
-						Argument: 24
-						Argument: 0
-					Identifier: MovePositionMark
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-					Identifier: Position
-						Template
-							Type: m13
-							Identifier: 58.5
-							Identifier: 25.5
-					Identifier: Wait
-						Argument: 30
-					Identifier: screen_FadeOut
-						Argument: 1
-						Argument: 60
-					Identifier: WaitBgm
-						Argument: BGM_IN_THE_HANDS_OF_FATE
-					Identifier: Wait
-						Argument: 90
-					Identifier: end
-				Case:
-					Value: I don't know...
+					Value: I want to ask him something!
 					Identifier: CallCommon
 						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 					Identifier: message_SetFace
@@ -1428,104 +756,25 @@ def 0:
 						Variable: $PARTNER_TALK_KIND
 						Case:
 							Value: 1
-								Dialogue: And you don't know either, do you, [hero]?
+								Dialogue: Ask him something?
 						Case:
 							Value: 2
-								Dialogue: And you don't know either, do you, [hero]?
+								Dialogue: Ask him something?
 						Case:
 							Value: default
-								Dialogue: And you don't know either, do you, [hero]?
+								Dialogue: Ask him something?
 					Switch:
 						Variable: $PARTNER_TALK_KIND
 						Case:
 							Value: 1
-								Dialogue: But you still want to catch up to [CS:N]Grovyle[CR] and talk to him?
+								Dialogue: Oh...[K]right...
 						Case:
 							Value: 2
-								Dialogue: But you still insist on catching up to [CS:N]Grovyle[CR] so you can talk to him?
+								Dialogue: Oh...[K]I see...
 						Case:
 							Value: default
-								Dialogue: But you still want to catch up to [CS:N]Grovyle[CR] and talk to him?
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: And then trust what he says?
-						Case:
-							Value: 2
-								Dialogue: And then trust what he says?
-						Case:
-							Value: default
-								Dialogue: And then trust what he says?
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: SetAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 71
-					Identifier: WaitAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_PLAYER
-					Identifier: SetAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 2
-					Identifier: Wait
-						Argument: 15
-					Identifier: message_SetFace
-						Argument: ACTOR_ATTENDANT1
-						Argument: FACE_DETERMINED
-						Argument: FACE_POS_BOTTOM_R_FACEINW
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Well...[K]I hate this idea!
-						Case:
-							Value: 2
-								Dialogue: Well...[K]I hate this idea!
-						Case:
-							Value: default
-								Dialogue: Well...[K]I hate this idea!
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: se_Play
-						Argument: 8971
-					Identifier: ExecuteCommon
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: CORO_JUMP_ANGRY_FUNC_SERIES
-						Argument: 0
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_ATTENDANT1
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: Trust a Pokémon like that?[K] Never!
-						Case:
-							Value: 2
-								Dialogue: Trust a Pokémon like that?[K] Never!
-						Case:
-							Value: default
-								Dialogue: Trust a Pokémon like that?[K] Never!
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: That bad Pokémon![K] Trust that...
-						Case:
-							Value: 2
-								Dialogue: That bad Pokémon![K] Trust that...
-						Case:
-							Value: default
-								Dialogue: That bad Pokémon![K] Trust that...
+								Dialogue: Oh...[K]I get it...
+					Label: @label_5;
 					Identifier: message_SetFace
 						Argument: ACTOR_ATTENDANT1
 						Argument: FACE_SAD
@@ -1534,110 +783,876 @@ def 0:
 						Variable: $PARTNER_TALK_KIND
 						Case:
 							Value: 1
-								Dialogue: I don't want to...[K] But...
+								Dialogue: [CS:N]Grovyle[CR] went to our world from here the first time.
 						Case:
 							Value: 2
-								Dialogue: I don't want to...[K] But...
+								Dialogue: [CS:N]Grovyle[CR] went to our world from here the first time.
 						Case:
 							Value: default
-								Dialogue: I don't want to...[K] But...
+								Dialogue: [CS:N]Grovyle[CR] went to our world from here the first time.
+					Switch:
+						Variable: $PARTNER_TALK_KIND
+						Case:
+							Value: 1
+								Dialogue: So [CS:N]Grovyle[CR] should know how to go to our world.
+						Case:
+							Value: 2
+								Dialogue: So [CS:N]Grovyle[CR] should know how to travel to our world.
+						Case:
+							Value: default
+								Dialogue: So [CS:N]Grovyle[CR] should know how to travel to our world.
+					Switch:
+						Variable: $PARTNER_TALK_KIND
+						Case:
+							Value: 1
+								Dialogue: But...[K]isn't [CS:N]Grovyle[CR] a bad Pokémon?
+						Case:
+							Value: 2
+								Dialogue: But...[K]isn't [CS:N]Grovyle[CR] a bad Pokémon?
+						Case:
+							Value: default
+								Dialogue: But...[K]isn't [CS:N]Grovyle[CR] a bad Pokémon?
+					Switch:
+						Variable: $PARTNER_TALK_KIND
+						Case:
+							Value: 1
+								Dialogue: Didn't he...[K]come to our world to steal the Time Gears?
+						Case:
+							Value: 2
+								Dialogue: Didn't he...[K]come to our world to steal the Time Gears?
+						Case:
+							Value: default
+								Dialogue: Didn't he...[K]come to our world to steal the Time Gears?
+					Switch:
+						Variable: $PARTNER_TALK_KIND
+						Case:
+							Value: 1
+								Dialogue: How could I trust anything that he'd say?
+						Case:
+							Value: 2
+								Dialogue: How could I trust anything he would say?
+						Case:
+							Value: default
+								Dialogue: How am I supposed to trust anything he may say?
+					Switch:
+						Variable: $PARTNER_TALK_KIND
+						Case:
+							Value: 1
+								Dialogue: What about you, [hero]?
+						Case:
+							Value: 2
+								Dialogue: What about you, [hero]?
+						Case:
+							Value: default
+								Dialogue: What about you, [hero]?
+					Identifier: message_SetActor
+						Argument: ACTOR_ATTENDANT1
+					Switch:
+						Variable: $PARTNER_TALK_KIND
+						Case:
+							Value: 1
+								Dialogue: Do you trust [CS:N]Grovyle[CR], [hero]?
+						Case:
+							Value: 2
+								Dialogue: Do you trust [CS:N]Grovyle[CR], [hero]?
+						Case:
+							Value: default
+								Dialogue: Do you trust [CS:N]Grovyle[CR], [hero]?
+					Label: @label_6;
+					Switch:
+						Variable: message_SwitchMenu(0, 1)
+						Case:
+							Value: We have to trust him!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_DETERMINED
+								Argument: FACE_POS_BOTTOM_R_FACEINW
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Well...[K]I can't trust him!
+								Case:
+									Value: 2
+										Dialogue: Well...[K]I can't trust him!
+								Case:
+									Value: default
+										Dialogue: Well...[K]I can't trust him!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: se_Play
+								Argument: 8971
+							Identifier: ExecuteCommon
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+								Argument: 0
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_ATTENDANT1
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: A Pokémon like that? Never!
+								Case:
+									Value: 2
+										Dialogue: A Pokémon like that? Never!
+								Case:
+									Value: default
+										Dialogue: A Pokémon like that? Never!
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: There's no way that I can trust him!
+								Case:
+									Value: 2
+										Dialogue: There's no way that I can trust him!
+								Case:
+									Value: default
+										Dialogue: There's no way that I can trust him!
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: There's just no way! But...
+								Case:
+									Value: 2
+										Dialogue: There's just no way! But...
+								Case:
+									Value: default
+										Dialogue: There's just no way! But...
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: Wait
+								Argument: 45
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_SAD
+								Argument: FACE_POS_BOTTOM_R_FACEINW
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: But...[K]I understand, [hero].
+								Case:
+									Value: 2
+										Dialogue: But...[K]I understand, [hero].
+								Case:
+									Value: default
+										Dialogue: But...[K]I understand, [hero].
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
+								Case:
+									Value: 2
+										Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
+								Case:
+									Value: default
+										Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: That means the only other Pokémon we know here in the future...
+								Case:
+									Value: 2
+										Dialogue: That means the only other Pokémon we know here in the future...
+								Case:
+									Value: default
+										Dialogue: That means the only other Pokémon we know here in the future...
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: That leaves only [CS:N]Grovyle[CR]...
+								Case:
+									Value: 2
+										Dialogue: That leaves only [CS:N]Grovyle[CR]...
+								Case:
+									Value: default
+										Dialogue: That leaves only [CS:N]Grovyle[CR]...
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: We don't have any choice.[K] We must rely on [CS:N]Grovyle[CR].
+								Case:
+									Value: 2
+										Dialogue: We have no choice.[K] We must pin our hopes on [CS:N]Grovyle[CR].
+								Case:
+									Value: default
+										Dialogue: We don't have any choice.[K] We must pin our hopes on [CS:N]Grovyle[CR].
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Label: @label_9;
+							Identifier: Turn2Direction
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: 8
+								Argument: 10
+								Argument: DIR_UP
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_ATTENDANT1
+							Identifier: bgm_FadeOut
+								Argument: 160
+							Identifier: Wait
+								Argument: 180
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_BOTTOM_R_FACEINW
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Well then...[K]all right.
+								Case:
+									Value: 2
+										Dialogue: Well then...[K]OK.
+								Case:
+									Value: default
+										Dialogue: Well then...[K]OK.
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: Turn2DirectionLives
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: 4
+								Argument: 10
+								Argument: ACTOR_PLAYER
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_ATTENDANT1
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: All right, [hero].[K] Let's chase after [CS:N]Grovyle[CR]!
+								Case:
+									Value: 2
+										Dialogue: OK, [hero].[K] Let's track down [CS:N]Grovyle[CR]!
+								Case:
+									Value: default
+										Dialogue: OK, [hero].[K] Let's track down [CS:N]Grovyle[CR]!
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Let's meet with [CS:N]Grovyle[CR] and ask him how to get back to our world!
+								Case:
+									Value: 2
+										Dialogue: Let's meet with [CS:N]Grovyle[CR] and ask him how we can return to our world!
+								Case:
+									Value: default
+										Dialogue: Let's meet with [CS:N]Grovyle[CR] and ask him how we can get back to our world!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: message_SetFace
+								Argument: ACTOR_PLAYER
+								Argument: FACE_INSPIRED
+								Argument: FACE_POS_STANDARD
+							Switch:
+								Variable: $HERO_TALK_KIND
+								Case:
+									Value: 4
+										Dialogue: ([partner]!)
+								Case:
+									Value: default
+										Dialogue: ([partner]!)
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: ExecuteCommon
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+								Argument: 0
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_ATTENDANT1
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_BOTTOM_R_FACEINW
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Let's go, [hero]!
+								Case:
+									Value: 2
+										Dialogue: Let's go, [hero]!
+								Case:
+									Value: default
+										Dialogue: Let's go, [hero]!
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Let's go after [CS:N]Grovyle[CR]!
+								Case:
+									Value: 2
+										Dialogue: Let's go after [CS:N]Grovyle[CR]!
+								Case:
+									Value: default
+										Dialogue: Let's go after [CS:N]Grovyle[CR]!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 71
+							Identifier: WaitAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 71
+							Identifier: WaitAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 2
+							Identifier: Wait
+								Argument: 45
+							Identifier: MovePositionMark
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+							Identifier: Position
+								Template
+									Type: m9
+									Identifier: 47
+									Identifier: 22.5
+							Identifier: Wait
+								Argument: 30
+							Identifier: MovePositionMark
+								Template
+									Type: performer
+									Identifier: 0
+							Identifier: Position
+								Template
+									Type: m10
+									Identifier: 45
+									Identifier: 22
+							Identifier: Turn2Direction
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: 16
+								Argument: 10
+								Argument: DIR_DOWNRIGHT
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: bgm_PlayFadeIn
+								Argument: BGM_IN_THE_HANDS_OF_FATE
+								Argument: 0
+								Argument: 256
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_TOP_L_FACEINW
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: [hero], thanks.
+								Case:
+									Value: 2
+										Dialogue: [hero], thank you.
+								Case:
+									Value: default
+										Dialogue: [hero], thank you.
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: Turn2Direction
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 4
+								Argument: 10
+								Argument: DIR_UPLEFT
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: Wait
+								Argument: 30
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_SAD
+								Argument: FACE_POS_TOP_L_FACEINW
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: You were worried about me for being so down.
+								Case:
+									Value: 2
+										Dialogue: You tried to pick me up because I was feeling down.
+								Case:
+									Value: default
+										Dialogue: You tried to cheer me up because I was feeling down.
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Even though you should be just as scared as I am, [hero]...[K] I'm sorry.
+								Case:
+									Value: 2
+										Dialogue: Even though you should be just as scared as I am, [hero]...[K] I'm sorry.
+								Case:
+									Value: default
+										Dialogue: Even though you should be just as scared as I am, [hero]...[K] I'm sorry.
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Even though I have my closest and most precious friend with me...
+								Case:
+									Value: 2
+										Dialogue: Even though I have my closest and most precious friend with me...
+								Case:
+									Value: default
+										Dialogue: Even though I have my closest and most precious friend with me...
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: I worried all alone...
+								Case:
+									Value: 2
+										Dialogue: I worried all alone...
+								Case:
+									Value: default
+										Dialogue: I worried all alone...
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: And almost gave up alone.
+								Case:
+									Value: 2
+										Dialogue: And almost gave up alone.
+								Case:
+									Value: default
+										Dialogue: And almost gave up alone.
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: When, in fact, I'm not alone.
+								Case:
+									Value: 2
+										Dialogue: When, in fact, I'm not alone.
+								Case:
+									Value: default
+										Dialogue: When, in fact, I'm not alone.
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: Move2PositionMark
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+							Identifier: Position
+								Template
+									Type: m11
+									Identifier: 42.5
+									Identifier: 22.5
+							Identifier: Wait
+								Argument: 15
+							Identifier: Turn2Direction
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 8
+								Argument: 10
+								Argument: DIR_LEFT
+							Identifier: Turn2Direction
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: 4
+								Argument: 10
+								Argument: DIR_RIGHT
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_ATTENDANT1
+							Identifier: Wait
+								Argument: 10
+							Identifier: ExecuteCommon
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: CORO_JUMP_HAPPY_FUNC_SERIES
+								Argument: 0
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_ATTENDANT1
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_STANDARD
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: I won't give up anymore.
+								Case:
+									Value: 2
+										Dialogue: I won't give up anymore.
+								Case:
+									Value: default
+										Dialogue: I won't give up anymore.
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Because you're by my side, I can be brave, [hero].
+								Case:
+									Value: 2
+										Dialogue: Because you're by my side, I can be brave, [hero].
+								Case:
+									Value: default
+										Dialogue: Because you're by my side, I can be brave, [hero].
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: I'm going to be fine now.
+								Case:
+									Value: 2
+										Dialogue: I'm going to be fine now.
+								Case:
+									Value: default
+										Dialogue: I'm going to be fine now.
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: So let's keep going, [hero].
+								Case:
+									Value: 2
+										Dialogue: So let's keep going, [hero].
+								Case:
+									Value: default
+										Dialogue: So let's keep going, [hero].
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Let's get back to our world...[K] together!
+								Case:
+									Value: 2
+										Dialogue: Let's get back to our world...[K] together!
+								Case:
+									Value: default
+										Dialogue: Let's get back to our world...[K] together!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 71
+							Identifier: WaitAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 71
+							Identifier: WaitAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 2
+							Identifier: Wait
+								Argument: 45
+							Identifier: bgm_FadeOut
+								Argument: 180
+							Identifier: MovePositionMark
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+							Identifier: Position
+								Template
+									Type: m12
+									Identifier: 61
+									Identifier: 25.5
+							Identifier: Wait
+								Argument: 10
+							Identifier: MovePositionOffset
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: 1
+								Argument: 24
+								Argument: 0
+							Identifier: MovePositionMark
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+							Identifier: Position
+								Template
+									Type: m13
+									Identifier: 58.5
+									Identifier: 25.5
+							Identifier: Wait
+								Argument: 30
+							Identifier: screen_FadeOut
+								Argument: 1
+								Argument: 60
+							Identifier: WaitBgm
+								Argument: BGM_IN_THE_HANDS_OF_FATE
+							Identifier: Wait
+								Argument: 90
+							Identifier: end
+						Case:
+							Value: I don't know...
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_WORRIED
+								Argument: FACE_POS_BOTTOM_R_FACEINW
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: And you don't know either, do you, [hero]?
+								Case:
+									Value: 2
+										Dialogue: And you don't know either, do you, [hero]?
+								Case:
+									Value: default
+										Dialogue: And you don't know either, do you, [hero]?
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: But you still want to catch up to [CS:N]Grovyle[CR] and talk to him?
+								Case:
+									Value: 2
+										Dialogue: But you still insist on catching up to [CS:N]Grovyle[CR] so you can talk to him?
+								Case:
+									Value: default
+										Dialogue: But you still want to catch up to [CS:N]Grovyle[CR] and talk to him?
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: And then trust what he says?
+								Case:
+									Value: 2
+										Dialogue: And then trust what he says?
+								Case:
+									Value: default
+										Dialogue: And then trust what he says?
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 71
+							Identifier: WaitAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_PLAYER
+							Identifier: SetAnimation
+								Template
+									Type: actor
+									Identifier: ACTOR_PLAYER
+								Argument: 2
+							Identifier: Wait
+								Argument: 15
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_DETERMINED
+								Argument: FACE_POS_BOTTOM_R_FACEINW
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Well...[K]I hate this idea!
+								Case:
+									Value: 2
+										Dialogue: Well...[K]I hate this idea!
+								Case:
+									Value: default
+										Dialogue: Well...[K]I hate this idea!
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: se_Play
+								Argument: 8971
+							Identifier: ExecuteCommon
+								Template
+									Type: actor
+									Identifier: ACTOR_ATTENDANT1
+								Argument: CORO_JUMP_ANGRY_FUNC_SERIES
+								Argument: 0
+							Identifier: WaitExecuteLives
+								Argument: ACTOR_ATTENDANT1
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: Trust a Pokémon like that?[K] Never!
+								Case:
+									Value: 2
+										Dialogue: Trust a Pokémon like that?[K] Never!
+								Case:
+									Value: default
+										Dialogue: Trust a Pokémon like that?[K] Never!
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: That bad Pokémon![K] Trust that...
+								Case:
+									Value: 2
+										Dialogue: That bad Pokémon![K] Trust that...
+								Case:
+									Value: default
+										Dialogue: That bad Pokémon![K] Trust that...
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_SAD
+								Argument: FACE_POS_BOTTOM_R_FACEINW
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: I don't want to...[K] But...
+								Case:
+									Value: 2
+										Dialogue: I don't want to...[K] But...
+								Case:
+									Value: default
+										Dialogue: I don't want to...[K] But...
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: Wait
+								Argument: 45
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: But...[K]maybe we don't have any other choice...
+								Case:
+									Value: 2
+										Dialogue: But...[K]maybe we don't have any other choice...
+								Case:
+									Value: default
+										Dialogue: But...[K]maybe we don't have any other choice...
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
+								Case:
+									Value: 2
+										Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
+								Case:
+									Value: default
+										Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: That means the only other Pokémon we know here in the future...
+								Case:
+									Value: 2
+										Dialogue: That means the only other Pokémon we know here in the future...
+								Case:
+									Value: default
+										Dialogue: That means the only other Pokémon we know here in the future...
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: That leaves only [CS:N]Grovyle[CR]...
+								Case:
+									Value: 2
+										Dialogue: That leaves only [CS:N]Grovyle[CR]...
+								Case:
+									Value: default
+										Dialogue: That leaves only [CS:N]Grovyle[CR]...
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: We don't have any choice.[K] We must rely on [CS:N]Grovyle[CR].
+								Case:
+									Value: 2
+										Dialogue: We have no choice.[K] We must pin our hopes on [CS:N]Grovyle[CR].
+								Case:
+									Value: default
+										Dialogue: We don't have any choice.[K] We must pin our hopes on [CS:N]Grovyle[CR].
+							Identifier: CallCommon
+								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Identifier: jump
+								Argument: label_9
+					Identifier: break
+				Case:
+					Value: I want to know something!
 					Identifier: CallCommon
 						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: Wait
-						Argument: 45
+					Identifier: message_SetFace
+						Argument: ACTOR_ATTENDANT1
+						Argument: FACE_WORRIED
+						Argument: FACE_POS_BOTTOM_R_FACEINW
 					Switch:
 						Variable: $PARTNER_TALK_KIND
 						Case:
 							Value: 1
-								Dialogue: But...[K]maybe we don't have any other choice...
+								Dialogue: You wanted to know something?
 						Case:
 							Value: 2
-								Dialogue: But...[K]maybe we don't have any other choice...
+								Dialogue: You wanted to know something?
 						Case:
 							Value: default
-								Dialogue: But...[K]maybe we don't have any other choice...
+								Dialogue: You wanted to know something?
 					Switch:
 						Variable: $PARTNER_TALK_KIND
 						Case:
 							Value: 1
-								Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
+								Dialogue: Oh...[K]right...
 						Case:
 							Value: 2
-								Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
+								Dialogue: Oh...[K]I see...
 						Case:
 							Value: default
-								Dialogue: I don't know why, but [CS:N]Dusknoir[CR] wants to get rid of us.
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: That means the only other Pokémon we know here in the future...
-						Case:
-							Value: 2
-								Dialogue: That means the only other Pokémon we know here in the future...
-						Case:
-							Value: default
-								Dialogue: That means the only other Pokémon we know here in the future...
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: That leaves only [CS:N]Grovyle[CR]...
-						Case:
-							Value: 2
-								Dialogue: That leaves only [CS:N]Grovyle[CR]...
-						Case:
-							Value: default
-								Dialogue: That leaves only [CS:N]Grovyle[CR]...
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: We don't have any choice.[K] We must rely on [CS:N]Grovyle[CR].
-						Case:
-							Value: 2
-								Dialogue: We have no choice.[K] We must pin our hopes on [CS:N]Grovyle[CR].
-						Case:
-							Value: default
-								Dialogue: We don't have any choice.[K] We must pin our hopes on [CS:N]Grovyle[CR].
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+								Dialogue: Oh...[K]I get it...
 					Identifier: jump
-						Argument: label_9
-			Identifier: break
-			Identifier: case
-				Argument: menu
-				Dialogue: I want to know something!
-			Identifier: CallCommon
-				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-			Identifier: message_SetFace
-				Argument: ACTOR_ATTENDANT1
-				Argument: FACE_WORRIED
-				Argument: FACE_POS_BOTTOM_R_FACEINW
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: You wanted to know something?
-				Case:
-					Value: 2
-						Dialogue: You wanted to know something?
-				Case:
-					Value: default
-						Dialogue: You wanted to know something?
-			Switch:
-				Variable: $PARTNER_TALK_KIND
-				Case:
-					Value: 1
-						Dialogue: Oh...[K]right...
-				Case:
-					Value: 2
-						Dialogue: Oh...[K]I see...
-				Case:
-					Value: default
-						Dialogue: Oh...[K]I get it...
-			Identifier: jump
-				Argument: label_5
+						Argument: label_5
 			Identifier: break
 		Case:
 			Value: Let's return to our world!

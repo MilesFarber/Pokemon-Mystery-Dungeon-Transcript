@@ -24,5 +24,18 @@
   *   * `Grovyle`: "Fine! We leave now!"
 
 
-*If the player chooses "default":*
+  *   * *Jump to [anchor 2](#2)*
+
+
+*If the player chooses "Not yet":*
+
+  * `Partner Normal`
+
+  * `Partner Name`: "OK."
+
+
+  * `Partner Normal`
+
+  * `Partner Name`: "Let's go when you're ready."
+
 

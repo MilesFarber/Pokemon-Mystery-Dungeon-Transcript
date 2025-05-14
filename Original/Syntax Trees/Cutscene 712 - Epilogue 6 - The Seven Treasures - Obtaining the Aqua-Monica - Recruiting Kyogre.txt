@@ -104,7 +104,7 @@ def 0:
 			Switch:
 				Variable: random(100)
 				Case:
-					Value: 50
+					Value: < 50
 					Identifier: SetAnimation
 						Template
 							Type: actor
@@ -223,61 +223,81 @@ def 0:
 								Condition: ( $SCENARIO_MAIN_BIT_FLAG[33] || $SCENARIO_MAIN_BIT_FLAG[34] || $SCENARIO_MAIN_BIT_FLAG[35] || $SCENARIO_MAIN_BIT_FLAG[36] || $SCENARIO_MAIN_BIT_FLAG[37] || $SCENARIO_MAIN_BIT_FLAG[38] || $SCENARIO_MAIN_BIT_FLAG[39]
 								Label: @label_8;
 								Identifier: end
-						Case:
-							Value: Refuse
-				Case:
-					Value: 2
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: message_Mail
-						Dialogue: [CN]Are you sure?[K] [CN]You're sure you won't accept [CN]this potential new member?
-					Switch:
-						Variable: message_SwitchMenu(0, 1)
-						Case:
-							Value: Reconsider
-							Identifier: jump
-								Argument: label_6
+							Conditional: Else
+								Array accessor
+									Array: $PERFORMANCE_PROGRESS_LIST
+									Index: 21
+									Value: 1
+								Identifier: jump
+									Argument: label_8
+							Identifier: break
 						Case:
 							Value: Refuse
 							Identifier: CallCommon
 								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 							Identifier: message_Mail
-								Dialogue: [CN][CS:N]Kyogre[CR] was turned down [CN]as a team member.
-							Identifier: message_Close
-							Identifier: bgm_FadeOut
-								Argument: 30
-							Identifier: se_Play
-								Argument: 7183
-							Identifier: SetEffect
-								Template
-									Type: performer
-									Identifier: 4
-								Argument: EFFECT_WHITE_LIGHT_ENGULFING
-								Argument: 3
-							Identifier: Wait
-								Argument: 10
-							Identifier: Destroy
-								Template
-									Type: actor
-									Identifier: ACTOR_NPC_KAIOOGA
-							Identifier: Wait
-								Argument: 15
-							Identifier: WaitExecutePerformer
-								Argument: 4
-							Identifier: SetEffect
-								Template
-									Type: performer
-									Identifier: 4
-								Argument: EFFECT_NONE
-								Argument: 3
-							Identifier: Wait
-								Argument: 30
-							Identifier: WaitSe
-								Argument: 7183
-							Identifier: jump
-								Argument: label_3
+								Dialogue: [CN]Are you sure?[K] [CN]You're sure you won't accept [CN]this potential new member?
+							Switch:
+								Variable: message_SwitchMenu(0, 1)
+								Case:
+									Value: Reconsider
+									Identifier: jump
+										Argument: label_6
+								Case:
+									Value: Refuse
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: message_Mail
+										Dialogue: [CN][CS:N]Kyogre[CR] was turned down [CN]as a team member.
+									Identifier: message_Close
+									Identifier: bgm_FadeOut
+										Argument: 30
+									Identifier: se_Play
+										Argument: 7183
+									Identifier: SetEffect
+										Template
+											Type: performer
+											Identifier: 4
+										Argument: EFFECT_WHITE_LIGHT_ENGULFING
+										Argument: 3
+									Identifier: Wait
+										Argument: 10
+									Identifier: Destroy
+										Template
+											Type: actor
+											Identifier: ACTOR_NPC_KAIOOGA
+									Identifier: Wait
+										Argument: 15
+									Identifier: WaitExecutePerformer
+										Argument: 4
+									Identifier: SetEffect
+										Template
+											Type: performer
+											Identifier: 4
+										Argument: EFFECT_NONE
+										Argument: 3
+									Identifier: Wait
+										Argument: 30
+									Identifier: WaitSe
+										Argument: 7183
+									Identifier: jump
+										Argument: label_3
+							Identifier: break
 					Identifier: break
+				Case:
+					Value: default
+					Identifier: jump
+						Argument: label_3
 		Case:
 			Value: default
+			Identifier: Wait
+				Argument: 10
+			Identifier: me_Play
+				Argument: 9
+			Identifier: message_Mail
+				Dialogue: [CN][player] obtained [CN]an [CS:I]Aqua-Monica[CR], one of [CN]the seven treasures!
+			Identifier: WaitMe
+				Argument: 9
+			Identifier: message_Close
 			Identifier: jump
-				Argument: label_3
+				Argument: label_1

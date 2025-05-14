@@ -750,6 +750,261 @@ def 0:
 				Value: Form a team
 				Identifier: break_loop
 				Identifier: break
+			Case:
+				Value: Say no
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Identifier: se_Play
+					Argument: 8968
+				Identifier: ExecuteCommon
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+					Argument: 0
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_SURPRISED
+					Argument: FACE_POS_STANDARD
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Huh? Oh, come on!
+					Case:
+						Value: 2
+							Dialogue: What?! Oh, but...
+					Case:
+						Value: default
+							Dialogue: What?! Oh, please!
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: message_KeyWait
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_SAD
+					Argument: FACE_POS_STANDARD
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: But I'm braver when I'm with you, [hero]...
+					Case:
+						Value: 2
+							Dialogue: But I'm braver when I'm with you, [hero]...
+					Case:
+						Value: default
+							Dialogue: But I'm braver when I'm with you, [hero]...
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: And you were awesome when we beat [CS:N]Koffing[CR] and his buddy.
+					Case:
+						Value: 2
+							Dialogue: You were so fantastic when we confronted [CS:N]Koffing[CR] and his sidekick.
+					Case:
+						Value: default
+							Dialogue: And you were fantastic when we faced [CS:N]Koffing[CR] and his sidekick.
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: When I saw that, I realized you're no ordinary Pokémon, [hero]!
+					Case:
+						Value: 2
+							Dialogue: When I saw that, I realized you're no ordinary Pokémon, [hero]!
+					Case:
+						Value: default
+							Dialogue: When I saw that, I realized you're no ordinary Pokémon, [hero]!
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: I thought that you'd make a first-class explorer, [hero].
+					Case:
+						Value: 2
+							Dialogue: I became convinced that you'd make a first-class explorer, [hero].
+					Case:
+						Value: default
+							Dialogue: I thought that you could be a first-class explorer, [hero].
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
+					Case:
+						Value: 2
+							Dialogue: So come on now.[K] Let's form an exploration team together.
+					Case:
+						Value: default
+							Dialogue: So, please?[K] Will you please form an exploration team with me?
+				Identifier: continue
+			Case:
+				Value: Are you...?
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Identifier: se_Play
+					Argument: 8962
+				Identifier: SetEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: EFFECT_QUESTION_MARK
+					Argument: 3
+				Identifier: WaitEffect
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+				Identifier: WaitExecuteLives
+					Argument: ACTOR_ATTENDANT1
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_NORMAL
+					Argument: FACE_POS_STANDARD
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Huh? [K]Am I what?
+					Case:
+						Value: 2
+							Dialogue: Huh? [K]Am I what?
+					Case:
+						Value: default
+							Dialogue: Huh? [K]Am I what?
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_NORMAL
+					Argument: FACE_POS_STANDARD
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: What do you mean, [K]\"Are you...?\
+					Case:
+						Value: 2
+							Dialogue: What do you mean, [K]\"Are you...?\
+					Case:
+						Value: default
+							Dialogue: What do you mean, [K]\"Are you...?\
+				Switch:
+					Variable: message_SwitchMenu(0, 1)
+					Case:
+						Value: You're trying to talk me into it?
+						Identifier: break
+				Label: @label_4;
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Identifier: se_Play
+					Argument: 8968
+				Identifier: ExecuteCommon
+					Template
+						Type: actor
+						Identifier: ACTOR_ATTENDANT1
+					Argument: CORO_JUMP_SURPRISE_FUNC_SERIES
+					Argument: 0
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_SURPRISED
+					Argument: FACE_POS_STANDARD
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: What?! [K]Talk you into it?!
+					Case:
+						Value: 2
+							Dialogue: What?! [K]Talk you into it?!
+					Case:
+						Value: default
+							Dialogue: What?! [K]Talk you into it?!
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: I wasn't trying to do anything!
+					Case:
+						Value: 2
+							Dialogue: I didn't even think of it!
+					Case:
+						Value: default
+							Dialogue: The thought never crossed my mind!
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_SAD
+					Argument: FACE_POS_STANDARD
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Well, I'm a complete coward...[K] Honestly...
+					Case:
+						Value: 2
+							Dialogue: Well, I'm a complete coward...[K] Honestly...
+					Case:
+						Value: default
+							Dialogue: Well, I'm a complete coward...[K] Honestly...
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: I mean, yes, I thought I could depend on you, [hero]...
+					Case:
+						Value: 2
+							Dialogue: I mean, yes, I thought I could depend on you, [hero]...
+					Case:
+						Value: default
+							Dialogue: I mean, yes, I thought I could depend on you, [hero]...
+				Identifier: message_SetFace
+					Argument: ACTOR_ATTENDANT1
+					Argument: FACE_NORMAL
+					Argument: FACE_POS_STANDARD
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: But during that fight with [CS:N]Koffing[CR] earlier...
+					Case:
+						Value: 2
+							Dialogue: But during that fight with [CS:N]Koffing[CR] earlier...
+					Case:
+						Value: default
+							Dialogue: But during that fight with [CS:N]Koffing[CR] earlier...
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: Having you there with me, I felt really brave.
+					Case:
+						Value: 2
+							Dialogue: Having you there with me, I felt really brave.
+					Case:
+						Value: default
+							Dialogue: Having you there with me, I felt really brave.
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: I think I could do anything as long as you're helping me, [hero].
+					Case:
+						Value: 2
+							Dialogue: I think I could do anything as long as you're helping me, [hero].
+					Case:
+						Value: default
+							Dialogue: I think I could do anything as long as you're helping me, [hero].
+				Switch:
+					Variable: $PARTNER_TALK_KIND
+					Case:
+						Value: 1
+							Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
+					Case:
+						Value: 2
+							Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
+					Case:
+						Value: default
+							Dialogue: So come on, I'm begging you.[K] Let's form an exploration team, you and me.
+				Identifier: continue
 	Label: @label_0;
 	Identifier: CallCommon
 		Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC

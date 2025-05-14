@@ -15,3 +15,5 @@
   *   * *Jump to [anchor 2](#2)*
 
 
+*If the player chooses "No":*
+

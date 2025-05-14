@@ -18,3 +18,8 @@
   *   * *Jump to [anchor 2](#2)*
 
 
+*If the player chooses "No":*
+
+  * *Anchor: <a name="3"></a>3*
+
+

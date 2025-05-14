@@ -157,10 +157,7 @@
   *   * `Partner Name`: "OK. Then where were you going to suggest?"
 
 
-  *   * `Partner Worried`
-
-  *   * `Partner Name`: "Let's go to Wigglytuff's Guild!"
-
+  * *If the player chooses "Let's go to [CS:N]Wigglytuff[CR]'s Guild!":*
 
   *   * *Break from this loop.*
 

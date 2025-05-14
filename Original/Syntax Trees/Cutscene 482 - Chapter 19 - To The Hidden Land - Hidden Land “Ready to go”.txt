@@ -156,5 +156,38 @@ def 0:
 					Argument: 30
 				Identifier: hold
 				Identifier: end
+				Identifier: else
+					Argument: SCENARIO_MAIN
+					Argument: scn
+					Argument: 25
+					Argument: 2
+				Identifier: jump
+					Argument: label_2
 		Case:
-			Value: default
+			Value: Not yet
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right.
+				Case:
+					Value: 2
+						Dialogue: OK.
+				Case:
+					Value: default
+						Dialogue: OK.
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: We'll go when you're ready.
+				Case:
+					Value: 2
+						Dialogue: Let's go when you're ready.
+				Case:
+					Value: default
+						Dialogue: Let's go when you're ready.
+			Identifier: message_Close
+			Identifier: end

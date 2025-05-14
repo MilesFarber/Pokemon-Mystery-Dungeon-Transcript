@@ -12,5 +12,8 @@
   *   * *Anchor: <a name="2"></a>2*
 
 
-*If the player chooses "default":*
+  *   * *Jump to [anchor 2](#2)*
+
+
+*If the player chooses "No":*
 

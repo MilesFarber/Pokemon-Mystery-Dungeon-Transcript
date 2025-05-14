@@ -276,103 +276,166 @@ def 0:
 	Switch:
 		Variable: message_SwitchMenu(0, 1)
 		Case:
-			Value: CS
-			Identifier: P
-				Argument: Craggy
-				Argument: Coast
-				Argument: CR
-				Argument: label_0
-				Argument: CallCommon
+			Value: [CS:P]Craggy Coast[CR]
+			Label: @label_0;
+			Identifier: CallCommon
 				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-				Argument: message_SetFace
+			Identifier: message_SetFace
 				Argument: ACTOR_ATTENDANT1
 				Argument: FACE_NORMAL
 				Argument: FACE_POS_TOP_R_CENTER
-				Argument: message_SwitchTalk
-				Argument: PARTNER_TALK_KIND
-				Argument: case
-				Argument: 1
-				Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
-			Identifier: case
-				Argument: 2
-				Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
-			Identifier: default
-				Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
-			Identifier: label_2
-				Argument: message_SwitchTalk
-				Argument: PARTNER_TALK_KIND
-				Argument: case
-				Argument: 1
-				Dialogue: All right. Now...
-			Identifier: case
-				Argument: 2
-				Dialogue: All right. Now...
-			Identifier: default
-				Dialogue: All right. Now...
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
+				Case:
+					Value: 2
+						Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
+				Case:
+					Value: default
+						Dialogue: OK. [CS:P]Craggy Coast[CR] it is.
+			Label: @label_2;
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: All right. Now...
+				Case:
+					Value: 2
+						Dialogue: All right. Now...
+				Case:
+					Value: default
+						Dialogue: All right. Now...
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_NPC_BIPPA
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_BOTTOM_R_FACEINW
+			Identifier: message_Talk
+				Dialogue: Let's all three work as one and get this done!
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 			Identifier: Turn2Direction
 				Template
 					Type: actor
 					Identifier: ACTOR_PLAYER
-					Identifier: 4
-					Identifier: 10
-					Identifier: DIR_UP
-					Identifier: Turn2Direction
-					Identifier: actor
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: Turn2Direction
+				Template
+					Type: actor
 					Identifier: ACTOR_NPC_BIPPA
-					Identifier: 4
-					Identifier: 10
-					Identifier: DIR_UP
-					Identifier: Turn2Direction
-					Identifier: actor
-					Identifier: ACTOR_ATTENDANT1
-					Identifier: 4
-					Identifier: 10
-					Identifier: DIR_DOWN
-					Identifier: WaitExecuteLives
-					Identifier: ACTOR_PLAYER
-					Identifier: WaitExecuteLives
-					Identifier: ACTOR_NPC_BIPPA
-					Identifier: WaitExecuteLives
-					Identifier: ACTOR_ATTENDANT1
-					Identifier: SetAnimation
-					Identifier: actor
-					Identifier: ACTOR_ATTENDANT1
-					Identifier: 71
-					Identifier: SetAnimation
-					Identifier: actor
-					Identifier: ACTOR_PLAYER
-					Identifier: 71
-					Identifier: WaitAnimation
-					Identifier: actor
-					Identifier: ACTOR_ATTENDANT1
-					Identifier: WaitAnimation
-					Identifier: actor
-					Identifier: ACTOR_PLAYER
-					Identifier: SetAnimation
-					Identifier: actor
-					Identifier: ACTOR_ATTENDANT1
-					Identifier: 2
-					Identifier: SetAnimation
-					Identifier: actor
-					Identifier: ACTOR_PLAYER
-					Identifier: 2
-					Identifier: Wait
-					Identifier: 30
-					Identifier: Turn2Direction
-					Identifier: actor
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: Turn2Direction
+				Template
+					Type: actor
 					Identifier: ACTOR_ATTENDANT1
 				Argument: 4
-				Argument: bgm_FadeOut
-				Argument: 60
-			Identifier: main_EnterDungeon
+				Argument: 10
+				Argument: DIR_DOWN
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_PLAYER
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_NPC_BIPPA
+			Identifier: WaitExecuteLives
+				Argument: ACTOR_ATTENDANT1
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 71
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 71
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+			Identifier: WaitAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 2
+			Identifier: SetAnimation
+				Template
+					Type: actor
+					Identifier: ACTOR_PLAYER
+				Argument: 2
+			Identifier: Wait
+				Argument: 30
+			Identifier: Turn2Direction
+				Template
+					Type: actor
+					Identifier: ACTOR_ATTENDANT1
+				Argument: 4
+				Argument: 10
+				Argument: DIR_UP
+			Identifier: SCENARIO_MAIN
+				Argument: scn
 				Argument: 9
-				Argument: 30
-			Switch:
-				Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
-			Identifier: main_EnterDungeon
-				Argument: 1
-				Argument: 30
-			Identifier: hold
-			Identifier: end
+				Argument: 2
+			Conditional: If
+				Condition: ( $SCENARIO_MAIN_BIT_FLAG[5]
+				Identifier: debug_Print
+					Argument: ENTER_CHIISANAYOKOANA
+				Identifier: bgm_FadeOut
+					Argument: 60
+				Identifier: main_EnterDungeon
+					Argument: 9
+					Argument: 30
+				Switch:
+					Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+				Identifier: main_EnterDungeon
+					Argument: 1
+					Argument: 30
+				Identifier: hold
+				Identifier: end
+			Conditional: Else
+				Identifier: debug_Print
+					Argument: ENTER_ENGANNOIWABA
+				Identifier: main_EnterDungeon
+					Argument: 8
+					Argument: 30
+				Switch:
+					Variable: message_Menu(MENU_DUNGEON_INITIALIZE_TEAM)
+				Identifier: main_EnterDungeon
+					Argument: 1
+					Argument: 30
+				Identifier: hold
+			Identifier: break
 		Case:
-			Value: default
+			Value: [CS:P]Side Path[CR]
+			Array accessor
+				Array: $SCENARIO_MAIN_BIT_FLAG
+				Index: 5
+				Value: 1
+			Identifier: CallCommon
+				Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+			Identifier: message_SetFace
+				Argument: ACTOR_ATTENDANT1
+				Argument: FACE_NORMAL
+				Argument: FACE_POS_TOP_R_CENTER
+			Switch:
+				Variable: $PARTNER_TALK_KIND
+				Case:
+					Value: 1
+						Dialogue: OK. [CS:P]Side Path[CR] it is.
+				Case:
+					Value: 2
+						Dialogue: OK. [CS:P]Side Path[CR] it is.
+				Case:
+					Value: default
+						Dialogue: OK. [CS:P]Side Path[CR] it is.
+			Identifier: jump
+				Argument: label_2

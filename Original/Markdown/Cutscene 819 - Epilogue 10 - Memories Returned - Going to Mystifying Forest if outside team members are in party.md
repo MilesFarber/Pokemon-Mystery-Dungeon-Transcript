@@ -28,5 +28,5 @@
   * `Partner Name`: "Let's do our best, `Hero Name`!"
 
 
-*If the player chooses "CS":*
+*If the player chooses "Don't go to [CS:P]Mystifying Forest[CR]":*
 

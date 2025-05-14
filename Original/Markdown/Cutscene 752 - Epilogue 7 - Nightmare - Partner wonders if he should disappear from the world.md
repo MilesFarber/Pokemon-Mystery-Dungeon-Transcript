@@ -66,6 +66,11 @@
 `Partner Name`: "Would the world be saved?"
 
 
+`Partner Sad`
+
+`Partner Name`: "...In that case...maybe that's the best thing to do..."
+
+
 `Hero Surprised` 〽
 
 `Hero Name`: "(Oh, `Partner Name`!)"

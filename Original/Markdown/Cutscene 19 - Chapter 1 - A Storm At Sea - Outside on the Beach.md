@@ -223,6 +223,95 @@
   *   * *Break from this loop.*
 
 
+  * *If the player chooses "Say no":*
+
+  *   * `Partner Surprised`
+
+  *   * `Partner Name`: "What?! Oh, please!"
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "But I'm braver when I'm with you, `Hero Name`..."
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "And you were fantastic when we faced Koffing and his sidekick."
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "When I saw that, I realized you're no ordinary Pokémon, `Hero Name`!"
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "I thought that you could be a first-class explorer, `Hero Name`."
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "So, please? Will you please form an exploration team with me?"
+
+
+  * *If the player chooses "Are you...?":*
+
+  *   * `Partner Normal` ❓
+
+  *   * `Partner Name`: "Huh? Am I what?"
+
+
+  *   * `Partner Normal`
+
+  *   * `Partner Name`: "What do you mean, "Are you...?"
+
+
+  *   * *If the player chooses "You're trying to talk me into it?":*
+
+  *   * *Anchor: <a name="4"></a>4*
+
+
+  *   * `Partner Surprised`
+
+  *   * `Partner Name`: "What?! Talk you into it?!"
+
+
+  *   * `Partner Surprised`
+
+  *   * `Partner Name`: "The thought never crossed my mind!"
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "Well, I'm a complete coward... Honestly..."
+
+
+  *   * `Partner Sad`
+
+  *   * `Partner Name`: "I mean, yes, I thought I could depend on you, `Hero Name`..."
+
+
+  *   * `Partner Normal`
+
+  *   * `Partner Name`: "But during that fight with Koffing earlier..."
+
+
+  *   * `Partner Normal`
+
+  *   * `Partner Name`: "Having you there with me, I felt really brave."
+
+
+  *   * `Partner Normal`
+
+  *   * `Partner Name`: "I think I could do anything as long as you're helping me, `Hero Name`."
+
+
+  *   * `Partner Normal`
+
+  *   * `Partner Name`: "So come on, I'm begging you. Let's form an exploration team, you and me."
+
+
 *Anchor: <a name="0"></a>0*
 
 

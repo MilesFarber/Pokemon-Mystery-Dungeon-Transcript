@@ -13,7 +13,7 @@
   * *Anchor: <a name="1"></a>1*
 
 
-  * *If the player chooses "50":*
+  * *If a random number is < 50:*
 
   *   * ⚪
 
@@ -46,30 +46,61 @@
   *   *   *   * *Anchor: <a name="8"></a>8*
 
 
-  *   * *If the player chooses "Refuse":*
+  *   *   * *Else:*
 
-  * *If the player chooses "2":*
+
+  *   *   *   * *Jump to [anchor 8](#8)*
+
+
+  *   * *If the player chooses "Refuse":*
 
 >Are you sure? You're sure you won't accept this potential new member?
 
 
-  *   * *If the player chooses "Reconsider":*
+  *   *   * *If the player chooses "Reconsider":*
 
-  *   *   * *Jump to [anchor 6](#6)*
+  *   *   *   * *Jump to [anchor 6](#6)*
 
 
-  *   * *If the player chooses "Refuse":*
+  *   *   * *If the player chooses "Refuse":*
 
 >Kyogre was turned down as a team member.
 
 
-  *   *   * ⚪
+  *   *   *   * ⚪
 
-  *   *   * *Jump to [anchor 3](#3)*
+  *   *   *   * *Jump to [anchor 3](#3)*
+
+
+  * *If a random number is default:*
+
+  *   * *Jump to [anchor 3](#3)*
+
+
+  * *If the player chooses "< 50":*
+
+  *   * ⚪
+
+>Oh? Kyogre is saying something.
+>
+>It seemed to develop a kinship with `Hero Name` while battling!
+>
+>It says that it wants to join the team!
+
+
+  *   * *Anchor: <a name="6"></a>6*
+
+
+  * *If the player chooses "default":*
+
+  *   * *Jump to [anchor 3](#3)*
 
 
 *If the player chooses to take the item:*
 
-  * *Jump to [anchor 3](#3)*
+>`Hero Name` obtained an Aqua-Monica, one of the seven treasures!
+
+
+  * *Jump to [anchor 1](#1)*
 
 

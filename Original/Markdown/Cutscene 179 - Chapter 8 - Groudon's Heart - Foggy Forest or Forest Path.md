@@ -13,11 +13,9 @@
   * `Partner Name`: "Which way should we go?"
 
 
-  * *If the player chooses "CS":*
+  * *If the player chooses "[CS:P]Foggy Forest[CR]":*
 
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "All right. Foggy Forest it is."
+  *   * * * *
 
 
   *   * `Partner Normal`
@@ -30,59 +28,32 @@
   *   * `Partner Name`: "All right! Let's roll out!"
 
 
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "All right! Let's roll out!"
+  *   * *Anchor: <a name="4"></a>4*
 
 
-  *   * `Partner Normal`
+  *   * `Hero Normal`
 
-  *   * `Partner Name`: "All right! Let's roll out!"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "(...)"
+  *   * `Hero Name`: "(...)"
 
 
-  *   * `Partner Normal`
+  *   * `Hero Normal`
 
-  *   * `Partner Name`: "(Anyway...)"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "(Anyway...)"
+  *   * `Hero Name`: "(Anyway...)"
 
 
-  *   * `Partner Normal`
+  *   * `Hero Normal`
 
-  *   * `Partner Name`: "(Maybe the keys to unlocking my memory are here...)"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "(Maybe the keys to unlocking my memory are here...)"
+  *   * `Hero Name`: "(Maybe the keys to unlocking my memory are here...)"
 
 
-  *   * `Partner Normal`
+  *   * `Hero Normal`
 
-  *   * `Partner Name`: "(Fogbound Lake...)"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "(Fogbound Lake...)"
+  *   * `Hero Name`: "(Fogbound Lake...)"
 
 
-  *   * `Partner Normal`
+  *   * `Hero Normal`
 
-  *   * `Partner Name`: "(I may find some answers if Fogbound Lake can be found...)"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "(I may find some answers if Fogbound Lake can be found...)"
+  *   * `Hero Name`: "(I may find some answers if Fogbound Lake can be found...)"
 
 
   *   * `Partner Normal`
@@ -90,22 +61,7 @@
   *   * `Partner Name`: "Huh? What is this?"
 
 
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "Huh? What is this?"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "Huh? What is this?"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "It looks like some kind of stone, I guess."
-
-
-  *   * `Partner Normal`
+  *   * `Partner Normal` ❗
 
   *   * `Partner Name`: "It looks like some kind of stone, I guess."
 
@@ -115,17 +71,10 @@
   *   * `Partner Name`: "It's red and pretty. It's kind of like a gem, actually."
 
 
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "It's red and pretty. It's kind of like a gem, actually."
+>`Partner Name` picked up the red stone.
 
 
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "Wow! This stone feels warm!"
-
-
-  *   * `Partner Normal`
+  *   * `Partner Normal` 🔆
 
   *   * `Partner Name`: "Wow! It feels warm!"
 
@@ -137,32 +86,7 @@
 
   *   * `Partner Normal`
 
-  *   * `Partner Name`: "It's like heat is coming from inside the stone. It's weird."
-
-
-  *   * `Partner Normal`
-
   *   * `Partner Name`: "It doesn't seem to be lava. What could it be?"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "It doesn't seem to be lava. What could it be?"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "It doesn't seem to be lava. What could it be?"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "It might be rare. I'll keep it."
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "It might be rare. I'll keep it."
 
 
   *   * `Partner Normal`
@@ -175,21 +99,18 @@
   *   * `Partner Name`: "All right, let's roll, `Hero Name`!"
 
 
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "All right, let's roll, `Hero Name`!"
+  *   * * * *
 
 
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "All right, let's roll, `Hero Name`!"
+  *   * *If a certain flag is set:*
 
 
-  * *If the player chooses "CS":*
+  *   * *Else:*
 
-  *   * `Partner Normal`
 
-  *   * `Partner Name`: "All right. Forest Path it is."
+  * *If the player chooses "[CS:P]Forest Path[CR]":*
+
+  *   * * * *
 
 
   *   * `Partner Normal`
@@ -202,14 +123,7 @@
   *   * `Partner Name`: "All right! Let's roll out!"
 
 
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "All right! Let's roll out!"
-
-
-  *   * `Partner Normal`
-
-  *   * `Partner Name`: "All right! Let's roll out!"
+  *   * *Jump to [anchor 4](#4)*
 
 
 *If the player chooses "Not yet":*

@@ -10,6 +10,11 @@
 
 `Partner Normal`
 
+`Partner Name`: "Just in case Grovyle has come back."
+
+
+`Partner Normal`
+
 `Partner Name`: "Let's go check out Sharpedo Bluff, `Hero Name`!"
 
 

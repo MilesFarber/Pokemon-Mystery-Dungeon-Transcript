@@ -65,3 +65,42 @@
   *   * *Jump to [anchor 3](#3)*
 
 
+*If the player chooses "Not yet.":*
+
+  * *If the player has progressed far enough:*
+
+
+  *   * `Armaldo Normal`
+
+  *   * `Armaldo`: "What do you mean, not yet?"
+
+
+  *   * `Armaldo Normal`
+
+  *   * `Armaldo`: "Once you're ready, we'll go."
+
+
+  *   * *Anchor: <a name="5"></a>5*
+
+
+  * *Else:*
+
+
+  *   * `Armaldo Normal`
+
+  *   * `Armaldo`: "What do you mean, not yet?"
+
+
+  *   * `Armaldo Normal`
+
+  *   * `Armaldo`: "It's all right. I'll wait until you're ready, so take your time."
+
+
+  *   * `Armaldo Normal`
+
+  *   * `Armaldo`: "Once you're ready, we'll go."
+
+
+  *   * *Jump to [anchor 5](#5)*
+
+

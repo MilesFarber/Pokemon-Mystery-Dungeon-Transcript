@@ -13,37 +13,6 @@
   * * * *
 
 
-  * *If the player chooses "0":*
-
-  *   * *Anchor: <a name="10"></a>10*
-
-
-  *   * * * *
-
-
-  *   * *If the player chooses "53":*
-
-  *   * *Jump to [anchor 10](#10)*
-
-
-  *   * *Jump to [anchor 10](#10)*
-
-
-  *   * *Jump to [anchor 10](#10)*
-
-
-  *   * *Jump to [anchor 10](#10)*
-
-
-  *   * *Jump to [anchor 10](#10)*
-
-
-  *   * *Jump to [anchor 10](#10)*
-
-
-  *   * *Jump to [anchor 10](#10)*
-
-
 *Else:*
 
 

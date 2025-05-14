@@ -21,3 +21,11 @@
   *   * *Else:*
 
 
+  *   *   * *Jump to [anchor 4](#4)*
+
+
+  *   * *Jump to [anchor 2](#2)*
+
+
+*If the player chooses "No":*
+

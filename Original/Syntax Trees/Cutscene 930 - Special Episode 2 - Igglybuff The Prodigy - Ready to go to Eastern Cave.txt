@@ -282,3 +282,47 @@ def 0:
 					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 				Identifier: jump
 					Argument: label_3
+			Identifier: break
+		Case:
+			Value: Not yet.
+			Conditional: If
+				Condition: ($SCENARIO_SIDE) == [42, 3]
+				Identifier: message_SetFace
+					Argument: ACTOR_NPC_AAMARUDO
+					Argument: FACE_NORMAL
+					Argument: FACE_POS_TOP_R_CENTER
+				Identifier: message_FacePositionOffset
+					Argument: 2
+					Argument: 0
+				Identifier: message_Talk
+					Dialogue: What do you mean, not yet?
+				Identifier: message_Talk
+					Dialogue: Once you're ready, we'll go.
+				Identifier: message_Close
+				Label: @label_5;
+				Identifier: SetAnimation
+					Template
+						Type: actor
+						Identifier: ACTOR_NPC_AAMARUDO
+					Argument: 4
+				Identifier: end
+			Conditional: Else
+				Identifier: CallCommon
+					Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+				Identifier: message_SetFace
+					Argument: ACTOR_NPC_AAMARUDO
+					Argument: FACE_NORMAL
+					Argument: FACE_POS_TOP_R_CENTER
+				Identifier: message_FacePositionOffset
+					Argument: 2
+					Argument: 0
+				Identifier: message_Talk
+					Dialogue: What do you mean, not yet?
+				Identifier: message_Talk
+					Dialogue: It's all right.[K] I'll wait until you're ready, so take your time.
+				Identifier: message_Talk
+					Dialogue: Once you're ready, we'll go.
+				Identifier: message_Close
+				Identifier: jump
+					Argument: label_5
+			Identifier: break

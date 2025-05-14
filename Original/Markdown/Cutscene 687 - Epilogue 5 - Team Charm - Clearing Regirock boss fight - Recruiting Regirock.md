@@ -18,7 +18,7 @@
 *Else:*
 
 
-  * *If the player chooses "50":*
+  * *If a random number is < 50:*
 
 >........................
 >
@@ -68,6 +68,33 @@
   *   *   *   * ⚪
 
   *   *   *   * *Jump to [anchor 0](#0)*
+
+
+  * *If a random number is default:*
+
+  *   * *Jump to [anchor 0](#0)*
+
+
+  * *If the player chooses "< 50":*
+
+>........................
+>
+>A voice echoed from somewhere...
+
+
+  *   * ⚪
+
+  *   * `Regirock Normal`
+
+  *   * `Regirock`: "I AM REGIROCK..."
+
+
+  *   * `Regirock Normal`
+
+  *   * `Regirock`: "I PLEDGE...SERVICE TO YOU..."
+
+
+  *   * *Anchor: <a name="4"></a>4*
 
 
   * *If the player chooses "default":*

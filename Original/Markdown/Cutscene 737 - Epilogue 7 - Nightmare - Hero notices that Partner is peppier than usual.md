@@ -13,6 +13,11 @@
 
 `Hero Sad`
 
+`Hero Name`: "(In that case... What I heard about my existence ruining the world...)"
+
+
+`Hero Sad`
+
 `Hero Name`: "(Maybe... Maybe it's true.)"
 
 

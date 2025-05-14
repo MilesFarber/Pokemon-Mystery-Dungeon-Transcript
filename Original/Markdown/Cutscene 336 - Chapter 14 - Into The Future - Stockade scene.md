@@ -291,6 +291,68 @@
   * `Hero Name`: "(Wh-what to do...?)"
 
 
+  * *If the player chooses "Use an item!":*
+
+  *   * *Anchor: <a name="0"></a>0*
+
+
+  *   * `Grovyle Normal`
+
+  *   * `Grovyle`: "...No. An item's no good..."
+
+
+  *   * `Grovyle Normal`
+
+  *   * `Grovyle`: "...We're tied up...and unable to move..."
+
+
+  *   * `Grovyle Normal`
+
+  *   * `Grovyle`: "...It should be something you can do instantaneously..."
+
+
+  *   * `Hero Worried`
+
+  *   * `Hero Name`: "(Urk...! That's easy for you to say... Ummm...)"
+
+
+  * *If the player chooses "Use a move!":*
+
+  *   * `Grovyle Normal`
+
+  *   * `Grovyle`: "...A move...? That could work, but..."
+
+
+  *   * `Grovyle Normal`
+
+  *   * `Grovyle`: "...No! That's no good..."
+
+
+  *   * `Grovyle Normal`
+
+  *   * `Grovyle`: "...We're trussed up...so we can't move..."
+
+
+  *   * `Grovyle Normal`
+
+  *   * `Grovyle`: "...It has to be something you can do instantaneously..."
+
+
+  *   * `Grovyle Normal`
+
+  *   * `Grovyle`: "...It doesn't need to be flashy... Can't you do anything more basic...?"
+
+
+  *   * `Hero Worried`
+
+  *   * `Hero Name`: "(Urk...! You're not helping... Ummm...)"
+
+
+  * *If the player chooses "Attack!":*
+
+  *   * *Break from this loop.*
+
+
 `Grovyle Normal` ❗
 
 `Grovyle`: "...! That's it... That'll do..."

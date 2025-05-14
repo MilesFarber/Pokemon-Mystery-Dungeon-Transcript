@@ -51,37 +51,42 @@
 `Partner Name`: "Which way should we go?"
 
 
-*If the player chooses "CS":*
+*If the player chooses "[CS:P]Craggy Coast[CR]":*
 
-  * `Partner Worried`
-
-  * `Partner Name`: "OK. Craggy Coast it is."
+  * *Anchor: <a name="0"></a>0*
 
 
-  * `Partner Worried`
+  * `Partner Normal`
 
   * `Partner Name`: "OK. Craggy Coast it is."
 
 
-  * `Partner Worried`
-
-  * `Partner Name`: "OK. Craggy Coast it is."
+  * *Anchor: <a name="2"></a>2*
 
 
-  * `Partner Worried`
+  * `Partner Normal`
 
   * `Partner Name`: "All right. Now..."
 
 
-  * `Partner Worried`
+  * `Bidoof Normal`
 
-  * `Partner Name`: "All right. Now..."
-
-
-  * `Partner Worried`
-
-  * `Partner Name`: "All right. Now..."
+  * `Bidoof`: "Let's all three work as one and get this done!"
 
 
-*If the player chooses "default":*
+  * *If a certain flag is set:*
+
+
+  * *Else:*
+
+
+*If the player chooses "[CS:P]Side Path[CR]":*
+
+  * `Partner Normal`
+
+  * `Partner Name`: "OK. Side Path it is."
+
+
+  * *Jump to [anchor 2](#2)*
+
 

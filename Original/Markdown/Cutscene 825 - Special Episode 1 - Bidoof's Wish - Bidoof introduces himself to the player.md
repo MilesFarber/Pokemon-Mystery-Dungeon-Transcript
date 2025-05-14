@@ -79,5 +79,8 @@
   * `Bidoof`: "Start from where?"
 
 
-  * *If the player chooses "M":*
+  * *If the player chooses "[M:D2]Beginning":*
+
+  *   * *Jump to [anchor 0](#0)*
+
 

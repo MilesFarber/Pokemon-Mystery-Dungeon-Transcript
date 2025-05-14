@@ -19,7 +19,7 @@
 `Partner Name`: "Manaphy... The little cutie's gone..."
 
 
-*If the player chooses "It's sad...":*
+*If the player chooses " It's sad...":*
 
   * *Anchor: <a name="0"></a>0*
 
@@ -75,7 +75,7 @@
   * * * *
 
 
-*If the player chooses "This is for the best...":*
+*If the player chooses " This is for the best...":*
 
   * `Partner Normal`
 

@@ -163,6 +163,11 @@
 
 `Partner Surprised`
 
+`Partner Name`: "In that case..."
+
+
+`Partner Surprised`
+
 `Partner Name`: "Should we ask if Dusknoir knows even more?!"
 
 

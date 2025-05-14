@@ -46,6 +46,11 @@
 `Partner Name`: "You thought that would save the world... That's why you did it, right?"
 
 
+`Partner Sad`
+
+`Partner Name`: "If that's the case... Maybe we should do that this time too."
+
+
 `Hero Sad`
 
 `Hero Name`: "(`Partner Name`...)"
@@ -124,14 +129,9 @@
   *   * *Anchor: <a name="5"></a>5*
 
 
-  *   * *If the player chooses "CS":*
+  *   * *If the player chooses "Everything [CS:N]Cresselia[CR] said...":*
 
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "What exactly was odd about what Cresselia said?"
-
-
-  *   *   * `Partner Sad`
+  *   *   * `Partner Sad` ❓
 
   *   *   * `Partner Name`: "What exactly was odd about what Cresselia said?"
 
@@ -143,26 +143,6 @@
 
   *   *   * `Partner Sad`
 
-  *   *   * `Partner Name`: "But we separately found out that we are causing the space distortion while at Luminous Spring too!"
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "But we separately found out that we are causing the space distortion while at Luminous Spring too!"
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "And if Azurill can't wake up from his nightmare because of the distortion..."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "And if Azurill can't wake up from his nightmare because of the distortion..."
-
-
-  *   *   * `Partner Sad`
-
   *   *   * `Partner Name`: "And if Azurill can't wake up from his nightmare because of the distortion..."
 
 
@@ -171,24 +151,12 @@
   *   *   * `Partner Name`: "Well, I think we have to believe what we were told."
 
 
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "Well, I think we have to believe what we were told."
+  *   *   * *Anchor: <a name="8"></a>8*
 
 
-  *   *   * `Partner Sad`
+  *   *   * `Hero Pain` 💦
 
-  *   *   * `Partner Name`: "Well, I think we have to believe what we were told."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "(Urk! That is true...)"
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "(But something... Something is different about disappearing this time around!)"
+  *   *   * `Hero Name`: "(Urk! That is true...)"
 
 
   *   *   * `Hero Worried`
@@ -203,227 +171,87 @@
 
   *   *   * `Hero Worried`
 
-  *   *   * `Hero Name`: "(I know something is different...)"
-
-
-  *   *   * `Hero Worried`
-
   *   *   * `Hero Name`: "(But what is it? I need to think carefully...)"
 
 
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "(But what is it? I need to think carefully...)"
-
-
-  *   *   * `Hero Worried`
+  *   *   * `Hero Surprised` ❗
 
   *   *   * `Hero Name`: "(...Th-that's it!)"
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Hero Surprised`
 
   *   *   * `Hero Name`: "(That's right! This is different from before!)"
 
 
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "(That's right! This is different from before!)"
-
-
-  *   *   * `Hero Worried`
+  *   *   * `Hero Surprised`
 
   *   *   * `Hero Name`: "(Back then with Dialga, my disappearance wasn't really a choice!)"
 
 
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "(Back then with Dialga, my disappearance wasn't really a choice!)"
-
-
-  *   *   * `Hero Worried`
+  *   *   * `Hero Surprised`
 
   *   *   * `Hero Name`: "(I've got to explain that to `Partner Name`...)"
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Worried` ❓
 
-  *   *   * `Hero Name`: "(I've got to explain that to `Partner Name`...)"
+  *   *   * `Partner Name`: "What? It's different this time?"
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Worried`
 
-  *   *   * `Hero Name`: "What? It's different this time?"
+  *   *   * `Partner Name`: "What's... What's different?"
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Surprised` 〽
 
-  *   *   * `Hero Name`: "What? It's different this time?"
+  *   *   * `Partner Name`: "...What?!"
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Surprised`
 
-  *   *   * `Hero Name`: "What's... What's different?"
+  *   *   * `Partner Name`: "At Temporal Tower, you were willing to disappear..."
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Surprised`
 
-  *   *   * `Hero Name`: "What's... What's different?"
+  *   *   * `Partner Name`: "But it's not the same this time?"
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Worried` ❓
 
-  *   *   * `Hero Name`: "What's... What's different?"
+  *   *   * `Partner Name`: "What...?"
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Worried`
 
-  *   *   * `Hero Name`: "...What?!"
+  *   *   * `Partner Name`: "You did what you did at Temporal Tower because you had to..."
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Worried`
 
-  *   *   * `Hero Name`: "...What?!"
+  *   *   * `Partner Name`: "You changed your future because you knew that it would lead to world peace..."
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Worried`
 
-  *   *   * `Hero Name`: "At Temporal Tower, you were willing to disappear..."
+  *   *   * `Partner Name`: "But your choice wasn't really the choice to disappear."
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Worried`
 
-  *   *   * `Hero Name`: "At Temporal Tower, you were willing to disappear..."
+  *   *   * `Partner Name`: "But there's no telling what will happen if we disappear. Not this time."
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Worried`
 
-  *   *   * `Hero Name`: "At Temporal Tower, you were willing to disappear..."
+  *   *   * `Partner Name`: "So we don't really know if that will bring peace to the world again..."
 
 
-  *   *   * `Hero Worried`
+  *   *   * `Partner Worried`
 
-  *   *   * `Hero Name`: "But it's not the same this time?"
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "But it's not the same this time?"
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "But it's not the same this time?"
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "What...?"
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "What...?"
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "You did what you did at Temporal Tower because you had to..."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "You did what you did at Temporal Tower because you had to..."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "You did what you did at Temporal Tower because you had to..."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "You changed your future because you knew that it would lead to world peace..."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "You changed your future because you knew that it would lead to world peace..."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "You changed your future because you knew that it would lead to world peace..."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "But your choice wasn't really the choice to disappear."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "But your choice wasn't really the choice to disappear."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "But your choice wasn't really the choice to disappear."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "But there's no telling what will happen if we disappear. Not this time."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "But there's no telling what will happen if we disappear. Not this time."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "But there's no telling what will happen if we disappear. Not this time."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "So we don't really know if that will bring peace to the world again..."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "So we don't really know if that will bring peace to the world again..."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "So we don't really know if that will bring peace to the world again..."
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "What you're saying is, nothing about this is certain?"
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "What you're saying is, nothing about this is certain?"
-
-
-  *   *   * `Hero Worried`
-
-  *   *   * `Hero Name`: "What you're saying is, nothing about this is certain?"
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: ".................."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: ".................."
+  *   *   * `Partner Name`: "What you're saying is, nothing about this is certain?"
 
 
   *   *   * `Partner Sad`
@@ -438,37 +266,7 @@
 
   *   *   * `Partner Sad`
 
-  *   *   * `Partner Name`: "That's true..."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "That's true..."
-
-
-  *   *   * `Partner Sad`
-
   *   *   * `Partner Name`: "It's true that things aren't completely certain."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "It's true that things aren't completely certain."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "It's true that things aren't completely certain."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "But..."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "But..."
 
 
   *   *   * `Partner Sad`
@@ -483,42 +281,12 @@
 
   *   *   * `Partner Sad`
 
-  *   *   * `Partner Name`: "It is a fact that you were a human who came from the future, `Hero Name`."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "And I did go to the future and then come back to this world."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "And I did go to the future and then come back to this world."
-
-
-  *   *   * `Partner Sad`
-
   *   *   * `Partner Name`: "And I did go to the future and then come back to this world."
 
 
   *   *   * `Partner Sad`
 
   *   *   * `Partner Name`: "And it does seem that, because of us, space has started to distort."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "And it does seem that, because of us, space has started to distort."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "And it does seem that, because of us, space has started to distort."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "There's no escaping the fact that we changed history..."
 
 
   *   *   * `Partner Sad`
@@ -531,74 +299,37 @@
   *   *   * `Partner Name`: "That must mean what we were told is true..."
 
 
-  *   *   * `Partner Sad`
+  *   *   * `Hero Sad`
 
-  *   *   * `Partner Name`: "That must mean what we were told is true..."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "That must mean what we were told is true..."
+  *   *   * `Hero Name`: "(`Partner Name`...)"
 
 
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "(`Partner Name`...)"
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "(`Partner Name`...)"
-
-
-  *   *   * `Partner Sad`
+  *   *   * `Partner Normal` ⚞
 
   *   *   * `Partner Name`: "Oh..."
 
 
-  *   *   * `Partner Sad`
+  *   *   * `Hero Normal`
 
-  *   *   * `Partner Name`: "Oh..."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "(It's sunlight...)"
+  *   *   * `Hero Name`: "(It's sunlight...)"
 
 
-  *   *   * `Partner Sad`
+  *   *   * `Hero Normal`
 
-  *   *   * `Partner Name`: "(The sun's coming up...)"
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "(The sun's coming up...)"
+  *   *   * `Hero Name`: "(The sun's coming up...)"
 
 
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "(..................)"
+  *   *   * * * *
 
 
-  *   *   * `Partner Sad`
+  *   *   * `Hero Normal`
 
-  *   *   * `Partner Name`: "(It's beautiful... It's another beautiful dawn...)"
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "(It's beautiful... It's another beautiful dawn...)"
+  *   *   * `Hero Name`: "(..................)"
 
 
-  *   *   * `Partner Sad`
+  *   *   * `Hero Normal`
 
-  *   *   * `Partner Name`: "Oh, `Hero Name`..."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "Oh, `Hero Name`..."
+  *   *   * `Hero Name`: "(It's beautiful... It's another beautiful dawn...)"
 
 
   *   *   * `Partner Sad`
@@ -613,21 +344,6 @@
 
   *   *   * `Partner Sad`
 
-  *   *   * `Partner Name`: "Seeing the sun come up this way makes me remember...!"
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "I've seen the sun come up from here before... This isn't the first time."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "I've seen the sunrise from here before... This isn't the first time."
-
-
-  *   *   * `Partner Sad`
-
   *   *   * `Partner Name`: "I've seen the sunrise from here before... This isn't the first time."
 
 
@@ -636,29 +352,9 @@
   *   *   * `Partner Name`: "The first time... I was with Grovyle."
 
 
-  *   *   * `Partner Sad`
+  *   *   * `Hero Normal`
 
-  *   *   * `Partner Name`: "The first time... I was with Grovyle."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "The first time... I was with Grovyle."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "(With Grovyle?)"
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "(With Grovyle?)"
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "Yes. Remember when we first came back from the future? We slept here?"
+  *   *   * `Hero Name`: "(With Grovyle?)"
 
 
   *   *   * `Partner Sad`
@@ -673,26 +369,6 @@
 
   *   *   * `Partner Sad`
 
-  *   *   * `Partner Name`: "That's when I saw the sunrise from here for the first time."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "That's when I saw the sunrise from here for the first time."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "I just remembered something about that first time..."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "I just remembered something about that first time..."
-
-
-  *   *   * `Partner Sad`
-
   *   *   * `Partner Name`: "I just remembered something about that first time..."
 
 
@@ -701,14 +377,7 @@
   *   *   * `Partner Name`: "It's something Grovyle asked me..."
 
 
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "It's something Grovyle asked me..."
-
-
-  *   *   * `Partner Sad`
-
-  *   *   * `Partner Name`: "It's something Grovyle asked me..."
+  *   *   * * * *
 
 
   *   * *If the player chooses "The whole space-distortion idea!":*

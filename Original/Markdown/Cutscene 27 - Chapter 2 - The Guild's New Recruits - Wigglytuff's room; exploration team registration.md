@@ -165,3 +165,176 @@
 
 >`Partner Name` peered into the Treasure Bag.
 
+
+*If the player chooses "default":*
+
+  * *Anchor: <a name="0"></a>0*
+
+
+  * *Anchor: <a name="21"></a>21*
+
+
+>The  was inside!
+
+
+  * *If the player chooses "0":*
+
+>A Silver Bow was also inside!
+
+
+  *   * *Anchor: <a name="38"></a>38*
+
+
+  *   * `Wigglytuff Normal`
+
+  *   * `Wigglytuff`: "Those two items are special."
+
+
+  *   * `Wigglytuff Normal`
+
+  *   * `Wigglytuff`: "I'm sure they will help you on your adventures! ♪"
+
+
+  *   * `Partner Inspired`
+
+  *   * `Partner Name`: "Th-thank you! We'll do our best!"
+
+
+  *   * `Wigglytuff Normal`
+
+  *   * `Wigglytuff`: "Yup. But you're only apprenticing right now. So do your best...to train!"
+
+
+  *   * `Partner Inspired`
+
+  *   * `Partner Name`: "We will!"
+
+
+  *   * `Partner Happy`
+
+  *   * `Partner Name`: "Let's always do our best, `Hero Name`!"
+
+
+  *   * * * *
+
+
+  * *If the player chooses "1":*
+
+>A Brown Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "2":*
+
+>A Red Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "3":*
+
+>A Pink Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "4":*
+
+>An Orange Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "5":*
+
+>A Yellow Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "6":*
+
+>A Lime Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "7":*
+
+>A Green Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "8":*
+
+>A Viridian Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "9":*
+
+>A Minty Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "10":*
+
+>A Sky Blue Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "11":*
+
+>A Blue Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "12":*
+
+>A Cobalt Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "13":*
+
+>A Purple Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "14":*
+
+>A Violet Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+
+  * *If the player chooses "15":*
+
+>A Fuchsia Bow was also inside!
+
+
+  *   * *Jump to [anchor 38](#38)*
+
+

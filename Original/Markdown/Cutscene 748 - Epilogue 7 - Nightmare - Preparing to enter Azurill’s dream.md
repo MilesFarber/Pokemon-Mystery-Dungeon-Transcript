@@ -148,7 +148,10 @@
   *   *   *   * *Jump to [anchor 2](#2)*
 
 
-  *   *   * *If the player chooses "CS":*
+  *   *   * *If the player chooses "Don't enter the [CS:P]nightmare[CR]":*
+
+  *   *   *   * *Jump to [anchor 1](#1)*
+
 
 *If the player chooses "No":*
 

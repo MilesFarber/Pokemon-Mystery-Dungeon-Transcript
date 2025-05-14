@@ -85,142 +85,45 @@ def 0:
 						Identifier: supervision_ExecuteCommon
 							Argument: CORO_EVENT_S22_08
 						Identifier: end
+						Identifier: else
+							Argument: SCENARIO_MAIN
+							Argument: scn
+							Argument: 29
+							Argument: 88
+						Identifier: supervision_ExecuteCommon
+							Argument: CORO_EVENT_S22_06
+						Identifier: jump
+							Argument: label_5
 				Case:
 					Value: default
-		Case:
-			Value: default
-			Switch:
-				Variable: ProcessSpecial(PROCESS_SPECIAL_IS_TEAM_SETUP_PARTNER_AND_HERO_ONLY, 0, 0)
-				Case:
-					Value: 1
-					Identifier: Turn2DirectionLives
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: 4
-						Argument: 10
-						Argument: ACTOR_PLAYER
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_ATTENDANT1
-					Identifier: message_SetFace
-						Argument: ACTOR_ATTENDANT1
-						Argument: FACE_NORMAL
-						Argument: FACE_POS_STANDARD
 					Switch:
-						Variable: $PARTNER_TALK_KIND
+						Variable: ProcessSpecial(PROCESS_SPECIAL_IS_TEAM_SETUP_PARTNER_AND_HERO_ONLY, 0, 0)
 						Case:
 							Value: 1
-								Dialogue: Hold on a second, [hero].
-						Case:
-							Value: 2
-								Dialogue: Hold on, [hero].
-						Case:
-							Value: default
-								Dialogue: Hold on, [hero].
-					Identifier: CallCommon
-						Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-					Identifier: Turn2DirectionLives
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 4
-						Argument: 10
-						Argument: ACTOR_ATTENDANT1
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_PLAYER
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: It's about the team leader...
-						Case:
-							Value: 2
-								Dialogue: It's about the team leader...
-						Case:
-							Value: default
-								Dialogue: It's about the team leader...
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
-						Case:
-							Value: 2
-								Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
-						Case:
-							Value: default
-								Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: After all, that's the way we've always done it for important missions.
-						Case:
-							Value: 2
-								Dialogue: After all, that's the way we've always handled things on important missions.
-						Case:
-							Value: default
-								Dialogue: After all, we've always gone on our important missions that way.
-					Switch:
-						Variable: $PARTNER_TALK_KIND
-						Case:
-							Value: 1
-								Dialogue: So I think that you should be the leader, [hero]...[K] What do you think?
-						Case:
-							Value: 2
-								Dialogue: So I think that you should be the leader, [hero]...[K] What do you think?
-						Case:
-							Value: default
-								Dialogue: So I think that you should be the leader, [hero]...[K] What do you think?
-					Switch:
-						Variable: message_SwitchMenu(0, 1)
-						Case:
-							Value: Accept leadership
-							Identifier: CallCommon
-								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-							Switch:
-								Variable: ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0)
-							Identifier: message_SetFace
-								Argument: ACTOR_ATTENDANT1
-								Argument: FACE_NORMAL
-								Argument: FACE_POS_STANDARD
-							Identifier: message_SetFace
-								Argument: ACTOR_ATTENDANT1
-								Argument: FACE_NORMAL
-								Argument: FACE_POS_STANDARD
-							Switch:
-								Variable: $PARTNER_TALK_KIND
-								Case:
-									Value: 1
-										Dialogue: Cool![K] That's it, then! You're the leader, [hero]!
-								Case:
-									Value: 2
-										Dialogue: OK![K] That's settled, then! You're the leader, [hero]!
-								Case:
-									Value: default
-										Dialogue: OK![K] You're the team leader, [hero]!
-							Identifier: CallCommon
-								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 							Identifier: Turn2DirectionLives
 								Template
 									Type: actor
 									Identifier: ACTOR_ATTENDANT1
 								Argument: 4
 								Argument: 10
-								Argument: ACTOR_NPC_KURESERIA
+								Argument: ACTOR_PLAYER
 							Identifier: WaitExecuteLives
 								Argument: ACTOR_ATTENDANT1
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_STANDARD
 							Switch:
 								Variable: $PARTNER_TALK_KIND
 								Case:
 									Value: 1
-										Dialogue: [CS:N]Cresselia[CR]!
+										Dialogue: Hold on a second, [hero].
 								Case:
 									Value: 2
-										Dialogue: [CS:N]Cresselia[CR]!
+										Dialogue: Hold on, [hero].
 								Case:
 									Value: default
-										Dialogue: [CS:N]Cresselia[CR]!
+										Dialogue: Hold on, [hero].
 							Identifier: CallCommon
 								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
 							Identifier: Turn2DirectionLives
@@ -229,126 +132,232 @@ def 0:
 									Identifier: ACTOR_PLAYER
 								Argument: 4
 								Argument: 10
-								Argument: ACTOR_NPC_KURESERIA
+								Argument: ACTOR_ATTENDANT1
 							Identifier: WaitExecuteLives
 								Argument: ACTOR_PLAYER
 							Switch:
 								Variable: $PARTNER_TALK_KIND
 								Case:
 									Value: 1
-										Dialogue: Let's go! Off to the [CS:P]Dark Crater[CR]!
+										Dialogue: It's about the team leader...
 								Case:
 									Value: 2
-										Dialogue: Let's go! Off to the [CS:P]Dark Crater[CR]!
+										Dialogue: It's about the team leader...
 								Case:
 									Value: default
-										Dialogue: Let's go! Off to the [CS:P]Dark Crater[CR]!
-							Identifier: CallCommon
-								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-							Identifier: jump
-								Argument: label_2
+										Dialogue: It's about the team leader...
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
+								Case:
+									Value: 2
+										Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
+								Case:
+									Value: default
+										Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: After all, that's the way we've always done it for important missions.
+								Case:
+									Value: 2
+										Dialogue: After all, that's the way we've always handled things on important missions.
+								Case:
+									Value: default
+										Dialogue: After all, we've always gone on our important missions that way.
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: So I think that you should be the leader, [hero]...[K] What do you think?
+								Case:
+									Value: 2
+										Dialogue: So I think that you should be the leader, [hero]...[K] What do you think?
+								Case:
+									Value: default
+										Dialogue: So I think that you should be the leader, [hero]...[K] What do you think?
+							Switch:
+								Variable: message_SwitchMenu(0, 1)
+								Case:
+									Value: Accept leadership
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Switch:
+										Variable: ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0)
+									Identifier: message_SetFace
+										Argument: ACTOR_ATTENDANT1
+										Argument: FACE_NORMAL
+										Argument: FACE_POS_STANDARD
+									Identifier: message_SetFace
+										Argument: ACTOR_ATTENDANT1
+										Argument: FACE_NORMAL
+										Argument: FACE_POS_STANDARD
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: Cool![K] That's it, then! You're the leader, [hero]!
+										Case:
+											Value: 2
+												Dialogue: OK![K] That's settled, then! You're the leader, [hero]!
+										Case:
+											Value: default
+												Dialogue: OK![K] You're the team leader, [hero]!
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: Turn2DirectionLives
+										Template
+											Type: actor
+											Identifier: ACTOR_ATTENDANT1
+										Argument: 4
+										Argument: 10
+										Argument: ACTOR_NPC_KURESERIA
+									Identifier: WaitExecuteLives
+										Argument: ACTOR_ATTENDANT1
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: [CS:N]Cresselia[CR]!
+										Case:
+											Value: 2
+												Dialogue: [CS:N]Cresselia[CR]!
+										Case:
+											Value: default
+												Dialogue: [CS:N]Cresselia[CR]!
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: Turn2DirectionLives
+										Template
+											Type: actor
+											Identifier: ACTOR_PLAYER
+										Argument: 4
+										Argument: 10
+										Argument: ACTOR_NPC_KURESERIA
+									Identifier: WaitExecuteLives
+										Argument: ACTOR_PLAYER
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: Let's go! Off to the [CS:P]Dark Crater[CR]!
+										Case:
+											Value: 2
+												Dialogue: Let's go! Off to the [CS:P]Dark Crater[CR]!
+										Case:
+											Value: default
+												Dialogue: Let's go! Off to the [CS:P]Dark Crater[CR]!
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: jump
+										Argument: label_2
+								Case:
+									Value: Refuse
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: message_SetFace
+										Argument: ACTOR_ATTENDANT1
+										Argument: FACE_SURPRISED
+										Argument: FACE_POS_STANDARD
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: Whoa![K] Hang on, we're going with me as leader?
+										Case:
+											Value: 2
+												Dialogue: What?[K] Wait, so I'm going as the leader?
+										Case:
+											Value: default
+												Dialogue: What?[K] So I'm going to go as the leader?
+									Identifier: message_SetFace
+										Argument: ACTOR_ATTENDANT1
+										Argument: FACE_WORRIED
+										Argument: FACE_POS_STANDARD
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: Hmm...[K] I don't feel confident about doing that...
+										Case:
+											Value: 2
+												Dialogue: Hmm...[K] I don't have the confidence to do that...
+										Case:
+											Value: default
+												Dialogue: Hmm...[K] I don't feel confident enough to be the leader...
+									Switch:
+										Variable: $PARTNER_TALK_KIND
+										Case:
+											Value: 1
+												Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
+										Case:
+											Value: 2
+												Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
+										Case:
+											Value: default
+												Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: Turn2DirectionLives
+										Template
+											Type: actor
+											Identifier: ACTOR_ATTENDANT1
+										Argument: 4
+										Argument: 10
+										Argument: ACTOR_NPC_KURESERIA
+									Identifier: WaitExecuteLives
+										Argument: ACTOR_ATTENDANT1
+									Identifier: Turn2DirectionLives
+										Template
+											Type: actor
+											Identifier: ACTOR_PLAYER
+										Argument: 4
+										Argument: 10
+										Argument: ACTOR_NPC_KURESERIA
+									Identifier: end
+							Identifier: break
 						Case:
-							Value: Refuse
-							Identifier: CallCommon
-								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+							Value: default
+							Label: @label_4;
 							Identifier: message_SetFace
-								Argument: ACTOR_ATTENDANT1
-								Argument: FACE_SURPRISED
-								Argument: FACE_POS_STANDARD
-							Switch:
-								Variable: $PARTNER_TALK_KIND
-								Case:
-									Value: 1
-										Dialogue: Whoa![K] Hang on, we're going with me as leader?
-								Case:
-									Value: 2
-										Dialogue: What?[K] Wait, so I'm going as the leader?
-								Case:
-									Value: default
-										Dialogue: What?[K] So I'm going to go as the leader?
-							Identifier: message_SetFace
-								Argument: ACTOR_ATTENDANT1
-								Argument: FACE_WORRIED
-								Argument: FACE_POS_STANDARD
-							Switch:
-								Variable: $PARTNER_TALK_KIND
-								Case:
-									Value: 1
-										Dialogue: Hmm...[K] I don't feel confident about doing that...
-								Case:
-									Value: 2
-										Dialogue: Hmm...[K] I don't have the confidence to do that...
-								Case:
-									Value: default
-										Dialogue: Hmm...[K] I don't feel confident enough to be the leader...
-							Switch:
-								Variable: $PARTNER_TALK_KIND
-								Case:
-									Value: 1
-										Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
-								Case:
-									Value: 2
-										Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
-								Case:
-									Value: default
-										Dialogue: When we go into the [CS:P]Dark Crater[CR], you should be the leader, [hero].
-							Identifier: CallCommon
-								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-							Identifier: Turn2DirectionLives
-								Template
-									Type: actor
-									Identifier: ACTOR_ATTENDANT1
-								Argument: 4
-								Argument: 10
 								Argument: ACTOR_NPC_KURESERIA
-							Identifier: WaitExecuteLives
-								Argument: ACTOR_ATTENDANT1
-							Identifier: Turn2DirectionLives
-								Template
-									Type: actor
-									Identifier: ACTOR_PLAYER
-								Argument: 4
-								Argument: 10
-								Argument: ACTOR_NPC_KURESERIA
-							Identifier: end
-					Identifier: break
-				Case:
-					Value: default
-					Label: @label_4;
-					Identifier: message_SetFace
-						Argument: ACTOR_NPC_KURESERIA
-						Argument: FACE_NORMAL
-						Argument: FACE_POS_STANDARD
-					Identifier: message_Talk
-						Dialogue: I'm afraid that [CS:N]Darkrai[CR] will be scared off if too many of us were to go.
-					Identifier: message_Talk
-						Dialogue: That said, it would be dangerous to go alone.
-					Identifier: message_Talk
-						Dialogue: So to surely corner [CS:N]Darkrai[CR] and put a stop to his scheming once and for all...
-					Identifier: message_Talk
-						Dialogue: May I suggest that we go as a trio and take no one else?
-					Switch:
-						Variable: message_SwitchMenu(0, 1)
-						Case:
-							Value: Go as a trio
-							Identifier: CallCommon
-								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_STANDARD
+							Identifier: message_Talk
+								Dialogue: I'm afraid that [CS:N]Darkrai[CR] will be scared off if too many of us were to go.
+							Identifier: message_Talk
+								Dialogue: That said, it would be dangerous to go alone.
+							Identifier: message_Talk
+								Dialogue: So to surely corner [CS:N]Darkrai[CR] and put a stop to his scheming once and for all...
+							Identifier: message_Talk
+								Dialogue: May I suggest that we go as a trio and take no one else?
 							Switch:
-								Variable: ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0)
-							Identifier: jump
-								Argument: label_2
-						Case:
-							Value: CS
-							Identifier: P
-								Argument: Dark
-								Argument: Crater
-								Argument: CR
-								Argument: label_1
-								Argument: CallCommon
-								Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
-								Argument: message_Talk
-								Dialogue: Very well.", }); message_Talk({ english=""" Please tell me when you are ready to leave.
-								Argument: message_Close
-								Argument: end
+								Variable: message_SwitchMenu(0, 1)
+								Case:
+									Value: Go as a trio
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Switch:
+										Variable: ProcessSpecial(PROCESS_SPECIAL_SET_TEAM_SETUP_HERO_AND_PARTNER_ONLY, 0, 0)
+									Identifier: jump
+										Argument: label_2
+								Case:
+									Value: Don't go to the [CS:P]Dark Crater[CR]
+									Label: @label_1;
+									Identifier: CallCommon
+										Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+									Identifier: message_Talk
+										Dialogue: Very well.
+									Identifier: message_Talk
+										Dialogue: Please tell me when you are ready to leave.
+									Identifier: message_Close
+									Identifier: end
+							Identifier: break
 					Identifier: break
-			Identifier: break
+		Case:
+			Value: Not yet
+			Identifier: jump
+				Argument: label_1

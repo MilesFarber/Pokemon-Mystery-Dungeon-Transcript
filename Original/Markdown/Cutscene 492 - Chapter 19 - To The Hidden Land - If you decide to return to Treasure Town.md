@@ -1,4 +1,4 @@
-*If the player chooses "25":*
+*If the player chooses "== 25":*
 
   * *Anchor: <a name="0"></a>0*
 
@@ -19,7 +19,7 @@
   * `Partner Name`: "Let's go when you're ready, `Hero Name`!"
 
 
-*If the player chooses "26":*
+*If the player chooses "== 26":*
 
   * *Jump to [anchor 2](#2)*
 

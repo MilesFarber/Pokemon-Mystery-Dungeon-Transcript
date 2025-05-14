@@ -18,3 +18,32 @@
   *   *   * *Anchor: <a name="4"></a>4*
 
 
+  *   *   * *Jump to [anchor 4](#4)*
+
+
+  *   *   * `Shaymin Normal`
+
+  *   *   * `Shaymin`: "You're all ready?"
+
+
+  *   *   * `Shaymin Normal`
+
+  *   *   * `Shaymin`: "All right, let's do our best to make it to the summit!"
+
+
+  *   *   * * * *
+
+
+  *   *   * *Jump to [anchor 2](#2)*
+
+
+  *   *   * `Shaymin Normal`
+
+  *   *   * `Shaymin`: "You have too many team members. Shaymin cannot join your team."
+
+
+>Head to the Chimecho Assembly Post near the entrance to reduce the number of members in your team.
+
+
+*If the player chooses "No":*
+
