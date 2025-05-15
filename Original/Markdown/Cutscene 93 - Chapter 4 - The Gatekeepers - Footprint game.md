@@ -1,7 +1,7 @@
 * * *
 
 
-*If the player has progressed far enough:*
+*If the Hero has entered Diglett's sentry point:*
 
 
   * *Anchor: <a name="0"></a>0*

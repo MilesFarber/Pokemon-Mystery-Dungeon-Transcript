@@ -87,7 +87,7 @@
 
   * *If the player chooses "25":*
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the Team has entered Foggy Forest:*
 
 
   *   *   * `Partner Pain`
@@ -108,7 +108,7 @@
 
   * *If the player chooses "26":*
 
-  *   * *If the player has progressed far enough:*
+  *   * *If Team Skull has attacked Wigglytuff:*
 
 
   *   *   * `Partner Normal`
@@ -258,7 +258,7 @@
 
   * *If the player chooses "67":*
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the Team has reached Temporal Tower:*
 
 
   *   *   * `Partner Determined`
@@ -304,7 +304,7 @@
 
   * *If the player chooses "97":*
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the Team has encountered Palkia:*
 
 
   *   *   * *Anchor: <a name="23"></a>23*
@@ -343,7 +343,7 @@
 
   * *If the player chooses "228":*
 
-  *   * *If the player has progressed far enough:*
+  *   * *If Chatot has given the Guild their orders:*
 
 
   *   *   * `Partner Normal`

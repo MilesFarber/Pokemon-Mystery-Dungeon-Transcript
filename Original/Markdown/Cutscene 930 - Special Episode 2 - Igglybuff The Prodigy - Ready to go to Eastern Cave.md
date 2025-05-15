@@ -8,7 +8,7 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * *If the player has progressed far enough:*
+  * *If Armaldo and Igglybuff have been defeated in Eastern Cave:*
 
 
   *   * `Igglybuff Normal`
@@ -67,7 +67,7 @@
 
 *If the player chooses "Not yet.":*
 
-  * *If the player has progressed far enough:*
+  * *If Armaldo and Igglybuff have been defeated in Eastern Cave:*
 
 
   *   * `Armaldo Normal`

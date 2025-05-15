@@ -6,7 +6,7 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * *If the player has progressed far enough:*
+  * *If Shaymin has defeated the Grimer and Muk on Sky Peak:*
 
 
   *   * *Anchor: <a name="2"></a>2*

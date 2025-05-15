@@ -1,4 +1,4 @@
-*If the player has progressed far enough:*
+*If the Team has been defeated in Spacial Rift:*
 
 
   * *Anchor: <a name="0"></a>0*

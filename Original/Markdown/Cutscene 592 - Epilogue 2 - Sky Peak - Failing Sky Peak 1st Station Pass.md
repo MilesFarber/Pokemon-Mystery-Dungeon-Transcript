@@ -6,7 +6,7 @@
 * * *
 
 
-*If the player has progressed far enough:*
+*If Shaymin has defeated the Grimer and Muk on Sky Peak:*
 
 
   * *Anchor: <a name="0"></a>0*
@@ -39,7 +39,7 @@
   *   * `Shaymin`: "Let's hurry to the 8th Station Clearing!"
 
 
-  * *If the player has progressed far enough:*
+  * *If the Team has reached the summit of Sky Peak:*
 
 
   *   * `Shaymin Worried`
@@ -70,7 +70,7 @@
   *   * `Shaymin`: "We can't give up! Let's do our best!"
 
 
-*If the player has progressed far enough:*
+*If the Team has reached the summit of Sky Peak:*
 
 
   * *Jump to [anchor 23](#23)*
@@ -82,7 +82,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has reached Sky Peak's 9th Station Clearing:*
 
 
   * *Jump to [anchor 23](#23)*
@@ -94,7 +94,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has reached Sky Peak's 8th Station Clearing and asked Ampharos for help:*
 
 
   * *Jump to [anchor 23](#23)*
@@ -106,7 +106,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has reached Sky Peak's 7th Station Clearing:*
 
 
   * *Jump to [anchor 23](#23)*
@@ -118,7 +118,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has reached Sky Peak's 6th Station Clearing:*
 
 
   * *Jump to [anchor 23](#23)*
@@ -130,7 +130,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has reached Sky Peak's 5th Station Clearing:*
 
 
   * *Jump to [anchor 23](#23)*
@@ -142,7 +142,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has reached Sky Peak's 4th Station Clearing:*
 
 
   * *Jump to [anchor 23](#23)*
@@ -154,7 +154,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has reached Sky Peak's 3rd Station Clearing:*
 
 
   * *Jump to [anchor 23](#23)*
@@ -166,7 +166,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has reached Sky Peak's 2nd Station Clearing:*
 
 
   * *Jump to [anchor 23](#23)*
@@ -178,7 +178,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has reached Sky Peak's 1st Station Clearing:*
 
 
   * *Jump to [anchor 23](#23)*
@@ -190,13 +190,13 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has reached Shaymin Village:*
 
 
   * *Jump to [anchor 23](#23)*
 
 
-*If the player has progressed far enough:*
+*If the Team has learned there's good news at the café:*
 
 
   * *Jump to [anchor 23](#23)*

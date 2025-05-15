@@ -6,7 +6,7 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * *If the player has progressed far enough:*
+  * *If the Team has arrived at Amp Plains:*
 
 
   * *Else:*

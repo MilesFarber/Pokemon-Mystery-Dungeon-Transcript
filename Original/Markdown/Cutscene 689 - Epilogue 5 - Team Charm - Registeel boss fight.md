@@ -1,7 +1,7 @@
 * * *
 
 
-*If the player has progressed far enough:*
+*If the Team has encountered Registeel:*
 
 
   * *Anchor: <a name="0"></a>0*
