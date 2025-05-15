@@ -24,9 +24,6 @@
   * *If certain conditions are met:*
 
 
-  * *Else:*
-
-
   *   * * * *
 
 

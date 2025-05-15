@@ -6,12 +6,6 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * *If the Team has arrived at Amp Plains:*
-
-
-  * *Else:*
-
-
 *If the player chooses "No":*
 
   * *Anchor: <a name="3"></a>3*

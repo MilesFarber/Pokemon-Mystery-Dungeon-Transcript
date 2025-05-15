@@ -19,9 +19,6 @@
   *   * * * *
 
 
-  * *Else:*
-
-
 *If the player chooses "Not yet":*
 
   * *Anchor: <a name="1"></a>1*

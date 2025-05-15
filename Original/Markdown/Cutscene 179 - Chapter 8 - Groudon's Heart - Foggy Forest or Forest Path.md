@@ -102,12 +102,6 @@
   *   * * * *
 
 
-  *   * *If a certain flag is set:*
-
-
-  *   * *Else:*
-
-
   * *If the player chooses "[CS:P]Forest Path[CR]":*
 
   *   * * * *

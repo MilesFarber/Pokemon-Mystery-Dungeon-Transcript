@@ -146,9 +146,6 @@
 `Chatot`: "Ah, yes. ♪ Maybe this will do?"
 
 
-*If certain conditions are met:*
-
-
 *Anchor: <a name="0"></a>0*
 
 

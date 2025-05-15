@@ -74,12 +74,6 @@
   * `Bidoof`: "Let's all three work as one and get this done!"
 
 
-  * *If a certain flag is set:*
-
-
-  * *Else:*
-
-
 *If the player chooses "[CS:P]Side Path[CR]":*
 
   * `Partner Normal`

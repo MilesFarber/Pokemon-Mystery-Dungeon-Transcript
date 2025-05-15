@@ -49,6 +49,3 @@
   *   * *Jump to [anchor 0](#0)*
 
 
-  * *Else:*
-
-
