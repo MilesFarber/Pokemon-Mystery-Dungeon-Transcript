@@ -6,7 +6,7 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * *If the Team has arrived at Upper Steam Cave:*
+  * *If the team has arrived at Upper Steam Cave:*
 
 
   *   * * * *

@@ -1,3 +1,6 @@
+*Scenario flag: [20, 3]*
+
+
 `Partner Normal`
 
 `Partner Name`: "Say, Grovyle."

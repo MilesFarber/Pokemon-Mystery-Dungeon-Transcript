@@ -1,3 +1,6 @@
+*Scenario flag: [5, 1]*
+
+
 `Loudred`: "HEY, you two!"
 
 

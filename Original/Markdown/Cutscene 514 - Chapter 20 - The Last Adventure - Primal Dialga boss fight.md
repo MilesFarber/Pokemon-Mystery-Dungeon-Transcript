@@ -1,6 +1,12 @@
 * * *
 
 
+*Scenario flag: [26, 6]*
+
+
+* * *
+
+
 `Partner Normal`
 
 `Partner Name`: "Is this... Is this the top of Temporal Tower?"

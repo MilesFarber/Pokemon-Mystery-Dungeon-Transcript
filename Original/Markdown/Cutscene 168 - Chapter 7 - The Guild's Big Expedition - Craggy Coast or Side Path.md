@@ -74,6 +74,9 @@
   * `Bidoof`: "Let's all three work as one and get this done!"
 
 
+  * *Scenario flag: [9, 2]*
+
+
 *If the player chooses "[CS:P]Side Path[CR]":*
 
   * `Partner Normal`

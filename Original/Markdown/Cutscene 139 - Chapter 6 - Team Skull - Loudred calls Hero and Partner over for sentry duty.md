@@ -1,3 +1,6 @@
+*Scenario flag: [7, 4]*
+
+
 `Loudred`: "HEY, YOU TWO!"
 
 
@@ -45,6 +48,9 @@
 
 
   * * * *
+
+
+  * *Scenario flag: [7, 5]*
 
 
   * *Anchor: <a name="2"></a>2*

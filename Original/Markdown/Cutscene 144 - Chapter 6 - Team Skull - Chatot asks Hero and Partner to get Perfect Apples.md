@@ -1,3 +1,6 @@
+*Scenario flag: [8, 1]*
+
+
 `Chatot Normal`
 
 `Chatot`: "Ah, you two."

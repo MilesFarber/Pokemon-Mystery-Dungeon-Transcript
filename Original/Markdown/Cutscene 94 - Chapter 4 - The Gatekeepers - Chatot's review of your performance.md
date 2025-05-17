@@ -1,3 +1,6 @@
+*Scenario flag: [5, 3]*
+
+
 *If the player chooses "0":*
 
   * *Anchor: <a name="switch0724"></a>switch0724*
@@ -95,6 +98,9 @@
 
 
   * * * *
+
+
+  * *Scenario flag: [5, 4]*
 
 
   * *Anchor: <a name="4"></a>4*

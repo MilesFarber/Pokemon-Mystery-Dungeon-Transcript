@@ -4,6 +4,12 @@
 * * *
 
 
+*Scenario flag: [3, 1]*
+
+
+* * *
+
+
 `Partner Normal`
 
 `Partner Name`: "This is Wigglytuff's Guild."

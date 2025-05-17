@@ -155,8 +155,8 @@ def 0:
 						Identifier: message_Close
 						Identifier: jump
 							Argument: label_94
-						Identifier: else
-							Argument: message_SetFace
+					Conditional: Else
+						Identifier: message_SetFace
 							Argument: ACTOR_ATTENDANT1
 							Argument: FACE_NORMAL
 							Argument: FACE_POS_STANDARD
@@ -185,6 +185,7 @@ def 0:
 						Identifier: message_Close
 						Identifier: jump
 							Argument: label_94
+					Identifier: break
 				Case:
 					Value: 25
 					Conditional: If
@@ -207,8 +208,8 @@ def 0:
 						Identifier: message_Close
 						Identifier: jump
 							Argument: label_94
-						Identifier: else
-							Argument: message_SetFace
+					Conditional: Else
+						Identifier: message_SetFace
 							Argument: ACTOR_ATTENDANT1
 							Argument: FACE_NORMAL
 							Argument: FACE_POS_STANDARD
@@ -226,6 +227,7 @@ def 0:
 						Identifier: message_Close
 						Identifier: jump
 							Argument: label_94
+					Identifier: break
 				Case:
 					Value: 26
 					Conditional: If
@@ -248,8 +250,8 @@ def 0:
 						Identifier: message_Close
 						Identifier: jump
 							Argument: label_94
-						Identifier: else
-							Argument: message_SetFace
+					Conditional: Else
+						Identifier: message_SetFace
 							Argument: ACTOR_ATTENDANT1
 							Argument: FACE_NORMAL
 							Argument: FACE_POS_STANDARD
@@ -267,6 +269,7 @@ def 0:
 						Identifier: message_Close
 						Identifier: jump
 							Argument: label_94
+					Identifier: break
 				Case:
 					Value: 38
 					Identifier: supervision_ExecuteCommon
@@ -547,8 +550,8 @@ def 0:
 						Identifier: message_Close
 						Identifier: jump
 							Argument: label_94
-						Identifier: else
-							Argument: message_SetFace
+					Conditional: Else
+						Identifier: message_SetFace
 							Argument: ACTOR_ATTENDANT1
 							Argument: FACE_SAD
 							Argument: FACE_POS_STANDARD
@@ -594,6 +597,7 @@ def 0:
 						Identifier: message_Close
 						Identifier: jump
 							Argument: label_94
+					Identifier: break
 				Case:
 					Value: 74
 					Identifier: message_SetFace
@@ -670,8 +674,8 @@ def 0:
 						Identifier: message_Close
 						Identifier: jump
 							Argument: label_94
-						Identifier: else
-							Argument: message_SetFace
+					Conditional: Else
+						Identifier: message_SetFace
 							Argument: ACTOR_ATTENDANT1
 							Argument: FACE_DETERMINED
 							Argument: FACE_POS_STANDARD
@@ -700,6 +704,7 @@ def 0:
 						Identifier: message_Close
 						Identifier: jump
 							Argument: label_94
+					Identifier: break
 				Case:
 					Value: 228
 					Conditional: If
@@ -764,1840 +769,1224 @@ def 0:
 						Identifier: jump
 							Argument: label_94
 					Identifier: break
-		Case:
-			Value: 1
-				Dialogue: We came a long way in here...
-		Case:
-			Value: 2
-				Dialogue: We've come a long way in here...
-		Case:
-			Value: default
-				Dialogue: We came a long way in here...
-		Case:
-			Value: 1
-				Dialogue: But this place doesn't seem safe, either...
-		Case:
-			Value: 2
-				Dialogue: But this place doesn't seem safe, either...
-		Case:
-			Value: default
-				Dialogue: But this place doesn't seem safe, either...
-		Case:
-			Value: 1
-				Dialogue: We should keep going, [hero].
-		Case:
-			Value: 2
-				Dialogue: Let's move on, [hero].
-		Case:
-			Value: default
-				Dialogue: Let's keep moving, [hero].
-		Case:
-			Value: 102
-			Conditional: If
-				Condition: scn($SCENARIO_MAIN) >= [29, 91]
-				Identifier: message_SetFace
-					Argument: ACTOR_ATTENDANT1
-					Argument: FACE_DETERMINED
-					Argument: FACE_POS_STANDARD
-				Switch:
-					Variable: $PARTNER_TALK_KIND
-					Case:
-						Value: 1
-							Dialogue: If we don't stop [CS:N]Darkrai[CR] soon...
-					Case:
-						Value: 2
-							Dialogue: If we don't stop [CS:N]Darkrai[CR] soon...
-					Case:
-						Value: default
-							Dialogue: If we don't stop [CS:N]Darkrai[CR] soon...
-				Switch:
-					Variable: $PARTNER_TALK_KIND
-					Case:
-						Value: 1
-							Dialogue: He'll smother the world in darkness.
-					Case:
-						Value: 2
-							Dialogue: He'll smother the world in darkness.
-					Case:
-						Value: default
-							Dialogue: He'll smother the world in darkness.
-				Switch:
-					Variable: $PARTNER_TALK_KIND
-					Case:
-						Value: 1
-							Dialogue: Let's go, [hero]![K] We have to stop [CS:N]Darkrai[CR]!
-					Case:
-						Value: 2
-							Dialogue: Let's go, [hero]![K] We have to stop [CS:N]Darkrai[CR]!
-					Case:
-						Value: default
-							Dialogue: Let's go, [hero]![K] We have to stop [CS:N]Darkrai[CR]!
-				Identifier: message_Close
-				Identifier: jump
-					Argument: label_94
-				Identifier: elseif
-					Argument: scn
-					Argument: SCENARIO_MAIN
-					Argument: 29
-					Argument: 90
-					Argument: message_SetFace
-					Argument: ACTOR_ATTENDANT1
-					Argument: FACE_PAIN
-					Argument: FACE_POS_STANDARD
-					Argument: message_SwitchTalk
-					Argument: PARTNER_TALK_KIND
-					Argument: case
-					Argument: 1
-					Dialogue: This isn't easy at all, but...", } case 2: { english=" This is pretty taxing, but...", } default: { english=" This isn't easy at all, but...", } } message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD); message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=" We have to tough this out.", } case 2: { english=" We have to see this through.", } default: { english=" We have to see this through.", } } message_Close(); jump @label_94; } elseif ( scn($SCENARIO_MAIN) >= [29, 89] ) { message_SetFace(ACTOR_ATTENDANT1, FACE_WORRIED, FACE_POS_STANDARD); message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=" We're in really deep now...", } case 2: { english=" We're in really deep now...", } default: { english=" We're in really deep now...", } } message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=""" I wonder if [CS:N]Darkrai[CR] will be waiting for us... """, } case 2: { english=""" I wonder if [CS:N]Darkrai[CR] will be waiting for us... """, } default: { english=""" [CS:N]Darkrai[CR] could be waiting for us up ahead... """, } } message_SetFace(ACTOR_ATTENDANT1, FACE_DETERMINED, FACE_POS_STANDARD); message_SwitchTalk ($PARTNER_TALK_KIND) { case 1: { english=""" We don't have any choice, though. We have to keep going. """, } case 2: { english=""" We don't have any choice. We have to keep going. """, } default: { english=""" There is no choice, though. We have to keep going.
-					Argument: message_Close
-					Argument: jump
-					Argument: label_94
-					Argument: else
-					Argument: jump
-					Argument: label_19
-		Case:
-			Value: default
-			Label: @label_22;
-			Conditional: If
-				Condition: scn($SCENARIO_MAIN) >= [29, 94] || scn($SCENARIO_MAIN) >= [29, 93] || scn($SCENARIO_MAIN) >= [29, 92]
-				Label: @label_88;
-				Identifier: message_SetFace
-					Argument: ACTOR_ATTENDANT1
-					Argument: FACE_NORMAL
-					Argument: FACE_POS_STANDARD
-				Switch:
-					Variable: $PARTNER_TALK_KIND
-					Case:
-						Value: 1
-							Dialogue: Let's work hard as always, [hero]!
-					Case:
-						Value: 2
-							Dialogue: Let's work hard as always, [hero]!
-					Case:
-						Value: default
-							Dialogue: Let's work hard as always, [hero]!
-				Identifier: message_Close
-				Identifier: jump
-					Argument: label_94
-				Identifier: SetAnimation
-					Template
-						Type: actor
-						Identifier: ACTOR_ATTENDANT_MANAFI
-						Identifier: 2
-						Identifier: Turn2DirectionLives
-						Identifier: actor
-						Identifier: ACTOR_ATTENDANT_MANAFI
-						Identifier: 4
-						Identifier: 10
-						Identifier: ACTOR_PLAYER
-						Identifier: message_Mail
-						Identifier: english
-						Identifier: CN
-						Identifier: Who
-						Identifier: would
-						Identifier: you
-						Identifier: like
-						Identifier: to
-						Identifier: speak
-						Identifier: to
-						Identifier: switch
-						Identifier: message_SwitchMenu
-						Identifier: 1
-						Identifier: 1
-						Identifier: case
-						Identifier: menu
-						Identifier: english
-						Identifier: partner
-						Identifier: CallCommon
-						Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
-						Identifier: Turn2DirectionLives
-						Identifier: actor
-						Identifier: ACTOR_ATTENDANT_MANAFI
-						Identifier: 4
-						Identifier: 10
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_HAPPY
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: take
-						Identifier: baby
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: down
-						Identifier: to
-						Identifier: the
-						Identifier: beach
-						Identifier: for
-						Identifier: a
-						Identifier: walk
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: take
-						Identifier: baby
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: to
-						Identifier: the
-						Identifier: beach
-						Identifier: for
-						Identifier: a
-						Identifier: walk
-						Identifier: default
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: take
-						Identifier: baby
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: down
-						Identifier: to
-						Identifier: the
-						Identifier: beach
-						Identifier: for
-						Identifier: a
-						Identifier: walk
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: case
-						Identifier: menu
-						Identifier: english
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: CallCommon
-						Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
-						Identifier: Turn2DirectionLives
-						Identifier: actor
-						Identifier: ACTOR_PLAYER
-						Identifier: 4
-						Identifier: 10
-						Identifier: ACTOR_ATTENDANT_MANAFI
-						Identifier: Turn2DirectionLives
-						Identifier: actor
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: 4
-						Identifier: 10
-						Identifier: ACTOR_ATTENDANT_MANAFI
-						Identifier: message_SetFace
-						Identifier: ACTOR_NPC_MANAFI
-						Identifier: FACE_HAPPY
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_Talk
-						Identifier: english
-						Identifier: hero
-						Identifier: partner
-						Identifier: message_Talk
-						Identifier: english
-						Identifier: Walk
-						Identifier: walk
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: default
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 45
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: go
-						Identifier: get
-						Identifier: another
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummi
-						Identifier: CR
-						Identifier: for
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: go
-						Identifier: get
-						Identifier: another
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummi
-						Identifier: CR
-						Identifier: for
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: default
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: go
-						Identifier: get
-						Identifier: another
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummi
-						Identifier: CR
-						Identifier: for
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 44
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: give
-						Identifier: another
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummi
-						Identifier: CR
-						Identifier: to
-						Identifier: baby
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: hero
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: give
-						Identifier: another
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummi
-						Identifier: CR
-						Identifier: to
-						Identifier: baby
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: hero
-						Identifier: default
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: give
-						Identifier: another
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummi
-						Identifier: CR
-						Identifier: to
-						Identifier: baby
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: hero
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 43
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: is
-						Identifier: hungry
-						Identifier: back
-						Identifier: at
-						Identifier: the
-						Identifier: guild.
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: is
-						Identifier: waiting
-						Identifier: to
-						Identifier: eat
-						Identifier: back
-						Identifier: at
-						Identifier: the
-						Identifier: guild.
-						Identifier: The
-						Identifier: little
-						Identifier: guy
-						Identifier: s
-						Identifier: hungry.
-						Identifier: default
-						Identifier: english
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: is
-						Identifier: hungry.
-						Identifier: The
-						Identifier: poor
-						Identifier: little
-						Identifier: guy
-						Identifier: s
-						Identifier: waiting
-						Identifier: at
-						Identifier: the
-						Identifier: guild.
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: We
-						Identifier: need
-						Identifier: to
-						Identifier: take
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummis
-						Identifier: CR
-						Identifier: to
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: as
-						Identifier: soon
-						Identifier: as
-						Identifier: we
-						Identifier: can.
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: We
-						Identifier: need
-						Identifier: to
-						Identifier: take
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummis
-						Identifier: CR
-						Identifier: to
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: .
-						Identifier: Let
-						Identifier: s
-						Identifier: not
-						Identifier: waste
-						Identifier: time.
-						Identifier: default
-						Identifier: english
-						Identifier: We
-						Identifier: need
-						Identifier: to
-						Identifier: take
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummis
-						Identifier: CR
-						Identifier: to
-						Identifier: CS
-						Identifier: N
-						Identifier: Manaphy
-						Identifier: CR
-						Identifier: .
-						Identifier: Let
-						Identifier: s
-						Identifier: hurry
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 42
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: go
-						Identifier: get
-						Identifier: some
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummis
-						Identifier: CR
-						Identifier: hero
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: We
-						Identifier: have
-						Identifier: to
-						Identifier: get
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummis
-						Identifier: CR
-						Identifier: hero
-						Identifier: default
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: get
-						Identifier: some
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummis
-						Identifier: CR
-						Identifier: hero
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: I
-						Identifier: know
-						Identifier: we
-						Identifier: can
-						Identifier: find
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummis
-						Identifier: CR
-						Identifier: in
-						Identifier: CS
-						Identifier: P
-						Identifier: Craggy
-						Identifier: Coast
-						Identifier: CR
-						Identifier: .
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: I
-						Identifier: m
-						Identifier: pretty
-						Identifier: certain
-						Identifier: we
-						Identifier: can
-						Identifier: find
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummis
-						Identifier: CR
-						Identifier: in
-						Identifier: CS
-						Identifier: P
-						Identifier: Craggy
-						Identifier: Coast
-						Identifier: CR
-						Identifier: .
-						Identifier: default
-						Identifier: english
-						Identifier: I
-						Identifier: think
-						Identifier: we
-						Identifier: can
-						Identifier: find
-						Identifier: CS
-						Identifier: I
-						Identifier: Blue
-						Identifier: Gummis
-						Identifier: CR
-						Identifier: in
-						Identifier: CS
-						Identifier: P
-						Identifier: Craggy
-						Identifier: Coast
-						Identifier: CR
-						Identifier: .
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 41
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: We
-						Identifier: should
-						Identifier: go
-						Identifier: too
-						Identifier: hero
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: We
-						Identifier: should
-						Identifier: go
-						Identifier: too
-						Identifier: hero
-						Identifier: default
-						Identifier: english
-						Identifier: We
-						Identifier: should
-						Identifier: go
-						Identifier: too
-						Identifier: hero
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: To
-						Identifier: the
-						Identifier: CS
-						Identifier: P
-						Identifier: Surrounded
-						Identifier: Sea
-						Identifier: CR
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: To
-						Identifier: the
-						Identifier: CS
-						Identifier: P
-						Identifier: Surrounded
-						Identifier: Sea
-						Identifier: CR
-						Identifier: default
-						Identifier: english
-						Identifier: To
-						Identifier: the
-						Identifier: CS
-						Identifier: P
-						Identifier: Surrounded
-						Identifier: Sea
-						Identifier: CR
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 40
-						Identifier: jump
-						Identifier: label_88
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 39
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_WORRIED
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Well
-						Identifier: now
-						Identifier: we
-						Identifier: have
-						Identifier: Secret
-						Identifier: Rank
-						Identifier: certification...
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Well
-						Identifier: now
-						Identifier: we
-						Identifier: have
-						Identifier: Secret
-						Identifier: Rank
-						Identifier: certification...
-						Identifier: default
-						Identifier: english
-						Identifier: Well
-						Identifier: now
-						Identifier: we
-						Identifier: have
-						Identifier: Secret
-						Identifier: Rank
-						Identifier: certification...
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: I
-						Identifier: wonder
-						Identifier: what
-						Identifier: it
-						Identifier: s
-						Identifier: all
-						Identifier: about...
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: I
-						Identifier: wonder
-						Identifier: what
-						Identifier: it
-						Identifier: s
-						Identifier: about...
-						Identifier: default
-						Identifier: english
-						Identifier: I
-						Identifier: wonder
-						Identifier: what
-						Identifier: it
-						Identifier: s
-						Identifier: all
-						Identifier: about...
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: That
-						Identifier: reminds
-						Identifier: me
-						Identifier: about
-						Identifier: that
-						Identifier: CS
-						Identifier: N
-						Identifier: Scizor
-						Identifier: CR
-						Identifier: ...
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: That
-						Identifier: reminds
-						Identifier: me
-						Identifier: about
-						Identifier: that
-						Identifier: CS
-						Identifier: N
-						Identifier: Scizor
-						Identifier: CR
-						Identifier: ...
-						Identifier: default
-						Identifier: english
-						Identifier: That
-						Identifier: reminds
-						Identifier: me
-						Identifier: about
-						Identifier: that
-						Identifier: CS
-						Identifier: N
-						Identifier: Scizor
-						Identifier: CR
-						Identifier: ...
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Wasn
-						Identifier: t
-						Identifier: he
-						Identifier: supposed
-						Identifier: to
-						Identifier: be
-						Identifier: looking
-						Identifier: for
-						Identifier: some
-						Identifier: amazing
-						Identifier: treasure
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Wasn
-						Identifier: t
-						Identifier: he
-						Identifier: supposed
-						Identifier: to
-						Identifier: be
-						Identifier: looking
-						Identifier: for
-						Identifier: an
-						Identifier: amazing
-						Identifier: treasure
-						Identifier: default
-						Identifier: english
-						Identifier: Wasn
-						Identifier: t
-						Identifier: he
-						Identifier: supposedly
-						Identifier: looking
-						Identifier: for
-						Identifier: an
-						Identifier: amazing
-						Identifier: treasure
-						Identifier: CallCommon
-						Identifier: CORO_MESSAGE_CLOSE_WAIT_FUNC
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: ...
-						Identifier: K
-						Identifier: Oh
-						Identifier: well.
-						Identifier: Whatever.
-						Identifier: K
-						Identifier: There
-						Identifier: s
-						Identifier: no
-						Identifier: point
-						Identifier: sweating
-						Identifier: over
-						Identifier: details.
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: ...
-						Identifier: K
-						Identifier: Well
-						Identifier: too
-						Identifier: bad.
-						Identifier: K
-						Identifier: Getting
-						Identifier: stuck
-						Identifier: on
-						Identifier: the
-						Identifier: small
-						Identifier: details
-						Identifier: doesn
-						Identifier: t
-						Identifier: help.
-						Identifier: default
-						Identifier: english
-						Identifier: ...
-						Identifier: K
-						Identifier: Well
-						Identifier: too
-						Identifier: bad.
-						Identifier: K
-						Identifier: Getting
-						Identifier: stuck
-						Identifier: on
-						Identifier: the
-						Identifier: small
-						Identifier: details
-						Identifier: doesn
-						Identifier: t
-						Identifier: help.
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Who
-						Identifier: knows
-						Identifier: what
-						Identifier: a
-						Identifier: Secret
-						Identifier: Rank
-						Identifier: means
-						Identifier: for
-						Identifier: us
-						Identifier: But
-						Identifier: it
-						Identifier: could
-						Identifier: turn
-						Identifier: out
-						Identifier: to
-						Identifier: be
-						Identifier: cool.
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Who
-						Identifier: knows
-						Identifier: what
-						Identifier: a
-						Identifier: Secret
-						Identifier: Rank
-						Identifier: means
-						Identifier: for
-						Identifier: us
-						Identifier: But
-						Identifier: it
-						Identifier: could
-						Identifier: turn
-						Identifier: out
-						Identifier: to
-						Identifier: be
-						Identifier: good.
-						Identifier: default
-						Identifier: english
-						Identifier: Who
-						Identifier: knows
-						Identifier: what
-						Identifier: a
-						Identifier: Secret
-						Identifier: Rank
-						Identifier: means
-						Identifier: for
-						Identifier: us
-						Identifier: But
-						Identifier: it
-						Identifier: could
-						Identifier: turn
-						Identifier: out
-						Identifier: to
-						Identifier: be
-						Identifier: good.
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 33
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: CS
-						Identifier: N
-						Identifier: Scizor
-						Identifier: CR
-						Identifier: sounds
-						Identifier: like
-						Identifier: one
-						Identifier: very
-						Identifier: famous
-						Identifier: explorer
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: CS
-						Identifier: N
-						Identifier: Scizor
-						Identifier: CR
-						Identifier: must
-						Identifier: have
-						Identifier: been
-						Identifier: one
-						Identifier: famous
-						Identifier: explorer
-						Identifier: default
-						Identifier: english
-						Identifier: CS
-						Identifier: N
-						Identifier: Scizor
-						Identifier: CR
-						Identifier: sounds
-						Identifier: like
-						Identifier: he
-						Identifier: was
-						Identifier: a
-						Identifier: famous
-						Identifier: explorer
-						Identifier: of
-						Identifier: his
-						Identifier: time
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: He
-						Identifier: supposedly
-						Identifier: went
-						Identifier: missing
-						Identifier: while
-						Identifier: exploring
-						Identifier: CS
-						Identifier: P
-						Identifier: Blizzard
-						Identifier: Island
-						Identifier: CR
-						Identifier: .
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: He
-						Identifier: apparently
-						Identifier: went
-						Identifier: missing
-						Identifier: while
-						Identifier: exploring
-						Identifier: CS
-						Identifier: P
-						Identifier: Blizzard
-						Identifier: Island
-						Identifier: CR
-						Identifier: .
-						Identifier: default
-						Identifier: english
-						Identifier: He
-						Identifier: supposedly
-						Identifier: went
-						Identifier: missing
-						Identifier: while
-						Identifier: he
-						Identifier: was
-						Identifier: exploring
-						Identifier: CS
-						Identifier: P
-						Identifier: Blizzard
-						Identifier: Island
-						Identifier: CR
-						Identifier: .
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: But
-						Identifier: what
-						Identifier: was
-						Identifier: the
-						Identifier: amazing
-						Identifier: treasure
-						Identifier: that
-						Identifier: CS
-						Identifier: N
-						Identifier: Scizor
-						Identifier: CR
-						Identifier: was
-						Identifier: searching
-						Identifier: for
-						Identifier: K
-						Identifier: I
-						Identifier: m
-						Identifier: itching
-						Identifier: to
-						Identifier: know.
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: CS
-						Identifier: N
-						Identifier: Scizor
-						Identifier: CR
-						Identifier: was
-						Identifier: supposed
-						Identifier: to
-						Identifier: be
-						Identifier: searching
-						Identifier: for
-						Identifier: an
-						Identifier: amazing
-						Identifier: treasure.
-						Identifier: K
-						Identifier: I
-						Identifier: wonder
-						Identifier: what
-						Identifier: that
-						Identifier: was...
-						Identifier: default
-						Identifier: english
-						Identifier: CS
-						Identifier: N
-						Identifier: Scizor
-						Identifier: CR
-						Identifier: was
-						Identifier: supposed
-						Identifier: to
-						Identifier: be
-						Identifier: searching
-						Identifier: for
-						Identifier: an
-						Identifier: amazing
-						Identifier: treasure
-						Identifier: when
-						Identifier: he
-						Identifier: went
-						Identifier: missing.
-						Identifier: K
-						Identifier: I
-						Identifier: wonder
-						Identifier: what
-						Identifier: that
-						Identifier: was...
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 32
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 31
-						Identifier: jump
-						Identifier: label_88
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 30
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 29
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 28
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 27
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 26
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 25
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 24
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 23
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 22
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 21
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 20
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 19
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 18
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 17
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 16
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 15
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 14
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 13
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 12
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 11
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 10
-						Identifier: switch
-						Identifier: GROUND_ENTER
-						Identifier: case
-						Identifier: 156
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: hero
-						Identifier: Once
-						Identifier: we
-						Identifier: ve
-						Identifier: gotten
-						Identifier: ready
-						Identifier: let
-						Identifier: s
-						Identifier: head
-						Identifier: to
-						Identifier: the
-						Identifier: mountain
-						Identifier: pass
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: hero
-						Identifier: Once
-						Identifier: we
-						Identifier: ve
-						Identifier: gotten
-						Identifier: ready
-						Identifier: let
-						Identifier: s
-						Identifier: head
-						Identifier: to
-						Identifier: the
-						Identifier: mountain
-						Identifier: pass
-						Identifier: default
-						Identifier: english
-						Identifier: hero
-						Identifier: Once
-						Identifier: we
-						Identifier: ve
-						Identifier: gotten
-						Identifier: ready
-						Identifier: let
-						Identifier: s
-						Identifier: head
-						Identifier: to
-						Identifier: the
-						Identifier: mountain
-						Identifier: pass
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: aim
-						Identifier: for
-						Identifier: the
-						Identifier: top
-						Identifier: of
-						Identifier: CS
-						Identifier: P
-						Identifier: Sky
-						Identifier: Peak
-						Identifier: CR
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: aim
-						Identifier: for
-						Identifier: the
-						Identifier: top
-						Identifier: of
-						Identifier: CS
-						Identifier: P
-						Identifier: Sky
-						Identifier: Peak
-						Identifier: CR
-						Identifier: default
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: aim
-						Identifier: for
-						Identifier: the
-						Identifier: top
-						Identifier: of
-						Identifier: CS
-						Identifier: P
-						Identifier: Sky
-						Identifier: Peak
-						Identifier: CR
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: default
-						Identifier: label_96
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: hero
-						Identifier: K
-						Identifier: Let
-						Identifier: s
-						Identifier: go
-						Identifier: to
-						Identifier: the
-						Identifier: CS
-						Identifier: P
-						Identifier: Shaymin
-						Identifier: Village
-						Identifier: CR
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: hero
-						Identifier: K
-						Identifier: Let
-						Identifier: s
-						Identifier: go
-						Identifier: to
-						Identifier: the
-						Identifier: CS
-						Identifier: P
-						Identifier: Shaymin
-						Identifier: Village
-						Identifier: CR
-						Identifier: default
-						Identifier: english
-						Identifier: hero
-						Identifier: K
-						Identifier: Let
-						Identifier: s
-						Identifier: go
-						Identifier: to
-						Identifier: the
-						Identifier: CS
-						Identifier: P
-						Identifier: Shaymin
-						Identifier: Village
-						Identifier: CR
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 8
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Did
-						Identifier: you
-						Identifier: hear
-						Identifier: that
-						Identifier: Piles
-						Identifier: of
-						Identifier: treasure
-						Identifier: and
-						Identifier: new
-						Identifier: discoveries
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Did
-						Identifier: you
-						Identifier: hear
-						Identifier: that
-						Identifier: Piles
-						Identifier: of
-						Identifier: treasure
-						Identifier: and
-						Identifier: new
-						Identifier: discoveries
-						Identifier: default
-						Identifier: english
-						Identifier: Did
-						Identifier: you
-						Identifier: hear
-						Identifier: that
-						Identifier: Piles
-						Identifier: of
-						Identifier: treasure
-						Identifier: and
-						Identifier: new
-						Identifier: discoveries
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: I
-						Identifier: d
-						Identifier: really
-						Identifier: like
-						Identifier: to
-						Identifier: meet
-						Identifier: these
-						Identifier: CS
-						Identifier: K
-						Identifier: Shaymin
-						Identifier: CR
-						Identifier: so
-						Identifier: we
-						Identifier: should
-						Identifier: go
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: I
-						Identifier: m
-						Identifier: really
-						Identifier: interested
-						Identifier: in
-						Identifier: meeting
-						Identifier: these
-						Identifier: CS
-						Identifier: K
-						Identifier: Shaymin
-						Identifier: CR
-						Identifier: so
-						Identifier: we
-						Identifier: should
-						Identifier: go
-						Identifier: default
-						Identifier: english
-						Identifier: I
-						Identifier: d
-						Identifier: love
-						Identifier: to
-						Identifier: meet
-						Identifier: these
-						Identifier: CS
-						Identifier: K
-						Identifier: Shaymin
-						Identifier: CR
-						Identifier: Let
-						Identifier: s
-						Identifier: go
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: To
-						Identifier: the
-						Identifier: CS
-						Identifier: P
-						Identifier: Shaymin
-						Identifier: Village
-						Identifier: CR
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: To
-						Identifier: the
-						Identifier: CS
-						Identifier: P
-						Identifier: Shaymin
-						Identifier: Village
-						Identifier: CR
-						Identifier: default
-						Identifier: english
-						Identifier: To
-						Identifier: the
-						Identifier: CS
-						Identifier: P
-						Identifier: Shaymin
-						Identifier: Village
-						Identifier: CR
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 6
-						Identifier: jump
-						Identifier: label_88
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 5
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: do
-						Identifier: good
-						Identifier: hero
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: do
-						Identifier: good
-						Identifier: hero
-						Identifier: default
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: do
-						Identifier: good
-						Identifier: hero
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 4
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Anyway
-						Identifier: let
-						Identifier: s
-						Identifier: graduate
-						Identifier: from
-						Identifier: the
-						Identifier: guild.
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Anyway
-						Identifier: let
-						Identifier: s
-						Identifier: graduate
-						Identifier: from
-						Identifier: the
-						Identifier: guild.
-						Identifier: default
-						Identifier: english
-						Identifier: Anyway
-						Identifier: let
-						Identifier: s
-						Identifier: graduate
-						Identifier: from
-						Identifier: the
-						Identifier: guild.
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: do
-						Identifier: good
-						Identifier: hero
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: do
-						Identifier: good
-						Identifier: hero
-						Identifier: default
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: do
-						Identifier: good
-						Identifier: hero
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 3
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: When
-						Identifier: you
-						Identifier: re
-						Identifier: ready
-						Identifier: let
-						Identifier: s
-						Identifier: go
-						Identifier: out
-						Identifier: to
-						Identifier: CS
-						Identifier: P
-						Identifier: Mystifying
-						Identifier: Forest
-						Identifier: CR
-						Identifier: hero
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: When
-						Identifier: you
-						Identifier: re
-						Identifier: ready
-						Identifier: let
-						Identifier: s
-						Identifier: go
-						Identifier: out
-						Identifier: to
-						Identifier: CS
-						Identifier: P
-						Identifier: Mystifying
-						Identifier: Forest
-						Identifier: CR
-						Identifier: hero
-						Identifier: default
-						Identifier: english
-						Identifier: When
-						Identifier: you
-						Identifier: re
-						Identifier: ready
-						Identifier: let
-						Identifier: s
-						Identifier: go
-						Identifier: out
-						Identifier: to
-						Identifier: CS
-						Identifier: P
-						Identifier: Mystifying
-						Identifier: Forest
-						Identifier: CR
-						Identifier: hero
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: do
-						Identifier: our
-						Identifier: best
-						Identifier: and
-						Identifier: graduate
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: do
-						Identifier: our
-						Identifier: best
-						Identifier: and
-						Identifier: graduate
-						Identifier: default
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: do
-						Identifier: our
-						Identifier: best
-						Identifier: and
-						Identifier: graduate
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
-						Identifier: 29
-						Identifier: 2
-						Identifier: message_SetFace
-						Identifier: ACTOR_ATTENDANT1
-						Identifier: FACE_NORMAL
-						Identifier: FACE_POS_STANDARD
-						Identifier: message_SwitchTalk
-						Identifier: PARTNER_TALK_KIND
-						Identifier: case
-						Identifier: 1
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: get
-						Identifier: stocked
-						Identifier: up
-						Identifier: on
-						Identifier: supplies
-						Identifier: and
-						Identifier: head
-						Identifier: out
-						Identifier: to
-						Identifier: CS
-						Identifier: P
-						Identifier: Mystifying
-						Identifier: Forest
-						Identifier: CR
-						Identifier: .
-						Identifier: case
-						Identifier: 2
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: stock
-						Identifier: up
-						Identifier: on
-						Identifier: supplies
-						Identifier: and
-						Identifier: make
-						Identifier: for
-						Identifier: CS
-						Identifier: P
-						Identifier: Mystifying
-						Identifier: Forest
-						Identifier: CR
-						Identifier: .
-						Identifier: default
-						Identifier: english
-						Identifier: Let
-						Identifier: s
-						Identifier: get
-						Identifier: stocked
-						Identifier: up
-						Identifier: on
-						Identifier: supplies
-						Identifier: and
-						Identifier: leave
-						Identifier: for
-						Identifier: CS
-						Identifier: P
-						Identifier: Mystifying
-						Identifier: Forest
-						Identifier: CR
-						Identifier: .
-						Identifier: message_Close
-						Identifier: jump
-						Identifier: label_94
-						Identifier: elseif
-						Identifier: scn
-						Identifier: SCENARIO_MAIN
+				Case:
+					Value: default
+					Switch:
+						Variable: $GROUND_ENTER
+						Case:
+							Value: 27
+							Label: @label_19;
+							Identifier: message_SetFace
+								Argument: ACTOR_ATTENDANT1
+								Argument: FACE_NORMAL
+								Argument: FACE_POS_STANDARD
+							Switch:
+								Variable: $PARTNER_TALK_KIND
+								Case:
+									Value: 1
+										Dialogue: We're in here pretty far.
+								Case:
+									Value: 2
+										Dialogue: We've come a long way in here.
+								Case:
+									Value: default
+										Dialogue: We've gotten quite far in here.
+							Identifier: message_Close
+							Identifier: jump
+								Argument: label_94
+						Case:
+							Value: 98
+							Conditional: If
+								Condition: scn($SCENARIO_MAIN) >= [29, 85]
+								Identifier: jump
+									Argument: label_23
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 84]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_DETERMINED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's hurry, [hero].
+									Case:
+										Value: 2
+											Dialogue: Let's hurry, [hero].
+									Case:
+										Value: default
+											Dialogue: Let's hurry, [hero].
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 83]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_WORRIED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We came a long way in here...
+									Case:
+										Value: 2
+											Dialogue: We've come a long way in here...
+									Case:
+										Value: default
+											Dialogue: We came a long way in here...
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: But this place doesn't seem safe, either...
+									Case:
+										Value: 2
+											Dialogue: But this place doesn't seem safe, either...
+									Case:
+										Value: default
+											Dialogue: But this place doesn't seem safe, either...
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We should keep going, [hero].
+									Case:
+										Value: 2
+											Dialogue: Let's move on, [hero].
+									Case:
+										Value: default
+											Dialogue: Let's keep moving, [hero].
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: Else
+								Identifier: jump
+									Argument: label_19
+							Identifier: break
+						Case:
+							Value: 102
+							Conditional: If
+								Condition: scn($SCENARIO_MAIN) >= [29, 91]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_DETERMINED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: If we don't stop [CS:N]Darkrai[CR] soon...
+									Case:
+										Value: 2
+											Dialogue: If we don't stop [CS:N]Darkrai[CR] soon...
+									Case:
+										Value: default
+											Dialogue: If we don't stop [CS:N]Darkrai[CR] soon...
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: He'll smother the world in darkness.
+									Case:
+										Value: 2
+											Dialogue: He'll smother the world in darkness.
+									Case:
+										Value: default
+											Dialogue: He'll smother the world in darkness.
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's go, [hero]![K] We have to stop [CS:N]Darkrai[CR]!
+									Case:
+										Value: 2
+											Dialogue: Let's go, [hero]![K] We have to stop [CS:N]Darkrai[CR]!
+									Case:
+										Value: default
+											Dialogue: Let's go, [hero]![K] We have to stop [CS:N]Darkrai[CR]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 90]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_PAIN
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: This isn't easy at all, but...
+									Case:
+										Value: 2
+											Dialogue: This is pretty taxing, but...
+									Case:
+										Value: default
+											Dialogue: This isn't easy at all, but...
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_DETERMINED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We have to tough this out.
+									Case:
+										Value: 2
+											Dialogue: We have to see this through.
+									Case:
+										Value: default
+											Dialogue: We have to see this through.
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 89]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_WORRIED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We're in really deep now...
+									Case:
+										Value: 2
+											Dialogue: We're in really deep now...
+									Case:
+										Value: default
+											Dialogue: We're in really deep now...
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: I wonder if [CS:N]Darkrai[CR] will be waiting for us...
+									Case:
+										Value: 2
+											Dialogue: I wonder if [CS:N]Darkrai[CR] will be waiting for us...
+									Case:
+										Value: default
+											Dialogue: [CS:N]Darkrai[CR] could be waiting for us up ahead...
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_DETERMINED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We don't have any choice, though. We have to keep going.
+									Case:
+										Value: 2
+											Dialogue: We don't have any choice. We have to keep going.
+									Case:
+										Value: default
+											Dialogue: There is no choice, though. We have to keep going.
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: Else
+								Identifier: jump
+									Argument: label_19
+							Identifier: break
+						Case:
+							Value: default
+							Label: @label_22;
+							Conditional: If
+								Condition: scn($SCENARIO_MAIN) >= [29, 94] || scn($SCENARIO_MAIN) >= [29, 93] || scn($SCENARIO_MAIN) >= [29, 92]
+								Label: @label_88;
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's work hard as always, [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's work hard as always, [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's work hard as always, [hero]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 88]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_DETERMINED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We have to stop [CS:N]Darkrai[CR]'s plot this time!
+									Case:
+										Value: 2
+											Dialogue: [CS:N]Darkrai[CR]'s scheme has to be stopped this time!
+									Case:
+										Value: default
+											Dialogue: We have to stop [CS:N]Darkrai[CR]'s plot this time!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: [CS:N]Cresselia[CR] will guide us to the [CS:P]Dark Crater[CR].
+									Case:
+										Value: 2
+											Dialogue: [CS:N]Cresselia[CR] will guide us to the [CS:P]Dark Crater[CR].
+									Case:
+										Value: default
+											Dialogue: [CS:N]Cresselia[CR] will guide us to the [CS:P]Dark Crater[CR].
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's hang tough, [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's work at this, [hero]!
+									Case:
+										Value: default
+											Dialogue: We have to work at this, [hero]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 87]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: [CS:N]Cresselia[CR] will guide us to the [CS:P]Dark Crater[CR].
+									Case:
+										Value: 2
+											Dialogue: [CS:N]Cresselia[CR] will guide us to the [CS:P]Dark Crater[CR].
+									Case:
+										Value: default
+											Dialogue: [CS:N]Cresselia[CR] will guide us to the [CS:P]Dark Crater[CR].
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_DETERMINED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's go, [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's go, [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's go, [hero]!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Off to the [CS:P]Dark Crater[CR] to face [CS:N]Darkrai[CR]!
+									Case:
+										Value: 2
+											Dialogue: Off to the [CS:P]Dark Crater[CR] to confront [CS:N]Darkrai[CR]!
+									Case:
+										Value: default
+											Dialogue: Off to the [CS:P]Dark Crater[CR] to face [CS:N]Darkrai[CR]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 82] || scn($SCENARIO_MAIN) >= [29, 81] || scn($SCENARIO_MAIN) >= [29, 80]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: [CS:N]Lapras[CR] told us everything he knows.
+									Case:
+										Value: 2
+											Dialogue: [CS:N]Lapras[CR] told us everything he knows.
+									Case:
+										Value: default
+											Dialogue: [CS:N]Lapras[CR] told us everything he knows.
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We have to investigate on our own now.
+									Case:
+										Value: 2
+											Dialogue: We should investigate on our own now.
+									Case:
+										Value: default
+											Dialogue: We have to investigate on our own now.
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 78]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: [CS:N]Lapras[CR] may know something!
+									Case:
+										Value: 2
+											Dialogue: [CS:N]Lapras[CR] may know something!
+									Case:
+										Value: default
+											Dialogue: [CS:N]Lapras[CR] may know something!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's go down to the beach, [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's go down to the beach, [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's go to the beach, [hero]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 76]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_DETERMINED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's go into [CS:N]Azurill[CR]'s dream, [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's go into [CS:N]Azurill[CR]'s dream, [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's go into [CS:N]Azurill[CR]'s dream, [hero]!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: [CS:N]Drowzee[CR]'s going to send us into the dream!
+									Case:
+										Value: 2
+											Dialogue: [CS:N]Drowzee[CR]'s going to send us into the dream!
+									Case:
+										Value: default
+											Dialogue: [CS:N]Drowzee[CR]'s going to send us into the dream!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 75]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_DETERMINED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: When you're ready to leave, [hero], we have to go see [CS:N]Drowzee[CR].
+									Case:
+										Value: 2
+											Dialogue: When you're ready to leave, [hero], we have to go see [CS:N]Drowzee[CR].
+									Case:
+										Value: default
+											Dialogue: When you're ready to leave, [hero], we have to go see [CS:N]Drowzee[CR].
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We'll get [CS:N]Drowzee[CR] to send us into [CS:N]Azurill[CR]'s dream.
+									Case:
+										Value: 2
+											Dialogue: We'll get [CS:N]Drowzee[CR] to send us into [CS:N]Azurill[CR]'s dream.
+									Case:
+										Value: default
+											Dialogue: We'll get [CS:N]Drowzee[CR] to send us into [CS:N]Azurill[CR]'s dream.
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 73] || scn($SCENARIO_MAIN) >= [29, 72]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's go, [hero]![K] We have to find [CS:N]Drowzee[CR] on [CS:P]Mt. Travail[CR]!
+									Case:
+										Value: 2
+											Dialogue: Let's go, [hero]![K] We have to find [CS:N]Drowzee[CR] on [CS:P]Mt. Travail[CR]!
+									Case:
+										Value: default
+											Dialogue: Let's go, [hero]![K] We have to find [CS:N]Drowzee[CR] on [CS:P]Mt. Travail[CR]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 71] || scn($SCENARIO_MAIN) >= [29, 70]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's put in another good day, [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's put in another good day, [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's put in another good day, [hero]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 69] || scn($SCENARIO_MAIN) >= [29, 67]
+								Identifier: jump
+									Argument: label_88
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 56]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's go to [CS:P]Aegis Cave[CR], [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's go to [CS:P]Aegis Cave[CR], [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's go to [CS:P]Aegis Cave[CR], [hero]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 55]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's go to [CS:P]Aegis Cave[CR], [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's go to [CS:P]Aegis Cave[CR], [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's go to [CS:P]Aegis Cave[CR], [hero]!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Team [CS:X]Charm[CR] should already be there!
+									Case:
+										Value: 2
+											Dialogue: Team [CS:X]Charm[CR] should already be there!
+									Case:
+										Value: default
+											Dialogue: Team [CS:X]Charm[CR] should already be there!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We should catch up to them!
+									Case:
+										Value: 2
+											Dialogue: Let's try to catch up to them!
+									Case:
+										Value: default
+											Dialogue: We should go out there quick!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 54] || scn($SCENARIO_MAIN) >= [29, 53] || scn($SCENARIO_MAIN) >= [29, 52]
+								Identifier: jump
+									Argument: label_88
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 50] || scn($SCENARIO_MAIN) >= [29, 49]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_DETERMINED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We have to go to the [CS:P]Miracle Sea[CR], [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's go to the [CS:P]Miracle Sea[CR], [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's go to the [CS:P]Miracle Sea[CR], [hero]!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We have to find the [CS:N]Phione[CR] there. They can help us cure [CS:N]Manaphy[CR]!
+									Case:
+										Value: 2
+											Dialogue: We have to find the [CS:N]Phione[CR]. They can help us cure [CS:N]Manaphy[CR]!
+									Case:
+										Value: default
+											Dialogue: We have to find the [CS:N]Phione[CR]. They can help us cure [CS:N]Manaphy[CR]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 48]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_SAD
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Argh![K] Where has he gone...?
+									Case:
+										Value: 2
+											Dialogue: Argh![K] Where has he gone...?
+									Case:
+										Value: default
+											Dialogue: Argh![K] Where has he gone...?
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 47]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_SURPRISED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Oh, [hero]![K] W-we have to find [CS:N]Manaphy[CR]!
+									Case:
+										Value: 2
+											Dialogue: Oh, [hero]![K] W-we have to find [CS:N]Manaphy[CR]!
+									Case:
+										Value: default
+											Dialogue: Oh, [hero]![K] W-we have to find [CS:N]Manaphy[CR]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 46]
+								Identifier: SetAnimation
+									Template
+										Type: actor
+										Identifier: ACTOR_ATTENDANT_MANAFI
+									Argument: 2
+								Identifier: Turn2DirectionLives
+									Template
+										Type: actor
+										Identifier: ACTOR_ATTENDANT_MANAFI
+									Argument: 4
+									Argument: 10
+									Argument: ACTOR_PLAYER
+								Identifier: message_Mail
+									Dialogue: [CN]Who would you like to speak to?
+								Switch:
+									Variable: message_SwitchMenu(1, 1)
+									Case:
+										Value: [partner]
+										Identifier: CallCommon
+											Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+										Identifier: Turn2DirectionLives
+											Template
+												Type: actor
+												Identifier: ACTOR_ATTENDANT_MANAFI
+											Argument: 4
+											Argument: 10
+											Argument: ACTOR_ATTENDANT1
+										Identifier: message_SetFace
+											Argument: ACTOR_ATTENDANT1
+											Argument: FACE_HAPPY
+											Argument: FACE_POS_STANDARD
+										Switch:
+											Variable: $PARTNER_TALK_KIND
+											Case:
+												Value: 1
+													Dialogue: Let's take baby [CS:N]Manaphy[CR] down to the beach for a walk!
+											Case:
+												Value: 2
+													Dialogue: Let's take baby [CS:N]Manaphy[CR] to the beach for a walk!
+											Case:
+												Value: default
+													Dialogue: Let's take baby [CS:N]Manaphy[CR] down to the beach for a walk!
+										Identifier: message_Close
+										Identifier: jump
+											Argument: label_94
+									Case:
+										Value: [CS:N]Manaphy[CR]
+										Identifier: CallCommon
+											Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+										Identifier: Turn2DirectionLives
+											Template
+												Type: actor
+												Identifier: ACTOR_PLAYER
+											Argument: 4
+											Argument: 10
+											Argument: ACTOR_ATTENDANT_MANAFI
+										Identifier: Turn2DirectionLives
+											Template
+												Type: actor
+												Identifier: ACTOR_ATTENDANT1
+											Argument: 4
+											Argument: 10
+											Argument: ACTOR_ATTENDANT_MANAFI
+										Identifier: message_SetFace
+											Argument: ACTOR_NPC_MANAFI
+											Argument: FACE_HAPPY
+											Argument: FACE_POS_STANDARD
+										Identifier: message_Talk
+											Dialogue: [hero]! ♪ [partner]! ♪
+										Identifier: message_Talk
+											Dialogue: Walk-walk! ♪
+										Identifier: message_Close
+										Identifier: jump
+											Argument: label_94
+									Case:
+										Value: default
+										Identifier: jump
+											Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 45]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's go get another [CS:I]Blue Gummi[CR] for [CS:N]Manaphy[CR]!
+									Case:
+										Value: 2
+											Dialogue: Let's go get another [CS:I]Blue Gummi[CR] for [CS:N]Manaphy[CR]!
+									Case:
+										Value: default
+											Dialogue: Let's go get another [CS:I]Blue Gummi[CR] for [CS:N]Manaphy[CR]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 44]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's give another [CS:I]Blue Gummi[CR] to baby [CS:N]Manaphy[CR], [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's give another [CS:I]Blue Gummi[CR] to baby [CS:N]Manaphy[CR], [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's give another [CS:I]Blue Gummi[CR] to baby [CS:N]Manaphy[CR], [hero]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 43]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: [CS:N]Manaphy[CR] is hungry back at the guild.
+									Case:
+										Value: 2
+											Dialogue: [CS:N]Manaphy[CR] is waiting to eat back at the guild. The little guy's hungry.
+									Case:
+										Value: default
+											Dialogue: [CS:N]Manaphy[CR] is hungry. The poor little guy's waiting at the guild.
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We need to take [CS:I]Blue Gummis[CR] to [CS:N]Manaphy[CR] as soon as we can.
+									Case:
+										Value: 2
+											Dialogue: We need to take [CS:I]Blue Gummis[CR] to [CS:N]Manaphy[CR]. Let's not waste time.
+									Case:
+										Value: default
+											Dialogue: We need to take [CS:I]Blue Gummis[CR] to [CS:N]Manaphy[CR]. Let's hurry!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 42]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's go get some [CS:I]Blue Gummis[CR], [hero]!
+									Case:
+										Value: 2
+											Dialogue: We have to get [CS:I]Blue Gummis[CR], [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's get some [CS:I]Blue Gummis[CR], [hero]!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: I know we can find [CS:I]Blue Gummis[CR] in [CS:P]Craggy Coast[CR].
+									Case:
+										Value: 2
+											Dialogue: I'm pretty certain we can find [CS:I]Blue Gummis[CR] in [CS:P]Craggy Coast[CR].
+									Case:
+										Value: default
+											Dialogue: I think we can find [CS:I]Blue Gummis[CR] in [CS:P]Craggy Coast[CR].
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 41]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: We should go too, [hero]!
+									Case:
+										Value: 2
+											Dialogue: We should go too, [hero]!
+									Case:
+										Value: default
+											Dialogue: We should go too, [hero]!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: To the [CS:P]Surrounded Sea[CR]!
+									Case:
+										Value: 2
+											Dialogue: To the [CS:P]Surrounded Sea[CR]!
+									Case:
+										Value: default
+											Dialogue: To the [CS:P]Surrounded Sea[CR]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 40]
+								Identifier: jump
+									Argument: label_88
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 39]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_WORRIED
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Well, now we have Secret Rank certification...
+									Case:
+										Value: 2
+											Dialogue: Well, now we have Secret Rank certification...
+									Case:
+										Value: default
+											Dialogue: Well, now we have Secret Rank certification...
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: I wonder what it's all about...
+									Case:
+										Value: 2
+											Dialogue: I wonder what it's about...
+									Case:
+										Value: default
+											Dialogue: I wonder what it's all about...
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: That reminds me about that [CS:N]Scizor[CR]...
+									Case:
+										Value: 2
+											Dialogue: That reminds me about that [CS:N]Scizor[CR]...
+									Case:
+										Value: default
+											Dialogue: That reminds me about that [CS:N]Scizor[CR]...
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Wasn't he supposed to be looking for some amazing treasure?
+									Case:
+										Value: 2
+											Dialogue: Wasn't he supposed to be looking for an amazing treasure?
+									Case:
+										Value: default
+											Dialogue: Wasn't he supposedly looking for an amazing treasure?
+								Identifier: CallCommon
+									Argument: CORO_MESSAGE_CLOSE_WAIT_FUNC
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: ...[K]Oh, well. Whatever.[K] There's no point sweating over details.
+									Case:
+										Value: 2
+											Dialogue: ...[K]Well, too bad.[K] Getting stuck on the small details doesn't help.
+									Case:
+										Value: default
+											Dialogue: ...[K]Well, too bad.[K] Getting stuck on the small details doesn't help.
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Who knows what a Secret Rank means for us? But it could turn out to be cool.
+									Case:
+										Value: 2
+											Dialogue: Who knows what a Secret Rank means for us? But it could turn out to be good.
+									Case:
+										Value: default
+											Dialogue: Who knows what a Secret Rank means for us? But it could turn out to be good.
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 33]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: [CS:N]Scizor[CR] sounds like one very famous explorer!
+									Case:
+										Value: 2
+											Dialogue: [CS:N]Scizor[CR] must have been one famous explorer!
+									Case:
+										Value: default
+											Dialogue: [CS:N]Scizor[CR] sounds like he was a famous explorer of his time!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: He supposedly went missing while exploring [CS:P]Blizzard Island[CR].
+									Case:
+										Value: 2
+											Dialogue: He apparently went missing while exploring [CS:P]Blizzard Island[CR].
+									Case:
+										Value: default
+											Dialogue: He supposedly went missing while he was exploring [CS:P]Blizzard Island[CR].
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: But what was the amazing treasure that [CS:N]Scizor[CR] was searching for?[K] I'm itching to know.
+									Case:
+										Value: 2
+											Dialogue: [CS:N]Scizor[CR] was supposed to be searching for an amazing treasure.[K] I wonder what that was...
+									Case:
+										Value: default
+											Dialogue: [CS:N]Scizor[CR] was supposed to be searching for an amazing treasure when he went missing.[K] I wonder what that was...
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 32] || scn($SCENARIO_MAIN) >= [29, 31]
+								Identifier: jump
+									Argument: label_88
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 30] || scn($SCENARIO_MAIN) >= [29, 29] || scn($SCENARIO_MAIN) >= [29, 28] || scn($SCENARIO_MAIN) >= [29, 27] || scn($SCENARIO_MAIN) >= [29, 26] || scn($SCENARIO_MAIN) >= [29, 25] || scn($SCENARIO_MAIN) >= [29, 24] || scn($SCENARIO_MAIN) >= [29, 23] || scn($SCENARIO_MAIN) >= [29, 22] || scn($SCENARIO_MAIN) >= [29, 21] || scn($SCENARIO_MAIN) >= [29, 20] || scn($SCENARIO_MAIN) >= [29, 19] || scn($SCENARIO_MAIN) >= [29, 18] || scn($SCENARIO_MAIN) >= [29, 17] || scn($SCENARIO_MAIN) >= [29, 16] || scn($SCENARIO_MAIN) >= [29, 15] || scn($SCENARIO_MAIN) >= [29, 14] || scn($SCENARIO_MAIN) >= [29, 13] || scn($SCENARIO_MAIN) >= [29, 12] || scn($SCENARIO_MAIN) >= [29, 11] || scn($SCENARIO_MAIN) >= [29, 10]
+								Switch:
+									Variable: $GROUND_ENTER
+									Case:
+										Value: 156
+										Identifier: message_SetFace
+											Argument: ACTOR_ATTENDANT1
+											Argument: FACE_NORMAL
+											Argument: FACE_POS_STANDARD
+										Switch:
+											Variable: $PARTNER_TALK_KIND
+											Case:
+												Value: 1
+													Dialogue: [hero]! Once we've gotten ready, let's head to the mountain pass!
+											Case:
+												Value: 2
+													Dialogue: [hero]! Once we've gotten ready, let's head to the mountain pass!
+											Case:
+												Value: default
+													Dialogue: [hero]! Once we've gotten ready, let's head to the mountain pass!
+										Switch:
+											Variable: $PARTNER_TALK_KIND
+											Case:
+												Value: 1
+													Dialogue: Let's aim for the top of [CS:P]Sky Peak[CR]!
+											Case:
+												Value: 2
+													Dialogue: Let's aim for the top of [CS:P]Sky Peak[CR]!
+											Case:
+												Value: default
+													Dialogue: Let's aim for the top of [CS:P]Sky Peak[CR]!
+										Identifier: message_Close
+										Identifier: jump
+											Argument: label_94
+									Case:
+										Value: default
+										Label: @label_96;
+										Identifier: message_SetFace
+											Argument: ACTOR_ATTENDANT1
+											Argument: FACE_NORMAL
+											Argument: FACE_POS_STANDARD
+										Switch:
+											Variable: $PARTNER_TALK_KIND
+											Case:
+												Value: 1
+													Dialogue: [hero]![K] Let's go to the [CS:P]Shaymin Village[CR]!
+											Case:
+												Value: 2
+													Dialogue: [hero]![K] Let's go to the [CS:P]Shaymin Village[CR]!
+											Case:
+												Value: default
+													Dialogue: [hero]![K] Let's go to the [CS:P]Shaymin Village[CR]!
+										Identifier: message_Close
+										Identifier: jump
+											Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 8]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Did you hear that? Piles of treasure and new discoveries!
+									Case:
+										Value: 2
+											Dialogue: Did you hear that? Piles of treasure and new discoveries!
+									Case:
+										Value: default
+											Dialogue: Did you hear that? Piles of treasure and new discoveries!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: I'd really like to meet these [CS:K]Shaymin[CR], so we should go!
+									Case:
+										Value: 2
+											Dialogue: I'm really interested in meeting these [CS:K]Shaymin[CR], so we should go!
+									Case:
+										Value: default
+											Dialogue: I'd love to meet these [CS:K]Shaymin[CR]! Let's go!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: To the [CS:P]Shaymin Village[CR]!
+									Case:
+										Value: 2
+											Dialogue: To the [CS:P]Shaymin Village[CR]!
+									Case:
+										Value: default
+											Dialogue: To the [CS:P]Shaymin Village[CR]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 6]
+								Identifier: jump
+									Argument: label_88
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 5]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's do good, [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's do good, [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's do good, [hero]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 4]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Anyway, let's graduate from the guild.
+									Case:
+										Value: 2
+											Dialogue: Anyway, let's graduate from the guild.
+									Case:
+										Value: default
+											Dialogue: Anyway, let's graduate from the guild.
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's do good, [hero]!
+									Case:
+										Value: 2
+											Dialogue: Let's do good, [hero]!
+									Case:
+										Value: default
+											Dialogue: Let's do good, [hero]!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 3]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: When you're ready, let's go out to [CS:P]Mystifying Forest[CR], [hero]!
+									Case:
+										Value: 2
+											Dialogue: When you're ready, let's go out to [CS:P]Mystifying Forest[CR], [hero]!
+									Case:
+										Value: default
+											Dialogue: When you're ready, let's go out to [CS:P]Mystifying Forest[CR], [hero]!
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's do our best and graduate!
+									Case:
+										Value: 2
+											Dialogue: Let's do our best and graduate!
+									Case:
+										Value: default
+											Dialogue: Let's do our best and graduate!
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 2]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's get stocked up on supplies and head out to [CS:P]Mystifying Forest[CR].
+									Case:
+										Value: 2
+											Dialogue: Let's stock up on supplies and make for [CS:P]Mystifying Forest[CR].
+									Case:
+										Value: default
+											Dialogue: Let's get stocked up on supplies and leave for [CS:P]Mystifying Forest[CR].
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: ElseIf
+								Condition: scn($SCENARIO_MAIN) >= [29, 1]
+								Identifier: message_SetFace
+									Argument: ACTOR_ATTENDANT1
+									Argument: FACE_NORMAL
+									Argument: FACE_POS_STANDARD
+								Switch:
+									Variable: $PARTNER_TALK_KIND
+									Case:
+										Value: 1
+											Dialogue: Let's go to Treasure Town and get ready for an outing.
+									Case:
+										Value: 2
+											Dialogue: Let's go to Treasure Town and get ready for an outing.
+									Case:
+										Value: default
+											Dialogue: Let's go to Treasure Town and get ready for an outing.
+								Identifier: message_Close
+								Identifier: jump
+									Argument: label_94
+							Conditional: Else
+								Identifier: jump
+									Argument: label_94
+							Identifier: break
+					Identifier: break
+			Identifier: break

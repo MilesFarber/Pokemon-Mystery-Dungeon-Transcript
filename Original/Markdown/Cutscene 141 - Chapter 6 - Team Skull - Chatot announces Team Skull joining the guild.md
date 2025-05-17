@@ -266,3 +266,6 @@
 `Chatot`: "We're counting on you. ♪"
 
 
+*Scenario flag: [7, 6]*
+
+

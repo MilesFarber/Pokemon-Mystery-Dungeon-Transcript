@@ -1,6 +1,12 @@
 * * *
 
 
+*Scenario flag: [29, 66]*
+
+
+* * *
+
+
 `Lopunny Normal`
 
 `Lopunny`: "This appears to be the last chamber..."

@@ -1,7 +1,7 @@
 * * *
 
 
-*If the Hero has entered Diglett's sentry point:*
+*If the team has started sentry duty:*
 
 
   * *Anchor: <a name="0"></a>0*

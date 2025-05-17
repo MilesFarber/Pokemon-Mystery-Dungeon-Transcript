@@ -18,6 +18,9 @@
   * `Partner Name`: "Let's get moving!"
 
 
+  * *Scenario flag: [21, 2]*
+
+
   * `Partner Normal`
 
   * `Partner Name`: "No"

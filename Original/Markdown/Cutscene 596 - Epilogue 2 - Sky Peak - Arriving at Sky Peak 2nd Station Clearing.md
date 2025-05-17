@@ -1,3 +1,6 @@
+*Scenario flag: [29, 14]*
+
+
 `Shaymin Normal`
 
 `Shaymin`: "Oh! I can see the 2nd Station Clearing! We can do it!"

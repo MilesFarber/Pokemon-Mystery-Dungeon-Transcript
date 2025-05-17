@@ -1,3 +1,6 @@
+*Scenario flag: [18, 2]*
+
+
 >`Hero Name` tested the doors.
 >
 >The doors failed to open.

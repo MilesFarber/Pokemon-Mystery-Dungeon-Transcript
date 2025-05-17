@@ -1,3 +1,6 @@
+*Scenario flag: [29, 81]*
+
+
 `Partner Shouting`
 
 `Partner Name`: "Waaaaaah!"

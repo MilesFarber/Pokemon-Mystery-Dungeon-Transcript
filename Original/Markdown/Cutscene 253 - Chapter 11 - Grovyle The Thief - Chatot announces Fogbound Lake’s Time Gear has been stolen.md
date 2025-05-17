@@ -4,6 +4,9 @@
 * * *
 
 
+*Scenario flag: [14, 1]*
+
+
 `Bidoof Normal`
 
 `Bidoof`: "Huff-puff..."

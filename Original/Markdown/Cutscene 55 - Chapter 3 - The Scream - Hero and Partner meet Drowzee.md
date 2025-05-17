@@ -1,3 +1,6 @@
+*Scenario flag: [4, 3]*
+
+
 `Partner Normal` ❗
 
 `Partner Name`: "Say! What are they up to?"

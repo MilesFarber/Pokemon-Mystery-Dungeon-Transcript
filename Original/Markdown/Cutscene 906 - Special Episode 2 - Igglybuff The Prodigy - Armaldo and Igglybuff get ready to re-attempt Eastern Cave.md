@@ -1,3 +1,6 @@
+*Scenario flag: [42, 3]*
+
+
 `Armaldo Worried`
 
 `Armaldo`: "Ooogh... That was pretty tough..."

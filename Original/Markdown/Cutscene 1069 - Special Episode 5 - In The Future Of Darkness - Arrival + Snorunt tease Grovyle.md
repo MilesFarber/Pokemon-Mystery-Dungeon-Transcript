@@ -214,3 +214,6 @@
 `Dusknoir`: "(That's why his heart is not influenced by the power of the darkness...)"
 
 
+*Scenario flag: [48, 0]*
+
+

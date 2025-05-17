@@ -1,6 +1,12 @@
 * * *
 
 
+*Scenario flag: [29, 91]*
+
+
+* * *
+
+
 `Partner Normal`
 
 `Partner Name`: "It's a dead end."

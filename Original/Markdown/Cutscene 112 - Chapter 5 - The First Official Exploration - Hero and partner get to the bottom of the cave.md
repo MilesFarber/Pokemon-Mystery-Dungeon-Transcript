@@ -1,3 +1,6 @@
+*Scenario flag: [6, 6]*
+
+
 * * *
 
 

@@ -19,10 +19,16 @@
   * *Anchor: <a name="0"></a>0*
 
 
+  * *Scenario flag: [3, 4]*
+
+
   * *Anchor: <a name="2"></a>2*
 
 
 *If the player chooses "4":*
+
+  * *Scenario flag: [3, 5]*
+
 
   * *Jump to [anchor 2](#2)*
 

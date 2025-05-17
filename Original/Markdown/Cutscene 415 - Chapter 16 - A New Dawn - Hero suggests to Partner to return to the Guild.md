@@ -395,6 +395,9 @@
   * * * *
 
 
+  * *Scenario flag: [22, 0]*
+
+
 *If the player chooses "I don't know...":*
 
   * `Partner Sad`

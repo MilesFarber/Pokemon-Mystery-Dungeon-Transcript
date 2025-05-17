@@ -24,6 +24,12 @@
   *   * `Grovyle`: "Fine! We leave now!"
 
 
+  * *Else:*
+
+
+  *   * *Scenario flag: [20, 2]*
+
+
   *   * *Jump to [anchor 2](#2)*
 
 

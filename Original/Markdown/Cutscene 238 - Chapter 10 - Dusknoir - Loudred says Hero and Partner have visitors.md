@@ -1,3 +1,6 @@
+*Scenario flag: [13, 1]*
+
+
 `Partner Normal`
 
 `Partner Name`: "Let's do our best, `Hero Name`! Just like we always do!"

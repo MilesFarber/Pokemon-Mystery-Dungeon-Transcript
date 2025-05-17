@@ -102,6 +102,9 @@
   *   * * * *
 
 
+  *   * *Scenario flag: [10, 2]*
+
+
   * *If the player chooses "[CS:P]Forest Path[CR]":*
 
   *   * * * *

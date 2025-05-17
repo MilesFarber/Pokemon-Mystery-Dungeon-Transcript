@@ -4,6 +4,9 @@
   * *Anchor: <a name="0"></a>0*
 
 
+  * *Scenario flag: [40, 1]*
+
+
   * `Chatot Normal`
 
   * `Chatot`: "All right! Here we go today! ♪"

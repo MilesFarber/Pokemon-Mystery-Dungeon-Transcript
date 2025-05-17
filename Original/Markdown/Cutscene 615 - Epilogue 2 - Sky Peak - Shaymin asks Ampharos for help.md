@@ -1,3 +1,6 @@
+*Scenario flag: [29, 26]*
+
+
 `Shaymin Normal`
 
 `Shaymin`: "The 8th Station Clearing! Hurry!"

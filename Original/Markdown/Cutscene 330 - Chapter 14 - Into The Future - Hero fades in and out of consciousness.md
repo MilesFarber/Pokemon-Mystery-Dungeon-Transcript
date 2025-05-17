@@ -4,6 +4,9 @@
 * * *
 
 
+*Scenario flag: [18, 1]*
+
+
 `Hero Pain`
 
 `Hero Name`: ".................."

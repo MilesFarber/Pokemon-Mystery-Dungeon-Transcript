@@ -1,6 +1,12 @@
 * * *
 
 
+*Scenario flag: [4, 6]*
+
+
+* * *
+
+
 `Azurill Normal` ❗
 
 `Azurill`: "Uh-oh. It's a dead end."
@@ -240,5 +246,8 @@
 
 
 * * *
+
+
+*Scenario flag: [4, 6]*
 
 

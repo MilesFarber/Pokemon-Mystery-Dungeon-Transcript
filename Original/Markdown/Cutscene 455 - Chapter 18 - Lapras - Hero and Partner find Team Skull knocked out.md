@@ -1,6 +1,9 @@
 * * *
 
 
+*Scenario flag: [24, 3]*
+
+
 `Partner Normal`
 
 `Partner Name`: "Well...we've descended quite a ways, but..."

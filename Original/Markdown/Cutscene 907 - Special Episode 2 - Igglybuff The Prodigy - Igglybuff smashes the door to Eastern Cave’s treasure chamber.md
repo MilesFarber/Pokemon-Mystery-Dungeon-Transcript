@@ -1,3 +1,6 @@
+*Scenario flag: [42, 4]*
+
+
 `Armaldo Normal`
 
 `Armaldo`: "...We've come pretty far..."

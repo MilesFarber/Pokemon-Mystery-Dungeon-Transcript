@@ -1,3 +1,6 @@
+*Scenario flag: [19, 3]*
+
+
 `Partner Normal`
 
 `Partner Name`: "We must be getting close to the bottom now, `Hero Name`."

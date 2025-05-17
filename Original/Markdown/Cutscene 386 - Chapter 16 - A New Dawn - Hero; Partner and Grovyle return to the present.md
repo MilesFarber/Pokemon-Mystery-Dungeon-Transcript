@@ -4,6 +4,12 @@
 * * *
 
 
+*Scenario flag: [21, 1]*
+
+
+* * *
+
+
 `Hero Normal`
 
 `Hero Name`: "(...............)"

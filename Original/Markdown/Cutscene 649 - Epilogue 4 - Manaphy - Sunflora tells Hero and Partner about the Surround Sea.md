@@ -1,3 +1,6 @@
+*Scenario flag: [29, 41]*
+
+
 `Sunflora Normal`
 
 `Sunflora`: "Have you two heard about the Surrounded Sea?"

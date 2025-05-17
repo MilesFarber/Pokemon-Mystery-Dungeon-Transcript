@@ -1,3 +1,6 @@
+*Scenario flag: [29, 1]*
+
+
 `💬`: "As a result of `Hero Name` and `Partner Name`'s heroic actions..."
 
 

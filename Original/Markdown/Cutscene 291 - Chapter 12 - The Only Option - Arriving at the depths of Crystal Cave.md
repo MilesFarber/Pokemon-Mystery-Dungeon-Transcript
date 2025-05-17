@@ -1,6 +1,12 @@
 * * *
 
 
+*Scenario flag: [16, 2]*
+
+
+* * *
+
+
 `Partner Normal`
 
 `Partner Name`: "Is this...the deepest part of the caverns?"

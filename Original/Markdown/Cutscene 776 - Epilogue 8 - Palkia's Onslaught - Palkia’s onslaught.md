@@ -1,6 +1,12 @@
 * * *
 
 
+*Scenario flag: [29, 85]*
+
+
+* * *
+
+
 `Partner Normal` ❗
 
 `Partner Name`: "Huh? `Hero Name`, over there!"

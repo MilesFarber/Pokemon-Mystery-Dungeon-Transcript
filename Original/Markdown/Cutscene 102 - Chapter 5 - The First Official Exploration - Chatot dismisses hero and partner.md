@@ -11,6 +11,9 @@
   * *Anchor: <a name="0"></a>0*
 
 
+  * *Scenario flag: [6, 2]*
+
+
   * `Chatot Happy`
 
   * `Chatot`: "Good! ♪"

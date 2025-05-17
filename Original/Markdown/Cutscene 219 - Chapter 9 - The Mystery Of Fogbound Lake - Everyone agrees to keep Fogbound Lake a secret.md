@@ -115,6 +115,9 @@
 * * *
 
 
+*Scenario flag: [12, 0]*
+
+
 >The Exploration Team Federation has sent a message...
 >
 >`Hero Name`'s team was rewarded! Its Treasure Bag is now bigger!

@@ -9,10 +9,16 @@
   * * * *
 
 
-  * *If the player has progressed far enough:*
+  * *If the team has jumped into the quicksand pits:*
 
 
   *   * *Anchor: <a name="2"></a>2*
+
+
+  * *Else:*
+
+
+  *   * *Scenario flag: [15, 2]*
 
 
   *   * *Jump to [anchor 2](#2)*

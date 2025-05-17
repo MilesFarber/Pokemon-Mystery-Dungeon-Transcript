@@ -1,3 +1,6 @@
+*Scenario flag: [12, 1]*
+
+
 `Partner Normal`
 
 `Partner Name`: "I imagine that it's time to get back to our guild training, `Hero Name`!"

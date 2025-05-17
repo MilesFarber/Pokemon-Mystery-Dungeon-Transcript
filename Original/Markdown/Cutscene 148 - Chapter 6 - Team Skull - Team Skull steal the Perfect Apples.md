@@ -1,6 +1,12 @@
 * * *
 
 
+*Scenario flag: [8, 3]*
+
+
+* * *
+
+
 `Partner Normal`
 
 `Partner Name`: "This is the deepest point in Apple Woods, isn't it?"

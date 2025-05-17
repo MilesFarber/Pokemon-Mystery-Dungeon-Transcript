@@ -1,6 +1,12 @@
 * * *
 
 
+*Scenario flag: [19, 4]*
+
+
+* * *
+
+
 `Partner Surprised` ❗
 
 `Partner Name`: "Oh! There's Grovyle!"

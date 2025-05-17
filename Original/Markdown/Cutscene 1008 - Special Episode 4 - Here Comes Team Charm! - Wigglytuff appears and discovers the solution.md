@@ -1,3 +1,6 @@
+*Scenario flag: [45, 9]*
+
+
 `Gardevoir Worried`
 
 `Gardevoir`: "I wonder if there's...some kind of puzzle..."

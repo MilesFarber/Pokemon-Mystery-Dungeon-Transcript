@@ -1,4 +1,4 @@
-*If the Team has reached Temporal Tower:*
+*If the player has progressed far enough:*
 
 
   * *Anchor: <a name="0"></a>0*
@@ -37,6 +37,9 @@
 
 
 *Else:*
+
+
+  * *Scenario flag: [26, 3]*
 
 
   * *Jump to [anchor 0](#0)*

@@ -41,7 +41,7 @@
 `Chatot`: "Everyone: HOORAY!"
 
 
-*If the Team has jumped into the desert quicksand:*
+*If the Hero has decided to jump into the quicksand pits:*
 
 
   * *Anchor: <a name="0"></a>0*

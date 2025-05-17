@@ -181,7 +181,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the Team has learned there's good news at the café:*
+*If the player has progressed far enough:*
 
 
   * *Jump to [anchor 23](#23)*

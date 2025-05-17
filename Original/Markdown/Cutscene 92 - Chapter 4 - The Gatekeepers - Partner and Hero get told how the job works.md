@@ -29,6 +29,9 @@
   * * * *
 
 
+  * *Scenario flag: [5, 2]*
+
+
   * `Partner Surprised`
 
   * `Partner Name`: "Yow! It's pitch black in here, `Hero Name`..."

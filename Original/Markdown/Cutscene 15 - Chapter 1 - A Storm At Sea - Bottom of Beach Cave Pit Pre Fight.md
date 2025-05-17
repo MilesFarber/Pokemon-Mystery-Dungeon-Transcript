@@ -1,6 +1,12 @@
 * * *
 
 
+*Scenario flag: [2, 3]*
+
+
+* * *
+
+
 `Partner Determined`
 
 `Partner Name`: "Um... Hey!"

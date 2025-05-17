@@ -25,22 +25,16 @@ def 0:
 				Template
 					Type: actor
 					Identifier: ACTOR_PLAYER
-			Identifier: Position
-				Template
-					Type: m0
-					Identifier: 28.5
-					Identifier: 2.5
+				Argument: 1
+				Argument: Position<'m0', 28.5, 2.5>
 			Identifier: Wait
 				Argument: 10
 			Identifier: MovePositionMark
 				Template
 					Type: actor
 					Identifier: ACTOR_ATTENDANT1
-			Identifier: Position
-				Template
-					Type: m1
-					Identifier: 28.5
-					Identifier: 2.5
+				Argument: 1
+				Argument: Position<'m1', 28.5, 2.5>
 			Identifier: Wait
 				Argument: 20
 			Conditional: If
@@ -54,13 +48,14 @@ def 0:
 					Argument: 30
 				Identifier: hold
 				Identifier: end
-				Identifier: else
-					Argument: SCENARIO_MAIN
+			Conditional: Else
+				Identifier: SCENARIO_MAIN
 					Argument: scn
 					Argument: 26
 					Argument: 5
 				Identifier: jump
 					Argument: label_2
+			Identifier: break
 		Case:
 			Value: No
 			Identifier: message_Close

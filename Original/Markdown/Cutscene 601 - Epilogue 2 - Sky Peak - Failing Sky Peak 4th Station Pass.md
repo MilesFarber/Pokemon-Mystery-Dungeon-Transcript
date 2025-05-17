@@ -157,7 +157,7 @@
   * *Jump to [anchor 23](#23)*
 
 
-*If the Team has learned there's good news at the café:*
+*If the Team has reached Sky Peak's 1st Station Clearing:*
 
 
   * *Jump to [anchor 23](#23)*

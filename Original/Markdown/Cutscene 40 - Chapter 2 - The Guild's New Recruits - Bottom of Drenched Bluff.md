@@ -15,6 +15,9 @@
 
   * *If the player chooses "3":*
 
+  *   * *Scenario flag: [3, 6]*
+
+
   *   * *Anchor: <a name="3"></a>3*
 
 
@@ -42,6 +45,9 @@
   * *If the player chooses "default":*
 
   *   * *Anchor: <a name="2"></a>2*
+
+
+  *   * *Scenario flag: [3, 7]*
 
 
   *   * *Jump to [anchor 3](#3)*

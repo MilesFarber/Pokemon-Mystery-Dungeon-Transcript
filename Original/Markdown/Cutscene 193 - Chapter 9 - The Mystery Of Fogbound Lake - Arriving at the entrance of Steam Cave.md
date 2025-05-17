@@ -4,6 +4,9 @@
 * * *
 
 
+*Scenario flag: [11, 1]*
+
+
 `Partner Surprised`
 
 `Partner Name`: "Oh! I see it, `Hero Name`!"

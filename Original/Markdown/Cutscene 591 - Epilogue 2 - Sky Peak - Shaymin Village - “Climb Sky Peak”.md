@@ -18,8 +18,19 @@
   *   *   * *Anchor: <a name="4"></a>4*
 
 
+  *   * *Else:*
+
+
+  *   *   * *Scenario flag: [29, 11]*
+
+
   *   *   * *Jump to [anchor 4](#4)*
 
+
+  * *Else:*
+
+
+  *   * *If the player chooses "1":*
 
   *   *   * `Shaymin Normal`
 
@@ -37,11 +48,10 @@
   *   *   * *Jump to [anchor 2](#2)*
 
 
-  *   *   * `Shaymin Normal`
+  *   * *If the player chooses "default":*
 
-  *   *   * `Shaymin`: "You have too many team members. Shaymin cannot join your team."
-
-
+>You have too many team members. Shaymin cannot join your team.
+>
 >Head to the Chimecho Assembly Post near the entrance to reduce the number of members in your team.
 
 

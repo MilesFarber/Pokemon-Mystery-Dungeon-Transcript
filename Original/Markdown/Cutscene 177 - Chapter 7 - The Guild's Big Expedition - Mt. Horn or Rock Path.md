@@ -25,10 +25,16 @@
   *   * `Partner Name`: "All right! Let's roll out!"
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the first leg of the expedition has begun:*
 
 
   *   *   * *Anchor: <a name="4"></a>4*
+
+
+  *   * *Else:*
+
+
+  *   *   * *Scenario flag: [9, 5]*
 
 
   *   *   * *Jump to [anchor 4](#4)*
@@ -46,10 +52,16 @@
   *   * `Partner Name`: "All right! Let's roll out!"
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the first leg of the expedition has begun:*
 
 
   *   *   * *Anchor: <a name="5"></a>5*
+
+
+  *   * *Else:*
+
+
+  *   *   * *Scenario flag: [9, 5]*
 
 
   *   *   * *Jump to [anchor 5](#5)*

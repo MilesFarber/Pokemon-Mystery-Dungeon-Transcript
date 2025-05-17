@@ -13,7 +13,7 @@
 `Wigglytuff`: "Take care!"
 
 
-*If Banette and Skorupi have been exposed as bullies:*
+*If the player has progressed far enough:*
 
 
   * *Anchor: <a name="0"></a>0*
@@ -25,7 +25,7 @@
   * *Anchor: <a name="3"></a>3*
 
 
-*If Armaldo has scared off Banette and Skorupi:*
+*If the player has progressed far enough:*
 
 
   * * * *

@@ -1,3 +1,6 @@
+*Scenario flag: [4, 4]*
+
+
 `Bidoof Normal`
 
 `Bidoof`: "Oh, yes sirree! Reckon you all are all ready!"

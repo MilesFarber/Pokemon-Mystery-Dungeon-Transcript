@@ -1,3 +1,6 @@
+*Scenario flag: [42, 0]*
+
+
 `Banette Normal`
 
 `Banette`: "We... We've come pretty far..."

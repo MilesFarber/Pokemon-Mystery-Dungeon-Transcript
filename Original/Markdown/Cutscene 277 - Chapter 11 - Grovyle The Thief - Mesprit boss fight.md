@@ -1,6 +1,12 @@
 * * *
 
 
+*Scenario flag: [15, 3]*
+
+
+* * *
+
+
 `Partner Normal`
 
 `Partner Name`: "Th-this is..."

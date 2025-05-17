@@ -4,6 +4,9 @@
   * *Anchor: <a name="0"></a>0*
 
 
+  * *Scenario flag: [43, 1]*
+
+
   * `💬`: "One night at the guild..."
 
 

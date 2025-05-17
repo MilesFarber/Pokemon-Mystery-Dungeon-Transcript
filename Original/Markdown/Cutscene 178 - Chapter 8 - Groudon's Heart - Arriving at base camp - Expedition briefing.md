@@ -1,3 +1,6 @@
+*Scenario flag: [10, 1]*
+
+
 >Groudon's Heart
 
 

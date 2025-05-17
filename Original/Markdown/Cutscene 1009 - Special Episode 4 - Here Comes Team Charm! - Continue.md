@@ -6,6 +6,9 @@
   * *Anchor: <a name="0"></a>0*
 
 
+  * *Scenario flag: [45, 10]*
+
+
   * `Lopunny Normal`
 
   * `Lopunny`: "All right, let's go!"

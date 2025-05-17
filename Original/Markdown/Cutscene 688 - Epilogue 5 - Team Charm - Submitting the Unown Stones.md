@@ -47,5 +47,26 @@
 >The stone marker disappeared, and a hidden stairway was revealed!
 
 
+  * *Else:*
+
+
+>Debug: Unown Rock
+
+
+  *   * *If the player chooses "In possession.":*
+
+  *   *   * *Jump to [anchor 3](#3)*
+
+
+  *   * *If the player chooses "Not in possession.":*
+
+  *   *   * *Jump to [anchor 4](#4)*
+
+
+  *   * *If the player chooses "Check":*
+
+  *   *   * *Jump to [anchor 2](#2)*
+
+
 *If the player chooses "No":*
 

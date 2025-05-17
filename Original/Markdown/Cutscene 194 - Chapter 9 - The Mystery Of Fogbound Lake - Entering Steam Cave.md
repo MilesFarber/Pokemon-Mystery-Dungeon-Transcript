@@ -13,7 +13,7 @@
   * `Partner Name`: "OK, let's give it our very best, `Hero Name`!"
 
 
-  * *If the Team has arrived at Steam Cave:*
+  * *If the team has arrived at Steam Cave:*
 
 
   *   * * * *

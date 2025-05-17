@@ -1,4 +1,4 @@
-*If Bidoof has met the Kecleon Brothers:*
+*If the player has progressed far enough:*
 
 
   * *Anchor: <a name="0"></a>0*

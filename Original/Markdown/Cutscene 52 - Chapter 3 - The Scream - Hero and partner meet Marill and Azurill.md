@@ -1,3 +1,6 @@
+*Scenario flag: [4, 2]*
+
+
 `Marill`: "Misters Kecleon!"
 
 

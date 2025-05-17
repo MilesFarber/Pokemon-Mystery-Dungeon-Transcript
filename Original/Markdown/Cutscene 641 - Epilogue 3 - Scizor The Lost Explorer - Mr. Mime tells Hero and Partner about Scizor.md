@@ -1,3 +1,6 @@
+*Scenario flag: [29, 33]*
+
+
 `Mr. Mime Normal`
 
 `Mr. Mime`: "Hello! You have been exploring today as usual, yes? So very energetic!"

@@ -1,3 +1,6 @@
+*Scenario flag: [29, 20]*
+
+
 `Shaymin Determined`
 
 `Shaymin`: "I can see the 5th Station Clearing! Let's hurry!"

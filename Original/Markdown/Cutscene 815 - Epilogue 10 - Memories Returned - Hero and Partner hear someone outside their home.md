@@ -1,3 +1,6 @@
+*Scenario flag: [29, 98]*
+
+
 `💬`: "Oh! `Hero Name`! `Partner Name`!"
 
 

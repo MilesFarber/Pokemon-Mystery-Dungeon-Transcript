@@ -42,75 +42,74 @@ def 0:
 						Argument: 30
 					Identifier: hold
 					Identifier: end
-					Identifier: else
-						Argument: SCENARIO_MAIN
+				Conditional: Else
+					Identifier: SCENARIO_MAIN
 						Argument: scn
 						Argument: 29
 						Argument: 11
 					Identifier: jump
 						Argument: label_4
-					Identifier: else
-						Argument: switch
-						Argument: ProcessSpecial
-						Argument: PROCESS_SPECIAL_RECURITABLE_CAN_ADD
-						Argument: 21
-						Argument: 0
-						Argument: case
-						Argument: 1
-						Argument: message_Close
-					Identifier: SetAnimation
-						Template
-							Type: actor
-							Identifier: ACTOR_NPC_SHEIMI
-						Argument: 2
-					Identifier: Turn2DirectionLives
-						Template
-							Type: actor
-							Identifier: ACTOR_NPC_SHEIMI
-						Argument: 4
-						Argument: 10
-						Argument: ACTOR_PLAYER
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_NPC_SHEIMI
-					Identifier: Turn2DirectionLives
-						Template
-							Type: actor
-							Identifier: ACTOR_PLAYER
-						Argument: 4
-						Argument: 10
-						Argument: ACTOR_NPC_SHEIMI
-					Identifier: Turn2DirectionLives
-						Template
-							Type: actor
-							Identifier: ACTOR_ATTENDANT1
-						Argument: 4
-						Argument: 10
-						Argument: ACTOR_NPC_SHEIMI
-					Identifier: WaitExecuteLives
-						Argument: ACTOR_ATTENDANT1
-					Identifier: message_SetFace
-						Argument: ACTOR_NPC_SHEIMI
-						Argument: FACE_NORMAL
-						Argument: FACE_POS_BOTTOM_R_FACEINW
-					Identifier: message_Talk
-						Dialogue: You're all ready?
-					Identifier: message_Talk
-						Dialogue: All right, let's do our best to make it to the summit!
-					Identifier: message_Close
-					Identifier: bgm_FadeOut
-						Argument: 60
-					Identifier: screen_FadeOut
-						Argument: 1
-						Argument: 30
-					Identifier: jump
-						Argument: label_2
-					Identifier: default
-						Argument: message_Mail
-						Dialogue: [CN]You have too many team members. [CN][CS:N]Shaymin[CR] cannot join your team.
-					Identifier: message_Mail
-						Dialogue: [CN]Head to the [CS:K]Chimecho[CR] Assembly Post [CN]near the entrance to reduce the number of [CN]members in your team.
-					Identifier: message_Close
-					Identifier: end
+			Conditional: Else
+				Switch:
+					Variable: ProcessSpecial(PROCESS_SPECIAL_RECURITABLE_CAN_ADD, 21, 0)
+					Case:
+						Value: 1
+						Identifier: message_Close
+						Identifier: SetAnimation
+							Template
+								Type: actor
+								Identifier: ACTOR_NPC_SHEIMI
+							Argument: 2
+						Identifier: Turn2DirectionLives
+							Template
+								Type: actor
+								Identifier: ACTOR_NPC_SHEIMI
+							Argument: 4
+							Argument: 10
+							Argument: ACTOR_PLAYER
+						Identifier: WaitExecuteLives
+							Argument: ACTOR_NPC_SHEIMI
+						Identifier: Turn2DirectionLives
+							Template
+								Type: actor
+								Identifier: ACTOR_PLAYER
+							Argument: 4
+							Argument: 10
+							Argument: ACTOR_NPC_SHEIMI
+						Identifier: Turn2DirectionLives
+							Template
+								Type: actor
+								Identifier: ACTOR_ATTENDANT1
+							Argument: 4
+							Argument: 10
+							Argument: ACTOR_NPC_SHEIMI
+						Identifier: WaitExecuteLives
+							Argument: ACTOR_ATTENDANT1
+						Identifier: message_SetFace
+							Argument: ACTOR_NPC_SHEIMI
+							Argument: FACE_NORMAL
+							Argument: FACE_POS_BOTTOM_R_FACEINW
+						Identifier: message_Talk
+							Dialogue: You're all ready?
+						Identifier: message_Talk
+							Dialogue: All right, let's do our best to make it to the summit!
+						Identifier: message_Close
+						Identifier: bgm_FadeOut
+							Argument: 60
+						Identifier: screen_FadeOut
+							Argument: 1
+							Argument: 30
+						Identifier: jump
+							Argument: label_2
+					Case:
+						Value: default
+						Identifier: message_Mail
+							Dialogue: [CN]You have too many team members. [CN][CS:N]Shaymin[CR] cannot join your team.
+						Identifier: message_Mail
+							Dialogue: [CN]Head to the [CS:K]Chimecho[CR] Assembly Post [CN]near the entrance to reduce the number of [CN]members in your team.
+						Identifier: message_Close
+						Identifier: end
+			Identifier: break
 		Case:
 			Value: No
 			Identifier: message_Close

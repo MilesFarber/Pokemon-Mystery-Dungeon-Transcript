@@ -1,3 +1,6 @@
+*Scenario flag: [29, 22]*
+
+
 `Shaymin Normal`
 
 `Shaymin`: "We're almost to the 6th Station Clearing! Keep going!"

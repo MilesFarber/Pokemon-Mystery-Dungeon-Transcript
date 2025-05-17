@@ -19,6 +19,9 @@
 >`Hero Name` gave a Blue Gummi to Manaphy.
 
 
+  *   * *Scenario flag: [29, 44]*
+
+
   *   * `Manaphy Teary-Eyed` ❓
 
   *   * `Manaphy`: "Weh... Wah?"

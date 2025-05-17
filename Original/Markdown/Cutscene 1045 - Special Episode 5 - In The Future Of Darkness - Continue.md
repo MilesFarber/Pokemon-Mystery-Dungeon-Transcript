@@ -12,6 +12,12 @@
   *   * *Anchor: <a name="2"></a>2*
 
 
+  * *Else:*
+
+
+  *   * *Scenario flag: [47, 5]*
+
+
   *   * *Jump to [anchor 2](#2)*
 
 
