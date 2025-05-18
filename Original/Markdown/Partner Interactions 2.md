@@ -267,7 +267,7 @@
 
   * *If the player chooses "67":*
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the team has arrived at Temporal Tower:*
 
 
   *   *   * `Partner Determined`
@@ -316,7 +316,7 @@
 
   * *If the player chooses "97":*
 
-  *   * *If the Team has encountered Palkia:*
+  *   * *If the team has encountered Palkia:*
 
 
   *   *   * *Anchor: <a name="23"></a>23*
@@ -358,7 +358,7 @@
 
   * *If the player chooses "228":*
 
-  *   * *If the player has progressed far enough:*
+  *   * *If Chatot has given the Guild their orders on the Hidden Land:*
 
 
   *   *   * `Partner Normal`
@@ -407,13 +407,13 @@
 
   *   * *If the player chooses "98":*
 
-  *   *   * *If the Team has encountered Palkia:*
+  *   *   * *If the team has encountered Palkia:*
 
 
   *   *   *   * *Jump to [anchor 23](#23)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has entered Deep Spacial Rift:*
 
 
   *   *   *   * `Partner Determined`
@@ -453,7 +453,7 @@
 
   *   * *If the player chooses "102":*
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If Darkrai has begun revealing his role in the Hero's time travel accident:*
 
 
   *   *   *   * `Partner Determined`
@@ -474,7 +474,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has entered the Dark Crater:*
 
 
   *   *   *   * `Partner Pain`
@@ -522,7 +522,7 @@
   *   *   * *Anchor: <a name="22"></a>22*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If Chatot has informed the team of Manaphy's return:*
 
 
   *   *   *   * *Anchor: <a name="88"></a>88*
@@ -536,7 +536,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has embarked towards the Dark Crater:*
 
 
   *   *   *   * `Partner Determined`
@@ -557,7 +557,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has learned the location of the Dark Crater:*
 
 
   *   *   *   * `Partner Normal`
@@ -578,7 +578,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the Team has been defeated in Spacial Rift:*
+  *   *   * *If Lapras has told the team about Palkia:*
 
 
   *   *   *   * `Partner Normal`
@@ -594,7 +594,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has informed the Guild of Cresselia's involvement in the spreading nightmares:*
 
 
   *   *   *   * `Partner Normal`
@@ -610,7 +610,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has entered Azurill's nightmare:*
 
 
   *   *   *   * `Partner Determined`
@@ -626,7 +626,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has found Drowzee and asked for his help with Azurill's nightmare:*
 
 
   *   *   *   * `Partner Determined`
@@ -642,7 +642,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has found Azurill trapped in a nightmare:*
 
 
   *   *   *   * `Partner Normal`
@@ -664,7 +664,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the Team has unlocked Concealed Ruins:*
+  *   *   * *If the team has unlocked Concealed Ruins:*
 
 
   *   *   *   * *Jump to [anchor 88](#88)*
@@ -681,7 +681,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If Team Charm has arrived at the Guild:*
 
 
   *   *   *   * `Partner Normal`
@@ -702,13 +702,13 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If Phione has given the team the Phione Dew:*
 
 
   *   *   *   * *Jump to [anchor 88](#88)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If Manaphy has fainted on the beach:*
 
 
   *   *   *   * `Partner Determined`
@@ -724,7 +724,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If Chatot has joined the search for Manaphy:*
 
 
   *   *   *   * `Partner Sad`
@@ -735,7 +735,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has played with Manaphy at the beach:*
 
 
   *   *   *   * `Partner Surprised`
@@ -746,7 +746,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the Hero has fed Manaphy a second Blue Gummi:*
 
 
 >Who would you like to speak to?
@@ -782,7 +782,7 @@
   *   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the Partner has suggested giving Manaphy a second Blue Gummi:*
 
 
   *   *   *   * `Partner Normal`
@@ -793,7 +793,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the Hero has fed Manaphy a Blue Gummi:*
 
 
   *   *   *   * `Partner Normal`
@@ -804,7 +804,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the Partner has suggested giving Manaphy a Blue Gummi:*
 
 
   *   *   *   * `Partner Normal`
@@ -820,7 +820,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If Manaphy has hatched from its egg:*
 
 
   *   *   *   * `Partner Normal`
@@ -836,7 +836,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If Sunflora has told the team about the Surround Sea:*
 
 
   *   *   *   * `Partner Normal`
@@ -858,7 +858,7 @@
   *   *   *   * *Jump to [anchor 88](#88)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If Scizor has granted the team the Secret Rank:*
 
 
   *   *   *   * `Partner Worried`
@@ -894,7 +894,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has spoken to Mr. Mime and learned about Scizor:*
 
 
   *   *   *   * `Partner Normal`
@@ -921,7 +921,7 @@
   *   *   *   * *Jump to [anchor 88](#88)*
 
 
-  *   *   * *If the Team has reached Sky Peak's 1st Station Clearing:*
+  *   *   * *If the team has arrived at Shaymin Village:*
 
 
   *   *   *   * *If the player chooses "156":*
@@ -952,7 +952,7 @@
   *   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has learned there's happy news out of the café:*
 
 
   *   *   *   * `Partner Normal`
@@ -979,7 +979,7 @@
   *   *   *   * *Jump to [anchor 88](#88)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has passed the Graduation Exam:*
 
 
   *   *   *   * `Partner Normal`
@@ -990,7 +990,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has fallen into a pit trap in Mystifying Forest:*
 
 
   *   *   *   * `Partner Normal`
@@ -1006,7 +1006,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has entered Mystifying Forest:*
 
 
   *   *   *   * `Partner Normal`
@@ -1022,7 +1022,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If the team has run into Teddiursa and Ursaring:*
 
 
   *   *   *   * `Partner Normal`
@@ -1033,7 +1033,7 @@
   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   * *If the player has progressed far enough:*
+  *   *   * *If Chatot has announced the Graduation Exam:*
 
 
   *   *   *   * `Partner Normal`

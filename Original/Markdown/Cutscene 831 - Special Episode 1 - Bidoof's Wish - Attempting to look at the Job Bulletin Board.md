@@ -1,4 +1,4 @@
-*If the player has progressed far enough:*
+*If Bidoof has completed his errand:*
 
 
   * *Anchor: <a name="0"></a>0*

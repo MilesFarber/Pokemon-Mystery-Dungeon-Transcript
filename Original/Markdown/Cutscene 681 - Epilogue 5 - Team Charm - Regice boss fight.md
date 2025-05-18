@@ -1,7 +1,7 @@
 * * *
 
 
-*If the Team has encountered Regice:*
+*If the team has encountered Regice:*
 
 
   * *Anchor: <a name="0"></a>0*

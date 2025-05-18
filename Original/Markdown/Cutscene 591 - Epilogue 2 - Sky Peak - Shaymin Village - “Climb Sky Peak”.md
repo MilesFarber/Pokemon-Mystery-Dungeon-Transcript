@@ -12,7 +12,7 @@
   *   * *Anchor: <a name="2"></a>2*
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the team has returned to Treasure Town from Shaymin Village:*
 
 
   *   *   * *Anchor: <a name="4"></a>4*

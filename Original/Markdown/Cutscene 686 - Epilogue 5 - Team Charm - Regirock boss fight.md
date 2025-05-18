@@ -1,7 +1,7 @@
 * * *
 
 
-*If the Team has encountered Regirock:*
+*If the team has encountered Regirock:*
 
 
   * *Anchor: <a name="0"></a>0*

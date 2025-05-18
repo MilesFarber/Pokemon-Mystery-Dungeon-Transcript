@@ -18,7 +18,7 @@
   * `Partner Name`: "OK! Let's go!"
 
 
-  * *If the player has progressed far enough:*
+  * *If the team has entered the Hidden Land:*
 
 
   *   * *Anchor: <a name="2"></a>2*

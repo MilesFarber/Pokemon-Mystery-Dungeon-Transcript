@@ -1,4 +1,4 @@
-*If the Team has been defeated in Spacial Rift:*
+*If the team has been defeated in Spacial Rift:*
 
 
   * *Anchor: <a name="0"></a>0*

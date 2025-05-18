@@ -26,7 +26,7 @@
   *   * * * *
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the team has embarked towards the Dark Crater:*
 
 
   *   *   * *Anchor: <a name="5"></a>5*

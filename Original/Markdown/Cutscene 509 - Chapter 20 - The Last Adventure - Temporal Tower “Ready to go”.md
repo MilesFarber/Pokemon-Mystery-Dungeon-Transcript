@@ -1,4 +1,4 @@
-*If the player has progressed far enough:*
+*If the team has arrived at Temporal Tower:*
 
 
   * *Anchor: <a name="0"></a>0*

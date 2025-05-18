@@ -3,7 +3,7 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * *If the player has progressed far enough:*
+  * *If the team has entered Temporal Spire:*
 
 
   *   * `Partner Normal`
@@ -14,7 +14,7 @@
   *   * *Anchor: <a name="17"></a>17*
 
 
-  * *If the player has progressed far enough:*
+  * *If the team has arrived at Temporal Spire:*
 
 
   *   * `Partner Sad`
@@ -35,7 +35,7 @@
   *   * *Jump to [anchor 17](#17)*
 
 
-  * *If the player has progressed far enough:*
+  * *If the team has arrived at the Rainbow Stoneship:*
 
 
   *   * `Partner Normal`
@@ -51,7 +51,7 @@
   *   * *Jump to [anchor 17](#17)*
 
 
-  * *If the player has progressed far enough:*
+  * *If the team has entered the Hidden Highland:*
 
 
   *   * `Partner Normal`
@@ -67,7 +67,7 @@
   *   * *Jump to [anchor 17](#17)*
 
 
-  * *If the player has progressed far enough:*
+  * *If the team has entered the Hidden Land:*
 
 
   *   * `Partner Normal`
@@ -83,7 +83,7 @@
   *   * *Jump to [anchor 17](#17)*
 
 
-  * *If the player has progressed far enough:*
+  * *If Team Skull has stolen the relic fragment a second time:*
 
 
   *   * `Partner Normal`
@@ -94,13 +94,13 @@
   *   * *Jump to [anchor 17](#17)*
 
 
-  * *If the player has progressed far enough:*
+  * *If the Guild has prepared to leave for Brine Cave:*
 
 
   *   * *Jump to [anchor 17](#17)*
 
 
-  * *If the player has progressed far enough:*
+  * *If the team has entered Sealed Ruin Pit:*
 
 
   *   * `Partner Normal`
@@ -111,7 +111,7 @@
   *   * *Jump to [anchor 17](#17)*
 
 
-  * *If the player has progressed far enough:*
+  * *If the team has observed the lights of the stockade in the distance:*
 
 
   *   * `Partner Normal`
@@ -291,13 +291,13 @@
   *   *   * *Jump to [anchor 17](#17)*
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the Guild has prepared to leave for Brine Cave:*
 
 
   *   *   * *Jump to [anchor 45](#45)*
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the Partner has wondered if Torkoal has returned:*
 
 
   *   *   * `Partner Normal`
@@ -313,7 +313,7 @@
   *   *   * *Jump to [anchor 17](#17)*
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If Team Skull has ambushed Torkoal:*
 
 
   *   *   * *If the player chooses "311":*
@@ -370,7 +370,7 @@
   *   *   *   * *Jump to [anchor 17](#17)*
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If Torkoal has arrived at the sentry grate:*
 
 
   *   *   * `Partner Normal`
@@ -386,7 +386,7 @@
   *   *   * *Jump to [anchor 17](#17)*
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the Guild has given their update on finding the Hidden Land:*
 
 
   *   *   * `Partner Normal`
@@ -407,7 +407,7 @@
   *   *   * *Jump to [anchor 17](#17)*
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If Chatot has given the Guild their orders on the Hidden Land:*
 
 
   *   *   * `Partner Normal`
@@ -423,13 +423,13 @@
   *   *   * *Jump to [anchor 17](#17)*
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If Chapter 15 has begun:*
 
 
   *   *   * *Jump to [anchor 17](#17)*
 
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the Hero has tried to open the cell doors:*
 
 
   *   *   * *Jump to [anchor 17](#17)*
@@ -937,7 +937,7 @@
   *   *   * *Jump to [anchor 17](#17)*
 
 
-  *   * *If Chatot has spotted the team wandering around lost:*
+  *   * *If Chatot has spotted the team wandering around:*
 
 
   *   *   * `Partner Normal`
