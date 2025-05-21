@@ -69,7 +69,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "After all, aren't we Team Charm? 🩷"
+`Lopunny`: "After all, aren't we Team Charm? 🤍"
 
 
 `Medicham Normal`
@@ -124,7 +124,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "Don't disappoint me! 🩷"
+`Lopunny`: "Don't disappoint me! 🤍"
 
 
 `Medicham Angry` 💢
@@ -134,7 +134,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "Here... goes! 🩷"
+`Lopunny`: "Here... goes! 🤍"
 
 
 >Lopunny opened the treasure chest!
@@ -155,7 +155,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "Is... inside? 🩷"
+`Lopunny`: "Is... inside? 🤍"
 
 
 * * *
@@ -390,6 +390,6 @@
 
 `Lopunny Normal`
 
-`Lopunny`: "OK. Let's go! 🩷"
+`Lopunny`: "OK. Let's go! 🤍"
 
 

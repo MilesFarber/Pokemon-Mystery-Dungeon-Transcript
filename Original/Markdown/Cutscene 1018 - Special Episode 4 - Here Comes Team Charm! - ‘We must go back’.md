@@ -48,7 +48,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "We can have our revenge, and everything will be just fine. 🩷"
+`Lopunny`: "We can have our revenge, and everything will be just fine. 🤍"
 
 
 `Gardevoir Normal`

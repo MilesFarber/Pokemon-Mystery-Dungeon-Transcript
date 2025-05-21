@@ -43,7 +43,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "But isn't it nice? ♪ Now we know the way. 🩷"
+`Lopunny`: "But isn't it nice? ♪ Now we know the way. 🤍"
 
 
 `Gardevoir Normal`

@@ -84,6 +84,6 @@
 
 `Lopunny Normal`
 
-`Lopunny`: "OK. Let's go! 🩷"
+`Lopunny`: "OK. Let's go! 🤍"
 
 

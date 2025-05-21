@@ -53,7 +53,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "Well, no. Actually, I don't have a clue, either. 🩷"
+`Lopunny`: "Well, no. Actually, I don't have a clue, either. 🤍"
 
 
 `Medicham Worried`
@@ -68,7 +68,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "That's just like you, Medicham! ♪ Thank you! 🩷"
+`Lopunny`: "That's just like you, Medicham! ♪ Thank you! 🤍"
 
 
 `Medicham Normal`

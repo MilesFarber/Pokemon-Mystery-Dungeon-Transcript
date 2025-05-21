@@ -56,7 +56,7 @@
 
 `Lopunny Normal`
 
-`Lopunny`: "There's nothing we can't do! 🩷"
+`Lopunny`: "There's nothing we can't do! 🤍"
 
 
 * * *

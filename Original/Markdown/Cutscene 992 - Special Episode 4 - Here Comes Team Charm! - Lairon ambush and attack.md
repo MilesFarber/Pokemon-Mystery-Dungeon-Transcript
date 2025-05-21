@@ -51,7 +51,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "Wouldn't that help you relax? 🩷"
+`Lopunny`: "Wouldn't that help you relax? 🤍"
 
 
 `Gardevoir Happy`
@@ -193,6 +193,6 @@
 
 `Lopunny Normal`
 
-`Lopunny`: "OK. Let's go! 🩷"
+`Lopunny`: "OK. Let's go! 🤍"
 
 

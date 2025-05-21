@@ -72,7 +72,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "Sounds like it will fit us perfectly! 🩷"
+`Lopunny`: "Sounds like it will fit us perfectly! 🤍"
 
 
 `Medicham Happy` 🔆
@@ -160,7 +160,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "That kind of treasure...sounds exactly like the kind of thing we like to look for! 🩷"
+`Lopunny`: "That kind of treasure...sounds exactly like the kind of thing we like to look for! 🤍"
 
 
 `Gardevoir Normal`

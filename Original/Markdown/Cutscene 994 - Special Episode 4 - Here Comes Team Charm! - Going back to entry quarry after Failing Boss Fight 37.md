@@ -5,7 +5,7 @@
 
 `Lopunny Normal`
 
-`Lopunny`: "We'll do better next time. 🩷"
+`Lopunny`: "We'll do better next time. 🤍"
 
 
 `Gardevoir Normal`

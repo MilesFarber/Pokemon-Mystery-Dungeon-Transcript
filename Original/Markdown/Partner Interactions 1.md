@@ -1,4 +1,4 @@
-*If the player chooses "27":*
+*If the team has entered Mt. Horn:*
 
   * *Anchor: <a name="0"></a>0*
 
@@ -214,7 +214,7 @@
   *   * *Jump to [anchor 17](#17)*
 
 
-*If the player chooses "default":*
+*If the team has entered a certain area:*
 
   * *Anchor: <a name="1"></a>1*
 
@@ -316,7 +316,7 @@
   *   * *If Team Skull has ambushed Torkoal:*
 
 
-  *   *   * *If the player chooses "311":*
+  *   *   * *If the team has entered the Beach:*
 
   *   *   *   * *If certain conditions are met:*
 
@@ -350,7 +350,7 @@
   *   *   *   *   * *Jump to [anchor 17](#17)*
 
 
-  *   *   * *If the player chooses "default":*
+  *   *   * *If the team has entered a certain area:*
 
   *   *   *   * `Partner Normal`
 

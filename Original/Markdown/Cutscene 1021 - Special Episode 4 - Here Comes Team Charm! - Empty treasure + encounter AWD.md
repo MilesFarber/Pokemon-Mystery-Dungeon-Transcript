@@ -36,7 +36,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "You're pretty simple fellows, huh? 🩷"
+`Lopunny`: "You're pretty simple fellows, huh? 🤍"
 
 
 `Arbok Angry`
@@ -128,6 +128,6 @@
 
 `Lopunny Normal`
 
-`Lopunny`: "OK. Let's go! 🩷"
+`Lopunny`: "OK. Let's go! 🤍"
 
 

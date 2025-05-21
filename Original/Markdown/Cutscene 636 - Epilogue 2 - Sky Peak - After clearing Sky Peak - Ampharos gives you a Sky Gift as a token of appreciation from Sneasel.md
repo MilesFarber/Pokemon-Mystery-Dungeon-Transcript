@@ -52,7 +52,7 @@
 >
 >You gently open the lid...
 >
->Inside was the !
+>Inside was the `Special Item`!
 >
 >A warm and fuzzy feeling falls over you...
 

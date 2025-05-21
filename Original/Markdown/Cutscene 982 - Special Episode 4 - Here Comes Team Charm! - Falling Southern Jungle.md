@@ -5,7 +5,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "So it goes. That's how it is sometimes. 🩷"
+`Lopunny`: "So it goes. That's how it is sometimes. 🤍"
 
 
 `Gardevoir Normal`
@@ -38,7 +38,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "We don't really need to worry about another exploration team finding it before we do. 🩷"
+`Lopunny`: "We don't really need to worry about another exploration team finding it before we do. 🤍"
 
 
 `Lopunny Normal`

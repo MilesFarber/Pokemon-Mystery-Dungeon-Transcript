@@ -38,7 +38,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "I think it's fine. Pick whichever one you like. 🩷"
+`Lopunny`: "I think it's fine. Pick whichever one you like. 🤍"
 
 
 `Gardevoir Normal`

@@ -174,7 +174,7 @@
   * *Anchor: <a name="21"></a>21*
 
 
->The  was inside!
+>The `Special Item` was inside!
 
 
   * *If the player chooses "0":*

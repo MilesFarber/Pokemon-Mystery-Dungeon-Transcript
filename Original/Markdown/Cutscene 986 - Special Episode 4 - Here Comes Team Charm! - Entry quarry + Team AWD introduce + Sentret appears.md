@@ -18,7 +18,7 @@
 
 `Dunsparce Normal` ❗
 
-`Dunsparce`: "Wow! ♪ Pretty ladies! 🩷"
+`Dunsparce`: "Wow! ♪ Pretty ladies! 🤍"
 
 
 `Magmortar Normal`
@@ -43,7 +43,7 @@
 
 `Lopunny Normal`
 
-`Lopunny`: "It's not good to judge others by their appearance. 🩷"
+`Lopunny`: "It's not good to judge others by their appearance. 🤍"
 
 
 `Dunsparce Normal`
@@ -53,7 +53,7 @@
 
 `Dunsparce Sigh`
 
-`Dunsparce`: "Ummm... Whoa... 🩷"
+`Dunsparce`: "Ummm... Whoa... 🤍"
 
 
 `Lopunny Normal`
@@ -143,7 +143,7 @@
 
 `Lopunny Normal`
 
-`Lopunny`: "We're Team Charm... Nothing's impossible! 🩷"
+`Lopunny`: "We're Team Charm... Nothing's impossible! 🤍"
 
 
 * * *
@@ -156,7 +156,7 @@
 
 `Dunsparce Sigh`
 
-`Dunsparce`: "Ummm... Whoa... 🩷"
+`Dunsparce`: "Ummm... Whoa... 🤍"
 
 
 ⚞

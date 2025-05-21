@@ -5,7 +5,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "Well, it happens sometimes. This kind of thing. 🩷"
+`Lopunny`: "Well, it happens sometimes. This kind of thing. 🤍"
 
 
 `Gardevoir Normal`

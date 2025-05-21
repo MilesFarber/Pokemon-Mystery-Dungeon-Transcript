@@ -28,7 +28,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "Hee-hee! It's a date! 🩷"
+`Lopunny`: "Hee-hee! It's a date! 🤍"
 
 
 `Medicham Worried`
@@ -103,7 +103,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "I knew it. ♪ We are...the best, aren't we? 🩷"
+`Lopunny`: "I knew it. ♪ We are...the best, aren't we? 🤍"
 
 
 `Medicham Happy`
@@ -248,7 +248,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "Hey, ummm... ♪ Wigglytuff. 🩷"
+`Lopunny`: "Hey, ummm... ♪ Wigglytuff. 🤍"
 
 
 `Lopunny Happy`
@@ -258,7 +258,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "We could give you this. Would you like that? 🩷"
+`Lopunny`: "We could give you this. Would you like that? 🤍"
 
 
 `Wigglytuff Surprised` ❗

@@ -1,4 +1,4 @@
-*If the player chooses "== 51":*
+*If the team is going on a rescue mission:*
 
   * *Anchor: <a name="0"></a>0*
 
@@ -10,6 +10,8 @@
 
   * *Anchor: <a name="94"></a>94*
 
+
+*If the team is awaiting rescue:*
 
   * `Partner Normal`
 
@@ -39,7 +41,9 @@
   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "23":*
+*If the team is having a normal day:*
+
+  * *If the team has entered Craggy Coast:*
 
   *   * `Partner Normal`
 
@@ -54,7 +58,7 @@
   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "24":*
+  * *If the team has entered Rock Path:*
 
   *   * *If the first leg of the expedition has begun:*
 
@@ -88,7 +92,7 @@
   *   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "25":*
+  * *If the team has entered Foggy Forest:*
 
   *   * *If the second leg of the expedition has begun:*
 
@@ -112,7 +116,7 @@
   *   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "26":*
+  * *If the team has entered Rock Path:*
 
   *   * *If Team Skull has attacked Wigglytuff:*
 
@@ -136,12 +140,12 @@
   *   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "38":*
+  * *If the team has entered a certain area:*
 
   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "45":*
+  * *If the team has entered Sealed Ruin:*
 
   *   * `Partner Surprised`
 
@@ -151,7 +155,7 @@
   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "46":*
+  * *If the team has entered Deep Sealed Ruin:*
 
   *   * `Partner Determined`
 
@@ -166,7 +170,7 @@
   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "47":*
+  * *If the team has entered Dusk Forest:*
 
   *   * `Partner Determined`
 
@@ -181,7 +185,7 @@
   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "50":*
+  * *If the team has entered Treeshroud Forest:*
 
   *   * `Partner Determined`
 
@@ -191,7 +195,7 @@
   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "51":*
+  * *If the team has entered Treeshroud Forest after previously failing:*
 
   *   * `Partner Determined`
 
@@ -206,7 +210,7 @@
   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "52":*
+  * *If the team has entered Deep Treeshroud Forest:*
 
   *   * `Partner Worried`
 
@@ -226,7 +230,7 @@
   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "55":*
+  * *If the team has entered Brine Cave:*
 
   *   * `Partner Normal`
 
@@ -241,9 +245,9 @@
   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "59":*
+  * *If the team has entered Hidden Land:*
 
-  *   * *If the player has progressed far enough:*
+  *   * *If the team has ridden on the Rainbow Stoneship:*
 
 
   *   *   * `Partner Normal`
@@ -265,7 +269,7 @@
   *   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "67":*
+  * *If the team has entered Temporal Tower:*
 
   *   * *If the team has arrived at Temporal Tower:*
 
@@ -299,7 +303,7 @@
   *   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "74":*
+  * *If the team has entered Mystifying Forest:*
 
   *   * `Partner Normal`
 
@@ -314,7 +318,7 @@
   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "97":*
+  * *If the team has entered Spacial Rift:*
 
   *   * *If the team has encountered Palkia:*
 
@@ -356,7 +360,7 @@
   *   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "228":*
+  * *If the team has entered Hot Spring:*
 
   *   * *If Chatot has given the Guild their orders on the Hidden Land:*
 
@@ -390,9 +394,9 @@
   *   *   * *Jump to [anchor 94](#94)*
 
 
-  * *If the player chooses "default":*
+  * *If the team has entered a certain area:*
 
-  *   * *If the player chooses "27":*
+  *   * *If the team has entered Mt. Horn:*
 
   *   *   * *Anchor: <a name="19"></a>19*
 
@@ -405,7 +409,7 @@
   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   * *If the player chooses "98":*
+  *   * *If the team has entered Deep Spacial Rift:*
 
   *   *   * *If the team has encountered Palkia:*
 
@@ -451,7 +455,7 @@
   *   *   *   * *Jump to [anchor 19](#19)*
 
 
-  *   * *If the player chooses "102":*
+  *   * *If the team has entered Dark Crater:*
 
   *   *   * *If Darkrai has begun revealing his role in the Hero's time travel accident:*
 
@@ -517,7 +521,7 @@
   *   *   *   * *Jump to [anchor 19](#19)*
 
 
-  *   * *If the player chooses "default":*
+  *   * *If the team has entered a certain area:*
 
   *   *   * *Anchor: <a name="22"></a>22*
 
@@ -924,7 +928,7 @@
   *   *   * *If the team has arrived at Shaymin Village:*
 
 
-  *   *   *   * *If the player chooses "156":*
+  *   *   *   * *If the team has entered Shaymin Village:*
 
   *   *   *   *   * `Partner Normal`
 
@@ -939,7 +943,7 @@
   *   *   *   *   * *Jump to [anchor 94](#94)*
 
 
-  *   *   *   * *If the player chooses "default":*
+  *   *   *   * *If the team has entered a certain area:*
 
   *   *   *   *   * *Anchor: <a name="96"></a>96*
 

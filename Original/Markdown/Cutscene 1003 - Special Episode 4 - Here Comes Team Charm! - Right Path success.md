@@ -33,7 +33,7 @@
 
 `Lopunny Happy`
 
-`Lopunny`: "I seem to be a bit confused. 🩷"
+`Lopunny`: "I seem to be a bit confused. 🤍"
 
 
 `Medicham Angry`
