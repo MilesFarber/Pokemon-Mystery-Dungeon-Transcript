@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "It's him! It's that nice old Pokémon we met!"
 
@@ -16,7 +19,7 @@
 `Wigglytuff`: "Go ask Torkoal for advice! ♪"
 
 
-`Partner Normal` ⚟
+`Partner Normal`
 
 `Partner Name`: "I think we got to the Hot Spring the first time through Waterfall Cave, `Hero Name`."
 
@@ -46,7 +49,10 @@
 `Partner Name`: "Huh?"
 
 
-`Partner Normal` ❗
+`Hero`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "My stomach growled!"
 
@@ -66,7 +72,10 @@
 `Chimecho`: "We can all get to work tomorrow!"
 
 
-`Partner Happy` ❗
+`Hero`: ❗
+
+
+`Partner Happy`
 
 `Partner Name`: "Hey, `Hero Name`'s belly growled...again!"
 
@@ -81,9 +90,7 @@
 `Loudred`: "What a laugh, `Hero Name`! Letting your belly bark back at Chimecho, eh?"
 
 
-`Loudred Normal` 🔆
-
-`Loudred`: "Everyone: HA HA HA!"
+`💬`: "Everyone: HA HA HA!"
 
 
 * * *

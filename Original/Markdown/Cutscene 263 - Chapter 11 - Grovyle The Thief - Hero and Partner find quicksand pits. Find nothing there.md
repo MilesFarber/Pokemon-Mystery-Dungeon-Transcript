@@ -39,7 +39,10 @@
 `Partner Name`: "I guess there's nothing here."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Oh? What's wrong, `Hero Name`?"
 
@@ -82,6 +85,9 @@
 `Partner Normal`
 
 `Partner Name`: "Say, `Hero Name`!"
+
+
+`Hero`: ❗
 
 
 `Partner Happy` 🔆

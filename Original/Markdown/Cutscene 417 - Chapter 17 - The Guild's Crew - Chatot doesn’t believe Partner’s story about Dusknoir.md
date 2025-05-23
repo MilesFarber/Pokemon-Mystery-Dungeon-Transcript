@@ -1,7 +1,7 @@
 * * *
 
 
-`Chatot Surprised` ❗
+`Chatot Surprised`
 
 `Chatot`: "...What?! What was that again?"
 
@@ -11,7 +11,7 @@
 `Chatot`: "Just...just hold on for a moment."
 
 
-`Chatot Surprised`
+`Chatot Surprised` 💦
 
 `Chatot`: "Let me get this story straight!"
 
@@ -131,7 +131,7 @@
 `Chatot`: "`Partner Name` and `Hero Name`..."
 
 
-`Chatot Joyous`
+`Chatot Joyous` 🔆
 
 `Chatot`: "You must have had a bad dream or something!"
 
@@ -151,12 +151,12 @@
 `Partner Name`: "Now, hold on a second!"
 
 
-`Partner Surprised`
+`Partner Surprised` 💦
 
 `Partner Name`: "Are you accusing us of lying?"
 
 
-`Partner Surprised`
+`Partner Surprised` 💦
 
 `Partner Name`: "What we just told you is all true."
 
@@ -186,22 +186,22 @@
 `Chatot`: "That's quite enough!"
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "So tell me! Is there any part of your story that's even remotely plausible?"
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "A place called the Hidden Land?!"
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "I'm the head of intelligence here, and I've heard of no such place."
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "Besides, the great Dusknoir is far too kind to do anything like you've alleged!"
 
@@ -211,12 +211,12 @@
 `Partner Name`: "Well, yes, I couldn't believe the truth about Dusknoir either..."
 
 
-`Partner Pain`
+`Partner Pain` 💦
 
 `Partner Name`: "It was a huge shock. And it was really hard to accept."
 
 
-`Partner Pain`
+`Partner Pain` 💦
 
 `Partner Name`: "But...!"
 
@@ -271,7 +271,10 @@
 `Sunflora`: "But..."
 
 
-`Chatot Normal` ❗
+`Chatot`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "Hm? What is it, Sunflora?"
 

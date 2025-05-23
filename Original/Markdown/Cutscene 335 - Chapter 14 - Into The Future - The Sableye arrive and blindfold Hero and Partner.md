@@ -46,7 +46,10 @@
 `Partner Name`: "Why are we even here?"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Ugh...but..."
 
@@ -76,12 +79,15 @@
 `Partner Name`: "Waah! `Hero Name`!"
 
 
-`Partner Surprised`
+`Partner Surprised` 💦
 
 `Partner Name`: "Are we really in the future?!"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Ugh, now what are we supposed to do?"
 
@@ -101,7 +107,7 @@
 `Partner Name`: "How are we supposed to get back to our world?"
 
 
-`Sableye Normal` 〽
+`Sableye Normal`
 
 `Sableye`: "They're awake. How convenient."
 
@@ -119,7 +125,7 @@
 * * *
 
 
-`Hero Surprised` 💦
+`Hero Surprised` 〽
 
 `Hero Name`: "(Wh-what?!)"
 

@@ -14,12 +14,14 @@
 
   * 〽
 
+
   * * * *
 
 
   * ❗
 
-  * `Heatran Normal` 〽
+
+  * `Heatran Normal`
 
   * `Heatran`: "Seekers of the seven treasures!"
 

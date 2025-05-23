@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "I... I remember!"
 
@@ -51,7 +54,10 @@
 `Partner Name`: "That's why we're training at this guild."
 
 
-`Koffing Normal` 〽
+`Zubat`: 〽
+
+
+`Koffing Normal`
 
 `Koffing`: "Whaaaat?!"
 
@@ -61,7 +67,7 @@
 `Zubat`: "You want to become a real-deal exploration team member?!"
 
 
-`Koffing Normal` 💦
+`Koffing Normal`
 
 `Koffing`: "You! Come with us for a second."
 
@@ -71,7 +77,7 @@
 `Partner Name`: "Wh-what is it?"
 
 
-`Koffing Normal` 〽
+`Koffing Normal`
 
 `Koffing`: "Now don't take what I'm about to say the wrong way. You should just forget about being on an exploration team!"
 
@@ -91,7 +97,10 @@
 `Zubat`: "A scaredy-cat like you can't cut it on an exploration team."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "B-but!"
 
@@ -111,7 +120,10 @@
 `Partner Name`: "Even now, I'm working hard to be picked for the guild's expedition!"
 
 
-`Koffing Normal` ❗
+`Zubat`: ❗
+
+
+`Koffing Normal`
 
 `Koffing`: "Oh? An expedition, you say?"
 
@@ -136,12 +148,12 @@
 `Partner Name`: "B-big talk!"
 
 
-`Partner Angry`
+`Partner Angry` 💢
 
 `Partner Name`: "You sure talk a lot about talent, but what kind of skills do you have?"
 
 
-`Partner Angry`
+`Partner Angry` 💢
 
 `Partner Name`: "You're so weak, you even lost to us!"
 
@@ -151,7 +163,10 @@
 `Koffing`: "Whoa-ho-ho! Well, we didn't have the Chief with us."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Ch-Chief?"
 
@@ -181,12 +196,18 @@
 `Zubat`: "Heh-heh. If the Chief were around, we'd snap you like a twig."
 
 
-`Koffing Normal` ❗
+`Zubat`: ❗
+
+
+`Koffing Normal`
 
 `Koffing`: "Whoa-ho-ho! Speaking of the Chief, I can smell him coming now!"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Smell?"
 
@@ -204,12 +225,15 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Oh, `Hero Name`!"
 
 
-`Partner Pain` 〽
+`Partner`: 〽
+
+
+`Partner Pain`
 
 `Partner Name`: "Ew! What's this awful stench?"
 
@@ -219,7 +243,10 @@
 `Sunflora`: "Eek! It reeks like rotten cheese!"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "That is foul, yes sirree!"
 
@@ -234,7 +261,10 @@
 `Skuntank`: "Move it! Or do you want to end up like that wimp over there?!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Oh no..."
 
@@ -269,7 +299,10 @@
 `Zubat`: "Psst...psst...whisper...psst..."
 
 
-`Skuntank Normal` ❗
+`Skuntank`: ❗
+
+
+`Skuntank Normal`
 
 `Skuntank`: "What? An expedition from this guild?"
 
@@ -294,9 +327,7 @@
 `Skuntank`: "Come on. We're going."
 
 
-`Skuntank Normal`
-
-`Skuntank`: "Koffing & Zubat: Yeah!"
+`💬`: "Koffing & Zubat: Yeah!"
 
 
 `Koffing Normal`
@@ -304,7 +335,7 @@
 `Koffing`: "What are you all staring at? This isn't a public performance!"
 
 
-`Zubat Normal` 💦
+`Zubat Normal`
 
 `Zubat`: "Heh-heh, see you around, wimps."
 
@@ -324,7 +355,10 @@
 `Partner Name`: "That goon was rough, though."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "I couldn't work up the courage to challenge him to his face!"
 
@@ -344,7 +378,10 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * `Partner Teary-Eyed` 💦
+  * `Partner`: 💦
+
+
+  * `Partner Teary-Eyed`
 
   * `Partner Name`: "Thanks for trying to cheer me up, `Hero Name`..."
 
@@ -404,7 +441,10 @@
 
 *If the player chooses "Bok bok bok!":*
 
-  * `Partner Sad` 💦
+  * `Partner`: 💦
+
+
+  * `Partner Sad`
 
   * `Partner Name`: "I-I guess you're right..."
 

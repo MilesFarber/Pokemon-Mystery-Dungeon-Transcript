@@ -33,7 +33,8 @@
 
 ❗
 
-`Medicham Surprised` ❗
+
+`Medicham Surprised`
 
 `Medicham`: "Look at that!"
 
@@ -42,6 +43,7 @@
 
 
 ❗
+
 
 `Lopunny Surprised` ❗
 
@@ -101,16 +103,15 @@
 `Medicham`: "My word, weren't you something special!"
 
 
-`Medicham Happy`
+`Medicham Happy` 🔆
 
 `Medicham`: "It was like seeing Wigglytuff in action in the old days!"
 
 
 🔆
 
-`Medicham Happy` 🔆
 
-`Medicham`: "Everyone: HA HA HA!"
+`💬`: "Everyone: HA HA HA!"
 
 
 `Gardevoir Normal`

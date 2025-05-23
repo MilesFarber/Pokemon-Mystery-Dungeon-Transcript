@@ -31,7 +31,7 @@
 `Sunflora`: "Oh my gosh! Can you imagine it? A world that no one has seen for tens of thousands of years!"
 
 
-`Sunflora Normal`
+`Sunflora Normal` ◀▼▶
 
 `Sunflora`: "This is the stuff of sweeping epics! So dreamy and adventurous!"
 

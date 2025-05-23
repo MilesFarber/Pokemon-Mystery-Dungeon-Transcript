@@ -6,12 +6,18 @@
 * * *
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Maybe we got a little careless."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "It's because I'm not pulling my own weight here, isn't it..."
 

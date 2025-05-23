@@ -24,12 +24,18 @@
 * * *
 
 
-`Igglybuff Stunned` ❗
+`Igglybuff`: ❗
+
+
+`Igglybuff Stunned`
 
 `Igglybuff`: "Wooooahhhh! ♪ Amaaaazing! ♪"
 
 
-`Armaldo Surprised` 〽
+`Armaldo`: 〽
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "Wh-what's...this?!"
 
@@ -59,7 +65,10 @@
 `Armaldo`: "W-wait! Junior!"
 
 
-`Igglybuff Normal` ❓
+`Igglybuff`: ❓
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "Whaaat?"
 
@@ -74,7 +83,10 @@
 `Armaldo`: "Look carefully! There's some kind of trick to it!"
 
 
-`Igglybuff Normal` ❓
+`Igglybuff`: ❓
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "Trick?"
 
@@ -179,7 +191,7 @@
 `Armaldo`: "N-no! That might prevent the door from ever opening!"
 
 
-`Armaldo Surprised`
+`Armaldo Surprised` 💦
 
 `Armaldo`: "There are traps too!"
 
@@ -227,7 +239,10 @@
 `Igglybuff`: "I did it! ♪ I opened it! ♪"
 
 
-`Armaldo Surprised` 〽
+`Armaldo`: 〽
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "Wh-what the...?!"
 
@@ -237,7 +252,10 @@
 `Igglybuff`: "Hurry! Let's go! ♪"
 
 
-`Armaldo Surprised` 💧
+`Armaldo`: 💧
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "... (What in the world IS this kid?!)"
 

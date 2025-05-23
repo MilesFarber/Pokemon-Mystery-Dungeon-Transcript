@@ -9,7 +9,10 @@
 `Lopunny`: "We've come pretty far, haven't we?"
 
 
-`Medicham Normal` ❓
+`Medicham`: ❓
+
+
+`Medicham Normal`
 
 `Medicham`: "I wonder where Wigglytuff went."
 

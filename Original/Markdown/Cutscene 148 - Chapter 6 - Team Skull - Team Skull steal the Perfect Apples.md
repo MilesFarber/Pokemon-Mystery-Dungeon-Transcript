@@ -17,7 +17,10 @@
 `Partner Name`: "According to Chatot, the Perfect Apples should be around here..."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! `Hero Name`, look there!"
 
@@ -42,9 +45,11 @@
 
 ❗
 
+
 ❗
 
-`Partner Surprised` ❗
+
+`Partner Surprised`
 
 `Partner Name`: "Who said that?!"
 
@@ -54,11 +59,21 @@
 
 ❗
 
+
 ❗
 
-〽
+
+`Hero`: ❗
+
+
+`Hero`: 〽
+
 
 〽
+
+
+〽
+
 
 `Partner Surprised` 〽
 
@@ -85,7 +100,7 @@
 `Koffing`: "What took you so long?"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Whaaaat?!"
 
@@ -120,7 +135,10 @@
 `Skuntank`: "Why, I was even going to offer my help for your mission."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Pardon?!"
 
@@ -135,7 +153,16 @@
 `Skuntank`: "Nothing could be easier. Watch."
 
 
-`Partner Normal` ❗
+`Skuntank`: 〽
+
+
+`Skuntank`: 〽
+
+
+`Hero`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! Some Perfect Apples!"
 
@@ -185,7 +212,10 @@
 `Partner Name`: "You won't fool me again!"
 
 
-`Zubat Normal` 〽
+`Zubat`: 〽
+
+
+`Zubat Normal`
 
 `Zubat`: "Color me surprised! They didn't fall for it at all!"
 
@@ -230,7 +260,10 @@
 `Skuntank`: "When we first met, you were shaking like a leaf too. Chaw-haw-haw."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "It's true... That time, I did back down..."
 
@@ -306,12 +339,18 @@
 * * *
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Ugh... That was awful..."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh, `Hero Name`!"
 
@@ -333,9 +372,17 @@
 
 ❗
 
+
 ❗
 
-`Zubat Normal` 〽
+
+`Hero`: ❗
+
+
+`Zubat`: 〽
+
+
+`Zubat Normal`
 
 `Zubat`: "Aaaaah!"
 
@@ -345,7 +392,13 @@
 `Zubat`: "Waaah! They left without me!"
 
 
-`Partner Sad` 💦
+`Zubat`: 💦
+
+
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urf... We both got knocked out..."
 
@@ -360,16 +413,21 @@
 `Partner Name`: "It still reeks a little... Ewww..."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh! Where are the Perfect Apples?!"
 
 
 〽
 
+
 〽
 
-`Partner Surprised` 〽
+
+`Partner Surprised`
 
 `Partner Name`: "Aw! They're gone!"
 
@@ -379,7 +437,10 @@
 `Partner Name`: "Did those bullies eat them all?"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "If they're all gone, there's nothing we can do."
 

@@ -14,7 +14,10 @@
 >`Hero Name` opened the treasure box.
 
 
-`Ursaring Normal` ❗
+`Partner`: ❗
+
+
+`Ursaring Normal`
 
 `Ursaring`: "Th-this is..."
 
@@ -37,7 +40,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Wa-waah! What was that?!"
 
@@ -45,7 +48,10 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Teddiursa`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "What's that...?"
 
@@ -65,29 +71,24 @@
 `Teddiursa`: "Did Luminous Spring regain its power?"
 
 
-`Teddiursa Normal`
-
-`Teddiursa`: "Those that seek awakening..."
+`💬`: "Those that seek awakening..."
 
 
-`Partner Surprised` ❗
+`Teddiursa`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Waah! Who's saying that?!"
 
 
-`Partner Surprised`
-
-`Partner Name`: "The resumption of time..."
+`💬`: "The resumption of time..."
 
 
-`Partner Surprised`
-
-`Partner Name`: "has brought light here again."
+`💬`: "has brought light here again."
 
 
-`Partner Surprised`
-
-`Partner Name`: "If you seek evolution, step forward."
+`💬`: "If you seek evolution, step forward."
 
 
 `Teddiursa Normal`
@@ -115,12 +116,18 @@
 `Teddiursa`: "Yup!"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Evolution?"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! That's right, Wigglytuff mentioned it before..."
 

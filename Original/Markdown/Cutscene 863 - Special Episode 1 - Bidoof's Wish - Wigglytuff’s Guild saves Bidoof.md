@@ -44,15 +44,16 @@
 `Snover`: "Hey! You! We'll take it by force if we have to!"
 
 
-`Snover Normal`
-
-`Snover`: "Bagon & Gligar: YEAH!"
+`💬`: "Bagon & Gligar: YEAH!"
 
 
 `💬`: "WAAAAIT!!"
 
 
-`Snover Surprised` 〽
+`Gligar`: 〽
+
+
+`Snover Surprised`
 
 `Snover`: "Huh?! What?!"
 
@@ -69,7 +70,7 @@
 * * *
 
 
-`Chatot Normal` 〽
+`Chatot Normal`
 
 `Chatot`: "Wigglytuff's Guild is here!"
 
@@ -129,9 +130,7 @@
 `Snover`: "Let's go, you guys! We'll take them on too!"
 
 
-`Snover Normal`
-
-`Snover`: "Bagon & Gligar: YEAH!"
+`💬`: "Bagon & Gligar: YEAH!"
 
 
 `Wigglytuff Normal`

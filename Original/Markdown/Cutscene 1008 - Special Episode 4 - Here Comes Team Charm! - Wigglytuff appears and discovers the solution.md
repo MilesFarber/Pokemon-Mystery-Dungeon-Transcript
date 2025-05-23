@@ -41,7 +41,10 @@
 `Lopunny`: "Wait a sec! I don't want to be put on the same level as you, Medicham."
 
 
-`Medicham Surprised` 〽
+`Medicham`: 〽
+
+
+`Medicham Surprised`
 
 `Medicham`: "Eh? What do you mean by that?"
 
@@ -84,7 +87,10 @@
 `💬`: "Heeey! Wait!"
 
 
-`Gardevoir Surprised` ❗
+`Lopunny`: ❗
+
+
+`Gardevoir Surprised`
 
 `Gardevoir`: "Wh... What?!"
 
@@ -124,7 +130,10 @@
 `Lopunny`: "Why is Wigglytuff here?"
 
 
-`Medicham Surprised` ❗
+`Medicham`: ❗
+
+
+`Medicham Surprised`
 
 `Medicham`: "Oh! Let me guess!"
 
@@ -154,7 +163,10 @@
 `Wigglytuff`: "I was chasing it as it rolled away... And somehow I found myself here."
 
 
-`Gardevoir Sigh` 💧
+`Lopunny`: 💧
+
+
+`Gardevoir Sigh`
 
 `Gardevoir`: "Oh... I see."
 
@@ -209,12 +221,15 @@
 `Medicham`: "Aww..."
 
 
-`Medicham Angry`
+`Medicham Angry` 💢
 
 `Medicham`: "Weren't you paying attention to our explanation?"
 
 
-`Gardevoir Worried` 💧
+`Gardevoir`: 💧
+
+
+`Gardevoir Worried`
 
 `Gardevoir`: "If you've got a plan, we'd love to hear it..."
 
@@ -249,7 +264,10 @@
 `Wigglytuff`: "Nope. I'm listening carefully."
 
 
-`Medicham Normal` ❗
+`Lopunny`: ❗
+
+
+`Medicham Normal`
 
 `Medicham`: "Huh?"
 
@@ -314,12 +332,15 @@
 `Wigglytuff`: "P-Perfect Apple!"
 
 
-`Wigglytuff Teary-Eyed`
+`Wigglytuff Teary-Eyed` 〽
 
 `Wigglytuff`: "Perfect Apple! Perfect Apple!!"
 
 
-`Lopunny Surprised` 〽
+`Medicham`: 〽
+
+
+`Lopunny Surprised`
 
 `Lopunny`: "Where'd it go?"
 

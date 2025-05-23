@@ -6,7 +6,10 @@
 `Chimecho`: "Hey, Sunflora, look. The moon tonight is really pretty."
 
 
-`Chimecho Normal` ⚟
+`Chimecho`: ⚟
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Huh? Sunflora?"
 
@@ -16,7 +19,10 @@
 `Chimecho`: "What are you doing?"
 
 
-`Chimecho Normal` ❗
+`Chimecho`: ❗
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Huh? You're writing something!"
 
@@ -36,12 +42,18 @@
 `Sunflora`: "Oh my gosh! Oh my gosh! Oh my gosh!"
 
 
-`Chimecho Surprised` 💦
+`Chimecho`: 💦
+
+
+`Chimecho Surprised`
 
 `Chimecho`: "Wh-what?"
 
 
-`Chimecho Normal` ❗
+`Chimecho`: ❗
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Oh! Don't tell me!"
 

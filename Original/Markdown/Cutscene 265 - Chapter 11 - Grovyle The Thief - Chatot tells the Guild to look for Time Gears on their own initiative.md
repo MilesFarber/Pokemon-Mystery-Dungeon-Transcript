@@ -31,12 +31,10 @@
 `Chatot`: "All right, everyone! Work hard again today! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
-`Partner Normal` ◀▼▶
+`Partner Normal`
 
 `Partner Name`: "We're supposed to go search on our own today, `Hero Name`."
 
@@ -56,7 +54,10 @@
 `Hero Name`: "(We can search all we want, but we don't have a clue...)"
 
 
-`Hero Normal` ❗
+`Hero`: ❗
+
+
+`Hero Normal`
 
 `Hero Name`: "(Oh! Wait a second!)"
 

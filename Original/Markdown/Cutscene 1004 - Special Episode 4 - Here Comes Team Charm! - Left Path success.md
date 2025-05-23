@@ -16,7 +16,10 @@
 * * *
 
 
-`Medicham Normal` ❓
+`Medicham`: ❓
+
+
+`Medicham Normal`
 
 `Medicham`: "Wait... I-isn't this...?"
 
@@ -31,12 +34,12 @@
 `Medicham`: "We... We were tricked!"
 
 
-`Medicham Angry`
+`Medicham Angry` 💢
 
 `Medicham`: "This isn't the right entrance..."
 
 
-`Medicham Angry`
+`Medicham Angry` 💢
 
 `Medicham`: "That entrance on the right must be the right one!"
 

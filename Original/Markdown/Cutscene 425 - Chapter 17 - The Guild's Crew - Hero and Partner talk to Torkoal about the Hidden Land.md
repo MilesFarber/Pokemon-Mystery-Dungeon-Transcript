@@ -1,4 +1,7 @@
-`Torkoal Normal` ❓
+`Torkoal`: ❓
+
+
+`Torkoal Normal`
 
 `Torkoal`: "Hm? Ah, my young friends! Come to wash away your exhaustion?"
 
@@ -21,7 +24,7 @@
 * * *
 
 
-`Torkoal Normal` 🕳️
+`Torkoal Normal`
 
 `Torkoal`: "...Ah, I see... The Hidden Land, you say?"
 
@@ -31,7 +34,7 @@
 `Torkoal`: "I have heard of it."
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Oh, really?!"
 
@@ -96,17 +99,23 @@
 `Torkoal`: "They are..."
 
 
-`Torkoal Sigh` ❓
+`Torkoal`: ❓
+
+
+`Torkoal Sigh`
 
 `Torkoal`: "Er... Er... Now what were they?"
 
 
-`Torkoal Normal` ❓
+`Torkoal`: ❓
+
+
+`Torkoal Normal`
 
 `Torkoal`: "I'm sorry. It's slipped my mind."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Oh no! You can't remember?!"
 
@@ -121,12 +130,18 @@
 `Partner Name`: "This is really important."
 
 
-`Torkoal Sigh` 💦
+`Torkoal`: 💦
+
+
+`Torkoal Sigh`
 
 `Torkoal`: "That's easy for you to say, but... Er...um..."
 
 
-`Torkoal Normal` ❗
+`Torkoal`: ❗
+
+
+`Torkoal Normal`
 
 `Torkoal`: "Oh! That's it! You need proof!"
 
@@ -146,22 +161,31 @@
 `Torkoal`: "That would be..."
 
 
-`Torkoal Sigh` ❓
+`Torkoal`: ❓
+
+
+`Torkoal Sigh`
 
 `Torkoal`: "Er? Um?"
 
 
-`Torkoal Normal` ❓
+`Torkoal`: ❓
+
+
+`Torkoal Normal`
 
 `Torkoal`: "Forgive me. I've forgotten again."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What? You can't remember?!"
 
 
-`Torkoal Normal` 💦
+`Torkoal`: 💦
+
+
+`Torkoal Normal`
 
 `Torkoal`: "I... I'm sorry to disappoint you."
 

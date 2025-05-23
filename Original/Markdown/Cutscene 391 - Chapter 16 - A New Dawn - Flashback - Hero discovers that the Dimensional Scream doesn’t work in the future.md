@@ -54,7 +54,10 @@
 >`Hero Name` touched the frozen spray of water.
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "...How's it going, `Hero Name`?"
 

@@ -36,9 +36,7 @@
 `Weavile`: "You guys! Let's go!"
 
 
-`Weavile Angry` ◀▼▶
-
-`Weavile`: "Arbok & Drapion: YEAH!"
+`💬`: "Arbok & Drapion: YEAH!"
 
 
 `Lopunny Normal`
@@ -56,9 +54,7 @@
 `Medicham`: "Let's beat them at their own game!"
 
 
-`Medicham Normal`
-
-`Medicham`: "Arbok & Drapion: Woooooaaaahh!!"
+`💬`: "Arbok & Drapion: Woooooaaaahh!!"
 
 
 * * *
@@ -273,7 +269,10 @@
 `Wigglytuff`: "His name is Ditto... He's a Pokémon who can use the move Transform..."
 
 
-`Gardevoir Surprised` ❗
+`Gardevoir`: ❗
+
+
+`Gardevoir Surprised`
 
 `Gardevoir`: "T-Transform?!"
 
@@ -318,7 +317,10 @@
 `Ditto`: "Team Charm..."
 
 
-`Ditto Sad` ⚟
+`Lopunny`: ⚟
+
+
+`Ditto Sad`
 
 `Ditto`: "I deceived you many times, Team Charm... I'm sorry."
 
@@ -348,7 +350,10 @@
 `Ditto`: "I can also...Transform into Pokémon..."
 
 
-`Lopunny Surprised` 〽
+`Lopunny`: 〽
+
+
+`Lopunny Surprised`
 
 `Lopunny`: "...! I-is that true?!"
 

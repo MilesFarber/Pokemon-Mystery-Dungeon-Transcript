@@ -39,7 +39,7 @@
 `Chatot`: "Squawk! If that's all true... this is terrible trouble, to be sure!"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 〽
 
 `Chatot`: "We've got to do something!"
 
@@ -64,7 +64,10 @@
 `Chatot`: "It is also said that this Pokémon can heal others' emotional scars simply with the gentle light from her body."
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk! She didn't seem so kindly..."
 
@@ -114,12 +117,18 @@
 `Drowzee`: "how the distortion of space can be stopped?"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Wh-what?! Er...how to stop the distortion of space?!"
 
 
-`Drowzee Sigh` 💦
+`Drowzee`: 💦
+
+
+`Drowzee Sigh`
 
 `Drowzee`: "Waaah! Wh-why are you jumpy?"
 
@@ -129,7 +138,10 @@
 `Drowzee`: "D-did I ask something weird...?"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "N-no. It isn't anything you said."
 

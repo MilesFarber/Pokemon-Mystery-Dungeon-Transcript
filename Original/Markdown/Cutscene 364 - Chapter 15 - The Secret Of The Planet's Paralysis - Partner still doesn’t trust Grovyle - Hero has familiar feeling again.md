@@ -121,7 +121,10 @@
 `Hero Name`: "(I am sensing something strange...)"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Hm? What is it, `Hero Name`?"
 
@@ -141,7 +144,10 @@
 `Hero Name`: "(It was...)"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(That's it! It was when...)"
 

@@ -21,7 +21,10 @@
 `Partner Name`: "I mean, I only know the name Azelf because you just said it, Dusknoir, sir."
 
 
-`Dusknoir Normal` ❗
+`Dusknoir`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Then there's still a chance!"
 
@@ -81,7 +84,10 @@
 `Dusknoir`: "Perhaps there is a passage there that leads to a Time Gear."
 
 
-`Loudred Normal` ❗
+`Partner`: ❗
+
+
+`Loudred Normal`
 
 `Loudred`: "Yeah! Maybe it IS there!"
 
@@ -151,7 +157,10 @@
 `Chatot`: "Guildmaster! Please issue the call to duty!"
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Guildmaster! Hmm...? Guildmaster?"
 
@@ -166,7 +175,10 @@
 `Wigglytuff`: "...Zzzz..."
 
 
-`Chatot Normal` ⚟
+`Chatot`: ⚟
+
+
+`Chatot Normal`
 
 `Chatot`: "Huh?"
 
@@ -186,7 +198,10 @@
 `Dugtrio`: "(No! It looks like...!)"
 
 
-`Sunflora Normal` 💧
+`Sunflora`: 💧
+
+
+`Sunflora Normal`
 
 `Sunflora`: "(He's fully asleep! With his eyes wide open too! Ewww!)"
 
@@ -211,12 +226,12 @@
 `Chatot`: "(Oh no! This just won't do!)"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 〽
 
 `Chatot`: "(Everyone might notice that the Guildmaster is sleeping...)"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 〽
 
 `Chatot`: "(I must rouse him somehow...)"
 
@@ -231,7 +246,10 @@
 `Wigglytuff`: "...Huh...?"
 
 
-`Chatot Surprised` ⚟
+`Wigglytuff`: ⚟
+
+
+`Chatot Surprised`
 
 `Chatot`: "GUILDMASTER!"
 
@@ -241,7 +259,10 @@
 `Wigglytuff`: "Chatot!"
 
 
-`Chatot Surprised` ❗
+`Chatot`: ❗
+
+
+`Chatot Surprised`
 
 `Chatot`: "YES, GUILDMASTER?"
 
@@ -269,9 +290,7 @@
 * * *
 
 
-`Wigglytuff Special2` ◀▼▶
-
-`Wigglytuff`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Sunflora Normal`
@@ -299,9 +318,7 @@
 `Dusknoir`: "Let's do our best, everyone."
 
 
-`Dusknoir Normal` ◀▼▶
-
-`Dusknoir`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Chatot Surprised`

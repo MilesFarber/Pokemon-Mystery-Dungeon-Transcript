@@ -1,7 +1,10 @@
 * * *
 
 
-`Teddiursa Normal` ❗
+`Teddiursa`: ❗
+
+
+`Teddiursa Normal`
 
 `Teddiursa`: "Oh, look! The guild members!"
 
@@ -21,12 +24,18 @@
 `Vigoroth`: "Something serious must be happening..."
 
 
-`Uxie Normal` ❗
+`Uxie`: ❗
+
+
+`Uxie Normal`
 
 `Uxie`: "Azelf!"
 
 
-`Azelf Normal` ❗
+`Azelf`: ❗
+
+
+`Azelf Normal`
 
 `Azelf`: "Uxie! Mesprit!"
 
@@ -71,12 +80,18 @@
 `Azelf`: "Stealing it won't be easy."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! Dusknoir, sir!"
 
 
-`Dusknoir Normal` ❗
+`Dusknoir`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Ah! `Partner Name` and `Hero Name`!"
 
@@ -144,7 +159,7 @@
 * * *
 
 
-`Bidoof Normal` ◀▼▶
+`Bidoof Normal`
 
 `Bidoof`: "Golly, I wonder what this all could be about?"
 
@@ -299,9 +314,7 @@
 `Dusknoir`: "That is correct. I do know Grovyle from before all this."
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Everyone: WHAT?!"
+`💬`: "Everyone: WHAT?!"
 
 
 `Dusknoir Normal`
@@ -399,7 +412,10 @@
 `Dusknoir`: "It was nothing less than... causing the planet's paralysis."
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "The planet's...paralysis?"
 

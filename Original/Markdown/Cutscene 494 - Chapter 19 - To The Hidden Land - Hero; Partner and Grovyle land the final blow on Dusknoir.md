@@ -14,7 +14,7 @@
 `Dusknoir`: "I... I... I..."
 
 
-`Dusknoir Normal` 〽
+`Dusknoir Normal`
 
 `Dusknoir`: "I...refuse to lose!"
 
@@ -82,6 +82,9 @@
 `Dusknoir`: "This is...the end!"
 
 
+`Hero`: ❗
+
+
 `Partner Surprised` 〽
 
 `Partner Name`: "The mouth on his stomach! It opened up!"
@@ -102,7 +105,10 @@
 `Hero Name`: "(From that mouth on his stomach?!)"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Wait a second... The mouth on his stomach?!)"
 
@@ -117,7 +123,7 @@
 `Grovyle`: "What is it, `Hero Name`?!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Wh-what?!"
 

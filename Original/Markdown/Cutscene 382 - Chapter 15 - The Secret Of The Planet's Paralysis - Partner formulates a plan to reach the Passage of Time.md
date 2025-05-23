@@ -36,7 +36,10 @@
 `Dusknoir`: "And it was also easy to drag them to the future when the time came!"
 
 
-`Partner Teary-Eyed` 💦
+`Partner`: 💦
+
+
+`Partner Teary-Eyed`
 
 `Partner Name`: "Urk... Dusknoir really was lying!"
 
@@ -86,7 +89,10 @@
 `Dusknoir`: "Everything ends! Everything ends for you! Ha-ha-hoo-hoo-ha!"
 
 
-`Partner Teary-Eyed` 💦
+`Partner`: 💦
+
+
+`Partner Teary-Eyed`
 
 `Partner Name`: "Urgh! Dusknoir...no..."
 
@@ -126,7 +132,10 @@
 `Sableye`: "Wheh-heh-heh!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk..."
 
@@ -151,7 +160,10 @@
 `Partner Name`: "We have to think!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "I know!"
 
@@ -199,7 +211,10 @@
 * * *
 
 
-`Sableye Normal` 〽
+`Dusknoir`: ❗
+
+
+`Sableye Normal`
 
 `Sableye`: "Wheh-heh...?"
 

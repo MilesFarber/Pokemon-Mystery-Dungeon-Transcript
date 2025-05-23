@@ -14,7 +14,10 @@
 `Partner Name`: "Good morning, Mana...!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Manaphy?"
 
@@ -29,7 +32,10 @@
 `Partner Name`: "Manaphy is missing!"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "What... What should we do?! Where did he go?"
 

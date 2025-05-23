@@ -39,7 +39,10 @@
 `Medicham`: "I'll solve that mystery! You watch me now!"
 
 
-`Lopunny Normal` ❗
+`Lopunny`: ❗
+
+
+`Lopunny Normal`
 
 `Lopunny`: "Oh, yes. We've asked everyone else already, but what's your team's name?"
 

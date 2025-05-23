@@ -39,7 +39,10 @@
 `Hero Name`: "(For the world! For the future!)"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "H-here he comes, `Hero Name`!"
 

@@ -101,7 +101,10 @@
 `Dusknoir`: "To take out that new henchman."
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Are you saying I should help you? To take down the new henchman, that is?"
 

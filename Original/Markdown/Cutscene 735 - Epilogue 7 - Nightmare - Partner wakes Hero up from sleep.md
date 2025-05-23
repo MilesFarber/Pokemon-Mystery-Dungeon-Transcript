@@ -60,7 +60,10 @@
 `Hero Name`: "(If the distortion in the fabric of space expands...the world will be ruined.)"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Oh! The distortion of space! We heard that somewhere before!)"
 

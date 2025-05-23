@@ -71,42 +71,28 @@
 `Chatot`: "Everyone, we're going back to the guild!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 * * *
 
 
-`Chatot Normal`
-
-`Chatot`: "And so..."
+`💬`: "And so..."
 
 
-`Chatot Normal`
-
-`Chatot`: "The guild's long and challenging expedition finally came to an end..."
+`💬`: "The guild's long and challenging expedition finally came to an end..."
 
 
-`Chatot Normal`
-
-`Chatot`: "Wigglytuff and the members safely returned to the guild..."
+`💬`: "Wigglytuff and the members safely returned to the guild..."
 
 
-`Chatot Normal`
-
-`Chatot`: "For `Hero Name` and the apprentices..."
+`💬`: "For `Hero Name` and the apprentices..."
 
 
-`Chatot Normal`
-
-`Chatot`: "Going to the guild meant taking up the standard training schedule..."
+`💬`: "Going to the guild meant taking up the standard training schedule..."
 
 
-`Chatot Normal`
-
-`Chatot`: "It was life as usual back at the guild!"
+`💬`: "It was life as usual back at the guild!"
 
 
 >The clouds lifted from Fogbound Lake and its surrounding areas!

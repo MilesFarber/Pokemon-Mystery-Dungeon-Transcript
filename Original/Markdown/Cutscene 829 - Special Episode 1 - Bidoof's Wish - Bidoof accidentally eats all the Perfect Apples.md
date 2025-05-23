@@ -6,7 +6,7 @@
 `Bidoof`: "Crunch munch! Chomp chomp!"
 
 
-`Bidoof Sigh`
+`Bidoof Sigh` 🍴
 
 `Bidoof`: "I wonder what this is! It's so yummy! Chomp chomp!"
 
@@ -14,12 +14,18 @@
 `Chatot`: "Oh? Bidoof? What are you doing here?"
 
 
-`Bidoof Sigh` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Sigh`
 
 `Bidoof`: "Huh?"
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "Oh... That!?"
 
@@ -29,7 +35,10 @@
 `Chatot`: "That is... The Guildmaster's important..."
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "P-Perfect Apple!?"
 
@@ -64,7 +73,10 @@
 `Bidoof`: "Yup yup!"
 
 
-`Bidoof Normal` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Oh! Sorry! Did you want one too, Chatot?"
 
@@ -79,7 +91,7 @@
 `Chatot`: "What...what did you do..."
 
 
-`Chatot Surprised`
+`Chatot Surprised` 〽
 
 `Chatot`: "WHAT DID YOU DO?!"
 
@@ -89,7 +101,7 @@
 `Bidoof`: "Eeeeeeeek!?"
 
 
-`Bidoof Surprised`
+`Bidoof Surprised` 〽
 
 `Bidoof`: "Uh-oh! Was it... Golly, did I do something wrong..."
 
@@ -119,17 +131,23 @@
 `Chatot`: "It will be horrific!"
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "As punishment, you'll go without dinner! Got it?!"
 
 
-`Bidoof Surprised` 〽
+`Bidoof`: 〽
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "B-but!"
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "Sniff... Golly, I didn't mean it..."
 

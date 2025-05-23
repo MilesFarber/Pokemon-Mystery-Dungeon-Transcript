@@ -7,7 +7,10 @@
 `Chimecho`: "Oh! `Hero Name`! And `Partner Name` too!"
 
 
-`Partner Normal` ⚟
+`Hero`: ⚟
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh? What is Chimecho doing there?"
 
@@ -22,7 +25,10 @@
 `Chimecho`: "I just started an Assembly here. Today, in fact."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Assembly?"
 
@@ -47,7 +53,10 @@
 `Partner Name`: "It sure would help when we explore dungeons!"
 
 
-`Chimecho Normal` ❗
+`Chimecho`: ❗
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Well then! You need to start recruiting new members!"
 
@@ -78,7 +87,10 @@
 `Chimecho`: "Now Team `Team Name` has the power to recruit new members!"
 
 
-`Partner Inspired` ❗
+`Hero`: ❗
+
+
+`Partner Inspired`
 
 `Partner Name`: "R-really?"
 

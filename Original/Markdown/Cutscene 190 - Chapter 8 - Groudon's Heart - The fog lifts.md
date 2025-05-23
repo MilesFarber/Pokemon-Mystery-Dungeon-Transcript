@@ -26,7 +26,10 @@
 `Partner Name`: "B-both of you! Up! Look up!"
 
 
-`Corphish Normal` ❗
+`Corphish`: ❗
+
+
+`Corphish Normal`
 
 `Corphish`: "Hey, hey! What is that?!"
 

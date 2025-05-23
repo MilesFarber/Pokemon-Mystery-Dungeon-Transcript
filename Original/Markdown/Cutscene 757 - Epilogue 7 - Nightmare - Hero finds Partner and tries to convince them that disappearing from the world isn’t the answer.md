@@ -4,7 +4,10 @@
 * * *
 
 
-`Partner Normal` ⚟
+`Hero`: ⚟
+
+
+`Partner Normal`
 
 `Partner Name`: "So, `Hero Name`... You're awake too, huh?"
 
@@ -99,7 +102,10 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * `Partner Pain` 💦
+  * `Partner`: 💦
+
+
+  * `Partner Pain`
 
   * `Partner Name`: "Urf... You too..."
 
@@ -134,7 +140,10 @@
 
   *   * *If the player chooses "Everything [CS:N]Cresselia[CR] said...":*
 
-  *   *   * `Partner Sad` ❓
+  *   *   * `Partner`: ❓
+
+
+  *   *   * `Partner Sad`
 
   *   *   * `Partner Name`: "What exactly was odd about what Cresselia said?"
 
@@ -157,7 +166,10 @@
   *   *   * *Anchor: <a name="8"></a>8*
 
 
-  *   *   * `Hero Pain` 💦
+  *   *   * `Hero`: 💦
+
+
+  *   *   * `Hero Pain`
 
   *   *   * `Hero Name`: "(Urk! That is true...)"
 
@@ -177,7 +189,10 @@
   *   *   * `Hero Name`: "(But what is it? I need to think carefully...)"
 
 
-  *   *   * `Hero Surprised` ❗
+  *   *   * `Hero`: ❗
+
+
+  *   *   * `Hero Surprised`
 
   *   *   * `Hero Name`: "(...Th-that's it!)"
 
@@ -197,7 +212,10 @@
   *   *   * `Hero Name`: "(I've got to explain that to `Partner Name`...)"
 
 
-  *   *   * `Partner Worried` ❓
+  *   *   * `Partner`: ❓
+
+
+  *   *   * `Partner Worried`
 
   *   *   * `Partner Name`: "What? It's different this time?"
 
@@ -207,7 +225,10 @@
   *   *   * `Partner Name`: "What's... What's different?"
 
 
-  *   *   * `Partner Surprised` 〽
+  *   *   * `Partner`: 〽
+
+
+  *   *   * `Partner Surprised`
 
   *   *   * `Partner Name`: "...What?!"
 
@@ -222,7 +243,10 @@
   *   *   * `Partner Name`: "But it's not the same this time?"
 
 
-  *   *   * `Partner Worried` ❓
+  *   *   * `Partner`: ❓
+
+
+  *   *   * `Partner Worried`
 
   *   *   * `Partner Name`: "What...?"
 
@@ -307,7 +331,10 @@
   *   *   * `Hero Name`: "(`Partner Name`...)"
 
 
-  *   *   * `Partner Normal` ⚞
+  *   *   * `Partner`: ⚞
+
+
+  *   *   * `Partner Normal`
 
   *   *   * `Partner Name`: "Oh..."
 
@@ -385,7 +412,10 @@
 
   *   * *If the player chooses "The whole space-distortion idea!":*
 
-  *   *   * `Partner Sad` ❓
+  *   *   * `Partner`: ❓
+
+
+  *   *   * `Partner Sad`
 
   *   *   * `Partner Name`: "The distortion of space?"
 
@@ -425,7 +455,10 @@
 
 *If the player chooses "I don't know...":*
 
-  * `Partner Pain` 💦
+  * `Partner`: 💦
+
+
+  * `Partner Pain`
 
   * `Partner Name`: "Urf... You don't know...?"
 

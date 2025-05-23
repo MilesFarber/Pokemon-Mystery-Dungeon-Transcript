@@ -1,7 +1,10 @@
 * * *
 
 
-`Chimecho Normal` ❗
+`Chimecho`: ❗
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Oh, `Hero Name`!"
 
@@ -66,7 +69,10 @@
   * `Chimecho`: "I'm sure everyone will be happy to hear that!"
 
 
-  * `Chimecho Normal` ❗
+  * `Chimecho`: ❗
+
+
+  * `Chimecho Normal`
 
   * `Chimecho`: "Oh! I almost forgot!"
 
@@ -116,7 +122,10 @@
 
   * *If the player chooses "No":*
 
-  *   * `Chimecho Surprised` 💦
+  *   * `Chimecho`: 💦
+
+
+  *   * `Chimecho Surprised`
 
   *   * `Chimecho`: "I...I knew it!"
 
@@ -141,7 +150,10 @@
   *   * `Chimecho`: "So when you want to assemble your team, just ring this bell!"
 
 
-  *   * `Chimecho Normal` 💦
+  *   * `Chimecho`: 💦
+
+
+  *   * `Chimecho Normal`
 
   *   * `Chimecho`: "...M-maybe you already did ring the bell to summon me here before..."
 
@@ -187,12 +199,18 @@
   * *Loop forever:*
 
 
-  *   * `Chimecho Surprised` 〽
+  *   * `Chimecho`: 〽
+
+
+  *   * `Chimecho Surprised`
 
   *   * `Chimecho`: "W-what?! N-no...way?!"
 
 
-  *   * `Chimecho Surprised` 💦
+  *   * `Chimecho`: 💦
+
+
+  *   * `Chimecho Surprised`
 
   *   * `Chimecho`: "Are you making fun of me, `Hero Name`? You are! I know it!"
 

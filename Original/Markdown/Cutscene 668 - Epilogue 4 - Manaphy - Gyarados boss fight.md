@@ -9,7 +9,8 @@
 
 ❗
 
-`Phione Normal` ❗
+
+`Phione Normal` 🔆
 
 `Phione`: "Hee-dee-dee! ♪"
 
@@ -36,7 +37,8 @@
 
 ❗
 
-`Phione Normal` ❗
+
+`Phione Normal` 〽
 
 `Phione`: "Eeeeek!"
 
@@ -61,7 +63,10 @@
 `Gyarados`: "ALL PHIONE DEW BELONGS TO ME FROM NOW ON! GRRAH-HA-HA!"
 
 
-`Gyarados Normal` ❗
+`Gyarados`: ❗
+
+
+`Gyarados Normal`
 
 `Gyarados`: "OH? NOW WHO MIGHT YOU BE?"
 

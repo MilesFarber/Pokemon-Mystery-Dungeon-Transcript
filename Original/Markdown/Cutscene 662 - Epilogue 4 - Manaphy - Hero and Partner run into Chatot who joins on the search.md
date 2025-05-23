@@ -4,7 +4,10 @@
 * * *
 
 
-`Chatot Normal` ❗
+`Chatot`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "Ah, Team `Team Name`! ♪"
 
@@ -44,12 +47,12 @@
 `Chatot`: "Squawk! I'll look too!"
 
 
-`Chatot Normal`
+`Chatot Normal` 💦
 
 `Chatot`: "Manaphy's still a toddler. That baby couldn't have gotten too far."
 
 
-`Chatot Normal`
+`Chatot Normal` 💦
 
 `Chatot`: "I'll look through the guild! You two search outside!"
 

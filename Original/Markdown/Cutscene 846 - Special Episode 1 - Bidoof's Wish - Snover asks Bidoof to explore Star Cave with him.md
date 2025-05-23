@@ -6,7 +6,10 @@
 `Bidoof`: "Eek! That sounds pretty scary!"
 
 
-`Bidoof Normal` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Oh! That reminds me!"
 
@@ -51,7 +54,10 @@
 `Snover`: "I'm really sorry... To have caused you so much trouble."
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "No, no! You don't have to apologize! Don't worry about it, by golly!"
 
@@ -91,7 +97,10 @@
 `Snover`: "Speaking of which... I have a request to make..."
 
 
-`Bidoof Normal` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Yes? What is it?"
 

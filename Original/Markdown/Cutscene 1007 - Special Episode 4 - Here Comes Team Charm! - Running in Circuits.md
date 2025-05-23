@@ -11,7 +11,10 @@
 * * *
 
 
-`Medicham Normal` ❓
+`Medicham`: ❓
+
+
+`Medicham Normal`
 
 `Medicham`: "What? Th-this is..."
 

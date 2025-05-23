@@ -105,7 +105,7 @@
 
 *If the player chooses "Please explain again":*
 
-  * `Loudred Angry` 〽
+  * `Loudred Angry` 💢
 
   * `Loudred`: "Really?! You're not just messing with me, ARE you?"
 
@@ -113,6 +113,9 @@
   * `Loudred Happy` 🔆
 
   * `Loudred`: "All right. I've got a BIG heart. I'll explain as much as you want."
+
+
+  * `Hero`: 💧
 
 
   * * * *

@@ -26,17 +26,17 @@
 `Partner Name`: "You were right, `Hero Name`!"
 
 
-`Partner Surprised`
+`Partner Surprised` 〽
 
 `Partner Name`: "You were right! The secret swirled within the quicksand!"
 
 
-`Partner Determined`
+`Partner Determined` 〽
 
 `Partner Name`: "Let's move it! It's time to go exploring, `Hero Name`!"
 
 
-`Partner Determined`
+`Partner Determined` 〽
 
 `Partner Name`: "Let's search for that Time Gear!"
 

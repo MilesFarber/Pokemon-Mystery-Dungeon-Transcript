@@ -26,7 +26,10 @@
 `Partner Name`: "It's `Hero Name`'s...last wish..."
 
 
-`Partner Sad` ❗
+`Partner`: ❗
+
+
+`Partner Sad`
 
 `Partner Name`: "Th-there's..."
 

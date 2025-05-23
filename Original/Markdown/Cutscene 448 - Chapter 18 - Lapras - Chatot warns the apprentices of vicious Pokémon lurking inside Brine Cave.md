@@ -96,7 +96,7 @@
 `Chatot`: "Uh...I don't remember at all."
 
 
-`Loudred Normal` ❗
+`Loudred Normal` 〽
 
 `Loudred`: "Huh?! You don't REMEMBER?!"
 
@@ -166,7 +166,10 @@
 `Chatot`: "There was one extremely vicious Pokémon. But it wasn't alone."
 
 
-`Chatot Normal` ❗
+`Chatot`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "When they attacked... Oh, I remember now!"
 
@@ -261,7 +264,10 @@
 `Chatot`: "It's up to you to look after yourselves."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urk! Understood."
 
@@ -276,9 +282,7 @@
 `Chatot`: "Let's give it our all!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 * * *

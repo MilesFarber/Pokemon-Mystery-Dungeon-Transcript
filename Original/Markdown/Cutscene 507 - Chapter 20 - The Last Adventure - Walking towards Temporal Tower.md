@@ -19,7 +19,7 @@
 * * *
 
 
-`Partner Normal`
+`Partner Normal` ⚟
 
 `Partner Name`: "The top of Temporal Tower is glowing red... Why is that?"
 
@@ -27,7 +27,7 @@
 * * *
 
 
-`Partner Determined`
+`Partner Determined` ⚟
 
 `Partner Name`: "Let's hurry!"
 

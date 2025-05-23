@@ -4,6 +4,9 @@
 * * *
 
 
+`Budew`: ❗
+
+
 `Wooper Normal` ◀▼▶
 
 `Wooper`: "Oh! Igglybuff!"

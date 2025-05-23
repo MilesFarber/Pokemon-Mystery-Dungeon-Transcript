@@ -50,8 +50,6 @@
   * *Else:*
 
 
-  *   * ❗
-
   *   * `💬`: "Debug: Unown Rock"
 
 

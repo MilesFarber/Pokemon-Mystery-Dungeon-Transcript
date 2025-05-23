@@ -11,7 +11,10 @@
 `Manectric`: "To claim our territory?!"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Please, no! You're wrong! We came only to..."
 

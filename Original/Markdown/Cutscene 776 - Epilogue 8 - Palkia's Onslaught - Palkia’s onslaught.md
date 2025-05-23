@@ -7,7 +7,10 @@
 * * *
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? `Hero Name`, over there!"
 
@@ -58,7 +61,7 @@
 * * *
 
 
-`Palkia Normal` 〽
+`Palkia Normal`
 
 `Palkia`: "IT IS YOUR FATE..."
 
@@ -74,7 +77,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "H-here he comes, `Hero Name`!"
 

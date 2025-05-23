@@ -9,7 +9,10 @@
 * * *
 
 
-`Partner Worried` 💦
+`Partner`: 💦
+
+
+`Partner Worried`
 
 `Partner Name`: "Wh-where are we?"
 

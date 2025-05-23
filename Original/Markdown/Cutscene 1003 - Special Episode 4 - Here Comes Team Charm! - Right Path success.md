@@ -1,7 +1,10 @@
 * * *
 
 
-`Medicham Normal` ❓
+`Gardevoir`: ❓
+
+
+`Medicham Normal`
 
 `Medicham`: "Back where we started..."
 
@@ -16,12 +19,12 @@
 `Medicham`: "...What did you expect?"
 
 
-`Medicham Angry`
+`Medicham Angry` 💢
 
 `Medicham`: "We went in the same entrance as before!"
 
 
-`Medicham Angry`
+`Medicham Angry` 💢
 
 `Medicham`: "Lopunny! Aren't you going to try the other entrance?"
 

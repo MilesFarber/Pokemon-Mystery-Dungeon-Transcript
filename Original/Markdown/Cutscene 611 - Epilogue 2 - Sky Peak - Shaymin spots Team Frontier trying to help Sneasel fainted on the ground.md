@@ -14,7 +14,10 @@
 `Shaymin`: "Wow, Team Frontier sure are quick..."
 
 
-`Shaymin Surprised` ❗
+`Shaymin`: ❗
+
+
+`Shaymin Surprised`
 
 `Shaymin`: "What happened?!"
 
@@ -44,7 +47,10 @@
 `Shaymin`: "I'll go get help."
 
 
-`Mawile Surprised` ❗
+`Mawile`: ❗
+
+
+`Mawile Surprised`
 
 `Mawile`: "Huh? Who are you going to call for help?!"
 

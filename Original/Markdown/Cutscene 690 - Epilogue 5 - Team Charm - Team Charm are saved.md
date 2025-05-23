@@ -11,7 +11,8 @@
 
 ❗
 
-`Lopunny Pain` ❗
+
+`Lopunny Pain`
 
 `Lopunny`: "Urr... Urgh..."
 
@@ -21,7 +22,10 @@
 `Lopunny`: "Wh-what happened to us...?"
 
 
-`Lopunny Surprised` ❗
+`Lopunny`: ❗
+
+
+`Lopunny Surprised`
 
 `Lopunny`: "Oh! We were fighting Registeel here... Then Medicham got into trouble..."
 
@@ -41,7 +45,10 @@
 `Lopunny`: "Thank you! We were in a bind!"
 
 
-`Medicham Worried` 💦
+`Medicham`: 💦
+
+
+`Medicham Worried`
 
 `Medicham`: "We owe you one, Team `Team Name`."
 
@@ -61,7 +68,10 @@
 `Gardevoir`: "I'm afraid we can never repay you for this..."
 
 
-`Lopunny Normal` ❗
+`Lopunny`: ❗
+
+
+`Lopunny Normal`
 
 `Lopunny`: "I know!"
 

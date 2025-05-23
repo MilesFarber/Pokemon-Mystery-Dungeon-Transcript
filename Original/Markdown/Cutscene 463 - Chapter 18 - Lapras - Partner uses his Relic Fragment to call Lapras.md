@@ -21,17 +21,26 @@
 `Grovyle`: "The tide rises up to here from that gap in the walls."
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Oh! That's...)"
 
 
-`Partner Normal` ⚞
+`Partner`: ⚞
+
+
+`Partner Normal`
 
 `Partner Name`: "What? `Hero Name`, what's the matter?"
 
 
-`Partner Surprised` ⚟
+`Grovyle`: ⚟
+
+
+`Partner Surprised`
 
 `Partner Name`: "Hey! Look at this!"
 
@@ -57,7 +66,10 @@
 `Partner Name`: "I'll bring out the Relic Fragment."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh! The Relic Fragment!"
 
@@ -65,7 +77,7 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Wow! The pattern on the wall's glowing now?!"
 

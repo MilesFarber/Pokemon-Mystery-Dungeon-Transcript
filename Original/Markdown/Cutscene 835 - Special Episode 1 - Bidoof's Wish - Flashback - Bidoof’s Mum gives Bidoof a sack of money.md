@@ -1,7 +1,10 @@
 * * *
 
 
-`Bidoof Surprised` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "Th-this money...!?"
 
@@ -41,7 +44,10 @@
 `Bibarel`: "Even though you're going far away, you always do your best, you hear?"
 
 
-`Bidoof Teary-Eyed` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Teary-Eyed`
 
 `Bidoof`: "Sniff... Mama... Thank you...Mama..."
 

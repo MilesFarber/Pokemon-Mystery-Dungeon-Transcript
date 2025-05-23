@@ -31,7 +31,10 @@
 `Bibarel`: "Remember... If you get in trouble, you can always come back home to us."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Sniff... M-Mama..."
 
@@ -46,7 +49,10 @@
 `Bidoof`: "Take care!"
 
 
-`Bidoof Teary-Eyed` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Teary-Eyed`
 
 `Bidoof`: "Sniff... You guys..."
 
@@ -71,31 +77,21 @@
 `Bidoof`: "By golly, everyone! I'm off!"
 
 
-`Bidoof Normal` ◀▼▶
-
-`Bidoof`: "Bidoof's Family: Do your best!"
+`💬`: "Bidoof's Family: Do your best!"
 
 
 * * *
 
 
-`Bidoof Normal`
-
-`Bidoof`: "So I left my hometown..."
+`💬`: "So I left my hometown..."
 
 
-`Bidoof Normal`
-
-`Bidoof`: "And entered the Guildmaster's guild as an apprentice."
+`💬`: "And entered the Guildmaster's guild as an apprentice."
 
 
-`Bidoof Normal`
-
-`Bidoof`: "But the training at the guild... For me, was..."
+`💬`: "But the training at the guild... For me, was..."
 
 
-`Bidoof Normal`
-
-`Bidoof`: "More difficult than I thought..."
+`💬`: "More difficult than I thought..."
 
 

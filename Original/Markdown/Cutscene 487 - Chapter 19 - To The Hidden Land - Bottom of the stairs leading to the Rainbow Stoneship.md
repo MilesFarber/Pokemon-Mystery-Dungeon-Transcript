@@ -4,7 +4,10 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "What... What is this place?!"
 

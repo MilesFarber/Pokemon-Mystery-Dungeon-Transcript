@@ -1,7 +1,10 @@
 * * *
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "Sniff... This is the emergency money I got from Mama."
 
@@ -36,7 +39,10 @@
 `Kecleon`: "If you change your mind, come back anytime. ♪"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "...Sniff... Now that you've said that, how can I ever make up my mind for sure? Yup yup..."
 
@@ -51,7 +57,7 @@
 `Bidoof`: "It's too bad...but I'm going to give up on the TM..."
 
 
-`Snover Pain` ⚞
+`Snover Pain`
 
 `Snover`: "Erk... Scary..."
 
@@ -61,7 +67,13 @@
 `Snover`: "Umm... Umm... What should I do..."
 
 
-`Snover Pain` 💦
+`Snover`: 💦
+
+
+`Snover`: 💦
+
+
+`Snover Pain`
 
 `Snover`: "Excuse me! H-hold this!"
 
@@ -69,7 +81,10 @@
 >Bidoof received something from the strange Pokémon.
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Huh... Golly, what is this?"
 
@@ -79,7 +94,10 @@
 `Bidoof`: "Hey! You...wait!"
 
 
-`Bidoof Sad` 💧
+`Bidoof`: 💧
+
+
+`Bidoof Sad`
 
 `Bidoof`: "...Just now... What was that, anyway...?"
 
@@ -104,7 +122,10 @@
 `Bagon`: "Hey! You!"
 
 
-`Bidoof Normal` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Yes?"
 
@@ -124,7 +145,7 @@
 `Gligar`: "Come on! We're in a hurry!"
 
 
-`Gligar Angry`
+`Gligar Angry` 💢
 
 `Gligar`: "Quit taking your time and just spit it out already!"
 
@@ -164,7 +185,10 @@
 `Bagon`: "Yeah!"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Sniff... They were pretty scary."
 

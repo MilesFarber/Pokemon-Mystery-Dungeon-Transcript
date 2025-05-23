@@ -53,7 +53,10 @@
 `Hero Name`: "(Now that time has returned to normal... and peace has come to the world...)"
 
 
-`Hero Normal` ❗
+`Hero`: ❗
+
+
+`Hero Normal`
 
 `Hero Name`: "(It reminds me that...because time returned to normal...)"
 

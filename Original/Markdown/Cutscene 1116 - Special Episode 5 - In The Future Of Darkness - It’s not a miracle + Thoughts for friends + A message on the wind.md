@@ -76,7 +76,10 @@
 `Dialga`: "YOUR FRIENDS..."
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "...! Th-that's right!"
 

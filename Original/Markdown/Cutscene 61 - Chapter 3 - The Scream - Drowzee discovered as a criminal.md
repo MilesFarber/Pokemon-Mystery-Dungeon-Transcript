@@ -6,8 +6,6 @@
 `Partner Name`: "Oh, is that so?"
 
 
-⚞
-
 `Dugtrio`: "Update completed! Stand clear!"
 
 
@@ -37,12 +35,18 @@
 `Partner Name`: "..."
 
 
-`Bidoof Normal` ⚟
+`Bidoof`: ⚟
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Huh? What's ailing you? Why are you shivering all of a sudden?"
 
 
-`Bidoof Normal` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Normal`
 
 `Bidoof`: "It's not cold here, after all."
 
@@ -63,7 +67,10 @@
 * * *
 
 
-`Partner Determined` 〽
+`Hero`: 〽
+
+
+`Partner Determined`
 
 `Partner Name`: "It's Drowzee! H-he's a wanted criminal!"
 
@@ -76,7 +83,10 @@
 `Partner Name`: "We have to hurry! Azurill will be in trouble!"
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Now what's going on?"
 

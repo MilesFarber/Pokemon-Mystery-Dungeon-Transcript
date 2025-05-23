@@ -1,7 +1,10 @@
 * * *
 
 
-`Wigglytuff Normal` ⚞
+`Wigglytuff`: ⚞
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Good morning, Igglybuff."
 
@@ -37,7 +40,8 @@
 `💬`: "Igglybuff!"
 
 
-⚞
+`Igglybuff`: ⚞
+
 
 `💬`: "Igglybuff. ♪ Let's play. ♪"
 

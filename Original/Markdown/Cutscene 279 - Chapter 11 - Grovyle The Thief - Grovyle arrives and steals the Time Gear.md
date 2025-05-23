@@ -36,7 +36,7 @@
 `Mesprit`: "I know that the Time Gear from Fogbound Lake was stolen!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Pardon? You heard about it from Uxie?"
 
@@ -61,14 +61,25 @@
 
 ❗
 
+
 ❗
 
-`Mesprit Pain` 〽
+
+`Partner`: ❗
+
+
+`Mesprit`: 〽
+
+
+`Mesprit Pain`
 
 `Mesprit`: "Who are you?!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "G-Grovyle!"
 
@@ -121,9 +132,11 @@
 
 〽
 
+
 〽
 
-`Partner Surprised` 〽
+
+`Partner Surprised`
 
 `Partner Name`: "Mesprit!"
 
@@ -173,9 +186,11 @@
 
 💦
 
+
 💦
 
-`Grovyle Normal` 💦
+
+`Grovyle Normal`
 
 `Grovyle`: "Forgive me. I have no quarrel with any of you."
 
@@ -213,7 +228,10 @@
 * * *
 
 
-`Mesprit Pain` 〽
+`Mesprit`: 〽
+
+
+`Mesprit Pain`
 
 `Mesprit`: "Oh! This is bad!"
 

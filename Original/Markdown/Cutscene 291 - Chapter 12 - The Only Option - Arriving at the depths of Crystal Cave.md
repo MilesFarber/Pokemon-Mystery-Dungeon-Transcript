@@ -12,7 +12,10 @@
 `Partner Name`: "Is this...the deepest part of the caverns?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh, `Hero Name`! Over there!"
 

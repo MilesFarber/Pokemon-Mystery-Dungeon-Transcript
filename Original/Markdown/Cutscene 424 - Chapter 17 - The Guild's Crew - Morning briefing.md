@@ -54,8 +54,6 @@
 `Chatot`: "Let's get this done!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 

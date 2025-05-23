@@ -11,7 +11,10 @@
 `Bidoof`: "But while I'm just sitting here, everyone is fighting that band of thieves for me! Yup yup!"
 
 
-`Bidoof Normal` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Normal`
 
 `Bidoof`: "...I wonder why everyone came all the way out here for me..."
 

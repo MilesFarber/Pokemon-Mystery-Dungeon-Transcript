@@ -6,17 +6,26 @@
 `Partner Name`: "Oh no... How could this happen?"
 
 
-`Chatot Surprised` ❗
+`Chatot`: ❗
+
+
+`Chatot Surprised`
 
 `Chatot`: "!!! You've found Manaphy!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Chatot! Manaphy is... Manaphy is..."
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "Ma-Manaphy!"
 
@@ -56,7 +65,10 @@
 `Chatot`: "That's why this infant is ill."
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk! So it's our fault that Manaphy is..."
 

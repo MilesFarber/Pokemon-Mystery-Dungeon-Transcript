@@ -14,7 +14,9 @@
 
 ❗
 
-〽
+
+`(__NPC)`: 〽
+
 
 `💬`: "........................"
 
@@ -30,7 +32,11 @@
 
 ❗
 
-`Medicham Surprised` 〽
+
+`(__NPC)`: 〽
+
+
+`Medicham Surprised`
 
 `Medicham`: "The stone statues! They're alive!"
 

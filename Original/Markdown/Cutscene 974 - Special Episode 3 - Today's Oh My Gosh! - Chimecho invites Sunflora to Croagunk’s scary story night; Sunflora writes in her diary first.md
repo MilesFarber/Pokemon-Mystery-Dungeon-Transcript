@@ -6,7 +6,10 @@
 `Chimecho`: "Greetings, Sunflora!"
 
 
-`Chimecho Normal` ⚞
+`Sunflora`: ⚞
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Everyone's telling scary stories in the next room!"
 
@@ -46,12 +49,15 @@
 `Sunflora`: "I'll be there shortly."
 
 
-`Sunflora Normal` ⚟
+`Sunflora Normal`
 
 `Sunflora`: "Oh, Chimecho."
 
 
-`Chimecho Normal` ❓
+`Chimecho`: ❓
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Yes?"
 

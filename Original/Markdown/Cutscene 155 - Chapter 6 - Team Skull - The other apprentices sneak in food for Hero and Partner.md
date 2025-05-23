@@ -1,7 +1,10 @@
 * * *
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Whew! No one saw anything, except maybe Croagunk..."
 
@@ -46,7 +49,7 @@
 `Partner Name`: "Crunch munch! Chomp chomp! Gobble gulp! Crunch munch! Chomp chomp! Gobble gulp!"
 
 
-`Partner Joyous`
+`Partner Joyous` 🍴
 
 `Partner Name`: "Crunch munch! Chomp chomp! Gobble gulp! Crunch munch! Chomp chomp! Gobble gulp!"
 
@@ -74,6 +77,9 @@
 `Partner Teary-Eyed` 💦
 
 `Partner Name`: "Sniffle... Thanks, everyone..."
+
+
+`Partner`: 💦
 
 
 `Partner Sad`
@@ -154,6 +160,9 @@
 `Partner Teary-Eyed` 💦
 
 `Partner Name`: "Sniffle... Everyone, honestly, thank you."
+
+
+`Partner`: 💦
 
 
 `Partner Normal`

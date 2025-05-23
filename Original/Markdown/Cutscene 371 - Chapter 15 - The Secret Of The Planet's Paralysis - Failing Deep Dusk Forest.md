@@ -12,7 +12,10 @@
 * * *
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk... This is kind of challenging..."
 

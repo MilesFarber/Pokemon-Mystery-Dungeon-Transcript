@@ -6,12 +6,18 @@
 `Grovyle`: "This is it. This is the entrance to Treeshroud Forest."
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Oh?"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Is something wrong, Grovyle?"
 

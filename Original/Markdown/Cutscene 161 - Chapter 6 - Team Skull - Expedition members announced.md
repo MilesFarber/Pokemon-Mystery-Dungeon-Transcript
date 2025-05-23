@@ -67,7 +67,10 @@
 `Loudred`: "WOO-HOOOO!"
 
 
-`Sunflora Normal` 💧
+`Sunflora`: 💧
+
+
+`Sunflora Normal`
 
 `Sunflora`: "(Says you...)"
 
@@ -102,7 +105,10 @@
 `Chatot`: "Next is... Oh, what's this?"
 
 
-`Chatot Normal` ❗
+`Chatot`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "Well this is a surprise! Our next member is Bidoof! ♪"
 
@@ -112,12 +118,15 @@
 `Bidoof`: "Really?! Really and truly?!"
 
 
-`Bidoof Normal`
+`Bidoof Normal` 〽
 
 `Bidoof`: "Golly... Me?! I'm going on the expedition?!"
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Hm? Is anything the matter, Bidoof?"
 
@@ -127,7 +136,10 @@
 `Chatot`: "Come on, step forward."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Urf... I sure want to step up, I truly do, but..."
 
@@ -137,7 +149,10 @@
 `Bidoof`: "I'm feeling a might overwhelmed here. My legs aren't moving..."
 
 
-`Chatot Normal` 💧
+`Chatot`: 💧
+
+
+`Chatot Normal`
 
 `Chatot`: "So be it. We'll ignore it and move on."
 
@@ -147,7 +162,10 @@
 `Chatot`: "Next we have Sunflora and Chimecho! ♪"
 
 
-`Chimecho Normal` ❗
+`Chimecho`: ❗
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Oh? Us too?"
 
@@ -162,7 +180,10 @@
 `Chatot`: "Erm, yes... And there we have the expedition party members!"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urf..."
 
@@ -187,7 +208,13 @@
 `Chatot`: "So that's it for the expedition members... Erm... What's this...?"
 
 
-`Chatot Pain` 💦
+`Chatot`: ❓
+
+
+`Chatot`: 💦
+
+
+`Chatot Pain`
 
 `Chatot`: "(There's something scribbled on the margins of this memo...)"
 
@@ -217,7 +244,10 @@
 `Chatot`: "The others are...Diglett, Dugtrio, and Croagunk. Oh, and `Partner Name` and `Hero Name`. ♪"
 
 
-`Chatot Normal` ❗
+`Croagunk`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "That is all. Wait a second! What?!"
 
@@ -312,7 +342,10 @@
 `Wigglytuff`: "We'll be noisy and excited and having fun! I started thinking about it, and it made me so excited, I couldn't sleep! ♪"
 
 
-`Skuntank Surprised` 💦
+`Skuntank`: 💦
+
+
+`Skuntank Surprised`
 
 `Skuntank`: "What...?"
 
@@ -327,12 +360,13 @@
 `Wigglytuff`: "Let's all do our best! ♪"
 
 
-`Wigglytuff Sigh` ◀▼▶
-
-`Wigglytuff`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
-`Chatot Pain` 💦
+`Chatot`: 💦
+
+
+`Chatot Pain`
 
 `Chatot`: "Urrgh... Well, that's settled."
 
@@ -427,7 +461,10 @@
 `Bidoof`: "Sniff... It's like I'm dreaming. It's making me feel mighty emotional... Sob..."
 
 
-`Dugtrio Normal` 💦
+`Bidoof`: 💦
+
+
+`Dugtrio Normal`
 
 `Dugtrio`: "It's no dream. This is really happening."
 
@@ -462,7 +499,10 @@
 `Chimecho`: "Let's do our best!"
 
 
-`Bidoof Teary-Eyed` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Teary-Eyed`
 
 `Bidoof`: "Sniff... Sniff..."
 

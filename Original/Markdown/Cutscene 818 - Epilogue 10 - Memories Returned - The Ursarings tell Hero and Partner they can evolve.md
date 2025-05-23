@@ -1,7 +1,10 @@
 * * *
 
 
-`Ursaring Normal` ❗
+`Ursaring`: ❗
+
+
+`Ursaring Normal`
 
 `Ursaring`: "Oh! `Hero Name`! `Partner Name`!"
 
@@ -31,7 +34,10 @@
 `Ursaring`: "So we went back to Luminous Spring to see."
 
 
-`Ursaring Normal` 💦
+`Ursaring`: 💦
+
+
+`Ursaring Normal`
 
 `Ursaring`: "How many times do I have to tell her that we can't evolve past this form?"
 
@@ -66,7 +72,10 @@
 `Ursaring`: "Something about the place feels different...from the last time we went..."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Different...?"
 
@@ -131,12 +140,15 @@
 `Ursaring`: "I think that you might be able to evolve now, if you want to."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Really? We can evolve now?"
 
 
-`Ursaring Normal` 💦
+`Ursaring`: 💦
+
+
+`Ursaring Normal`
 
 `Ursaring`: "Well, I don't really know if you can..."
 

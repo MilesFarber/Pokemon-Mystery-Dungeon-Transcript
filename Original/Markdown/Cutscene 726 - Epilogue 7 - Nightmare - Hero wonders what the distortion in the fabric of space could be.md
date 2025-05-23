@@ -18,7 +18,7 @@
 `Hero Name`: "(Time is back to normal...but maybe some things are still out of whack.)"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Waah! Lightning!"
 

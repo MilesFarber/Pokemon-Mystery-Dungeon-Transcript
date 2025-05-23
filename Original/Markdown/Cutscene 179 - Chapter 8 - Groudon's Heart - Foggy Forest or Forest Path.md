@@ -61,7 +61,10 @@
   *   * `Partner Name`: "Huh? What is this?"
 
 
-  *   * `Partner Normal` ❗
+  *   * `Hero`: ❗
+
+
+  *   * `Partner Normal`
 
   *   * `Partner Name`: "It looks like some kind of stone, I guess."
 

@@ -6,12 +6,18 @@
 `Medicham`: "Somehow it seems like the scenery has changed slightly from before..."
 
 
-`Medicham Normal` ❗
+`Medicham`: ❗
+
+
+`Medicham Normal`
 
 `Medicham`: "Huh?"
 
 
-`Medicham Normal` ❓
+`Medicham`: ❓
+
+
+`Medicham Normal`
 
 `Medicham`: "Here... There's two entrances?"
 

@@ -11,7 +11,10 @@
 `Partner Name`: ".................."
 
 
-`Partner Sad` 💧
+`Partner`: 💧
+
+
+`Partner Sad`
 
 `Partner Name`: "Hmm... This isn't working."
 
@@ -86,7 +89,13 @@
 `Hero Name`: "(That's it. I'll tell `Partner Name`.)"
 
 
-`Partner Normal` ❓
+`Partner`: ⚟
+
+
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Hm? What is it, `Hero Name`?"
 
@@ -127,7 +136,10 @@
   *   * `Partner Name`: "But why Treasure Town? What are we going to do there?"
 
 
-  *   * `Hero Worried` 💧
+  *   * `Hero`: 💧
+
+
+  *   * `Hero Worried`
 
   *   * `Hero Name`: "(Th-that's true.)"
 
@@ -147,7 +159,10 @@
   *   * `Hero Name`: "(I flubbed it. I guess that's not what I meant.)"
 
 
-  *   * `Partner Worried` ❓
+  *   * `Partner`: ❓
+
+
+  *   * `Partner Worried`
 
   *   * `Partner Name`: "Pardon? That was a mistake?"
 
@@ -287,7 +302,10 @@
   * `Hero Name`: "(But...!)"
 
 
-  * `Partner Surprised` 〽
+  * `Partner`: 〽
+
+
+  * `Partner Surprised`
 
   * `Partner Name`: "...Pardon?! We should tell them anyway?"
 
@@ -312,7 +330,10 @@
   * *Anchor: <a name="6"></a>6*
 
 
-  * `Partner Surprised` 💦
+  * `Partner`: 💦
+
+
+  * `Partner Surprised`
 
   * `Partner Name`: "Wh-why?!"
 

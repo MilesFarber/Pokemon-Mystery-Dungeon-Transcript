@@ -1,7 +1,10 @@
 * * *
 
 
-`Bidoof Normal` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Huh? Howdy, `Partner Name`. Going out?"
 

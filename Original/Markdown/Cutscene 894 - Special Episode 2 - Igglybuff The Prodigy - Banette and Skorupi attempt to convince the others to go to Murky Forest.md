@@ -4,7 +4,10 @@
 * * *
 
 
-`Smoochum Surprised` ❗
+`Budew`: ❗
+
+
+`Smoochum Surprised`
 
 `Smoochum`: "Huh?!"
 
@@ -44,7 +47,10 @@
 `Banette`: "We decided on a place... Murky Forest."
 
 
-`Wooper Surprised` ❗
+`Wooper`: ❗
+
+
+`Wooper Surprised`
 
 `Wooper`: "Whaat? M...Murky Forest? Is that what you said?"
 
@@ -144,7 +150,10 @@
 `Igglybuff`: "Yep. I do. ♪"
 
 
-`Banette Normal` 💧
+`Skorupi`: 💧
+
+
+`Banette Normal`
 
 `Banette`: "...All right. You'll do. Come along."
 

@@ -1,4 +1,7 @@
-`Heracross Normal` 〽
+`Heracross`: 〽
+
+
+`Heracross Normal`
 
 `Heracross`: "Oh no!"
 
@@ -26,7 +29,10 @@
 >`Hero Name` gave the `Special Item`.
 
 
-  *   * `Heracross Normal` 〽
+  *   * `Heracross`: 〽
+
+
+  *   * `Heracross Normal`
 
   *   * `Heracross`: "Woo-hoo! For me?"
 
@@ -36,12 +42,15 @@
   *   * `Heracross`: "Really?! You're really a great friend!!"
 
 
-  *   * `Heracross Normal`
+  *   * `Heracross Normal` ◀▼▶
 
   *   * `Heracross`: "I'll find a way to pay you back!"
 
 
-  *   * `Heracross Normal` ❗
+  *   * `Heracross`: ❗
+
+
+  *   * `Heracross Normal`
 
   *   * `Heracross`: "Oh, that's right...! Here!"
 

@@ -16,17 +16,18 @@
 `Grovyle`: "Exactly."
 
 
-`Partner Normal` ❗
-
-`Partner Name`: "Pardon?!"
+`Partner`: ❗
 
 
 `Partner Normal`
 
-`Partner Name`: "Wheh-heh-heh!"
+`Partner Name`: "Pardon?!"
 
 
-`Partner Surprised` 〽
+`💬`: "Wheh-heh-heh!"
+
+
+`Partner Surprised`
 
 `Partner Name`: "Wah! I hear those Sableye!"
 

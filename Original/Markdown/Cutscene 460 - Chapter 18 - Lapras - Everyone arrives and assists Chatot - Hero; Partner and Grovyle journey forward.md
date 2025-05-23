@@ -34,7 +34,13 @@
 `💬`: "Chatot!"
 
 
-`Chatot Pain` ❗
+`Partner`: ❗
+
+
+`Chatot`: ❗
+
+
+`Chatot Pain`
 
 `Chatot`: "That voice... Guildmaster..."
 
@@ -47,12 +53,15 @@
 `Loudred`: "Guildmaster!"
 
 
-`Loudred Normal` ❗
+`Loudred Normal` 〽
 
 `Loudred`: "WAAH! Grovyle!"
 
 
-`Chimecho Normal` 💦
+`Chimecho`: 💦
+
+
+`Chimecho Normal`
 
 `Chimecho`: "What is Grovyle doing with the Guildmaster?!"
 
@@ -187,7 +196,7 @@
 `Chatot`: "...Pfft."
 
 
-`Loudred Normal` ❗
+`Loudred Normal` 〽
 
 `Loudred`: "WHOA, Chatot!"
 
@@ -252,7 +261,10 @@
 `Wigglytuff`: "Chatot's shielding you will have been for nothing."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urf..."
 

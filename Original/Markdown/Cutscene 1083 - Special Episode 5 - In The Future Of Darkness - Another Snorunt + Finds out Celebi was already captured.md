@@ -26,12 +26,13 @@
 `Grovyle`: "This is a strange place..."
 
 
-⚞
-
 `Snorunt`: "Gigii. Gigii."
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "I-it's... Who is it?!"
 
@@ -71,12 +72,21 @@
 `Grovyle`: "Hey! You!"
 
 
-`Snorunt Normal` ❗
+`Snorunt`: ❗
+
+
+`Snorunt Normal`
 
 `Snorunt`: "Gii...?!"
 
 
-`Grovyle Normal` 💦
+`Snorunt`: 💦
+
+
+`Grovyle`: 💦
+
+
+`Grovyle Normal`
 
 `Grovyle`: "W-wait! Don't run away!"
 
@@ -86,7 +96,10 @@
 `Grovyle`: "I just want to talk."
 
 
-`Snorunt Normal` ❓
+`Snorunt`: ❓
+
+
+`Snorunt Normal`
 
 `Snorunt`: "Gigii?"
 
@@ -101,7 +114,10 @@
 `Grovyle`: "Before us...did anyone come through here?"
 
 
-`Snorunt Normal` ❗
+`Snorunt`: ❗
+
+
+`Snorunt Normal`
 
 `Snorunt`: "Oh! Them!"
 
@@ -121,7 +137,10 @@
 `Snorunt`: "They were Sableye, I think..."
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "I-is that true?"
 
@@ -151,7 +170,10 @@
 `Snorunt`: "No. It wasn't just Sableye."
 
 
-`Snorunt Normal` ❗
+`Snorunt`: ❗
+
+
+`Snorunt Normal`
 
 `Snorunt`: "Now that you mention it."
 
@@ -194,7 +216,10 @@
 * * *
 
 
-`Grovyle Surprised` 〽
+`Snorunt`: 〽
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "Wh-what!?"
 

@@ -21,7 +21,7 @@
 `Medicham`: "I don't like wandering in circles aimlessly! I don't!"
 
 
-`Medicham Angry`
+`Medicham Angry` 💢
 
 `Medicham`: "Let's hurry up and go!"
 

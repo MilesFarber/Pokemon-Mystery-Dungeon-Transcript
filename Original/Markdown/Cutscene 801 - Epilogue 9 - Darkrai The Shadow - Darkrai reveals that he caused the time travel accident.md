@@ -46,7 +46,10 @@
 `Darkrai`: "That very accident was caused by...none other than myself."
 
 
-`Hero Surprised` 〽
+`Partner`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(What...?)"
 

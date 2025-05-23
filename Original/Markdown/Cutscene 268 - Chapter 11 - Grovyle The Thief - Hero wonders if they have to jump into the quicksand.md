@@ -69,7 +69,10 @@
 `Hero Name`: "(And aside from those pits...there's nothing...)"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Wait! Wait a second...)"
 
@@ -104,7 +107,10 @@
 `Partner Name`: "You want us to jump into the quicksand?!"
 
 
-`Partner Worried` 💦
+`Partner`: 💦
+
+
+`Partner Worried`
 
 `Partner Name`: "Are you serious, `Hero Name`?!"
 

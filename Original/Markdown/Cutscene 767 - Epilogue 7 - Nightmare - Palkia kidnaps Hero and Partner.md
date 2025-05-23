@@ -9,7 +9,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Waaaah!"
 
@@ -27,7 +27,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Who are you...?"
 
@@ -40,7 +40,10 @@
 * * *
 
 
-`Hero Surprised` 〽
+`Partner`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(P-Palkia?!)"
 

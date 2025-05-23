@@ -11,33 +11,52 @@
 `Partner Name`: "Urrrrrrgh! Urrrrrrgh!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "N-no. It just won't come out..."
+
+
+`Partner`: ❗
 
 
 >`Partner Name` just happened to push the gigantic gem!
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Aaaack! That's...)"
 
 
 ❗
 
+
 ❗
 
-`Partner Normal` ❓
+
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? What's happening?"
 
 
-〽
+`Hero`: 〽
+
 
 〽
 
-`Partner Surprised` 〽
+
+〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Waaah! It's a flood!"
 

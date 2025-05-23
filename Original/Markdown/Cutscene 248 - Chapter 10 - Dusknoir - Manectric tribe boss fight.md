@@ -7,7 +7,10 @@
 * * *
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urk! What an intimidating place!"
 
@@ -17,9 +20,11 @@
 
 〽
 
+
 〽
 
-`Partner Surprised` 〽
+
+`Partner Surprised`
 
 `Partner Name`: "Waah!"
 
@@ -34,7 +39,10 @@
 `Partner Name`: "We should get away from a place this scary as fast as... Huh?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Over there!"
 
@@ -51,7 +59,9 @@
 
 〽
 
+
 〽
+
 
 `Partner Surprised` 〽
 
@@ -81,7 +91,10 @@
 `💬`: "All right... Let's take them out!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Oh...this is not good! We'll surely be defeated if we stay here!"
 
@@ -105,9 +118,11 @@
 
 〽
 
+
 〽
 
-`Partner Surprised` 〽
+
+`Partner Surprised`
 
 `Partner Name`: "Waaaah!"
 

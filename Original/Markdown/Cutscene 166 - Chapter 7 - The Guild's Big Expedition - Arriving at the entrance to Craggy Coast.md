@@ -4,7 +4,10 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Wow! The sea is right up this way, `Hero Name`!"
 
@@ -34,7 +37,10 @@
 `Bidoof`: "It's a Kangaskhan Rock."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Kangaskhan Rock?"
 
@@ -69,7 +75,7 @@
 `Bidoof`: "Gulp...! I just want to say again that this here's my first expedition!"
 
 
-`Bidoof Sad`
+`Bidoof Sad` 💦
 
 `Bidoof`: "I'm feeling kind of nervous, by golly."
 

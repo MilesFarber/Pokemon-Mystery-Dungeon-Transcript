@@ -66,7 +66,7 @@
 `Partner Name`: "Oh, I see! We made a discovery!"
 
 
-`Hero Worried` 🔆
+`Hero Worried`
 
 `Hero Name`: "(When I had those dizzy spells...)"
 

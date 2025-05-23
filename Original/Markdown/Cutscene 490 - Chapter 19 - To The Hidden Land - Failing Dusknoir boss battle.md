@@ -34,7 +34,10 @@
 * * *
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk! It's really tough."
 

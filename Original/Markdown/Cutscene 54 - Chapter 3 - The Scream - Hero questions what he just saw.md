@@ -6,7 +6,7 @@
 `Hero Name`: "(What was that?)"
 
 
-`Hero Surprised`
+`Hero Surprised` 〽
 
 `Hero Name`: "(I'm sure I heard a shout for help just now...)"
 
@@ -16,7 +16,10 @@
 `Hero Name`: "(Did that shout come from you?)"
 
 
-`Azurill Normal` ❓
+`Azurill`: ❓
+
+
+`Azurill Normal`
 
 `Azurill`: "Is something the matter?"
 
@@ -59,12 +62,18 @@
 `Partner Name`: "Ha! Those little guys are cute."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? What's the matter, `Hero Name`?"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Pardon? Did I hear a shout for help just then?"
 
@@ -84,7 +93,10 @@
 `Partner Name`: "Did you hear anything strange just a moment ago?"
 
 
-`Kecleon Normal` ❓
+`Kecleon`: ❓
+
+
+`Kecleon Normal`
 
 `Kecleon`: "No, nothing out of the ordinary."
 

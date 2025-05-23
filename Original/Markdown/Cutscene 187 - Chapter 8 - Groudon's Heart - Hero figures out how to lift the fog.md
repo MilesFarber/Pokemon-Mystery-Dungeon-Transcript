@@ -41,7 +41,10 @@
 `Hero Name`: "(But it still bugs me for some reason...)"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Are you all right, `Hero Name`?"
 
@@ -71,7 +74,10 @@
 `Hero Name`: "("That lifts the fog!")"
 
 
-`Hero Normal` ❗
+`Hero`: ❗
+
+
+`Hero Normal`
 
 `Hero Name`: "(Wait a second! Drought Stone?!)"
 

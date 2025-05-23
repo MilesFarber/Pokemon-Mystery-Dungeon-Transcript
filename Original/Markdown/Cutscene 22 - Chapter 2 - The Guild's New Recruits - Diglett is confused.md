@@ -1,7 +1,10 @@
 * * *
 
 
-`Diglett Normal` 💧
+`Diglett`: 💧
+
+
+`Diglett Normal`
 
 `Diglett`: "Umm... The footprint is..."
 
@@ -14,7 +17,10 @@
 `💬`: "What?! MAYBE?!"
 
 
-`Diglett Pain` 💦
+`Diglett`: 💦
+
+
+`Diglett Pain`
 
 `Diglett`: "B-but... It's not a footprint that you normally see around here..."
 

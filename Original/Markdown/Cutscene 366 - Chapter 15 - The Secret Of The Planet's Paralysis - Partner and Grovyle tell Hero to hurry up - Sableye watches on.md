@@ -9,7 +9,8 @@
 `Grovyle`: "Hey! What are you doing?!"
 
 
-❗
+`Hero`: ❗
+
 
 `Grovyle`: "Hurry!"
 

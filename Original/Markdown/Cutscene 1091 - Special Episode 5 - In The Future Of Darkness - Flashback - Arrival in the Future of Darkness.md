@@ -1,7 +1,10 @@
 * * *
 
 
-`Grovyle Surprised` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "S-Sableye!"
 
@@ -11,7 +14,10 @@
 `Sableye`: "Wheh-heh-heh!? G-Grovyle?!"
 
 
-`Grovyle Normal` 💦
+`Sableye`: 💦
+
+
+`Grovyle Normal`
 
 `Grovyle`: "...They've found me already..."
 

@@ -16,9 +16,7 @@
 `Grovyle`: "Don't get distracted! Here they come!"
 
 
-`Grovyle Normal`
-
-`Grovyle`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 * * *

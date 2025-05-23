@@ -6,12 +6,12 @@
 `Chatot`: "What?! What did you say?!"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 〽
 
 `Chatot`: "You're saying that the great Dusknoir and Grovyle..."
 
 
-`Chatot Surprised`
+`Chatot Surprised` 〽
 
 `Chatot`: "They may have known each other from before all this?!"
 
@@ -56,7 +56,7 @@
 `Diglett`: "It's an alert from Magnemite."
 
 
-`Diglett Normal`
+`Diglett Normal` ◀▼▶
 
 `Diglett`: "I'm told it's an emergency call sent out by Officer Magnezone!"
 
@@ -66,12 +66,10 @@
 `Diglett`: "Deputy Magnemite! Please shout your message down to the sentry post!"
 
 
-`Diglett Normal`
+`Diglett Normal` ◀▼▶
 
 `Diglett`: "Please speak clearly!"
 
-
-◀▼▶
 
 `Magnemite`: "Zzzt! Can you hear me? Zzzt!"
 

@@ -56,7 +56,10 @@
 `Partner Name`: "Do you think that she got chased off by Primal Dialga?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "What if..."
 
@@ -69,12 +72,15 @@
 `💬`: "Captured?"
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Wah! Who said that?!"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "But now...I don't hear anything."
 
@@ -86,8 +92,6 @@
 
 `💬`: "Tee-hee! You didn't imagine it!"
 
-
-❗
 
 `💬`: "Me? Captured?"
 
@@ -108,7 +112,10 @@
 `Grovyle`: "Yes. It has been a while, Celebi."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! This tiny thing is Celebi?"
 
@@ -118,12 +125,15 @@
 `Celebi`: "Now that is downright rude!"
 
 
-`Celebi Normal`
+`Celebi Normal` 💢
 
 `Celebi`: "How inappropriate! To poke fun at my petite proportions..."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Uh...I'm sorry."
 
@@ -158,7 +168,10 @@
 `Celebi`: "You must find me cuter and more special than you imagined! Tee-hee!"
 
 
-`Partner Worried` 💧
+`Partner`: 💧
+
+
+`Partner Worried`
 
 `Partner Name`: "Well, yes."
 
@@ -186,6 +199,9 @@
 `Grovyle Normal` 💧
 
 `Grovyle`: "Urk... Yes, it's true."
+
+
+`Grovyle`: 💧
 
 
 `Celebi Normal`
@@ -273,7 +289,10 @@
 `Grovyle`: "Yeah. That's right."
 
 
-`Celebi Normal` ❗
+`Celebi`: ❗
+
+
+`Celebi Normal`
 
 `Celebi`: "Oh?! What's...this? Your friend!"
 

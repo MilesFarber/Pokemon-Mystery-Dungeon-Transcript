@@ -21,7 +21,10 @@
 `Chatot`: "But judging from what you've told me... This youngster appears to be a Pokémon named Manaphy."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Manaphy?"
 
@@ -76,7 +79,10 @@
 `Manaphy`: "Weh... Weh... Waaaah!"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "Whoa! What...what's wrong? The baby started crying all of a sudden!"
 

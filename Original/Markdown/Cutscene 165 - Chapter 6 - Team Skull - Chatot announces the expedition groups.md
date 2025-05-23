@@ -51,7 +51,10 @@
 `Chatot`: "The Guildmaster and I shall travel as a pair... That is acceptable, yes?"
 
 
-`Wigglytuff Sad` 〽
+`Wigglytuff`: 〽
+
+
+`Wigglytuff Sad`
 
 `Wigglytuff`: "Awwwww?! I have to go with Chatot?!"
 
@@ -61,7 +64,7 @@
 `Wigglytuff`: "That's so boooooring!"
 
 
-`Chatot Pain` 💦
+`Chatot Pain`
 
 `Chatot`: "Please don't be difficult. This is a key element of our strategy."
 
@@ -106,36 +109,24 @@
 `Chatot`: "Everyone, let's get to it and move out! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 * * *
 
 
-`Chatot Normal`
-
-`Chatot`: " And thus..."
+`💬`: " And thus..."
 
 
-`Chatot Normal`
-
-`Chatot`: "The guild's expedition party began making its way toward Fogbound Lake."
+`💬`: "The guild's expedition party began making its way toward Fogbound Lake."
 
 
-`Chatot Normal`
-
-`Chatot`: "According to plan, the party was split into the designated groups."
+`💬`: "According to plan, the party was split into the designated groups."
 
 
-`Chatot Normal`
-
-`Chatot`: "And `Hero Name`, `Partner Name`, and Bidoof's group plotted its course."
+`💬`: "And `Hero Name`, `Partner Name`, and Bidoof's group plotted its course."
 
 
-`Chatot Normal`
-
-`Chatot`: "The group settled on a route along the seacoast to reach the base camp."
+`💬`: "The group settled on a route along the seacoast to reach the base camp."
 
 

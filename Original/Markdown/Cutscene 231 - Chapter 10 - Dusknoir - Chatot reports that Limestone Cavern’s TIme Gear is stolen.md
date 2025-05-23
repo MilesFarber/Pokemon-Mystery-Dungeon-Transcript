@@ -3,14 +3,10 @@
 `Chimecho`: "Everyone! Time for dinner! ♪"
 
 
-`Chimecho Normal`
-
-`Chimecho`: "Everyone: YEAH!"
+`💬`: "Everyone: YEAH!"
 
 
-`Chimecho Normal`
-
-`Chimecho`: "Everyone: Let's get..."
+`💬`: "Everyone: Let's get..."
 
 
 `Chatot Normal`
@@ -31,7 +27,7 @@
 `Chatot`: "There is something I must share with you."
 
 
-`Corphish Normal` ◀▼▶
+`Corphish Normal` 💢
 
 `Corphish`: "Hey, hey, hey!"
 
@@ -56,9 +52,7 @@
 `Chatot`: "Another Time Gear was stolen!"
 
 
-`Chatot Normal` ❗
-
-`Chatot`: "Everyone: WHAT?!"
+`💬`: "Everyone: WHAT?!"
 
 
 `Chimecho Normal`
@@ -71,7 +65,10 @@
 `Loudred`: "ANOTHER one got stolen?!"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Uh, is it...maybe...the one in Fogbound Lake?"
 
@@ -116,7 +113,7 @@
 `Chatot`: "Understood?"
 
 
-`Dugtrio Normal` ◀▼▶
+`Dugtrio Normal` 💢
 
 `Dugtrio`: "Of course!"
 
@@ -136,7 +133,7 @@
 `Chatot`: "OK! OK! Quiet, everyone!"
 
 
-`Chatot Normal`
+`Chatot Normal` 💦
 
 `Chatot`: "Sorry to keep you waiting."
 
@@ -146,12 +143,8 @@
 `Chatot`: "Without further ado... On your marks...get set..."
 
 
-`Chatot Normal` ◀▼▶
+`💬`: "Everyone: CHOW!"
 
-`Chatot`: "Everyone: CHOW!"
-
-
-🍴
 
 `💬`: "Crunch-munch! Chew-chew! Snuffle-slurp! Crunch-munch! Chew-chew! Snuffle-slurp!"
 

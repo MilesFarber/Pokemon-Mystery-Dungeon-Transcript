@@ -20,7 +20,10 @@
 `Graveler`: "This is the...deepest part of the dungeon, I think..."
 
 
-`Graveler Normal` ❗
+`Graveler`: ❗
+
+
+`Graveler Normal`
 
 `Graveler`: "Oooh, hey! There's a treasure chest up there!"
 
@@ -70,7 +73,10 @@
 `Graveler`: "This totally rocks! I can't wait..."
 
 
-`Graveler Surprised` 〽
+`Graveler`: 〽
+
+
+`Graveler Surprised`
 
 `Graveler`: "...Oh, darn!"
 
@@ -90,7 +96,10 @@
 `Graveler`: "Whew. Glad I thought of that. I was so excited I almost got careless."
 
 
-`Graveler Normal` 💧
+`Graveler`: 💧
+
+
+`Graveler Normal`
 
 `Graveler`: "Anyway, I'll pick up the treasure carefully..."
 
@@ -113,7 +122,10 @@
 `💬`: "Wait a moment!"
 
 
-`Graveler Surprised` 〽
+`Graveler`: 〽
+
+
+`Graveler Surprised`
 
 `Graveler`: "Wh...what was that? That voice?!"
 
@@ -124,7 +136,10 @@
 `💬`: "We're not handing it over to you!"
 
 
-`Graveler Surprised` 💦
+`Graveler`: 💦
+
+
+`Graveler Surprised`
 
 `Graveler`: "Wh-who's there? Where are you?"
 
@@ -164,7 +179,10 @@
 * * *
 
 
-`Graveler Surprised` 〽
+`Graveler`: 〽
+
+
+`Graveler Surprised`
 
 `Graveler`: "Wh-what's this?"
 
@@ -185,7 +203,10 @@
 * * *
 
 
-`Graveler Surprised` 〽
+`Graveler`: 〽
+
+
+`Graveler Surprised`
 
 `Graveler`: "Aaah! The treasure's gone!"
 
@@ -195,12 +216,15 @@
 `Graveler`: "Blast! I've been tricked!"
 
 
-`Graveler Angry`
+`Graveler Angry` 💢
 
 `Graveler`: "Th-them!!"
 
 
-`Graveler Surprised` 💦
+`Graveler`: 💦
+
+
+`Graveler Surprised`
 
 `Graveler`: "AAAAARRRRGGGHHH!"
 

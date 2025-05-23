@@ -24,7 +24,10 @@
 `Corphish`: "Hey, hey! Where'd Guildmaster go, anyway?"
 
 
-`Chatot Pain` 💦
+`Chatot`: 💦
+
+
+`Chatot Pain`
 
 `Chatot`: "Um...I wouldn't know that..."
 
@@ -74,12 +77,18 @@
 `Sunflora`: "...................................."
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Uh... Why isn't anyone saying anything?"
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "It...it can't be!"
 
@@ -94,17 +103,20 @@
 `Chatot`: "E-everyone! Out with it!"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 💦
 
 `Chatot`: "Am I perhaps...perhaps..."
 
 
-`Chatot Surprised`
+`Chatot Surprised` 💦
 
 `Chatot`: "Inadequate? Worthless to you?!"
 
 
-`Bidoof Sad` 💧
+`Bidoof`: 💧
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Uh, nope. I wouldn't say that, by golly."
 
@@ -174,7 +186,10 @@
 `Chimecho`: "And that's you, Chatot."
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Huh? Wh-who? Me?"
 
@@ -209,7 +224,10 @@
 `Chatot`: "Urk!"
 
 
-`Chatot Pain` 💦
+`Chatot`: 💦
+
+
+`Chatot Pain`
 
 `Chatot`: "W-w-well...e-e-everyone..."
 
@@ -244,9 +262,7 @@
 `Chatot`: "Everyone! Let us excel together!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 * * *

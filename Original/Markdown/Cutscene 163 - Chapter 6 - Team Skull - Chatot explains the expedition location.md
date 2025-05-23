@@ -26,7 +26,10 @@
 `Chatot`: "First, the objective: exploration of Fogbound Lake."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Fogbound Lake?"
 

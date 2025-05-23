@@ -1,8 +1,6 @@
 * * *
 
 
-◀▼▶
-
 `💬`: "Everyone: AND...THREE! SMILES GO FOR MILES!"
 
 
@@ -11,12 +9,13 @@
 `Chatot`: "OK, Pokémon! ♪ Time to get to work! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Huh? Something wrong, Bidoof?"
 
@@ -46,7 +45,10 @@
 `Chatot`: "But... Please keep it brief. I don't really have the time to dawdle."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Sniff... I'm not really confident..."
 
@@ -56,12 +58,18 @@
 `Bidoof`: "Chatot...do you know anything about a place called Star Cave?"
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Star Cave? Hmm... Yes, I think I've heard of it."
 
 
-`Bidoof Surprised` 〽
+`Bidoof`: 〽
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "Huh?! Really?!"
 
@@ -111,7 +119,10 @@
 `Chatot`: "It's said that if you can wake Jirachi...he'll grant you a wish."
 
 
-`Bidoof Surprised` 〽
+`Bidoof`: 〽
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "Huh?! He'll grant you a wish?!"
 
@@ -126,7 +137,10 @@
 `Bidoof`: "His name is Jirachi?!"
 
 
-`Chatot Surprised` 💦
+`Chatot`: 💦
+
+
+`Chatot Surprised`
 
 `Chatot`: "He... Hey, hey! It's only a legend!"
 
@@ -136,7 +150,10 @@
 `Chatot`: "I already said that nobody knows where the cave is, didn't I?! ...HEY!"
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "...Hey, Bidoof. Bidoof, what are you thinking of? Bidoof?"
 
@@ -191,7 +208,10 @@
 `Bidoof`: "So h... (I'm so happy, I could bust!)"
 
 
-`Chatot Normal` 💧
+`Chatot`: 💧
+
+
+`Chatot Normal`
 
 `Chatot`: "Hey. ♪"
 
@@ -201,7 +221,10 @@
 `Bidoof`: "...Huh?!"
 
 
-`Chatot Normal` 💦
+`Bidoof`: 💦
+
+
+`Chatot Normal`
 
 `Chatot`: "Are you all right, Bidoof? You kind of spaced out for a while."
 
@@ -216,7 +239,10 @@
 `Chatot`: "Something happen?"
 
 
-`Bidoof Surprised` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "Nope! Nope, nope, nope, nope!"
 
@@ -241,7 +267,10 @@
 `Chatot`: "You say you weren't thinking of anything... But that's a bit suspicious..."
 
 
-`Bidoof Surprised` 〽
+`Bidoof`: 〽
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "Eeek! (I gave myself away!)"
 
@@ -274,7 +303,10 @@
 `Loudred`: "HEEEEY! BIDOOF!"
 
 
-`Bidoof Surprised` ❗
+`Chatot`: ❗
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "Yes! What is it?!"
 
@@ -282,7 +314,10 @@
 `Loudred`: "You've GOT a VISITOR!"
 
 
-`Bidoof Normal` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Huh? A visitor?"
 

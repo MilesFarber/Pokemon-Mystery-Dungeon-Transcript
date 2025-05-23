@@ -31,7 +31,7 @@
 `Partner Name`: "B-but...!"
 
 
-`Partner Teary-Eyed`
+`Partner Teary-Eyed` 💦
 
 `Partner Name`: "Take your place, Grovyle...? I can't!"
 

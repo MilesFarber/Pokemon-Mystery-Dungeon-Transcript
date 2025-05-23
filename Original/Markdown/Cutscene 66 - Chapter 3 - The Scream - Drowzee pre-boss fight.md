@@ -7,7 +7,10 @@
 * * *
 
 
-`Azurill Normal` ❗
+`Azurill`: ❗
+
+
+`Azurill Normal`
 
 `Azurill`: "Uh-oh. It's a dead end."
 
@@ -32,7 +35,10 @@
 `Drowzee`: "Your lost item? It's not here, that's for sure."
 
 
-`Azurill Normal` ❗
+`Azurill`: ❗
+
+
+`Azurill Normal`
 
 `Azurill`: "Huh?"
 
@@ -42,7 +48,7 @@
 `Azurill`: "My...big brother..."
 
 
-`Azurill Normal`
+`Azurill Normal` 💦
 
 `Azurill`: "My big brother's following us, right? He's coming soon?"
 
@@ -57,7 +63,10 @@
 `Drowzee`: "I'll let you in on a little secret. This was all a trick. I deceived you."
 
 
-`Azurill Teary-Eyed` 〽
+`Azurill`: 〽
+
+
+`Azurill Teary-Eyed`
 
 `Azurill`: "Huh?!"
 
@@ -92,7 +101,10 @@
 `Drowzee`: "And that's where you come in!"
 
 
-`Drowzee Normal` 〽
+`Azurill`: 〽
+
+
+`Drowzee Normal`
 
 `Drowzee`: "Don't worry. Just do as I say."
 
@@ -117,7 +129,10 @@
 `Drowzee`: "Go into that hole. And don't forget to bring back the treasure!"
 
 
-`Azurill Sigh` 💦
+`Azurill`: 💦
+
+
+`Azurill Sigh`
 
 `Azurill`: "I want my big brother!"
 
@@ -127,12 +142,12 @@
 `Drowzee`: "H-hey! Stop that!"
 
 
-`Drowzee Normal`
+`Drowzee Normal` 💦
 
 `Drowzee`: "Sheesh! I said that I'll take you home when you're done!"
 
 
-`Drowzee Normal`
+`Drowzee Normal` 💦
 
 `Drowzee`: "If you keep being difficult, it will mean big trouble for you!"
 
@@ -145,12 +160,15 @@
 `Partner Name`: "Stop right there!"
 
 
-`Partner Determined` ❗
+`Partner Determined`
 
 `Partner Name`: "We won't let you do that! Drowzee, you bully!"
 
 
-`Drowzee Normal` 💦
+`Drowzee`: 💦
+
+
+`Drowzee Normal`
 
 `Drowzee`: "H-how did you find this place?!"
 
@@ -165,12 +183,18 @@
 `Partner Name`: "No criminal can escape us!"
 
 
-`Drowzee Normal` 💦
+`Drowzee`: 💦
+
+
+`Drowzee Normal`
 
 `Drowzee`: "An exploration team?! You came to apprehend..."
 
 
-`Drowzee Normal` ⚟
+`Drowzee`: ⚟
+
+
+`Drowzee Normal`
 
 `Drowzee`: "...Huh? Are you...trembling?"
 
@@ -225,12 +249,15 @@
 `Drowzee`: "Ha ha ha! I've been chased by all sorts of exploration teams in my day..."
 
 
-`Drowzee Normal`
+`Drowzee Normal` 🔆
 
 `Drowzee`: "But never a sorrier-looking bunch than you two!"
 
 
-`Partner Pain` 💧
+`Partner`: 💧
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk!"
 

@@ -29,7 +29,10 @@
 `Armaldo`: "Don't tell me that this is..."
 
 
-`Igglybuff Surprised` ❗
+`Igglybuff`: ❗
+
+
+`Igglybuff Surprised`
 
 `Igglybuff`: "Oh! Master!"
 
@@ -72,8 +75,6 @@
 `Armaldo`: "Oh."
 
 
-❗
-
 `💬`: "Wait!"
 
 
@@ -87,12 +88,18 @@
 `Nidoking`: "My name is Nidoking! I'm an explorer!"
 
 
-`Armaldo Surprised` ❗
+`Armaldo`: ❗
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "What... What did you say?"
 
 
-`Igglybuff Normal` ❗
+`Armaldo`: ❗
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "Oh! Papa! Mama!"
 
@@ -107,12 +114,15 @@
 `Wigglytuff`: "A-are you all right, Igglybuff?!"
 
 
-`Wigglytuff Surprised`
+`Wigglytuff Surprised` 💦
 
 `Wigglytuff`: "You're not hurt?!"
 
 
-`Igglybuff Normal` ❓
+`Igglybuff`: ❓
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "I'm fine, Mama. Why?"
 
@@ -222,7 +232,10 @@
 `Nidoking`: "To drag a kid into this... You're the lowest."
 
 
-`Igglybuff Surprised` ❗
+`Igglybuff`: ❗
+
+
+`Igglybuff Surprised`
 
 `Igglybuff`: "N-no! I asked him!"
 
@@ -257,7 +270,7 @@
 `Igglybuff`: "...OOOOOooooooooo... OOOOoooooooooooOOOOOoooooooo..."
 
 
-`Magnemite Surprised` ❗
+`Magnemite Surprised` 〽
 
 `Magnemite`: "Whoa. What... What is this?!"
 
@@ -272,7 +285,7 @@
 `Nidoking`: "Th-the ground... Is it shaking?"
 
 
-`Magnezone Surprised` 〽
+`Magnezone Surprised`
 
 `Magnezone`: "WAWAWAWAWAH!"
 
@@ -556,7 +569,7 @@
 `Igglybuff`: "Oooooohhhh... Master..."
 
 
-`Igglybuff Teary-Eyed`
+`Igglybuff Teary-Eyed` 💦
 
 `Igglybuff`: "Don't... I don't want you to go..."
 

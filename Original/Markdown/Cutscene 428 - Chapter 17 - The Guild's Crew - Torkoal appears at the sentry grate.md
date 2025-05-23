@@ -19,9 +19,7 @@
 `Chatot`: "But we're not giving up!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Chatot Normal`
@@ -34,9 +32,7 @@
 `Chatot`: "Let's go, everyone!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Partner Normal`
@@ -54,8 +50,6 @@
 `Partner Name`: "I don't know where to look next."
 
 
-❗
-
 `Diglett`: "Pokémon detected! Pokémon detected!"
 
 
@@ -68,7 +62,10 @@
 `Diglett`: "The footprint belongs to Torkoal, the town elder!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "What? Torkoal is here?"
 

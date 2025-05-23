@@ -24,7 +24,7 @@
 `Partner Name`: "Waaaah!"
 
 
-`Partner Pain`
+`Partner Pain` 〽
 
 `Partner Name`: "Owowow..."
 

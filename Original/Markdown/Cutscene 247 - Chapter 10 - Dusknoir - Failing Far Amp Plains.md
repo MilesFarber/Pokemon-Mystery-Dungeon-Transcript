@@ -9,7 +9,10 @@
 * * *
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "This won't be easy..."
 

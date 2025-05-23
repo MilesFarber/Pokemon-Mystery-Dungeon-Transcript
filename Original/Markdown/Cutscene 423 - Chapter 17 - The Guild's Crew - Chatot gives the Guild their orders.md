@@ -49,9 +49,7 @@
 `Chatot`: "Let's get right to it, everyone!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Partner Normal`

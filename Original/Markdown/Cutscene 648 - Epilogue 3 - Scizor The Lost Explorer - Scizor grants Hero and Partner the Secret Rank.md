@@ -29,7 +29,10 @@
 `Scizor`: "Incidentally, I would like to somehow repay you for saving my life."
 
 
-`Scizor Normal` 💧
+`Scizor`: 💧
+
+
+`Scizor Normal`
 
 `Scizor`: "However, I find myself alone in an alien world, and without a single Poké to my name."
 
@@ -39,7 +42,10 @@
 `Scizor`: "I have but no idea how I could possibly repay you."
 
 
-`Partner Normal` 💦
+`Partner`: 💦
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh, don't worry. You've already thanked us enough."
 
@@ -49,7 +55,10 @@
 `Scizor`: "Hmm... However..."
 
 
-`Scizor Normal` ❗
+`Scizor`: ❗
+
+
+`Scizor Normal`
 
 `Scizor`: "Ah! Yes! That may do! Tell me, you did say you were an exploration team, yes?"
 
@@ -69,7 +78,10 @@
 `Scizor`: "Well, I'll have you know... I am an honorary member of the Pokémon Exploration Team Federation!"
 
 
-`Partner Worried` 💧
+`Partner`: 💧
+
+
+`Partner Worried`
 
 `Partner Name`: "Pardon? An honorary member?"
 
@@ -109,7 +121,10 @@
 `Scizor`: "Special Missions are highly confidential jobs that come straight from the Exploration Team Federation itself."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Highly confidential? I don't understand..."
 
@@ -152,7 +167,10 @@
 `Scizor`: "I must be on my way. Farewell!"
 
 
-`Partner Stunned` 💧
+`Partner`: 💧
+
+
+`Partner Stunned`
 
 `Partner Name`: "....................."
 

@@ -46,12 +46,15 @@
 `Chatot`: "Oh, you don't have to say that. ♪"
 
 
-`Chatot Happy`
+`Chatot Happy` 🔆
 
 `Chatot`: "This praise from you is making us blush, Officer!"
 
 
-`Corphish Sad` 💧
+`Corphish`: 💧
+
+
+`Corphish Sad`
 
 `Corphish`: "... (You're not the one being praised. Hey, hey...)"
 
@@ -69,7 +72,10 @@
 >Sunflora received the Sun Scarf from Magnezone!
 
 
-`Sunflora Surprised` 〽
+`Sunflora`: 〽
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "A-a Sun Scarf!"
 
@@ -104,17 +110,20 @@
 `Chatot`: "Attention!"
 
 
-`Chatot Happy`
+`Chatot Happy` 🔆
 
 `Chatot`: "Thanks to Sunflora! She accomplished this arrest. ♪"
 
 
-`Chatot Happy`
+`Chatot Happy` 🔆
 
 `Chatot`: "You really did a great job. ♪"
 
 
-`Sunflora Normal` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Normal`
 
 `Sunflora`: "No, no... I must say..."
 
@@ -124,7 +133,10 @@
 `Sunflora`: "I didn't do it all by myself..."
 
 
-`Sunflora Normal` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Huh?"
 
@@ -139,7 +151,10 @@
 `Sunflora`: "Where is Loudred?"
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Loudred?"
 
@@ -149,12 +164,15 @@
 `Chatot`: "He's in trouble!"
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "He neglected his Gatekeeper duties for the day and sneaked away somewhere to slack off!"
 
 
-`Sunflora Surprised` 〽
+`Sunflora`: 〽
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "Huh?!"
 
@@ -174,12 +192,18 @@
 `Sunflora`: "(Chatot didn't really ask you to come help me...)"
 
 
-`Sunflora Normal` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Normal`
 
 `Sunflora`: "That's not true, Chatot."
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Huh? What isn't?"
 
@@ -192,7 +216,10 @@
 * * *
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "Whaaaat?! Is that right?!"
 
@@ -207,7 +234,10 @@
 `Chatot`: "But..."
 
 
-`Bidoof Normal` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Golly, what is it?"
 

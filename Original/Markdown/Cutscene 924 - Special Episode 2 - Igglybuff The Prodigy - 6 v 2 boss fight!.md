@@ -106,7 +106,7 @@
 * * *
 
 
-`Armaldo Surprised` ❗
+`Armaldo Surprised` 〽
 
 `Armaldo`: "UWAAAAAAAaaaaaahhhhh! It's a...Monster House!"
 
@@ -126,7 +126,7 @@
 `Armaldo`: "Don't we always?!"
 
 
-`Armaldo Angry`
+`Armaldo Angry` 💦
 
 `Armaldo`: "Don't ever let yourself be caught unprepared, Junior!"
 

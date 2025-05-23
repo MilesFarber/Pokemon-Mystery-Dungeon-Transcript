@@ -13,7 +13,10 @@
 `💬`: "Igglybuff! ♪ Let's play! ♪"
 
 
-`Wigglytuff Normal` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Oh! It's Smoochum and everyone."
 

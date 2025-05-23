@@ -29,7 +29,10 @@
 >Received only the remaining 300!
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "No way! This is all we get?!"
 
@@ -49,7 +52,10 @@
 `Chatot`: "And we expect just as much effort tomorrow! Hee-heeee! ♪"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urf..."
 
@@ -84,12 +90,12 @@
 `Hero Name`: "(It's true!)"
 
 
-`Hero Normal`
+`Hero Normal` ❗
 
 `Hero Name`: "(I can't explain it, but...)"
 
 
-`Hero Normal`
+`Hero Normal` ❗
 
 `Hero Name`: "(That first shout I heard from Azurill...)"
 
@@ -103,7 +109,7 @@
 * * *
 
 
-`Hero Normal`
+`Hero Normal` ❗
 
 `Hero Name`: "(And that dream I had...)"
 

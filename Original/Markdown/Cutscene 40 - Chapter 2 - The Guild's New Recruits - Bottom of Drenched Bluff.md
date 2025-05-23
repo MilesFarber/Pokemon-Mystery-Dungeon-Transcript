@@ -24,7 +24,10 @@
   *   * * * *
 
 
-  *   * `Partner Normal` ❗
+  *   * `Partner`: ❗
+
+
+  *   * `Partner Normal`
 
   *   * `Partner Name`: "Oh! Over there!"
 

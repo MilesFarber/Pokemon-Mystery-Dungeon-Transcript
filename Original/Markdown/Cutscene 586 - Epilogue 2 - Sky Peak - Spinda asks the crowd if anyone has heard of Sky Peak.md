@@ -21,7 +21,10 @@
 `Spinda`: "Has anyone here ever heard of a mountain called Sky Peak?"
 
 
-`Octillery Normal` ❓
+`Octillery`: ❓
+
+
+`Octillery Normal`
 
 `Octillery`: "Sky Peak?"
 

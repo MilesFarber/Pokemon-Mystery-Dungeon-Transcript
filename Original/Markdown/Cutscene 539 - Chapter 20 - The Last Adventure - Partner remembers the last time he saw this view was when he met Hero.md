@@ -31,7 +31,10 @@
 `Partner Name`: "The last time was..."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh... The last time I saw this..."
 

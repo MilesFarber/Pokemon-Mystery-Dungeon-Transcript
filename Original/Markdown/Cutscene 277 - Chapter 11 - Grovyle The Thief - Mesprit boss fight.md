@@ -35,7 +35,10 @@
 `Partner Name`: "That light... I'm sure I've seen it before..."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "That's it! I've got it now!"
 
@@ -65,9 +68,11 @@
 
 〽
 
+
 〽
 
-`Partner Surprised` 〽
+
+`Partner Surprised`
 
 `Partner Name`: "Wah! It went dark!"
 
@@ -80,9 +85,11 @@
 
 〽
 
+
 〽
 
-`Partner Sad` 〽
+
+`Partner Sad`
 
 `Partner Name`: "Waah! Who said that?"
 
@@ -109,9 +116,11 @@
 
 ❗
 
+
 ❗
 
-`Partner Surprised` ❗
+
+`Partner Surprised`
 
 `Partner Name`: "Who...who are you?!"
 
@@ -126,9 +135,11 @@
 
 〽
 
+
 〽
 
-`Partner Surprised` 〽
+
+`Partner Surprised`
 
 `Partner Name`: "Protect the Time Gear?!"
 

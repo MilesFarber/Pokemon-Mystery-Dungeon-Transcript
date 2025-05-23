@@ -6,7 +6,10 @@
 `Partner Name`: "Wow! What is this?!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "There's a big, jagged opening in the middle!"
 

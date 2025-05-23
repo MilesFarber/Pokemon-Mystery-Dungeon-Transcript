@@ -1,7 +1,10 @@
 * * *
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(When Celebi said that she would devote her whole life...)"
 

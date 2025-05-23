@@ -31,7 +31,10 @@
 `Magnezone`: "ZZZT! Now come with us! ZZZT!"
 
 
-`Drowzee Sigh` 💧
+`Drowzee`: 💧
+
+
+`Drowzee Sigh`
 
 `Drowzee`: "Awww..."
 
@@ -39,7 +42,10 @@
 `Marill`: "Azurill!"
 
 
-`Azurill Teary-Eyed` ❗
+`Azurill`: ❗
+
+
+`Azurill Teary-Eyed`
 
 `Azurill`: "Marill!"
 
@@ -49,12 +55,12 @@
 `Azurill`: "Waaaaah!"
 
 
-`Azurill Sigh`
+`Azurill Sigh` 💦
 
 `Azurill`: "Marill! It was so scary!"
 
 
-`Marill Sigh` 💦
+`Marill Sigh`
 
 `Marill`: "You OK, Azurill? Are you hurt?"
 
@@ -79,7 +85,7 @@
 `Marill`: "Oh, Azurill...Azurill..."
 
 
-`Partner Happy` 💦
+`Partner Happy`
 
 `Partner Name`: "I'm truly happy for you two!"
 

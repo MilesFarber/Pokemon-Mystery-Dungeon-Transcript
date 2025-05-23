@@ -13,7 +13,7 @@
 `Partner Name`: "Maybe it has to do with you personally, `Hero Name`."
 
 
-`Partner Name`: "(Huh?)"
+`💬`: "(Huh?)"
 
 
 `Partner Name`: "I can't quite say why."
@@ -31,16 +31,16 @@
 `Partner Name`: "That's the feeling I keep getting."
 
 
-`Partner Name`: "(The key to unlocking my memory...)"
+`💬`: "(The key to unlocking my memory...)"
 
 
-`Partner Name`: "(Was it in that dream?)"
+`💬`: "(Was it in that dream?)"
 
 
-`Partner Name`: "(But even if that were true...)"
+`💬`: "(But even if that were true...)"
 
 
-`Partner Name`: "(How does it relate to anything else?)"
+`💬`: "(How does it relate to anything else?)"
 
 
 `Partner Name`: "I don't know what you were like as a human, `Hero Name`..."
@@ -52,13 +52,13 @@
 `Partner Name`: "After all, `Hero Name`, it was your dream that helped us catch that bad Pokémon."
 
 
-`Partner Name`: "(Bad Pokémon, huh...)"
+`💬`: "(Bad Pokémon, huh...)"
 
 
-`Partner Name`: "(Oh! That reminds me of what Chatot said.)"
+`💬`: "(Oh! That reminds me of what Chatot said.)"
 
 
-`Partner Name`: "(That the growing number of bad Pokémon has been caused by time going out of whack.)"
+`💬`: "(That the growing number of bad Pokémon has been caused by time going out of whack.)"
 
 
 `Partner Name`: "You know..."
@@ -73,7 +73,7 @@
 `Partner Name`: "But everyone believes that the Time Gears are somehow involved."
 
 
-`Partner Name`: "(Huh? Time Gears?)"
+`💬`: "(Huh? Time Gears?)"
 
 
 `Partner Name`: "They say Time Gears are hidden in secret places around the world."

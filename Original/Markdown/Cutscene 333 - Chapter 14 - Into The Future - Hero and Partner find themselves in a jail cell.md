@@ -16,7 +16,7 @@
 `Hero Name`: "(Ugh...)"
 
 
-`Hero Normal` ❗
+`Hero Normal`
 
 `Hero Name`: "(Wh-where...?)"
 
@@ -31,7 +31,10 @@
 `Partner Name`: "This place... I think it's a jail."
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(J-jail?!)"
 

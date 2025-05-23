@@ -21,7 +21,7 @@
 `Dusknoir`: "...Gwoh!"
 
 
-`Dusknoir Normal` ❗
+`Dusknoir Normal`
 
 `Dusknoir`: "GWWWOOOOOHHHH!"
 
@@ -55,7 +55,10 @@
 `Grovyle`: "Urrgggghhh!"
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Grovyle!)"
 
@@ -80,7 +83,10 @@
 `Grovyle`: "Uwroh... Wrooooooooh!"
 
 
-`Dusknoir Normal` 〽
+`Dusknoir`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Wh-what are you doing?!"
 
@@ -115,12 +121,18 @@
 `Grovyle`: "`Hero Name`! It's up to you now!"
 
 
-`Dusknoir Normal` ❗
+`Dusknoir`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Gah! Those are...!"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Time Gears!)"
 
@@ -163,7 +175,7 @@
 `Partner Name`: "B-but...!"
 
 
-`Partner Teary-Eyed`
+`Partner Teary-Eyed` 💦
 
 `Partner Name`: "Take your place, Grovyle...? I can't!"
 
@@ -193,7 +205,7 @@
 `Grovyle`: "...`Hero Name`!"
 
 
-`Grovyle Normal` ❗
+`Grovyle Normal`
 
 `Grovyle`: "Take care, `Hero Name`."
 
@@ -233,7 +245,10 @@
 `Hero Name`: "(Grovyle...)"
 
 
-`Partner Surprised` ❗
+`Hero`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "The sound of the Rainbow Stoneship..."
 

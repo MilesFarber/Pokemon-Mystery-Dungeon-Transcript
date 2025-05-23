@@ -3,7 +3,9 @@
 
 〽
 
+
 〽
+
 
 * * *
 
@@ -23,7 +25,10 @@
 `Grovyle`: "Get out of the way!"
 
 
-`Partner Pain` 〽
+`Partner`: 〽
+
+
+`Partner Pain`
 
 `Partner Name`: "(I...I can't talk...)"
 
@@ -58,7 +63,10 @@
 `Hero Name`: "(B-but...I can't move...)"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: ".................. (Urk...)"
 
@@ -81,9 +89,7 @@
 * * *
 
 
-`Partner Shouting`
-
-`Partner Name`: "Stop!"
+`💬`: "Stop!"
 
 
 * * *
@@ -94,7 +100,10 @@
 `Grovyle`: "Gah!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "(Oh! Dusknoir!)"
 
@@ -132,7 +141,10 @@
 `Dusknoir`: "It wasn't easy finding you, Grovyle!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "(What...what was that?!)"
 
@@ -190,7 +202,10 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "(Grovyle vanished?!)"
 
@@ -205,7 +220,10 @@
 `Dusknoir`: "There's no escaping ME!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "................................. (The great Dusknoir vanished too?!)"
 
@@ -231,7 +249,7 @@
 `Corphish`: "Hey, hey! Come on, hurry!"
 
 
-`Bidoof Normal` 〽
+`Bidoof Normal`
 
 `Bidoof`: "Oh, golly! They're down!"
 

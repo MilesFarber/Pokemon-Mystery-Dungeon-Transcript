@@ -31,7 +31,10 @@
 `Hero Name`: "(Is that what I am here...?)"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Why are you daydreaming? It's not like you, `Hero Name`."
 

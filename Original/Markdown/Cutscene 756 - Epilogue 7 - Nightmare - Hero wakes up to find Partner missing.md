@@ -10,7 +10,10 @@
 `💬`: "(...! Huh?)"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(`Partner Name` isn't here...)"
 

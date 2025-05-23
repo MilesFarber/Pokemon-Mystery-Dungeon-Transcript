@@ -4,7 +4,10 @@
 * * *
 
 
-`Igglybuff Normal` ❓
+`Igglybuff`: ❓
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "This is...?"
 
@@ -19,7 +22,10 @@
 `Armaldo`: "Make sure you're prepared. You don't know what awaits you ahead."
 
 
-`Igglybuff Normal` ❗
+`Igglybuff`: ❗
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "Oh! There's a door over there!"
 
@@ -74,12 +80,18 @@
 `Armaldo`: "All right! The door should open now!"
 
 
-`Igglybuff Normal` ❓
+`Igglybuff`: ❓
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "Huh? Master, the door isn't opening!"
 
 
-`Armaldo Surprised` 💦
+`Armaldo`: 💦
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "Why... Why not?"
 

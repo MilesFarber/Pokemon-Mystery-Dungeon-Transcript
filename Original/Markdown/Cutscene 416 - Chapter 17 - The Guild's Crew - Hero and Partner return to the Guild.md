@@ -25,7 +25,10 @@
 `Partner Name`: "But..."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Now that we're here, it feels kind of awkward to go in."
 
@@ -93,10 +96,10 @@
 `Sunflora`: "Wha...?"
 
 
-`Sunflora`: "Everyone: WHAT?!"
+`💬`: "Everyone: WHAT?!"
 
 
-`Diglett Normal` 〽
+`Diglett Normal`
 
 `Diglett`: "It is `Partner Name`!"
 
@@ -111,7 +114,7 @@
 `Partner Name`: "Diglett! Long time no see!"
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Waah! What is that?!"
 
@@ -136,7 +139,10 @@
 `Chimecho`: "We worried so much about you!"
 
 
-`Bidoof Teary-Eyed` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Teary-Eyed`
 
 `Bidoof`: "I...I...I was...by golly!"
 

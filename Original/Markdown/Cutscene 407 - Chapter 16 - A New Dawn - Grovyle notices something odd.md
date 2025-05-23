@@ -1,7 +1,7 @@
 * * *
 
 
-`Grovyle Normal` ❗
+`Grovyle Normal` 〽
 
 `Grovyle`: "Wh-what is this?!"
 

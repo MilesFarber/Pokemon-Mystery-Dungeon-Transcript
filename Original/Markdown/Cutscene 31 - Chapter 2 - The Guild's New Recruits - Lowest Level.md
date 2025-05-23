@@ -46,24 +46,16 @@
 `Wigglytuff`: "Zzzz... Zzzz... Snorfle... Zzz..."
 
 
-`Wigglytuff Normal`
-
-`Wigglytuff`: "Apprentice: (Psst...! Guildmaster Wigglytuff never ceases to amaze me!)"
+`💬`: "Apprentice: (Psst...! Guildmaster Wigglytuff never ceases to amaze me!)"
 
 
-`Wigglytuff Normal`
-
-`Wigglytuff`: "Apprentice: (Yeah, you got that right!)"
+`💬`: "Apprentice: (Yeah, you got that right!)"
 
 
-`Wigglytuff Normal`
-
-`Wigglytuff`: "Apprentice: (Yup, looks like he's wide awake.)"
+`💬`: "Apprentice: (Yup, looks like he's wide awake.)"
 
 
-`Wigglytuff Normal`
-
-`Wigglytuff`: "Apprentice: (Eek! His eyes are wide open! But he's fast asleep!)"
+`💬`: "Apprentice: (Eek! His eyes are wide open! But he's fast asleep!)"
 
 
 `Chatot Normal`
@@ -81,24 +73,16 @@
 `Chatot`: "Finally, let's not forget our morning cheers! All together now! ♪"
 
 
-`Chatot Normal`
-
-`Chatot`: "Everyone: A ONE, A TWO...A ONE-TWO-THREE!"
+`💬`: "Everyone: A ONE, A TWO...A ONE-TWO-THREE!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: ONE! DON'T SHIRK WORK!"
+`💬`: "Everyone: ONE! DON'T SHIRK WORK!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: TWO! RUN AWAY AND PAY!"
+`💬`: "Everyone: TWO! RUN AWAY AND PAY!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: THREE! SMILES GO FOR MILES!"
+`💬`: "Everyone: THREE! SMILES GO FOR MILES!"
 
 
 `Chatot Normal`
@@ -106,8 +90,6 @@
 `Chatot`: "OK, Pokémon! Get to work! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 

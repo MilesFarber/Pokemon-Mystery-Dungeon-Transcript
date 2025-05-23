@@ -3,10 +3,14 @@
 
 ⛈️
 
+
 * * *
 
 
-`Igglybuff Teary-Eyed` 〽
+`Wigglytuff`: 〽
+
+
+`Igglybuff Teary-Eyed`
 
 `Igglybuff`: "S-so...scary..."
 
@@ -52,7 +56,10 @@
 `Igglybuff`: "Waaaaaaaahhh!!"
 
 
-`Wigglytuff Surprised` 〽
+`Wigglytuff`: 〽
+
+
+`Wigglytuff Surprised`
 
 `Wigglytuff`: "I...Igglybuff!"
 
@@ -62,7 +69,10 @@
 >This huge boulder started to fall, right above me!
 
 
-`Wigglytuff Surprised` 〽
+`Wigglytuff`: 〽
+
+
+`Wigglytuff Surprised`
 
 `Wigglytuff`: "W-waaaaaaaahhhhhhh!!"
 
@@ -83,6 +93,9 @@
 
 
 * * *
+
+
+`Wigglytuff`: ⚞
 
 
 >Somehow the boulder was smashed to pieces...

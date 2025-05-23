@@ -39,12 +39,15 @@
 >`Hero Name` described the vision revealed by the Dimensional Scream.
 
 
-`Loudred Normal` ❗
+`Loudred Normal`
 
 `Loudred`: "WHAT?!"
 
 
-`Chatot Surprised` 💦
+`Chatot`: 💦
+
+
+`Chatot Surprised`
 
 `Chatot`: "You saw Grovyle knock out a Pokémon? One that you'd never seen before?"
 
@@ -94,7 +97,10 @@
 `Chimecho`: "Or was that in the future?"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Come to think of it...)"
 
@@ -144,12 +150,15 @@
 `Chatot`: "Squawk?! You're saying we may already be too late?!"
 
 
-`Dusknoir Normal` 💦
+`Dusknoir Normal`
 
 `Dusknoir`: "Everyone, please hold on!"
 
 
-`Dusknoir Normal` ❗
+`Partner`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Yes, it is true that it may have been a vision of the past."
 

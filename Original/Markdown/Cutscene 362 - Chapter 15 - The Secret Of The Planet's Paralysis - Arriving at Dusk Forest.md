@@ -1,7 +1,10 @@
 * * *
 
 
-`Hero Worried` ❗
+`Hero`: ❗
+
+
+`Hero Worried`
 
 `Hero Name`: "(...!)"
 
@@ -96,7 +99,10 @@
 `Grovyle`: "That means Celebi has lent her support to reshaping history."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Wait... Are you saying that Celebi could be in trouble too?"
 

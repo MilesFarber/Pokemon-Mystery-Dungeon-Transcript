@@ -12,7 +12,8 @@
 `Drowzee`: "`Partner Name`! `Hero Name`!"
 
 
-❗
+`Partner`: ❗
+
 
 `Drowzee`: "Can you hear me? It's me. Drowzee."
 

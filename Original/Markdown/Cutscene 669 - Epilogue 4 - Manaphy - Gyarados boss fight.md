@@ -1,7 +1,10 @@
 * * *
 
 
-`Gyarados Normal` ❗
+`Gyarados`: ❗
+
+
+`Gyarados Normal`
 
 `Gyarados`: "OH? WHAT, BACK AGAIN?"
 

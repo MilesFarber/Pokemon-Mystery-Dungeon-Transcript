@@ -11,7 +11,7 @@
 `Palkia`: "THIS IS MY DOMAIN! SPACIAL RIFT!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What?! This is Spacial Rift?!"
 
@@ -32,7 +32,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What?!"
 

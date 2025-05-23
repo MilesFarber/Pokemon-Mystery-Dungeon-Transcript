@@ -44,9 +44,7 @@
 * * *
 
 
-`Wigglytuff Special2` ◀▼▶
-
-`Wigglytuff`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Dusknoir Normal`

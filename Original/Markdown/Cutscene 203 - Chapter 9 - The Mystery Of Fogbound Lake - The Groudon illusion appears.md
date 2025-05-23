@@ -1,12 +1,10 @@
 * * *
 
 
-〽
-
 `💬`: "GRROOOOOOH...GRROOOOOOH...!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Waaah! Wh-what is that?!"
 
@@ -27,7 +25,7 @@
 * * *
 
 
-`Partner Stunned` 〽
+`Partner Stunned`
 
 `Partner Name`: "Eep!"
 
@@ -47,12 +45,18 @@
 `Groudon`: "DEPART NOW!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "B-b-but... W-w-we only want to go to Fogbound Lake!"
 
 
-`Groudon Normal` 〽
+`Groudon`: 〽
+
+
+`Groudon Normal`
 
 `Groudon`: "WHAT?! FOGBOUND LAKE?!"
 
@@ -70,7 +74,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Whaaat?!"
 

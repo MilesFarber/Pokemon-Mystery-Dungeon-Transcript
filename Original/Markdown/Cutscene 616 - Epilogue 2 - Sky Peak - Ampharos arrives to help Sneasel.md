@@ -4,7 +4,10 @@
 `Ampharos`: "Hey! I'm here to help!"
 
 
-`Mawile Normal` ❗
+`Machoke`: ❗
+
+
+`Mawile Normal`
 
 `Mawile`: "Oh! Over here!"
 

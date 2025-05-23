@@ -25,7 +25,10 @@
 `💬`: "Gggh..."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh! That voice came from over there!"
 
@@ -35,7 +38,10 @@
 `Partner Name`: "Let's go, `Hero Name`!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh! It's Team Skull!"
 
@@ -50,7 +56,10 @@
 `Partner Name`: "Wh-what happened to you?!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Wait! It can't be! Were you attacked by a mysterious gang of enemies?"
 
@@ -190,7 +199,10 @@
 `Skuntank`: "Chaw-haw-haw...haw-haw..."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Hey! The Relic Fragment!"
 
@@ -255,7 +267,10 @@
 `Skuntank`: "You should be worrying about Chatot instead."
 
 
-`Partner Determined` ❗
+`Partner`: ❗
+
+
+`Partner Determined`
 
 `Partner Name`: "That's right! Where did Chatot go?"
 

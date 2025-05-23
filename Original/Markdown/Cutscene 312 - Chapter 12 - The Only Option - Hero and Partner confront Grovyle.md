@@ -1,7 +1,10 @@
 * * *
 
 
-`Grovyle Normal` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Th-this..."
 
@@ -49,7 +52,10 @@
 `Partner Name`: "Stop!"
 
 
-`Partner Determined` ❗
+`Grovyle`: ❗
+
+
+`Partner Determined`
 
 `Partner Name`: "You're not taking the Time Gear, Grovyle!"
 

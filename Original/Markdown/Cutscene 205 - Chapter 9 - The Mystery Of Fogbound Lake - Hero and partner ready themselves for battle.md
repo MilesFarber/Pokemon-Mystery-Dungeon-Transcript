@@ -22,7 +22,7 @@
 `Chatot`: "He is that strong! Like all legendary Pokémon!"
 
 
-`Groudon Normal` 〽
+`Groudon Normal`
 
 `Groudon`: "GRROOOOOOH!"
 

@@ -4,7 +4,10 @@
 * * *
 
 
-`Igglybuff Normal` ⚟
+`Armaldo`: ⚟
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "Good morning! ♪"
 
@@ -62,6 +65,9 @@
 `Igglybuff Normal`
 
 `Igglybuff`: "Really?"
+
+
+`Armaldo`: 〽
 
 
 `Armaldo Angry` 💢

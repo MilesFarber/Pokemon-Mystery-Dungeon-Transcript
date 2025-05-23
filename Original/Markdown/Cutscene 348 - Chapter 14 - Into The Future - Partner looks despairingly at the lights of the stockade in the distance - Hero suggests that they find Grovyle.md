@@ -174,7 +174,10 @@
 `Hero Name`: "(It could be anything. I just need to think of something!)"
 
 
-`Partner Normal` ⚟
+`Partner`: ⚟
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh?"
 
@@ -500,7 +503,10 @@
   * `Partner Name`: "But...how?"
 
 
-  * `Partner Normal` ❓
+  * `Partner`: ❓
+
+
+  * `Partner Normal`
 
   * `Partner Name`: "Pardon? We're going to first find Grovyle?"
 

@@ -24,7 +24,7 @@
 `Primal Dialga`: "GRRR-OOOOOO...OOOOOH!"
 
 
-`Grovyle Surprised` 〽
+`Grovyle Surprised` ❗
 
 `Grovyle`: "We're disappearing faster!"
 

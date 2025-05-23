@@ -34,7 +34,10 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Hero`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Pardon?! Graduation?!"
 
@@ -104,7 +107,10 @@
 `Corphish`: "And promptly failed! Hey, hey!"
 
 
-`Loudred Normal` 💦
+`Loudred`: 💦
+
+
+`Loudred Normal`
 
 `Loudred`: "G-g-get LOST!"
 
@@ -124,7 +130,10 @@
 `Wigglytuff`: "You should find a place called Luminous Spring there."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Luminous Spring?"
 
@@ -189,7 +198,10 @@
 `Wigglytuff`: "The grand master of all things bad lives there."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "The...grand master of all things bad?!"
 
@@ -214,7 +226,7 @@
 `Wigglytuff`: "So... Good luck with that! ♪"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What... Huh?!"
 
@@ -229,17 +241,21 @@
 `Chatot`: "All right, everyone! ♪ Let's get down to work! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "What'll we do, `Hero Name`?! The grand master of all things bad!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh, Loudred!"
 
@@ -254,7 +270,10 @@
 `Partner Name`: "What was the grand master of all things bad like?"
 
 
-`Loudred Normal` 💦
+`Loudred`: 💦
+
+
+`Loudred Normal`
 
 `Loudred`: "Ugh, I'm sorry, but I'm NOT allowed to talk about it. It's the guild rule. I CAN'T talk about it."
 
@@ -284,12 +303,12 @@
 `Partner Name`: "Ugh... Loudred was useless for getting information."
 
 
-`Partner Sad`
+`Partner Sad` 💦
 
 `Partner Name`: "We'll just have to do our best to graduate on our own."
 
 
-`Partner Sad`
+`Partner Sad` 💦
 
 `Partner Name`: "I guess we should go down to Treasure Town and get ready."
 

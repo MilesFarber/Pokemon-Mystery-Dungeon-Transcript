@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Pain` 〽
+`Partner`: 〽
+
+
+`Partner Pain`
 
 `Partner Name`: "Wh-where is this?!"
 
@@ -16,12 +19,18 @@
 `Partner Name`: "Wh-why is this happening?"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh!"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(`Partner Name`!)"
 
@@ -40,7 +49,10 @@
 `💬`: "I guess you can afford to be nonchalant about it."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Pardon?!"
 
@@ -50,7 +62,10 @@
 `Hero Name`: "(That voice came from over there...)"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Grovyle!"
 
@@ -70,12 +85,18 @@
 `Grovyle`: "This is a stockade... They're preparing to get rid of us for good."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! G-get rid of us?!"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "Wait a second."
 
@@ -110,12 +131,12 @@
 `Partner Name`: "What?!"
 
 
-`Partner Angry`
+`Partner Angry` 💢
 
 `Partner Name`: "We haven't done anything bad!"
 
 
-`Partner Angry`
+`Partner Angry` 💢
 
 `Partner Name`: "Don't think that we're like you!"
 
@@ -135,7 +156,10 @@
 `Grovyle`: "Here they come."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Waah! Who are they?!"
 
@@ -150,7 +174,10 @@
 `Grovyle`: "They also happen to be Dusknoir's underlings."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! The great Dusknoir's?!"
 
@@ -195,12 +222,13 @@
 `Dusknoir`: "Pay them no heed. You may get ready."
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "W-wait a minute! Dusknoir, sir!"
 
@@ -225,7 +253,10 @@
 `Grovyle`: "...Keep your voices down so they can't hear you..."
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk...! Keep...my voice down?"
 
@@ -240,7 +271,10 @@
 `Grovyle`: "...give me your full cooperation."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What...? Help you, Grovyle...?"
 
@@ -255,7 +289,10 @@
 `Grovyle`: "Psst...hey! You there..."
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(...!)"
 
@@ -353,7 +390,10 @@
   *   * *Break from this loop.*
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "...! That's it... That'll do..."
 
@@ -388,9 +428,7 @@
 `Dusknoir`: "Especially that Grovyle."
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 `Dusknoir Normal`
@@ -398,12 +436,13 @@
 `Dusknoir`: "Commence...now!"
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "...! They're coming..."
 
@@ -418,7 +457,10 @@
 `Grovyle`: "...Sableye use claws to strike..."
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "...! Yikes...that sounds scary!"
 
@@ -438,7 +480,10 @@
 `Grovyle`: "...If even one of their attacks were to hit the ropes binding us..."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "...Oh, right...! The ropes might come loose!"
 
@@ -463,9 +508,7 @@
 `Partner Name`: "...And what if... What if the Sableye don't use Fury Swipes at all...?"
 
 
-`Partner Sad`
-
-`Partner Name`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 `Grovyle Normal`
@@ -473,7 +516,10 @@
 `Grovyle`: "If that happens...don't even think about it."
 
 
-`Partner Shouting` 〽
+`Partner`: 〽
+
+
+`Partner Shouting`
 
 `Partner Name`: "WAAAAAAH!"
 
@@ -498,17 +544,26 @@
 `Partner Name`: "We'll be down before our chance comes!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Hey!"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(There's a break in the rope!)"
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Now! Attack!"
 
@@ -529,7 +584,10 @@
 * * *
 
 
-`Dusknoir Normal` 〽
+`Dusknoir`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Wh-what is this?!"
 
@@ -565,7 +623,13 @@
 * * *
 
 
-`Dusknoir Normal` 〽
+`Sableye`: 〽
+
+
+`Dusknoir`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "B-blast it!"
 
@@ -580,20 +644,23 @@
 `Dusknoir`: "They won't get away with this! Come!"
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 🪨
 
+
 🪨
+
 
 💨
 
+
 🪨
 
+
 💨
+
 
 `Partner Pain`
 

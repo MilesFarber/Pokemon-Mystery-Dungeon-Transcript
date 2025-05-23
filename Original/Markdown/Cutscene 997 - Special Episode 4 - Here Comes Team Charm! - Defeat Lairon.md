@@ -11,12 +11,18 @@
 `Lairon`: "Grooooooaaaaaahh..."
 
 
-`Aggron Normal` 💦
+`Aggron`: 💦
+
+
+`Aggron Normal`
 
 `Aggron`: "Eeeeek... R-run... R-run..."
 
 
-`Lairon Normal` 💦
+`Lairon`: 💦
+
+
+`Lairon Normal`
 
 `Lairon`: "RUUUUUUUNNNNN!"
 

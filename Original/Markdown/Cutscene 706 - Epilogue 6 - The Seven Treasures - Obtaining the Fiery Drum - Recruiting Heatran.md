@@ -3,7 +3,9 @@
 
 🟡
 
+
 ❗
+
 
 >The treasure box contained... a Fiery Drum!
 
@@ -16,6 +18,7 @@
   * *Pick a random number. If it is < 50:*
 
   *   * ⚪
+
 
 >Oh? Heatran is saying something.
 >
@@ -38,6 +41,7 @@
 
 
   *   *   *   * ⚪
+
 
   *   *   *   * *Anchor: <a name="3"></a>3*
 
@@ -73,6 +77,7 @@
 
 
   *   *   *   *   * ⚪
+
 
   *   *   *   *   * *Jump to [anchor 3](#3)*
 

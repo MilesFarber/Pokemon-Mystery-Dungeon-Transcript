@@ -1,7 +1,7 @@
 * * *
 
 
-`Groudon Normal` 〽
+`Groudon Normal`
 
 `Groudon`: "GRR...GRR...OOOOOOOOOH!"
 

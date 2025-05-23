@@ -47,12 +47,15 @@
 `Kecleon`: "It's quite remarkable. Though very young, they've stepped up and taken charge. ♪"
 
 
-`Marill Joyous` ❗
+`Marill Joyous`
 
 `Marill`: "Misters Kecleon!"
 
 
-`Kecleon Normal` ❓
+`Kecleon`: ❓
+
+
+`Kecleon Normal`
 
 `Kecleon`: "Oh? What's the hurry? What makes you return in such a rush?"
 
@@ -77,7 +80,10 @@
 `Kecleon`: "Please, share it among yourselves and do enjoy."
 
 
-`Marill Normal` ❗
+`Marill`: ❗
+
+
+`Marill Normal`
 
 `Marill`: "Really?!"
 
@@ -92,7 +98,7 @@
 `Kecleon`: "Oh, not to worry, my friends. Do take care on your way home. ♪"
 
 
-`Azurill Teary-Eyed` ❗
+`Azurill Teary-Eyed`
 
 `Azurill`: "Yowch!"
 

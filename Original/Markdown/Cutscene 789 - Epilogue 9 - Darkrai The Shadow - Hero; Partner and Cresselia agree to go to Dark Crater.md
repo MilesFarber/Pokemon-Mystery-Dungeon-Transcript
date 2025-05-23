@@ -106,7 +106,10 @@
 `Cresselia`: "Please be content with just the three of us going."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Aww... That's too bad..."
 

@@ -16,7 +16,10 @@
 `Partner Name`: "But nobody found anything?"
 
 
-`Dugtrio Normal` 💦
+`Dugtrio`: 💦
+
+
+`Dugtrio Normal`
 
 `Dugtrio`: "Disappointing."
 
@@ -51,7 +54,10 @@
 `Bidoof`: "It was so pretty that I just couldn't help...helping myself to a crystal."
 
 
-`Sunflora Normal` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Ooh! When did you pick that up?"
 
@@ -86,7 +92,10 @@
 `Dugtrio`: "Who do you think you are?!"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Oof! Gosh, I'm sorry!"
 
@@ -126,7 +135,7 @@
 `Chatot`: "My goodness, no! You mustn't blame yourself!"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 💦
 
 `Chatot`: "Why, it was thanks only to your vast knowledge that we came up with our plan, Dusknoir!"
 
@@ -161,9 +170,7 @@
 `Chatot`: "Rest up! Prepare for tomorrow!"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: UNDERSTOOD!"
+`💬`: "Everyone: UNDERSTOOD!"
 
 
 * * *

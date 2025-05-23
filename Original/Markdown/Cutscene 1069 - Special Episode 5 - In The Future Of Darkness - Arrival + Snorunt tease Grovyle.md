@@ -31,7 +31,10 @@
 `Grovyle`: "So...where do we go, then?"
 
 
-`Snorunt Normal` ⚟
+`Grovyle`: ⚟
+
+
+`Snorunt Normal`
 
 `Snorunt`: "Gii!"
 
@@ -46,12 +49,15 @@
 `Dusknoir`: "It's the Snorunt. I believe they live around here."
 
 
-`Snorunt Normal` 💦
+`Snorunt`: 💦
+
+
+`Snorunt Normal`
 
 `Snorunt`: "Gigii..."
 
 
-`Grovyle Normal` ❗
+`Grovyle Normal`
 
 `Grovyle`: "H-hey! Wait up a moment!"
 
@@ -76,7 +82,10 @@
 `Grovyle`: "Did you see anyone?"
 
 
-`Snorunt Normal` ❓
+`Snorunt`: ❓
+
+
+`Snorunt Normal`
 
 `Snorunt`: "Gigii? Gigigii?"
 
@@ -106,12 +115,18 @@
 `Grovyle`: "It's really important!"
 
 
-`Snorunt Normal` ❗
+`Snorunt`: ❗
+
+
+`Snorunt Normal`
 
 `Snorunt`: "Gii!"
 
 
-`Snorunt Normal` ❗
+`Snorunt`: ❗
+
+
+`Snorunt Normal`
 
 `Snorunt`: "Gii! Gii!"
 
@@ -154,7 +169,7 @@
 `Grovyle`: "Bah... Argh! They're no help!"
 
 
-`Grovyle Normal`
+`Grovyle Normal` 💢
 
 `Grovyle`: "They're just teasing me!"
 

@@ -3,12 +3,14 @@
 
 〽
 
+
 * * *
 
 
 ❗
 
-`Giratina Normal` 〽
+
+`Giratina Normal`
 
 `Giratina`: "Seekers of the seven treasures!"
 

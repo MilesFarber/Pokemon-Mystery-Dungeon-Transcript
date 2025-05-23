@@ -11,7 +11,10 @@
 `Sunflora`: "It was strange, any way you look at it..."
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Really? Do you think so?"
 
@@ -41,7 +44,10 @@
 `Corphish`: "Hey, hey! What happened was really weird!"
 
 
-`Bidoof Normal` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Gosh, I really had to wonder why Dusknoir did something like that!"
 
@@ -56,7 +62,10 @@
 `Chimecho`: "Then what Dusknoir did suddenly makes perfect sense!"
 
 
-`Chatot Surprised` 💦
+`Chatot`: 💦
+
+
+`Chatot Surprised`
 
 `Chatot`: "What? Wait a minute!"
 
@@ -71,9 +80,7 @@
 `Chatot`: "Are you actually saying that you now believe what `Partner Name` and `Hero Name` are claiming?!"
 
 
-`Chatot Surprised`
-
-`Chatot`: "Everyone: .............................."
+`💬`: "Everyone: .............................."
 
 
 `Chatot Surprised` 💦
@@ -91,12 +98,15 @@
 `Chatot`: "What?! What did you say?!"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 〽
 
 `Chatot`: "So, Bidoof, you're now claiming that the great Dusknoir is a villain?"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Oof! Golly, I surely did think highly of the great Dusknoir."
 
@@ -136,7 +146,7 @@
 `Corphish`: "Hey, hey! I believe too!"
 
 
-`Sunflora Normal` 💦
+`Sunflora Normal`
 
 `Sunflora`: "Me too! Oh my gosh! They're our guild colleagues, after all!"
 
@@ -151,7 +161,7 @@
 `Loudred`: "I believe them!"
 
 
-`Diglett Normal` 💦
+`Diglett Normal`
 
 `Diglett`: "Me too!"
 
@@ -161,17 +171,23 @@
 `Chimecho`: "So do I!"
 
 
-`Dugtrio Normal` 💦
+`Dugtrio Normal`
 
 `Dugtrio`: "Casting doubt on our colleagues is wrong! Trust is a must!"
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "Squawk!"
 
 
-`Partner Teary-Eyed` 💦
+`Partner`: 💦
+
+
+`Partner Teary-Eyed`
 
 `Partner Name`: "Urf... Thank you, everyone..."
 
@@ -191,9 +207,7 @@
 `Wigglytuff`: "Sounds like we all agree! ♪"
 
 
-`Wigglytuff Normal` 〽
-
-`Wigglytuff`: "Everyone: HUH?!"
+`💬`: "Everyone: HUH?!"
 
 
 `Wigglytuff Normal`
@@ -206,12 +220,18 @@
 `Wigglytuff`: "Then let's begin searching for the Hidden Land!"
 
 
-`Loudred Normal` 💦
+`Loudred`: 💦
+
+
+`Loudred Normal`
 
 `Loudred`: "Whoa! Just hold ON there, Guildmaster!"
 
 
-`Wigglytuff Normal` ❓
+`Wigglytuff`: ❓
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Hm? What's wrong?"
 
@@ -241,14 +261,12 @@
 `Wigglytuff`: "Oh? Is that all? ♪"
 
 
-`Wigglytuff Happy`
+`Wigglytuff Happy` 🔆
 
 `Wigglytuff`: "You don't need to worry about Chatot."
 
 
-`Wigglytuff Happy` ❓
-
-`Wigglytuff`: "Everyone: HUH?!"
+`💬`: "Everyone: HUH?!"
 
 
 `Wigglytuff Normal`
@@ -256,9 +274,7 @@
 `Wigglytuff`: "Chatot is convinced...right?"
 
 
-`Wigglytuff Normal` ❗
-
-`Wigglytuff`: "Everyone: HUH?!"
+`💬`: "Everyone: HUH?!"
 
 
 `Wigglytuff Happy`
@@ -281,12 +297,18 @@
 `Chatot`: "Hee-heeee!"
 
 
-`Loudred Normal` 💧
+`Loudred`: 💧
+
+
+`Loudred Normal`
 
 `Loudred`: "WH-WHAT?"
 
 
-`Sunflora Normal` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Normal`
 
 `Sunflora`: "How peculiar!"
 
@@ -301,9 +323,7 @@
 `Chatot`: "Yes, I believed `Hero Name` and `Partner Name` right from the start."
 
 
-`Chatot Happy` ❗
-
-`Chatot`: "Everyone: HUH? REALLY?!"
+`💬`: "Everyone: HUH? REALLY?!"
 
 
 `Chatot Happy`
@@ -316,7 +336,10 @@
 `Chatot`: "Everyone would have just gone along with what I said."
 
 
-`Loudred Normal` 💧
+`Loudred`: 💧
+
+
+`Loudred Normal`
 
 `Loudred`: "...What's all this...?"
 
@@ -331,7 +354,10 @@
 `Chatot`: "I wanted to put your friendship to the test!"
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "...Gosh, likely story..."
 
@@ -346,12 +372,18 @@
 `Chatot`: "I knew everyone...would surely believe their colleagues! ♪"
 
 
-`Sunflora Normal` 💧
+`Sunflora`: 💧
+
+
+`Sunflora Normal`
 
 `Sunflora`: "...Says you..."
 
 
-`Chatot Sigh` 💦
+`Chatot`: 💦
+
+
+`Chatot Sigh`
 
 `Chatot`: "Hee! Hee-heeee!"
 
@@ -416,9 +448,7 @@
 `Wigglytuff`: "Let's do this, everyone!"
 
 
-`Wigglytuff Normal` ◀▼▶
-
-`Wigglytuff`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Wigglytuff Normal`
@@ -429,6 +459,9 @@
 `Chatot Surprised` 💦
 
 `Chatot`: "Y-yes, sir."
+
+
+`Chatot`: 💦
 
 
 `Chatot Normal`
@@ -521,9 +554,7 @@
 `Wigglytuff`: "YOOM...TAH!"
 
 
-`Wigglytuff Sigh` ◀▼▶
-
-`Wigglytuff`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 * * *
@@ -539,7 +570,7 @@
 `Corphish`: "Hey, hey, hey!"
 
 
-`Wigglytuff Normal` ◀▼▶
+`Wigglytuff Normal`
 
 `Wigglytuff`: "I'm sorry that I don't have any information on the Hidden Land..."
 
@@ -549,7 +580,10 @@
 `Wigglytuff`: "But maybe...the wise Torkoal, the town elder, may know something."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Torkoal, the town elder?"
 
@@ -569,7 +603,10 @@
 `Chatot`: "In fact, I'm positive that you'll find him at the Hot Spring! ♪"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! I remember!"
 

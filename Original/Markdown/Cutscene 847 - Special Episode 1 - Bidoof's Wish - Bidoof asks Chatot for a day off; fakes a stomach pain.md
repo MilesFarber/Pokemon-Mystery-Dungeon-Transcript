@@ -26,12 +26,18 @@
 `Bidoof`: "Huh? R-reason?"
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "The reason I want to take time off...um...um..."
 
 
-`Bidoof Normal` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Normal`
 
 `Bidoof`: "O-oh! I haven't been feeling good lately! Yup yup!"
 
@@ -41,7 +47,10 @@
 `Bidoof`: "My stomach really hurts... Ooogh..."
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Your stomach hurts? You, the one with the cast-iron stomach?"
 

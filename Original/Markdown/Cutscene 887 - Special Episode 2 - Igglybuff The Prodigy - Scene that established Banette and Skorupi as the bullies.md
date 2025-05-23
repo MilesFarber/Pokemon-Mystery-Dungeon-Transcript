@@ -7,7 +7,8 @@
 `💬`: "Hey! You guys!"
 
 
-❗
+`Wooper`: ❗
+
 
 `💬`: "You guys! What are you doing there?"
 
@@ -17,12 +18,18 @@
 `Wooper`: "Th-them?!"
 
 
+`Wooper`: 〽
+
+
 `Smoochum Angry`
 
 `Smoochum`: "The bullies, Banette and Skorupi!"
 
 
-`Banette Normal` ❗
+`Banette`: ❗
+
+
+`Banette Normal`
 
 `Banette`: "Oh!"
 
@@ -47,7 +54,7 @@
 `Igglybuff`: "Yep, sure! ♪ Friendly friends! ♪"
 
 
-`Smoochum Worried` ◀▼▶
+`Smoochum Worried`
 
 `Smoochum`: "Why is Igglybuff making friends with those bullies?"
 
@@ -92,12 +99,18 @@
 `Igglybuff`: "Yep! ♪"
 
 
-`Igglybuff Normal` ❓
+`Igglybuff`: ❓
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "...Huh?"
 
 
-`Igglybuff Worried` 💦
+`Igglybuff`: 💦
+
+
+`Igglybuff Worried`
 
 `Igglybuff`: "I'm all out of Gummis."
 
@@ -132,7 +145,7 @@
 `Igglybuff`: "Yep. ♪ Friendly friends. ♪"
 
 
-`Budew Worried` 🔆
+`Budew Worried`
 
 `Budew`: "Ah... Doesn't Igglybuff realize he's being played by Banette?"
 
@@ -147,12 +160,18 @@
 `Wooper`: "Y-you shouldn't get involved!"
 
 
+`Wooper`: 💦
+
+
 `Wooper Surprised`
 
 `Wooper`: "They're really big and scary!"
 
 
-`Smoochum Worried` 💦
+`Smoochum`: 💦
+
+
+`Smoochum Worried`
 
 `Smoochum`: "Sniff..."
 

@@ -4,7 +4,10 @@
 * * *
 
 
-`Medicham Normal` ❗
+`Medicham`: ❗
+
+
+`Medicham Normal`
 
 `Medicham`: "I think we've reached the other side of the jungle..."
 
@@ -27,7 +30,10 @@
 >Guuuuuuuu!
 
 
-`Medicham Normal` ❗
+`Medicham`: ⚟
+
+
+`Medicham Normal`
 
 `Medicham`: "Huh? I think I heard some kind of strange noise coming from over there..."
 

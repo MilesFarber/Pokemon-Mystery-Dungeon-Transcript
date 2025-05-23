@@ -21,7 +21,10 @@
 `Hero Name`: "(There should also be a secret here.)"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh, wow! This crystal changes color when you touch it!"
 

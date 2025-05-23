@@ -14,7 +14,10 @@
 `Palkia`: "GRRR-OOOO...AAAAAAH!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "...H-huh?"
 
@@ -24,15 +27,16 @@
 `Partner Name`: "Palkia... Palkia has stopped moving..."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "What happened to him...?"
 
 
 `💬`: "Palkia has been..."
 
-
-〽
 
 `💬`: "Palkia has been enveloped by the nightmare."
 
@@ -67,7 +71,10 @@
 `💬`: "Would you two enter Palkia's nightmare?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?"
 
@@ -112,7 +119,10 @@
 
   * *If the player chooses "Refuse":*
 
-  *   * `Partner Surprised` 〽
+  *   * `Partner`: 〽
+
+
+  *   * `Partner Surprised`
 
   *   * `Partner Name`: "Wh-what, you won't go in?"
 

@@ -4,12 +4,18 @@
 * * *
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Huff-huff..."
 
 
-`Partner Surprised` ❗
+`Hero`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh! Manaphy!"
 
@@ -34,17 +40,23 @@
 `Partner Name`: "Hey, Manaphy?"
 
 
-`Partner Worried` ❗
+`Partner`: ❗
+
+
+`Partner Worried`
 
 `Partner Name`: "...Manaphy? Is something wrong?"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "!!! Manaphy!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "This is bad, `Hero Name`! He's burning up with a fever!"
 

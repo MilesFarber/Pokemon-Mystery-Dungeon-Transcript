@@ -52,7 +52,10 @@
 `💬`: "You there! STOP!"
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Hmm?"
 

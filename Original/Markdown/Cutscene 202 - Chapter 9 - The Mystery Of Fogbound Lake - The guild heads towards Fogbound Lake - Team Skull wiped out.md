@@ -51,7 +51,10 @@
 `Corphish`: "So I'd bet that the Guildmaster went up after them, don't you think?"
 
 
-`Diglett Normal` ❓
+`Diglett`: ❓
+
+
+`Diglett Normal`
 
 `Diglett`: "Hmm? The ground..."
 
@@ -66,7 +69,10 @@
 `Bidoof`: "GRROOOOOOH...!"
 
 
-`Chimecho Normal` ❗
+`Bidoof`: ❗
+
+
+`Chimecho Normal`
 
 `Chimecho`: "What...whatever could that be?!"
 
@@ -86,7 +92,10 @@
 `Corphish`: "Let's head up! Hurry!"
 
 
-`Diglett Normal` ⚞
+`Diglett`: ⚞
+
+
+`Diglett Normal`
 
 `Diglett`: "Hmm?"
 

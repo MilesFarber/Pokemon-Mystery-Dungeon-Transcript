@@ -19,7 +19,10 @@
 `Partner Name`: "GRROOOOOOH...!"
 
 
-`Partner Worried` ❗
+`Partner`: ❗
+
+
+`Partner Worried`
 
 `Partner Name`: "Hey! What was that?"
 
@@ -34,7 +37,10 @@
 `Partner Name`: "Just now... Did you hear that?"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Was it all in my head? Or not?"
 

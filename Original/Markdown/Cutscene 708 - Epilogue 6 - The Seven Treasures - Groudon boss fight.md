@@ -3,12 +3,14 @@
 
 〽
 
+
 * * *
 
 
 ❗
 
-`Groudon Normal` 〽
+
+`Groudon Normal`
 
 `Groudon`: "Seekers of the seven treasures!"
 

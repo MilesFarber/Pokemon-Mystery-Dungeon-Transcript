@@ -31,7 +31,10 @@
 `Cresselia`: "So that your whole existence could be eliminated."
 
 
-`Bidoof Normal` 〽
+`Corphish`: 〽
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Whaaat?!"
 
@@ -46,7 +49,10 @@
 `Chatot`: "E-eliminate?! Those two?!"
 
 
-`Drowzee Normal` 💦
+`Drowzee`: 💦
+
+
+`Drowzee Normal`
 
 `Drowzee`: "Well, it's shocking that he wanted to get rid of you..."
 
@@ -71,7 +77,10 @@
 `Cresselia`: "I would guess...that it was all out of fear of `Hero Name` and `Partner Name`."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Darkrai was afraid...of me and `Hero Name`?"
 
@@ -101,7 +110,10 @@
 `Cresselia`: "It was none other than Darkrai."
 
 
-`Chatot Surprised` 〽
+`Corphish`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "What?!"
 
@@ -211,6 +223,9 @@
 `Partner Name`: "Urf..."
 
 
+`Partner`: 💦
+
+
 `Hero Teary-Eyed`
 
 `Hero Name`: "(`Partner Name`...)"
@@ -281,7 +296,10 @@
 `Wigglytuff`: "Stay full of cheer! All right? ♪"
 
 
-`Partner Teary-Eyed` 💦
+`Partner`: 💦
+
+
+`Partner Teary-Eyed`
 
 `Partner Name`: "Urf... Thank you, Wigglytuff..."
 

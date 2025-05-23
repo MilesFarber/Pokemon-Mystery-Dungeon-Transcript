@@ -1,7 +1,10 @@
 * * *
 
 
-`Medicham Normal` ❗
+`Medicham`: ❗
+
+
+`Medicham Normal`
 
 `Medicham`: "Aah! Is everyone over there an explorer?!"
 
@@ -16,7 +19,10 @@
 `Gardevoir`: "Everyone's gathered, aiming for the treasure at the depths of the quarry."
 
 
-`Dunsparce Normal` ❗
+`Dunsparce`: ❗
+
+
+`Dunsparce Normal`
 
 `Dunsparce`: "Wow! ♪ Pretty ladies! 🤍"
 
@@ -91,7 +97,10 @@
 `Magmortar`: "But after the waypoint, it's really difficult..."
 
 
-`Gardevoir Normal` ❓
+`Gardevoir`: ❓
+
+
+`Gardevoir Normal`
 
 `Gardevoir`: "Difficult?"
 
@@ -149,7 +158,10 @@
 * * *
 
 
-`Dunsparce Normal` 💦
+`Dunsparce`: 💦
+
+
+`Dunsparce Normal`
 
 `Dunsparce`: "S-so cool..."
 
@@ -159,12 +171,11 @@
 `Dunsparce`: "Ummm... Whoa... 🤍"
 
 
-⚞
-
 `💬`: "Hey! You...over there!"
 
 
-〽
+`Houndoom`: 〽
+
 
 `💬`: "You! Give up now! This treasure's ours!"
 
@@ -174,12 +185,18 @@
 `Weavile`: "This treasure is going to be found by none other than the band of thieves, Team AWD!"
 
 
-`Magmortar Surprised` 〽
+`Houndoom`: 〽
+
+
+`Magmortar Surprised`
 
 `Magmortar`: "Team AW...Team AWD?!"
 
 
-`Dunsparce Surprised` 💦
+`Dunsparce`: 💦
+
+
+`Dunsparce Surprised`
 
 `Dunsparce`: "That band of thieves with the bad reputation, Team AWD, is here?"
 
@@ -199,7 +216,10 @@
 `Medicham`: "Hey... What's with them?"
 
 
-`Houndoom Surprised` 💦
+`Houndoom`: 💦
+
+
+`Houndoom Surprised`
 
 `Houndoom`: "Y-you! You don't know about Team AWD?"
 
@@ -259,7 +279,10 @@
 `Drapion`: "Hey! You guys! Weren't you listening?!"
 
 
-`Drapion Normal` 〽
+`Houndoom`: 〽
+
+
+`Drapion Normal`
 
 `Drapion`: "Didn't my lady Weavile tell you to hit the road?!"
 
@@ -284,7 +307,10 @@
 `Arbok`: "Sssssso. The firsssst one to get ssssstepped on... Who'ssssss it going to be?"
 
 
-`Dunsparce Stunned` 💦
+`Cacturne`: 💦
+
+
+`Dunsparce Stunned`
 
 `Dunsparce`: "Ummm..."
 
@@ -294,12 +320,18 @@
 `Magmortar`: "Ummmmmmm..."
 
 
-`Medicham Normal` ❗
+`Lopunny`: ❗
+
+
+`Medicham Normal`
 
 `Medicham`: "E-everyone... What's wrong?"
 
 
-`Cacturne Sigh` 💦
+`Cacturne`: 💦
+
+
+`Cacturne Sigh`
 
 `Cacturne`: "I-I...I give up..."
 
@@ -309,7 +341,10 @@
 `Dunsparce`: "M-me too!"
 
 
-`Magmortar Sigh` 💦
+`Magmortar`: 💦
+
+
+`Magmortar Sigh`
 
 `Magmortar`: "M-me t-too!"
 
@@ -319,7 +354,10 @@
 `Drapion`: "Bah! Cowards!"
 
 
-`Arbok Normal` ❗
+`Arbok`: ❗
+
+
+`Arbok Normal`
 
 `Arbok`: "Ssssay, Drapion!"
 
@@ -329,7 +367,10 @@
 `Arbok`: "Are those cute girlssss ssssstill here?"
 
 
-`Drapion Normal` ❗
+`Drapion`: ❗
+
+
+`Drapion Normal`
 
 `Drapion`: "Yeah! Yeah, they are!"
 
@@ -344,7 +385,10 @@
 `Arbok`: "Aren't you ssssscared of ussss?"
 
 
-`Arbok Normal` ❗
+`Arbok`: ❗
+
+
+`Arbok Normal`
 
 `Arbok`: "Oh! I ssssee!"
 
@@ -359,7 +403,7 @@
 `Drapion`: "GAHAHAHAHAHAHAHAHAHAHAHA! That's it! That's it!"
 
 
-`Drapion Normal`
+`Drapion Normal` 🔆
 
 `Drapion`: "If that's how it is, it's real simple!"
 
@@ -374,7 +418,10 @@
 `Medicham`: "Humph! Just who do you think you are?"
 
 
-`Drapion Surprised` 〽
+`Drapion`: 〽
+
+
+`Drapion Surprised`
 
 `Drapion`: "Wha...?"
 
@@ -389,7 +436,10 @@
 `Gardevoir`: "Why would we want to do a thing like that?"
 
 
-`Arbok Surprised` 〽
+`Arbok`: 〽
+
+
+`Arbok Surprised`
 
 `Arbok`: "Wh-whaaaat?!"
 
@@ -432,7 +482,10 @@
 `Gardevoir`: "Huh?! You're weaker than I thought!"
 
 
-`Drapion Angry` 〽
+`Arbok`: 〽
+
+
+`Drapion Angry`
 
 `Drapion`: "H-huh...whaaaat!?"
 
@@ -450,7 +503,7 @@
 * * *
 
 
-`Weavile Normal` 〽
+`Weavile Normal`
 
 `Weavile`: "Hold it, you!"
 
@@ -525,7 +578,10 @@
 `Sentret`: "Excuse me..."
 
 
-`Lopunny Normal` ⚟
+`Lopunny`: ⚟
+
+
+`Lopunny Normal`
 
 `Lopunny`: "Y-you're..."
 
@@ -540,7 +596,10 @@
 `Medicham`: "You... Didn't you run away?"
 
 
-`Sentret Sad` 💦
+`Sentret`: 💦
+
+
+`Sentret Sad`
 
 `Sentret`: "Y-yes, that's right..."
 
@@ -575,7 +634,10 @@
 `Sentret`: "I have a request."
 
 
-`Lopunny Normal` ❓
+`Lopunny`: ❓
+
+
+`Lopunny Normal`
 
 `Lopunny`: "A request?"
 
@@ -610,7 +672,10 @@
 `Sentret`: "They were hurt very badly..."
 
 
-`Medicham Surprised` 〽
+`Medicham`: 〽
+
+
+`Medicham Surprised`
 
 `Medicham`: "Wh-whaaat?!"
 
@@ -640,7 +705,7 @@
 `Medicham`: "That's terrible!"
 
 
-`Medicham Angry`
+`Medicham Angry` 💢
 
 `Medicham`: "You know, they're real scoundrels, just like the rumors say!"
 
@@ -670,7 +735,10 @@
 `Gardevoir`: "In honor of your friends..."
 
 
-`Sentret Teary-Eyed` 💦
+`Sentret`: 💦
+
+
+`Sentret Teary-Eyed`
 
 `Sentret`: "Th-thank you so much!"
 

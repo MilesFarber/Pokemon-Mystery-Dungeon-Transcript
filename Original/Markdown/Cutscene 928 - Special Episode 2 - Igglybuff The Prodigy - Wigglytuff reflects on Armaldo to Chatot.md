@@ -41,6 +41,9 @@
 `Wigglytuff`: "We'll save those stories for another time. ♪ I'm too tired for more today."
 
 
+`Chatot`: 💧
+
+
 `Wigglytuff Normal`
 
 `Wigglytuff`: "You know... Whenever I look at this Defend Globe, I think of him."

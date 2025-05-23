@@ -27,6 +27,7 @@
 
   *   * ⚪
 
+
   *   * `Regirock Normal`
 
   *   * `Regirock`: "I AM REGIROCK..."
@@ -47,6 +48,7 @@
 
   *   *   * ⚪
 
+
   *   *   * *Jump to [anchor 0](#0)*
 
 
@@ -66,6 +68,7 @@
 
 
   *   *   *   * ⚪
+
 
   *   *   *   * *Jump to [anchor 0](#0)*
 

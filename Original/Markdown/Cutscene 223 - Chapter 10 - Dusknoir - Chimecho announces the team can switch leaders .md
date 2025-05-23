@@ -51,7 +51,10 @@
 `Chimecho`: "An exploration team made that way will still be officially recognized!"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh, I get it! So that means..."
 

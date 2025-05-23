@@ -14,7 +14,10 @@
 `Partner Name`: "I guess he's not here after all..."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Speaking of not being here... The Krabby aren't here, either."
 

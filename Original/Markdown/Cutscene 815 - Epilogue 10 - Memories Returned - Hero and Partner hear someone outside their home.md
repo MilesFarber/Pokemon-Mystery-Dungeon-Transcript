@@ -4,7 +4,8 @@
 `💬`: "Oh! `Hero Name`! `Partner Name`!"
 
 
-❗
+`Partner`: ❗
+
 
 `💬`: "Good morning! Are you awake?"
 

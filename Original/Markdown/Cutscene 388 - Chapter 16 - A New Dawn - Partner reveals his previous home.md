@@ -6,7 +6,10 @@
 `Partner Name`: "This cliff is known as Sharpedo Bluff."
 
 
-`Grovyle Normal` ❓
+`Grovyle`: ❓
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Sharpedo Bluff?"
 
@@ -24,7 +27,10 @@
 * * *
 
 
-`Partner Normal` ❗
+`Hero`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "It's down here."
 

@@ -1,7 +1,10 @@
 * * *
 
 
-`Sunflora Normal` ⚟
+`Sunflora`: ⚟
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Huh? Officer Magnezone!"
 
@@ -16,7 +19,10 @@
 `Chatot`: "Officer Magnezone has come here to ask a favor."
 
 
-`Sunflora Normal` ❓
+`Sunflora`: ❓
+
+
+`Sunflora Normal`
 
 `Sunflora`: "A favor?"
 
@@ -107,7 +113,10 @@
 `Chatot`: "Sunflora, you're the recommendation! ♪"
 
 
-`Sunflora Surprised` 〽
+`Sunflora`: 〽
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "Whaaat!? M-me?!"
 
@@ -197,7 +206,10 @@
 `Wigglytuff`: "Just a moment!"
 
 
-`Sunflora Normal` ❓
+`Sunflora`: ❓
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Yes?"
 

@@ -6,10 +6,13 @@
   * * * *
 
 
+  * `Torkoal`: 〽
+
+
   * *Anchor: <a name="2"></a>2*
 
 
-  * `Torkoal Normal` 〽
+  * `Torkoal Normal`
 
   * `Torkoal`: "My goodness! It was the water that carried you all this way?"
 
@@ -43,6 +46,9 @@
 *If the player chooses "1":*
 
   * * * *
+
+
+  * `Torkoal`: 〽
 
 
   * *Jump to [anchor 2](#2)*

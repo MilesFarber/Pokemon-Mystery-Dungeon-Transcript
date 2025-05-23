@@ -4,7 +4,10 @@
 * * *
 
 
-`Igglybuff Happy` ⚞
+`Wigglytuff`: ⚞
+
+
+`Igglybuff Happy`
 
 `Igglybuff`: "Good morning, Papa. ♪ Good morning, Mama. ♪"
 

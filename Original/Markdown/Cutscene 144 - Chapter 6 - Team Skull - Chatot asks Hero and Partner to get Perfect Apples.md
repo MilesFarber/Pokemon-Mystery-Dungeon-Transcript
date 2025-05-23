@@ -11,7 +11,10 @@
 `Chatot`: "Your task today is to obtain stock to replenish the larder."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Larder? You mean, go get some food?"
 
@@ -81,12 +84,18 @@
 `Chatot`: "...Yes, that's what would happen."
 
 
-`Chatot Normal` ❓
+`Hero`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "That's why I'm begging you two to get some Perfect Apples."
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "Uh, what did he just say?! I didn't hear! It'll really bug me, not knowing!"
 

@@ -36,9 +36,7 @@
 `Chatot`: "All right, everyone! Do your best, as always! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 *If the Hero has decided to jump into the quicksand pits:*
@@ -47,7 +45,7 @@
   * *Anchor: <a name="0"></a>0*
 
 
-  * `Partner Normal` ◀▼▶
+  * `Partner Normal`
 
   * `Partner Name`: "Let's go back to Quicksand Cave, `Hero Name`."
 

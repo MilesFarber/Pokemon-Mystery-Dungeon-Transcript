@@ -9,7 +9,10 @@
 * * *
 
 
-`Breloom Happy` ⚟
+`Breloom`: ⚟
+
+
+`Breloom Happy`
 
 `Breloom`: "Yeah! We're here!"
 
@@ -44,7 +47,10 @@
 `Breloom`: "Heh-heh. You're welcome."
 
 
-`Breloom Normal` ❗
+`Breloom`: ❗
+
+
+`Breloom Normal`
 
 `Breloom`: "Oh, that's right. From here on, we're going to make a serious effort to reach the summit."
 

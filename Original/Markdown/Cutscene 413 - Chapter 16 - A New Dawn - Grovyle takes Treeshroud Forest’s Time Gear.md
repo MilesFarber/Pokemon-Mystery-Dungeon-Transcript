@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Hero`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "But what's this?"
 
@@ -49,7 +52,7 @@
 >Grovyle took the Time Gear!
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Hey! What are you doing?!"
 
@@ -69,7 +72,10 @@
 `Grovyle`: "There's also...something that's more worrying."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "M-more worrying?"
 

@@ -7,7 +7,10 @@
 `💬`: "GRROOOOOOH...!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Did you hear that, `Hero Name`?!"
 
@@ -67,12 +70,18 @@
 `Hero Name`: "(That is, who was I...before I lost my memory?)"
 
 
-`Hero Normal` ❗
+`Hero`: ❗
+
+
+`Hero Normal`
 
 `Hero Name`: "(That reminds me... I still haven't said a word about this to `Partner Name`.)"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Yes? What is it, `Hero Name`?"
 
@@ -90,7 +99,10 @@
 >`Hero Name` confessed what happened since arriving at base camp...
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "I beg...I beg your pardon?"
 

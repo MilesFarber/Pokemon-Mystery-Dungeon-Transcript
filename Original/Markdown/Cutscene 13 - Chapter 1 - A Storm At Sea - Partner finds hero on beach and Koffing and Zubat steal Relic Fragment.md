@@ -21,7 +21,10 @@
 `Partner Name`: "Coming here heals my spirits."
 
 
-`Partner Normal` ⚟
+`Partner`: ⚟
+
+
+`Partner Normal`
 
 `Partner Name`: "Hey...what's that? What's going on over there?"
 
@@ -31,7 +34,7 @@
 `Partner Name`: "Waah! Someone has collapsed on the sand!"
 
 
-`Partner Surprised`
+`Partner Surprised` 〽
 
 `Partner Name`: "What happened?! Are you OK?"
 
@@ -46,7 +49,10 @@
 `Hero Name`: "(...Ugh...)"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "You're awake! Thank goodness!"
 
@@ -96,7 +102,10 @@
 `Partner Name`: "You look like a totally normal `Hero Species` to me!"
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(It's...it's true!)"
 

@@ -197,7 +197,10 @@
 `Partner Name`: "So will you do that with me? Please?"
 
 
-`Hero Surprised` 💦
+`Hero`: 💦
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Wah! What should I do? I'm getting recruited out of the blue!)"
 
@@ -257,7 +260,10 @@
 
   * *If the player chooses "Are you...?":*
 
-  *   * `Partner Normal` ❓
+  *   * `Partner`: ❓
+
+
+  *   * `Partner Normal`
 
   *   * `Partner Name`: "Huh? Am I what?"
 
@@ -340,7 +346,10 @@
 `Hero Name`: "(OK! That's settled!)"
 
 
-`Partner Inspired` ❗
+`Partner`: ❗
+
+
+`Partner Inspired`
 
 `Partner Name`: "Oh? Really?!"
 

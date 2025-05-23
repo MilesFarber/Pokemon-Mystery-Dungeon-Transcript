@@ -81,7 +81,10 @@
 `Dusknoir`: "If he's going to send an agent back to the past...there's another method."
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Back to the past... Another method?"
 
@@ -101,7 +104,10 @@
 `Grovyle`: "I-I...should know what method?"
 
 
-`Grovyle Normal` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "N-no... It can't be!"
 
@@ -136,7 +142,10 @@
 `Dusknoir`: "Master Dialga...probably left here to catch Celebi."
 
 
-`Grovyle Normal` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "D-Dialga...left to catch Celebi!?"
 

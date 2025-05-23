@@ -16,8 +16,6 @@
 `Partner Name`: "This is it. Today I'm going to be brave."
 
 
-〽
-
 `💬`: "Pokémon detected! Pokémon detected!"
 
 
@@ -32,12 +30,18 @@
 `Partner Name`: "Waah!"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "That shocked me!"
 
 
-`Partner Sigh` 💧
+`Partner`: 💧
+
+
+`Partner Sigh`
 
 `Partner Name`: "Whew..."
 

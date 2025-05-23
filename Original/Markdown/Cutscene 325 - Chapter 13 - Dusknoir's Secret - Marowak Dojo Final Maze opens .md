@@ -1,7 +1,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Wow! A giant hole opened up!"
 
@@ -21,12 +21,18 @@
 `Marowak`: "And that big hole appeared where it was."
 
 
-`Marowak Normal` ❗
+`Marowak`: ❗
+
+
+`Marowak Normal`
 
 `Marowak`: "Come to think of it... My grandpa mentioned this a long time ago..."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Your grandfather?"
 
@@ -51,7 +57,10 @@
 `Marowak`: "Back then, my grandpa used to tell me about that hole. And he'd never once fail to scare me silly..."
 
 
-`Marowak Normal` ❗
+`Marowak`: ❗
+
+
+`Marowak Normal`
 
 `Marowak`: "...! Y-you two... You're not..."
 

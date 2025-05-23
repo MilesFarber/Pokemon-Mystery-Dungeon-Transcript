@@ -21,7 +21,10 @@
 `Partner Name`: "If we can meet with Palkia, we'd be able to ask about the distortion of space."
 
 
-`Partner Worried` 💦
+`Partner`: 💦
+
+
+`Partner Worried`
 
 `Partner Name`: "But we don't know where Spacial Rift is..."
 

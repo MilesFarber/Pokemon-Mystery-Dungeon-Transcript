@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Luminous Spring?"
 

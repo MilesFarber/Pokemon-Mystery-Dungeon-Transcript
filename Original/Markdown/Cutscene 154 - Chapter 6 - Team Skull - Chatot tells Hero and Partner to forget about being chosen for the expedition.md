@@ -46,9 +46,7 @@
 `Chatot`: "All right, everyone. ♪ Let's get down to work as usual. ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Partner Sad`
@@ -81,7 +79,7 @@
 `Chatot`: "You should give up on being chosen as expedition members."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Huh?! Wh-why?!"
 
@@ -116,7 +114,10 @@
 `Chatot`: "That's all."
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "I was already weak from hunger..."
 
@@ -129,7 +130,10 @@
 `💬`: "Psst! Listen up!"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? I heard a voice somewhere..."
 
@@ -137,12 +141,18 @@
 `💬`: "Shhh! Over here!"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Hi! Bidoof!"
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Shhh! By golly, not so loud!"
 

@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk! When we were back at the guild..."
 
@@ -71,12 +74,18 @@
 `Partner Name`: "...In that case...maybe that's the best thing to do..."
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Oh, `Partner Name`!)"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Arrgh! I've had enough!"
 

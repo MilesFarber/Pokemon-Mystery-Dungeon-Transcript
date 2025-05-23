@@ -3,12 +3,14 @@
 
 〽
 
+
 * * *
 
 
 ❗
 
-`Rayquaza Normal` 〽
+
+`Rayquaza Normal`
 
 `Rayquaza`: "Seekers of the seven treasures!"
 

@@ -50,40 +50,40 @@
   * `Partner Name`: "OK, `Hero Name`. Sleep tight."
 
 
-  * `Partner Name`: "(Um...)"
+  * `💬`: "(Um...)"
 
 
-  * `Partner Name`: "(Now I'm suddenly apprenticing at the guild...)"
+  * `💬`: "(Now I'm suddenly apprenticing at the guild...)"
 
 
-  * `Partner Name`: "(I gotta admit, it's pretty exciting to be in an exploration team.)"
+  * `💬`: "(I gotta admit, it's pretty exciting to be in an exploration team.)"
 
 
-  * `Partner Name`: "(And it's fun to be friends with `Partner Name`...)"
+  * `💬`: "(And it's fun to be friends with `Partner Name`...)"
 
 
-  * `Partner Name`: "(But first things first...)"
+  * `💬`: "(But first things first...)"
 
 
-  * `Partner Name`: "(Who am I?)"
+  * `💬`: "(Who am I?)"
 
 
-  * `Partner Name`: "(How did I turn into a Pokémon?)"
+  * `💬`: "(How did I turn into a Pokémon?)"
 
 
-  * `Partner Name`: "(How did I end up unconscious on that beach?)"
+  * `💬`: "(How did I end up unconscious on that beach?)"
 
 
-  * `Partner Name`: "(I'm feeling sleepy too...)"
+  * `💬`: "(I'm feeling sleepy too...)"
 
 
-  * `Partner Name`: "(Well, thinking about it won't help right now. I'd better focus on the guild's work for now...)"
+  * `💬`: "(Well, thinking about it won't help right now. I'd better focus on the guild's work for now...)"
 
 
-  * `Partner Name`: "(If I do that, well, everything should become clear eventually...)"
+  * `💬`: "(If I do that, well, everything should become clear eventually...)"
 
 
-  * `Partner Name`: "(I'll surely get to the bottom of this in time.)"
+  * `💬`: "(I'll surely get to the bottom of this in time.)"
 
 
   * * * *

@@ -1,7 +1,10 @@
 *Scenario flag: [4, 3]*
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Say! What are they up to?"
 
@@ -26,7 +29,10 @@
 `Partner Name`: "What's happening?"
 
 
-`Azurill Normal` ❗
+`Azurill`: ❗
+
+
+`Azurill Normal`
 
 `Azurill`: "Oh! Hi!"
 
@@ -96,7 +102,7 @@
 `Azurill`: "Yup!"
 
 
-`Drowzee Normal` 〽
+`Drowzee Normal`
 
 `Drowzee`: "Whoops! Excuse me."
 

@@ -4,7 +4,10 @@
 `Snover`: "Bidoof!"
 
 
-`Bidoof Normal` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Today we'll definitely make it through Star Cave, yup yup."
 

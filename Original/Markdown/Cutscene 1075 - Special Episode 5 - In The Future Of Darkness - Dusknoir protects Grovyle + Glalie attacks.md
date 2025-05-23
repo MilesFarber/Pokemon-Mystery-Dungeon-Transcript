@@ -19,20 +19,29 @@
 `Grovyle`: "It should be much easier."
 
 
-`Dusknoir Normal` ❗
+`Dusknoir`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Grovyle! Look out! Above you!"
 
 
-`Grovyle Surprised` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "What?!"
+
+
+`Grovyle`: 〽
 
 
 * * *
 
 
-`Grovyle Pain` 〽
+`Grovyle Pain`
 
 `Grovyle`: "Gwaaaaaaahhh!!"
 
@@ -40,7 +49,10 @@
 * * *
 
 
-`Grovyle Normal` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "D-Dusknoir!"
 
@@ -58,7 +70,10 @@
 `Dusknoir`: "Oof!"
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Are you all right?!"
 
@@ -73,12 +88,16 @@
 `Dusknoir`: "Look out... They're coming..."
 
 
-❗
+`Grovyle`: ❗
+
 
 `💬`: "GOGIGIGIGI!!"
 
 
-`Grovyle Surprised` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "Th-these...guys?!"
 
@@ -128,7 +147,10 @@
 `Dusknoir`: "Don't believe there are only these guys, Grovyle!"
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "What?!"
 
@@ -141,12 +163,12 @@
 `Grovyle`: "Wh-what?!"
 
 
-`Mamoswine Normal` 〽
+`Mamoswine Normal`
 
 `Mamoswine`: "BUAOOOOOON!"
 
 
-`Grovyle Surprised`
+`Grovyle Surprised` 〽
 
 `Grovyle`: "He's a...?!"
 

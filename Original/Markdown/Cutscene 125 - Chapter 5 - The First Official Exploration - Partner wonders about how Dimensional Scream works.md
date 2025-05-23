@@ -16,7 +16,10 @@
 `Partner Name`: "Seriously, `Hero Name`, thanks!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "...Oh yeah!"
 
@@ -36,7 +39,10 @@
 `Partner Name`: "They always seem to happen when you're touching something."
 
 
-`Hero Normal` ⚟
+`Hero`: ⚟
+
+
+`Hero Normal`
 
 `Hero Name`: "(Come to think of it, `Partner Name`'s right!)"
 

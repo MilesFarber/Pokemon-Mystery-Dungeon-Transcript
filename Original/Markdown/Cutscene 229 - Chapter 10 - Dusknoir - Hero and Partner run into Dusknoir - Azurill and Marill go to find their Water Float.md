@@ -4,12 +4,18 @@
 * * *
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Hey! Isn't that...?"
 
 
-`Dusknoir Normal` ❗
+`Dusknoir`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Hello there! You're from the guild, if I'm not mistaken?"
 
@@ -69,7 +75,10 @@
 `Kecleon`: "Have you come to shop? Oh, yes! Fine merchandise! ♪ Fine wares! ♪"
 
 
-`Partner Normal` 💦
+`Partner`: 💦
+
+
+`Partner Normal`
 
 `Partner Name`: "Sorry, no. We came to ask you something today, not shop."
 
@@ -89,7 +98,10 @@
 `Kecleon`: "I am sorry to disappoint you. We have no plans to stock Perfect Apples."
 
 
-`Partner Sad` 💧
+`Partner`: 💧
+
+
+`Partner Sad`
 
 `Partner Name`: "Oh, OK. Too bad."
 
@@ -102,12 +114,13 @@
 `Marill`: "Azurill, hurry!"
 
 
-⚞
-
 `Azurill`: "Wait for me!"
 
 
-`Kecleon Normal` ❗
+`Kecleon`: ❗
+
+
+`Kecleon Normal`
 
 `Kecleon`: "The Marill and Azurill brothers! Well, hello to you both!"
 
@@ -142,7 +155,10 @@
 `Marill`: "Yes! An item called Water Float!"
 
 
-`Dusknoir Normal` ❗
+`Dusknoir`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "A Water Float? Now that is quite the precious item!"
 
@@ -252,7 +268,10 @@
 `Kecleon`: "To sell such a rare item! I'm afraid such a day will never come."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "To sell...? Oh, no! I just remembered!"
 

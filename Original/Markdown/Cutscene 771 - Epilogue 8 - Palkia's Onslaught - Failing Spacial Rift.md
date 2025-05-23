@@ -20,7 +20,7 @@
   * `Partner Name`: "Hmm... We were a bit careless."
 
 
-  * `Partner Determined`
+  * `Partner Determined` 💦
 
   * `Partner Name`: "We can't stay here, because Palkia could find us."
 

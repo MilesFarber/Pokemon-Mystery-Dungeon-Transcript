@@ -7,7 +7,7 @@
 * * *
 
 
-`Diglett Normal` ❗
+`Diglett Normal`
 
 `Diglett`: "I'm sorry, but I have something else I have to do today."
 
@@ -58,7 +58,7 @@
 
 *If the player chooses "No, please explain...":*
 
-  * `Loudred Angry` 〽
+  * `Loudred Angry` 💢
 
   * `Loudred`: "WHAT?! You need me to explain it again?!"
 
@@ -66,6 +66,9 @@
   * `Loudred Happy` 🔆
 
   * `Loudred`: "All right. I've got a BIG heart. I'll explain as much as you want."
+
+
+  * `Hero`: 💧
 
 
   * * * *

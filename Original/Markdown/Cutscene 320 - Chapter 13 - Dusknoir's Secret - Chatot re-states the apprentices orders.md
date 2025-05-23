@@ -46,9 +46,7 @@
 `Chatot`: "All right, everyone! Let's have another good day of work! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Chatot Normal`

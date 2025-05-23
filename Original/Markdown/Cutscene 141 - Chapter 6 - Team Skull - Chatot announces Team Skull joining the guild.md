@@ -11,7 +11,10 @@
 `Chatot`: "Let me introduce our new allies. ♪"
 
 
-`Loudred Normal` ❓
+`Loudred`: ❓
+
+
+`Loudred Normal`
 
 `Loudred`: "Allies? What, more new apprentices?"
 
@@ -26,7 +29,10 @@
 `Chatot`: "Hey! Over here, please. ♪"
 
 
-`Loudred Normal` 〽
+`Loudred`: 〽
+
+
+`Loudred Normal`
 
 `Loudred`: "Ugh! What stinks?!"
 
@@ -36,12 +42,18 @@
 `Sunflora`: "Eek! It reeks like rotten cheese! Ewwww!"
 
 
-`Bidoof Sigh` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sigh`
 
 `Bidoof`: "Yup yup! That is some kind of foul stench!"
 
 
-`Partner Surprised` 〽
+`Bidoof`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "It-it's them!"
 
@@ -141,7 +153,10 @@
 `Chatot`: "Though it will be only for a short while, I ask everyone to treat our guests with hospitality. ♪"
 
 
-`Loudred Normal` 💧
+`Loudred`: 💧
+
+
+`Loudred Normal`
 
 `Loudred`: "...Doesn't Chatot think something stinks about this? Literally?"
 
@@ -151,7 +166,10 @@
 `Sunflora`: "...Eww. How can the Guildmaster stand this?"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "I sure hope this expedition ends soon! Yup yup!"
 
@@ -161,12 +179,13 @@
 `Chatot`: "All right, everyone. ♪ Let's get down to work. ♪"
 
 
-`Chatot Happy`
-
-`Chatot`: "Everyone: ...Hooray."
+`💬`: "Everyone: ...Hooray."
 
 
-`Chatot Normal` ❗
+`Chatot`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "What's this? Where's your usual spirit?"
 
@@ -181,7 +200,7 @@
 `Loudred`: "This STINKS! How do you expect us to be cheerful when..."
 
 
-`Loudred Normal` 〽
+`Loudred Normal`
 
 `Loudred`: "WH-WHAT?"
 
@@ -196,12 +215,15 @@
 `Wigglytuff`: "YOOOOOOM..."
 
 
-`Chatot Surprised` 〽
+`Dugtrio`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "No! The Guildmaster... His rage is building!"
 
 
-`Chatot Surprised` 💦
+`Chatot Surprised`
 
 `Chatot`: "If the Guildmaster gets angry, it will be horrific!"
 
@@ -216,9 +238,7 @@
 `Chatot`: "All right, everyone. ♪ Let's get down to today's work. ♪"
 
 
-`Chatot Surprised` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Skuntank Normal`
@@ -236,7 +256,10 @@
 `Zubat`: "Heh-heh-heh!"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urk! Something's definitely suspicious about them for sure."
 

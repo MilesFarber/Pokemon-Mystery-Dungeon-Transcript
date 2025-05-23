@@ -54,7 +54,10 @@
 `Loudred`: "KUGOOOOooooaaaaaaahhhh! GUGOOOOOAAAAAAAaaaaaaahhhhhhh!"
 
 
-`Bidoof Sad` 💧
+`Bidoof`: 💧
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Sniff... He's snoring too loud... I can't sleep..."
 
@@ -64,12 +67,18 @@
 `Bidoof`: "I'd like to wake Loudred up... But..."
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "If I did that, he'd be pretty angry, and that's a scary thought... Sniff..."
 
 
-`Bidoof Normal` ⚞
+`Bidoof`: ⚞
+
+
+`Bidoof Normal`
 
 `Bidoof`: "...Speaking of scary!"
 
@@ -94,7 +103,10 @@
 `Bidoof`: "If that was the case, I hope he got away all right..."
 
 
-`Bidoof Surprised` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "That's right! When that Pokémon ran off..."
 

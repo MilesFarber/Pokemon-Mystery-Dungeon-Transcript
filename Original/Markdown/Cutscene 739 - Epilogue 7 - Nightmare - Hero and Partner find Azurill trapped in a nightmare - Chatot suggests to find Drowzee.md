@@ -4,7 +4,7 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Oh, Azurill! Is he all right?"
 
@@ -24,7 +24,10 @@
 `Marill`: "He's been sleeping and sleeping and sleeping... But he won't wake up."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! He won't wake up?"
 
@@ -109,7 +112,10 @@
 `Bidoof`: "Uh... Um... Uh, everyone, can I say something?"
 
 
-`Loudred Normal` ❓
+`Loudred`: ❓
+
+
+`Loudred Normal`
 
 `Loudred`: "What is it, Bidoof?"
 
@@ -129,7 +135,10 @@
 `Bidoof`: "Maybe we can figure out why that little Azurill can't wake up, by golly."
 
 
-`Loudred Normal` ❗
+`Chimecho`: ❗
+
+
+`Loudred Normal`
 
 `Loudred`: "Oh! RIGHT! So we should look into Azurill's dream!"
 
@@ -144,7 +153,10 @@
 `Loudred`: "Look inside a DREAM?!"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Yipes! Gosh, I'm sorry."
 
@@ -154,9 +166,10 @@
 `Chatot`: "Actually...that might be possible."
 
 
-`Chatot Normal` 〽
+`Chimecho`: 〽
 
-`Chatot`: "Everyone: WHAT?!"
+
+`💬`: "Everyone: WHAT?!"
 
 
 `Corphish Normal`
@@ -169,12 +182,18 @@
 `Chatot`: "We find Drowzee. If anyone can do it, Drowzee can."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Drowzee? I think I've heard that before..."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Th-that's it!"
 

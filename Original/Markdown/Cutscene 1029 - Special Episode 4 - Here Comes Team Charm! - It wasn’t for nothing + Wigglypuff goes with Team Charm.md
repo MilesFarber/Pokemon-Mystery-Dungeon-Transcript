@@ -121,7 +121,10 @@
 `Lopunny`: "Hah-hah-hah! Hah-hah-hah!"
 
 
-`Wigglytuff Happy` 💧
+`Wigglytuff`: 💧
+
+
+`Wigglytuff Happy`
 
 `Wigglytuff`: "Um... That's great everyone. ♪"
 
@@ -146,7 +149,10 @@
 `Medicham`: "Got it."
 
 
-`Wigglytuff Normal` ❓
+`Wigglytuff`: ❓
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Huh? What's with everyone?"
 
@@ -261,7 +267,10 @@
 `Lopunny`: "We could give you this. Would you like that? 🤍"
 
 
-`Wigglytuff Surprised` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Surprised`
 
 `Wigglytuff`: "Oooh!"
 
@@ -281,7 +290,10 @@
 `Lopunny`: "I haven't decided if I'm giving it to you yet. ♪"
 
 
-`Medicham Normal` 〽
+`Wigglytuff`: 〽
+
+
+`Medicham Normal`
 
 `Medicham`: "Let's get something straight... We're all pretty fast moving."
 

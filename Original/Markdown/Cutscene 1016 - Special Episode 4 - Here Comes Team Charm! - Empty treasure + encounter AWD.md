@@ -32,7 +32,10 @@
 * * *
 
 
-`Gardevoir Surprised` 〽
+`Gardevoir`: 〽
+
+
+`Gardevoir Surprised`
 
 `Gardevoir`: "Medicham! Lopunny! There's a treasure chest over there!"
 
@@ -181,7 +184,10 @@
 `Medicham`: "It's totally empty! I don't believe this!"
 
 
-`Medicham Stunned` 💦
+`Medicham`: 💦
+
+
+`Medicham Stunned`
 
 `Medicham`: "Maybe I'm simply exhausted?"
 
@@ -206,17 +212,24 @@
 `Gardevoir`: "But... Why not?..."
 
 
-❗
-
 `💬`: "Y-YOU!!"
 
 
-`Medicham Normal` 〽
+`Medicham`: ❗
+
+
+`Medicham`: 〽
+
+
+`Medicham Normal`
 
 `Medicham`: "Team AWD?!"
 
 
-`Drapion Surprised` 〽
+`Drapion`: 〽
+
+
+`Drapion Surprised`
 
 `Drapion`: "Aaaah! Th-the treasure!"
 
@@ -231,7 +244,10 @@
 `Weavile`: "Humph! Looks like we were too late."
 
 
-`Medicham Surprised` 〽
+`Medicham`: 〽
+
+
+`Medicham Surprised`
 
 `Medicham`: "N-no! Hang on!"
 
@@ -370,9 +386,7 @@
 `Weavile`: "Arbok! Drapion! Let's go!"
 
 
-`Weavile Normal` ◀▼▶
-
-`Weavile`: "Arbok & Drapion: YEAH!"
+`💬`: "Arbok & Drapion: YEAH!"
 
 
 * * *

@@ -21,7 +21,10 @@
 `Grovyle`: "There's a mysterious feeling in the air... Is that..."
 
 
-`Dusknoir Normal` ❗
+`Dusknoir`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Egad! Grovyle, look!"
 
@@ -31,7 +34,10 @@
 `Dusknoir`: "Over there... Just past those four huge pillars... Can you see anything?"
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Yes! I can!"
 

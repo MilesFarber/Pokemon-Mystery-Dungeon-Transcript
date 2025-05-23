@@ -57,7 +57,10 @@
 `Sunflora`: "I have... I have proof that you're not invincible!"
 
 
-`Haunter Normal` ❗
+`Haunter`: ❗
+
+
+`Haunter Normal`
 
 `Haunter`: "What?!"
 
@@ -77,7 +80,10 @@
 `Sunflora`: "It wasn't invincibility or anything else! Was it, guys?!"
 
 
-`Haunter Surprised` 〽
+`Haunter`: 〽
+
+
+`Haunter Surprised`
 
 `Haunter`: "G-guys... What do you mean?!"
 
@@ -110,12 +116,18 @@
 `Haunter`: "Uwah!"
 
 
-`Sunflora Normal` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Normal`
 
 `Sunflora`: "I knew it!"
 
 
-`Haunter Angry` 💦
+`Haunter`: 💦
+
+
+`Haunter Angry`
 
 `Haunter`: "Y... You!"
 

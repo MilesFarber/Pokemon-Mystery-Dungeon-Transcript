@@ -66,7 +66,10 @@
 `Sunflora`: "Oh my gosh!"
 
 
-`Sunflora Surprised` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "Wh...what?!"
 

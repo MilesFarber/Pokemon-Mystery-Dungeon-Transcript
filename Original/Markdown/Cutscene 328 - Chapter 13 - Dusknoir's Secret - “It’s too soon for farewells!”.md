@@ -11,7 +11,10 @@
 `Corphish`: "Hey, hey! I don't see the great Dusknoir around yet."
 
 
-`Loudred Normal` ❗
+`Loudred`: ❗
+
+
+`Loudred Normal`
 
 `Loudred`: "What's THAT?!"
 
@@ -21,7 +24,10 @@
 `Magnezone`: "ZZZT! That is a dimensional hole! ZZZT!"
 
 
-`Sunflora Normal` ❓
+`Sunflora`: ❓
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Dimensional hole? Oh, what Magnemite was trying to explain earlier..."
 
@@ -36,7 +42,7 @@
 `Bidoof`: "So stepping inside this here thing will take you to the future?"
 
 
-`Magnezone Normal` 〽
+`Magnezone Normal`
 
 `Magnezone`: "ZZZT! Watch out! ZZZT!"
 
@@ -61,7 +67,13 @@
 `Bidoof`: "Oof!"
 
 
-`Partner Normal` ❗
+`Bidoof`: 💦
+
+
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! Uxie! Mesprit! And Azelf too!"
 
@@ -116,7 +128,10 @@
 `Uxie`: "Dusknoir should be along shortly."
 
 
-`Ursaring Normal` ❗
+`Ursaring`: ❗
+
+
+`Ursaring Normal`
 
 `Ursaring`: "Oh! Who's that?!"
 
@@ -199,6 +214,9 @@
 `Dusknoir Normal`
 
 `Dusknoir`: "His capture should result in lasting peace for your world."
+
+
+`Grovyle`: ❗
 
 
 `Grovyle Stunned` 💦
@@ -316,17 +334,23 @@
 `Dusknoir`: "Now...I'm afraid the time has come."
 
 
-`Dusknoir Normal` 〽
+`Dusknoir Normal`
 
 `Dusknoir`: "Everyone! Though it pains me..."
 
 
-`Sunflora Teary-Eyed` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Teary-Eyed`
 
 `Sunflora`: "Ooogie...I hate sad good-byes!"
 
 
-`Diglett Teary-Eyed` 💦
+`Diglett`: 💦
+
+
+`Diglett Teary-Eyed`
 
 `Diglett`: "I h-h-hope we see you again..."
 
@@ -336,12 +360,15 @@
 `Chatot`: "Waaah!"
 
 
-`Chatot Special2`
+`Chatot Special2` 💦
 
 `Chatot`: "Dusknoir...sir...waaah!"
 
 
-`Dusknoir Normal` ❗
+`Dusknoir`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Oh, yes."
 
@@ -391,7 +418,10 @@
 `Partner Name`: "Pardon?!"
 
 
-`Dusknoir Normal` 〽
+`Partner`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "It's too soon for farewells!"
 
@@ -401,7 +431,10 @@
 `Partner Name`: "Waah!"
 
 
-`Dusknoir Normal` 〽
+`Magnezone`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "You two...are coming with me!"
 
@@ -411,7 +444,10 @@
 `Partner Name`: "Waaah!"
 
 
-`Bidoof Normal` 〽
+`Magnezone`: ❗
+
+
+`Bidoof Normal`
 
 `Bidoof`: "By gosh!"
 

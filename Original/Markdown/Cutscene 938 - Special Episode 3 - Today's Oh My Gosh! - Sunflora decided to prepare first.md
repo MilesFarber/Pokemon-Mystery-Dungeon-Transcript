@@ -6,7 +6,10 @@
 `Sunflora`: "Phew..."
 
 
-`Sunflora Sigh` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Sigh`
 
 `Sunflora`: "I was nervous, having been called in out of the blue like that!"
 

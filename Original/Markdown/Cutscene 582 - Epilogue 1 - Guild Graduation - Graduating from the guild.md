@@ -11,23 +11,30 @@
 
 🎊
 
-🎊
 
 🎊
 
+
 🎊
 
-`Wigglytuff Sigh`
+
+🎊
+
+
+`Wigglytuff Sigh` ◀▼▶
 
 `Wigglytuff`: "Congratulations! You two have passed the guild's graduation exam! ♪"
 
 
-`Wigglytuff Sigh`
+`Wigglytuff Sigh` ◀▼▶
 
 `Wigglytuff`: "You did it! ♪"
 
 
-`Wigglytuff Normal` ❓
+`Wigglytuff`: ❓
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "...Oh? Not celebrating?"
 
@@ -37,7 +44,10 @@
 `Wigglytuff`: "Are you maybe not happy?"
 
 
-`Partner Worried` 💦
+`Partner`: 💦
+
+
+`Partner Worried`
 
 `Partner Name`: "Well, yes, I'm happy... But it hasn't really sunk in..."
 
@@ -47,7 +57,10 @@
 `Partner Name`: "It's not like we did anything that special..."
 
 
-`Wigglytuff Normal` 〽
+`Wigglytuff`: 〽
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "That's not true at all! Don't you understand that what you two did was incredible?"
 
@@ -67,7 +80,10 @@
 `Wigglytuff`: "You defeated that horrifying grand master of all things bad, didn't you?!"
 
 
-`Partner Worried` 💦
+`Partner`: 💦
+
+
+`Partner Worried`
 
 `Partner Name`: "Urk! But that's what I don't understand."
 
@@ -92,7 +108,10 @@
 `Partner Name`: "That bad grand master... Wigglytuff, wasn't that you?"
 
 
-`Wigglytuff Happy` 〽
+`Wigglytuff`: 〽
+
+
+`Wigglytuff Happy`
 
 `Wigglytuff`: "Huh?"
 
@@ -102,7 +121,7 @@
 `Wigglytuff`: "Uh? I... I don't know?"
 
 
-`Wigglytuff Normal`
+`Wigglytuff Normal` 💦
 
 `Wigglytuff`: "I don't know what you're talking about. G-grand master of all things bad?"
 
@@ -112,12 +131,15 @@
 `Chatot`: "Me too!"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 💦
 
 `Chatot`: "I know nothing! The grand master's minions? What are they?"
 
 
-`Corphish Normal` 💧
+`Corphish`: 💧
+
+
+`Corphish Normal`
 
 `Corphish`: "Hey, hey! Me too!"
 
@@ -127,12 +149,13 @@
 `Sunflora`: "Eek! I don't know any minions!"
 
 
-`Sunflora Normal` 🔆
-
-`Sunflora`: "Everyone: HA HA HA!"
+`💬`: "Everyone: HA HA HA!"
 
 
-`Partner Sad` 💧
+`Partner`: 💧
+
+
+`Partner Sad`
 
 `Partner Name`: "Everyone... What's going on...?"
 
@@ -152,7 +175,10 @@
 `Chatot`: "You'll be free to operate as an exploration team totally on your own! ♪"
 
 
-`Partner Inspired` ❗
+`Partner`: ❗
+
+
+`Partner Inspired`
 
 `Partner Name`: "Oh! Right!"
 
@@ -182,7 +208,10 @@
 `Chatot`: "As before, you will still have to give most of that money to the guild."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! Wh-why...?"
 
@@ -202,7 +231,10 @@
 `Chatot`: "So you'll need to accept that as part of being an exploration team! ♪"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urk! But that's like...as if nothing's changed at all."
 
@@ -225,6 +257,9 @@
 `Loudred Sigh` 💦
 
 `Loudred`: "HAW-HAW-HO-HO-HAW!"
+
+
+`Loudred`: 💦
 
 
 `Wigglytuff Sigh`
@@ -257,7 +292,10 @@
 `Corphish`: "Hey, hey, hey!"
 
 
-`Bidoof Teary-Eyed` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Teary-Eyed`
 
 `Bidoof`: "Sniff...! I'm so happy for you all... I'm... I'm..."
 
@@ -279,13 +317,20 @@
 
 🎊
 
-🎊
 
 🎊
 
+
 🎊
 
-`Partner Teary-Eyed` 💦
+
+🎊
+
+
+`Partner`: 💦
+
+
+`Partner Teary-Eyed`
 
 `Partner Name`: "Oh... E-e-everyone... Thank you, everyone!"
 

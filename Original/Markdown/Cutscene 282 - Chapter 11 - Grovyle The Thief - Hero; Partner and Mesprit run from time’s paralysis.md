@@ -3,9 +3,14 @@
 
 〽
 
+
 〽
 
-`Partner Surprised` 〽
+
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Waah! What's happening?"
 
@@ -27,9 +32,11 @@
 
 〽
 
+
 〽
 
-`Partner Surprised` 〽
+
+`Partner Surprised`
 
 `Partner Name`: "Excuse me?!"
 

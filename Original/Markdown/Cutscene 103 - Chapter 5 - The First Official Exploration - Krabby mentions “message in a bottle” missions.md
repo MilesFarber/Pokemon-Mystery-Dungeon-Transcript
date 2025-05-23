@@ -1,7 +1,10 @@
 * * *
 
 
-`Krabby Normal` ❗
+`Krabby`: ❗
+
+
+`Krabby Normal`
 
 `Krabby`: "Ahoy! Are you headed to the beach?"
 

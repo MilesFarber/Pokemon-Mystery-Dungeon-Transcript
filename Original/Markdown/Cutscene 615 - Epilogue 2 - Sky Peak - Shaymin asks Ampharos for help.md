@@ -14,7 +14,10 @@
 `Shaymin`: "Ampharos!"
 
 
-`Ampharos Normal` ⚞
+`Ampharos`: ⚞
+
+
+`Ampharos Normal`
 
 `Ampharos`: "Oh! It's Shaymin from the village! I was wondering who it was."
 
@@ -34,7 +37,13 @@
 `Shaymin`: "But we don't have time to chat. We're in a hurry!"
 
 
-`Ampharos Normal` ❓
+`Shaymin`: 💦
+
+
+`Ampharos`: ❓
+
+
+`Ampharos Normal`
 
 `Ampharos`: "Indeed? Did something happen?"
 
@@ -44,7 +53,10 @@
 `Shaymin`: "At the 7th Station Clearing!"
 
 
-`Ampharos Normal` ❗
+`Ampharos`: ❗
+
+
+`Ampharos Normal`
 
 `Ampharos`: "Ah... Here I thought I was going to have my first guests in a long time, but it sounds like that will have to wait."
 

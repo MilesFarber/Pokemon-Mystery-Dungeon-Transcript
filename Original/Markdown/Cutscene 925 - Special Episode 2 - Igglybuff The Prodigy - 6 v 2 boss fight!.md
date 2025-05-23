@@ -54,7 +54,10 @@
 `Igglybuff`: "Hey, Master."
 
 
-`Armaldo Angry` 💦
+`Armaldo`: 💦
+
+
+`Armaldo Angry`
 
 `Armaldo`: "Wh-what is it? Can it wait?!"
 

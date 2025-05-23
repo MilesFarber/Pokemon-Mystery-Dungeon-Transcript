@@ -9,7 +9,9 @@
 
 ❗
 
+
 〽
+
 
 `💬`: "Tee-hee..."
 
@@ -22,7 +24,8 @@
 
 〽
 
-`Froslass Normal` 〽
+
+`Froslass Normal`
 
 `Froslass`: "Tee-hee... Welcome..."
 

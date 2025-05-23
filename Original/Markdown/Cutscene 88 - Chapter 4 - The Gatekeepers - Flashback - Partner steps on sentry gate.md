@@ -1,8 +1,6 @@
 * * *
 
 
-〽
-
 `💬`: "Pokémon detected! Pokémon detected!"
 
 

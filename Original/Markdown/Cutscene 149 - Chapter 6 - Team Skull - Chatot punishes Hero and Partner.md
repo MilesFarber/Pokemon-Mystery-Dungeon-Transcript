@@ -41,7 +41,7 @@
 `Chatot`: "For the time being, you'll go without dinner tonight!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What?! B-but..."
 
@@ -51,7 +51,7 @@
 `Chatot`: "You failed to complete an important job."
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "Your punishment could be much more severe!"
 
@@ -91,22 +91,22 @@
 `Chatot`: "I will report this to the Guildmaster after dinner."
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "You two will come with me when I do so."
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "If I had to face the Guildmaster's wrath all by myself, well, that would hardly be fair."
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "Therefore, you two will come with me!"
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "That's an order!"
 

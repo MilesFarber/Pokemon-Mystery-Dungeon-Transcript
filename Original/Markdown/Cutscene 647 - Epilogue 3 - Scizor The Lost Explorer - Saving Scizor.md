@@ -11,12 +11,16 @@
 
 ❗
 
-`Scizor Normal` 〽
+
+`Scizor Normal`
 
 `Scizor`: "Ur... Urf..."
 
 
-`Scizor Normal` ⚟
+`Scizor`: ⚟
+
+
+`Scizor Normal`
 
 `Scizor`: "Wh-where...?"
 
@@ -26,7 +30,10 @@
 `Scizor`: "Ah, yes. I recall now. I had been exploring when I was set upon by that beastly Froslass..."
 
 
-`Scizor Normal` ❗
+`Scizor`: ❗
+
+
+`Scizor Normal`
 
 `Scizor`: "Oh!"
 

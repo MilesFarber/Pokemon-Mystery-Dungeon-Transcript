@@ -20,7 +20,10 @@
 `Teddiursa`: "Oh! `Partner Name`! `Hero Name`!"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Hi! Teddiursa and Ursaring!"
 
@@ -45,7 +48,10 @@
 `Ursaring`: "So, how's it going? Did you see your grand master of all things bad?"
 
 
-`Partner Worried` 💦
+`Partner`: 💦
+
+
+`Partner Worried`
 
 `Partner Name`: "No. Nothing like that."
 
@@ -65,7 +71,10 @@
 `Teddiursa`: "Are you in search of that grand master?"
 
 
-`Partner Normal` 💦
+`Partner`: 💦
+
+
+`Partner Normal`
 
 `Partner Name`: "No, we're not."
 
@@ -75,7 +84,10 @@
 `Partner Name`: "We're trying to find Luminous Spring."
 
 
-`Teddiursa Normal` ❗
+`Teddiursa`: ❗
+
+
+`Teddiursa Normal`
 
 `Teddiursa`: "Oh, Luminous Spring?"
 

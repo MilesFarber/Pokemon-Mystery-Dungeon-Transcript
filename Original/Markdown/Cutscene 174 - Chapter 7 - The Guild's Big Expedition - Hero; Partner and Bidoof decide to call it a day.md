@@ -11,9 +11,15 @@
 `Partner Name`: "If we cross this mountain, we'll reach the base camp."
 
 
-`Bidoof Sigh` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Sigh`
 
 `Bidoof`: "Whoops... That was my belly growling."
+
+
+`Partner`: ❗
 
 
 `Partner Happy` 🔆

@@ -11,7 +11,10 @@
 * * *
 
 
-`Sunflora Pain` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Pain`
 
 `Sunflora`: "Ooogh... I couldn't do it..."
 
@@ -21,7 +24,10 @@
 `Sunflora`: "Wh-what about Loudred?"
 
 
-`Sunflora Normal` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Don't tell me..."
 
@@ -31,7 +37,10 @@
 `Sunflora`: "Don't tell me he's still fighting those Haunter..."
 
 
-`Sunflora Normal` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Normal`
 
 `Sunflora`: "No time to waste! I've got to go help right away!"
 

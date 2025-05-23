@@ -11,7 +11,10 @@
 `Lapras`: "and Grovyle...correct?"
 
 
-`Partner Surprised` ❗
+`Grovyle`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "You know our names?"
 
@@ -51,7 +54,10 @@
 `Lapras`: "I'm Lapras. I am the guide to the Hidden Land."
 
 
-`Partner Surprised` ❗
+`Grovyle`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "You're what?! You can take us to the Hidden Land?!"
 

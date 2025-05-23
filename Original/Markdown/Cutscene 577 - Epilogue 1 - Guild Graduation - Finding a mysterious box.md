@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Hi! Teddiursa and Ursaring!"
 
@@ -16,7 +19,10 @@
 `Ursaring`: "What happened to you two? I thought you two were tagging along right behind us..."
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Uh... There was just...um... something came up."
 

@@ -26,7 +26,7 @@
 `Spinda`: "That sounds like enough to catch the interest of any explorer!"
 
 
-`Spinda Sigh`
+`Spinda Sigh` ◀▼▶
 
 `Spinda`: "Let's go and see! See for ourselves!"
 
@@ -46,9 +46,7 @@
 `Spinda`: "And finally, a couple of days ago...we succeeded!"
 
 
-`Spinda Shouting` ◀▼▶
-
-`Spinda`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Spinda Shouting` ◀▼▶
@@ -66,9 +64,7 @@
 `Spinda`: "We also made a discovery! At the base of the mountain, we found a small, hidden village!"
 
 
-`Spinda Shouting` ◀▼▶
-
-`Spinda`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Mr. Mime Normal`
@@ -86,7 +82,10 @@
 `Spinda`: "Instead, some very rare Pokémon known as Shaymin live there."
 
 
-`Politoed Normal` ❓
+`Politoed`: ❓
+
+
+`Politoed Normal`
 
 `Politoed`: "Shaymin?"
 
@@ -146,9 +145,7 @@
 `Spinda`: "Furthermore, legend says that there is an incredible treasure hidden there that rivals all other treasure!"
 
 
-`Spinda Sigh` ◀▼▶
-
-`Spinda`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Octillery Normal` ◀▼▶
@@ -195,9 +192,7 @@
 `Spinda`: "So, everyone, let's get moving, with hopes and dreams on our minds and smiles on our faces!"
 
 
-`Spinda Joyous` ◀▼▶
-
-`Spinda`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Partner Inspired`

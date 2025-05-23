@@ -9,12 +9,18 @@
 `Gligar`: "St..."
 
 
-`Bagon Surprised` 〽
+`Bagon`: 〽
+
+
+`Bagon Surprised`
 
 `Bagon`: "Strong..."
 
 
-`Snover Surprised` 💦
+`Snover`: 💦
+
+
+`Snover Surprised`
 
 `Snover`: "Eeee... Eeeeeeeeek!"
 
@@ -29,7 +35,10 @@
 `Chimecho`: "Are you all right, Bidoof?"
 
 
-`Bidoof Teary-Eyed` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Teary-Eyed`
 
 `Bidoof`: "Sniff... Thanks, everyone."
 
@@ -129,17 +138,20 @@
 `Corphish`: "You really were worried about him. Hey, hey!"
 
 
+`Chatot`: 💦
+
+
 `Chatot Angry` 💢
 
 `Chatot`: "B-be quiet!!"
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "As for everyone coming along... At first, it was going to be myself and the Guildmaster coming to your rescue, Bidoof..."
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "But in the end, everyone wanted to come along! HUMPH!"
 
@@ -159,7 +171,10 @@
 `Sunflora`: "We couldn't ignore it."
 
 
-`Wigglytuff Normal` 💧
+`Chatot`: 💧
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "We've always been strict teachers in your training..."
 
@@ -174,7 +189,10 @@
 `Wigglytuff`: "So...Bidoof, we're just glad you're safe! ♪"
 
 
-`Bidoof Teary-Eyed` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Teary-Eyed`
 
 `Bidoof`: "Sniff..."
 
@@ -284,7 +302,10 @@
 `Corphish`: "They shouldn't have just given up and gone home! Hey, hey!"
 
 
-`Bidoof Normal` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Huh? But there's nothing here, right?"
 
@@ -342,12 +363,12 @@
 `Bidoof`: "Waaah! Th-the wall collapsed... There's a huge opening there!"
 
 
-`Bidoof Surprised`
+`Bidoof Surprised` 〽
 
 `Bidoof`: "Th-there's...more to this cave?"
 
 
-`Loudred Happy` ◀▼▶
+`Loudred Happy`
 
 `Loudred`: "All RIGHT! Let's GO!"
 
@@ -377,9 +398,7 @@
 `Wigglytuff`: "It's too bad... But not everyone can go ahead."
 
 
-`Wigglytuff Normal` 〽
-
-`Wigglytuff`: "Everyone: WHAAAAT?!"
+`💬`: "Everyone: WHAAAAT?!"
 
 
 `Loudred Normal`
@@ -432,7 +451,10 @@
 `Wigglytuff`: "Use your own strength... And do your best to have a successful exploration!"
 
 
-`Bidoof Teary-Eyed` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Teary-Eyed`
 
 `Bidoof`: "Sniff... Guildmaster... Thank you so much, yup yup..."
 
@@ -452,7 +474,10 @@
 `Croagunk`: "Do your best! Meh-heh-heh!"
 
 
-`Bidoof Teary-Eyed` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Teary-Eyed`
 
 `Bidoof`: "Sniff... Everyone... Thank you all so much..."
 
@@ -512,7 +537,10 @@
 `Loudred`: "SO... You COULD have made a WISH... For all the PERFECT APPLES you CAN eat! HA HA HA!"
 
 
-`Wigglytuff Happy` 〽
+`Wigglytuff`: 〽
+
+
+`Wigglytuff Happy`
 
 `Wigglytuff`: "Oh..."
 
@@ -547,12 +575,15 @@
 `Chatot`: "...Me! And don't you forget it! ♪"
 
 
+`Wigglytuff`: 💧
+
+
 `Wigglytuff Normal`
 
 `Wigglytuff`: "...All right, I'm going."
 
 
-`Diglett Normal` 〽
+`Diglett Normal`
 
 `Diglett`: "Hey!"
 

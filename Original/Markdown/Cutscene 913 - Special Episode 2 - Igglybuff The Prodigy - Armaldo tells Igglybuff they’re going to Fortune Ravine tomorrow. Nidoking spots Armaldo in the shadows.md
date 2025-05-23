@@ -16,7 +16,10 @@
 `Igglybuff`: "Where are we going to explore tomorrow?"
 
 
-`Armaldo Normal` 💦
+`Armaldo`: 💦
+
+
+`Armaldo Normal`
 
 `Armaldo`: "Wh-what? We just finished today's exploration, and already you're talking about tomorrow's?"
 
@@ -51,7 +54,7 @@
 `Igglybuff`: "A-amazing! I can't wait! ♪"
 
 
-`Igglybuff Stunned`
+`Igglybuff Stunned` ◀▼▶
 
 `Igglybuff`: "Let's go tomorrow! Definitely. ♪"
 
@@ -101,7 +104,10 @@
 `Armaldo`: "Cheerful is good, but..."
 
 
-`Armaldo Pain` 💧
+`Armaldo`: 💧
+
+
+`Armaldo Pain`
 
 `Armaldo`: "He's so cheerful that it tires me right out. Phew..."
 

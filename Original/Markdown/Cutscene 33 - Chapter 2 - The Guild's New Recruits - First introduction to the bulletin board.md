@@ -141,7 +141,10 @@
 `Chatot`: "So...let's look for a job that you should perform! ♪"
 
 
-`Chatot Normal` ❗
+`Chatot`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "Ah, yes. ♪ Maybe this will do?"
 
@@ -228,7 +231,10 @@
 `Chatot`: "If you've understood all that, I suggest you get on with the job! ♪"
 
 
-`Partner Pain` 💧
+`Partner`: 💧
+
+
+`Partner Pain`
 
 `Partner Name`: "Hmm..."
 

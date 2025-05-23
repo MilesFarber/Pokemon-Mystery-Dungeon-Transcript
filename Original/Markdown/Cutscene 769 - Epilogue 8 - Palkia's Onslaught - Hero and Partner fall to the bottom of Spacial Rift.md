@@ -14,7 +14,10 @@
 `Partner Name`: "Owowow..."
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Ugh... Are you OK, `Hero Name`?"
 
@@ -24,7 +27,10 @@
 `Partner Name`: "It looks like we landed somewhere else..."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "But this is all such a shock! Who knew things would turn out this way?"
 

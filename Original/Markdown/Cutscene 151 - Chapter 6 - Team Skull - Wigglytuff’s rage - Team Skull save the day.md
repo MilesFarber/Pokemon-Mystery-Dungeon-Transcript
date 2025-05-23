@@ -1,17 +1,17 @@
 * * *
 
 
-`Wigglytuff Happy` ❗
+`Wigglytuff Happy` 🔆
 
 `Wigglytuff`: "Hiya!"
 
 
-`Wigglytuff Happy`
+`Wigglytuff Happy` 🔆
 
 `Wigglytuff`: "You brought me some Perfect Apples, didn't you?"
 
 
-`Wigglytuff Happy`
+`Wigglytuff Happy` 🔆
 
 `Wigglytuff`: "Thank you!"
 
@@ -66,7 +66,13 @@
 `Wigglytuff`: "Where are the other Perfect Apples?"
 
 
-`Chatot Pain` 💦
+`Chatot`: 〽
+
+
+`Chatot`: 💦
+
+
+`Chatot Pain`
 
 `Chatot`: "As I'd explained... Um... They failed to get them, so, uh..."
 
@@ -81,7 +87,10 @@
 `Chatot`: "The number of Perfect Apples harvested...would be, uh...zero."
 
 
-`Wigglytuff Normal` 〽
+`Wigglytuff`: 〽
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "...Oh."
 
@@ -111,17 +120,20 @@
 `Chatot`: "Hee! ♪ Hee! ♪ Hee-heeee! Hee-heeee! Hee-heeee! Hee-heeee! ♪ Hee-heeee! Hee-heeee! Hee-heeee! ♪"
 
 
-`Chatot Sigh`
+`Chatot Sigh` 🔆
 
 `Chatot`: "Hee-heeee! Hee-heeee! ♪ Hee-heeee... Hee..."
 
 
-`Chatot Surprised` ⚟
+`Chatot`: ⚟
+
+
+`Chatot Surprised`
 
 `Chatot`: "Um, Guildmaster? Guildmaster?"
 
 
-`Wigglytuff Sad` 💦
+`Wigglytuff Sad`
 
 `Wigglytuff`: "Sniffle..."
 
@@ -136,7 +148,10 @@
 `Wigglytuff`: "Sob..."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "(Whoa! He's going to cry!)"
 
@@ -146,7 +161,10 @@
 `Wigglytuff`: "Sniffle-snivel-snivel-snivel..."
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "Waaaah! N-no!"
 
@@ -210,12 +228,15 @@
 * * *
 
 
-`Wigglytuff Teary-Eyed` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Teary-Eyed`
 
 `Wigglytuff`: "Huh?"
 
 
-`Skuntank Normal` 〽
+`Skuntank Normal`
 
 `Skuntank`: "Here you go. A genuine Perfect Apple."
 
@@ -270,12 +291,12 @@
 `Chatot`: "Ah! I see that you're the most admirable of Pokémon. ♪"
 
 
-`Chatot Happy`
+`Chatot Happy` 🔆
 
 `Chatot`: "To be able to embark on an expedition with someone so noble as you..."
 
 
-`Chatot Happy`
+`Chatot Happy` 🔆
 
 `Chatot`: "It will be truly inspiring!"
 

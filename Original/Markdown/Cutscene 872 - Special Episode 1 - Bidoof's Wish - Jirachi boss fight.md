@@ -17,7 +17,10 @@
 `Jirachi`: "I'm Jirachi. Who are you? Zzzz... Snorf..."
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "I'm Bidoof. (That's what I've been telling you since the beginning...)"
 
@@ -32,7 +35,10 @@
 `Jirachi`: "I tend to act strangely when I sleep and cause trouble all around me, so I apologize again... Zzzz... Snorf..."
 
 
-`Bidoof Special2` 💧
+`Bidoof`: 💧
+
+
+`Bidoof Special2`
 
 `Bidoof`: "Ugh... (I thought this before, yup yup...)"
 

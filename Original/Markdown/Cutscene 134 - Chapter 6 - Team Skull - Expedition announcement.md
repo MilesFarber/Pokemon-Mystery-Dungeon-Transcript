@@ -24,7 +24,7 @@
 `Chatot`: "And so, our guild is planning to mount an expedition for the first time in a while. ♪"
 
 
-`Bidoof Normal` ◀▼▶
+`Bidoof Normal`
 
 `Bidoof`: "An expedition, you say? Yes, please! Yes sirree!"
 
@@ -84,9 +84,7 @@
 `Chatot`: "All right, everyone. ♪ It's back to work as usual. ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Chatot Normal`

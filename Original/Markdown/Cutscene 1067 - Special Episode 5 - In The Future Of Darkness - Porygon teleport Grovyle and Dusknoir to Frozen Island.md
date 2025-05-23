@@ -6,9 +6,12 @@
 * * *
 
 
-`Porygon Surprised` 💦
+`Porygon Surprised` 〽
 
 `Porygon`: "Waah!"
+
+
+`Porygon`: 〽
 
 
 `Porygon Surprised`
@@ -16,7 +19,10 @@
 `Porygon`: "M...Master Dusknoir!"
 
 
-`Dusknoir Normal` 💦
+`Porygon`: 💦
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "It's been a while."
 
@@ -31,7 +37,10 @@
 `Dusknoir`: "I bet you can guess at what I am going to request?"
 
 
-`Porygon Pain` 💦
+`Porygon`: 💦
+
+
+`Porygon Pain`
 
 `Porygon`: "Th-that's...difficult. We're being held back by Sableye..."
 

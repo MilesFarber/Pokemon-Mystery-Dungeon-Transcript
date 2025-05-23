@@ -26,7 +26,10 @@
 `Celebi`: "It's hopeless..."
 
 
-`Grovyle Normal` ❗
+`Sableye`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "What's wrong, Celebi?"
 
@@ -36,7 +39,10 @@
 `Celebi`: "At the pinnacle of this mountain, there's a Passage of Time."
 
 
-`Celebi Normal` 〽
+`Sableye`: 〽
+
+
+`Celebi Normal`
 
 `Celebi`: "You know what's strange!?"
 
@@ -156,7 +162,10 @@
 `Sableye`: "Grovyle! Celebi too!"
 
 
-`Dusknoir Normal` ❗
+`Celebi`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "What is it?"
 
@@ -191,17 +200,26 @@
 `Grovyle`: "(Just a little more.)"
 
 
-`Grovyle Normal` ⚟
+`Grovyle`: ⚟
+
+
+`Grovyle Normal`
 
 `Grovyle`: "...Huh? What was that?"
 
 
-`Grovyle Surprised` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "D-don't...tell me... (Don't tell me this is...!)"
 
 
-`Celebi Normal` ❓
+`Celebi`: ❓
+
+
+`Celebi Normal`
 
 `Celebi`: "...Huh?"
 

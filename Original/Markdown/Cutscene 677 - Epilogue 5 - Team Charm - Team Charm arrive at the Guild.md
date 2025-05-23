@@ -4,7 +4,10 @@
 * * *
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh? What's going on? What's everyone doing here?"
 
@@ -29,7 +32,10 @@
 `Partner Name`: "Say, Chatot. Who are those Pokémon?"
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "Huh?! There you go sticking your foot in your mouth again!"
 
@@ -84,7 +90,10 @@
 `Wigglytuff`: "Hiya!"
 
 
-`Lopunny Happy` ❗
+`Loudred`: ❗
+
+
+`Lopunny Happy`
 
 `Lopunny`: "Oh! Wigglytuff, darling! It's been a long time, sweetie!"
 
@@ -109,12 +118,18 @@
 `Wigglytuff`: "Yup. Long time no see! ♪ Have you all been well?"
 
 
-`Loudred Normal` 💧
+`Loudred`: 💧
+
+
+`Loudred Normal`
 
 `Loudred`: "...Long time...? You mean..."
 
 
-`Sunflora Normal` ❓
+`Sunflora`: ❓
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Guildmaster... Are you already acquainted with Team Charm?"
 
@@ -154,7 +169,7 @@
 `Chatot`: "Whaaaat?!"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 〽
 
 `Chatot`: "The Guildmaster... And Team Charm...?"
 
@@ -189,7 +204,7 @@
 `Medicham`: "There's more. It's said that the cave holds a vast trove of treasure."
 
 
-`Loudred Normal` 〽
+`Loudred Normal`
 
 `Loudred`: "A vast trove of..."
 
@@ -204,7 +219,10 @@
 `Lopunny`: "Say, Wigglytuff, darling... That key we found then... You've still got it, haven't you?"
 
 
-`Wigglytuff Normal` ❓
+`Wigglytuff`: ❓
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Key? Um... What kind of key?"
 
@@ -219,7 +237,10 @@
 `Medicham`: "Hey! We went through a lot to get that key! Are you saying you've lost it?"
 
 
-`Gardevoir Normal` 💧
+`Gardevoir`: 💧
+
+
+`Gardevoir Normal`
 
 `Gardevoir`: "...That's typical for Wigglytuff. Some things haven't changed at all, it seems."
 
@@ -244,7 +265,10 @@
 `Lopunny`: "It's your favorite! A Perfect Apple."
 
 
-`Wigglytuff Happy` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Happy`
 
 `Wigglytuff`: "Wow! A Perfect Apple! This is for me?"
 
@@ -254,7 +278,7 @@
 `Wigglytuff`: "Yay! Thank you!"
 
 
-`Gardevoir Normal` 🍎
+`Gardevoir Normal`
 
 `Gardevoir`: "So...about that key..."
 
@@ -274,7 +298,7 @@
 `Wigglytuff`: "YOOM...TAH!"
 
 
-`Wigglytuff Normal` 〽
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Here you go! ♪"
 
@@ -289,7 +313,7 @@
 `Lopunny`: "Thank you, Wigglytuff!"
 
 
-`Lopunny Normal` 🍎
+`Lopunny Normal`
 
 `Lopunny`: "Say, why don't you join us? It will be like old times."
 
@@ -299,7 +323,10 @@
 `Wigglytuff`: "Yay! A Perfect Apple! ♪ Thank you!"
 
 
-`Gardevoir Normal` 💧
+`Gardevoir`: 💧
+
+
+`Gardevoir Normal`
 
 `Gardevoir`: "...You really haven't changed..."
 
@@ -319,7 +346,10 @@
 `Partner Name`: "Uh... Excuse me!"
 
 
-`Lopunny Normal` ❓
+`Lopunny`: ❓
+
+
+`Lopunny Normal`
 
 `Lopunny`: "Yes?"
 
@@ -374,9 +404,7 @@
   * `Partner Name`: "Please let us go exploring with you!"
 
 
-  * `Partner Normal` ◀▼▶
-
-  * `Partner Name`: "Everyone: PLEASE?"
+  * `💬`: "Everyone: PLEASE?"
 
 
   * `Lopunny Happy` 🔆
@@ -407,7 +435,7 @@
   * `Lopunny`: "The cave is located southeast of here."
 
 
-  * `Partner Happy` ◀▼▶
+  * `Partner Happy`
 
   * `Partner Name`: "This will be great, `Hero Name`!"
 
@@ -434,7 +462,10 @@
   * *Loop forever:*
 
 
-  *   * `Partner Surprised` 〽
+  *   * `Partner`: 〽
+
+
+  *   * `Partner Surprised`
 
   *   * `Partner Name`: "What? Why? We may be able to discover incredible treasure!"
 

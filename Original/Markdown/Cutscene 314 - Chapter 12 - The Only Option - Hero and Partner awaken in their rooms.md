@@ -21,12 +21,18 @@
 `Chimecho`: "You were both hurt. You've been sleeping all this time."
 
 
+`Partner`: ❗
+
+
 `Partner Surprised` 💦
 
 `Partner Name`: "Are you all right, `Hero Name`?"
 
 
-`Partner Sigh` 💧
+`Partner`: 💧
+
+
+`Partner Sigh`
 
 `Partner Name`: "Whew! Am I glad to hear it!"
 
@@ -41,7 +47,10 @@
 `Partner Name`: "It seems like I can speak again..."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh, that's right! What happened to Azelf?!"
 
@@ -86,7 +95,7 @@
 `Chimecho`: "Everyone! They're awake!"
 
 
-`Loudred Normal` ❗
+`Loudred Normal`
 
 `Loudred`: "R-really?! AWESOME!"
 
@@ -96,7 +105,10 @@
 `Sunflora`: "Oh my gosh! That's wonderful news!"
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Oof! I'm mighty glad!"
 
@@ -111,12 +123,18 @@
 `Bidoof`: "I'd... I'd... Oof..."
 
 
-`Partner Happy` 💦
+`Bidoof`: 💦
+
+
+`Partner Happy`
 
 `Partner Name`: "You guys are getting so emotional about this!"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! That's right!"
 
@@ -126,7 +144,10 @@
 `Partner Name`: "There's something that I need to tell everyone!"
 
 
-`Corphish Normal` ❓
+`Corphish`: ❓
+
+
+`Corphish Normal`
 
 `Corphish`: "Hey, hey...?"
 

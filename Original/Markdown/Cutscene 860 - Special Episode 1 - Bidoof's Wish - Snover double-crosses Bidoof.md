@@ -4,7 +4,10 @@
 * * *
 
 
-`Bidoof Normal` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Normal`
 
 `Bidoof`: "...Huh? This... This looks like a dead end."
 
@@ -25,7 +28,10 @@
 `💬`: "Heh-heh-heh-heh-heh!"
 
 
-`Bidoof Surprised` 〽
+`Bidoof`: 〽
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "Wh-who's there?!"
 
@@ -102,7 +108,10 @@
 `Bagon`: "You were tricked into coming here...by us...you see..."
 
 
-`Bidoof Surprised` 〽
+`Bidoof`: 〽
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "Wh-whaaaa?! ...U-us? What do you mean, "us"?!"
 

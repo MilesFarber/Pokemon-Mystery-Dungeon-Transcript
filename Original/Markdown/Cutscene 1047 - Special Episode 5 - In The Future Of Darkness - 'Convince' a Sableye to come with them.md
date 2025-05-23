@@ -13,6 +13,10 @@
 
 🪨
 
+
+`Sableye`: 〽
+
+
 `Sableye Surprised` 〽
 
 `Sableye`: "Gr-Grovyle!"
@@ -23,12 +27,18 @@
 `Sableye`: "Wheh-heh-heh!"
 
 
+`Sableye`: 💦
+
+
 `Sableye Surprised` 〽
 
 `Sableye`: "M-Master Dusknoir!"
 
 
-`Grovyle Normal` 〽
+`Sableye`: 💦
+
+
+`Grovyle Normal`
 
 `Grovyle`: "There's something I want to ask."
 

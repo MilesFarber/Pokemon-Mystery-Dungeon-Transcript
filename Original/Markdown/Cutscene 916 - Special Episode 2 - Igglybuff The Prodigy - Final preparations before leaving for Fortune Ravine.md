@@ -4,6 +4,9 @@
 * * *
 
 
+`Armaldo`: ⚟
+
+
 `Igglybuff Normal` 🔆
 
 `Igglybuff`: "Good morning, Master. ♪"
@@ -29,7 +32,10 @@
 `Armaldo`: "Even with my strength...it will probably be difficult."
 
 
-`Igglybuff Surprised` 〽
+`Igglybuff`: 〽
+
+
+`Igglybuff Surprised`
 
 `Igglybuff`: "Huh? So we're not going?"
 
@@ -49,7 +55,7 @@
 `Igglybuff`: "Together, Master and I are invincible! ♪"
 
 
-`Igglybuff Happy`
+`Igglybuff Happy` 🔆
 
 `Igglybuff`: "It's all right, all right! ♪"
 
@@ -79,12 +85,15 @@
 `Armaldo`: "Let's go. To Fortune Ravine."
 
 
+`Igglybuff`: ❗
+
+
 `Igglybuff Happy` ◀▼▶
 
 `Igglybuff`: "M-Master!"
 
 
-`Igglybuff Happy`
+`Igglybuff Happy` ◀▼▶
 
 `Igglybuff`: "I knew we were going to go! That's my Master. ♪"
 

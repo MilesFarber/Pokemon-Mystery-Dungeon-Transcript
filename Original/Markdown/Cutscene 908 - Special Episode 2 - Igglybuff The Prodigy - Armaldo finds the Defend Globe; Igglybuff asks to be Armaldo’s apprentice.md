@@ -1,7 +1,10 @@
 * * *
 
 
-`Igglybuff Surprised` ❗
+`Armaldo`: ❗
+
+
+`Igglybuff Surprised`
 
 `Igglybuff`: "Oh! There's a treasure chest over there!"
 
@@ -16,7 +19,10 @@
 >Inside was the Defend Globe.
 
 
-`Armaldo Surprised` 〽
+`Armaldo`: 〽
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "Th-this...is...!"
 
@@ -86,7 +92,10 @@
 `Igglybuff`: "Ah ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha! ♪"
 
 
-`Armaldo Normal` 💧
+`Armaldo`: 💧
+
+
+`Armaldo Normal`
 
 `Armaldo`: "... (Wh-what is this...? He's so happy...)"
 
@@ -146,7 +155,10 @@
 `Igglybuff`: "I had no idea! ♪"
 
 
-`Igglybuff Normal` ❗
+`Igglybuff`: ❗
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "...! Oh yeah!"
 
@@ -156,7 +168,10 @@
 `Igglybuff`: "Master!"
 
 
-`Armaldo Normal` ❓
+`Armaldo`: ❓
+
+
+`Armaldo Normal`
 
 `Armaldo`: "? M-master? Me?!"
 
@@ -171,7 +186,10 @@
 `Igglybuff`: "Master, I have a request! Please... Please take me on as your apprentice!"
 
 
-`Armaldo Surprised` 〽
+`Armaldo`: 〽
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "M-my...apprentice?!"
 
@@ -181,12 +199,12 @@
 `Armaldo`: "N-no! I'll pass. I don't really see myself taking care of someone else as an apprentice."
 
 
-`Armaldo Surprised`
+`Armaldo Surprised` 💦
 
 `Armaldo`: "And besides, I quit exploring!"
 
 
-`Armaldo Surprised`
+`Armaldo Surprised` 💦
 
 `Armaldo`: "It's too late for me to do anything like that!"
 
@@ -226,7 +244,10 @@
 `Igglybuff`: "Master! Please!"
 
 
-`Armaldo Pain` 💦
+`Armaldo`: 💦
+
+
+`Armaldo Pain`
 
 `Armaldo`: "Umm... (Wow, he's even kneeling on the floor. He's sure intent on this request...)"
 
@@ -296,7 +317,7 @@
 `Igglybuff`: "Yay! I did it! Thank you! ♪"
 
 
-`Igglybuff Happy`
+`Igglybuff Happy` ◀▼▶
 
 `Igglybuff`: "Yay, yay, yay! ♪"
 
@@ -315,7 +336,7 @@
 `Igglybuff`: "Ah ha ha ha ha ha ha! ♪"
 
 
-`Igglybuff Happy`
+`Igglybuff Happy` 🔆
 
 `Igglybuff`: "I'm looking forward to you taking care of me. ♪ Master. ♪"
 
@@ -335,7 +356,7 @@
 `Igglybuff`: "Don't be so strict, Master. ♪ Ah ha ha ha ha ha! ♪"
 
 
-`Armaldo Angry` 🔆
+`Armaldo Angry`
 
 `Armaldo`: "How are we going to be an exploration team if you start off acting like that? Hey!"
 
@@ -343,6 +364,9 @@
 `Igglybuff Happy`
 
 `Igglybuff`: "Ah ha ha! I'm so happy! ♪ Ah ha ha ha ha ha ha ha! ♪"
+
+
+`Armaldo`: 💧
 
 
 * * *

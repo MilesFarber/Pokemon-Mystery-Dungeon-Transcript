@@ -12,7 +12,10 @@
 `Partner Name`: "Um... Hey!"
 
 
-`Koffing Normal` ❗
+`Zubat`: ❗
+
+
+`Koffing Normal`
 
 `Koffing`: "Well, well..."
 

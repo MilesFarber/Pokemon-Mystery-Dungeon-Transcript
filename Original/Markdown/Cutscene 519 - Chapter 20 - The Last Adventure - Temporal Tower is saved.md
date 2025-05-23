@@ -31,7 +31,10 @@
 `Hero Name`: "(Wh-where...?)"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(`Partner Name`...)"
 
@@ -41,7 +44,10 @@
 `Partner Name`: "...Ugh... Urrgh..."
 
 
-`Partner Normal` ⚟
+`Partner`: ⚟
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh... `Hero Name`..."
 
@@ -52,6 +58,9 @@
 
 
 `Dialga`: "THIS IS...TEMPORAL TOWER."
+
+
+`Hero`: ❗
 
 
 `Partner Surprised` 〽

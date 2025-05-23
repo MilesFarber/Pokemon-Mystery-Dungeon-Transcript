@@ -17,7 +17,10 @@
 * * *
 
 
-`Dusknoir Pain` 〽
+`Dusknoir`: 〽
+
+
+`Dusknoir Pain`
 
 `Dusknoir`: "GUHGUHH!"
 
@@ -62,12 +65,18 @@
 `Primal Dialga`: "GARU... GARURU..."
 
 
-`Primal Dialga Normal` ❗
+`Celebi`: ❗
+
+
+`Primal Dialga Normal`
 
 `Primal Dialga`: "GROOH... GROOOOOH..."
 
 
-`Grovyle Pain` 〽
+`Celebi`: 〽
+
+
+`Grovyle Pain`
 
 `Grovyle`: "D-Dialga...!"
 
@@ -77,7 +86,10 @@
 `Dusknoir`: "GWAH!"
 
 
-`Grovyle Surprised` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "Dusknoir!"
 
@@ -87,7 +99,10 @@
 `Celebi`: "Oooohh..."
 
 
-`Grovyle Surprised` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "C-Celebi too!"
 
@@ -97,7 +112,10 @@
 `Dusknoir`: "GUUUuuuhhhh... Grovyle..."
 
 
-`Dusknoir Normal` ❗
+`Grovyle`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Grovyle... Please tell me..."
 
@@ -157,12 +175,18 @@
 `Grovyle`: "Dusknoir..."
 
 
-`Grovyle Pain` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Pain`
 
 `Grovyle`: "GUUuhh!"
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "...! The end...!"
 
@@ -187,7 +211,10 @@
 `Celebi`: "Yes... I'm fine..."
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Th-this is..."
 

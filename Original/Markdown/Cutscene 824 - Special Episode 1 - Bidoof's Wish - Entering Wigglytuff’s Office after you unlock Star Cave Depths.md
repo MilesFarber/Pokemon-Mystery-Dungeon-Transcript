@@ -21,9 +21,15 @@
 `Wigglytuff`: "That is...I probably should have gone instead..."
 
 
-`Wigglytuff Surprised` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Surprised`
 
 `Wigglytuff`: "Oh...!"
+
+
+`Bidoof`: ⚟
 
 
 `Chatot Angry` 💢
@@ -36,7 +42,10 @@
 `Chatot`: "It's no good at all!! Humph!!"
 
 
-`Wigglytuff Normal` 💦
+`Wigglytuff`: 💦
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "N-never mind... It's nothing."
 

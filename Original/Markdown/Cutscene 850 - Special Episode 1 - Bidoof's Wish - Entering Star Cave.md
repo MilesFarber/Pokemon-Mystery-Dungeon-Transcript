@@ -7,7 +7,10 @@
 `Snover`: "Bidoof!"
 
 
-`Snover Normal` ❗
+`Bidoof`: ❗
+
+
+`Snover Normal`
 
 `Snover`: "Looks like we're ready."
 

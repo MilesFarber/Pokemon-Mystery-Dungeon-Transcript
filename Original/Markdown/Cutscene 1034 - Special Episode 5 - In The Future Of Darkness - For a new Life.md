@@ -29,7 +29,10 @@
 `Grovyle`: "Oof..."
 
 
-`Grovyle Surprised` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "...Dusknoir..."
 
@@ -119,7 +122,10 @@
 `Grovyle`: "Guh... My injuries from fighting Dusknoir still hurt..."
 
 
-`Grovyle Surprised` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "S-Sableye!"
 
@@ -129,7 +135,10 @@
 `Sableye`: "Wheh-heh-heh!? G-Grovyle?!"
 
 
-`Grovyle Normal` 💦
+`Sableye`: 💦
+
+
+`Grovyle Normal`
 
 `Grovyle`: "...They've found me already..."
 
@@ -144,7 +153,10 @@
 `Dusknoir`: "Ugh..."
 
 
-`Grovyle Surprised` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "...! (Dusknoir!)"
 
@@ -202,7 +214,10 @@
 `Dusknoir`: "...Heh... Heh heh heh heh heh..."
 
 
-`Dusknoir Normal` ❗
+`Grovyle`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "After all... After all, didn't I lose...to you..."
 
@@ -342,7 +357,10 @@
 `Grovyle`: "I'm going to Temporal Tower. To take on Primal Dialga."
 
 
-`Dusknoir Normal` 〽
+`Dusknoir`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Do you think you can defeat Master Dialga?"
 
@@ -400,12 +418,12 @@
 `Dusknoir`: "Ugh!"
 
 
-`Dusknoir Pain`
+`Dusknoir Pain` 〽
 
 `Dusknoir`: "Blast! Still too weakened... Can't move..."
 
 
-`Dusknoir Pain`
+`Dusknoir Pain` 〽
 
 `Dusknoir`: "But--Grovyle can't just do as he pleases!"
 

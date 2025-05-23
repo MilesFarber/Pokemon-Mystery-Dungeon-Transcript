@@ -11,7 +11,10 @@
 `Sentret`: "I have a request."
 
 
-`Lopunny Normal` ❓
+`Lopunny`: ❓
+
+
+`Lopunny Normal`
 
 `Lopunny`: "A request?"
 

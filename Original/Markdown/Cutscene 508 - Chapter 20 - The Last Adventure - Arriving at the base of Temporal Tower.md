@@ -9,7 +9,7 @@
 `Partner Name`: "This is... This is the entrance to Temporal Tower."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Waah! The ground's shaking!"
 
@@ -24,7 +24,10 @@
 `Partner Name`: "What was that tremor, anyway?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh! That reminds me!"
 

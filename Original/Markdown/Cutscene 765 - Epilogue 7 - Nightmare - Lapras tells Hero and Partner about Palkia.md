@@ -54,7 +54,10 @@
 `Lapras`: "However... I do know of a being that embodies space itself."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Pardon?! A being that embodies space itself?!"
 
@@ -129,7 +132,10 @@
 `Lapras`: "That is all I can tell you."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Oh... All right..."
 

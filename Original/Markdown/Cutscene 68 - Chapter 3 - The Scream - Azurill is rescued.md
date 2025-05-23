@@ -9,7 +9,7 @@
 `Drowzee`: "Rrrrawrrr!"
 
 
-`Partner Normal` ❗
+`Partner Normal`
 
 `Partner Name`: "We're here to rescue you."
 

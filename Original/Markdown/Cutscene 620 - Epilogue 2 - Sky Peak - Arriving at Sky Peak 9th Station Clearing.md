@@ -19,7 +19,10 @@
 `Shaymin`: "I think Team Frontier already went on ahead."
 
 
-`Shaymin Worried` ⚟
+`Shaymin`: ⚟
+
+
+`Shaymin Worried`
 
 `Shaymin`: "........."
 
@@ -31,7 +34,11 @@
 
 ❓
 
-`Shaymin Normal` 💦
+
+`Shaymin`: 💦
+
+
+`Shaymin Normal`
 
 `Shaymin`: "Oh! Sorry..."
 

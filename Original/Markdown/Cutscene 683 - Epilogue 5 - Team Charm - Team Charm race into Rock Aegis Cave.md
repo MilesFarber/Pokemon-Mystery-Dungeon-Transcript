@@ -9,7 +9,8 @@
 
 ❗
 
-`Lopunny Normal` ❗
+
+`Lopunny Normal`
 
 `Lopunny`: "You handled that battle with superb aplomb."
 

@@ -11,7 +11,10 @@
 `Bidoof`: "Here, we have Croagunk..."
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "But to tell the truth, I don't have any idea what that Pokémon's up to..."
 

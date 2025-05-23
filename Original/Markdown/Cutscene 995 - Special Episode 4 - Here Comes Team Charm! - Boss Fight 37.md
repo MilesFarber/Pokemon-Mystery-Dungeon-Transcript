@@ -67,9 +67,7 @@
 `Aggron`: "Let's go! Lairon! Get them!"
 
 
-`Aggron Normal` ◀▼▶
-
-`Aggron`: "Lairon: GROOOAAAAHH!!"
+`💬`: "Lairon: GROOOAAAAHH!!"
 
 
 `Gardevoir Normal`

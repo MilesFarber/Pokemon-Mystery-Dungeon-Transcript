@@ -1,7 +1,10 @@
 * * *
 
 
-`Chimecho Normal` ❗
+`Chimecho`: ❗
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Oh! Guildmaster!"
 
@@ -21,7 +24,7 @@
 `Wigglytuff`: "He needs to sleep and recover tonight. I think he'll be fine tomorrow! ♪"
 
 
-`Loudred Normal` 💦
+`Loudred Normal`
 
 `Loudred`: "YEAH!"
 
@@ -49,6 +52,9 @@
 `Wigglytuff Normal` ❓
 
 `Wigglytuff`: "What is it, Sunflora?"
+
+
+`Wigglytuff`: ❓
 
 
 `Sunflora Normal`

@@ -4,7 +4,10 @@
 * * *
 
 
-`Lopunny Normal` ❗
+`Lopunny`: ❗
+
+
+`Lopunny Normal`
 
 `Lopunny`: "Oh, Team `Team Name`. You've ended up back here like us."
 

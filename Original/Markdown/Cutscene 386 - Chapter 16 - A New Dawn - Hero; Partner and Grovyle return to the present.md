@@ -70,7 +70,10 @@
 `Grovyle`: "Ugh..."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Hey! Grovyle!"
 
@@ -140,7 +143,10 @@
 `Grovyle`: "And `Hero Name` and I both reached your world far away from each other."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh, that's right!"
 
@@ -180,7 +186,10 @@
 `Grovyle`: "Hold on."
 
 
-`Grovyle Normal` ⚞
+`Partner`: ⚞
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Will I be well received if I go to the guild?"
 
@@ -200,12 +209,18 @@
 `Grovyle`: "Don't you think they'd try to capture me?"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urk! Come to think of it, you're right... What should we do?"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh, I know! There's a good place."
 

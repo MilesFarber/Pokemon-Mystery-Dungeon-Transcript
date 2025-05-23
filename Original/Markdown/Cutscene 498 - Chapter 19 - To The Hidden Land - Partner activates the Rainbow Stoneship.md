@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Here it is. It's this hollow spot."
 
@@ -22,7 +25,10 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Waah! It moved! It moved!"
 

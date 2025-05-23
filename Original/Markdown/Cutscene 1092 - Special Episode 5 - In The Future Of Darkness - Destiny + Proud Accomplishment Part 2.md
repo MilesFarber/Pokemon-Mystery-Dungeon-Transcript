@@ -106,7 +106,10 @@
 `Grovyle`: "No... I don't believe that..."
 
 
-`Grovyle Pain` ❗
+`Dusknoir`: ❗
+
+
+`Grovyle Pain`
 
 `Grovyle`: "I...wasn't wrong..."
 
@@ -116,7 +119,10 @@
 `Grovyle`: "I... I still...trust you..."
 
 
-`Dusknoir Normal` 〽
+`Dusknoir`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Do my ears deceive me?!"
 
@@ -176,7 +182,10 @@
 `Grovyle`: "At some point... I sensed that your feelings of hatred vanished..."
 
 
-`Dusknoir Normal` 💦
+`Dusknoir`: 💦
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Wh-what are you saying?! That's impossible!"
 

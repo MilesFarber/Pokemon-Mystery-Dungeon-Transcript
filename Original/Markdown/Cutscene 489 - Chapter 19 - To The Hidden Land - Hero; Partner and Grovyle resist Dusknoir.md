@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Hey! There's the dimensional hole!"
 
@@ -16,9 +19,7 @@
 `Dusknoir`: "Into the dimensional hole with them!"
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 `Grovyle Normal`
@@ -39,9 +40,7 @@
 * * *
 
 
-`Hero Determined` 〽
-
-`Hero Name`: "Sableye: Gyaaaah!"
+`💬`: "Sableye: Gyaaaah!"
 
 
 `Dusknoir Normal`

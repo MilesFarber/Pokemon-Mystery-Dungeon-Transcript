@@ -1,4 +1,7 @@
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh, right, `Hero Name`!"
 

@@ -1,7 +1,10 @@
 * * *
 
 
-`Darkrai Normal` ❗
+`Darkrai`: ❗
+
+
+`Darkrai Normal`
 
 `Darkrai`: "That blasted Cresselia!"
 

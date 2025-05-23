@@ -6,7 +6,10 @@
 `Partner Name`: "OK, Manaphy. For the time being, this is your house."
 
 
-`Manaphy Normal` ❓
+`Manaphy`: ❓
+
+
+`Manaphy Normal`
 
 `Manaphy`: "House?"
 
@@ -31,7 +34,10 @@
 `Manaphy`: "Goomi! Goomi!"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh, OK! You want a Blue Gummi!"
 

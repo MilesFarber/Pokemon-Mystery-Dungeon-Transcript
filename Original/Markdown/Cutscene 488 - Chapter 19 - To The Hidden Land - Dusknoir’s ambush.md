@@ -6,7 +6,10 @@
 `Grovyle`: "This appears to be the top."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Hey! Look here!"
 
@@ -26,12 +29,18 @@
 `Partner Name`: "I wonder what it's for...?"
 
 
-`Hero Normal` ❗
+`Hero`: ❗
+
+
+`Hero Normal`
 
 `Hero Name`: "(Oh? What's that...?)"
 
 
-`Grovyle Normal` ❓
+`Grovyle`: ❓
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Hm? What is it, `Hero Name`?"
 
@@ -86,7 +95,10 @@
 `Grovyle`: "............................................ ..........................................................."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "...So, Grovyle?"
 
@@ -101,7 +113,7 @@
 `Grovyle`: "It appears this place itself... This is the Rainbow Stoneship."
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Pardon?! This is it?!"
 
@@ -171,8 +183,6 @@
 `Partner Name`: "I'll fit it into this hollow spot!"
 
 
-❗
-
 `💬`: "That's quite enough of that."
 
 
@@ -192,7 +202,7 @@
 `Dusknoir`: "Ha-ha-ha! Hoo-hoo-ha!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "D-Dusknoir!"
 
@@ -237,9 +247,7 @@
 `Dusknoir`: "Sableye! Take them to the dimensional hole!"
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 * * *

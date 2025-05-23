@@ -4,7 +4,10 @@
 * * *
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Whew... Here's Kecleon Market."
 
@@ -19,12 +22,15 @@
 `Kecleon`: "Welcome... ♪ To Kecleon Shop. ♪"
 
 
-`Kecleon Normal`
+`Kecleon Normal` 🔆
 
 `Kecleon`: "Have you come to shop? ♪"
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "N-not quite... Sorry to bother you, but I'm not here to buy anything..."
 
@@ -32,6 +38,9 @@
 `Kecleon Sad`
 
 `Kecleon`: "...Just asking about inventory, as always... Sigh... So disappointing..."
+
+
+`Kecleon`: ❗
 
 
 `Kecleon Normal` 🔆
@@ -69,12 +78,18 @@
 `Kecleon`: "Do your best at your work! ♪"
 
 
-`Kecleon Normal` ❓
+`Kecleon`: ❓
+
+
+`Kecleon Normal`
 
 `Kecleon`: "...Huh? Is there something else?"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "N-no. Well, there's nothing more I need to do..."
 
@@ -119,7 +134,10 @@
 `Bidoof`: "To become an explorer really quickly...what should I do?"
 
 
-`Kecleon Normal` ❗
+`Kecleon`: ❗
+
+
+`Kecleon Normal`
 
 `Kecleon`: "Oh! If that's it...you just need a TM! ♪"
 
@@ -222,7 +240,10 @@
 `Kecleon`: "But you think that's too expensive, right?"
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "Sniff... No... Please hold on a moment..."
 
@@ -242,7 +263,10 @@
 `Bidoof`: "I've got my own money... I always carry it with me...7,000."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "But...but this money..."
 

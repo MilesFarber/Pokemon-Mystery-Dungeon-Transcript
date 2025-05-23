@@ -9,7 +9,7 @@
 * * *
 
 
-`Partner Normal` 〽
+`Partner Normal`
 
 `Partner Name`: "We...did it..."
 
@@ -24,7 +24,10 @@
 `Grovyle`: "We've finally beaten Dusknoir!"
 
 
-`Sableye Normal` 💦
+`Sableye`: 💦
+
+
+`Sableye Normal`
 
 `Sableye`: "Wheh... It can't be..."
 
@@ -34,24 +37,30 @@
 `Sableye`: "Wheeh... Lord Dusknoir..."
 
 
-`Sableye Normal` 💦
+`Sableye`: 💦
+
+
+`Sableye Normal`
 
 `Sableye`: "Lord Dusknoir...was defeated!"
 
 
-`Sableye Normal` 💦
-
-`Sableye`: "Wheeeeh!"
+`Sableye`: 💦
 
 
-`Grovyle Normal`
+`Sableye Normal`
 
-`Grovyle`: "Humph. Your Sableye ran off."
+`Sableye` 4: "Wheeeeh!"
 
 
 `Grovyle Normal`
 
-`Grovyle`: "You just have no luck attracting reliable allies."
+`Grovyle` 4: "Humph. Your Sableye ran off."
+
+
+`Grovyle Normal`
+
+`Grovyle` 4: "You just have no luck attracting reliable allies."
 
 
 `Dusknoir Normal`
@@ -109,7 +118,7 @@
 `Dusknoir`: "Urgggh..."
 
 
-`Grovyle Normal` ❗
+`Grovyle Normal`
 
 `Grovyle`: "Don't move!"
 
@@ -134,7 +143,10 @@
 `Dusknoir`: "If history is changed... We Pokémon of the future will disappear..."
 
 
-`Hero Surprised` ❗
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Wh-what?)"
 
@@ -189,7 +201,10 @@
 `Grovyle`: "If we change history...we will disappear."
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(G-Grovyle!)"
 
@@ -214,7 +229,10 @@
 `Grovyle`: "Celebi too... She helped us, knowing that she will disappear if we succeed."
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Even Celebi?)"
 

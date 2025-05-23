@@ -22,7 +22,10 @@
   *   * *Scenario flag: [29, 46]*
 
 
-  *   * `Manaphy Joyous` ❗
+  *   * `Manaphy`: ❗
+
+
+  *   * `Manaphy Joyous`
 
   *   * `Manaphy`: "Goomi! ♪"
 
@@ -37,7 +40,10 @@
   *   * `Partner Name`: "Is it tasty? Er... Goomi tasty?"
 
 
-  *   * `Manaphy Normal` ❓
+  *   * `Manaphy`: ❓
+
+
+  *   * `Manaphy Normal`
 
   *   * `Manaphy`: "Tasty?"
 
@@ -62,7 +68,10 @@
   *   * `Manaphy`: "....................."
 
 
-  *   * `Partner Normal` ❓
+  *   * `Partner`: ❓
+
+
+  *   * `Partner Normal`
 
   *   * `Partner Name`: "Oh? Is something the matter?"
 
@@ -72,7 +81,10 @@
   *   * `Manaphy`: "...Yawn... Snuffle..."
 
 
-  *   * `Partner Happy` ❗
+  *   * `Partner`: ❗
+
+
+  *   * `Partner Happy`
 
   *   * `Partner Name`: "Ha! The little cutie must be full. He's gone to sleep now."
 
@@ -98,7 +110,7 @@
   *   * * * *
 
 
-  *   * `Partner Normal` ❗
+  *   * `Partner Normal`
 
   *   * `Partner Name`: "Good morning, `Hero Name`!"
 
@@ -118,7 +130,10 @@
   *   * `Manaphy`: "Morning! `Hero Name`! `Partner Name`!"
 
 
-  *   * `Partner Surprised` 〽
+  *   * `Partner`: 〽
+
+
+  *   * `Partner Surprised`
 
   *   * `Partner Name`: "Wow! The little cutie greeted us by name!"
 
@@ -143,7 +158,10 @@
   *   * `Partner Name`: "Eating and sleeping all the time doesn't seem healthy enough..."
 
 
-  *   * `Partner Normal` ❗
+  *   * `Partner`: ❗
+
+
+  *   * `Partner Normal`
 
   *   * `Partner Name`: "I know! Let's take the little cutie for a walk at the beach!"
 
@@ -163,7 +181,10 @@
   * `Manaphy`: "Weh... Weh... Waaaah!"
 
 
-  * `Partner Surprised` 💦
+  * `Partner`: 💦
+
+
+  * `Partner Surprised`
 
   * `Partner Name`: "Oh, no no... Please don't cry!"
 

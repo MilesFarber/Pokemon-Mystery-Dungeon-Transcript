@@ -16,19 +16,13 @@
 `Cresselia`: "I've longed to meet both of you!"
 
 
-`Cresselia Normal`
-
-`Cresselia`: "(That time I wasn't dreaming, so I guess it never occurred to me...)"
+`💬`: "(That time I wasn't dreaming, so I guess it never occurred to me...)"
 
 
-`Cresselia Normal`
-
-`Cresselia`: "(But I realize that was in Azurill's nightmare.)"
+`💬`: "(But I realize that was in Azurill's nightmare.)"
 
 
-`Cresselia Normal`
-
-`Cresselia`: "(In other words, it was still in a dream.)"
+`💬`: "(In other words, it was still in a dream.)"
 
 
 * * *

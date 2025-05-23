@@ -41,6 +41,9 @@
 `Breloom`: "At last! We've reached the summit!"
 
 
+`Mawile`: ❗
+
+
 `Mawile Inspired`
 
 `Mawile`: "Hey, everyone! Look over here!"

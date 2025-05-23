@@ -9,7 +9,10 @@
 * * *
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Ouch! We didn't do too well..."
 
@@ -24,7 +27,10 @@
 `Partner Name`: "...Could this be what they're calling a mystery dungeon?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh! There's no time to waste!"
 

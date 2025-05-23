@@ -1,7 +1,10 @@
 * * *
 
 
-`Snover Normal` ❗
+`Snover`: ❗
+
+
+`Snover Normal`
 
 `Snover`: "Oh!"
 
@@ -26,7 +29,10 @@
 `Snover`: "I'm really sorry to have caused you trouble yesterday."
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "Never mind that... What about those scary Pokémon that were chasing you..."
 

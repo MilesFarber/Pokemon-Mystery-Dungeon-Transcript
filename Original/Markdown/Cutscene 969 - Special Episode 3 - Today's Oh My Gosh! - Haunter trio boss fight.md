@@ -11,7 +11,10 @@
 `Sunflora`: "...Ow! Hot hot hot hot hot!"
 
 
-`Loudred Pain` 💦
+`Loudred`: 💦
+
+
+`Loudred Pain`
 
 `Loudred`: "Y-you're LATE, SUNFLORA!"
 
@@ -26,7 +29,10 @@
 `Loudred`: "I've been FIGHTING here ALL by MYSELF this WHOLE time!"
 
 
-`Haunter Normal` 💦
+`Sunflora`: 💦
+
+
+`Haunter Normal`
 
 `Haunter`: "Heh heh! The one who doesn't learn has come back for another lesson!"
 

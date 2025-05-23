@@ -14,12 +14,15 @@
 `Bidoof`: "Whew... Sorry to keep you waiting. Here it is! Yup yup!"
 
 
-`Bidoof Sad`
+`Bidoof Sad` 💦
 
 `Bidoof`: "Here's your Reviver Seed!"
 
 
-`Loudred Stunned` 〽
+`Loudred`: 〽
+
+
+`Loudred Stunned`
 
 `Loudred`: "Wh-what...IS this? HUH?!"
 

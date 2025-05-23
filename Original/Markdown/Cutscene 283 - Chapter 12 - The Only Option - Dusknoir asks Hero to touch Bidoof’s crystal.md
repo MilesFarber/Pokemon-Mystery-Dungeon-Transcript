@@ -69,7 +69,10 @@
 `Partner Name`: "Which is just the same as not getting anything done at all!"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "That's not true, by golly!"
 
@@ -129,7 +132,10 @@
 `Dusknoir`: "Maybe not. Not necessarily."
 
 
-`Chatot Normal` ❗
+`Partner`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "Dusknoir, sir!"
 
@@ -149,7 +155,10 @@
 `Dusknoir`: "Another Time Gear was at the Underground Lake, guarded by Mesprit."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh, that reminds me! Mesprit told us something interesting!"
 
@@ -164,7 +173,7 @@
 `Partner Name`: "Uxie alerted her by telepathy!"
 
 
-`Dugtrio Normal` ❗
+`Dugtrio Normal` 〽
 
 `Dugtrio`: "Incredible!"
 
@@ -194,7 +203,10 @@
 `Dusknoir`: "But three Pokémon in total represent the spiritual world...and are said to keep the world in balance."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Th-three?"
 
@@ -229,7 +241,10 @@
 `Dusknoir`: "Therefore, Azelf may likewise be protecting a Time Gear."
 
 
-`Chimecho Normal` ❗
+`Chimecho`: ❗
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Oh, I see!"
 
@@ -309,17 +324,20 @@
 `Chatot`: "My, my, my! ♪"
 
 
-`Chatot Happy`
+`Chatot Happy` 🔆
 
 `Chatot`: "I commend you on your wisdom, Dusknoir, sir!"
 
 
-`Chatot Happy`
+`Chatot Happy` 🔆
 
 `Chatot`: "I feel renewed admiration for you! ♪"
 
 
-`Dusknoir Normal` 💦
+`Dusknoir`: 💦
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Thank you... It's really nothing..."
 
@@ -344,7 +362,10 @@
 `Dugtrio`: "So, Dusknoir, sir, your insight was entirely correct."
 
 
-`Sunflora Normal` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Ooooh! So maybe the other places we searched... The Eastern Forest and Crystal Cave..."
 
@@ -354,7 +375,10 @@
 `Sunflora`: "Those places could still be hiding their secrets from us!"
 
 
-`Dusknoir Normal` ❗
+`Dusknoir`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Ah, I have an idea."
 
@@ -364,7 +388,10 @@
 `Dusknoir`: "Bidoof..."
 
 
-`Bidoof Normal` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Yup yup, you want me?"
 
@@ -389,7 +416,10 @@
 `Dusknoir`: "May I borrow it briefly?"
 
 
-`Bidoof Normal` 〽
+`Bidoof`: 〽
+
+
+`Bidoof Normal`
 
 `Bidoof`: "My crystal?!"
 
@@ -399,12 +429,15 @@
 `Bidoof`: "N-no! No sirree!"
 
 
-`Bidoof Sad`
+`Bidoof Sad` 💦
 
 `Bidoof`: "That's my precious treasure, by golly!"
 
 
-`Dusknoir Normal` 💦
+`Dusknoir`: 💦
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Of course. But rest assured we won't take it away. Or do anything of the sort."
 
@@ -414,7 +447,10 @@
 `Dusknoir`: "Now, `Hero Name`..."
 
 
-`Dusknoir Normal` ⚟
+`Hero`: ⚟
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "There is something I would like you to do, `Hero Name`."
 
@@ -424,7 +460,10 @@
 `Dusknoir`: "Please touch Bidoof's crystal."
 
 
-`Hero Normal` ❗
+`Hero`: ❗
+
+
+`Hero Normal`
 
 `Hero Name`: "(...!)"
 
@@ -454,7 +493,10 @@
 `Hero Name`: "(I see. That's what this is about...)"
 
 
-`Loudred Normal` ❓
+`Loudred`: ❓
+
+
+`Loudred Normal`
 
 `Loudred`: "Dimensional Scream? What's THAT?"
 
@@ -494,7 +536,10 @@
 `Dusknoir`: "Please, may we?"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Oof... OK, I can't refuse a reason like that!"
 
@@ -532,7 +577,10 @@
 `Hero Name`: "(...............)"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Well, `Hero Name`?"
 

@@ -29,7 +29,7 @@
 `Chatot`: "Time has apparently stopped..."
 
 
-`Diglett Normal` ❗
+`Diglett Normal`
 
 `Diglett`: "Huh?!"
 

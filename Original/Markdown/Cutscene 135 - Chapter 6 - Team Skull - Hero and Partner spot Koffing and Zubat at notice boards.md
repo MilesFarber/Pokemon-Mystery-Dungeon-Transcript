@@ -24,22 +24,34 @@
 `Partner Name`: "Let's go check now, `Hero Name`!"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Look! Those Pokémon..."
 
 
-`Zubat Normal` ⚟
+`Zubat`: ⚟
+
+
+`Zubat Normal`
 
 `Zubat`: "Hey!"
 
 
-`Koffing Normal` 💦
+`Koffing`: 💦
+
+
+`Koffing Normal`
 
 `Koffing`: "You two?!"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Huh? That duo..."
 

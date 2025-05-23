@@ -41,8 +41,6 @@
 `Celebi`: "Sure."
 
 
-〽
-
 `💬`: "Stop there! That will do!"
 
 
@@ -82,7 +80,7 @@
 `Sableye`: "Wheh-heh-heh!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "The Sableye too..."
 
@@ -102,7 +100,7 @@
 `Grovyle`: "So you could capture Celebi as well as us."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What?! So you mean we were..."
 
@@ -137,12 +135,18 @@
 `Grovyle`: "Everyone! Are you ready to fight?!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! Of course!"
 
 
-`Grovyle Normal` 💦
+`Partner`: 💦
+
+
+`Grovyle Normal`
 
 `Grovyle`: "We're going to power our way through!"
 
@@ -182,7 +186,10 @@
 `Dusknoir`: "Grovyle. Are you really such a fool to think that I'd come alone?"
 
 
-`Grovyle Normal` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Wh-what?!"
 
@@ -239,7 +246,7 @@
 `Grovyle`: "That's...Primal...Dialga..."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What!?! That is?!"
 
@@ -269,7 +276,7 @@
 `Grovyle`: "Urf... This...is it for us..."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What?! Why?!"
 
@@ -299,7 +306,10 @@
 `Grovyle`: "I'm sorry to let you down. This is where it ends."
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "But..."
 
@@ -314,7 +324,10 @@
 `Grovyle`: "Do with me...as you will."
 
 
-`Celebi Normal` 〽
+`Celebi`: 〽
+
+
+`Celebi Normal`
 
 `Celebi`: "My d-d-dear Grovyle!"
 
@@ -354,7 +367,7 @@
 `Grovyle`: "I wasn't alone. There was another."
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "What?! Grovyle, you didn't come to our world by yourself?!"
 
@@ -409,7 +422,10 @@
 `Dusknoir`: "Ha! Ha-ha-ha! Hoo-hoo-ha!"
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "What's... What's so funny?"
 
@@ -469,7 +485,10 @@
 `Partner Name`: "Well, this is `Hero Name` right here!"
 
 
-`Grovyle Normal` 〽
+`Celebi`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "What?!"
 
@@ -494,7 +513,7 @@
 `Grovyle`: "The `Hero Name` that I know...is a human."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What?!"
 
@@ -509,7 +528,10 @@
 `Dusknoir`: "My good fellow! Grovyle, that is unmistakably your friend `Hero Name`!"
 
 
-`Grovyle Normal` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "What?!"
 
@@ -519,7 +541,10 @@
 `Dusknoir`: "That Pokémon you see was once a human!"
 
 
-`Grovyle Normal` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Wh-what?!"
 

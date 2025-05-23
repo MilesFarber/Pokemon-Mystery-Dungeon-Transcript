@@ -16,7 +16,10 @@
 `Chatot`: "Team registration is this way. Come along, please."
 
 
-`Partner Inspired` ❗
+`Partner`: ❗
+
+
+`Partner Inspired`
 
 `Partner Name`: "Wow! We're two floors under the ground, but you can see outside!"
 

@@ -26,7 +26,10 @@
 `Drowzee`: "When you're all ready, I'll send you on an exploration of...Azurill's dream."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "What?! So that means...!"
 

@@ -1,7 +1,10 @@
 * * *
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "B-but I thought it'd be too dark down there for you all, so I opened it up."
 

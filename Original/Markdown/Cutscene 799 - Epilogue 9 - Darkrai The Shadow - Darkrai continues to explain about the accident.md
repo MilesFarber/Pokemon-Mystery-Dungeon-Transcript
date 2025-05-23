@@ -1,9 +1,8 @@
 ⛈️
 
+
 * * *
 
-
-⛈️
 
 `Darkrai`: "Yes. You and Grovyle had an accident while traveling through time."
 

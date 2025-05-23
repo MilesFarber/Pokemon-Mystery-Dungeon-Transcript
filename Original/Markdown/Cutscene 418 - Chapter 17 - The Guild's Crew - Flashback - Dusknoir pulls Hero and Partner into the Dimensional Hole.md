@@ -1,7 +1,10 @@
 * * *
 
 
-`Dusknoir Normal` 〽
+`Partner`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "It's too soon for farewells!"
 
@@ -11,7 +14,10 @@
 `Partner Name`: "Waah!"
 
 
-`Dusknoir Normal` 〽
+`Magnezone`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "You two...are coming with me!"
 
@@ -21,7 +27,10 @@
 `Partner Name`: "Waaah!"
 
 
-`Bidoof Normal` 〽
+`Magnezone`: ❗
+
+
+`Bidoof Normal`
 
 `Bidoof`: "By gosh!"
 

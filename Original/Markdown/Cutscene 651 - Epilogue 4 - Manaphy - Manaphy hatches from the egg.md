@@ -22,7 +22,7 @@
 `Partner Name`: "It's got a strange glow to it, doesn't it? What do you think is in it?"
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Wa-waah! It moved!"
 
@@ -37,7 +37,7 @@
 `Partner Name`: "Oh, `Hero Name`! The Egg is..."
 
 
-`Partner Inspired`
+`Partner Inspired` ❗
 
 `Partner Name`: "It's hatching!"
 
@@ -45,7 +45,13 @@
 * * *
 
 
-`Manaphy Normal` ❓
+`Partner`: ❗
+
+
+`Manaphy`: ❓
+
+
+`Manaphy Normal`
 
 `Manaphy`: ".........?"
 
@@ -75,7 +81,10 @@
 `Partner Name`: "Hi, little guy. What kind of Pokémon are you?"
 
 
-`Manaphy Normal` ❓
+`Manaphy`: ❓
+
+
+`Manaphy Normal`
 
 `Manaphy`: "Poké?"
 
@@ -85,12 +94,18 @@
 `Partner Name`: "Maybe this little guy's too young to understand anything I say?"
 
 
-`Manaphy Normal` ❓
+`Manaphy`: ❓
+
+
+`Manaphy Normal`
 
 `Manaphy`: "I say?"
 
 
-`Partner Worried` 💦
+`Partner`: 💦
+
+
+`Partner Worried`
 
 `Partner Name`: "Um... What should we do...? I've never had to deal with a Pokémon like this little guy before."
 
@@ -100,7 +115,10 @@
 `Partner Name`: "Hmmm..."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh, I know! We should ask Chatot! He's the guild's head of intelligence!"
 

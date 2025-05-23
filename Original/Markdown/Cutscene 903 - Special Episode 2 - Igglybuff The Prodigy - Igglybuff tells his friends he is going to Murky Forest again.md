@@ -4,7 +4,10 @@
 * * *
 
 
-`Budew Normal` ❗
+`Smoochum`: ❗
+
+
+`Budew Normal`
 
 `Budew`: "Oh! Igglybuff!"
 
@@ -49,7 +52,10 @@
 `Igglybuff`: "Hmm... Sorry. I've already got plans for today."
 
 
-`Budew Normal` ❓
+`Budew`: ❓
+
+
+`Budew Normal`
 
 `Budew`: "Plans? Where are you going?"
 
@@ -59,7 +65,7 @@
 `Igglybuff`: "Murky Forest. ♪"
 
 
-`Smoochum Surprised` ❗
+`Smoochum Surprised`
 
 `Smoochum`: "Whaaat?! Murky Forest?!"
 

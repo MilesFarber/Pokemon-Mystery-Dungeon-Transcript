@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh?"
 
@@ -21,7 +24,10 @@
 `Chatot`: "Today, we'll have you do a job listed on this side. ♪"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "How is this different from the board on the other side?"
 
@@ -34,7 +40,10 @@
 * * *
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! Look at this, `Hero Name`!"
 
@@ -67,7 +76,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Oh my gosh! They're wanted by the law?"
 
@@ -137,12 +146,12 @@
 `Partner Name`: "Um... You say some are weak..."
 
 
-`Partner Sad`
+`Partner Sad` 💧
 
 `Partner Name`: "They're still bad Pokémon, aren't they?"
 
 
-`Partner Sad`
+`Partner Sad` 💧
 
 `Partner Name`: "I'm scared of dangerous Pokémon!"
 
@@ -170,7 +179,10 @@
 `Bidoof`: "Yup yup!"
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Huff-puff-huff... You called?"
 
@@ -210,7 +222,10 @@
 `Chatot`: "Off you go! ♪"
 
 
-`Bidoof Teary-Eyed` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Teary-Eyed`
 
 `Bidoof`: "Aw, shucks, I'm overjoyed!"
 

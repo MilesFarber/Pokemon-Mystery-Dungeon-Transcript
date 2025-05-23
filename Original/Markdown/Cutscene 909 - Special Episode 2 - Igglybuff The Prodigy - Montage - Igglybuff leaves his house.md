@@ -9,6 +9,9 @@
 `Igglybuff`: "OK, I'm off. ♪"
 
 
+`Wigglytuff`: ⚞
+
+
 `Wigglytuff Happy` 🔆
 
 `Wigglytuff`: "See you!"

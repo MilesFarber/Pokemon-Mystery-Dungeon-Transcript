@@ -23,7 +23,10 @@
 `Bidoof`: "...This is pretty old... It looks like a map."
 
 
-`Bidoof Normal` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Normal`
 
 `Bidoof`: "...Huh? There's some kind of mark... It looks like there's something written."
 
@@ -53,7 +56,10 @@
 `Bidoof`: "Somehow I just get a feeling... There has to be something really special there."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Sniff... Now I'm so excited, I can't sleep. Yup yup..."
 
@@ -78,7 +84,10 @@
 `Loudred`: "GUGOah! GUGOGOGOGOGO! GOGOGOGOGOGOGOooooooaaaaaaahhhhhhhhh!"
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "Sniff... Sniff..."
 

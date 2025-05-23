@@ -66,22 +66,22 @@
 `Kecleon`: "I must say! It is so like the great Dusknoir to be so modest!"
 
 
-`Kecleon Normal`
+`Kecleon Normal` 🔆
 
 `Kecleon`: "And I must say that Team `Team Name` has also been superb!"
 
 
-`Kecleon Normal`
+`Kecleon Normal` 🔆
 
 `Kecleon`: "After all, the team has again completed a difficult job!"
 
 
-`Kecleon Normal`
+`Kecleon Normal` 🔆
 
 `Kecleon`: "When rescuing Azurill, you were so fast at pinpointing the child's whereabouts!"
 
 
-`Kecleon Normal`
+`Kecleon Normal` 🔆
 
 `Kecleon`: "And so fast at reaching our young friend too!"
 
@@ -96,7 +96,10 @@
 `Partner Name`: "It would be great...if it truly happened the way Kecleon said..."
 
 
-`Partner Normal` 💦
+`Partner`: 💦
+
+
+`Partner Normal`
 
 `Partner Name`: "But that's not exactly the truth."
 
@@ -111,7 +114,10 @@
 `Partner Name`: "My partner here just happened to see it in a dream."
 
 
-`Dusknoir Normal` ⚟
+`Dusknoir`: ⚟
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Excuse me? A dream, you say?"
 
@@ -121,7 +127,10 @@
 `Dusknoir`: "By dream, what do you mean?"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! That's right!"
 
@@ -141,7 +150,10 @@
 `Partner Name`: "And then my partner sees or hears events that happened in the past! Or just about to happen in the future!"
 
 
-`Dusknoir Normal` 〽
+`Dusknoir`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "What?! Well, that's...that's..."
 
@@ -151,7 +163,10 @@
 `Dusknoir`: "The Dimensional Scream!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?!"
 
@@ -176,7 +191,10 @@
 `Hero Name`: "(Ask about what...?)"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Oh! Right!)"
 

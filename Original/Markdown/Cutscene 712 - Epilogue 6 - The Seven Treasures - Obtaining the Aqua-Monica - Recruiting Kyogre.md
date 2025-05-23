@@ -3,7 +3,9 @@
 
 🟡
 
+
 ❗
+
 
 >The treasure box contained... an Aqua-Monica!
 
@@ -16,6 +18,7 @@
   * *Pick a random number. If it is < 50:*
 
   *   * ⚪
+
 
 >Oh? Kyogre is saying something.
 >
@@ -33,6 +36,7 @@
 
 
   *   *   * ⚪
+
 
   *   *   * *Anchor: <a name="3"></a>3*
 
@@ -68,6 +72,7 @@
 
 
   *   *   *   * ⚪
+
 
   *   *   *   * *Jump to [anchor 3](#3)*
 

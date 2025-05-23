@@ -16,7 +16,10 @@
 `Snorunt`: "Har har... Har ha ha har!"
 
 
-`Grovyle Normal` ❗
+`Dusknoir`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Oh! Hey!"
 

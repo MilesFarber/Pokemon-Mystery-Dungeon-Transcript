@@ -6,7 +6,10 @@
 * * *
 
 
-`Partner Normal` 💦
+`Partner`: 💦
+
+
+`Partner Normal`
 
 `Partner Name`: "Hmm... We got maybe a little careless."
 

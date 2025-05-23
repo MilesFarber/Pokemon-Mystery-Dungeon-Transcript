@@ -4,12 +4,18 @@
 * * *
 
 
-`Grimer Pain` 〽
+`Grimer`: 〽
+
+
+`Grimer Pain`
 
 `Grimer`: "Uwaaaah!"
 
 
-`Grimer Pain` 💦
+`Grimer`: 💦
+
+
+`Grimer Pain`
 
 `Grimer`: "So stroooong!"
 
@@ -19,7 +25,10 @@
 `Shaymin`: "Have you come to your senses yet, Grimer and Muk?"
 
 
-`Grimer Normal` ❓
+`Grimer`: ❓
+
+
+`Grimer Normal`
 
 `Grimer`: "Huh?"
 
@@ -29,7 +38,10 @@
 `Grimer`: "H-huhhh?"
 
 
-`Grimer Surprised` ❗
+`Grimer`: ❗
+
+
+`Grimer Surprised`
 
 `Grimer`: "Oh! Shaymin!"
 
@@ -44,7 +56,10 @@
 `Shaymin`: "You know that this isn't your home, right?"
 
 
-`Grimer Surprised` 〽
+`Grimer`: 〽
+
+
+`Grimer Surprised`
 
 `Grimer`: "H-huhhh? This is so our hoooome..."
 
@@ -59,7 +74,10 @@
 `Shaymin`: "Dirty and grimy..."
 
 
-`Shaymin Normal` ❗
+`Shaymin`: ❗
+
+
+`Shaymin Normal`
 
 `Shaymin`: "I see..."
 
@@ -74,7 +92,10 @@
 `Shaymin`: "I'm sorry, Grimer and Muk. This is the mountain summit."
 
 
-`Grimer Surprised` 〽
+`Grimer`: 〽
+
+
+`Grimer Surprised`
 
 `Grimer`: "H-huhhhh?! The summit?!"
 
@@ -161,7 +182,11 @@
 
 〽
 
-`Breloom Surprised` 〽
+
+`Breloom`: 〽
+
+
+`Breloom Surprised`
 
 `Breloom`: "Wow!!"
 
@@ -173,10 +198,12 @@
 
 〽
 
+
 * * *
 
 
 ⚟
+
 
 * * *
 

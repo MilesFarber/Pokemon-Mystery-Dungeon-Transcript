@@ -1,12 +1,16 @@
 * * *
 
 
-💧
+`Chatot`: 💧
+
 
 `💬`: "Minion: Arrgh! What a farce..."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Say, Wigglytuff. Please, can you tell us what's going on?"
 
@@ -16,7 +20,13 @@
 `Partner Name`: "Grand Master: ...Who's...Wigglytuff?"
 
 
-`Partner Stunned` 〽
+`Wigglytuff`: ❓
+
+
+`Partner`: 〽
+
+
+`Partner Stunned`
 
 `Partner Name`: "What?!"
 
@@ -26,7 +36,10 @@
 `Partner Name`: "Grand Master: I am the grand master. I know nothing of your so-called Wigglytuff."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Whaaat?!"
 
@@ -46,7 +59,10 @@
 `Partner Name`: "Minion: Hey, hey, hey!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Wh-what's going on here?!"
 

@@ -6,12 +6,15 @@
 `Igglybuff`: "Wow! Amazing!"
 
 
-`Igglybuff Stunned`
+`Igglybuff Stunned` 🔆
 
 `Igglybuff`: "Secret base! Secret base! ♪"
 
 
-`Armaldo Worried` 💧
+`Armaldo`: 💧
+
+
+`Armaldo Worried`
 
 `Armaldo`: "Not quite. It's not a secret base, it's just my home..."
 
@@ -36,7 +39,10 @@
 `Igglybuff`: "So, what's exploring?"
 
 
-`Armaldo Normal` ❓
+`Armaldo`: ❓
+
+
+`Armaldo Normal`
 
 `Armaldo`: "Huh? You don't know about exploring?"
 
@@ -91,7 +97,10 @@
 `Armaldo`: "For example..."
 
 
-`Armaldo Normal` ⚞
+`Armaldo`: ⚞
+
+
+`Armaldo Normal`
 
 `Armaldo`: "For example, this secret map."
 
@@ -124,7 +133,10 @@
 `Armaldo`: "If I don't figure out the cipher, then I'll never be able to uncover the location of the treasure."
 
 
-`Armaldo Normal` ❓
+`Igglybuff`: ❓
+
+
+`Armaldo Normal`
 
 `Armaldo`: "But you're just a kid, you wouldn't know anything about this..."
 
@@ -139,7 +151,10 @@
 `Armaldo`: "However, I'm not giving up! I can't!"
 
 
-`Armaldo Sigh` ❗
+`Igglybuff`: ❗
+
+
+`Armaldo Sigh`
 
 `Armaldo`: "I know that if I can overcome this challenge, there will be a future!"
 
@@ -154,7 +169,10 @@
 `Armaldo`: "Its thrill! Its essence! Its never-ending attraction!"
 
 
-`Armaldo Surprised` 〽
+`Armaldo`: 〽
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "...Hey!"
 
@@ -184,7 +202,10 @@
 `Armaldo`: "Water! WATER!"
 
 
-`Armaldo Sigh` ❗
+`Armaldo`: ❗
+
+
+`Armaldo Sigh`
 
 `Armaldo`: "! Oh yeah! Water Gun!!"
 
@@ -203,7 +224,7 @@
 `Armaldo`: "Ah oh... Ah oh..."
 
 
-`Armaldo Sad`
+`Armaldo Sad` 💦
 
 `Armaldo`: "My... My precious secret map..."
 
@@ -236,7 +257,10 @@
 >Igglybuff brushed away the charred parts of the map.
 
 
-`Armaldo Surprised` 〽
+`Armaldo`: 〽
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "Wh-what?"
 
@@ -251,7 +275,10 @@
 `Armaldo`: "Eastern... Ca...ve... Eastern Cave?!"
 
 
-`Armaldo Surprised` 〽
+`Armaldo`: 〽
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "R-really?! Is it true there's treasure there?!"
 
@@ -261,7 +288,7 @@
 `Igglybuff`: "Yep! I knew it! ♪ Ha ha ha! ♪"
 
 
-`Armaldo Normal` 🔆
+`Armaldo Normal`
 
 `Armaldo`: "That is... How did you know? How did you figure out this map's secret?"
 
@@ -286,7 +313,7 @@
 `Igglybuff`: "So I thought I'd burn it off! ♪"
 
 
-`Armaldo Surprised` 🔆
+`Armaldo Surprised`
 
 `Armaldo`: "... (Th-this kid...)"
 
@@ -341,7 +368,7 @@
 `Igglybuff`: "If you don't go, it will be a waste! ♪"
 
 
-`Armaldo Normal` ◀▼▶
+`Armaldo Normal`
 
 `Armaldo`: "... (Th-that's...)"
 

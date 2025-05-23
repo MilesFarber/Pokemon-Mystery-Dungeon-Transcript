@@ -14,7 +14,7 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Waah! Wh-what's happening?"
 
@@ -39,7 +39,10 @@
 `Spiritomb`: "R-r-run away!"
 
 
-`Partner Normal` 💧
+`Partner`: 💧
+
+
+`Partner Normal`
 
 `Partner Name`: "Wh-what was that...? What was all that about?"
 
@@ -49,7 +52,10 @@
 `Grovyle`: "They got spooked and ran."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Grovyle!"
 
@@ -144,7 +150,10 @@
 `Partner Name`: "That makes me sad."
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Hey! You two!"
 
@@ -182,6 +191,9 @@
 `Partner Sad` 💦
 
 `Partner Name`: "Oh, wait!"
+
+
+`Partner`: 💦
 
 
 `Partner Sad`

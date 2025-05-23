@@ -1,12 +1,12 @@
 * * *
 
 
-`Gardevoir Surprised` ❗
+`Gardevoir Surprised` 〽
 
 `Gardevoir`: "S-someone's...unconscious!"
 
 
-`Lopunny Normal`
+`Lopunny Normal` ❗
 
 `Lopunny`: "...He's not moving..."
 
@@ -16,7 +16,10 @@
 `Medicham`: "Not moving... It can't be..."
 
 
-`Medicham Surprised` 〽
+`Medicham`: 〽
+
+
+`Medicham Surprised`
 
 `Medicham`: "Huh?! Oh, no! Is he...?"
 
@@ -34,7 +37,10 @@
 >Guuuuuuuu!
 
 
-`Medicham Surprised` ❗
+`Lopunny`: ❗
+
+
+`Medicham Surprised`
 
 `Medicham`: "Th-that sound again!"
 
@@ -47,7 +53,10 @@
 >Guuuuuuuu!
 
 
-`Lopunny Sigh` 💧
+`Lopunny`: 💧
+
+
+`Lopunny Sigh`
 
 `Lopunny`: "I-is that from...?"
 
@@ -72,7 +81,10 @@
 >An extraordinarily delicious Perfect Apple.
 
 
-`Wigglytuff Shouting` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Shouting`
 
 `Wigglytuff`: "...Ooogh..."
 
@@ -107,7 +119,7 @@
 `Wigglytuff`: "Crunch munch! Chomp chomp! Gobble gulp! Crunch munch! Chomp chomp! Gobble gulp!"
 
 
-`Wigglytuff Sigh`
+`Wigglytuff Sigh` 🍴
 
 `Wigglytuff`: "Crunch munch! Chomp chomp! Gobble gulp! Crunch munch! Chomp chomp! Gobble gulp!"
 
@@ -127,7 +139,10 @@
 `Wigglytuff`: "Perfect Apples are my number-one-favorite food! ♪"
 
 
-`Lopunny Sigh` 💧
+`Lopunny`: 💧
+
+
+`Lopunny Sigh`
 
 `Lopunny`: "Y-you like Perfect Apples that much...?"
 
@@ -137,7 +152,10 @@
 `Lopunny`: "Here, you can have mine too."
 
 
-`Wigglytuff Sigh` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Sigh`
 
 `Wigglytuff`: "R-really?!"
 
@@ -180,7 +198,10 @@
 `Gardevoir`: "Wigglytuff? Nice to meet you."
 
 
-`Lopunny Normal` ❓
+`Lopunny`: ❓
+
+
+`Lopunny Normal`
 
 `Lopunny`: "I've never heard of the explorer Armaldo..."
 
@@ -205,7 +226,13 @@
 `Medicham`: "We're the ones who are going to find that treasure!"
 
 
-`Wigglytuff Normal` ❓
+`Wigglytuff`: ❓
+
+
+`Wigglytuff`: ❓
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Treasure? What are you talking about?"
 
@@ -230,7 +257,10 @@
 `Wigglytuff`: "And passed out here. That's all. ♪"
 
 
-`Gardevoir Sigh` 💧
+`Lopunny`: 💧
+
+
+`Gardevoir Sigh`
 
 `Gardevoir`: "Oh... Is that it...?"
 
@@ -245,7 +275,7 @@
 `Medicham`: "He's such a strange explorer..."
 
 
-`Lopunny Normal` 🍎
+`Lopunny Normal`
 
 `Lopunny`: "Well, let's hurry on ahead."
 

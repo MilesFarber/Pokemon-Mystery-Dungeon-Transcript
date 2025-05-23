@@ -24,7 +24,7 @@
 `Medicham`: "Oh no! Don't tell me we're lost!?"
 
 
-`Medicham Stunned`
+`Medicham Stunned` 💦
 
 `Medicham`: "What do we do...? We should just try to keep moving forward, right...?"
 
@@ -77,15 +77,13 @@
 `💬`: "Wait! You!"
 
 
-〽
-
 `💬`: "You! Where did you come from?!"
 
 
 `💬`: "This is my... How could you not know this is Aggron's territory?!"
 
 
-`Lopunny Normal`
+`Lopunny Normal` 〽
 
 `Lopunny`: "Really? We didn't know."
 
@@ -102,15 +100,13 @@
 `Aggron`: "Come on out! Lairon!"
 
 
-`Aggron`: "Lairon: Groooaaahh!"
+`💬`: "Lairon: Groooaaahh!"
 
-
-〽
 
 `Aggron`: "GRAA-HAHAHAHA-HAHAHAHA!! GRAA-HAHAHAHA-HAHAHAHA-HAHAHAHA!!"
 
 
-`Aggron Normal` 〽
+`Aggron Normal`
 
 `Aggron`: "We show no mercy to those who invade our territory!"
 
@@ -176,9 +172,7 @@
 `Aggron`: "Let's go! Lairon! Get them!!"
 
 
-`Aggron Normal` ◀▼▶
-
-`Aggron`: "Lairon: Groooaaahh!"
+`💬`: "Lairon: Groooaaahh!"
 
 
 `Gardevoir Normal`

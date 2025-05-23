@@ -11,7 +11,10 @@
 `Dugtrio`: "No time to catch our breath. We've got to hurry!"
 
 
-`Corphish Normal` ❗
+`Corphish`: ❗
+
+
+`Corphish Normal`
 
 `Corphish`: "Hey, hey! Someone's over there!"
 
@@ -26,7 +29,10 @@
 `Chatot`: "Squ-squ-squawk?!"
 
 
-`Loudred Normal` 💦
+`Loudred`: 💦
+
+
+`Loudred Normal`
 
 `Loudred`: "Gr-Gr-Gr-"
 
@@ -36,7 +42,10 @@
 `Sunflora`: "It's Groudon! Spit it out!"
 
 
-`Chimecho Normal` 〽
+`Chimecho`: 〽
+
+
+`Chimecho Normal`
 
 `Chimecho`: "D-d-d-ding!"
 
@@ -51,9 +60,12 @@
 `Wigglytuff`: "Hello to one and all! So what's wrong?"
 
 
-`Chatot Surprised` ❗
+`Chatot Surprised` 💦
 
 `Chatot`: "G-G-Guildmaster!"
+
+
+`Chatot`: 💦
 
 
 `Wigglytuff Normal`
@@ -71,9 +83,10 @@
 `Wigglytuff`: "Pretty! Pretty!"
 
 
-`Wigglytuff Normal` ❓
+`Chatot`: ❓
 
-`Wigglytuff`: "Everyone: HUH?"
+
+`💬`: "Everyone: HUH?"
 
 
 * * *

@@ -36,7 +36,10 @@
 `Azurill`: "We need your help finding a Water Float."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "A Water Float?"
 
@@ -56,7 +59,10 @@
 `Marill`: "We didn't find it. Instead, this is what we found."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "This scrap of paper?"
 
@@ -89,7 +95,10 @@
 `Partner Name`: "Can't handle it? Go cry to your big-shot friends! Chaw-haw-haw!" Hey! This note! It's a..."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "It's a ransom note! Isn't it?!"
 
@@ -154,7 +163,10 @@
 `Marill`: "I just c-c-can't stand how weak I am..."
 
 
-`Partner Normal` 💦
+`Marill`: 💦
+
+
+`Partner Normal`
 
 `Partner Name`: "No problem! I know what to do!"
 

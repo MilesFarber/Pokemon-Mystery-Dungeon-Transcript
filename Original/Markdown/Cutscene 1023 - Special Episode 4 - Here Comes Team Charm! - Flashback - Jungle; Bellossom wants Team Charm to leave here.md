@@ -1,7 +1,7 @@
 * * *
 
 
-`Medicham Happy` 🔆
+`Medicham Happy`
 
 `Medicham`: "All right, let's do our best and get through this jungle! ♪"
 

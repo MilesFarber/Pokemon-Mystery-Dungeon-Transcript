@@ -41,7 +41,13 @@
 `Manaphy`: "?"
 
 
-`Partner Teary-Eyed` 💦
+`Manaphy`: ❓
+
+
+`Partner`: 💦
+
+
+`Partner Teary-Eyed`
 
 `Partner Name`: "Urf... As you get older... Please don't forget us..."
 
@@ -49,6 +55,9 @@
 `Manaphy Stunned` ❓
 
 `Manaphy`: "...? `Partner Name`?"
+
+
+`Manaphy`: ❓
 
 
 `Manaphy Stunned`
@@ -81,7 +90,10 @@
 `Walrein`: "We're going, Manaphy."
 
 
-`Manaphy Stunned` ❓
+`Manaphy`: ❓
+
+
+`Manaphy Stunned`
 
 `Manaphy`: "...?"
 
@@ -91,12 +103,18 @@
 `Manaphy`: "...???"
 
 
-`Manaphy Surprised` 💦
+`Manaphy`: 💦
+
+
+`Manaphy Surprised`
 
 `Manaphy`: "...`Hero Name`?"
 
 
-`Manaphy Surprised` 💦
+`Manaphy`: 💦
+
+
+`Manaphy Surprised`
 
 `Manaphy`: "...`Partner Name`?"
 

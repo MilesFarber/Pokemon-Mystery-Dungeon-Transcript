@@ -11,7 +11,10 @@
 `Hero Name`: "(Maybe it's that stone `Partner Name` found...)"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Oh! Here!)"
 
@@ -26,7 +29,10 @@
 `Partner Name`: "Did you figure something out, `Hero Name`?"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "What? That stone I found at the base camp?"
 

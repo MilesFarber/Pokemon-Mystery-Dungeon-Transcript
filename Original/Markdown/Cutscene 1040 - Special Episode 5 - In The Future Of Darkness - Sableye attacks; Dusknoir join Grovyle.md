@@ -14,8 +14,6 @@
 `Grovyle`: "But it's still a ways to Temporal Tower. Mustn't lose any time."
 
 
-❗
-
 `Dusknoir`: "Grovyle!"
 
 
@@ -34,6 +32,9 @@
 `Dusknoir`: "Ah. You're injured too."
 
 
+`Sableye`: 〽
+
+
 `Sableye Sigh` 💦
 
 `Sableye`: "Gro-Grovyle!"
@@ -44,9 +45,7 @@
 `Sableye`: "There he is! Over there!"
 
 
-`Sableye Normal`
-
-`Sableye`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 `Dusknoir Normal`
@@ -69,9 +68,7 @@
 `Dusknoir`: "Be so good as to knock out Grovyle!"
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 `Sableye Normal`
@@ -84,7 +81,10 @@
 `Grovyle`: "Agh!"
 
 
-`Dusknoir Normal` 〽
+`Dusknoir`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Wh... What do you think you are doing?!"
 
@@ -102,7 +102,7 @@
 `Dusknoir`: "Gah! Wh-what is the meaning of this?!"
 
 
-`Dusknoir Pain`
+`Dusknoir Pain` 〽
 
 `Dusknoir`: "Why... What do you mean by suddenly attacking me?!"
 
@@ -152,9 +152,7 @@
 `Grovyle`: "We'll... Both of us will get knocked out!"
 
 
-`Grovyle Normal`
-
-`Grovyle`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 * * *

@@ -4,8 +4,6 @@
 * * *
 
 
-❗
-
 `Sunflora`: "Wait! Haunter!"
 
 

@@ -7,7 +7,7 @@
 * * *
 
 
-`Partner Normal` ❗
+`Partner Normal`
 
 `Partner Name`: "Good morning, `Hero Name`!"
 

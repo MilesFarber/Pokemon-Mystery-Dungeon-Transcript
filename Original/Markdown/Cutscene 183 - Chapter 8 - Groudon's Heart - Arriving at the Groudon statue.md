@@ -16,7 +16,10 @@
 `Partner Name`: "Is this the deepest part of the forest?"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Hmm... The fog is so thick, I can't tell which way we can go."
 
@@ -24,7 +27,10 @@
 `💬`: "Hey, hey, hey!"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Look, it's Corphish!"
 
@@ -54,7 +60,10 @@
 `Corphish`: "But... There is something here that's kind of interesting."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Interesting?"
 
@@ -64,7 +73,7 @@
 `Corphish`: "There. Have a look for yourself."
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Wh-what?! What is this?!"
 
@@ -89,7 +98,10 @@
 `Corphish`: "I've never seen a Pokémon like that before."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? Is this an inscription here?"
 
@@ -122,7 +134,10 @@
 `Partner Name`: "The path to treasure shall be revealed."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "The path to treasure"? That's incredible!"
 
@@ -150,7 +165,10 @@
 `Partner Name`: "The secret to finding Fogbound Lake could be hidden right here!"
 
 
-`Corphish Normal` ❗
+`Corphish`: ❗
+
+
+`Corphish Normal`
 
 `Corphish`: "Hey, hey, hey! Y-you think so?"
 
@@ -190,12 +208,18 @@
 `Partner Name`: "Hmm..."
 
 
-`Partner Normal` ⚟
+`Partner`: ⚟
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? Wait!"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "I know! Touch this statue, `Hero Name`!"
 

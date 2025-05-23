@@ -1,7 +1,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Oh, Palkia!"
 
@@ -36,17 +36,17 @@
 `Palkia`: "WHAT... WHAT DID YOU SAY?!"
 
 
-`Palkia Normal`
+`Palkia Normal` 〽
 
 `Palkia`: "I'M...IN A NIGHTMARE...?"
 
 
-`Palkia Normal`
+`Palkia Normal` 〽
 
 `Palkia`: "GRRR-OOOOOOOO!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Wa-waah!"
 
@@ -69,7 +69,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Waah! Palkia!"
 
@@ -112,7 +112,10 @@
 * * *
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk! But there must be..."
 
@@ -170,7 +173,7 @@
 `Partner Name`: "Urk...!"
 
 
-`Partner Pain`
+`Partner Pain` 〽
 
 `Partner Name`: "Palkia is saying the same thing Cresselia said..."
 
@@ -195,7 +198,10 @@
 `Partner Name`: "Maybe we do have to disappear."
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(`Partner Name`!)"
 
@@ -221,7 +227,10 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "C-Cresselia!"
 
@@ -241,7 +250,10 @@
 `Cresselia`: "Before we finally pass the point of no return."
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk... `Hero Name`..."
 
@@ -266,7 +278,10 @@
 `Cresselia`: "So are you ready for your end?"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk... Cresselia... One moment!"
 
@@ -364,7 +379,10 @@
 `Palkia`: "BUT ARE THEY TRULY BAD?"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(C-Cresselia said that about us?! In Palkia's dreams?!)"
 

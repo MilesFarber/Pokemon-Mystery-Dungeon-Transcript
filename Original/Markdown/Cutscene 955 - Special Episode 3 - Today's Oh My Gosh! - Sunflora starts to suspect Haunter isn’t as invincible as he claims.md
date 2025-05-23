@@ -11,7 +11,10 @@
 `Sunflora`: "He was really concerned about me..."
 
 
-`Sunflora Normal` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Normal`
 
 `Sunflora`: "...What?!"
 
@@ -21,7 +24,10 @@
 `Sunflora`: "W-wait a minute!"
 
 
-`Sunflora Normal` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Loudred... What Loudred said..."
 
@@ -47,7 +53,10 @@
 * * *
 
 
-`Sunflora Normal` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Normal`
 
 `Sunflora`: "...! (Don't tell me...)"
 

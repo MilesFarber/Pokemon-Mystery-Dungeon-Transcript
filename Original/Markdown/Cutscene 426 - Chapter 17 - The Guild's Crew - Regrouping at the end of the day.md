@@ -56,7 +56,10 @@
 `Sunflora`: "We'll resume our efforts tomorrow!"
 
 
-`Partner Teary-Eyed` 💦
+`Partner`: 💦
+
+
+`Partner Teary-Eyed`
 
 `Partner Name`: "Oh, well... Thanks, everyone!"
 

@@ -89,7 +89,10 @@
 `Chatot`: "And, finally, `Hero Name` and `Partner Name`! You two are assigned to the Northern Desert."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "The Northern Desert?"
 

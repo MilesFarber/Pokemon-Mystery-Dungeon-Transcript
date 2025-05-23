@@ -6,7 +6,10 @@
 `Loudred`: "Grrr..."
 
 
-`Partner Sad` 💧
+`Hero`: 💧
+
+
+`Partner Sad`
 
 `Partner Name`: "Can you let it go, please?"
 

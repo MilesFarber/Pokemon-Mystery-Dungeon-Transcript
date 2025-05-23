@@ -14,7 +14,7 @@
 * * *
 
 
-`Darkrai Normal` 〽
+`Darkrai Normal`
 
 `Darkrai`: "And with you out of the way..."
 

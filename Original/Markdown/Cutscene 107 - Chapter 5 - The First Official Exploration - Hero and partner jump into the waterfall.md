@@ -1,7 +1,10 @@
 * * *
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(It happened again!)"
 
@@ -21,7 +24,10 @@
 `Partner Name`: "Oh? What's the matter, `Hero Name`?"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! You had another vision?"
 

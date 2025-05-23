@@ -11,7 +11,10 @@
 `Partner Name`: "It looks like it's really stormy tonight..."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "That reminds me!"
 

@@ -6,7 +6,10 @@
 `Partner Name`: "Grovyle isn't here..."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! Over there!"
 
@@ -21,7 +24,10 @@
 `Partner Name`: "There's something written on it in footprint runes."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "This is a letter from Grovyle!"
 
@@ -58,7 +64,10 @@
 >Dusknoir is liable to return from the future at any time.
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Dusknoir?!"
 

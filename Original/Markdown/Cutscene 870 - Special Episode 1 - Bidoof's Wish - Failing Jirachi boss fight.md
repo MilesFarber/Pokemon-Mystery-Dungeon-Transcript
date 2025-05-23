@@ -21,7 +21,10 @@
 `Bidoof`: "However..."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "He said he tosses and turns in his sleep... Sniff..."
 

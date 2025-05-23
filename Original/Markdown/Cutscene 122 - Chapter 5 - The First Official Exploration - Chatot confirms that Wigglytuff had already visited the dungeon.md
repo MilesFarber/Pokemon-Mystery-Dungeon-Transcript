@@ -6,12 +6,15 @@
 `Chatot`: "Your waterfall discovery is just amazing! The Guildmaster must be told! ♪"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh? What's the matter, `Hero Name`?"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Pardon?!"
 
@@ -21,12 +24,15 @@
 `Partner Name`: "You're saying Wigglytuff may have gone to that waterfall before?!"
 
 
+`Chatot`: ❗
+
+
 `Chatot Surprised` 💦
 
 `Chatot`: "No, no, no! Emphatically no! That's inconceivable!"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 💦
 
 `Chatot`: "If that were so, the Guildmaster wouldn't have ordered you to investigate the place, right?"
 
@@ -46,7 +52,10 @@
 `Chatot`: "I should be used to it by now..."
 
 
-`Chatot Pain` 💧
+`Chatot`: 💧
+
+
+`Chatot Pain`
 
 `Chatot`: "These apprentices are yet another strange crew, aren't they...?"
 
@@ -56,7 +65,10 @@
 `Partner Name`: "What was that, Chatot?"
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "What? Oh, nothing, nothing. Nothing at all!"
 
@@ -109,7 +121,10 @@
 `Chatot`: "And that's just what the Guildmaster said."
 
 
-`Chatot Normal` 💧
+`Hero`: 💧
+
+
+`Chatot Normal`
 
 `Chatot`: "To sum it up, it's just as `Hero Name` suspected... He has indeed already been to Waterfall Cave."
 
@@ -124,7 +139,10 @@
 `Partner Name`: "We really thought we'd discovered a new place."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "I wish Wigglytuff had told us right from the start..."
 

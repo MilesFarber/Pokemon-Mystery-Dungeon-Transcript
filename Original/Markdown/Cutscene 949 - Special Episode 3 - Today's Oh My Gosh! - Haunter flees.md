@@ -31,7 +31,10 @@
 `Haunter`: "It will be you! And all explorers who come after me and try to catch me!"
 
 
-`Sunflora Stunned` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Stunned`
 
 `Sunflora`: "Ooohhhh..."
 
@@ -71,12 +74,12 @@
 `Sunflora`: "Oh my gosh! I'm not listening to you!"
 
 
-`Sunflora Angry`
+`Sunflora Angry` 💢
 
 `Sunflora`: "Do you think a little setback like this is enough to get me to give up?!"
 
 
-`Sunflora Angry`
+`Sunflora Angry` 💢
 
 `Sunflora`: "I will chase you down and arrest you, just you wait and see!"
 

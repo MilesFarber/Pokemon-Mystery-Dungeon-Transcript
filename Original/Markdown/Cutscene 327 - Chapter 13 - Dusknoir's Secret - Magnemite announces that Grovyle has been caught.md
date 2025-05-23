@@ -40,7 +40,10 @@
 `Magnemite`: "Zzzt! Grovyle has finally been captured! Zzzt!"
 
 
-`Loudred Normal` ❗
+`Corphish`: ❗
+
+
+`Loudred Normal`
 
 `Loudred`: "Whoa! At LAST!"
 
@@ -64,7 +67,7 @@
 `Magnemite`: "Zzzt! He has informed us that he will return to the future with Grovyle! Zzzt!"
 
 
-`Chimecho Normal` 〽
+`Chimecho Normal`
 
 `Chimecho`: "Dusknoir is..."
 

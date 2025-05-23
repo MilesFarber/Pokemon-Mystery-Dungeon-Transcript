@@ -19,7 +19,7 @@
 `Partner Name`: "It's hard to put the Time Gears into place!"
 
 
-`Partner Inspired` ❗
+`Partner Inspired`
 
 `Partner Name`: "I did it! They're in place!"
 
@@ -27,12 +27,15 @@
 * * *
 
 
-`Partner Shouting` 〽
+`Partner Shouting`
 
 `Partner Name`: "Waaaaah!"
 
 
-`Partner Surprised` 〽
+`Hero`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Wh-why?!"
 

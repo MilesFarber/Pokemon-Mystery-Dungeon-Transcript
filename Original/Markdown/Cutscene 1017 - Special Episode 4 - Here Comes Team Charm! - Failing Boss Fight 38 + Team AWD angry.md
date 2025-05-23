@@ -1,7 +1,10 @@
 * * *
 
 
-`Arbok Surprised` 〽
+`Drapion`: 〽
+
+
+`Arbok Surprised`
 
 `Arbok`: "Th-they're...not here!"
 
@@ -26,9 +29,7 @@
 `Weavile`: "Get the treasure from them!"
 
 
-`Weavile Angry`
-
-`Weavile`: "Arbok & Drapion: YEAH!"
+`💬`: "Arbok & Drapion: YEAH!"
 
 
 * * *

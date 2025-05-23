@@ -7,17 +7,29 @@
 `Chatot`: "Hey! You two!"
 
 
-`Chatot Pain` 💦
+`Partner`: ❗
+
+
+`Chatot`: 💦
+
+
+`Chatot Pain`
 
 `Chatot`: "Huff...puff..."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "What's wrong, Chatot? What's the big hurry?"
 
 
-`Chatot Pain` 💦
+`Chatot`: 💦
+
+
+`Chatot Pain`
 
 `Chatot`: "Huff-huff... The beach... At the beach..."
 
@@ -32,7 +44,7 @@
 `Chatot`: "Manaphy! Manaphy came back!"
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "What?! Manaphy...?"
 

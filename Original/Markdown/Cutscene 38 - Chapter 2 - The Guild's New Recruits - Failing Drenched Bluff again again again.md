@@ -6,12 +6,15 @@
 `Chatot`: "Guildmaster, I've brought you Team `Team Name`."
 
 
-`Chatot Normal` ⚟
+`Chatot`: ⚟
+
+
+`Chatot Normal`
 
 `Chatot`: "Guildmaster... Guildmaster?"
 
 
-`Wigglytuff Normal` ❗
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Hiya!"
 

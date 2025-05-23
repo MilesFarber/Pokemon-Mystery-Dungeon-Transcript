@@ -1,9 +1,8 @@
 ⛈️
 
+
 * * *
 
-
-⛈️
 
 `Partner Name`: "But my guess is that if a Time Gear is removed from a region..."
 

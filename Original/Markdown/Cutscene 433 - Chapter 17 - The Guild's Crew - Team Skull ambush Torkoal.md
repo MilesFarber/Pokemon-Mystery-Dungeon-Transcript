@@ -9,7 +9,7 @@
 `Torkoal`: "Oh, to be young again!"
 
 
-`Torkoal Normal`
+`Torkoal Normal` 🔆
 
 `Torkoal`: "If I was younger, I'd certainly join the challenge to find the Hidden Land."
 
@@ -17,12 +17,18 @@
 `💬`: "Whoa-ho-ho! Hold it there, old-timer!"
 
 
-`Torkoal Surprised` 〽
+`Torkoal`: 〽
+
+
+`Torkoal Surprised`
 
 `Torkoal`: "Wh-who is it?"
 
 
-`Torkoal Surprised` 💦
+`Torkoal`: 💦
+
+
+`Torkoal Surprised`
 
 `Torkoal`: "Wha-what is it? What do you want?"
 
@@ -47,12 +53,18 @@
 `Skuntank`: "Something about the Hidden Land. Chaw-haw-haw!"
 
 
-`Torkoal Surprised` 💦
+`Torkoal`: 💦
+
+
+`Torkoal Surprised`
 
 `Torkoal`: "I... I was only..."
 
 
-`Zubat Normal` ❗
+`Zubat`: ❗
+
+
+`Zubat Normal`
 
 `Zubat`: "Huh? Someone's coming!"
 
@@ -72,7 +84,10 @@
 `Skuntank`: "Why don't we take this chat somewhere we won't be disturbed? Chaw-haw!"
 
 
-`Torkoal Surprised` 💦
+`Torkoal`: 💦
+
+
+`Torkoal Surprised`
 
 `Torkoal`: "Hey...!"
 

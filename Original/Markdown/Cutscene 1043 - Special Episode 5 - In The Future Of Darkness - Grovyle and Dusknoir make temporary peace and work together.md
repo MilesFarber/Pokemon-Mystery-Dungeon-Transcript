@@ -4,12 +4,18 @@
 * * *
 
 
-`Sableye Pain` 💦
+`Sableye`: 💦
+
+
+`Sableye Pain`
 
 `Sableye`: "Wheh-heh-heh!"
 
 
-`Sableye Sigh` 💦
+`Sableye`: 💦
+
+
+`Sableye Sigh`
 
 `Sableye`: "R-runnnn! Wheh-heh-heh!"
 
@@ -54,7 +60,10 @@
 `Grovyle`: "Don't you think maybe Dialga gave them that order?"
 
 
-`Dusknoir Normal` 〽
+`Dusknoir`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Wh... What are you implying?!"
 

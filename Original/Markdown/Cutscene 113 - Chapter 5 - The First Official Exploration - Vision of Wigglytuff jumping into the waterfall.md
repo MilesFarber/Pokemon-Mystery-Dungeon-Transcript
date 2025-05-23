@@ -9,6 +9,12 @@
   * *Anchor: <a name="2"></a>2*
 
 
+  * `Primal Wigglytuff`: ❗
+
+
+  * `Primal Wigglytuff`: 💦
+
+
   * * * *
 
 

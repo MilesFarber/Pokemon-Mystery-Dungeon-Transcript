@@ -1,7 +1,10 @@
 * * *
 
 
-`Igglybuff Normal` ❗
+`Igglybuff`: ❗
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "Oh! There's an opening in the rock here, deep in the forest!"
 

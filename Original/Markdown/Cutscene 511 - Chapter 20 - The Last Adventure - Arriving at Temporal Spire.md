@@ -14,7 +14,7 @@
 `Partner Name`: "I wonder how much more we have to climb to reach the top...?"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Wa-waah! Another tremor!"
 
@@ -54,7 +54,7 @@
 `Partner Name`: "Our planet's paralysis will begin."
 
 
-`Partner Determined` 〽
+`Partner Determined`
 
 `Partner Name`: "So let's hurry, `Hero Name`!"
 

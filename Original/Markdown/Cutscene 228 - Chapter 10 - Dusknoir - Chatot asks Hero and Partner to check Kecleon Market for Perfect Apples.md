@@ -16,7 +16,10 @@
 `Chatot`: "I'd like you to run an errand."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "An errand?"
 

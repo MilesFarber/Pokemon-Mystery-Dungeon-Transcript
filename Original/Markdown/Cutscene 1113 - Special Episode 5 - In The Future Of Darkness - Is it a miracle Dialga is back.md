@@ -49,7 +49,13 @@
 `Primal Dialga`: "NO. IT WAS NO MIRACLE."
 
 
-`Grovyle Normal` 〽
+`Celebi`: ❗
+
+
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Dialga!"
 

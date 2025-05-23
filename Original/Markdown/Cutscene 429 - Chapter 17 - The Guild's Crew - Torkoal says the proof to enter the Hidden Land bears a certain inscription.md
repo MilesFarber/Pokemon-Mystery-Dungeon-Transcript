@@ -1,7 +1,10 @@
 * * *
 
 
-`Torkoal Normal` 💦
+`Torkoal`: 💦
+
+
+`Torkoal Normal`
 
 `Torkoal`: "Huff-huff... Finally, I caught up with you."
 
@@ -16,7 +19,10 @@
 `Partner Name`: "What brings you here, Torkoal?"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Did you...maybe remember something?"
 
@@ -31,7 +37,10 @@
 `Torkoal`: "Yesterday, I contemplated the waters of the Hot Spring for a long time. Finally, one recollection surfaced."
 
 
-`Torkoal Normal` 💦
+`Torkoal`: 💦
+
+
+`Torkoal Normal`
 
 `Torkoal`: "But...it really is something small."
 
@@ -71,7 +80,10 @@
 `Torkoal`: "The proof...bears an inscription of a certain pattern."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "A certain pattern?"
 
@@ -141,7 +153,10 @@
 `Hero Name`: "(A pattern you rarely see... A peculiar...)"
 
 
-`Hero Normal` ❗
+`Hero`: ❗
+
+
+`Hero Normal`
 
 `Hero Name`: "(Wait a second! A peculiar pattern?)"
 

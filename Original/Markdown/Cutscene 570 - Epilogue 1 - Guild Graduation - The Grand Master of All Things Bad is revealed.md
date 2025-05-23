@@ -24,7 +24,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Oh no! The hole!"
 
@@ -97,7 +97,10 @@
 `💬`: "Grand Master: Uh..."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! Wigglytuff?!"
 
@@ -112,7 +115,10 @@
 `Partner Name`: "What's going on here?!"
 
 
-`Partner Surprised` 💦
+`Chatot`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "Minion: H-hey! Bidoof!"
 

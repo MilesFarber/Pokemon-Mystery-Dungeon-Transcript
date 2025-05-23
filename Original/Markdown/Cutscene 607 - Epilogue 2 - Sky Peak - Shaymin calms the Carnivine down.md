@@ -11,12 +11,16 @@
 
 ❗
 
+
 `Mawile Surprised` 〽
 
 `Mawile`: "Wh-what?!"
 
 
-`Carnivine Normal` ❓
+`Carnivine`: ❓
+
+
+`Carnivine Normal`
 
 `Carnivine`: "Huh? You..."
 
@@ -41,7 +45,10 @@
 `Shaymin`: "We've asked you before to stop bothering the explorers, haven't we?!"
 
 
-`Carnivine Normal` 💦
+`Carnivine`: 💦
+
+
+`Carnivine Normal`
 
 `Carnivine`: "Yeah, but! That Sneasel started it!"
 
@@ -51,7 +58,10 @@
 `Carnivine`: "We found some treasure earlier, and he snatched it right out from under our noses!"
 
 
-`Carnivine Normal` ❗
+`Carnivine`: ❗
+
+
+`Carnivine Normal`
 
 `Carnivine`: "!!! Where'd he go?!"
 
@@ -61,12 +71,18 @@
 `Carnivine`: "That...! He ran off in the confusion!"
 
 
-`Breloom Surprised` 〽
+`Breloom`: 〽
+
+
+`Breloom Surprised`
 
 `Breloom`: "Huh...? Really...?"
 
 
-`Mawile Sigh` 〽
+`Mawile`: 〽
+
+
+`Mawile Sigh`
 
 `Mawile`: "We all thought you were the bad guys..."
 
@@ -126,12 +142,18 @@
 `Breloom`: "That's why you shouldn't just judge by appearances..."
 
 
-`Machoke Normal` 💧
+`Machoke`: 💧
+
+
+`Machoke Normal`
 
 `Machoke`: "......... Sorry!"
 
 
-`Shaymin Happy` 💦
+`Shaymin`: 💦
+
+
+`Shaymin Happy`
 
 `Shaymin`: "It's all right! As long as you understand."
 

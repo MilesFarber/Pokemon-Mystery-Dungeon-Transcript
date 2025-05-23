@@ -32,22 +32,25 @@
 `Darkrai`: "Urrggghh..."
 
 
-`Darkrai Normal`
+`Darkrai Normal` 〽
 
 `Darkrai`: "C-Cresselia... Don't you remember...?"
 
 
-`Darkrai Normal`
+`Darkrai Normal` 〽
 
 `Darkrai`: "I said you...cannot catch me!"
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Hey! What is that?!"
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(It's a dimensional hole!)"
 
@@ -77,7 +80,10 @@
 `Darkrai`: "I will simply plunge the world into darkness in another time."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "S-stop! Darkrai!"
 
@@ -112,7 +118,10 @@
 `Darkrai`: "Good-bye to you!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk..."
 
@@ -130,7 +139,10 @@
 `Palkia`: "I WON'T ALLOW THAT!"
 
 
-`Darkrai Normal` ❗
+`Partner`: ❗
+
+
+`Darkrai Normal`
 
 `Darkrai`: "Wh-what?!"
 
@@ -138,7 +150,10 @@
 * * *
 
 
-`Darkrai Normal` ❗
+`Partner`: ❗
+
+
+`Darkrai Normal`
 
 `Darkrai`: "Y-you're..."
 
@@ -163,14 +178,16 @@
 `Palkia`: "TAKE THIS!"
 
 
-`Palkia Normal`
-
-`Palkia`: "GRRR-OOOOOO!"
+`💬`: "GRRR-OOOOOO!"
 
 
 🟡
 
-`Darkrai Normal` 〽
+
+`Darkrai`: 〽
+
+
+`Darkrai Normal`
 
 `Darkrai`: "What... Waaaaaah!"
 
@@ -191,7 +208,10 @@
 * * *
 
 
-`Hero Surprised` 〽
+`Partner`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(The dimensional hole...)"
 
@@ -226,7 +246,10 @@
 `Palkia`: "BUT, WHEREVER HE MAY BE...HE LIVES."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "When he recovers from injury..."
 
@@ -271,7 +294,7 @@
 `Cresselia`: "It's likely that Darkrai has lost his memory as well."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Darkrai has lost his memory?!"
 

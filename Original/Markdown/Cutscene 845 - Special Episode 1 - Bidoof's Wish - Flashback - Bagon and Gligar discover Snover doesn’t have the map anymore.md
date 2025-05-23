@@ -1,7 +1,10 @@
 * * *
 
 
-`Bagon Normal` 💦
+`Snover`: ❗
+
+
+`Bagon Normal`
 
 `Bagon`: "Ha! Finally caught you!"
 
@@ -16,7 +19,7 @@
 `Snover`: "Ow-ow! Let go of me!"
 
 
-`Bagon Normal` 💦
+`Bagon Normal`
 
 `Bagon`: "Nope. You know what we're looking for..."
 
@@ -36,12 +39,15 @@
 `Gligar`: "Bagon! He doesn't have the map!"
 
 
-`Bagon Surprised` 〽
+`Bagon`: 〽
+
+
+`Bagon Surprised`
 
 `Bagon`: "WHAAAAT?!"
 
 
-`Bagon Normal` 💦
+`Bagon Normal`
 
 `Bagon`: "Y-YOU! Where'd you stash it?!"
 

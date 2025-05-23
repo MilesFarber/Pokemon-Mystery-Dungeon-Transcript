@@ -1,7 +1,10 @@
 * * *
 
 
-`Medicham Surprised` 〽
+`Lopunny`: 〽
+
+
+`Medicham Surprised`
 
 `Medicham`: "Wh-where are we?!"
 

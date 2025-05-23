@@ -8,12 +8,16 @@
 
 ❗
 
+
 `Lopunny Surprised` 〽
 
 `Lopunny`: "Wh-what is this?!"
 
 
-`Gardevoir Surprised` ❗
+`Gardevoir`: ❗
+
+
+`Gardevoir Surprised`
 
 `Gardevoir`: "There's an inscription on the stone marker!"
 
@@ -52,24 +56,25 @@
 >And `Hero Name`'s aura spread to the ground!
 
 
-`Medicham Angry` ❗
+`Medicham Angry`
 
 `Medicham`: "GZZZ... GZZZZ..."
 
 
 ❗
 
+
 `Medicham Surprised` 〽
 
 `Medicham`: "What?!"
 
 
-`Gardevoir Surprised`
+`Gardevoir Surprised` ❗
 
 `Gardevoir`: "Regigigas!"
 
 
-`Lopunny Surprised`
+`Lopunny Surprised` 〽
 
 `Lopunny`: "We're in for another round?"
 
@@ -91,12 +96,13 @@
 
 〽
 
+
 `Medicham Surprised` 〽
 
 `Medicham`: "Wa-wa-waaah!"
 
 
-`Gardevoir Surprised`
+`Gardevoir Surprised` 〽
 
 `Gardevoir`: "Hurry, we have to get out!"
 

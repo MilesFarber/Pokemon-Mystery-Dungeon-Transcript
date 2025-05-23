@@ -39,7 +39,10 @@
 `Grovyle`: "I'm going. Don't let those Sableye catch you."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urk... `Hero Name`."
 
@@ -89,12 +92,13 @@
 `Partner Name`: "Arrgh! I don't know who or what to believe anymore!"
 
 
-`Partner Sad`
-
-`Partner Name`: "Wheh-heh-heh!"
+`💬`: "Wheh-heh-heh!"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "Waah! The Sableye!"
 

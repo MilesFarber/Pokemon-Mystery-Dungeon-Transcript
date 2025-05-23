@@ -26,7 +26,10 @@
 `Partner Name`: "Thank you. How nice of you, Bidoof!"
 
 
-`Bidoof Sigh` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sigh`
 
 `Bidoof`: "G-golly, you're embarrassing me! Aw, shucks..."
 

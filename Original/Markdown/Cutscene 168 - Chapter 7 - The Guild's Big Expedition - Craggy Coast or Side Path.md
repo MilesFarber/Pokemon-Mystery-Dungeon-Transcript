@@ -21,7 +21,10 @@
 `Hero Name`: "(Yes, `Partner Name` is getting stronger and more confident bit by bit...)"
 
 
-`Partner Worried` ❗
+`Partner`: ❗
+
+
+`Partner Worried`
 
 `Partner Name`: "Oh... Huh?"
 
@@ -36,7 +39,10 @@
 `Partner Name`: "If you look closely here, there are two entrances."
 
 
-`Bidoof Sad` 〽
+`Bidoof`: 〽
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Huh? Now, that is mighty vexing."
 

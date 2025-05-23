@@ -26,7 +26,10 @@
 `Azurill`: "And Mister Drowzee too!"
 
 
-`Drowzee Normal` ❗
+`Drowzee`: ❗
+
+
+`Drowzee Normal`
 
 `Drowzee`: "Huh?! Me?!"
 
@@ -51,7 +54,10 @@
 `Marill`: "Thank you so very much!"
 
 
-`Drowzee Normal` 💦
+`Drowzee`: 💦
+
+
+`Drowzee Normal`
 
 `Drowzee`: "Well...shucks, it's the least I could do."
 
@@ -86,17 +92,17 @@
 `Chatot`: "Well done! How remarkable!"
 
 
-`Chatot Joyous`
+`Chatot Joyous` 🔆
 
 `Chatot`: "It's truly quite marvelous! Marvelous indeed, Cresselia! ♪"
 
 
-`Chatot Joyous`
+`Chatot Joyous` 🔆
 
 `Chatot`: "We'd heard of your power to dispel darkness, but only in rumor."
 
 
-`Chatot Joyous`
+`Chatot Joyous` 🔆
 
 `Chatot`: "But it was all true! ♪ I must say, this is completely marvelous!"
 
@@ -146,7 +152,10 @@
 `Cresselia`: "Those encounters were always within dreams, weren't they?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "...That's... That's true!"
 

@@ -14,7 +14,10 @@
 `Partner Name`: "Look at all the gems sparkling!"
 
 
-`Partner Inspired` ❗
+`Partner`: ❗
+
+
+`Partner Inspired`
 
 `Partner Name`: "Wow, look over there! It's a gigantic gem!"
 
@@ -42,7 +45,10 @@
 `Partner Name`: "Urrrrgh! Urrrrgh! Ugh..."
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Nope, it's not budging..."
 
@@ -80,7 +86,10 @@
 `Hero Name`: "(Urrrrgh...ugh... Nope, no good...)"
 
 
-`Partner Sad` 💦
+`Hero`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "So you couldn't move it either, `Hero Name`..."
 

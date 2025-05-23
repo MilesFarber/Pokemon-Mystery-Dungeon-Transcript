@@ -21,7 +21,10 @@
 `Partner Name`: "I'm famished..."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Sorry, I know you're hungry too, `Hero Name`."
 

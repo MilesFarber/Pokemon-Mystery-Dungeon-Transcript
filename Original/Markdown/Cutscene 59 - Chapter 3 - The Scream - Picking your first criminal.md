@@ -39,8 +39,6 @@
 `Bidoof`: "Yes sirree, I hear you! Let's see. Eenie, meenie..."
 
 
-❗
-
 `💬`: "Stand clear! Updating listings!"
 
 
@@ -65,7 +63,7 @@
 `Partner Name`: "It's being...updated?"
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Yikes! Did you see that?! The panel flipped over!"
 
@@ -93,7 +91,10 @@
 `Bidoof`: "A Pokémon named Dugtrio swaps out the old jobs with new ones."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Dugtrio?"
 

@@ -1,8 +1,6 @@
 * * *
 
 
-◀▼▶
-
 `💬`: "Everyone: THREE! SMILES GO FOR MILES!"
 
 
@@ -11,9 +9,7 @@
 `Chatot`: "OK, Pokémon! Get to work! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Chatot Normal`
@@ -21,7 +17,10 @@
 `Chatot`: "Hey, Bidoof."
 
 
-`Bidoof Normal` ⚟
+`Bidoof`: ⚟
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Yes! What is it?"
 
@@ -41,7 +40,10 @@
 `Bidoof`: "........."
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "........Huh? What's wrong, Bidoof?"
 
@@ -51,7 +53,10 @@
 `Chatot`: "You're always doing little errands like this. It's nothing too difficult. ♪"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Golly, it's not that..."
 
@@ -86,7 +91,10 @@
 `Chatot`: "How badly do you think you would mess it up?!"
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Sniff... Then I'll just... I'll just..."
 
@@ -96,7 +104,10 @@
 `Bidoof`: "The story of my life... Yup yup..."
 
 
-`Chatot Normal` 💧
+`Chatot`: 💧
+
+
+`Chatot Normal`
 
 `Chatot`: "...Bidoof. Don't be so impatient."
 
@@ -126,7 +137,10 @@
 `Chatot`: "Do your best... And work hard at your training."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Sniff... So you're telling me I just need to be patient..."
 

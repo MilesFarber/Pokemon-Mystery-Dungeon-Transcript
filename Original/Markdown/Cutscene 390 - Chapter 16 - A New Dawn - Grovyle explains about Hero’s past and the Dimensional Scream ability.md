@@ -106,7 +106,10 @@
 `Grovyle`: "We needed the Dimensional Scream to accomplish that."
 
 
-`Partner Worried` 💦
+`Partner`: 💦
+
+
+`Partner Worried`
 
 `Partner Name`: "W-wait! Wait a second!"
 
@@ -131,12 +134,18 @@
 `Grovyle`: "Doesn't that show you how much you two trusted each other from the start?"
 
 
-`Partner Stunned` 💦
+`Partner`: 💦
+
+
+`Partner Stunned`
 
 `Partner Name`: "Urk! When you put it like that..."
 
 
-`Partner Worried` 💧
+`Partner`: 💧
+
+
+`Partner Worried`
 
 `Partner Name`: "I mean...it's a bit embarrassing."
 
@@ -156,7 +165,10 @@
 `Grovyle`: "Perhaps `Hero Name` grew to trust you very quickly because of that."
 
 
-`Partner Normal` ⚞
+`Partner`: ⚞
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! There's another thing I don't understand."
 

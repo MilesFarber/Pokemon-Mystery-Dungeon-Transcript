@@ -11,7 +11,10 @@
 `Uxie`: "But I used my Groudon illusion to chase most of them off."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Groudon? How'd you do that?"
 
@@ -34,7 +37,10 @@
 `Partner Name`: "Waah!"
 
 
-`Uxie Normal` 💦
+`Partner`: 💦
+
+
+`Uxie Normal`
 
 `Uxie`: "There is no need to be startled."
 
@@ -74,7 +80,10 @@
 `Partner Name`: "Took away their memories...?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "...Oh, I almost forgot! We hope to ask you something, Uxie!"
 
@@ -89,7 +98,10 @@
 `Partner Name`: "At present, a Pokémon! At one time, a human!"
 
 
-`Uxie Normal` ❗
+`Uxie`: ❗
+
+
+`Uxie Normal`
 
 `Uxie`: "Oh, really? A human?"
 
@@ -167,7 +179,10 @@
 `💬`: "A Time Gear! A Time Gear! Well, too bad!"
 
 
-`Wigglytuff Normal` ❗
+`Partner`: ❗
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "We can't take a Time Gear."
 

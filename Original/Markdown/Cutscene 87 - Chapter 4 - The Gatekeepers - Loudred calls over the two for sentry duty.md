@@ -4,7 +4,10 @@
 `Loudred`: "HEY, you two!"
 
 
-`Loudred Normal` ❗
+`Partner`: ❗
+
+
+`Loudred Normal`
 
 `Loudred`: "We need your help with something today!"
 
@@ -54,17 +57,20 @@
 `Loudred`: "...And that's THAT."
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "Huh?! I didn't follow that at all! How did we get involved in this?"
 
 
-`Loudred Angry` 〽
+`Loudred Angry` 💢
 
 `Loudred`: "Shut your YAP!"
 
 
-`Loudred Angry`
+`Loudred Angry` 💢
 
 `Loudred`: "NO MORE BELLYACHING! GO DO YOUR DUTY!"
 
@@ -87,7 +93,10 @@
 `Loudred`: "Climb down this hole and stand guard. You're on sentry duty!"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Sentry duty?"
 
@@ -112,7 +121,10 @@
 `Loudred`: "When you first came, you had your footprint evaluated, right?"
 
 
-`Partner Worried` ⚟
+`Partner`: ⚟
+
+
+`Partner Worried`
 
 `Partner Name`: "My footprint? What do you...?"
 

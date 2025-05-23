@@ -1,7 +1,10 @@
 * * *
 
 
-`Corphish Normal` ❗
+`Corphish`: ❗
+
+
+`Corphish Normal`
 
 `Corphish`: "Hey, hey! There's the way in!"
 

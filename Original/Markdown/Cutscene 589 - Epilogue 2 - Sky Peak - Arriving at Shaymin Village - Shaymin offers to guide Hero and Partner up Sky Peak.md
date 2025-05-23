@@ -14,7 +14,10 @@
 `Partner Name`: "It's so peaceful..."
 
 
-`Shaymin Normal` ❗
+`Shaymin`: ❗
+
+
+`Shaymin Normal`
 
 `Shaymin`: "Welcome to the Shaymin Village."
 
@@ -94,7 +97,10 @@
 `Partner Name`: "That explains why this place has only been talked about in legends, and nobody's come to visit."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh, yeah! Speaking of legends..."
 
@@ -172,7 +178,10 @@
 
   * *If the player chooses "No":*
 
-  *   * `Partner Surprised` 〽
+  *   * `Partner`: 〽
+
+
+  *   * `Partner Surprised`
 
   *   * `Partner Name`: "Whaat?! Really?!"
 

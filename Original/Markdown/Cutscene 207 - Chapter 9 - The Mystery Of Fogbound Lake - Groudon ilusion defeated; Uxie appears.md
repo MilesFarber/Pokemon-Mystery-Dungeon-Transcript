@@ -24,7 +24,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Waaah!"
 
@@ -32,7 +32,10 @@
 * * *
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? Groudon vanished?!"
 
@@ -54,15 +57,16 @@
 * * *
 
 
-〽
-
 `💬`: "Like I said earlier, I am the guardian here."
 
 
 `💬`: "And I cannot allow you to pass."
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "W-wait, please!"
 
@@ -121,7 +125,8 @@
 
 🟡
 
-`Uxie Normal` 🟡
+
+`Uxie Normal`
 
 `Uxie`: "Let me welcome you, then."
 

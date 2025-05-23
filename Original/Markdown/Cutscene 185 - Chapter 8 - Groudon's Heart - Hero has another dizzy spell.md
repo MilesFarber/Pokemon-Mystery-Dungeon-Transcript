@@ -1,7 +1,10 @@
 * * *
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Wh-what was that?)"
 

@@ -6,7 +6,7 @@
 * * *
 
 
-`Chimecho Normal` ⚟
+`Chimecho Normal`
 
 `Chimecho`: "I finished making dinner! ♪"
 
@@ -16,9 +16,7 @@
 `Chimecho`: "Come on! Dinner's on! ♪"
 
 
-`Chimecho Normal` ◀▼▶
-
-`Chimecho`: "Everyone: YEAH!"
+`💬`: "Everyone: YEAH!"
 
 
 * * *

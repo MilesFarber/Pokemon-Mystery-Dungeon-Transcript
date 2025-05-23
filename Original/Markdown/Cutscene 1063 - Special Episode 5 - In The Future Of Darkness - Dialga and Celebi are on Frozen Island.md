@@ -6,12 +6,18 @@
 `Sableye`: "Gwah!"
 
 
-`Sableye Sigh` 💦
+`Sableye`: 💦
+
+
+`Sableye Sigh`
 
 `Sableye`: "Wheh-heh-heh... Eeee...eeeeeeeek!"
 
 
-`Dusknoir Normal` 〽
+`Sableye`: 💦
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Wait!"
 
@@ -84,7 +90,10 @@
 `Sableye`: "Ooogh... Ahem..."
 
 
-`Grovyle Normal` 💦
+`Sableye`: 💦
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Beat it!"
 
@@ -129,7 +138,13 @@
 `Dusknoir`: "Let's go."
 
 
-`Grovyle Normal` ⚟
+`Dusknoir`: ⚟
+
+
+`Grovyle`: ⚟
+
+
+`Grovyle Normal`
 
 `Grovyle`: "What is it?"
 
@@ -149,7 +164,10 @@
 `Dusknoir`: "I feel like I've regained the strength in my arms."
 
 
-`Grovyle Normal` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "...! (Now that you mention it...)"
 

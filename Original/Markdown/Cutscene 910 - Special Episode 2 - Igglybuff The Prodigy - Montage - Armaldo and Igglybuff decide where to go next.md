@@ -4,7 +4,10 @@
 >We would open up the map and look for a place to explore.
 
 
-`Igglybuff Normal` ❗
+`Igglybuff`: ❗
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "Hey, Master... Let's explore this place today! ♪"
 

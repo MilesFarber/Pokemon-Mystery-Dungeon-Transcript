@@ -3,14 +3,10 @@
 `Chimecho`: "Everyone! It's time for dinner! ♪"
 
 
-`Chimecho Normal`
-
-`Chimecho`: "Everyone: Yeah!"
+`💬`: "Everyone: Yeah!"
 
 
-`Chimecho Normal`
-
-`Chimecho`: "Everyone: Let's get..."
+`💬`: "Everyone: Let's get..."
 
 
 `Chatot Normal`
@@ -61,22 +57,20 @@
 `Chatot`: "Order! I must have order!"
 
 
-`Chatot Normal`
+`Chatot Normal` 💦
 
 `Chatot`: "Ahem! I'm sure the selection of the expedition members has been on everyone's minds."
 
 
-`Chatot Normal`
+`Chatot Normal` 💦
 
 `Chatot`: "Our Guildmaster has apparently made his final decisions. ♪"
 
 
-`Chatot Normal` ❗
-
-`Chatot`: "Everyone: WHOA!"
+`💬`: "Everyone: WHOA!"
 
 
-`Bidoof Normal` ◀▼▶
+`Bidoof Normal`
 
 `Bidoof`: "By golly, it's finally settled."
 
@@ -101,12 +95,8 @@
 `Chatot`: "Without further ado... On your marks..."
 
 
-`Chatot Normal` ◀▼▶
+`💬`: "Everyone: LET'S EAT!"
 
-`Chatot`: "Everyone: LET'S EAT!"
-
-
-🍴
 
 `💬`: "Crunch munch! Chomp chomp! Gobble gulp! Crunch munch! Chomp chomp! Gobble gulp!"
 

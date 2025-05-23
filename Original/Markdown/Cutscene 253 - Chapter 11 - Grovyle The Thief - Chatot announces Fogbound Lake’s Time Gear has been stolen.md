@@ -20,7 +20,7 @@
 * * *
 
 
-`Bidoof Normal` ◀▼▶
+`Bidoof Normal`
 
 `Bidoof`: "Everyone's here, yup yup!"
 
@@ -45,7 +45,7 @@
 `Chatot`: "Another Time Gear was stolen!"
 
 
-`Bidoof Normal` 〽
+`Bidoof Normal`
 
 `Bidoof`: "What?! Not another one!"
 
@@ -60,12 +60,18 @@
 `Partner Name`: "Where was this Time Gear stolen from?"
 
 
-`Chatot Pain` 💧
+`Chatot`: 💧
+
+
+`Chatot Pain`
 
 `Chatot`: "W-well, it..."
 
 
-`Bidoof Normal` ❓
+`Bidoof`: ❓
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Uh...what's the problem?"
 
@@ -75,7 +81,10 @@
 `Bidoof`: "Did it happen somewhere you don't want to talk about?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Wait! It wasn't the one from..."
 
@@ -90,12 +99,15 @@
 `Sunflora`: "This time...the Time Gear from Fogbound Lake was stolen."
 
 
-`Bidoof Normal` 〽
+`Bidoof Normal`
 
 `Bidoof`: "Huh?!"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "B-but, how?!"
 
@@ -135,7 +147,10 @@
 `Corphish`: "Hey, hey, hey! Don't trust your fellow members?!"
 
 
-`Partner Sad` 💧
+`Partner`: 💧
+
+
+`Partner Sad`
 
 `Partner Name`: "Urk! Sorry! That was uncalled for, you're right..."
 
@@ -160,7 +175,10 @@
 `Sunflora`: "I mean, this horrible thing did happen right after our expedition."
 
 
-`Dusknoir Normal` 💦
+`Dusknoir`: 💦
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Just one moment! I'm afraid I don't quite understand..."
 
@@ -200,7 +218,10 @@
 `Chatot`: "knocked out Uxie...and made off with the Time Gear."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Uxie?!"
 
@@ -235,7 +256,7 @@
 `Chatot`: "The intruder's identity has been revealed."
 
 
-`Bidoof Normal` 〽
+`Bidoof Normal`
 
 `Bidoof`: "Then fess up! What kind of critter are we dealing with?"
 
@@ -258,7 +279,10 @@
 `Partner Name`: "This Pokémon goes by the name of Grovyle."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Oof! That's one nasty piece of work!"
 
@@ -346,7 +370,10 @@
 `Wigglytuff`: "Urrrr..."
 
 
-`Chimecho Normal` ❗
+`Chimecho`: ❗
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Hey! Guildmaster...!"
 
@@ -356,12 +383,12 @@
 `Wigglytuff`: "Urrr... Urrrrrr... Urrrrrrr...!"
 
 
-`Chatot Surprised` ❗
+`Chatot Surprised` 〽
 
 `Chatot`: "G-G-Guildmaster!"
 
 
-`Wigglytuff Sad` 〽
+`Wigglytuff Sad`
 
 `Wigglytuff`: "Urrrrrrrrr...!!!"
 
@@ -494,9 +521,7 @@
 `Chatot`: "OK, everyone! Let's outdo ourselves! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Partner Normal`

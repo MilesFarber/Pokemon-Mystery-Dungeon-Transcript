@@ -34,12 +34,18 @@
 `Partner Name`: "We should rest a little now."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Look! There's water there!"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Wh-what...?"
 
@@ -84,7 +90,10 @@
 `Partner Name`: "If only there were some way of finding the truth..."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! I know!"
 
@@ -94,7 +103,10 @@
 `Partner Name`: "There is a way of getting at the truth, `Hero Name`!"
 
 
-`Hero Normal` ⚞
+`Hero`: ⚞
+
+
+`Hero Normal`
 
 `Hero Name`: "(Huh?)"
 
@@ -152,7 +164,10 @@
 >`Hero Name` touched the frozen spray of water.
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "...How's it going, `Hero Name`?"
 

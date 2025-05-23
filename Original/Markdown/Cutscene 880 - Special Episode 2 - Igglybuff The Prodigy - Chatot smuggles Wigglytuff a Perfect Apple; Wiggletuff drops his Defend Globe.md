@@ -11,7 +11,10 @@
 `Wigglytuff`: "Yay! ♪ Thank you! ♪"
 
 
-`Chatot Stunned` 💧
+`Chatot`: 💧
+
+
+`Chatot Stunned`
 
 `Chatot`: "This is the last time!"
 
@@ -46,7 +49,10 @@
 `Chatot`: "Is this...a Defend Globe?"
 
 
-`Wigglytuff Normal` 💦
+`Wigglytuff`: 💦
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "...It's all right. It's not damaged."
 

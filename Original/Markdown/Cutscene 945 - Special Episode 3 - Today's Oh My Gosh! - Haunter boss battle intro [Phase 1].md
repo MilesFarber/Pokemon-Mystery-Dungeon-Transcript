@@ -89,7 +89,10 @@
 `Haunter`: "Why do you think an outlaw like me appeared in front of you?"
 
 
-`Sunflora Surprised` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Surprised`
 
 `Sunflora`: ".........!!"
 

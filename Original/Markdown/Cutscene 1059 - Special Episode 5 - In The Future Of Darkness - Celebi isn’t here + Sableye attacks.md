@@ -59,12 +59,10 @@
 `Grovyle`: "(Celebi... She probably left already...)"
 
 
-`Grovyle Normal`
-
-`Grovyle`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
-`Dusknoir Normal` ❗
+`Dusknoir Normal`
 
 `Dusknoir`: "I knew it..."
 
@@ -99,9 +97,7 @@
 `Grovyle`: "Here they come!"
 
 
-`Grovyle Normal`
-
-`Grovyle`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 * * *

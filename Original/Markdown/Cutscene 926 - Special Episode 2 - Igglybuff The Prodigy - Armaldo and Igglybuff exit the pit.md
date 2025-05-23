@@ -9,7 +9,10 @@
 `Armaldo`: "Phew... We just barely beat them..."
 
 
-`Igglybuff Normal` ⚟
+`Igglybuff`: ⚟
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "I can see some kind of light over there."
 

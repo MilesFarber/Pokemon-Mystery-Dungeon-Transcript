@@ -11,7 +11,10 @@
 `Ampharos`: "I heard from Shaymin you were finally able to reach the summit. Congratulations!"
 
 
-`Ampharos Normal` ❓
+`Ampharos`: ❓
+
+
+`Ampharos Normal`
 
 `Ampharos`: "Huh? How is that Sneasel you helped at the 7th Station Clearing doing?"
 
@@ -59,7 +62,10 @@
 
 *If the player chooses "1":*
 
-  * `Ampharos Normal` ⚟
+  * `Ampharos`: ⚟
+
+
+  * `Ampharos Normal`
 
   * `Ampharos`: "Well, I thought so, but you seem to have too much already."
 

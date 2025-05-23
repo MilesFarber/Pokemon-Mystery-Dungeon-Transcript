@@ -1,7 +1,10 @@
 `Croagunk`: "Meh-heh-heh! Hey, you two over there..."
 
 
-`Partner Normal` ⚟
+`Hero`: ⚟
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh, it's Croagunk!"
 
@@ -29,7 +32,10 @@
 `Croagunk`: "It's about my shop. Meh-heh-heh! The Croagunk Swap Shop is back in business!"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Croagunk...Swap Shop?"
 

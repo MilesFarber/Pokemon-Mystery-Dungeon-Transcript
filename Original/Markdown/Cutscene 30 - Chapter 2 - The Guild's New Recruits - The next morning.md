@@ -98,7 +98,10 @@
 `Partner Name`: "What did he say? Something about getting ready?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Er... Oh yeah!"
 

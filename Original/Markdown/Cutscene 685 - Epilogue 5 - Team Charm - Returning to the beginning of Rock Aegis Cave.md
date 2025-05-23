@@ -6,6 +6,7 @@
 
 ❗
 
+
 >There is something in front of the stone marker.
 >
 >It appears to be a letter.
@@ -20,4 +21,5 @@
 
 
 💧
+
 

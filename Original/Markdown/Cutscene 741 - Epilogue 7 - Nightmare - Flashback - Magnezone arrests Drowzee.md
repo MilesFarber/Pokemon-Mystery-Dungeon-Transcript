@@ -21,7 +21,10 @@
 `Magnezone`: "ZZZT! Now come with us! ZZZT!"
 
 
-`Drowzee Sigh` 💧
+`Drowzee`: 💧
+
+
+`Drowzee Sigh`
 
 `Drowzee`: "Awww..."
 

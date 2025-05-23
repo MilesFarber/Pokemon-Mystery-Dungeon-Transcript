@@ -22,7 +22,10 @@
   *   * *Scenario flag: [29, 44]*
 
 
-  *   * `Manaphy Teary-Eyed` ❓
+  *   * `Manaphy`: ❓
+
+
+  *   * `Manaphy Teary-Eyed`
 
   *   * `Manaphy`: "Weh... Wah?"
 
@@ -42,7 +45,10 @@
   *   * `Manaphy`: "Nibble, nibble..."
 
 
-  *   * `Manaphy Surprised` ❗
+  *   * `Manaphy`: ❗
+
+
+  *   * `Manaphy Surprised`
 
   *   * `Manaphy`: "!"
 
@@ -52,7 +58,7 @@
   *   * `Manaphy`: "Goomi! Goomi!"
 
 
-  *   * `Partner Sigh` 🔆
+  *   * `Partner Sigh`
 
   *   * `Partner Name`: "Oh, whew! He ate the Gummi."
 
@@ -178,7 +184,10 @@
   *   *   * *Loop forever:*
 
 
-  *   *   *   * `Partner Surprised` 〽
+  *   *   *   * `Partner`: 〽
+
+
+  *   *   *   * `Partner Surprised`
 
   *   *   *   * `Partner Name`: "What?!"
 

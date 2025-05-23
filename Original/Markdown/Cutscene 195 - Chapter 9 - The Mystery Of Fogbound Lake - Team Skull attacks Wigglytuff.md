@@ -25,22 +25,34 @@
 `Koffing`: "C'mon...let's you and I give him a double dose of the ol' noxious gas..."
 
 
-`Skuntank Normal` 💦
+`Skuntank`: 💦
+
+
+`Skuntank Normal`
 
 `Skuntank`: "Shhh! Shut your yap!"
 
 
-`Wigglytuff Normal` ❓
+`Wigglytuff`: ❓
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Dear friends! What's wrong? You've been making such scary faces at me!"
 
 
-`Skuntank Surprised` 〽
+`Skuntank`: 〽
+
+
+`Skuntank Surprised`
 
 `Skuntank`: "Bah...this guy's tough... really tough..."
 
 
-`Wigglytuff Happy` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Happy`
 
 `Wigglytuff`: "I get it! You're trying to make me laugh with silly faces!"
 
@@ -60,7 +72,10 @@
 `Wigglytuff`: "Blobba! ♪ Blobba! ♪ Blopp! ♪"
 
 
-`Koffing Normal` 💦
+`Koffing`: 💦
+
+
+`Koffing Normal`
 
 `Koffing`: "C'mon, Chief...!"
 

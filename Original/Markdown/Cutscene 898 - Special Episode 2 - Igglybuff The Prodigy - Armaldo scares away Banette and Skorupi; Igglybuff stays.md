@@ -114,14 +114,17 @@
 `Banette`: "Gulp! N-no, that's not true. That's just not true!"
 
 
-`Banette Teary-Eyed`
+`Banette Teary-Eyed` 〽
 
 `Banette`: "I-I'll show you I'm not scared!"
 
 
-`Banette Normal` 〽
+`Banette Normal`
 
 `Banette`: "Hey! Hey, you terrible monster! Can you hear me?!"
+
+
+`Skorupi`: 〽
 
 
 `Skorupi Surprised` 💦
@@ -164,7 +167,7 @@
 `Banette`: "There was no monster here... There never was one. Ha ha... Ha ha ha."
 
 
-`Skorupi Normal` 🔆
+`Skorupi Normal`
 
 `Skorupi`: "I-is that so... Ha ha ha ha ha."
 
@@ -199,7 +202,10 @@
 `Igglybuff`: "???: GARURURURURURURUHHHHH..."
 
 
-`Banette Normal` ⚟
+`Igglybuff`: ⚟
+
+
+`Banette Normal`
 
 `Banette`: "...Did you just hear something?"
 
@@ -214,7 +220,8 @@
 `Skorupi`: "???: GARURURURURURURUHHHHH..."
 
 
-〽
+`Skorupi`: 〽
+
 
 `💬`: "Hey, you over there!"
 
@@ -225,7 +232,10 @@
 `💬`: "GASAGASAGASAGASAGASAGASA!!"
 
 
-`Banette Surprised` 💦
+`Skorupi`: 💦
+
+
+`Banette Surprised`
 
 `Banette`: "Ulp... Waaaaahhhh..."
 
@@ -239,7 +249,7 @@
 * * *
 
 
-`Armaldo Angry` ❗
+`Armaldo Angry`
 
 `Armaldo`: "I don't know who in the world you think you are!"
 
@@ -270,7 +280,10 @@
 `Armaldo`: "What's this? A bunch of kids..."
 
 
-`Armaldo Normal` ⚟
+`Armaldo`: ⚟
+
+
+`Armaldo Normal`
 
 `Armaldo`: "Huh? Weren't there more of you?"
 
@@ -314,7 +327,10 @@
 `Igglybuff`: "What are you doing here, mister?"
 
 
-`Armaldo Surprised` 〽
+`Armaldo`: 〽
+
+
+`Armaldo Surprised`
 
 `Armaldo`: "Aren't... Aren't you scared? Aren't you scared of me?!"
 
@@ -329,7 +345,10 @@
 `Igglybuff`: "So what are you doing here anyway, mister?"
 
 
-`Armaldo Pain` 💧
+`Armaldo`: 💧
+
+
+`Armaldo Pain`
 
 `Armaldo`: "He...he's a strange little fellow..."
 
@@ -364,12 +383,12 @@
 `Armaldo`: "Ugh... You're persistent..."
 
 
-`Armaldo Pain`
+`Armaldo Pain` 💦
 
 `Armaldo`: "...I guess I've got no choice. I'll tell you a little."
 
 
-`Armaldo Pain`
+`Armaldo Pain` 💦
 
 `Armaldo`: "Come with me."
 

@@ -11,12 +11,18 @@
 * * *
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Hmm... I couldn't really do well... By golly..."
 
 
-`Snover Pain` 💦
+`Snover`: 💦
+
+
+`Snover Pain`
 
 `Snover`: "Sniff... I was so scared..."
 

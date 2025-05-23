@@ -9,7 +9,10 @@
 * * *
 
 
-`Shaymin Inspired` ❗
+`Shaymin`: ❗
+
+
+`Shaymin Inspired`
 
 `Shaymin`: "Wow... Incredible!"
 
@@ -19,7 +22,10 @@
 `Shaymin`: "This is..."
 
 
-`Breloom Happy` ⚟
+`Breloom`: ⚟
+
+
+`Breloom Happy`
 
 `Breloom`: "Hey! We're the Survey Team from Project P, Team Frontier!"
 

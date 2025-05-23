@@ -45,8 +45,6 @@
 `Partner Name`: "I have to be brave."
 
 
-〽
-
 `💬`: "Pokémon detected! Pokémon detected!"
 
 
@@ -61,7 +59,7 @@
 `Partner Name`: "Waah!"
 
 
-`Partner Pain`
+`Partner Pain` 💦
 
 `Partner Name`: "N-no. I can't lose it now..."
 
@@ -72,7 +70,10 @@
 `💬`: "Someone's with you! So get that stranger to stand up THERE!"
 
 
-`Partner Worried` 💦
+`Partner`: 💦
+
+
+`Partner Worried`
 
 `Partner Name`: "I think they mean you, `Hero Name`."
 
@@ -112,8 +113,6 @@
 
 * * *
 
-
-❗
 
 `💬`: "Hey, you! Stranger! Get on the GRATE!"
 

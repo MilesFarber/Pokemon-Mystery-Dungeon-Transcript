@@ -34,7 +34,10 @@
 `Mr. Mime`: "I'm going too."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? Somehow this all seems familiar, like we've done this before..."
 

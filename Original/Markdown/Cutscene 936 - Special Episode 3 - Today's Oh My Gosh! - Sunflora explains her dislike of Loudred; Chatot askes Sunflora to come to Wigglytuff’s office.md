@@ -16,12 +16,21 @@
 >Recently, something troublesome happened...
 
 
-`Loudred Pain` 〽
+`Loudred`: 〽
+
+
+`Loudred Pain`
 
 `Loudred`: "...HUMPH!"
 
 
-`Sunflora Surprised` 〽
+`Sunflora`: ⚟
+
+
+`Sunflora`: 〽
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "...!! (L-Loudred!)"
 
@@ -34,6 +43,9 @@
 `Sunflora Determined`
 
 `Sunflora`: "Humph!"
+
+
+`Sunflora`: 💦
 
 
 >Here is what's troublesome.
@@ -53,7 +65,10 @@
 >Since then, Loudred and I have not been able to see eye-to-eye.
 
 
-`Sunflora Worried` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Worried`
 
 `Sunflora`: "It's...a little troublesome..."
 
@@ -78,12 +93,18 @@
 `Sunflora`: "I won't forgive that! Humph!"
 
 
-`Chatot Normal` ❗
+`Chatot`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "Oh! You're here, Sunflora!"
 
 
-`Sunflora Normal` ⚞
+`Sunflora`: ⚞
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Oh hi, Chatot."
 
@@ -98,7 +119,10 @@
 `Chatot`: "Please come with me."
 
 
-`Sunflora Normal` ❓
+`Sunflora`: ❓
+
+
+`Sunflora Normal`
 
 `Sunflora`: "Discuss?"
 

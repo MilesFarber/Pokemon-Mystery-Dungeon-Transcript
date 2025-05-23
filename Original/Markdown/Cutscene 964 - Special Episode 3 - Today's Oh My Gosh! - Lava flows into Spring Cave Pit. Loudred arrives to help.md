@@ -52,7 +52,10 @@
 `Haunter`: "Huh?!"
 
 
-`Sunflora Surprised` 〽
+`Sunflora`: 〽
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "L-Loudred!"
 

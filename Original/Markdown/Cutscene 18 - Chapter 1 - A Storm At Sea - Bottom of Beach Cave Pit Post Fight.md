@@ -1,12 +1,18 @@
 * * *
 
 
-`Koffing Normal` 💦
+`Koffing`: 💦
+
+
+`Koffing Normal`
 
 `Koffing`: "Owowow..."
 
 
-`Zubat Normal` 💦
+`Zubat`: 💦
+
+
+`Zubat Normal`
 
 `Zubat`: "Ugh... We got roughed up..."
 
@@ -24,7 +30,7 @@
 `Zubat`: "Bah! Here you go. Take it, then!"
 
 
-`Koffing Normal` ❗
+`Koffing Normal`
 
 `Koffing`: "Whoa-ho! Don't think you're so awesome. Your victory was a fluke!"
 

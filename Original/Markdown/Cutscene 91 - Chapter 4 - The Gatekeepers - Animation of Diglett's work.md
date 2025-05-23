@@ -7,7 +7,11 @@
 `Loudred`: "From the sentry post, Diglett inspects the footprints of visitors, identifies them, then informs me."
 
 
-⚟
+`Diglett`: ❗
+
+
+`Loudred`: ⚟
+
 
 `Loudred`: "Then I decide if the Pokémon is suspicious or not and open the gate if he passes muster."
 

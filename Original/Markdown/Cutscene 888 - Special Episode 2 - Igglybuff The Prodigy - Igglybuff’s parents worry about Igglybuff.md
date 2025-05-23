@@ -59,7 +59,10 @@
 `Wigglytuff`: "Sometimes, I really have no clue what that child is thinking..."
 
 
-`Wigglytuff Worried` 💦
+`Wigglytuff`: 💦
+
+
+`Wigglytuff Worried`
 
 `Wigglytuff`: "So I'm a little worried..."
 

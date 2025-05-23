@@ -91,7 +91,10 @@
 `Hero Name`: "(A mission to help the Pokémon of this world and those of the future...)"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "What? Say, `Hero Name`..."
 
@@ -104,7 +107,10 @@
 * * *
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "What could it be...?"
 

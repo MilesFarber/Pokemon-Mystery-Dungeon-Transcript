@@ -21,7 +21,10 @@
 `Snover`: "That's why we put on this little show...to lure you out here..."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Sniff... Th-then..."
 
@@ -66,7 +69,10 @@
 `Snover`: "Still angry, we came to Treasure Town...and there you were."
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "Sniff..."
 
@@ -92,7 +98,10 @@
 `Snover`: "Prepare yourself!"
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "Eeeeeeeeeek!!"
 

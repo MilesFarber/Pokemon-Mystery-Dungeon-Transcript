@@ -109,7 +109,10 @@
 `Dusknoir`: "It would be very dangerous if the Passage of Time were to be damaged!"
 
 
-`Grovyle Normal` ❗
+`Celebi`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Th-this area... Just little by little, this area..."
 
@@ -119,7 +122,10 @@
 `Celebi`: "It's becoming brighter..."
 
 
-`Dusknoir Normal` 〽
+`Celebi`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "The wind is stronger!"
 
@@ -129,12 +135,15 @@
 `Primal Dialga`: "GIGIGIGIGIGI!"
 
 
-`Celebi Surprised` ❗
+`Celebi`: ❗
+
+
+`Celebi Surprised`
 
 `Celebi`: "Oh! There's a light emanating from Dialga's body?!"
 
 
-`Celebi Surprised` ❗
+`Celebi Surprised`
 
 `Celebi`: "Our...our bodies too?!"
 
@@ -154,7 +163,10 @@
 `Grovyle`: "Our... The end is coming... It's getting close!"
 
 
-`Celebi Surprised` ❗
+`Celebi`: ❗
+
+
+`Celebi Surprised`
 
 `Celebi`: "What?!"
 

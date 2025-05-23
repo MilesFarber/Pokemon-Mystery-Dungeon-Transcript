@@ -24,7 +24,10 @@
   * `Chatot`: "All right, I'll leave you all to thoroughly investigate the waterfall! ♪"
 
 
-  * `Chatot Normal` ❗
+  * `Chatot`: ❗
+
+
+  * `Chatot Normal`
 
   * `Chatot`: "Huh? What's wrong? You're shivering."
 
@@ -66,7 +69,10 @@
 
 *If the player chooses "Please explain again":*
 
-  * `Chatot Pain` 💧
+  * `Chatot`: 💧
+
+
+  * `Chatot Pain`
 
   * `Chatot`: "Fine, I'll explain it again."
 

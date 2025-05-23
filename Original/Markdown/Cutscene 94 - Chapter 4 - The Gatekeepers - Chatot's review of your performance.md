@@ -27,12 +27,15 @@
   * `Chatot`: "Your results were...dreadful!"
 
 
-  * `Chatot Pain` 💧
+  * `Chatot Pain`
 
   * `Chatot`: "You failed so many times!"
 
 
-  * `Chatot Angry` 〽
+  * `Loudred`: 〽
+
+
+  * `Chatot Angry`
 
   * `Chatot`: "You slackers! Did you do anything besides goof off?"
 
@@ -47,12 +50,15 @@
   * `Loudred`: "You two got SO many wrong..."
 
 
-  * `Loudred Angry` 〽
+  * `Loudred Angry` 💢
 
   * `Loudred`: "I even got in TROUBLE for it!"
 
 
-  * `Chatot Dizzy` 💦
+  * `Chatot`: 💦
+
+
+  * `Chatot Dizzy`
 
   * `Chatot`: "H-hush!"
 
@@ -62,7 +68,7 @@
   * `Chatot`: "Don't you dare blame anyone else!"
 
 
-  * `Chatot Angry`
+  * `Chatot Angry` 💢
 
   * `Chatot`: "Sentry duty is a cooperative job, isn't it?"
 
@@ -72,12 +78,15 @@
   * `Chatot`: "Anyway, this job was a fiasco, no doubt about it!"
 
 
-  * `Chatot Angry`
+  * `Chatot Angry` 💢
 
   * `Chatot`: "As such, there shall be no reward!"
 
 
-  * `Loudred Normal` 〽
+  * `Partner`: 〽
+
+
+  * `Loudred Normal`
 
   * `Loudred`: "WHAAAT?!"
 
@@ -87,12 +96,15 @@
   * `Chatot`: "Furthermore!"
 
 
-  * `Chatot Angry`
+  * `Chatot Angry` 💢
 
   * `Chatot`: "You'll go without dinner tonight!"
 
 
-  * `Partner Teary-Eyed` 💦
+  * `Partner`: 💦
+
+
+  * `Partner Teary-Eyed`
 
   * `Partner Name`: "B-but..."
 
@@ -252,19 +264,27 @@
 
   * 🎊
 
-  * 🎊
 
   * 🎊
 
-  * 🎊
 
   * 🎊
 
-  * 🎊
 
   * 🎊
 
+
   * 🎊
+
+
+  * 🎊
+
+
+  * 🎊
+
+
+  * 🎊
+
 
   * `Loudred Happy` ◀▼▶
 

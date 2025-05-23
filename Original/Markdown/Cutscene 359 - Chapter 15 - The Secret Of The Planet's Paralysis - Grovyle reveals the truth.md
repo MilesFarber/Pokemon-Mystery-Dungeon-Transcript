@@ -109,7 +109,10 @@
 `Partner Name`: "OK... Urf..."
 
 
-`Grovyle Normal` 💦
+`Partner`: 💦
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Primal Dialga feels no emotion."
 
@@ -139,7 +142,10 @@
 `Grovyle`: "Because I traveled back in time to your world from this place...your future."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?!"
 
@@ -209,7 +215,10 @@
 `Grovyle`: "Time would have been fully restored to normal everywhere."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urf... But then, what about all the things Dusknoir said about you?"
 
@@ -249,7 +258,7 @@
 `Grovyle`: "an agent sent from this future by Primal Dialga...to get rid of me."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What?! Dusknoir was...an agent sent to get rid of you?!"
 
@@ -359,7 +368,10 @@
 `Partner Name`: "I'm going to see Dusknoir."
 
 
-`Grovyle Normal` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "What?!"
 
@@ -414,7 +426,10 @@
 `Grovyle`: "you wouldn't accept words for their face value...and you'd think for yourself!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk..."
 
@@ -474,7 +489,10 @@
 `Grovyle`: "I'm off."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Urk..."
 

@@ -8,7 +8,10 @@
 `Bidoof`: "Kecleon Market is that way."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Lately a lot of troubling things have happened. Maybe I've been a bit strange, yup yup..."
 

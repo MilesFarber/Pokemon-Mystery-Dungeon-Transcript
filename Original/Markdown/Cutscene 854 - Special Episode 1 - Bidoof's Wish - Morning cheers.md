@@ -1,8 +1,6 @@
 * * *
 
 
-◀▼▶
-
 `💬`: "Everyone: AND...THREE! SMILES GO FOR MILES!"
 
 
@@ -11,9 +9,7 @@
 `Chatot`: "OK, Pokémon! ♪ Time to get to work! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Bidoof Determined`

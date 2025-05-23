@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Hm? What's wrong, `Hero Name`?"
 

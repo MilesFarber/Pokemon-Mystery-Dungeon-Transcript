@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Inspired` ❗
+`Partner`: ❗
+
+
+`Partner Inspired`
 
 `Partner Name`: "Wow!"
 
@@ -19,7 +22,10 @@
 `💬`: "Excuse me!"
 
 
-`Chatot Normal` ❗
+`Partner`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "It was you two that just came in, right?"
 
@@ -49,17 +55,20 @@
 `Partner Name`: "N-no! That's not why we're here!"
 
 
-`Partner Normal`
+`Partner Normal` 💦
 
 `Partner Name`: "We want to form an exploration team..."
 
 
-`Partner Normal`
+`Partner Normal` 💦
 
 `Partner Name`: "So we came here. We want to get proper training as an exploration team."
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "Wh-what?! Exploration team?"
 
@@ -79,7 +88,10 @@
 `Chatot`: "Surely the steady stream of Pokémon that run away from our rigorous training proves how true that is!"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Excuse me."
 
@@ -89,7 +101,10 @@
 `Partner Name`: "Is the exploration team training that harsh?"
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "What?!"
 
@@ -99,7 +114,7 @@
 `Chatot`: "Well...no! No, no, no!"
 
 
-`Chatot Surprised`
+`Chatot Surprised` 💦
 
 `Chatot`: "It's not true in the slightest! Our training program for exploration teams is as easy as can be!"
 
@@ -109,7 +124,10 @@
 `Chatot`: "Well, well, well! ♪ I wish you had told me up front that you wanted to be an exploration team! ♪ Hee-heeee! ♪"
 
 
-`Partner Sad` 💧
+`Partner`: 💧
+
+
+`Partner Sad`
 
 `Partner Name`: "What a shift in attitude!"
 
@@ -119,7 +137,10 @@
 `Chatot`: "OK! Let's get your team signed up right away. Follow me! ♪"
 
 
-`Chatot Happy` ⚟
+`Chatot`: ⚟
+
+
+`Chatot Happy`
 
 `Chatot`: "Oh, anything wrong? Come on! Over here! ♪ Quickly, please! ♪"
 

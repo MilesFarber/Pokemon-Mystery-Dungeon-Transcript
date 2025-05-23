@@ -1,7 +1,10 @@
 * * *
 
 
-`Budew Normal` ❗
+`Wooper`: ❗
+
+
+`Budew Normal`
 
 `Budew`: "Oh! It's Igglybuff's Mama!"
 
@@ -21,7 +24,10 @@
 `Smoochum`: "By the way, Igglybuff's Mama."
 
 
-`Wigglytuff Normal` ⚞
+`Wigglytuff`: ⚞
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "What is it, Smoochum?"
 
@@ -31,12 +37,18 @@
 `Smoochum`: "Is it true that Igglybuff goes to play in Murky Forest every day?"
 
 
-`Wigglytuff Surprised` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Surprised`
 
 `Wigglytuff`: "Whaaaat?! In Murky Forest?!"
 
 
-`Wigglytuff Surprised` 💦
+`Wigglytuff`: 💦
+
+
+`Wigglytuff Surprised`
 
 `Wigglytuff`: "I-is that true, Smoochum?"
 
@@ -61,7 +73,10 @@
 `Budew`: "I wonder if Igglybuff's OK... Going to that place to play all the time..."
 
 
-`Wooper Normal` ⚞
+`Wooper`: ⚞
+
+
+`Wooper Normal`
 
 `Wooper`: "Hey, Banette!"
 
@@ -81,9 +96,10 @@
 `Banette`: "Oh. Isn't Igglybuff still going to Murky Forest?"
 
 
-`Banette Normal` ❗
+`Budew`: ❗
 
-`Banette`: "Everyone: WHAAAAAAAAT?!"
+
+`💬`: "Everyone: WHAAAAAAAAT?!"
 
 
 `Skorupi Normal`
@@ -111,9 +127,7 @@
 `Banette`: "That scary-looking guy deep in the forest... Igglybuff seems to have made friends with him or something?"
 
 
-`Banette Normal` 〽
-
-`Banette`: "Everyone: WHAAAAAAAAAAAAAAAAT?!"
+`💬`: "Everyone: WHAAAAAAAAAAAAAAAAT?!"
 
 
 `Banette Normal`
@@ -121,7 +135,10 @@
 `Banette`: "I wonder if he's all right. Being with that scary guy, I mean."
 
 
-`Wigglytuff Sad` 💦
+`Wigglytuff`: 💦
+
+
+`Wigglytuff Sad`
 
 `Wigglytuff`: "P-Papa... Papa..."
 
@@ -129,7 +146,10 @@
 `💬`: "Can I talk to you for a moment?"
 
 
-`Nidoking Normal` ❗
+`Skorupi`: ❗
+
+
+`Nidoking Normal`
 
 `Nidoking`: "Your conversation... Can you tell me a bit more about it, please?"
 
@@ -139,7 +159,13 @@
 `Nidoking`: "Hey, you."
 
 
-`Banette Normal` 💦
+`Banette`: ⚟
+
+
+`Banette`: 💦
+
+
+`Banette Normal`
 
 `Banette`: "M-me?"
 
@@ -154,7 +180,10 @@
 `Nidoking`: "What's he look like?"
 
 
-`Banette Normal` 💦
+`Banette`: 💦
+
+
+`Banette Normal`
 
 `Banette`: "H-he looks like..."
 
@@ -179,7 +208,10 @@
 `Wigglytuff`: "Um... Who are you?"
 
 
-`Nidoking Normal` ⚞
+`Nidoking`: ⚞
+
+
+`Nidoking Normal`
 
 `Nidoking`: "My apologies for not introducing myself."
 
@@ -212,12 +244,16 @@
 * * *
 
 
-`Nidoking Normal` ❗
-
-`Nidoking`: "Everyone: WHAAAAAAAAAAAAAAAAAT?!"
+`Banette`: ❗
 
 
-`Wooper Surprised` 💦
+`💬`: "Everyone: WHAAAAAAAAAAAAAAAAAT?!"
+
+
+`Wooper`: 💦
+
+
+`Wooper Surprised`
 
 `Wooper`: "R-really?!"
 

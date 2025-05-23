@@ -6,7 +6,10 @@
 `Dusknoir`: "Ooogh..."
 
 
-`Dusknoir Normal` ❗
+`Dusknoir`: ❗
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "...W-we're...still here..."
 

@@ -1,7 +1,10 @@
 * * *
 
 
-`Grovyle Surprised` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "Ah! That is--"
 
@@ -26,7 +29,10 @@
 `Grovyle`: "Is someone holding you back?"
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "There's an Odd Keystone nearby... That means..."
 
@@ -54,7 +60,10 @@
 `Grovyle`: "Why have you done this to Celebi?!"
 
 
-`Spiritomb Sigh` 💦
+`Spiritomb`: 💦
+
+
+`Spiritomb Sigh`
 
 `Spiritomb`: "HEE-hee HEE hee! You're wrong! You're wrong!"
 
@@ -84,7 +93,10 @@
 `Grovyle`: "Besides, if you didn't do this to Celebi, then who else could have..."
 
 
-`Grovyle Surprised` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "...! (Wh-what?!)"
 
@@ -134,12 +146,18 @@
 `Grovyle`: "(What have I failed to understand?! What am I wrong about?!)"
 
 
-`Celebi Pain` ❗
+`Celebi`: ❗
+
+
+`Celebi Pain`
 
 `Celebi`: "...! G-Grovyle!"
 
 
-`Grovyle Normal` 〽
+`Spiritomb`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Celebi! You're awake!"
 
@@ -149,7 +167,7 @@
 `Spiritomb`: "Y-you! You SURE picked a strange time to wake up!"
 
 
-`Spiritomb Normal`
+`Spiritomb Normal` 💢
 
 `Spiritomb`: "If we'd let you FLEE, we..."
 
@@ -159,12 +177,18 @@
 `Grovyle`: "Let Celebi go, Spiritomb!"
 
 
-`Grovyle Normal` 💦
+`Spiritomb`: 💦
+
+
+`Grovyle Normal`
 
 `Grovyle`: "If you won't let her go, I'll knock you out! Don't make me use force!"
 
 
-`Celebi Pain` 〽
+`Celebi`: 〽
+
+
+`Celebi Pain`
 
 `Celebi`: "D-don't come near!"
 
@@ -229,9 +253,7 @@
 `Dusknoir`: "Remain with us a little longer!"
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 `Spiritomb Normal` 💦

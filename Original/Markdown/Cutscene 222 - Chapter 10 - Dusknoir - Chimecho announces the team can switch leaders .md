@@ -1,12 +1,18 @@
 * * *
 
 
-`Chimecho Normal` ❗
+`Chimecho`: ❗
+
+
+`Chimecho Normal`
 
 `Chimecho`: "Oh, `Hero Name`! `Partner Name`!"
 
 
-`Partner Normal` ❗
+`Hero`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Hi! Chimecho!"
 
@@ -41,7 +47,10 @@
 `Chimecho`: "A new special service is available to you!"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "A special service?"
 

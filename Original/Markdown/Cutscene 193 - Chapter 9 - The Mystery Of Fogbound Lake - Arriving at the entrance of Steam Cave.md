@@ -30,7 +30,7 @@
 `Partner Name`: "Is that steam?"
 
 
-`Partner Worried`
+`Partner Worried` ❓
 
 `Partner Name`: "I guess it's going to be really hot in there."
 

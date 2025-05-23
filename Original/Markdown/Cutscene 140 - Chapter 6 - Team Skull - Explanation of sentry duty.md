@@ -7,6 +7,12 @@
 `Loudred`: "From the sentry post, inspect the footprints of visitors, identify them, then inform me."
 
 
+`Hero`: ❗
+
+
+`Loudred`: ⚟
+
+
 `Loudred`: "I will then decide if the Pokémon is suspicious or not. If it passes muster, I will open the gate."
 
 

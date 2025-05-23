@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Normal` ⚞
+`Partner`: ⚞
+
+
+`Partner Normal`
 
 `Partner Name`: "What's wrong, `Hero Name`?"
 
@@ -46,6 +49,9 @@
 `Hero Name`: "(My own disappearance...is drawing near...)"
 
 
+`Hero`: 〽
+
+
 `Partner Surprised` 〽
 
 `Partner Name`: "Tremors!"
@@ -66,7 +72,10 @@
 `Partner Name`: "Let's go, `Hero Name`."
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(...!)"
 
@@ -101,7 +110,10 @@
 `Partner Name`: "Hey! `Hero Name`."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? `Hero Name`..."
 
@@ -121,7 +133,10 @@
 `Hero Name`: "It looks like...I have to say good-bye..."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! Good-bye?!"
 
@@ -151,7 +166,7 @@
 `Partner Name`: "Huh? What? Wh-why?"
 
 
-`Partner Surprised`
+`Partner Surprised` 〽
 
 `Partner Name`: "Wh-why...? I don't understand!"
 

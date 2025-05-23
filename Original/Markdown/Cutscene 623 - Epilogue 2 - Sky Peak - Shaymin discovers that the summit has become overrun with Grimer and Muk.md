@@ -14,12 +14,13 @@
 
 〽
 
+
 `Shaymin Surprised` 〽
 
 `Shaymin`: "Th-this is...terrible..."
 
 
-`Shaymin Surprised`
+`Shaymin Surprised` 〽
 
 `Shaymin`: "All this happened while I was away for so long..."
 
@@ -29,7 +30,11 @@
 
 ⚞
 
-`Breloom Surprised` 〽
+
+`Breloom`: 〽
+
+
+`Breloom Surprised`
 
 `Breloom`: "...but what is this?!"
 
@@ -52,9 +57,20 @@
 
 ❗
 
+
+`Machoke`: ⚟
+
+
 〽
 
-`Breloom Surprised` 〽
+
+`Machoke`: 〽
+
+
+`Breloom`: 〽
+
+
+`Breloom Surprised`
 
 `Breloom`: "Wh-what...?!"
 

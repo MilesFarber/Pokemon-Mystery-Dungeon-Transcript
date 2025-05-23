@@ -6,7 +6,10 @@
 `Partner Name`: "Waaaaah!"
 
 
-`Palkia Normal` 〽
+`Palkia`: 〽
+
+
+`Palkia Normal`
 
 `Palkia`: "WHAT?! WHAT IS THIS?! WHO IS THIS?!"
 
@@ -14,7 +17,7 @@
 * * *
 
 
-`Cresselia Normal` 〽
+`Cresselia Normal`
 
 `Cresselia`: "Excellent! I was just in time!"
 
@@ -44,7 +47,10 @@
 `Cresselia`: "By Darkrai there!"
 
 
-`Palkia Normal` 〽
+`Partner`: 〽
+
+
+`Palkia Normal`
 
 `Palkia`: "WHAT?!"
 
@@ -64,7 +70,10 @@
 `Cresselia`: "It was merely a mockery of me!"
 
 
-`Palkia Normal` 〽
+`Partner`: 〽
+
+
+`Palkia Normal`
 
 `Palkia`: "WHAT?!"
 
@@ -109,7 +118,7 @@
 `Darkrai`: "You two, behind Cresselia..."
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Wh-what, us?"
 
@@ -129,7 +138,10 @@
 `Darkrai`: "It is my doing. Mine alone."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! What did you say?!"
 
@@ -152,7 +164,10 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "D-Darkrai vanished?!"
 

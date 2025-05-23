@@ -9,7 +9,10 @@
 * * *
 
 
-`Breloom Normal` ⚟
+`Breloom`: ⚟
+
+
+`Breloom Normal`
 
 `Breloom`: "Hey! Great job!"
 
@@ -34,12 +37,16 @@
 
 ⚟
 
-`Octillery Normal` ⚟
+
+`Octillery Normal`
 
 `Octillery`: "Uhhn...huhhn..."
 
 
-`Mawile Normal` ❓
+`Mawile`: ❓
+
+
+`Mawile Normal`
 
 `Mawile`: "What's wrong?!"
 
@@ -49,7 +56,7 @@
 `Octillery`: "The explorer Sneasel's getting picked on by this strange group near the 5th Station Clearing!"
 
 
-`Octillery Normal`
+`Octillery Normal` ◀▼▶
 
 `Octillery`: "I'm not much help by myself, so please, someone come with me to help!"
 
@@ -69,7 +76,10 @@
 `Shaymin`: "The 5th Station Clearing..."
 
 
-`Shaymin Surprised` ❗
+`Shaymin`: ❗
+
+
+`Shaymin Surprised`
 
 `Shaymin`: "Oh! Don't tell me...!"
 

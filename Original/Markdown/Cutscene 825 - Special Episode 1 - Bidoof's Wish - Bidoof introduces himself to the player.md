@@ -17,22 +17,16 @@
   * `Chatot`: "Our morning cheers! All together now! ♪"
 
 
-  * `Chatot Normal`
-
-  * `Chatot`: "Everyone: ONE! DON'T SHIRK WORK!"
+  * `💬`: "Everyone: ONE! DON'T SHIRK WORK!"
 
 
-  * `Chatot Normal`
-
-  * `Chatot`: "Everyone: TWO! RUN AWAY AND PAY!"
+  * `💬`: "Everyone: TWO! RUN AWAY AND PAY!"
 
 
   * * * *
 
 
-  * `Chatot Normal` ◀▼▶
-
-  * `Chatot`: "Everyone: THREE! SMILES GO FOR MILES!"
+  * `💬`: "Everyone: THREE! SMILES GO FOR MILES!"
 
 
   * `Chatot Normal`
@@ -40,9 +34,7 @@
   * `Chatot`: "OK, Pokémon! Get to work! ♪"
 
 
-  * `Chatot Normal` ◀▼▶
-
-  * `Chatot`: "Everyone: HOORAY!"
+  * `💬`: "Everyone: HOORAY!"
 
 
   * `Partner Normal`

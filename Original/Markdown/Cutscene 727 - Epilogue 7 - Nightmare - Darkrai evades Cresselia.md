@@ -1,5 +1,6 @@
 ⛈️
 
+
 `💬`: "...This is proceeding nicely."
 
 
@@ -32,7 +33,8 @@
 
 ⛈️
 
-`Cresselia Normal` ⛈️
+
+`Cresselia Normal`
 
 `Cresselia`: "...He got away again..."
 

@@ -28,12 +28,14 @@
 
 💥
 
-`Partner Shouting` 💥
+
+`Partner Shouting` 〽
 
 `Partner Name`: "Waaah!"
 
 
 ⚡
+
 
 * * *
 
@@ -44,7 +46,10 @@
 * * *
 
 
-`Dusknoir Normal` 〽
+`Electrike`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "Stop this instant! Their words are sincere!"
 
@@ -56,9 +61,14 @@
 
 ❗
 
+
 ❗
 
-`Partner Surprised` ❗
+
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Dus... Dusknoir!"
 
@@ -143,7 +153,10 @@
 `Manectric`: "Come."
 
 
-`Partner Sigh` 💧
+`Partner`: 💧
+
+
+`Partner Sigh`
 
 `Partner Name`: "Whew!"
 
@@ -228,7 +241,10 @@
 `Partner Name`: "No wonder they refused to hear our arguments."
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh! I forgot something!"
 
@@ -263,7 +279,10 @@
 `Partner Name`: "We did it! Let's return the item to Marill and his little brother right away!"
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "I don't get it, though... How did this Water Float end up here?"
 
@@ -311,9 +330,11 @@
 
 〽
 
+
 〽
 
-`Partner Surprised` 〽
+
+`Partner Surprised`
 
 `Partner Name`: "Hey! It's you thugs!?"
 
@@ -378,9 +399,7 @@
 `Skuntank`: "Let's skedaddle, boys!"
 
 
-`Skuntank Normal`
-
-`Skuntank`: "Koffing & Zubat: Yeah!"
+`💬`: "Koffing & Zubat: Yeah!"
 
 
 `Partner Angry`

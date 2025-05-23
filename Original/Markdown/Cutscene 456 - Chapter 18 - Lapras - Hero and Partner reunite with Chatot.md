@@ -6,7 +6,10 @@
 `Partner Name`: "Hey! Chatot!"
 
 
-`Chatot Angry` ❗
+`Chatot`: ❗
+
+
+`Chatot Angry`
 
 `Chatot`: "Hmmm. You two!"
 
@@ -56,7 +59,10 @@
 `Chatot`: "(That one glance I caught of them... I'm on the verge of remembering...)"
 
 
-`Chatot Surprised` ❗
+`Chatot`: ❗
+
+
+`Chatot Surprised`
 
 `Chatot`: "(That's it!)"
 

@@ -1,7 +1,10 @@
 * * *
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "`Partner Name`! `Hero Name`! Be careful!"
 
@@ -16,7 +19,10 @@
 `Partner Name`: "What?!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Wah..."
 
@@ -48,7 +54,10 @@
 `Chatot`: "Urrgghh..."
 
 
-`Partner Surprised` 〽
+`Hero`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Ch-Chatot!"
 
@@ -73,7 +82,10 @@
 `Kabutops`: "That's not what I'd call smart."
 
 
-`Omastar Normal` ❗
+`Omastar`: ❗
+
+
+`Omastar Normal`
 
 `Omastar`: "Hey! I remember!"
 
@@ -123,7 +135,10 @@
 `Chatot`: "Urrgghh..."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Chatot!"
 

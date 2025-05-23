@@ -24,7 +24,7 @@
 `Loudred`: "How LATE will you SLEEP!"
 
 
-`Loudred Angry`
+`Loudred Angry` 💢
 
 `Loudred`: "The MORNING address is STARTING! HURRY UP!"
 

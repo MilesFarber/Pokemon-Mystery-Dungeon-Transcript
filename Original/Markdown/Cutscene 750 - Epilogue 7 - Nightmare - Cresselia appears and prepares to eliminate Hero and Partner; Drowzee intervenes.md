@@ -19,7 +19,13 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+* * *
+
+
+`Partner Surprised`
 
 `Partner Name`: "Waah! What's happening?!"
 
@@ -69,7 +75,10 @@
 `Cresselia`: "I am... Cresselia!"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(C-Cresselia...!)"
 
@@ -104,7 +113,10 @@
 `Partner Name`: "So my dreams... They weren't just ordinary dreams after all..."
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(What?!)"
 
@@ -129,7 +141,10 @@
 `Cresselia`: "You two are not supposed to exist in this world."
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(What? You...two?!)"
 
@@ -164,7 +179,10 @@
 `Partner Name`: "So Cresselia said in my dreams."
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(So it wasn't just me that had those dreams!)"
 
@@ -219,7 +237,10 @@
 `Cresselia`: "Eventually...the world will become enveloped within a nightmare."
 
 
-`Partner Sad` ❓
+`Partner`: ❓
+
+
+`Partner Sad`
 
 `Partner Name`: "Enveloped within a nightmare...?"
 
@@ -279,12 +300,18 @@
 `Cresselia`: "And, ultimately, all Pokémon will be locked in this nightmare without end."
 
 
-`Hero Surprised` 〽
+`Partner`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(A-all Pokémon...)"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "H-hey, Cresselia."
 
@@ -309,7 +336,7 @@
 `Cresselia`: "That is...for you to disappear!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What?! Disappear? Us?"
 
@@ -324,7 +351,7 @@
 `Cresselia`: "The opportunity...to make you disappear!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What...? Wait a second!"
 
@@ -374,7 +401,10 @@
 `Cresselia`: "that is driving the world to ruin!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk...!"
 
@@ -406,7 +436,8 @@
 `💬`: "Heeeeeey!"
 
 
-❗
+`Partner`: ❗
+
 
 `💬`: "Hello, `Hero Name`? And, `Partner Name`? Where are you?"
 
@@ -444,7 +475,10 @@
 `💬`: "Hey! So here you are!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "D-Drowzee!"
 

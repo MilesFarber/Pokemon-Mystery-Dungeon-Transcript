@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Normal` ⚟
+`Grovyle`: ⚟
+
+
+`Partner Normal`
 
 `Partner Name`: "I'm back. I've got some news like you wanted."
 
@@ -41,7 +44,10 @@
 `Partner Name`: "Even worse, it's spreading. Time is stopping in more and more places."
 
 
-`Grovyle Normal` ❗
+`Hero`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Is that true?"
 
@@ -71,7 +77,10 @@
 `Grovyle`: "Temporal Tower is starting to collapse."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Temporal Tower is...collapsing?"
 
@@ -96,7 +105,10 @@
 `Grovyle`: "The planet's paralysis is coming on fast."
 
 
-`Partner Surprised` 〽
+`Hero`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! But..."
 
@@ -231,7 +243,10 @@
 `Partner Name`: "....................."
 
 
-`Partner Worried` 💧
+`Partner`: 💧
+
+
+`Partner Worried`
 
 `Partner Name`: "So...where should we begin looking?"
 

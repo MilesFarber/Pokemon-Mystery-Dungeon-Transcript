@@ -31,28 +31,28 @@
 `Partner Name`: "Something that extraordinary is really possible...?"
 
 
-`Partner Name`: "(That's true!)"
+`💬`: "(That's true!)"
 
 
-`Partner Name`: "(It's hard to accept that Pokémon could come from the future!)"
+`💬`: "(It's hard to accept that Pokémon could come from the future!)"
 
 
-`Partner Name`: "(Come to think of it...)"
+`💬`: "(Come to think of it...)"
 
 
-`Partner Name`: "(This never crossed my mind before...)"
+`💬`: "(This never crossed my mind before...)"
 
 
-`Partner Name`: "(The world of the future where Dusknoir and Grovyle came from...)"
+`💬`: "(The world of the future where Dusknoir and Grovyle came from...)"
 
 
-`Partner Name`: "(What is it like?)"
+`💬`: "(What is it like?)"
 
 
-`Partner Name`: "(Is the future like the present day...?)"
+`💬`: "(Is the future like the present day...?)"
 
 
-`Partner Name`: "(Is it a world at peace?)"
+`💬`: "(Is it a world at peace?)"
 
 
 `Partner Name`: "Oooooh..."

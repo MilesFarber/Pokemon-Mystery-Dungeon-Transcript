@@ -101,7 +101,7 @@
 `Chatot`: "Hey, you two!"
 
 
-`Chatot Normal` ⚟
+`Chatot Normal`
 
 `Chatot`: "The Guildmaster wants to see you right away."
 

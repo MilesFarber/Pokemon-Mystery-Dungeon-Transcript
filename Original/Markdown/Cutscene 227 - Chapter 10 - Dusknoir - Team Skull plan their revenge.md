@@ -1,7 +1,10 @@
 * * *
 
 
-`Zubat Normal` 💦
+`Zubat`: 💦
+
+
+`Zubat Normal`
 
 `Zubat`: "Ch-Ch-Chief... We were really put in our place on that last expedition... Urk!"
 
@@ -26,7 +29,10 @@
 `Skuntank`: "Grrrrr! I'm so furious! It's burning me up!"
 
 
-`Koffing Normal` 💦
+`Skuntank`: 💦
+
+
+`Koffing Normal`
 
 `Koffing`: "Whoa-ho-ho! There's gotta be some way we can get back at 'em!"
 
@@ -41,7 +47,10 @@
 `Zubat`: "Instead of Wigglytuff, how about we take revenge on the wimps in that Team `Team Name`?"
 
 
-`Skuntank Normal` ❗
+`Skuntank`: ❗
+
+
+`Skuntank Normal`
 
 `Skuntank`: "Chaw-haw! Great idea!"
 

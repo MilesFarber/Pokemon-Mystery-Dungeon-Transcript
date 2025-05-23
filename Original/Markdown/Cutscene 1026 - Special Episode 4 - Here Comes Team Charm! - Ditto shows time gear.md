@@ -6,7 +6,10 @@
 `Ditto`: "We've arrived."
 
 
-`Weavile Surprised` ❗
+`Wigglytuff`: ❗
+
+
+`Weavile Surprised`
 
 `Weavile`: "Huh?!"
 

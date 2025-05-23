@@ -24,7 +24,10 @@
 `Dusknoir`: "Gah!"
 
 
-`Grovyle Normal` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Are you OK, Dusknoir?"
 

@@ -29,12 +29,15 @@
 * * *
 
 
-`Partner Worried` 〽
+`Partner Worried`
 
 `Partner Name`: "GRROOOOOOH...GRROOOOOOH...!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Eep!"
 
@@ -52,7 +55,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "GRROOOOOOH...!"
 

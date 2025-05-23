@@ -16,7 +16,7 @@
 `Lapras`: "Please...look ahead."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Oh! What's that?!"
 
@@ -24,7 +24,7 @@
 * * *
 
 
-`Grovyle Normal`
+`Grovyle Normal` 〽
 
 `Grovyle`: "Is that... Is that perhaps..."
 

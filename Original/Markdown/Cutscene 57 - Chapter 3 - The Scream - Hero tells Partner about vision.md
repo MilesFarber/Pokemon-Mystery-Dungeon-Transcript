@@ -1,7 +1,10 @@
 * * *
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(What was that?!)"
 
@@ -11,7 +14,10 @@
 `Partner Name`: "It would be nice if those cute little guys found their item soon."
 
 
-`Partner Normal` ⚞
+`Partner`: ⚞
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? Is anything the matter, `Hero Name`?"
 
@@ -44,7 +50,10 @@
 `Partner Name`: "So you want to go rescue Azurill right away?"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "It's an...emergency?!"
 

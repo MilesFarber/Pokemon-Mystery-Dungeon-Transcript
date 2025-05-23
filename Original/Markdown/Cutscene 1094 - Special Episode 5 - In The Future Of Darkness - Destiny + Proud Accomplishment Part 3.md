@@ -80,7 +80,10 @@
 * * *
 
 
-`Sableye Stunned` 💦
+`Sableye`: 💦
+
+
+`Sableye Stunned`
 
 `Sableye`: "M-Master Dusknoir..."
 
@@ -90,7 +93,10 @@
 `Grovyle`: "Ahhhhoooh... Sableye!"
 
 
-`Grovyle Pain` ❗
+`Sableye`: ❗
+
+
+`Grovyle Pain`
 
 `Grovyle`: "It's the same for you!"
 
@@ -110,7 +116,10 @@
 `Grovyle`: "Is that truly what you want?"
 
 
-`Grovyle Pain` 💦
+`Sableye`: 💦
+
+
+`Grovyle Pain`
 
 `Grovyle`: "Sableye! What does your heart tell you?"
 
@@ -120,9 +129,10 @@
 `Grovyle`: "Your sense of self-respect... Where has it gone?"
 
 
-`Grovyle Pain` 💦
+`Sableye`: 💦
 
-`Grovyle`: "Sableye: Wheh-heh..."
+
+`💬`: "Sableye: Wheh-heh..."
 
 
 `Grovyle Pain`
@@ -170,7 +180,10 @@
 `Celebi`: "You can move, can't you?! Do something!"
 
 
-`Spiritomb Normal` 〽
+`Spiritomb`: 〽
+
+
+`Spiritomb Normal`
 
 `Spiritomb`: "HEE-hee HEE-hee!"
 
@@ -216,7 +229,10 @@
 * * *
 
 
-`Dusknoir Pain` 〽
+`Sableye`: 〽
+
+
+`Dusknoir Pain`
 
 `Dusknoir`: "Uhhhh....uhhhh...."
 
@@ -269,7 +285,7 @@
 * * *
 
 
-`Dusknoir Pain` 〽
+`Dusknoir Pain`
 
 `Dusknoir`: "GRRR-OOOOOO...OOOOOH!"
 
@@ -282,7 +298,10 @@
 `Sableye`: "EEEWAAAAH!"
 
 
-`Dusknoir Normal` 〽
+`Dusknoir`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "M-Master Dialga!"
 
@@ -300,9 +319,10 @@
 `Dusknoir`: "GWAH!"
 
 
-`Dusknoir Pain` 💦
+`Sableye`: 💦
 
-`Dusknoir`: "Sableye: M-Master Dusknoir..."
+
+`💬`: "Sableye: M-Master Dusknoir..."
 
 
 `Primal Dialga Normal`
@@ -318,7 +338,10 @@
 `Dusknoir`: "GWOOOOOoooohhh!"
 
 
-`Sableye Pain` 💦
+`Sableye`: 💦
+
+
+`Sableye Pain`
 
 `Sableye`: "M-Master Dusknoir..."
 
@@ -328,9 +351,7 @@
 `Sableye`: "Master Dusknoir... We must protect him! Let's go!"
 
 
-`Sableye Angry`
-
-`Sableye`: "Sableye: Wheh-heh-heh!"
+`💬`: "Sableye: Wheh-heh-heh!"
 
 
 `Primal Dialga Normal`
@@ -341,9 +362,7 @@
 * * *
 
 
-`Primal Dialga Normal` 〽
-
-`Primal Dialga`: "Sableye: GYAAAAAAAaaaaaaaa!!!"
+`💬`: "Sableye: GYAAAAAAAaaaaaaaa!!!"
 
 
 `Dusknoir Pain`
@@ -364,7 +383,7 @@
 * * *
 
 
-`Primal Dialga Normal` 〽
+`Primal Dialga Normal`
 
 `Primal Dialga`: "GRRR-OOOOOO...OOOOOH!"
 
@@ -379,7 +398,10 @@
 `Spiritomb`: "HEEEEEEEEEEEEEE-hee HEE-hee!"
 
 
-`Celebi Surprised` ❗
+`Celebi`: ❗
+
+
+`Celebi Surprised`
 
 `Celebi`: "My...my paralysis is gone!"
 
@@ -389,7 +411,10 @@
 `Celebi`: "Dialga!"
 
 
-`Grovyle Pain` ❗
+`Grovyle`: ❗
+
+
+`Grovyle Pain`
 
 `Grovyle`: "...! S-stop!"
 
@@ -402,7 +427,10 @@
 * * *
 
 
-`Celebi Surprised` ❗
+`Celebi`: ❗
+
+
+`Celebi Surprised`
 
 `Celebi`: "Waaah! Wh-what?!"
 
@@ -410,7 +438,13 @@
 * * *
 
 
-`Celebi Surprised` ❗
+`Celebi`: 〽
+
+
+`Grovyle`: ❗
+
+
+`Celebi Surprised`
 
 `Celebi`: "Wh-what's that?!"
 
@@ -420,7 +454,10 @@
 `Grovyle`: "If I remember right, that's called...an aurora..."
 
 
-`Celebi Normal` ❗
+`Celebi`: ❗
+
+
+`Celebi Normal`
 
 `Celebi`: "!?"
 
@@ -455,7 +492,13 @@
 `Grovyle`: "You did it... ... ..."
 
 
-`Primal Dialga Normal` 〽
+`Celebi`: ⚟
+
+
+`Celebi`: 〽
+
+
+`Primal Dialga Normal`
 
 `Primal Dialga`: "GIGI... GIGIGIGI..."
 
@@ -468,7 +511,10 @@
 `Primal Dialga`: "GI! GIGIGIGIGI!"
 
 
-`Grovyle Surprised` 〽
+`Celebi`: 〽
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "Dialga..."
 
@@ -491,7 +537,7 @@
 `Celebi`: "EEEEeeek!"
 
 
-`Primal Dialga Normal` 〽
+`Primal Dialga Normal`
 
 `Primal Dialga`: "GRRR-OOOOOO...OOOOOH!"
 
@@ -499,9 +545,10 @@
 * * *
 
 
-`Primal Dialga Normal` 💦
+`Sableye`: 💦
 
-`Primal Dialga`: "Sableye: M-Master Dusknoir!"
+
+`💬`: "Sableye: M-Master Dusknoir!"
 
 
 `Dusknoir Pain`
@@ -522,6 +569,9 @@
 `Dusknoir Pain`
 
 `Dusknoir`: "H-hurry..."
+
+
+`Sableye`: 💦
 
 
 * * *

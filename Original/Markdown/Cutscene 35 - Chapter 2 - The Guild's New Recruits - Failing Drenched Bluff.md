@@ -32,7 +32,10 @@
   *   * `Chatot`: "Well... It appears that your outing was less than a total success."
 
 
-  *   * `Partner Pain` 💧
+  *   * `Partner`: 💧
+
+
+  *   * `Partner Pain`
 
   *   * `Partner Name`: "Ugh..."
 

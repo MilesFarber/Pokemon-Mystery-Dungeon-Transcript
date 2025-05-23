@@ -22,8 +22,6 @@
 `Partner Name`: "Where's Darkrai, though...?"
 
 
-❗
-
 `Darkrai`: "You've kept me waiting."
 
 
@@ -37,7 +35,10 @@
 `Darkrai`: "Good of you to come, `Partner Name` and `Hero Name`."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Why do you keep after us?! Y-you don't even know us!"
 
@@ -52,7 +53,10 @@
 `Darkrai`: "You especially, `Hero Name`."
 
 
-`Hero Surprised` 〽
+`Partner`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(Wh-what?!)"
 
@@ -72,7 +76,10 @@
 `Hero Name`: "(...Accident...?)"
 
 
-`Hero Normal` ❗
+`Hero`: ❗
+
+
+`Hero Normal`
 
 `Hero Name`: "(Oh, that's right! Grovyle once explained it...)"
 

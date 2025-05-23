@@ -1,12 +1,18 @@
 * * *
 
 
-`Dugtrio Normal` 💦
+`Dugtrio`: 💦
+
+
+`Dugtrio Normal`
 
 `Dugtrio`: "T-time has stopped?!"
 
 
-`Sunflora Normal` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Normal`
 
 `Sunflora`: "But..."
 
@@ -16,7 +22,10 @@
 `Sunflora`: "How could something this awful happen?"
 
 
-`Sunflora Normal` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Normal`
 
 `Sunflora`: "It's unthinkable!"
 
@@ -41,12 +50,15 @@
 `Chatot`: "Stolen!"
 
 
-`Bidoof Normal` ❗
+`Bidoof Normal`
 
 `Bidoof`: "Huh?!"
 
 
-`Dugtrio Normal` 💦
+`Dugtrio`: 💦
+
+
+`Dugtrio Normal`
 
 `Dugtrio`: "The Time Gear was s-stolen?!"
 
@@ -106,9 +118,7 @@
 `Chatot`: "All right, everyone! Here's to another busy day of work! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Chatot Normal`

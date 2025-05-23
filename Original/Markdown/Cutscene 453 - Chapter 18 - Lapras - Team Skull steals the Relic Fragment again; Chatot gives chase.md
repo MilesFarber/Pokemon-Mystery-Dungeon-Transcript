@@ -52,7 +52,10 @@
 `Koffing`: "Whoops! Excuuuse me!"
 
 
-`Partner Surprised` 〽
+`Chatot`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Hey!"
 
@@ -72,7 +75,10 @@
 `Skuntank`: "This is it? The Relic Fragment?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Th-that's...!"
 
@@ -82,7 +88,10 @@
 `Skuntank`: "Chaw-haw-haw! I'll take this!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Hey!"
 
@@ -97,7 +106,10 @@
 `Zubat`: "Heh-heh-heh! You don't learn very well, that's for sure!"
 
 
-`Chatot Surprised` 💦
+`Chatot`: 💦
+
+
+`Chatot Surprised`
 
 `Chatot`: "W-wait, wait, please! I'm afraid I'm not following what's going on here."
 
@@ -127,7 +139,10 @@
 `Skuntank`: "Your guild's full of gullible nincompoops just waiting to be fleeced."
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "Oh-oh-oh?!"
 
@@ -152,7 +167,10 @@
 `Partner Name`: "They're a bad exploration team! Team Skull is a bunch of crooks!"
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "Wha-wha-what?! Is that true?!"
 
@@ -187,7 +205,7 @@
 `Chatot`: "Squawk! Sq-sq-squawk!"
 
 
-`Chatot Angry`
+`Chatot Angry` 💢
 
 `Chatot`: "Those stinking scoundrels... Play me for a fool, will they!?"
 

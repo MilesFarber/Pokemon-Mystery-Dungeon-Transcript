@@ -1,7 +1,10 @@
 * * *
 
 
-`Partner Worried` 💧
+`Partner`: 💧
+
+
+`Partner Worried`
 
 `Partner Name`: "What? Are they arguing?"
 
@@ -9,7 +12,8 @@
 `💬`: "...Sorry to make you WAIT."
 
 
-⚞
+`Partner`: ⚞
+
 
 `💬`: "Well, it's TRUE that you don't see any `Hero Species` in these parts..."
 
@@ -20,7 +24,7 @@
 `💬`: "OK, good enough! ENTER!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Yipes!"
 

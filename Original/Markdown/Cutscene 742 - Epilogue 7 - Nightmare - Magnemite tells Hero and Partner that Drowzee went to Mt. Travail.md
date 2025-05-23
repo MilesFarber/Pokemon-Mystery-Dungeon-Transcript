@@ -26,7 +26,10 @@
 `Chatot`: "But they say that Drowzee has the amazing ability to enter others' dreams."
 
 
-`Partner Surprised` 〽
+`Chimecho`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Really?! He can go into dreams?"
 
@@ -136,7 +139,10 @@
 `Partner Name`: "We'll be sure to come back with Drowzee."
 
 
-`Marill Teary-Eyed` 💦
+`Marill`: 💦
+
+
+`Marill Teary-Eyed`
 
 `Marill`: "Urf... `Partner Name`..."
 
@@ -171,9 +177,7 @@
 `Chatot`: "All right, everyone! Time for work! ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Apprentices: HOORAY!"
+`💬`: "Apprentices: HOORAY!"
 
 
 `Wigglytuff Normal`

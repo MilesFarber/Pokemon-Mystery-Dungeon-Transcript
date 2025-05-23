@@ -35,7 +35,10 @@
 `Chatot`: "You all are late! Everyone else arrived a long time ago!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urgh..."
 
@@ -55,7 +58,13 @@
 `Bidoof`: "Yes sirree!"
 
 
-`Partner Normal` ❓
+`Partner`: ⚟
+
+
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Hm? What's wrong, `Hero Name`?"
 
@@ -100,7 +109,7 @@
 `Hero Name`: "(Does it have something to do with me? Before I lost my memory?)"
 
 
-`Chatot Normal` ❗
+`Chatot Normal` ◀▼▶
 
 `Chatot`: "Come on, come on! We haven't got all day!"
 
@@ -173,7 +182,10 @@
 `Loudred`: "Yeah, don't spoil things now!"
 
 
-`Corphish Worried` 💧
+`Corphish`: 💧
+
+
+`Corphish Worried`
 
 `Corphish`: "Hey, hey..."
 
@@ -188,7 +200,10 @@
 `Chimecho`: "Um, while we were traveling, I heard about a certain legend."
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "A legend, you say?"
 
@@ -213,7 +228,10 @@
 `Chimecho`: "Uxie is said to lock eyes with others and wipe their memories clean."
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(What?! Wipe their memories clean?!)"
 
@@ -251,6 +269,9 @@
 `Loudred Normal` 💧
 
 `Loudred`: "What'll I do if my MEMORY is wiped clean?"
+
+
+`Loudred`: 💧
 
 
 `Sunflora Normal`
@@ -353,9 +374,7 @@
 `Chatot`: "All right, everyone. ♪ Let's give it our best, as always. ♪"
 
 
-`Chatot Normal` ◀▼▶
-
-`Chatot`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Sunflora Normal` ◀▼▶
@@ -383,7 +402,7 @@
 `Diglett`: "Dad, do you think maybe Fogbound Lake could be under the ground?"
 
 
-`Diglett Normal`
+`Diglett Normal` ◀▼▶
 
 `Diglett`: "I was thinking we should try looking underground."
 
@@ -478,7 +497,10 @@
 `Partner Name`: "Hey, `Hero Name`!"
 
 
-`Partner Worried` ❗
+`Hero`: ❗
+
+
+`Partner Worried`
 
 `Partner Name`: "Why do you keep drifting off like that? It's not like you."
 

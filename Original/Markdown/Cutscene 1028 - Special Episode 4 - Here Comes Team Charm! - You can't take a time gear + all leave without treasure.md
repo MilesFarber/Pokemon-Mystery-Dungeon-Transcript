@@ -16,7 +16,10 @@
 `Weavile`: "Arbok! Drapion! We're going home!"
 
 
-`Medicham Surprised` ❗
+`Medicham`: ❗
+
+
+`Medicham Surprised`
 
 `Medicham`: "Huh?! W-wait up, you!"
 

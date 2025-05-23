@@ -12,7 +12,7 @@
 * * *
 
 
-`Haunter Pain`
+`Haunter Pain` 〽
 
 `Haunter`: "GUUUUOOOOOOOooooooohhhhhhhh!"
 
@@ -20,7 +20,7 @@
 * * *
 
 
-`Sunflora Normal` 〽
+`Sunflora Normal`
 
 `Sunflora`: "Phew... Somehow, I managed to knock him out."
 
@@ -66,7 +66,10 @@
 `Sunflora`: "Oh my gosh!"
 
 
-`Sunflora Surprised` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "Wh...what?!"
 
@@ -106,7 +109,10 @@
 `Sunflora`: "I-invincible?"
 
 
-`Sunflora Worried` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Worried`
 
 `Sunflora`: "Oh..."
 

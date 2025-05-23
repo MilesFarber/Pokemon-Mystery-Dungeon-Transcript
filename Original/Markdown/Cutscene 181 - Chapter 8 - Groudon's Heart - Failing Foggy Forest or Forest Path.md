@@ -19,7 +19,10 @@
 `Partner Name`: "...Huh?!"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Wh-where is this?"
 

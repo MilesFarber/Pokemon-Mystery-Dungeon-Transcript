@@ -16,7 +16,10 @@
 `Sableye`: "Wheh-heh-heh!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk..."
 

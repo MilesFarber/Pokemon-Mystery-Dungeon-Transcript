@@ -3,7 +3,10 @@
 `Bidoof`: "N-nope... Not this way."
 
 
-`Bidoof Sad` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Sad`
 
 `Bidoof`: "Sniff... I always seem to space out and daydream..."
 

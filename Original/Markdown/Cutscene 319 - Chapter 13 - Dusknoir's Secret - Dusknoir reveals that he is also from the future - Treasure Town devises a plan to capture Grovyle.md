@@ -1,7 +1,10 @@
 * * *
 
 
-`Vigoroth Normal` 〽
+`Vigoroth`: 〽
+
+
+`Vigoroth Normal`
 
 `Vigoroth`: "Th-the world's...ruin?!"
 
@@ -121,9 +124,7 @@
 `Dusknoir`: "I, too...am a Pokémon from the future."
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Everyone: WHAT?!"
+`💬`: "Everyone: WHAT?!"
 
 
 `Partner Surprised`
@@ -206,6 +207,9 @@
 `Ursaring`: "Urgh..."
 
 
+`Ursaring`: 💧
+
+
 `Dusknoir Normal`
 
 `Dusknoir`: "Also, I needed to avoid alerting Grovyle to my presence."
@@ -236,7 +240,7 @@
 `Chatot`: "No, no! Oh, no, no! Please, don't apologize!"
 
 
-`Chatot Normal`
+`Chatot Normal` 💦
 
 `Chatot`: "You can't blame yourself! You had no choice!"
 
@@ -321,9 +325,7 @@
 `Dusknoir`: "then put an end to Grovyle's calamitous plot!"
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Everyone: YEAH!"
+`💬`: "Everyone: YEAH!"
 
 
 `Azelf Normal`
@@ -451,7 +453,10 @@
 `Dusknoir`: "I must ask them to actually go to Crystal Lake."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "I get it! Then when Grovyle shows up to find Azelf and the others, that's when we can catch him!"
 
@@ -501,7 +506,7 @@
 `Dusknoir`: "But, for the capture of Grovyle, I would prefer to work alone."
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Pardon?! Wh-why?"
 
@@ -639,42 +644,28 @@
 `Dusknoir`: "Let's capture Grovyle using whatever means necessary!"
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Everyone: YEAH!"
+`💬`: "Everyone: YEAH!"
 
 
 * * *
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "And thus..."
+`💬`: "And thus..."
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "Dusknoir and the trio of Uxie, Mesprit, and Azelf..."
+`💬`: "Dusknoir and the trio of Uxie, Mesprit, and Azelf..."
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "set off for Crystal Cave."
+`💬`: "set off for Crystal Cave."
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "In the meantime, the other Pokémon busied themselves..."
+`💬`: "In the meantime, the other Pokémon busied themselves..."
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "spreading rumors that Azelf and the others were about to seal the Time Gear away."
+`💬`: "spreading rumors that Azelf and the others were about to seal the Time Gear away."
 
 
-`Dusknoir Normal`
-
-`Dusknoir`: "As for those Pokémon from Wigglytuff's Guild..."
+`💬`: "As for those Pokémon from Wigglytuff's Guild..."
 
 
 *Anchor: <a name="1"></a>1*

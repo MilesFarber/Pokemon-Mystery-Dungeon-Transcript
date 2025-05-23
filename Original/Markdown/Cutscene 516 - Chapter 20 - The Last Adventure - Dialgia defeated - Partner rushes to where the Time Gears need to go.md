@@ -32,7 +32,7 @@
 `Partner Name`: "While Dialga is down, I'll go put in the Time Gears."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Wa-waah!"
 
@@ -40,7 +40,10 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Th-this..."
 

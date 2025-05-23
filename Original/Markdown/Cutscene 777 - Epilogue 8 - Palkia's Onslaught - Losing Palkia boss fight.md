@@ -1,7 +1,10 @@
 * * *
 
 
-`Palkia Normal` ❗
+`Palkia`: ❗
+
+
+`Palkia Normal`
 
 `Palkia`: "THEY...DISAPPEARED?"
 

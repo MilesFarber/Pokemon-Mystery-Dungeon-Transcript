@@ -29,7 +29,7 @@
 `💬`: "Hold it!"
 
 
-`Partner Angry` ❗
+`Partner Angry`
 
 `Partner Name`: "Y-you brutes?!"
 
@@ -79,7 +79,7 @@
 `Partner Name`: "We'll make you eat those words!"
 
 
-`Partner Angry`
+`Partner Angry` 〽
 
 `Partner Name`: "We won't ever let you reach Fogbound Lake!"
 
@@ -99,7 +99,10 @@
 `Skuntank`: "You were destroyed by our noxious gas special combo!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Gulp..."
 
@@ -122,7 +125,10 @@
 `💬`: "Waah! Wait! Wait for me!"
 
 
-`Zubat Normal` 💦
+`Zubat`: 💦
+
+
+`Zubat Normal`
 
 `Zubat`: "Wh-what?"
 
@@ -140,7 +146,10 @@
 `Wigglytuff`: "If my Perfect Apple went away, I would... I would... Sniffle..."
 
 
-`Wigglytuff Normal` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Oh? Oh-oh?"
 
@@ -160,7 +169,10 @@
 `Wigglytuff`: "Everyone's all together! ♪ Yay, yay!"
 
 
-`Skuntank Normal` 💦
+`Skuntank`: 💦
+
+
+`Skuntank Normal`
 
 `Skuntank`: "G-Guildmaster... Wh-what are you doing here?"
 
@@ -180,7 +192,10 @@
 `Wigglytuff`: "So I ran and ran and ran, and here I am. ♪"
 
 
-`Wigglytuff Normal` ❗
+`Wigglytuff`: ❗
+
+
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Oh, yes!"
 
@@ -190,7 +205,10 @@
 `Wigglytuff`: "You two shouldn't be dawdling here, should you?"
 
 
-`Partner Normal` ⚟
+`Partner`: ⚟
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh?"
 
@@ -200,7 +218,10 @@
 `Wigglytuff`: "You two have a job, don't you? To explore the forest, right? Go on then, off you go. ♪"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "But..."
 
@@ -240,7 +261,10 @@
 `Wigglytuff`: "La la la! ♪ La la! ♪ La la la! La la! ♪"
 
 
-`Skuntank Normal` 💧
+`Skuntank`: 💧
+
+
+`Skuntank Normal`
 
 `Skuntank`: "Um. Guildmaster..."
 
@@ -265,12 +289,12 @@
 `Wigglytuff`: "That's all right! I can't trouble my friends like that!"
 
 
-`Wigglytuff Normal`
+`Wigglytuff Normal` 💦
 
 `Wigglytuff`: "We'll let those two do the exploring."
 
 
-`Wigglytuff Normal`
+`Wigglytuff Normal` 💦
 
 `Wigglytuff`: "Let's wait for their report. ♪"
 
@@ -330,7 +354,10 @@
 `Skuntank`: "Mumble, mumble... (Rumor has it Wigglytuff has an unbelievably precious treasure.)"
 
 
-`Zubat Normal` 〽
+`Zubat`: 〽
+
+
+`Zubat Normal`
 
 `Zubat`: "Whisper, whisper... (Oh, really?! Treasure?)"
 

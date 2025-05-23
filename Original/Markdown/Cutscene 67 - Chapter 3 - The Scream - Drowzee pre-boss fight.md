@@ -1,7 +1,7 @@
 * * *
 
 
-`Partner Determined` ❗
+`Partner Determined`
 
 `Partner Name`: "Drowzee!"
 

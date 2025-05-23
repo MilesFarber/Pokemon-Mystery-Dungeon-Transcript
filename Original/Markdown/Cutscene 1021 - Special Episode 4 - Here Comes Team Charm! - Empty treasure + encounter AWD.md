@@ -19,7 +19,10 @@
 `Drapion`: "They're here! Over there!"
 
 
-`Arbok Angry` ❗
+`Medicham`: ❗
+
+
+`Arbok Angry`
 
 `Arbok`: "They pretended to run away and hid over here insssstead!"
 
@@ -108,9 +111,7 @@
 `Weavile`: "Arbok! Drapion! Let's go!"
 
 
-`Weavile Normal` ◀▼▶
-
-`Weavile`: "Arbok & Drapion: YEAH!"
+`💬`: "Arbok & Drapion: YEAH!"
 
 
 * * *

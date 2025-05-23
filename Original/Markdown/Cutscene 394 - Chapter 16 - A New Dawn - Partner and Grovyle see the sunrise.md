@@ -1,7 +1,10 @@
 * * *
 
 
-`Grovyle Normal` ⚟
+`Grovyle`: ⚟
+
+
+`Grovyle Normal`
 
 `Grovyle`: "What's the matter? Can't sleep?"
 
@@ -46,7 +49,10 @@
 `Partner Name`: "I was going over things like that in my head..."
 
 
-`Partner Normal` ⚞
+`Partner`: ⚞
+
+
+`Partner Normal`
 
 `Partner Name`: "Oh! Look, Grovyle!"
 

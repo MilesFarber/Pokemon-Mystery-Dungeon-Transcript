@@ -91,7 +91,10 @@
 `Mawile`: "...Heading back means..."
 
 
-`Breloom Surprised` 〽
+`Breloom`: 〽
+
+
+`Breloom Surprised`
 
 `Breloom`: "Aaaah! We didn't think about how to get back down!"
 
@@ -103,6 +106,7 @@
 
 〽
 
+
 `Machoke Normal` 〽
 
 `Machoke`: "........."
@@ -113,12 +117,15 @@
 `Shaymin`: "Calm down. It's fine."
 
 
-`Shaymin Happy`
+`Shaymin Happy` 🔆
 
 `Shaymin`: "I'll take you all back to the base of the mountain, no problem."
 
 
-`Mawile Normal` ❓
+`Mawile`: ❓
+
+
+`Mawile Normal`
 
 `Mawile`: "Huh? How will you do that?"
 
@@ -135,7 +142,8 @@
 
 〽
 
-`Shaymin Normal` ❗
+
+`Shaymin Normal`
 
 `Shaymin`: "I just touch the flower like this, and I can change Forme temporarily."
 
@@ -160,7 +168,10 @@
 `Shaymin`: "Hee-hee-hee. When I'm in this Forme, I can fly."
 
 
-`Mawile Surprised` ❗
+`Mawile`: ❗
+
+
+`Mawile Surprised`
 
 `Mawile`: "You can fly? That means..."
 

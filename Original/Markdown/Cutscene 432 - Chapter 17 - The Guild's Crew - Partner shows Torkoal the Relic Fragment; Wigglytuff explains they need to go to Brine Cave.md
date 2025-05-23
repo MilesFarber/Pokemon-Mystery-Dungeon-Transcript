@@ -1,7 +1,10 @@
 * * *
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(That's it!)"
 
@@ -11,7 +14,10 @@
 `Hero Name`: "(The Relic Fragment was inscribed with a peculiar pattern!)"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Hm? What is it, `Hero Name`?"
 
@@ -21,7 +27,10 @@
 `Partner Name`: "Pardon? My Relic Fragment?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh, right! That pattern!"
 
@@ -31,7 +40,10 @@
 `Partner Name`: "Excuse me. Could you have a look at this, please?"
 
 
-`Torkoal Surprised` 〽
+`Torkoal`: 〽
+
+
+`Torkoal Surprised`
 
 `Torkoal`: "Oh! Th-this is it!"
 
@@ -41,17 +53,21 @@
 `Torkoal`: "It's a pattern exactly like this!"
 
 
-`Torkoal Surprised` ❗
-
-`Torkoal`: "Everyone: WHAT?!"
+`💬`: "Everyone: WHAT?!"
 
 
-`Torkoal Surprised` 💦
+`Torkoal`: 💦
+
+
+`Torkoal Surprised`
 
 `Torkoal`: "Where...where did you get this?"
 
 
-`Partner Worried` 💦
+`Partner`: 💦
+
+
+`Partner Worried`
 
 `Partner Name`: "Um, I can't say if I even remember where."
 
@@ -121,7 +137,10 @@
 `Torkoal`: "I suppose so..."
 
 
-`Torkoal Normal` ❗
+`Torkoal`: ❗
+
+
+`Torkoal Normal`
 
 `Torkoal`: "Wait... You do realize that the Hidden Land is only a spoken legend, right?"
 
@@ -136,7 +155,10 @@
 `Wigglytuff`: "Yes! We are! ♪"
 
 
-`Torkoal Surprised` 〽
+`Torkoal`: 〽
+
+
+`Torkoal Surprised`
 
 `Torkoal`: "My goodness! What a surprise!"
 
@@ -151,9 +173,7 @@
 `Wigglytuff`: "This pattern... We've seen this somewhere. Haven't we?"
 
 
-`Wigglytuff Normal` ❗
-
-`Wigglytuff`: "Everyone: WHAT?!"
+`💬`: "Everyone: WHAT?!"
 
 
 `Chatot Normal`
@@ -171,7 +191,10 @@
 `Chatot`: "Inside Brine Cave..."
 
 
-`Chatot Pain` 💦
+`Chatot`: 💦
+
+
+`Chatot Pain`
 
 `Chatot`: "But, Guildmaster! That place...!"
 
@@ -186,7 +209,10 @@
 `Sunflora`: "A vicious..."
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "Bandit? By golly!"
 
@@ -231,7 +257,7 @@
 `Sunflora`: "We all need to be brave!"
 
 
-`Wigglytuff Normal` ◀▼▶
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Thanks, everyone! ♪"
 
@@ -246,9 +272,7 @@
 `Wigglytuff`: "We'll set off for Brine Cave tomorrow!"
 
 
-`Wigglytuff Normal` ◀▼▶
-
-`Wigglytuff`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 `Torkoal Normal` 🔆
@@ -296,12 +320,10 @@
 `Wigglytuff`: "OK! Dismissed!"
 
 
-`Wigglytuff Sigh` ◀▼▶
-
-`Wigglytuff`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
-`Bidoof Normal` ◀▼▶
+`Bidoof Normal`
 
 `Bidoof`: "Yup yup! We'll get ready, by golly!"
 
@@ -321,7 +343,10 @@
 `Wigglytuff`: "Chatot, you stay at the guild tomorrow on standby. ♪"
 
 
-`Chatot Surprised` 〽
+`Chatot`: 〽
+
+
+`Chatot Surprised`
 
 `Chatot`: "G-Guildmaster! Forgive me if I'm out of line, but..."
 
@@ -406,7 +431,10 @@
 `Chatot`: "And don't do anything that keeps me from succeeding there!"
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Urk! OK."
 

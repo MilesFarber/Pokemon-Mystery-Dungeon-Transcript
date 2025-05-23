@@ -11,6 +11,9 @@
 `Mamoswine`: "BUAOOOOOOO..."
 
 
+`Glalie`: 💦
+
+
 `Mamoswine Normal` 💦
 
 `Mamoswine`: "BUAAAAAAAAAAAA!"

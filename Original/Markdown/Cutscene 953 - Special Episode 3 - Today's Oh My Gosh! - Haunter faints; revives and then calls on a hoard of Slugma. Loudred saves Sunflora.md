@@ -12,7 +12,7 @@
 * * *
 
 
-`Haunter Pain`
+`Haunter Pain` 〽
 
 `Haunter`: "GAAAAAAAAAAAaaaaaaaaaaaah!!!"
 
@@ -20,7 +20,7 @@
 * * *
 
 
-`Sunflora Normal` 〽
+`Sunflora Normal`
 
 `Sunflora`: "...Anyway..."
 
@@ -51,7 +51,7 @@
 `Sunflora`: "A-again!"
 
 
-`Sunflora Surprised`
+`Sunflora Surprised` 〽
 
 `Sunflora`: "I really thought I knocked him out this time!"
 
@@ -71,7 +71,10 @@
 `Haunter`: "I'm invincible!"
 
 
-`Sunflora Stunned` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Stunned`
 
 `Sunflora`: "Ooogh... Why..."
 
@@ -86,12 +89,21 @@
 `Sunflora`: "Why is it Haunter is still so full of energy, even after being knocked out..."
 
 
-`Sunflora Surprised` 💦
+`Sunflora`: 〽
+
+
+`Sunflora`: 💦
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "Waaah! Wh-what is it?!"
 
 
-`Haunter Normal` 💦
+`Sunflora`: 💦
+
+
+`Haunter Normal`
 
 `Haunter`: "These are Slugma!"
 
@@ -111,7 +123,10 @@
 `Haunter`: "They are Fire-type Pokémon!"
 
 
-`Sunflora Surprised` 〽
+`Sunflora`: 〽
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "...! (Fire type!)"
 
@@ -141,12 +156,21 @@
 `Haunter`: "See ya!"
 
 
-`Sunflora Surprised` ❗
+`Sunflora`: ❗
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "Hey! Don't run away!"
 
 
-`Sunflora Surprised` 💦
+`Sunflora`: 〽
+
+
+`Sunflora`: 💦
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "...! (Was I...unprepared?!)"
 
@@ -196,12 +220,18 @@
 `Sunflora`: "Oh my gosh! Oh my gosh! Oh my gosh!"
 
 
-`Sunflora Worried` 〽
+`Sunflora`: 〽
+
+
+`Sunflora Worried`
 
 `Sunflora`: "Uhhn...huhhn..."
 
 
-`Slugma Angry` 💦
+`Sunflora`: 💦
+
+
+`Slugma Angry`
 
 `Slugma`: "GURURURURU!"
 
@@ -216,6 +246,9 @@
 `Sunflora`: "HELP!"
 
 
+`Sunflora`: 💦
+
+
 * * *
 
 
@@ -224,7 +257,10 @@
 `Slugma`: "Bugyaaaaaaaah!"
 
 
-`Sunflora Surprised` 〽
+`Sunflora`: 〽
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "...! (L-Loudred?!)"
 
@@ -237,7 +273,10 @@
 * * *
 
 
-`Slugma Sigh` 💦
+`Slugma`: 💦
+
+
+`Slugma Sigh`
 
 `Slugma`: "Gyah!"
 
@@ -247,7 +286,10 @@
 `Slugma`: "GYAAAAaaaaaaaah!!"
 
 
-`Loudred Normal` 💦
+`Loudred`: 💦
+
+
+`Loudred Normal`
 
 `Loudred`: "A-are you ALL RIGHT, Sunflora?"
 
@@ -282,17 +324,26 @@
 `Sunflora`: "B-but... Why are you here, Loudred?"
 
 
-`Loudred Normal` ❓
+`Loudred`: ❓
+
+
+`Loudred Normal`
 
 `Loudred`: "Huh? WHY?"
 
 
-`Loudred Normal` ⚞
+`Loudred`: ⚞
+
+
+`Loudred Normal`
 
 `Loudred`: "OH..."
 
 
-`Loudred Stunned` 💦
+`Loudred`: 💦
+
+
+`Loudred Stunned`
 
 `Loudred`: "N-no REASON. It's not because I was WORRIED about you, Sunflora!"
 
@@ -302,7 +353,10 @@
 `Loudred`: "Chatot ASKED me to come CHECK on you. That's the ONLY reason!"
 
 
-`Sunflora Surprised` ⚟
+`Sunflora`: ⚟
+
+
+`Sunflora Surprised`
 
 `Sunflora`: "...! (Only because Chatot asked you to!?)"
 
@@ -312,9 +366,12 @@
 `Sunflora`: "Humph! What's that?"
 
 
-`Sunflora Determined`
+`Sunflora Determined` 💢
 
 `Sunflora`: "You only helped me once, so don't get carried away!"
+
+
+`Loudred`: 〽
 
 
 `Loudred Angry` 💢
@@ -322,12 +379,12 @@
 `Loudred`: "Wh... What's WITH that ATTITUDE?!"
 
 
-`Loudred Angry`
+`Loudred Angry` 💢
 
 `Loudred`: "GOT IT! I'm NOT HELPING anymore!"
 
 
-`Loudred Angry`
+`Loudred Angry` 💢
 
 `Loudred`: "I'm NOT helping YOU AGAIN! HUMPH!"
 
@@ -357,7 +414,10 @@
 `Sunflora`: "But... For some reason, I just couldn't say it..."
 
 
-`Sunflora Stunned` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Stunned`
 
 `Sunflora`: "Oh, forget it! I'm mad at myself for not being able to say it..."
 

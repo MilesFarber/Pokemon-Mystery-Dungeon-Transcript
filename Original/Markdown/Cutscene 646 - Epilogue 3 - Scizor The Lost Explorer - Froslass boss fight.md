@@ -3,6 +3,7 @@
 
 〽
 
+
 `💬`: "Tee-hee..."
 
 
@@ -11,7 +12,8 @@
 
 〽
 
-`Froslass Normal` 〽
+
+`Froslass Normal`
 
 `Froslass`: "Tee-hee... How nice of you to visit again."
 

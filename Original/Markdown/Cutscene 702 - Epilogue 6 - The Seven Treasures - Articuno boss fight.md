@@ -3,12 +3,14 @@
 
 〽
 
+
 * * *
 
 
 ❗
 
-`Articuno Normal` 〽
+
+`Articuno Normal`
 
 `Articuno`: "Seekers of the seven treasures!"
 

@@ -11,7 +11,10 @@
 * * *
 
 
-`Medicham Normal` ❓
+`Gardevoir`: ❓
+
+
+`Medicham Normal`
 
 `Medicham`: "What? Th-this is..."
 

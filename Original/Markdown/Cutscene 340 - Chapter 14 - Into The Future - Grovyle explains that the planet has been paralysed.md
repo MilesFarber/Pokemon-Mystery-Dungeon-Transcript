@@ -36,7 +36,10 @@
 * * *
 
 
-`Partner Pain` 💦
+`Partner`: 💦
+
+
+`Partner Pain`
 
 `Partner Name`: "Huff-huff... Huff-huff..."
 
@@ -176,7 +179,10 @@
 `Grovyle`: "I hate to say it, but...morning never comes."
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Pardon?!"
 
@@ -206,7 +212,10 @@
 `Grovyle`: "Because...the planet has been paralyzed."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "The planet is...paralyzed?"
 
@@ -216,7 +225,10 @@
 `Partner Name`: "The planet's paralysis..."
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "...The planet's paralysis! That's right! I remember now!"
 

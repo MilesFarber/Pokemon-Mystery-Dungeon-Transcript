@@ -26,7 +26,10 @@
 `Dusknoir`: "You're a Sableye. Will you not follow my orders?"
 
 
-`Sableye Pain` 💦
+`Sableye`: 💦
+
+
+`Sableye Pain`
 
 `Sableye`: "Wheh-heh-heh..."
 
@@ -46,12 +49,12 @@
 `Sableye`: "Wheh-heh-heh! I'll talk! I'll talk!"
 
 
-`Sableye Pain`
+`Sableye Pain` 💦
 
 `Sableye`: "We don't want to do it either! Honestly!"
 
 
-`Sableye Pain`
+`Sableye Pain` 💦
 
 `Sableye`: "To attack Master Dusknoir... It's just..."
 
@@ -81,12 +84,18 @@
 `Sableye`: "Master Dusknoir's replacement... Master Dialga's...new henchman."
 
 
-`Dusknoir Normal` 〽
+`Grovyle`: 〽
+
+
+`Dusknoir Normal`
 
 `Dusknoir`: "M-my...replacement... A new henchman?!"
 
 
-`Sableye Pain` 💦
+`Sableye`: 💦
+
+
+`Sableye Pain`
 
 `Sableye`: "Y-yes..."
 
@@ -111,7 +120,10 @@
 `Sableye`: "To be sent back to the past."
 
 
-`Grovyle Normal` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Normal`
 
 `Grovyle`: "Resourceful... A final agent sent to the past..."
 
@@ -124,7 +136,10 @@
 `Sableye`: "Ugh!"
 
 
-`Grovyle Surprised` 〽
+`Grovyle`: 〽
+
+
+`Grovyle Surprised`
 
 `Grovyle`: "Dusknoir!"
 
@@ -212,7 +227,10 @@
 `Dusknoir`: "The new henchman... Who is it, anyway?!"
 
 
-`Sableye Pain` 💦
+`Sableye`: 💦
+
+
+`Sableye Pain`
 
 `Sableye`: "Th-that is..."
 
@@ -257,7 +275,7 @@
 `Sableye`: "Wheh-heh!"
 
 
-`Sableye Sigh`
+`Sableye Sigh` 💦
 
 `Sableye`: "Wheh-heh-heh-heh-heh-heh!!"
 
@@ -427,7 +445,10 @@
 `Dusknoir`: "What's wrong? Aren't you going?"
 
 
-`Grovyle Normal` ⚟
+`Grovyle`: ⚟
+
+
+`Grovyle Normal`
 
 `Grovyle`: "... (Humph! When that time comes...!)"
 

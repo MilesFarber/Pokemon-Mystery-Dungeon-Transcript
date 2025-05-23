@@ -11,7 +11,10 @@
 * * *
 
 
-`Sunflora Normal` 💦
+`Sunflora`: 💦
+
+
+`Sunflora Normal`
 
 `Sunflora`: "I can't get knocked out in a place like this!"
 

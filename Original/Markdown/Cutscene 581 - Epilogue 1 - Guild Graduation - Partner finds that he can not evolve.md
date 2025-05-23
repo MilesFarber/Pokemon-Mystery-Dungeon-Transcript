@@ -26,7 +26,7 @@
 `Teddiursa`: "When a Pokémon evolves, its appearance changes, sometimes dramatically."
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Really?! Your appearance changes?!"
 
@@ -71,14 +71,10 @@
 `Teddiursa`: "I'll try it out right away."
 
 
-`Teddiursa Normal`
-
-`Teddiursa`: "Those that seek awakening..."
+`💬`: "Those that seek awakening..."
 
 
-`Teddiursa Normal`
-
-`Teddiursa`: "This is Luminous Spring. Do you seek to evolve?"
+`💬`: "This is Luminous Spring. Do you seek to evolve?"
 
 
 `Teddiursa Normal`
@@ -86,9 +82,7 @@
 `Teddiursa`: "Yup! Please!"
 
 
-`Teddiursa Normal`
-
-`Teddiursa`: "Do you need an item to do so?"
+`💬`: "Do you need an item to do so?"
 
 
 `Teddiursa Normal`
@@ -96,14 +90,10 @@
 `Teddiursa`: "Nope! I don't need one!"
 
 
-`Teddiursa Normal`
-
-`Teddiursa`: "So be it..."
+`💬`: "So be it..."
 
 
-`Teddiursa Normal`
-
-`Teddiursa`: "Seeker of awakening... Let us begin."
+`💬`: "Seeker of awakening... Let us begin."
 
 
 >Something is happening...to Teddiursa...
@@ -117,7 +107,7 @@
 >Teddiursa evolved into Ursaring!
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Waah! Teddiursa looks just like Ursaring now!"
 
@@ -137,7 +127,10 @@
 `Ursaring`: "Congratulations! All the leveling up you went through finally paid off!"
 
 
-`Ursaring Normal` 💦
+`Ursaring`: 💦
+
+
+`Ursaring Normal`
 
 `Ursaring`: "Now it's hard to tell us apart..."
 
@@ -157,14 +150,10 @@
 `Partner Name`: "I'll try it first."
 
 
-`Partner Normal`
-
-`Partner Name`: "Those that seek awakening..."
+`💬`: "Those that seek awakening..."
 
 
-`Partner Normal`
-
-`Partner Name`: "This is Luminous Spring. Do you seek to evolve?"
+`💬`: "This is Luminous Spring. Do you seek to evolve?"
 
 
 `Partner Normal`
@@ -177,12 +166,13 @@
 `Partner Name`: "Please! Oh, this is exciting!"
 
 
+`💬`: "Do you need an item to do so?"
+
+
+`Partner`: ❓
+
+
 `Partner Normal`
-
-`Partner Name`: "Do you need an item to do so?"
-
-
-`Partner Normal` ❓
 
 `Partner Name`: "An item? ...I don't know..."
 
@@ -192,27 +182,19 @@
 `Partner Name`: "Um, no. I don't need an item."
 
 
-`Partner Normal`
-
-`Partner Name`: "So be it..."
+`💬`: "So be it..."
 
 
-`Partner Normal`
-
-`Partner Name`: "Seeker of awakening... Let us begin."
+`💬`: "Seeker of awakening... Let us begin."
 
 
-`Partner Normal`
-
-`Partner Name`: "...................................."
+`💬`: "...................................."
 
 
-`Partner Normal`
-
-`Partner Name`: "No. Impossible... You may not evolve."
+`💬`: "No. Impossible... You may not evolve."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What? Why not?!"
 
@@ -227,17 +209,16 @@
 `Partner Name`: "Is it maybe because I haven't met my requirements for evolving?"
 
 
-`Partner Surprised`
-
-`Partner Name`: "No. That is not it..."
+`💬`: "No. That is not it..."
 
 
-`Partner Surprised`
-
-`Partner Name`: "It is not merely a problem of not meeting requirements..."
+`💬`: "It is not merely a problem of not meeting requirements..."
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Then, why?"
 
@@ -252,47 +233,39 @@
 `Partner Name`: "Why can't I evolve?"
 
 
-`Partner Sad`
-
-`Partner Name`: "Why can you not evolve...?"
+`💬`: "Why can you not evolve...?"
 
 
-`Partner Sad`
-
-`Partner Name`: "It may be influenced by a distortion in the fabric of space..."
+`💬`: "It may be influenced by a distortion in the fabric of space..."
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Distortion? The fabric of space?"
 
 
-`Partner Worried`
-
-`Partner Name`: "Why that should be, I do not know..."
+`💬`: "Why that should be, I do not know..."
 
 
-`Partner Worried`
-
-`Partner Name`: "But your presence...is somehow related to the distortion of space itself."
+`💬`: "But your presence...is somehow related to the distortion of space itself."
 
 
-`Partner Worried`
-
-`Partner Name`: "And as a result of that, you cannot evolve..."
+`💬`: "And as a result of that, you cannot evolve..."
 
 
-`Partner Worried`
-
-`Partner Name`: "No. It is not only you... There is yet another..."
+`💬`: "No. It is not only you... There is yet another..."
 
 
-`Partner Worried`
-
-`Partner Name`: "The one behind you...is also forbidden its evolution."
+`💬`: "The one behind you...is also forbidden its evolution."
 
 
-`Partner Surprised` ❗
+`Ursaring`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! `Hero Name` too?!"
 
@@ -302,14 +275,10 @@
 `Hero Name`: "(What...me too?)"
 
 
-`Hero Normal`
-
-`Hero Name`: "That is all that I can tell..."
+`💬`: "That is all that I can tell..."
 
 
-`Hero Normal`
-
-`Hero Name`: "This is Luminous Spring. If you seek new evolution, then you shall return..."
+`💬`: "This is Luminous Spring. If you seek new evolution, then you shall return..."
 
 
 * * *

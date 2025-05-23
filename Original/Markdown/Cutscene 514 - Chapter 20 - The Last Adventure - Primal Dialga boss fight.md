@@ -15,12 +15,15 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Waah! Lightning!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Look at the sky, `Hero Name`!"
 
@@ -36,7 +39,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Waah! It happened again!"
 
@@ -51,7 +54,10 @@
 `Partner Name`: "Let's hurry, `Hero Name`!"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh! Over there!"
 
@@ -89,7 +95,10 @@
 `Hero Name`: "(What is this...?)"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(...! Wait a second!)"
 
@@ -107,12 +116,18 @@
 * * *
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "What? Five slots?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Th-that's it! If I put the Time Gears into these slots..."
 
@@ -137,9 +152,7 @@
 `Partner Name`: "Waaah! It turned suddenly dark!"
 
 
-`Partner Surprised`
-
-`Partner Name`: "GRRRRRRRRR..."
+`💬`: "GRRRRRRRRR..."
 
 
 `💬`: "SO! IT'S YOU!"
@@ -148,7 +161,10 @@
 `💬`: "YOU SEEK THE DESTRUCTION OF TEMPORAL TOWER!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "What?! That's not true!"
 
@@ -170,7 +186,7 @@
 * * *
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "D-Dialga!"
 

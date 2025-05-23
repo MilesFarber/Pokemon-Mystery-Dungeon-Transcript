@@ -24,7 +24,7 @@
 `Loudred`: "WHAT?! You can't identify the footprint?!"
 
 
-`Loudred Angry` ❗
+`Loudred Angry`
 
 `Loudred`: "What do you MEAN?!"
 
@@ -62,12 +62,12 @@
 `Partner Name`: "Who are you kidding? If Diglett here never gets stumped..."
 
 
-`Partner Angry`
+`Partner Angry` 💢
 
 `Partner Name`: "What about when we first arrived at the guild?"
 
 
-`Partner Angry`
+`Partner Angry` 💢
 
 `Partner Name`: "You guys couldn't figure out `Hero Name`'s footprint!"
 
@@ -83,7 +83,10 @@
 `Diglett`: "Your name is... Dusknoir?! Oh! Please wait just a moment!"
 
 
-`Chatot Surprised` ❗
+`Chatot`: ❗
+
+
+`Chatot Surprised`
 
 `Chatot`: "Dus...Dusknoir?!"
 
@@ -131,7 +134,10 @@
 `Partner Name`: "Who's that visitor?"
 
 
-`Loudred Normal` 〽
+`Loudred`: 〽
+
+
+`Loudred Normal`
 
 `Loudred`: "WHAT?! You haven't heard of Dusknoir?!"
 
@@ -141,7 +147,10 @@
 `Loudred`: "The famous explorer?!"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Eeek... Well, maybe, I..."
 
@@ -331,22 +340,22 @@
 `Wigglytuff`: "Everyone! This is Dusknoir!"
 
 
-`Wigglytuff Sigh`
+`Wigglytuff Sigh` ◀▼▶
 
 `Wigglytuff`: "He's going to stay in Treasure Town for a while. Mind yourself around him!"
 
 
-`Wigglytuff Sigh`
+`Wigglytuff Sigh` ◀▼▶
 
 `Wigglytuff`: "Dusknoir is very famous and quite knowledgeable..."
 
 
-`Wigglytuff Sigh`
+`Wigglytuff Sigh` ◀▼▶
 
 `Wigglytuff`: "So I bet everyone would like to get advice from him!"
 
 
-`Wigglytuff Sigh`
+`Wigglytuff Sigh` ◀▼▶
 
 `Wigglytuff`: "But let's not overdo it! We don't want to be a nuisance!"
 
@@ -381,7 +390,7 @@
 `Dusknoir`: "If there is anything you wish to ask of me, please don't hesitate."
 
 
-`Bidoof Sigh` ◀▼▶
+`Bidoof Sigh`
 
 `Bidoof`: "Yup yup! It's a great honor!"
 
@@ -411,7 +420,10 @@
 `Chatot`: "Oh! You two!"
 
 
-`Chatot Normal` ❗
+`Partner`: ❗
+
+
+`Chatot Normal`
 
 `Chatot`: "I'd started saying earlier...about your assignment for today..."
 

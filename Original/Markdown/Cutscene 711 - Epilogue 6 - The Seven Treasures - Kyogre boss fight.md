@@ -3,12 +3,14 @@
 
 〽
 
+
 * * *
 
 
 ❗
 
-`Kyogre Normal` 〽
+
+`Kyogre Normal`
 
 `Kyogre`: "Seekers of the seven treasures!"
 

@@ -1,7 +1,10 @@
 * * *
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(...I...I did that?)"
 
@@ -81,7 +84,10 @@
 `Darkrai`: "But...I've had a change of heart."
 
 
-`Darkrai Normal` ❗
+`Partner`: ❗
+
+
+`Darkrai Normal`
 
 `Darkrai`: "So...`Hero Name`...`Partner Name`."
 
@@ -101,7 +107,10 @@
 `Darkrai`: "You've both shown so much promise... Why not join me?"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "What?"
 
@@ -111,7 +120,7 @@
 `Darkrai`: "Why not join me...in ruling a world full of darkness?"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What?!"
 
@@ -156,7 +165,10 @@
 `Partner Name`: "...Maybe Darkrai...is right."
 
 
-`Cresselia Normal` 〽
+`Hero`: 〽
+
+
+`Cresselia Normal`
 
 `Cresselia`: "No, `Partner Name`!"
 
@@ -181,7 +193,10 @@
 `Partner Name`: "It may be the best thing to do."
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(`Partner Name`! Wh-why?!)"
 
@@ -216,7 +231,10 @@
 `Darkrai`: "The three of us shall get rid of her together."
 
 
-`Cresselia Normal` 〽
+`Cresselia`: 〽
+
+
+`Cresselia Normal`
 
 `Cresselia`: "Wh-what did you say?!"
 
@@ -256,7 +274,7 @@
 `Hero Name`: "(`Partner Name`...)"
 
 
-`Darkrai Normal` 〽
+`Darkrai Normal`
 
 `Darkrai`: "Mwahaha..."
 

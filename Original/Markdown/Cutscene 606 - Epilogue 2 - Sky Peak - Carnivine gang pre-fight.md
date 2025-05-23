@@ -19,7 +19,13 @@
 `Mawile`: "Are you all right? We've come to help!"
 
 
-`Shaymin Surprised` ❗
+`Carnivine`: ❗
+
+
+`Shaymin`: ❗
+
+
+`Shaymin Surprised`
 
 `Shaymin`: "Aha! I knew it!"
 
@@ -54,7 +60,10 @@
 `Carnivine`: "Oh! That sounds good!"
 
 
-`Shaymin Surprised` 💦
+`Shaymin`: 💦
+
+
+`Shaymin Surprised`
 
 `Shaymin`: "Hey! Wait a minute..."
 

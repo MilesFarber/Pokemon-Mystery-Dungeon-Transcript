@@ -6,7 +6,10 @@
 `Partner Name`: "Oh! What's happening there?!"
 
 
-`Hero Surprised` 〽
+`Hero`: 〽
+
+
+`Hero Surprised`
 
 `Hero Name`: "(That's...)"
 

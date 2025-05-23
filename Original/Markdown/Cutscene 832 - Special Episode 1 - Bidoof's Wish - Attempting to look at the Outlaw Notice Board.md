@@ -20,7 +20,10 @@
   * `Bidoof`: "This is the Outlaw Notice Board."
 
 
-  * `Bidoof Sad` 💦
+  * `Bidoof`: 💦
+
+
+  * `Bidoof Sad`
 
   * `Bidoof`: "Sniff... But I'm too scared to face someone with a mean look on their face..."
 

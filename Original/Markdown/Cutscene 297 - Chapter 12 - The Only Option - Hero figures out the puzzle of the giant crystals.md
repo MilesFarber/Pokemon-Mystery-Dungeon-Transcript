@@ -51,7 +51,10 @@
 `Partner Name`: "Hey, is there something wrong, `Hero Name`?"
 
 
-`Partner Surprised` ❗
+`Partner`: ❗
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh! Did you have another vision?"
 
@@ -91,7 +94,10 @@
 `Hero Name`: "(Make the crystals one color...)"
 
 
-`Hero Surprised` ❗
+`Hero`: ❗
+
+
+`Hero Surprised`
 
 `Hero Name`: "(That's it! I need to match the color!)"
 

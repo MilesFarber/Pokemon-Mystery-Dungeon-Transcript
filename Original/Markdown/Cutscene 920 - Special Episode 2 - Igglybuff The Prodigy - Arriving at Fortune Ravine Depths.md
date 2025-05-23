@@ -54,7 +54,10 @@
 `Armaldo`: "For example... The boss of this dungeon."
 
 
-`Igglybuff Normal` ❓
+`Igglybuff`: ❓
+
+
+`Igglybuff Normal`
 
 `Igglybuff`: "Boss?"
 

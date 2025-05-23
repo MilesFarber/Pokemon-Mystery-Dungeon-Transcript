@@ -25,12 +25,13 @@
 `💬`: "...Phewwwww..."
 
 
-⚟
-
 `💬`: "So sleepy... Yaaaaawn..."
 
 
-`Bidoof Surprised` ❗
+`Bidoof`: ❗
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "Where is that voice...?"
 
@@ -67,7 +68,7 @@
 `💬`: "Fwaaaaaahhhhhhh... I'm... I'm..."
 
 
-`Jirachi Happy` 〽
+`Jirachi Happy`
 
 `Jirachi`: "I'm Jirachi. Yaaaaawn..."
 
@@ -87,7 +88,10 @@
 `Jirachi`: "Speaking of... Whoooo are yoooooou? Yaaaaawn..."
 
 
-`Bidoof Special2` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Special2`
 
 `Bidoof`: "I'm Bidoof. (...Didn't I already say that...?)"
 
@@ -142,7 +146,10 @@
 `Jirachi`: "I will probably attack you... Sorry if I do... Zzzz... Snorf..."
 
 
-`Bidoof Surprised` 〽
+`Bidoof`: 〽
+
+
+`Bidoof Surprised`
 
 `Bidoof`: "Wh-whaaaaat?!"
 

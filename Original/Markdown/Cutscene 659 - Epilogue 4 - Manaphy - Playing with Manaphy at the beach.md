@@ -9,7 +9,10 @@
 `Partner Name`: "Come on, Manaphy. Over here."
 
 
-`Manaphy Surprised` ❗
+`Manaphy`: ❗
+
+
+`Manaphy Surprised`
 
 `Manaphy`: "!!!"
 
@@ -24,7 +27,10 @@
 `Partner Name`: "Manaphy, this is the sea. Sea..."
 
 
-`Manaphy Normal` ❓
+`Manaphy`: ❓
+
+
+`Manaphy Normal`
 
 `Manaphy`: "Sea?"
 
@@ -44,7 +50,7 @@
 `Manaphy`: "`Partner Name`! ♪"
 
 
-`Manaphy Joyous`
+`Manaphy Joyous` 🔆
 
 `Manaphy`: "`Hero Name`! ♪"
 
@@ -77,7 +83,7 @@
 `Manaphy`: "And so Manaphy, `Hero Name`, and `Partner Name` played until sunset."
 
 
-`Manaphy Happy`
+`Manaphy Happy` 🔆
 
 `Manaphy`: "That night..."
 

@@ -6,12 +6,15 @@
 `Chatot`: "Guildmaster! I present to you two Pokémon who wish to join our guild as apprentices."
 
 
-`Chatot Normal` ⚟
+`Chatot`: ⚟
+
+
+`Chatot Normal`
 
 `Chatot`: "Guildmaster...um...Guildmaster?"
 
 
-`Wigglytuff Normal` ❗
+`Wigglytuff Normal`
 
 `Wigglytuff`: "Hiya!"
 
@@ -36,7 +39,10 @@
 `Wigglytuff`: "So tell me your team's name?"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "Oh? Our team's name?"
 
@@ -51,7 +57,10 @@
 `Partner Name`: "So what do you think would be a good name for us, `Hero Name`?"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "...`Team Name`?! Team `Team Name`!"
 
@@ -97,7 +106,10 @@
 >Wigglytuff set down a Pokémon Exploration Team Kit!
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "A Pokémon Exploration Team Kit?"
 

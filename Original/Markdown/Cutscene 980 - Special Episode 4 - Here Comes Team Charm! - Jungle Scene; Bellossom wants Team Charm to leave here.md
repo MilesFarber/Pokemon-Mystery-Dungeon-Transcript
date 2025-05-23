@@ -75,7 +75,7 @@
 `Lopunny`: "Sounds like it will fit us perfectly! 🤍"
 
 
-`Medicham Happy` 🔆
+`Medicham Happy`
 
 `Medicham`: "I-is...that so? ♪ When I hear that, it makes me so very happy! ♪"
 

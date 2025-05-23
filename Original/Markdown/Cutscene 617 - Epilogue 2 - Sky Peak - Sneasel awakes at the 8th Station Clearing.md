@@ -13,7 +13,11 @@
 
 ❗
 
-`Shaymin Surprised` ❗
+
+`Machoke`: ⚟
+
+
+`Shaymin Surprised`
 
 `Shaymin`: "Oh! He's awake!"
 
@@ -93,7 +97,10 @@
 `Ampharos`: "Do your best!"
 
 
-`Mawile Worried` 💦
+`Mawile`: 💦
+
+
+`Mawile Worried`
 
 `Mawile`: "B-but..."
 

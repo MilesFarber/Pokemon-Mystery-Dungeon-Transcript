@@ -23,7 +23,10 @@
 `Chatot`: "Anyway! We're counting on you!"
 
 
-`Partner Sad` 💦
+`Partner`: 💦
+
+
+`Partner Sad`
 
 `Partner Name`: "Uh... All right."
 

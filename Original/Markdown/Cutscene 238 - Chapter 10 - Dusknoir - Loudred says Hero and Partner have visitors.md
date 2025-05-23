@@ -9,15 +9,16 @@
 `Loudred`: "WHAT? What's going on?!"
 
 
-❗
-
 `Loudred`: "...OK. Got it! Hold on!"
 
 
 `Loudred`: "You two! Team `Team Name`!"
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Huh? Pardon me?"
 
@@ -32,7 +33,10 @@
 `Loudred`: "You've got yourselves some visitors."
 
 
-`Partner Normal` ❓
+`Partner`: ❓
+
+
+`Partner Normal`
 
 `Partner Name`: "Visitors?"
 

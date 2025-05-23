@@ -1,12 +1,18 @@
 * * *
 
 
-`Partner Worried` ❓
+`Partner`: ❓
+
+
+`Partner Worried`
 
 `Partner Name`: "Oh... What?"
 
 
-`Partner Worried` ❗
+`Zubat`: ❗
+
+
+`Partner Worried`
 
 `Partner Name`: "Why are you still here?"
 
@@ -16,7 +22,10 @@
 `Partner Name`: "I expected you to have gotten far away by now."
 
 
-`Koffing Normal` 💦
+`Koffing`: 💦
+
+
+`Koffing Normal`
 
 `Koffing`: "Y-you... Shut up!"
 
@@ -26,7 +35,10 @@
 `Zubat`: "We can't find our way out of this place!"
 
 
-`Koffing Normal` 〽
+`Hero`: 〽
+
+
+`Koffing Normal`
 
 `Koffing`: "Whoa-ho-ho! But there's nothing to fear, is there? It's only you!"
 

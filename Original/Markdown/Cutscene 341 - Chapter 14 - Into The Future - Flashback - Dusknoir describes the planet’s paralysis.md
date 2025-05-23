@@ -6,7 +6,10 @@
 `Dusknoir`: "It was nothing less than... causing the planet's paralysis."
 
 
-`Chatot Normal` ❓
+`Chatot`: ❓
+
+
+`Chatot Normal`
 
 `Chatot`: "The planet's...paralysis?"
 

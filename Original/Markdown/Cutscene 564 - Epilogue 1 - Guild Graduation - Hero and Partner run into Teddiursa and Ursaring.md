@@ -4,12 +4,18 @@
 * * *
 
 
-`Teddiursa Normal` ❗
+`Teddiursa`: ❗
+
+
+`Teddiursa Normal`
 
 `Teddiursa`: "Oh, `Partner Name` and `Hero Name`! Hi!"
 
 
-`Partner Normal` ❗
+`Partner`: ❗
+
+
+`Partner Normal`
 
 `Partner Name`: "Hi, Teddiursa and Ursaring!"
 
@@ -24,7 +30,7 @@
 `Teddiursa`: "Yup. We're going off to Mystifying Forest now."
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "Pardon?! Mystifying Forest?!"
 
@@ -39,7 +45,10 @@
 `Partner Name`: "Haven't you heard? The grand master of all things bad is supposed to be there."
 
 
-`Ursaring Normal` ❓
+`Ursaring`: ❓
+
+
+`Ursaring Normal`
 
 `Ursaring`: "The grand master of all things bad?"
 

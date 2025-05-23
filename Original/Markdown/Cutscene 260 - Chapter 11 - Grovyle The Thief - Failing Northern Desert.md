@@ -19,7 +19,10 @@
 `Partner Name`: "Oh my gosh! Did everybody fail and end up back here?"
 
 
-`Loudred Normal` 💦
+`Loudred`: 💦
+
+
+`Loudred Normal`
 
 `Loudred`: "Uh...sort of..."
 
@@ -39,9 +42,7 @@
 `Bidoof`: "Yup yup! We'll keep pushing on with our search for a Time Gear!"
 
 
-`Bidoof Normal` ◀▼▶
-
-`Bidoof`: "Everyone: HOORAY!"
+`💬`: "Everyone: HOORAY!"
 
 
 * * *

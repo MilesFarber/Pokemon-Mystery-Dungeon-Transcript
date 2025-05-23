@@ -1,12 +1,13 @@
 * * *
 
 
-❗
-
 `Bidoof`: "Hello! Hold up! There's big trouble, by golly!"
 
 
-`Bidoof Normal` 💦
+`Bidoof`: 💦
+
+
+`Bidoof Normal`
 
 `Bidoof`: "I'm glad I caught you! I reckoned you were about ready to go out for the day. Huff-puff..."
 
@@ -26,7 +27,10 @@
 `Bidoof`: "Little Azurill... The little Azurill is in trouble!"
 
 
-`Partner Surprised` 〽
+`Partner`: 〽
+
+
+`Partner Surprised`
 
 `Partner Name`: "Pardon? Azurill is in trouble?!"
 

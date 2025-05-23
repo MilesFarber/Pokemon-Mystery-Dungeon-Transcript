@@ -6,7 +6,7 @@
 `Igglybuff`: "Wow! Amazing! ♪"
 
 
-`Igglybuff Stunned`
+`Igglybuff Stunned` ◀▼▶
 
 `Igglybuff`: "There's so much treasure! ♪ Master! ♪"
 
@@ -21,7 +21,7 @@
 `Igglybuff`: "All right! ♪"
 
 
-`Armaldo Normal` 🔆
+`Armaldo Normal`
 
 `Armaldo`: "... (He's really something, this kid.)"
 
@@ -36,12 +36,12 @@
 `Armaldo`: "(I've never seen anyone with a natural sense for exploring like he has.)"
 
 
-`Armaldo Normal` ◀▼▶
+`Armaldo Normal`
 
 `Armaldo`: "... (I'm sure...)"
 
 
-`Armaldo Normal` 🔆
+`Armaldo Normal`
 
 `Armaldo`: "(I'm sure that this kid...is some kind of exploration prodigy.)"
 
@@ -51,7 +51,10 @@
 `Igglybuff`: "Master, what are you doing? Hurry, hurry! ♪"
 
 
-`Armaldo Normal` ❗
+`Armaldo`: ❗
+
+
+`Armaldo Normal`
 
 `Armaldo`: "Y-yeah... I'm on my way."
 

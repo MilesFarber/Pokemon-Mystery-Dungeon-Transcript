@@ -1,7 +1,13 @@
 * * *
 
 
-`Partner Inspired` ❗
+`Hero`: ❗
+
+
+`Manaphy`: ❗
+
+
+`Partner Inspired`
 
 `Partner Name`: "Manaphy..."
 
@@ -11,7 +17,10 @@
 `Manaphy`: "`Hero Name`... `Partner Name`..."
 
 
-`Partner Teary-Eyed` 💦
+`Partner`: 💦
+
+
+`Partner Teary-Eyed`
 
 `Partner Name`: "Manaphy!"
 

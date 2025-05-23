@@ -16,7 +16,10 @@
 `Armaldo`: "Uwaaaaaaaaaaahhhhhhhhhhhh!"
 
 
-`Igglybuff Surprised` 〽
+`Igglybuff`: 〽
+
+
+`Igglybuff Surprised`
 
 `Igglybuff`: "M-Master! Master!"
 

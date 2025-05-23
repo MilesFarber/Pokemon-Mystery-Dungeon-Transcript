@@ -11,10 +11,13 @@
 `Bidoof`: "Wh-what's...going on?!"
 
 
+`Jirachi`: 🟡
+
+
 * * *
 
 
-`Bidoof Surprised` 🟡
+`Bidoof Surprised`
 
 `Bidoof`: "Waaaaaah!"
 
@@ -22,7 +25,10 @@
 * * *
 
 
-`Jirachi Normal` ⚟
+`Jirachi`: ⚟
+
+
+`Jirachi Normal`
 
 `Jirachi`: "Hah! All right, I'm fully awake!"
 
@@ -62,7 +68,7 @@
 `Bidoof`: "Waah! All of a sudden!"
 
 
-`Bidoof Surprised`
+`Bidoof Surprised` 💦
 
 `Bidoof`: "I-I'm not ready for this yet...!"
 
@@ -194,7 +200,10 @@
   * *Anchor: <a name="19"></a>19*
 
 
-  * `Jirachi Normal` ❓
+  * `Jirachi`: ❓
+
+
+  * `Jirachi Normal`
 
   * `Jirachi`: "Huh? Something wrong?"
 
@@ -209,7 +218,10 @@
   * `Bidoof`: "........."
 
 
-  * `Jirachi Normal` ❓
+  * `Jirachi`: ❓
+
+
+  * `Jirachi Normal`
 
   * `Jirachi`: "Something wrong? You don't have a wish?"
 
@@ -234,7 +246,10 @@
   * `Jirachi`: "OK, here we go! ♪"
 
 
-  * `Bidoof Surprised` 💦
+  * `Bidoof`: 💦
+
+
+  * `Bidoof Surprised`
 
   * `Bidoof`: "Uwaaaah! W-wait a moment, please!"
 
@@ -259,7 +274,10 @@
   * `Bidoof`: "B-but I'm giving up on that plan."
 
 
-  * `Jirachi Normal` 〽
+  * `Jirachi`: 〽
+
+
+  * `Jirachi Normal`
 
   * `Jirachi`: "Truly? Why?"
 

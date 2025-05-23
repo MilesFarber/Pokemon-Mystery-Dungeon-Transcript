@@ -66,7 +66,10 @@
 >You were also given 2,000! Incredible!
 
 
-  *   *   * `Partner Surprised` ❗
+  *   *   * `Partner`: ❗
+
+
+  *   *   * `Partner Surprised`
 
   *   *   * `Partner Name`: "Oh, wow! 2,000?! We can have all this money?"
 
@@ -96,7 +99,10 @@
   *   *   * `Chatot`: "Now hand that money over, if you please!"
 
 
-  *   *   * `Partner Surprised` 〽
+  *   *   * `Partner`: 〽
+
+
+  *   *   * `Partner Surprised`
 
   *   *   * `Partner Name`: "Excuse me?!"
 
@@ -111,12 +117,15 @@
   *   *   * `Chatot`: "And your team's share of the money comes out to this much...! ♪"
 
 
-  *   *   * `Partner Surprised` 〽
+  *   *   * `Partner Surprised`
 
   *   *   * `Partner Name`: "Huh?! We keep only 200?"
 
 
-  *   *   * `Partner Surprised` 💦
+  *   *   * `Partner`: 💦
+
+
+  *   *   * `Partner Surprised`
 
   *   *   * `Partner Name`: "That's not fair!"
 
@@ -126,7 +135,10 @@
   *   *   * `Chatot`: "Well that's the guild's rule. You simply have to accept it! ♪"
 
 
-  *   *   * `Partner Sad` 💧
+  *   *   * `Partner`: 💧
+
+
+  *   *   * `Partner Sad`
 
   *   *   * `Partner Name`: "Hmph..."
 

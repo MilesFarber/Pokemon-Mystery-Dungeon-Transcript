@@ -7,7 +7,7 @@
 * * *
 
 
-`Partner Surprised` ❗
+`Partner Surprised`
 
 `Partner Name`: "Oh! There's Grovyle!"
 
@@ -37,7 +37,7 @@
 `Grovyle`: "Careful! An enemy lurks nearby!"
 
 
-`Partner Surprised` 〽
+`Partner Surprised`
 
 `Partner Name`: "What?! Wh-where?"
 
@@ -47,7 +47,10 @@
 `Grovyle`: "It's right...beside you!"
 
 
-`Partner Surprised` 💦
+`Partner`: 💦
+
+
+`Partner Surprised`
 
 `Partner Name`: "Next to me...?"
 
