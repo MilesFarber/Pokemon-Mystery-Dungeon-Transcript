@@ -1,7 +1,7 @@
 *Scenario flag: [5, 3]*
 
 
-*If the player chooses "0":*
+*If the local event flag is 0:*
 
   * *Anchor: <a name="switch0724"></a>switch0724*
 
@@ -121,7 +121,7 @@
   * * * *
 
 
-*If the player chooses "1":*
+*If the local event flag is 1:*
 
   * *Anchor: <a name="switch0727"></a>switch0727*
 
@@ -174,7 +174,7 @@
   * *Jump to [anchor 4](#4)*
 
 
-*If the player chooses "2":*
+*If the local event flag is 2:*
 
   * *Anchor: <a name="switch0726"></a>switch0726*
 
@@ -234,7 +234,7 @@
   * *Jump to [anchor 4](#4)*
 
 
-*If the player chooses "3":*
+*If the local event flag is 3:*
 
   * *Anchor: <a name="switch0725"></a>switch0725*
 
@@ -329,22 +329,22 @@
   * *Jump to [anchor 4](#4)*
 
 
-*If the player chooses "4":*
+*If the local event flag is 4:*
 
   * *Jump to [anchor switch0724](#switch0724)*
 
 
-*If the player chooses "5":*
+*If the local event flag is 5:*
 
   * *Jump to [anchor switch0727](#switch0727)*
 
 
-*If the player chooses "6":*
+*If the local event flag is 6:*
 
   * *Jump to [anchor switch0726](#switch0726)*
 
 
-*If the player chooses "7":*
+*If the local event flag is 7:*
 
   * *Jump to [anchor switch0725](#switch0725)*
 

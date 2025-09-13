@@ -30,7 +30,7 @@
   *   * *Anchor: <a name="9"></a>9*
 
 
-  *   * *If the player chooses "0":*
+  *   * *If the local event flag is 0:*
 
   *   *   * *Anchor: <a name="6"></a>6*
 
@@ -82,7 +82,7 @@
   *   *   *   *   * *Jump to [anchor 3](#3)*
 
 
-  *   * *If the player chooses "1":*
+  *   * *If the local event flag is 1:*
 
   *   *   * *Jump to [anchor 6](#6)*
 

@@ -104,6 +104,9 @@
   *   * *Anchor: <a name="0"></a>0*
 
 
+  *   * *Set the local event flag to 1.*
+
+
 >To become rich! Is this truly what you want?
 
 
@@ -126,6 +129,9 @@
 
   * *If the player chooses "To be the strongest Pokémon!":*
 
+  *   * *Set the local event flag to 2.*
+
+
 >To be the strongest Pokémon! Is this truly what you want?
 
 
@@ -133,6 +139,9 @@
 
 
   * *If the player chooses "To be the best explorer!":*
+
+  *   * *Set the local event flag to 3.*
+
 
 >To be the best explorer! Is this truly what you want?
 
@@ -142,6 +151,9 @@
 
   * *If the player chooses "To eat lots of yummy food!":*
 
+  *   * *Set the local event flag to 4.*
+
+
 >To eat lots of yummy food! Is this truly what you want?
 
 
@@ -149,6 +161,9 @@
 
 
   * *If the player chooses "To sleep well...":*
+
+  *   * *Set the local event flag to 5.*
+
 
 >To sleep well! Is this truly what you want?
 
@@ -158,6 +173,9 @@
 
   * *If the player chooses "To get lots of items!":*
 
+  *   * *Set the local event flag to 6.*
+
+
 >To get lots of items! Is this truly what you want?
 
 
@@ -166,13 +184,16 @@
 
   * *If the player chooses "To rule the world!":*
 
+  *   * *Set the local event flag to 7.*
+
+
 >To rule the world! Is this truly what you want?
 
 
   *   * *Jump to [anchor 7](#7)*
 
 
-*If the player chooses "1":*
+*If the local event flag is 1:*
 
   * `Bidoof Sigh`
 
@@ -470,7 +491,7 @@
   * * * *
 
 
-*If the player chooses "2":*
+*If the local event flag is 2:*
 
   * `Bidoof Determined`
 
@@ -480,7 +501,7 @@
   * *Jump to [anchor 18](#18)*
 
 
-*If the player chooses "3":*
+*If the local event flag is 3:*
 
   * `Bidoof Normal`
 
@@ -500,7 +521,7 @@
   * *Jump to [anchor 19](#19)*
 
 
-*If the player chooses "4":*
+*If the local event flag is 4:*
 
   * `Bidoof Sigh`
 
@@ -510,7 +531,7 @@
   * *Jump to [anchor 18](#18)*
 
 
-*If the player chooses "5":*
+*If the local event flag is 5:*
 
   * `Bidoof Stunned`
 
@@ -520,7 +541,7 @@
   * *Jump to [anchor 18](#18)*
 
 
-*If the player chooses "6":*
+*If the local event flag is 6:*
 
   * `Bidoof Sigh`
 
@@ -530,7 +551,7 @@
   * *Jump to [anchor 18](#18)*
 
 
-*If the player chooses "7":*
+*If the local event flag is 7:*
 
   * `Bidoof Determined`
 
